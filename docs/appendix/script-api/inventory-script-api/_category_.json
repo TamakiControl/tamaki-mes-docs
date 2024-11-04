@@ -1,0 +1,8 @@
+{
+  "label": "system.mes.inventory",
+  "position": 2,
+  "link": {
+    "type": "doc",
+    "id": "appendix/script-api/inventory-script-api/intro"
+  }
+}

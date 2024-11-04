@@ -1,0 +1,8 @@
+{
+  "label": "Equipment Model",
+  "position": 4,
+  "link": {
+    "type": "doc",
+    "id": "appendix/data-model/equipment-model/intro"
+  }
+}

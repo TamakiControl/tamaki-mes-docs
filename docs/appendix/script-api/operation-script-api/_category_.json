@@ -1,0 +1,8 @@
+{
+  "label": "system.mes.operation",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Data Model."
+  }
+}
