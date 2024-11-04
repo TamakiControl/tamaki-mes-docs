@@ -36,3 +36,4 @@ docker run -it --env-file=./.env -e "CONFIG=$(cat typesense-config.json | jq -r 
 
 
 
+Test
