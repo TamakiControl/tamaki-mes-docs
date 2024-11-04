@@ -1,0 +1,36 @@
+name: Deploy Docusaurus to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Deploy when changes are pushed to the main branch. Adjust if needed.
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # Use a Node.js version compatible with Docusaurus
+
+      - name: Install dependencies
+        run: |
+          cd tamaki-mes-docs  # Adjust if your Docusaurus project is in a different directory
+          npm install
+
+      - name: Build Docusaurus
+        run: |
+          cd tamaki-mes-docs
+          npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: tamaki-mes-docs/build  # Path to the built files
+          keep_files: true  # Keeps existing files in the gh-pages branch

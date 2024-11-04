@@ -1,8 +1,9 @@
 {
   "name": "tamaki-mes-docs",
-  "version": "0.0.0",
-  "homepage": ".",
-  "private": true,
+  "version": "1.0.0",
+  "homepage": "https://docs.tamaki-control.com/tamaki-mes/",
+  "repository": "https://github.com/TamakiControl/tamaki-mes-docs",
+  "private": false,
   "scripts": {
     "predeploy": "npm run build",
     "docusaurus": "docusaurus",
