@@ -16,16 +16,14 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'  # Use a Node.js version compatible with Docusaurus
+          node-version: '22'  # Use a Node.js version compatible with Docusaurus
 
       - name: Install dependencies
         run: |
-          cd tamaki-mes-docs  # Adjust if your Docusaurus project is in a different directory
           npm install
 
       - name: Build Docusaurus
         run: |
-          cd tamaki-mes-docs
           npm run build
 
       - name: Deploy to GitHub Pages
