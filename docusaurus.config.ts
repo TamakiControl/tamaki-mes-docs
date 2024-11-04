@@ -93,12 +93,7 @@ const config: Config = {
                     sidebarId: 'tutorialSidebar',
                     position: 'left',
                     label: 'Docs',
-                },
-                {
-                    href: process.env.GH_CODE_URL,
-                    label: 'GitHub',
-                    position: 'right',
-                },
+                }
             ],
         },
         footer: {
@@ -120,15 +115,6 @@ const config: Config = {
                             label: 'Stack Overflow',
                             href: process.env.STACK_OVERFLOW_URL,
                         }
-                    ],
-                },
-                {
-                    title: 'More',
-                    items: [
-                        {
-                            label: 'GitHub',
-                            href: process.env.GITHUB_CODE_URL,
-                        },
                     ],
                 },
             ],
