@@ -1,10 +1,10 @@
 {
-  "index_name": "tamaki-mes",
+  "index_name": "tamaki-mes-docs",
   "start_urls": [
-    "https://docs.tamaki-control.com/tamaki-mes/"
+    "https://tamakicontrol.github.io/tamaki-mes-docs/"
   ],
   "sitemap_urls": [
-    "https://docs.tamaki-control.com/tamaki-mes/sitemap.xml"
+    "https://tamakicontrol.github.io/tamaki-mes-docs/sitemap.xml"
   ],
   "sitemap_alternate_links": true,
   "js_render": true,
