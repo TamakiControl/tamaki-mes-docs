@@ -39,7 +39,7 @@ const config: Config = {
                     sidebarPath: './sidebars.ts',
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
-                    editUrl: process.env.GITHUB_DOCS_URL,
+                    editUrl: process.env.GH_DOCS_URL,
                 },
                 theme: {
                     customCss: './src/css/custom.css',
@@ -95,7 +95,7 @@ const config: Config = {
                     label: 'Docs',
                 },
                 {
-                    href: process.env.GITHUB_CODE_URL,
+                    href: process.env.GH_CODE_URL,
                     label: 'GitHub',
                     position: 'right',
                 },
