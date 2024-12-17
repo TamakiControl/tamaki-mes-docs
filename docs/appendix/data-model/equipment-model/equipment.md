@@ -21,8 +21,8 @@ with sample data where applicable.
 | Column               | Type                | Description                                                                                                                  | Example                                        |
 |----------------------|---------------------|------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------|
 | `id`                 | `String` (ULID)     | Unique identifier for the equipment item.                                                                                    | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`                 |
-| `equipment_class_id` | `String` (ULID)     | References the equipment class to which this item belongs. See [equipment_classes](../equipment-model/equipment-classes.md). | `01JAP8R5RT-3FPXQABY-7KQZT6VF`                 |
-| `location_id`        | `String` (ULID)     | Indicates where the equipment is stored or currently in use. See [locations](../location-model/locations.md).                | `01JAP8RJBN-4VYZUKE1-LY2QHV8X`                 |
+| `equipment_class_id` | `String` (ULID)     | References the equipment class to which this item belongs. See [equipment_classes](../equipment-model/equipment-class). | `01JAP8R5RT-3FPXQABY-7KQZT6VF`                 |
+| `location_id`        | `String` (ULID)     | Indicates where the equipment is stored or currently in use. See [locations](../location-model/location).                | `01JAP8RJBN-4VYZUKE1-LY2QHV8X`                 |
 | `name`               | `String`            | The name of the specific equipment item, unique within the equipment class.                                                  | `Forklift #12`                                 |
 | `description`        | `String` (max 2048) | Detailed description of the equipment item.                                                                                  | `Electric forklift used for material handling` |
 | `status`             | `Enum`              | Current operational status of the equipment. Possible values: `OPERATIONAL`, `DOWN`, `UNDER_MAINTENANCE`, `UNKNOWN`.         | `OPERATIONAL`                                  |
@@ -32,7 +32,7 @@ with sample data where applicable.
 ### `equipment_class_id`
 
 References the `EquipmentClass` that this item belongs to, allowing the equipment to inherit properties and attributes
-defined by the class. See [equipment_classes](equipment-classes.md).
+defined by the class. See [equipment_classes](equipment-class).
 
 ### `location_id`
 

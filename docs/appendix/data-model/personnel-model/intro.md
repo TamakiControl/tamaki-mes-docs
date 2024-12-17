@@ -30,7 +30,7 @@ parent structure.
 - **description**: Description of the department's role
 - **path**: Hierarchical path representing the department's position within the organizational structure
 
-See [personnel_departments](personnel_departments.md) for more details.
+See [personnel_departments](personnel-department) for more details.
 
 ---
 
@@ -44,7 +44,7 @@ qualifications and skill sets.
 - **name**: Name of the certification (e.g., "Safety Training")
 - **description**: Description of the certification
 
-See [personnel_certifications](personnel_certifications.md) for more details.
+See [personnel_certifications](personnel-certification) for more details.
 
 ---
 
@@ -76,7 +76,7 @@ within the facility.
 - **ignitionSchedule**: Reference to the associated Ignition schedule
 - **location**: Location where the shift operates
 
-See [personnel_shifts](personnel_shifts.md) for more details.
+See [personnel_shifts](personnel-shift) for more details.
 
 ---
 

@@ -12,106 +12,106 @@ a link to its detailed documentation.
 
 ## Function List
 
-### [`getInventory`](getInventory.md)
+### [`getInventory`](get-inventory)
 
 Retrieves the inventory for a material lot at a location. Returns a JSON representation of the MaterialLotRecord for the
 inventory.
 
-### [`newLotHistoryRequest`](newLotHistoryRequest.md)
+### [`newLotHistoryRequest`](new-lot-history-request)
 
 Creates a new empty LotHistoryRequestDTO. Returns a JSON representation of the new LotHistoryRequestDTO object.
 
-### [`getLotHistory`](getLotHistory.md)
+### [`getLotHistory`](get-lot-history)
 
 Retrieves all records of a material lot that match the given criteria. Returns a JSON array of matching lot records.
 
-### [`newConsumeRequest`](newConsumeRequest.md)
+### [`newConsumeRequest`](new-consume-request)
 
 Creates a new empty ConsumeRequestDTO. Returns a JSON representation of the new ConsumeRequestDTO object.
 
-### [`newProduceRequest`](newProduceRequest.md)
+### [`newProduceRequest`](new-produce-request)
 
 Creates a new empty ProduceRequestDTO. Returns a JSON representation of the new ProduceRequestDTO object.
 
-### [`newReceiveRequest`](newReceiveRequest.md)
+### [`newReceiveRequest`](new-receive-request)
 
 Creates a new empty ReceiveRequestDTO. Returns a JSON representation of the new ReceiveRequestDTO object.
 
-### [`newShipRequest`](newShipRequest.md)
+### [`newShipRequest`](new-ship-request)
 
 Creates a new empty ShipRequestDTO. Returns a JSON representation of the new ShipRequestDTO object.
 
-### [`newScrapRequest`](newScrapRequest.md)
+### [`newScrapRequest`](new-scrap-request)
 
 Creates a new empty ScrapRequestDTO. Returns a JSON representation of the new ScrapRequestDTO object.
 
-### [`newMoveRequest`](newMoveRequest.md)
+### [`newMoveRequest`](new-move-request)
 
 Creates a new empty MoveRequestDTO. Returns a JSON representation of the new MoveRequestDTO object.
 
-### [`newSplitRequest`](newSplitRequest.md)
+### [`newSplitRequest`](new-split-request)
 
 Creates a new empty SplitRequestDTO. Returns a JSON representation of the new SplitRequestDTO object.
 
-### [`newMergeRequest`](newMergeRequest.md)
+### [`newMergeRequest`](new-merge-request)
 
 Creates a new empty MergeRequestDTO. Returns a JSON representation of the new MergeRequestDTO object.
 
-### [`newChangeStatusRequest`](newChangeStatusRequest.md)
+### [`newChangeStatusRequest`](new-change-status-request)
 
 Creates a new empty ChangeStatusRequestDTO. Returns a JSON representation of the new ChangeStatusRequestDTO object.
 
-### [`newEditInventoryQuantityRequest`](newEditInventoryQuantityRequest.md)
+### [`newEditInventoryQuantityRequest`](new-edit-inventory-quantity-request)
 
 Creates a new empty EditInventoryQuantityRequestDTO. Returns a JSON representation of the new
 EditInventoryQuantityRequestDTO object.
 
-### [`validateConsumeRequest`](validateConsumeRequest.md)
+### [`validateConsumeRequest`](validate-consume-request)
 
 Validates a consume request in the MES system. Returns a JSON dictionary with field names as keys and lists of
 validation violations.
 
-### [`validateProduceRequest`](validateProduceRequest.md)
+### [`validateProduceRequest`](validate-produce-request)
 
 Validates a produce request in the MES system. Returns a JSON dictionary with field names as keys and lists of
 validation violations.
 
-### [`validateReceiveRequest`](validateReceiveRequest.md)
+### [`validateReceiveRequest`](validate-receive-request)
 
 Validates a receive request in the MES system. Returns a JSON dictionary with field names as keys and lists of
 validation violations.
 
-### [`validateShipRequest`](validateShipRequest.md)
+### [`validateShipRequest`](validate-ship-request)
 
 Validates a ship request in the MES system. Returns a JSON dictionary with field names as keys and lists of validation
 violations.
 
-### [`validateScrapRequest`](validateScrapRequest.md)
+### [`validateScrapRequest`](validate-scrap-request)
 
 Validates a scrap request in the MES system. Returns a JSON dictionary with field names as keys and lists of validation
 violations.
 
-### [`validateMoveRequest`](validateMoveRequest.md)
+### [`validateMoveRequest`](validate-move-request)
 
 Validates a move request in the MES system. Returns a JSON dictionary with field names as keys and lists of validation
 violations.
 
-### [`validateSplitRequest`](validateSplitRequest.md)
+### [`validateSplitRequest`](validate-split-request)
 
 Validates a split request in the MES system. Returns a JSON dictionary with field names as keys and lists of validation
 violations.
 
-### [`validateMergeRequest`](validateMergeRequest.md)
+### [`validateMergeRequest`](validate-merge-request)
 
 Validates a merge request in the MES system. Returns a JSON dictionary with field names as keys and lists of validation
 violations.
 
-### [`validateChangeStatusRequest`](validateChangeStatusRequest.md)
+### [`validateChangeStatusRequest`](validate-change-status-request)
 
 Validates a change status request in the MES system. Returns a JSON dictionary with field names as keys and lists of
 validation violations.
 
-### [`validateEditInventoryQuantityRequest`](validateEditInventoryQuantityRequest.md)
+### [`validateEditInventoryQuantityRequest`](validate-edit-inventory-quantity-request)
 
 Validates an edit inventory quantity request in the MES system. Returns a JSON dictionary with field names as keys and
 lists of validation violations.
@@ -151,11 +151,11 @@ Splits a material lot into a new lot in the MES system. Returns a JSON represent
 
 Merges two material lots into one in the MES system. Returns a JSON representation of the merge result.
 
-### [`changeStatus`](changeStatus.md)
+### [`changeStatus`](change-status)
 
 Changes the status of a material lot in the MES system. Returns a JSON representation of the status change result.
 
-### [`editInventoryQuantity`](editInventoryQuantity.md)
+### [`editInventoryQuantity`](edit-inventory-quantity)
 
 Edits the quantity of a material inventory in the MES system. Returns a JSON representation of the edit result.
 
