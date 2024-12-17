@@ -15,7 +15,7 @@ Retrieves [Material Classes](../../data-model/material-model/material-class.md) 
 This scripting function has no client permission restrictions.
 
 ## Syntax
-Using Python keyword arguments, a [Query Request](./query-request.md) can be passed to the `findMaterialClasses` function
+Using Python keyword arguments, a [Query Request](../query-script-api/query-request.md) can be passed to the `findMaterialClasses` function
 without specifying each parameter individually. Please refer to the Query Request documentation for a list of parameters.
 ```python
 system.mes.material.findMaterialClasses(**queryRequest)

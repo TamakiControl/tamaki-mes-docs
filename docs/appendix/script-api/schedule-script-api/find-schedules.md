@@ -14,7 +14,7 @@ Retrieves [Schedules](../../data-model/schedule-model/schedule.md) based on the 
 This scripting function has no client permission restrictions.
 
 ## Syntax
-Using Python keyword arguments, a [Query Request](./query-request.md) can be passed to the `findSchedules` function
+Using Python keyword arguments, a [Query Request](../query-script-api/query-request.md) can be passed to the `findSchedules` function
 without specifying each parameter individually. Please refer to the Query Request documentation for a list of parameters.
 ```python
 system.mes.schedule.findSchedules(**queryRequest)

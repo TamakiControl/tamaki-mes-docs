@@ -15,7 +15,7 @@ Retrieves [Locations](../../data-model/location-model/location.md) based on the 
 This scripting function has no client permission restrictions.
 
 ## Syntax
-Using Python keyword arguments, a [Query Request](./query-request.md) can be passed to the `findLocations` function
+Using Python keyword arguments, a [Query Request](../query-script-api/query-request.md) can be passed to the `findLocations` function
 without specifying each parameter individually. Please refer to the Query Request documentation for a list of parameters.
 ```python
 system.mes.location.findLocations(**queryRequest)

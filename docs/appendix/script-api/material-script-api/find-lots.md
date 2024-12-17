@@ -15,7 +15,7 @@ Retrieves [Material Lots](../../data-model/material-model/material-lot.md) based
 This scripting function has no client permission restrictions.
 
 ## Syntax
-Using Python keyword arguments, a [Query Request](./query-request.md) can be passed to the `findLots` function 
+Using Python keyword arguments, a [Query Request](../query-script-api/query-request.md) can be passed to the `findLots` function 
 without specifying each parameter individually. Please refer to the Query Request documentation for a list of parameters.
 ```python
 system.mes.material.findLots(**queryRequest)

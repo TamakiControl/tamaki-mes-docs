@@ -15,7 +15,7 @@ Retrieves [Units Of Measure](../../data-model/utility-models/unit-of-measure-mod
 This scripting function has no client permission restrictions.
 
 ## Syntax
-Using Python keyword arguments, a [Query Request](./query-request.md) can be passed to the `findUnitsOfMeasure` function
+Using Python keyword arguments, a [Query Request](../query-script-api/query-request.md) can be passed to the `findUnitsOfMeasure` function
 without specifying each parameter individually. Please refer to the Query Request documentation for a list of parameters.
 ```python
 system.mes.unitOfMeasure.findUnitsOfMeasure(**queryRequest)

@@ -15,7 +15,7 @@ Retrieves [Materials](../../data-model/material-model/material.md) based on the 
 This scripting function has no client permission restrictions.
 
 ## Syntax
-Using Python keyword arguments, a [Query Request](./query-request.md) can be passed to the `findMaterials` function 
+Using Python keyword arguments, a [Query Request](../query-script-api/query-request.md) can be passed to the `findMaterials` function 
 without specifying each parameter individually. Please refer to the Query Request documentation for a list of parameters.
 ```python
 system.mes.material.findMaterials(**queryRequest)
