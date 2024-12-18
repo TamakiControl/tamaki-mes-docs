@@ -36,7 +36,7 @@ of each, along with sample data where applicable.
 
 References the `EquipmentMaintenancePlan` that generated this maintenance order, allowing for scheduled or automated
 maintenance tasks.
-See [equipment_maintenance_plans](/docs/appendix/data-model/equipment-model/equipment-maintenance-plan.md).
+See [equipment_maintenance_plans](../equipment-model/equipment-maintenance-plan.md).
 
 ### `status`
 
@@ -54,18 +54,18 @@ Represents the current state of the maintenance order, with the following possib
 
 ### `scheduled_by_id` and `completed_by_id`
 
-- **scheduled_by_id**: References the person who scheduled the maintenance order.)
-  See [personnel](/docs/appendix/data-model/personnel-model/personnel.md).
+- **scheduled_by_id**: References the person who scheduled the maintenance order.
+  See [personnel](../personnel-model/personnel.md).
 - **completed_by_id**: References the person who completed the maintenance order, providing accountability for task
-  completion. See [personnel](/docs/appendix/data-model/personnel-model/personnel.md).
+  completion. See [personnel](../personnel-model/personnel.md).
 
 ### `equipment_id`
 
 Links to the specific `Equipment` item that this maintenance order pertains to, enabling targeted maintenance tasks for
-individual pieces of equipment. See [equipment](/docs/appendix/data-model/equipment-model/equipment.md).
+individual pieces of equipment. See [equipment](../equipment-model/equipment.md).
 
 ### `personnel_department_id`
 
 Specifies the `PersonnelDepartment` responsible for carrying out the maintenance task, ensuring that resources and
 responsibilities are properly assigned.
-See [personnel_departments](/docs/appendix/data-model/personnel-model/personnel-department.md).
+See [personnel_departments](../personnel-model/personnel-department.md).
