@@ -37,7 +37,7 @@ defined by the class. See [equipment_classes](equipment-class).
 ### `location_id`
 
 Links to the `Location` entity, specifying the physical location of the equipment. This enables tracking of where the
-equipment is deployed or stored within the facility. See [locations](../location-model/location.md).
+equipment is deployed or stored within the facility. See [locations](/docs/appendix/data-model/location-model/location.md).
 
 ### `name`
 
