@@ -68,9 +68,9 @@ This will print an empty material object with all available fields.
 Conditions can be expressed in uppercase or lowercase and with or without underscore spacing. Here are the available conditions that can be used in a Filter Request:
 
 | Condition                | Readable Format          | Compatible Types              | SQL Equivalent      |
-| ------------------------ | ------------------------ | ----------------------------- |---------------------|
+|--------------------------| ------------------------ | ----------------------------- |---------------------|
 | EQUALS                   | equals                   | string, number, boolean, date | =                   |
-| NOT_EQUALS               | not equals               | string, number, boolean, date | !=, NOT =, <>       |
+| NOT_EQUALS               | not equals               | string, number, boolean, date | !=, NOT =, \<\>     |
 | TRUE                     | true                     | boolean                       | = TRUE              |
 | FALSE                    | false                    | boolean                       | = FALSE             |
 | CONTAINS                 | contains                 | string                        | LIKE '%value%'      |
@@ -78,8 +78,8 @@ Conditions can be expressed in uppercase or lowercase and with or without unders
 | ENDS_WITH                | ends with                | string                        | LIKE '%value'       |
 | GREATER_THAN             | greater than             | number, date                  | \>                  |
 | GREATER_THAN_OR_EQUAL_TO | greater than or equal to | number, date                  | \>=                 |
-| LESS_THAN                | less than                | number, date                  | <                   |
-| LESS_THAN_OR_EQUAL_TO    | less than or equal to    | number, date                  | <=                  |
+| LESS_THAN                | less than                | number, date                  | \<                  |
+| LESS_THAN_OR_EQUAL_TO    | less than or equal to    | number, date                  | \<=                 |
 | BETWEEN                  | between                  | number, date                  | BETWEEN min AND max |
 
 ## Value
