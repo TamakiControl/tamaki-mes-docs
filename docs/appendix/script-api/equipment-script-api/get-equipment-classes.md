@@ -4,7 +4,7 @@ description: "Get all equipment classes."
 sidebar_position: 0
 ---
 
-# getEquipmentClasses()
+# system.mes.equipment.getEquipmentClasses
 
 ## Description
 
