@@ -17,13 +17,22 @@ factory might own multiple forklifts.
 The following table outlines the SQL columns for the `equipment_classes` table, providing a brief description of each,
 along with sample data where applicable.
 
-| Column        | Type                | Description                                                         | Example                        |
-|---------------|---------------------|---------------------------------------------------------------------|--------------------------------|
-| `id`          | `String` (ULID)     | Unique identifier for the equipment class.                          | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1` |
-| `parent_id`   | `String` (ULID)     | References the parent equipment class, allowing hierarchy.          | `01JAP8R5RT-3FPXQABY-7KQZT6VF` |
-| `name`        | `String`            | Name of the equipment class, required and unique within the parent. | `Forklift`                     |
-| `description` | `String` (max 2048) | Detailed description of the equipment class.                        | `A heavy-duty lifting vehicle` |
-| `path`        | `String` (unique)   | Unique path generated based on the name and parent hierarchy.       | `/Warehouse/Forklift`          |
+| Column          | Type                | Description                                                                     | Example                        |
+|-----------------|---------------------|---------------------------------------------------------------------------------|--------------------------------|
+| `id`            | `String` (ULID)     | Unique identifier for the entity.                                               | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1` |
+| `enabled`       | `Boolean`           | If the entity is enabled or not.                                                | `true`                         |
+| `created-date`  | `DateTime`          | Date the entity was created.                                                    | `2024-12-31T19:48:44Z`         |
+| `created-by`    | `String`            | Person who created the entity.                                                  | `TamakiMES`                    |
+| `modified-date` | `DateTime`          | Date the entity was created.                                                    | `2024-12-31T19:48:44Z`         |
+| `modified-by`   | `String`            | Last person to modify the entity.                                               | `TamakiMES`                    |
+| `notes`         | `LongText`          | Notes about the entity.                                                         | `This entity has these extra notes`  |
+| `spare1`        | `String`            | The first spare column that can be used for additional context on the entity.   | `some extra context 1`         |
+| `spare2`        | `String`            | The second spare column that can be used for additional context on the entity.  | `some extra context 2`         |
+| `spare3`        | `String`            | The third spare column that can be used for additional context on the entity.   | `some extra context 3`         |
+| `parent_id`     | `String` (ULID)     | References the parent equipment class, allowing hierarchy.                      | `01JAP8R5RT-3FPXQABY-7KQZT6VF` |
+| `name`          | `String`            | Name of the equipment class, required and unique within the parent.             | `Forklift`                     |
+| `description`   | `String` (max 2048) | Detailed description of the equipment class.                                    | `A heavy-duty lifting vehicle` |
+| `path`          | `String` (unique)   | Unique path generated based on the name and parent hierarchy.                   | `/Warehouse/Forklift`          |
 
 ## Field Details
 
