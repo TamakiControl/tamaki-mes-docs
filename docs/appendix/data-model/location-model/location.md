@@ -33,14 +33,14 @@ with sample data where applicable.
 | `name`                     | `String`          | Name of the location. Required and unique within the parent location.                                                       | `Warehouse A`                  |
 | `description`              | `String`          | Optional description of the location.                                                                                       | `Main storage warehouse`       |
 | `parent_id`                | `String` (ULID)   | References the parent location, creating a hierarchical structure. See [locations](../location-model/location).             | `01JAP8R5RT-3FPXQABY-7KQZT6VF` |
-| `type`                     | `String`          | Type of the location, specifying its role within the hierarchy.                                                             | `SITE`                         |
-| `process_type`             | `String`          | Type of process supported by the location, such as storage or continuous process.                                           | `STORAGE`                      |
+| `type`                     | `String`          | Type of the location, specifying its role within the hierarchy, as defined by the **LocationType** enum.                    | `SITE`                         |
+| `process_type`             | `String`          | Type of process supported by the location, such as storage or continuous process, as defined by the **ProcessType** enum.   | `STORAGE`                      |
 | `sort_order`               | `Integer`         | Defines the order of locations within the hierarchy.                                                                        | `1`                            |
 | `allow_negative_inventory` | `Boolean`         | Allows or disallows negative inventory at the location.                                                                     | `false`                        |
 | `storage_capacity`         | `Double`          | Specifies the maximum storage capacity, or `null` for no limit.                                                             | `10000.0`                      |
 | `storage_capacity_unit_id` | `String` (ULID)   | References the unit of measure for storage capacity. See [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure). | `01JAP8RJBN-4VYZUKE1-LY2QHV8X` |
-| `lot_storage_strategy`     | `String`          | Strategy for storing different numbers of lots.                                                                             | `KEEP_PREVIOUS`                |
-| `lot_use_strategy`         | `String`          | Strategy for using inventory lots, such as FIFO or LIFO.                                                                    | `FIFO`                         |
+| `lot_storage_strategy`     | `String`          | Strategy for storing different numbers of lots, as defined by the **LotStorageStrategy** enum.                              | `KEEP_PREVIOUS`                |
+| `lot_use_strategy`         | `String`          | Strategy for using inventory lots, such as FIFO or LIFO, as defined by the **LotUseStrategy** enum.                         | `FIFO`                         |
 | `path`                     | `String` (unique) | Unique path for the location, generated based on the hierarchy.                                                             | `/Warehouse/Site1/UnitA`       |
  
 ## Field Details
