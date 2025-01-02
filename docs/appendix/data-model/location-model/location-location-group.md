@@ -19,8 +19,8 @@ each.
 
 | Column              | Type            | Description                                                                                                | Example                        |
 |---------------------|-----------------|------------------------------------------------------------------------------------------------------------|--------------------------------|
-| `location_group_id` | `String` (ULID) | References the `LocationGroup` this entry is associated with. See [location_groups](./location-group). | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1` |
-| `location_id`       | `String` (ULID) | References the specific `Location` within the group. See [locations](./location).                      | `01JAP8R5RT-3FPXQABY-7KQZT6VF` |
+| `location_group_id` | `String` (ULID) | References the `LocationGroup` this entry is associated with. See [location_groups](./location-group).     | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1` |
+| `location_id`       | `String` (ULID) | References the specific `Location` within the group. See [locations](./location).                          | `01JAP8R5RT-3FPXQABY-7KQZT6VF` |
 
 ## Field Details
 

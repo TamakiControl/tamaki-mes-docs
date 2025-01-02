@@ -30,7 +30,7 @@ The following table outlines the SQL columns for the `location_properties` table
 | `spare2`               | `String`        | The second spare column that can be used for additional context on the entity. | `some extra context 2`         |
 | `spare3`               | `String`        | The third spare column that can be used for additional context on the entity.  | `some extra context 3`         |
 | `data_type`            | `String`        | Specifies the data type of the property, such as `INTEGER` or `STRING`.        | `FLOAT`                        |
-| `default_blob_value`   | `LongBlob`      | Default binary value for the property if `data_type` is binary-compatible.     | Binary data                    |
+| `default_blob_value`   | `LongBlob`      | Default binary value for the property if `data_type` is binary-compatible.     | `Binary data`                  |
 | `default_date_value`   | `Datetime`      | Default date value for the property, if applicable.                            | `2024-05-01 00:00:00`          |
 | `default_float_value`  | `Double`        | Default floating-point value, if applicable.                                   | `10.5`                         |
 | `default_int_value`    | `BigInt`        | Default integer value for the property, if applicable.                         | `100`                          |
