@@ -22,11 +22,11 @@ each, along with sample data where applicable.
 |----------------|-----------------|--------------------------------------------------------------------------------------|--------------------------------|
 | `id`           | `String` (ULID) | Unique identifier for the entity.                                                    | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1` |
 | `enabled`      | `Boolean`       | If the entity is enabled or not.                                                     | `true`                         |
-| `created-date` | `DateTime`      | Date the entity was created.                                                         | `2024-12-31T19:48:44Z`         |
-| `created-by`   | `String`        | Person who created the entity.                                                       | `TamakiMES`                    |
-| `modified-date`| `DateTime`      | Date the entity was created.                                                         | `2024-12-31T19:48:44Z`         |
-| `modified-by`  | `String`        | Last person to modify the entity.                                                    | `TamakiMES`                    |
-| `notes`        | `LongText`      | Notes about the entity.                                                              | `This entity has these extra notes`  |
+| `created_date` | `DateTime`      | Date the entity was created.                                                         | `2024-12-31T19:48:44Z`         |
+| `created_by`   | `String`        | Person who created the entity.                                                       | `TamakiMES`                    |
+| `modified_date`| `DateTime`      | Date the entity was created.                                                         | `2024-12-31T19:48:44Z`         |
+| `modified_by`  | `String`        | Last person to modify the entity.                                                    | `TamakiMES`                    |
+| `notes`        | `Blob`          | Notes about the entity.                                                              | `This entity has these extra notes`  |
 | `spare1`       | `String`        | The first spare column that can be used for additional context on the entity.        | `some extra context 1`         |
 | `spare2`       | `String`        | The second spare column that can be used for additional context on the entity.       | `some extra context 2`         |
 | `spare3`       | `String`        | The third spare column that can be used for additional context on the entity.        | `some extra context 3`         |
@@ -35,7 +35,7 @@ each, along with sample data where applicable.
 | `date_value`   | `Datetime`      | Date value for the property if applicable.                                           | `2024-05-01 00:00:00`          |
 | `float_value`  | `Double`        | Floating-point value if the property is of type `FLOAT`.                             | `10.5`                         |
 | `int_value`    | `BigInt`        | Integer value if the property type is `INTEGER`.                                     | `100`                          |
-| `string_value` | `LongText`      | String value for the property if the type is `STRING`.                               | `Property value text`          |
+| `string_value` | `Blob`          | String value for the property if the type is `STRING`.                               | `Property value text`          |
 | `equipment_id` | `String` (ULID) | References the specific equipment to which this property value applies.              | `01JAP8R5RT-3FPXQABY-7KQZT6VF` |
 | `property_id`  | `String` (ULID) | References the `EquipmentProperty` that defines the property being valued.           | `01JAP8R5RT-9WTGQRQW-Y3XCRTXF` |
           
