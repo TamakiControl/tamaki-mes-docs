@@ -26,7 +26,7 @@ with sample data where applicable.
 | `created-by`         | `String`            | Person who created the entity.                                                                                                                                     | `TamakiMES`                                    |
 | `modified-date`      | `DateTime`          | Date the entity was created.                                                                                                                                       | `2024-12-31T19:48:44Z`                         |
 | `modified-by`        | `String`            | Last person to modify the entity.                                                                                                                                  | `TamakiMES`                                    |
-| `notes`              | `LongText`          | Notes about the entity.                                                                                                                                            | `This entity has these extra notes`            |
+| `notes`              | `Blob`              | Notes about the entity.                                                                                                                                            | `This entity has these extra notes`            |
 | `spare1`             | `String`            | The first spare column that can be used for additional context on the entity.                                                                                      | `some extra context 1`                         |
 | `spare2`             | `String`            | The second spare column that can be used for additional context on the entity.                                                                                     | `some extra context 2`                         |
 | `spare3`             | `String`            | The third spare column that can be used for additional context on the entity.                                                                                      | `some extra context 3`                         |
@@ -34,7 +34,7 @@ with sample data where applicable.
 | `location_id`        | `String` (ULID)     | Indicates where the equipment is stored or currently in use. See [locations](../location-model/location.md).                                                       | `01JAP8RJBN-4VYZUKE1-LY2QHV8X`                 |
 | `name`               | `String`            | The name of the specific equipment item, unique within the equipment class.                                                                                        | `Forklift #12`                                 |
 | `description`        | `String` (max 2048) | Detailed description of the equipment item.                                                                                                                        | `Electric forklift used for material handling` |
-| `status`             | `String`              | Current operational status of the equipment. Possible values: `OPERATIONAL`, `DOWN`, `UNDER_MAINTENANCE`, `UNKNOWN`, as defined by the **EquipmentStatus** enum. | `OPERATIONAL`                                  |
+| `status`             | `String`            | Current operational status of the equipment. Possible values: `OPERATIONAL`, `DOWN`, `UNDER_MAINTENANCE`, `UNKNOWN`, as defined by the **EquipmentStatus** enum.   | `OPERATIONAL`                                  |
 
 ## Field Details
 

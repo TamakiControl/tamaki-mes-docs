@@ -30,7 +30,7 @@ each, along with sample data where applicable.
 | `spare1`       | `String`        | The first spare column that can be used for additional context on the entity.        | `some extra context 1`         |
 | `spare2`       | `String`        | The second spare column that can be used for additional context on the entity.       | `some extra context 2`         |
 | `spare3`       | `String`        | The third spare column that can be used for additional context on the entity.        | `some extra context 3`         |
-| `blob_value`   | `LongBlob`      | Binary data if the property type is binary-compatible.                               | `Binary data`                  |
+| `blob_value`   | `Blob`          | Binary data if the property type is binary-compatible.                               | `Binary data`                  |
 | `data_type`    | `String`        | Data type of the property value, corresponding to the property’s data type.          | `FLOAT`                        |
 | `date_value`   | `Datetime`      | Date value for the property if applicable.                                           | `2024-05-01 00:00:00`          |
 | `float_value`  | `Double`        | Floating-point value if the property is of type `FLOAT`.                             | `10.5`                         |

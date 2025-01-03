@@ -25,12 +25,12 @@ The following table outlines the SQL columns for the `location_properties` table
 | `created-by`           | `String`        | Person who created the entity.                                                 | `TamakiMES`                    |
 | `modified-date`        | `DateTime`      | Date the entity was created.                                                   | `2024-12-31T19:48:44Z`         |
 | `modified-by`          | `String`        | Last person to modify the entity.                                              | `TamakiMES`                    |
-| `notes`                | `LongText`      | Notes about the entity.                                                        | `This entity has these extra notes`  |
+| `notes`                | `Blob`          | Notes about the entity.                                                        | `This entity has these extra notes`  |
 | `spare1`               | `String`        | The first spare column that can be used for additional context on the entity.  | `some extra context 1`         |
 | `spare2`               | `String`        | The second spare column that can be used for additional context on the entity. | `some extra context 2`         |
 | `spare3`               | `String`        | The third spare column that can be used for additional context on the entity.  | `some extra context 3`         |
 | `data_type`            | `String`        | Specifies the data type of the property, such as `INTEGER` or `STRING`.        | `FLOAT`                        |
-| `default_blob_value`   | `LongBlob`      | Default binary value for the property if `data_type` is binary-compatible.     | `Binary data`                  |
+| `default_blob_value`   | `Blob`          | Default binary value for the property if `data_type` is binary-compatible.     | `Binary data`                  |
 | `default_date_value`   | `Datetime`      | Default date value for the property, if applicable.                            | `2024-05-01 00:00:00`          |
 | `default_float_value`  | `Double`        | Default floating-point value, if applicable.                                   | `10.5`                         |
 | `default_int_value`    | `BigInt`        | Default integer value for the property, if applicable.                         | `100`                          |
@@ -74,3 +74,5 @@ configurations.
 
 Specifies the units of measurement, such as `kg` or `liters`, making the property more descriptive when associated with
 physical quantities.
+
+This is for display purposes only and is not a reference to any [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure) entity.
