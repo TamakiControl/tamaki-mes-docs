@@ -14,13 +14,13 @@ materials within that class.
 
 ### 2. Material
 
-Represents individual materials under a `MaterialClass`. Each material includes specific attributes, such as its name,
-unit of measure, ERP identifier, shelf life, and associated safety data sheets. `Material` entities enable detailed
+Represents individual materials under a **MaterialClass**. Each material includes specific attributes, such as its name,
+unit of measure, ERP identifier, shelf life, and associated safety data sheets. **Material** entities enable detailed
 tracking and unique identification within the manufacturing environment.
 
 ### 3. MaterialInventory
 
-Tracks quantities of materials at specific `Locations`. It maintains records for each lot within a particular location
+Tracks quantities of materials at specific **Locations**. It maintains records for each lot within a particular location
 and enables inventory control through association with a lot, making it easier to manage stock levels.
 
 ### 4. MaterialLot
@@ -37,8 +37,8 @@ comprehensive audit trail for material movements.
 
 ### 6. MaterialProperty and MaterialPropertyValue
 
-Define custom properties for materials, with `MaterialProperty` specifying the property details (e.g., name, data type)
-and `MaterialPropertyValue` assigning specific values to these properties for individual materials. This supports
+Define custom properties for materials, with **MaterialProperty** specifying the property details (e.g., name, data type)
+and **MaterialPropertyValue** assigning specific values to these properties for individual materials. This supports
 tailored data storage for each material as required by the organization.
 
 ### 7. MaterialReasonCode
@@ -54,5 +54,5 @@ entity links materials to suppliers, supporting procurement and vendor managemen
 ---
 
 Each entity in this model supports specific material tracking, inventory control, and classification tasks, enhancing
-the overall traceability and management of materials within the system. The `Material` model integrates closely with
+the overall traceability and management of materials within the system. The **Material** model integrates closely with
 inventory and production management, enabling end-to-end visibility and control across the manufacturing lifecycle.
