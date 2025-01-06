@@ -1,6 +1,6 @@
 # Material Model Overview
 
-The `Material` model organizes and manages data related to materials within the system, supporting functions like
+The **Material** model organizes and manages data related to materials within the system, supporting functions like
 categorization, inventory tracking, and detailed record-keeping for audits and production. This model consists of the
 following primary entities:
 
