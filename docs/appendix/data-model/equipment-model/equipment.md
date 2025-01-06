@@ -30,8 +30,8 @@ with sample data where applicable.
 | `spare1`             | `String`            | The first spare column that can be used for additional context on the entity.                                                                                      | `some extra context 1`                         |
 | `spare2`             | `String`            | The second spare column that can be used for additional context on the entity.                                                                                     | `some extra context 2`                         |
 | `spare3`             | `String`            | The third spare column that can be used for additional context on the entity.                                                                                      | `some extra context 3`                         |
-| `equipment_class_id` | `String` (ULID)     | References the equipment class to which this item belongs. See [equipment_classes](../equipment-model/equipment-class.md).                                         | `01JAP8R5RT-3FPXQABY-7KQZT6VF`                 |
-| `location_id`        | `String` (ULID)     | Indicates where the equipment is stored or currently in use. See [locations](../location-model/location.md).                                                       | `01JAP8RJBN-4VYZUKE1-LY2QHV8X`                 |
+| `equipment_class_id` | `String` (ULID)     | References the equipment class to which this item belongs. See [equipment_classes](../equipment-model/equipment-class).                                            | `01JAP8R5RT-3FPXQABY-7KQZT6VF`                 |
+| `location_id`        | `String` (ULID)     | Indicates where the equipment is stored or currently in use. See [locations](../location-model/location).                                                          | `01JAP8RJBN-4VYZUKE1-LY2QHV8X`                 |
 | `name`               | `String`            | The name of the specific equipment item, unique within the equipment class.                                                                                        | `Forklift #12`                                 |
 | `description`        | `String` (max 2048) | Detailed description of the equipment item.                                                                                                                        | `Electric forklift used for material handling` |
 | `status`             | `String`            | Current operational status of the equipment. Possible values: `OPERATIONAL`, `DOWN`, `UNDER_MAINTENANCE`, `UNKNOWN`, as defined by the **EquipmentStatus** enum.   | `OPERATIONAL`                                  |
@@ -41,12 +41,14 @@ with sample data where applicable.
 ### `equipment_class_id`
 
 References the `EquipmentClass` that this item belongs to, allowing the equipment to inherit properties and attributes
-defined by the class. See [equipment_classes](equipment-class).
+defined by the class. 
+See [equipment_classes](../equipment-model/equipment-class) for details.
 
 ### `location_id`
 
 Links to the `Location` entity, specifying the physical location of the equipment. This enables tracking of where the
-equipment is deployed or stored within the facility. See [locations](/docs/appendix/data-model/location-model/location.md).
+equipment is deployed or stored within the facility. 
+See [locations](../location-model/location) for details.
 
 ### `name`
 
