@@ -22,10 +22,10 @@ each, along with sample data where applicable.
 |--------------------------|---------------------|---------------------------------------------------------------------------------|-----------------------------------------|
 | `id`                     | `String` (ULID)     | Unique identifier for the entity.                                               | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`          |
 | `enabled`                | `Boolean`           | If the entity is enabled or not.                                                | `true`                                  |
-| `created-date`           | `DateTime`          | Date the entity was created.                                                    | `2024-12-31T19:48:44Z`                  |
-| `created-by`             | `String`            | Person who created the entity.                                                  | `TamakiMES`                             |
-| `modified-date`          | `DateTime`          | Date the entity was created.                                                    | `2024-12-31T19:48:44Z`                  |
-| `modified-by`            | `String`            | Last person to modify the entity.                                               | `TamakiMES`                             |
+| `created_date`           | `DateTime`          | Date the entity was created.                                                    | `2024-12-31T19:48:44Z`                  |
+| `created_by`             | `String`            | Person who created the entity.                                                  | `TamakiMES`                             |
+| `modified_date`          | `DateTime`          | Date the entity was created.                                                    | `2024-12-31T19:48:44Z`                  |
+| `modified_by`            | `String`            | Last person to modify the entity.                                               | `TamakiMES`                             |
 | `notes`                  | `Blob`              | Notes about the entity.                                                         | `This entity has these extra notes`     |
 | `spare1`                 | `String`            | The first spare column that can be used for additional context on the entity.   | `some extra context 1`                  |
 | `spare2`                 | `String`            | The second spare column that can be used for additional context on the entity.  | `some extra context 2`                  |
