@@ -58,7 +58,8 @@ Indicates the current state of the lot, using the **LotStatus** enum, with possi
 
 ### `total_quantity`
 
-Specifies the total quantity of the material present in this lot. This value must be zero or greater.
+Specifies the total quantity of the material that has ever existed for this lot. This value must be zero or greater 
+and goes up when inventory is added but does not go back down when inventory is removed.
 
 ### `expiration_date`
 
