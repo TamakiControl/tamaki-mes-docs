@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.5.2">
 <title data-rh="true">equipment | Tamaki MES</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://tamakicontrol.github.io/tamaki-mes-docs/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://tamakicontrol.github.io/tamaki-mes-docs/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://tamakicontrol.github.io/tamaki-mes-docs/docs/appendix/data-model/equipment-model/equipment"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="equipment | Tamaki MES"><meta data-rh="true" name="description" content="Documentation for the equipment table, outlining its columns and structure."><meta data-rh="true" property="og:description" content="Documentation for the equipment table, outlining its columns and structure."><link data-rh="true" rel="icon" href="/tamaki-mes-docs/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://tamakicontrol.github.io/tamaki-mes-docs/docs/appendix/data-model/equipment-model/equipment"><link data-rh="true" rel="alternate" href="https://tamakicontrol.github.io/tamaki-mes-docs/docs/appendix/data-model/equipment-model/equipment" hreflang="en"><link data-rh="true" rel="alternate" href="https://tamakicontrol.github.io/tamaki-mes-docs/docs/appendix/data-model/equipment-model/equipment" hreflang="x-default"><link rel="search" type="application/opensearchdescription+xml" title="Tamaki MES" href="/tamaki-mes-docs/opensearch.xml"><link rel="stylesheet" href="/tamaki-mes-docs/assets/css/styles.b68649a2.css">
-<script src="/tamaki-mes-docs/assets/js/runtime~main.ba6a5b52.js" defer="defer"></script>
+<script src="/tamaki-mes-docs/assets/js/runtime~main.96e4286e.js" defer="defer"></script>
 <script src="/tamaki-mes-docs/assets/js/main.2e9b06f2.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -21,10 +21,12 @@ with sample data where applicable.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="field-details">Field Details<a href="#field-details" class="hash-link" aria-label="Direct link to Field Details" title="Direct link to Field Details">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="equipment_class_id"><code>equipment_class_id</code><a href="#equipment_class_id" class="hash-link" aria-label="Direct link to equipment_class_id" title="Direct link to equipment_class_id">​</a></h3>
 <p>References the <code>EquipmentClass</code> that this item belongs to, allowing the equipment to inherit properties and attributes
-defined by the class. See <a href="/tamaki-mes-docs/docs/appendix/data-model/equipment-model/equipment-class">equipment_classes</a>.</p>
+defined by the class.
+See <a href="/tamaki-mes-docs/docs/appendix/data-model/equipment-model/equipment-class">equipment_classes</a> for details.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="location_id"><code>location_id</code><a href="#location_id" class="hash-link" aria-label="Direct link to location_id" title="Direct link to location_id">​</a></h3>
 <p>Links to the <code>Location</code> entity, specifying the physical location of the equipment. This enables tracking of where the
-equipment is deployed or stored within the facility. See <a href="/tamaki-mes-docs/docs/appendix/data-model/location-model/location">locations</a>.</p>
+equipment is deployed or stored within the facility.
+See <a href="/tamaki-mes-docs/docs/appendix/data-model/location-model/location">locations</a> for details.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="name"><code>name</code><a href="#name" class="hash-link" aria-label="Direct link to name" title="Direct link to name">​</a></h3>
 <p>The <code>name</code> field provides a unique identifier for the equipment within the context of its class, such as &quot;Forklift #12.&quot;
 This allows easy differentiation of multiple equipment items in the same category.</p>

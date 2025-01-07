@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.5.2">
 <title data-rh="true">location_location_groups | Tamaki MES</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://tamakicontrol.github.io/tamaki-mes-docs/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://tamakicontrol.github.io/tamaki-mes-docs/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://tamakicontrol.github.io/tamaki-mes-docs/docs/appendix/data-model/location-model/location-location-group"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="location_location_groups | Tamaki MES"><meta data-rh="true" name="description" content="Documentation for the location_location_groups join table, connecting Location and LocationGroup entities."><meta data-rh="true" property="og:description" content="Documentation for the location_location_groups join table, connecting Location and LocationGroup entities."><link data-rh="true" rel="icon" href="/tamaki-mes-docs/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://tamakicontrol.github.io/tamaki-mes-docs/docs/appendix/data-model/location-model/location-location-group"><link data-rh="true" rel="alternate" href="https://tamakicontrol.github.io/tamaki-mes-docs/docs/appendix/data-model/location-model/location-location-group" hreflang="en"><link data-rh="true" rel="alternate" href="https://tamakicontrol.github.io/tamaki-mes-docs/docs/appendix/data-model/location-model/location-location-group" hreflang="x-default"><link rel="search" type="application/opensearchdescription+xml" title="Tamaki MES" href="/tamaki-mes-docs/opensearch.xml"><link rel="stylesheet" href="/tamaki-mes-docs/assets/css/styles.b68649a2.css">
-<script src="/tamaki-mes-docs/assets/js/runtime~main.ba6a5b52.js" defer="defer"></script>
+<script src="/tamaki-mes-docs/assets/js/runtime~main.96e4286e.js" defer="defer"></script>
 <script src="/tamaki-mes-docs/assets/js/main.2e9b06f2.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -20,11 +20,11 @@ each.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="field-details">Field Details<a href="#field-details" class="hash-link" aria-label="Direct link to Field Details" title="Direct link to Field Details">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="location_group_id"><code>location_group_id</code><a href="#location_group_id" class="hash-link" aria-label="Direct link to location_group_id" title="Direct link to location_group_id">​</a></h3>
 <p>This column references the <code>LocationGroup</code> entity that the location belongs to, allowing for flexible grouping of
-locations based on shared attributes or functionality. See <a href="/tamaki-mes-docs/docs/appendix/data-model/location-model/location-group">location_groups</a> for more
-information.</p>
+locations based on shared attributes or functionality.
+See <a href="/tamaki-mes-docs/docs/appendix/data-model/location-model/location-group">location_groups</a> for details.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="location_id"><code>location_id</code><a href="#location_id" class="hash-link" aria-label="Direct link to location_id" title="Direct link to location_id">​</a></h3>
 <p>This column references the <code>Location</code> entity within the group, linking individual locations to their associated groups.
-See <a href="/tamaki-mes-docs/docs/appendix/data-model/location-model/location">locations</a> for details on the <code>Location</code> entity.</p>
+See <a href="/tamaki-mes-docs/docs/appendix/data-model/location-model/location">locations</a> for details.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="relationship-structure">Relationship Structure<a href="#relationship-structure" class="hash-link" aria-label="Direct link to Relationship Structure" title="Direct link to Relationship Structure">​</a></h2>
 <p>Each entry in the <code>location_location_groups</code> table associates one <code>Location</code> with one <code>LocationGroup</code>, enabling a
 many-to-many relationship. This allows:</p>

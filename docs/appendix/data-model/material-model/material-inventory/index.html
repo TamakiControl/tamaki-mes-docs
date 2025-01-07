@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.5.2">
 <title data-rh="true">material_inventory | Tamaki MES</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://tamakicontrol.github.io/tamaki-mes-docs/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://tamakicontrol.github.io/tamaki-mes-docs/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://tamakicontrol.github.io/tamaki-mes-docs/docs/appendix/data-model/material-model/material-inventory"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="material_inventory | Tamaki MES"><meta data-rh="true" name="description" content="Documentation for the material_inventory table, outlining its columns and structure."><meta data-rh="true" property="og:description" content="Documentation for the material_inventory table, outlining its columns and structure."><link data-rh="true" rel="icon" href="/tamaki-mes-docs/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://tamakicontrol.github.io/tamaki-mes-docs/docs/appendix/data-model/material-model/material-inventory"><link data-rh="true" rel="alternate" href="https://tamakicontrol.github.io/tamaki-mes-docs/docs/appendix/data-model/material-model/material-inventory" hreflang="en"><link data-rh="true" rel="alternate" href="https://tamakicontrol.github.io/tamaki-mes-docs/docs/appendix/data-model/material-model/material-inventory" hreflang="x-default"><link rel="search" type="application/opensearchdescription+xml" title="Tamaki MES" href="/tamaki-mes-docs/opensearch.xml"><link rel="stylesheet" href="/tamaki-mes-docs/assets/css/styles.b68649a2.css">
-<script src="/tamaki-mes-docs/assets/js/runtime~main.ba6a5b52.js" defer="defer"></script>
+<script src="/tamaki-mes-docs/assets/js/runtime~main.96e4286e.js" defer="defer"></script>
 <script src="/tamaki-mes-docs/assets/js/main.2e9b06f2.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -27,11 +27,11 @@ of material stock levels and tracking across multiple locations.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="storage_location_id"><code>storage_location_id</code><a href="#storage_location_id" class="hash-link" aria-label="Direct link to storage_location_id" title="Direct link to storage_location_id">​</a></h3>
 <p>References the <code>Location</code> entity where this inventory is stored, allowing precise tracking of material storage within
 the facility.
-See <a href="/tamaki-mes-docs/docs/appendix/data-model/location-model/location">locations</a> for details on <code>Location</code>.</p>
+See <a href="/tamaki-mes-docs/docs/appendix/data-model/location-model/location">locations</a> for details.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="material_lot_id"><code>material_lot_id</code><a href="#material_lot_id" class="hash-link" aria-label="Direct link to material_lot_id" title="Direct link to material_lot_id">​</a></h3>
 <p>Links to the specific <code>MaterialLot</code> associated with this inventory record, enabling tracking of unique lots within each
 storage location.
-See <a href="/tamaki-mes-docs/docs/appendix/data-model/material-model/material-lot">material_lots</a> for details on <code>MaterialLot</code>.</p>
+See <a href="/tamaki-mes-docs/docs/appendix/data-model/material-model/material-lot">material_lots</a> for details.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="production_order_id"><code>production_order_id</code><a href="#production_order_id" class="hash-link" aria-label="Direct link to production_order_id" title="Direct link to production_order_id">​</a></h3>
 <p>Indicates the associated <code>ProductionOrder</code>, linking the record to a specific production order. This provides
 traceability for production-related material activities.

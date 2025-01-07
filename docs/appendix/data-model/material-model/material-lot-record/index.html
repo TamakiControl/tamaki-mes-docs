@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.5.2">
 <title data-rh="true">material_lot_records | Tamaki MES</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://tamakicontrol.github.io/tamaki-mes-docs/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://tamakicontrol.github.io/tamaki-mes-docs/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://tamakicontrol.github.io/tamaki-mes-docs/docs/appendix/data-model/material-model/material-lot-record"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="material_lot_records | Tamaki MES"><meta data-rh="true" name="description" content="Documentation for the material_lot_records table, outlining its columns and structure."><meta data-rh="true" property="og:description" content="Documentation for the material_lot_records table, outlining its columns and structure."><link data-rh="true" rel="icon" href="/tamaki-mes-docs/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://tamakicontrol.github.io/tamaki-mes-docs/docs/appendix/data-model/material-model/material-lot-record"><link data-rh="true" rel="alternate" href="https://tamakicontrol.github.io/tamaki-mes-docs/docs/appendix/data-model/material-model/material-lot-record" hreflang="en"><link data-rh="true" rel="alternate" href="https://tamakicontrol.github.io/tamaki-mes-docs/docs/appendix/data-model/material-model/material-lot-record" hreflang="x-default"><link rel="search" type="application/opensearchdescription+xml" title="Tamaki MES" href="/tamaki-mes-docs/opensearch.xml"><link rel="stylesheet" href="/tamaki-mes-docs/assets/css/styles.b68649a2.css">
-<script src="/tamaki-mes-docs/assets/js/runtime~main.ba6a5b52.js" defer="defer"></script>
+<script src="/tamaki-mes-docs/assets/js/runtime~main.96e4286e.js" defer="defer"></script>
 <script src="/tamaki-mes-docs/assets/js/main.2e9b06f2.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -28,7 +28,7 @@ See <a href="/tamaki-mes-docs/docs/appendix/data-model/material-model/material-l
 <p>Points to an optional secondary <code>MaterialLot</code> involved in the record, used in cases like splitting or merging.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="operation_record_id"><code>operation_record_id</code><a href="#operation_record_id" class="hash-link" aria-label="Direct link to operation_record_id" title="Direct link to operation_record_id">​</a></h3>
 <p>References the <code>OperationRecord</code> associated with this material action, providing context for operational activities.
-See <a href="/tamaki-mes-docs/docs/appendix/data-model/operation-model/operation-record">operation_records</a> for more information.</p>
+See <a href="/tamaki-mes-docs/docs/appendix/data-model/operation-model/operation-record">operation_records</a> for details.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="production_order_id"><code>production_order_id</code><a href="#production_order_id" class="hash-link" aria-label="Direct link to production_order_id" title="Direct link to production_order_id">​</a></h3>
 <p>Indicates the associated <code>ProductionOrder</code>, linking the record to a specific production order. This provides
 traceability for production-related material activities.
@@ -36,14 +36,14 @@ See <a href="/tamaki-mes-docs/docs/appendix/data-model/production-order-model/pr
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="material_scrap_code_id"><code>material_scrap_code_id</code><a href="#material_scrap_code_id" class="hash-link" aria-label="Direct link to material_scrap_code_id" title="Direct link to material_scrap_code_id">​</a></h3>
 <p>Optional reference to a <code>MaterialReasonCode</code> that provides a reason for the material action, especially useful for scrap
 activities.
-See <a href="/tamaki-mes-docs/docs/appendix/data-model/material-model/material-reason-code">material_reason_codes</a> for more details.</p>
+See <a href="/tamaki-mes-docs/docs/appendix/data-model/material-model/material-reason-code">material_reason_codes</a> for details.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="source_location_id-and-destination_location_id"><code>source_location_id</code> and <code>destination_location_id</code><a href="#source_location_id-and-destination_location_id" class="hash-link" aria-label="Direct link to source_location_id-and-destination_location_id" title="Direct link to source_location_id-and-destination_location_id">​</a></h3>
 <ul>
 <li><strong>source_location_id</strong>: Specifies the location where the material originates.</li>
 <li><strong>destination_location_id</strong>: Specifies the location where the material is moved or transferred.</li>
 </ul>
 <p>Both fields reference the <code>Location</code> entity, facilitating precise tracking of material movements within the facility.
-See <a href="/tamaki-mes-docs/docs/appendix/data-model/location-model/location">locations</a> for additional context.</p>
+See <a href="/tamaki-mes-docs/docs/appendix/data-model/location-model/location">locations</a> for details.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="lot_status"><code>lot_status</code><a href="#lot_status" class="hash-link" aria-label="Direct link to lot_status" title="Direct link to lot_status">​</a></h3>
 <p>Represents the initial state of the material lot, specified by the <strong>LotStatus</strong> enum, which includes options such as
 <code>OPEN</code>, <code>AVAILABLE</code>, <code>QA_HOLD</code>, <code>EXPIRED</code>, <code>SHIPPED</code>, and <code>CLOSED</code>, helping to indicate the status of the lot at the time of the record.</p>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.5.2">
 <title data-rh="true">locations | Tamaki MES</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://tamakicontrol.github.io/tamaki-mes-docs/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://tamakicontrol.github.io/tamaki-mes-docs/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://tamakicontrol.github.io/tamaki-mes-docs/docs/appendix/data-model/location-model/location"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="locations | Tamaki MES"><meta data-rh="true" name="description" content="Documentation for the locations table, outlining its columns and structure."><meta data-rh="true" property="og:description" content="Documentation for the locations table, outlining its columns and structure."><link data-rh="true" rel="icon" href="/tamaki-mes-docs/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://tamakicontrol.github.io/tamaki-mes-docs/docs/appendix/data-model/location-model/location"><link data-rh="true" rel="alternate" href="https://tamakicontrol.github.io/tamaki-mes-docs/docs/appendix/data-model/location-model/location" hreflang="en"><link data-rh="true" rel="alternate" href="https://tamakicontrol.github.io/tamaki-mes-docs/docs/appendix/data-model/location-model/location" hreflang="x-default"><link rel="search" type="application/opensearchdescription+xml" title="Tamaki MES" href="/tamaki-mes-docs/opensearch.xml"><link rel="stylesheet" href="/tamaki-mes-docs/assets/css/styles.b68649a2.css">
-<script src="/tamaki-mes-docs/assets/js/runtime~main.ba6a5b52.js" defer="defer"></script>
+<script src="/tamaki-mes-docs/assets/js/runtime~main.96e4286e.js" defer="defer"></script>
 <script src="/tamaki-mes-docs/assets/js/main.2e9b06f2.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -21,7 +21,7 @@ with sample data where applicable.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="field-details">Field Details<a href="#field-details" class="hash-link" aria-label="Direct link to Field Details" title="Direct link to Field Details">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="parent_id"><code>parent_id</code><a href="#parent_id" class="hash-link" aria-label="Direct link to parent_id" title="Direct link to parent_id">​</a></h3>
 <p>References the parent <code>Location</code>, enabling a hierarchical structure across locations.
-See <a href="/tamaki-mes-docs/docs/appendix/data-model/location-model/location">locations</a> for details on the parent <code>Location</code>.</p>
+See <a href="/tamaki-mes-docs/docs/appendix/data-model/location-model/location">locations</a> for details.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="type"><code>type</code><a href="#type" class="hash-link" aria-label="Direct link to type" title="Direct link to type">​</a></h3>
 <p>Defines the type of the location, based on the <strong>LocationType</strong> enum, which includes options such as <code>ENTERPRISE</code>, <code>COMPANY</code>, <code>SITE</code>, <code>AREA</code>, <code>LINE</code>, <code>CELL_GROUP</code>, <code>CELL</code>, and <code>UNIT</code>.
 Each type supports a specific role in the hierarchy, from top-level organizations to
@@ -41,7 +41,8 @@ overdraws may be intentional.</li>
 <ul>
 <li><strong>storage_capacity</strong>: Defines the maximum storage capacity for the location, with <code>null</code> indicating no limit.</li>
 <li><strong>storage_capacity_unit_id</strong>: References the unit of measure for capacity, allowing units such as kilograms, liters,
-or other relevant measures. See <a href="/tamaki-mes-docs/docs/appendix/data-model/utility-models/unit-of-measure-model/unit-of-measure">unit_of_measure</a> for details.</li>
+or other relevant measures.
+See <a href="/tamaki-mes-docs/docs/appendix/data-model/utility-models/unit-of-measure-model/unit-of-measure">unit_of_measure</a> for details.</li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="lot_storage_strategy-and-lot_use_strategy"><code>lot_storage_strategy</code> and <code>lot_use_strategy</code><a href="#lot_storage_strategy-and-lot_use_strategy" class="hash-link" aria-label="Direct link to lot_storage_strategy-and-lot_use_strategy" title="Direct link to lot_storage_strategy-and-lot_use_strategy">​</a></h3>
 <ul>
