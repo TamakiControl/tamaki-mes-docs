@@ -55,8 +55,7 @@ with sample data where applicable.
 | `material_id`                              | `String` (ULID)     | References the material to which this operation material belongs. See [materials](../material-model/material).                                         | `01JAP8RJBN-4VYZUKE1-LY2QHV8X`       |
 | `move_location_id`                         | `String` (ULID)     | References the location for movement source or destination. See [locations](../location-model/location).                                               | `01JAP8R5RT-3FPXQABY-7KQZT6VF`       |
 | `operation_id`                             | `String` (ULID)     | References the associated operation that uses the operation materials. See [operations](../operation-model/operation).                                 | `01JAP8RJBN-7KQZT6VF-Q5VUZYPW`       |
-| `reason_code_id`                           | `String` (ULID)     | References an optional reason code to use when running the operation. See [material_reason_codes](../material-model/material-reason-code).             | `01JAP8R5RT-3FPXQABY-7KQZT6VF`       |
-| `scrap_reason_code_id`                     | `String` (ULID)     | References an optional reason code to use when scrapping remaining inventory. See [material_reason_codes](../material-model/material-reason-code).     | `01JAP8RJBN-7KQZT6VF-Q5VUZYPW`       |
+| `reason_code_id`                           | `String` (ULID)     | References an optional reason code for any action on operation material. See [material_reason_codes](../material-model/material-reason-code).          | `01JAP8R5RT-3FPXQABY-7KQZT6VF`       |
 
 ## Field Details
 
@@ -227,9 +226,4 @@ See [operations](../operation-model/operation) for details.
 ### `reason_code_id`
 
 Optional reference to a `MaterialReasonCode` that provides a reason for running the operation.
-See [material_reason_codes](../material-model/material-reason-code) for details.
-
-### `scrap_reason_code_id`
-
-Optional reference to a `MaterialReasonCode` that provides a reason for scrapping the remaining inventory.
 See [material_reason_codes](../material-model/material-reason-code) for details.
