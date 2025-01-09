@@ -4,7 +4,7 @@ title: "material_property_values"
 description: "Documentation for the material_property_values table, outlining its columns and structure."
 ---
 
-# Material Property Values
+# Material Property Value
 
 ## Overview
 

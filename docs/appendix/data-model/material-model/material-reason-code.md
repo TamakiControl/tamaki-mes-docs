@@ -4,7 +4,7 @@ title: "material_reason_codes"
 description: "Documentation for the material_reason_codes table, outlining its columns and structure."
 ---
 
-# Material Reason Codes
+# Material Reason Code
 
 ## Overview
 

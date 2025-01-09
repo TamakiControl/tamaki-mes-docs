@@ -4,7 +4,7 @@ title: "location_property_values"
 description: "Documentation for the location_property_values table, outlining its columns and structure."
 ---
 
-# Location Property Values
+# Location Property Value
 
 ## Overview
 

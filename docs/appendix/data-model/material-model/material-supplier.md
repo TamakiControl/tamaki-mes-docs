@@ -4,7 +4,7 @@ title: "material_suppliers"
 description: "Documentation for the material_suppliers table, outlining its columns and structure."
 ---
 
-# Material Suppliers
+# Material Supplier
 
 ## Overview
 
@@ -37,10 +37,10 @@ each, along with sample data where applicable.
 | `zip`                      | `String`           | The zip code of the supplier.                                                  | `83301`                                  |
 | `primary_contact`          | `String` (max 100) | The primary contact's name.                                                    | `John Smith`                             |
 | `primary_contact_email`    | `String`           | The primary contact's email.                                                   | `john.smith@gmail.com`                   |
-| `primary_contact_phone`    | `String`           | The primary contact's phone number.                                            | `1234567890`                             |
+| `primary_contact_phone`    | `String`           | The primary contact's phone number.                                            | `+1-800-555-1234`                        |
 | `alt_contact`              | `String` (max 100) | The alternative contact's name.                                                | `Will Smith`                             |
 | `alt_contact_email`        | `String`           | The alternative contact's email.                                               | `Will.smith@gmail.com`                   |
-| `alt_contact_phone`        | `String`           | The alternative contact's phone number.                                        | `7891234560`                             |
+| `alt_contact_phone`        | `String`           | The alternative contact's phone number.                                        | `+1-800-555-5678`                        |
 
 ## Field Details
 
