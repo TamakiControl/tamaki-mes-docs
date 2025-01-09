@@ -29,7 +29,7 @@ with sample data where applicable.
 | `spare1`                                   | `String`            | The first spare column that can be used for additional context on the entity.                                                             | `some extra context 1`               |
 | `spare2`                                   | `String`            | The second spare column that can be used for additional context on the entity.                                                            | `some extra context 2`               |
 | `spare3`                                   | `String`            | The third spare column that can be used for additional context on the entity.                                                             | `some extra context 3`               |
-| `name`                                     | `String`            | Name of the operation record.                                                                                                             | ``                                   |
+| `name`                                     | `String`            | Name of the operation record. Note this is a copy of what the operation's name was that created it.                                       | `Packaging`                          |
 | `start_date`                               | `DateTime`          | Timestamp marking when the operation started.                                                                                             | `2024-05-10T08:00:00Z`               |
 | `end_date`                                 | `DateTime`          | Timestamp marking when the operation stopped.                                                                                             | `2024-05-10T10:00:00Z`               |
 | `status`                                   | `String`            | Status of the operation record, as defined by the **Status** enum.                                                                        | `UNKNOWN`                            |  
@@ -42,6 +42,7 @@ with sample data where applicable.
 ### `name`
 
 The `name` field provides a descriptive identifier for the operation record.
+Note this is a copy of what the operation's name was that created it.
 
 ### `start_date` and `end_date`
 

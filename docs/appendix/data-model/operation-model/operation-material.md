@@ -29,27 +29,27 @@ with sample data where applicable.
 | `spare1`                                   | `String`            | The first spare column that can be used for additional context on the entity.                                                                          | `some extra context 1`               |
 | `spare2`                                   | `String`            | The second spare column that can be used for additional context on the entity.                                                                         | `some extra context 2`               |
 | `spare3`                                   | `String`            | The third spare column that can be used for additional context on the entity.                                                                          | `some extra context 3`               |
-| `name`                                     | `String`            | Name of the operation material.                                                                                                                        | ``                                   |
+| `name`                                     | `String`            | Name of the operation material.                                                                                                                        | `Lids`                               |
 | `create_lot_if_not_found`                  | `Boolean`           | Create a lot if it doesn't exist. Only used if operationType is CONSUME.                                                                               | `false`                              |
 | `flush_interval_millis`                    | `Integer`           | The time interval between data saves in milliseconds.                                                                                                  | `1000`                               |
 | `increment_production_order_count`         | `Boolean`           | Update the production order quantity if shipping or producing material.                                                                                | `false`                              |  
-| `lot_code_expression`                      | `String`            | The Ignition expression to resolve or generate the lot code. Can be an id or name if consuming and has to be a name if producing.                      | ``                                   |
+| `lot_code_expression`                      | `String`            | The Ignition expression to resolve or generate the lot code. Can be an id or name if consuming and has to be a name if producing.                      | See [Ignition_expression_language_and_syntax](https://www.docs.inductiveautomation.com/docs/8.1/platform/expression-language-and-syntax) |
 | `lot_expression_update_behavior`           | `String`            | Strategy used if the lot code expression changes while the operation is active, as defined by the **ExpressionUpdateBehavior** enum.                   | `KEEP_FIRST_GOOD_VALUE`              |
 | `lot_generation_strategy`                  | `String`            | Strategy used to generate a lot code, as defined by the **LotGenerationStrategy** enum. Only used if operationType is PRODUCE.                         | `AUTO_GENERATE`                      |
 | `lot_resolution_strategy`                  | `String`            | Strategy used to to get the lot code, as defined by the **LotResolutionStrategy** enum. Only used if operationType is for CONSUME or RECEIVE_CONSUME.  | `FROM_SOURCE_LOCATION`               |
-| `material_expression`                      | `String` (max 2048) | The Ignition expression for materials. Must return the id of the material.                                                                             | ``                                   |
+| `material_expression`                      | `String` (max 2048) | The Ignition expression for materials. Must return the id of the material.                                                                             | See [Ignition_expression_language_and_syntax](https://www.docs.inductiveautomation.com/docs/8.1/platform/expression-language-and-syntax) |
 | `material_expression_update_behavior`      | `String`            | Strategy used if the material expression changes while the operation is active, as defined by the **ExpressionUpdateBehavior** enum.                   | `KEEP_FIRST_GOOD_VALUE`              |
 | `material_source`                          | `String`            | Strategy used for resolving the material id for an operation, as defined by the **MaterialResolutionStrategy** enum.                                   | `STATIC`                             |
 | `move_quantity_calc_type`                  | `String`            | Calculation type for movement quantity, as defined by the **CountCalcType** enum. Only used if quantitySource is EXPRESSION.                           | `DIRECT`                             |
-| `move_quantity_expression`                 | `String` (max 2048) | The Ignition expression for movement quantity.                                                                                                         | ``                                   |
+| `move_quantity_expression`                 | `String` (max 2048) | The Ignition expression for movement quantity.                                                                                                         | See [Ignition_expression_language_and_syntax](https://www.docs.inductiveautomation.com/docs/8.1/platform/expression-language-and-syntax) |
 | `move_quantity_overflow_value`             | `Double`            | Overflow value for the movement quantity. Only used if quantitySource is EXPRESSION and the moveQuantityCalcType is RISING.                            | `100.0`                              |
 | `operation_type`                           | `String`            | Material operation record type, as defined by the **OperationMaterialType** enum.                                                                      | `CONSUME`                            |
 | `quantity_source`                          | `String`            | Source of the quantity of an operation material, as defined by the **QuantitySource** enum.                                                            | `EXPRESSION`                         |
 | `scrap_remaining_inventory`                | `Boolean`           | Scraps any remaining material inventory for source location when the operation is active.                                                              | `false`                              |
-| `start_trigger_expression`                 | `String`            | Ignition expression to trigger the start of the transfer of materials.                                                                                 | ``                                   |
+| `start_trigger_expression`                 | `String`            | Ignition expression to trigger the start of the transfer of materials.                                                                                 | See [Ignition_expression_language_and_syntax](https://www.docs.inductiveautomation.com/docs/8.1/platform/expression-language-and-syntax) |
 | `start_trigger_type`                       | `String`            | Trigger type when starting the transfer of materials, as defined by the **TriggerType** enum.                                                          | `RISING_EDGE`                        |
 | `status`                                   | `String`            | Status of the operation material, as defined by the **Status** enum.                                                                                   | `IDLE`                               |
-| `stop_trigger_expression`                  | `String` (max 2048) | Ignition expression to trigger the end of the transfer of materials.                                                                                   | ``                                   |
+| `stop_trigger_expression`                  | `String` (max 2048) | Ignition expression to trigger the end of the transfer of materials.                                                                                   | See [Ignition_expression_language_and_syntax](https://www.docs.inductiveautomation.com/docs/8.1/platform/expression-language-and-syntax) |
 | `stop_trigger_type`                        | `String`            | Trigger type when stopping the transfer of materials, as defined by the **TriggerType** enum.                                                          | `FALLING_EDGE`                       |
 | `trigger_source`                           | `String`            | Ways that the various operation materials can trigger, as defined by the **TriggerEvaluationStrategy** enum.                                           | `EXPRESSION`                         |
 | `material_id`                              | `String` (ULID)     | References the material to which this operation material belongs. See [materials](../material-model/material).                                         | `01JAP8RJBN-4VYZUKE1-LY2QHV8X`       |
@@ -64,9 +64,13 @@ with sample data where applicable.
 
 The `name` field provides a descriptive identifier for the operation material.
 
+A few examples for the `Packaging Operation`:
+- `Lids`: To govern adding lids to the line as it moves.
+- `Filling`: To govern the liquid filler for each can.
+
 ### `create_lot_if_not_found`
 
-Creates a lot if it doesn't already exist. This can only be used if operationType is Consume.
+Creates a lot if it doesn't already exist. This can only be used if operationType is CONSUME.
 
 ### `flush_interval_millis`
 
