@@ -10,12 +10,12 @@ functions like scheduling, execution, and tracking of operations. This model con
 Defines the tasks or actions that can be performed, including their parameters, triggers, and execution strategies. 
 This entity supports efficient planning and management of operations within the system.
 
-### 2. Operation Record
+### 2. OperationRecord
 
 Represents instances of operations performed, recording key details such as timing, location, and status. 
 This entity provides a history of operations to support tracking, analysis, and process improvement.
 
-### 3. MaterialInventory
+### 3. OperationMaterial
 
 Represents the interaction between operations and materials, including actions on material lots, inventory handling, 
 and quantity management. It ensures accurate tracking and alignment of materials with operational processes.
