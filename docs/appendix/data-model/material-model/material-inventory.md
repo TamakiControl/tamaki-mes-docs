@@ -61,6 +61,6 @@ See [material_lots](../material-model/material-lot) for details.
 
 ### `production_order_id`
 
-Indicates the associated `ProductionOrder`, linking the record to a specific production order. This provides
-traceability for production-related material activities.
+Indicates the associated `ProductionOrder`, linking the inventory record to a specific production order. This enables tracking
+of materials for a production order.
 See [production_orders](../production-order-model/production-order) for details.
