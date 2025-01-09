@@ -4,39 +4,63 @@ title: "production_order_customers"
 description: "Documentation for the production_order_customers table, detailing columns and constraints in the database schema."
 ---
 
-# Production Order Customers Table
+# Production Order Customer
 
 ## Overview
 
-The `production_order_customers` table stores information about customers associated with production orders, including
+The `ProductionOrderCustomer` entity stores information about customers associated with production orders, including
 contact information, address, and other relevant details. This table facilitates customer management and communication
 within the production order workflow.
 
 ## Table Structure
 
-| Column                  | Type           | Description                                      | Example                  |
-|-------------------------|----------------|--------------------------------------------------|--------------------------|
-| `id`                    | `varchar(255)` | Primary key, unique identifier for the customer. | `01FZ8P9BJN-4VYZUKE1`    |
-| `address`               | `varchar(200)` | Customer's physical address.                     | `123 Milk Rd.`           |
-| `alt_contact`           | `varchar(100)` | Name of the alternate contact person.            | `Jane Smith`             |
-| `alt_contact_email`     | `varchar(255)` | Email address of the alternate contact.          | `jane.smith@dairyco.com` |
-| `alt_contact_phone`     | `varchar(255)` | Phone number of the alternate contact.           | `+1-800-555-5678`        |
-| `city`                  | `varchar(100)` | City where the customer is located.              | `Dairyville`             |
-| `country`               | `varchar(100)` | Country of the customer.                         | `USA`                    |
-| `description`           | `varchar(255)` | Optional description of the customer.            | `Major dairy supplier`   |
-| `name`                  | `varchar(255)` | Unique name of the customer.                     | `Dairy Co.`              |
-| `primary_contact`       | `varchar(100)` | Name of the primary contact person.              | `John Doe`               |
-| `primary_contact_email` | `varchar(255)` | Email address of the primary contact.            | `john.doe@dairyco.com`   |
-| `primary_contact_phone` | `varchar(255)` | Phone number of the primary contact.             | `+1-800-555-1234`        |
-| `state`                 | `varchar(100)` | State or region where the customer is located.   | `ID`                     |
-| `zip`                   | `varchar(255)` | Zip code of the customer's address.              | `83701`                  |
+The following table outlines the SQL columns for the `production_order_customers` table, providing a brief description of
+each, along with sample data where applicable.
 
-## Constraints
+| Column                  | Type               | Description                                                                    | Example                                  |
+|-------------------------|--------------------|--------------------------------------------------------------------------------|------------------------------------------|
+| `id`                    | `String` (ULID)    | Unique identifier for the entity.                                              | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`           |
+| `enabled`               | `Boolean`          | If the entity is enabled or not.                                               | `true`                                   |
+| `created_date`          | `DateTime`         | Date the entity was created.                                                   | `2024-12-31T19:48:44Z`                   |
+| `created_by`            | `String`           | Person who created the entity.                                                 | `TamakiMES`                              |
+| `modified_date`         | `DateTime`         | Date the entity was created.                                                   | `2024-12-31T19:48:44Z`                   |
+| `modified_by`           | `String`           | Last person to modify the entity.                                              | `TamakiMES`                              |
+| `notes`                 | `Blob`             | Notes about the entity.                                                        | `This entity has these extra notes`      |
+| `spare1`                | `String`           | The first spare column that can be used for additional context on the entity.  | `some extra context 1`                   |
+| `spare2`                | `String`           | The second spare column that can be used for additional context on the entity. | `some extra context 2`                   |
+| `spare3`                | `String`           | The third spare column that can be used for additional context on the entity.  | `some extra context 3`                   |
+| `name`                  | `String`           | Unique name of the customer.                                                   | `Dairy Co.`                              |
+| `description`           | `String`           | Optional description of the customer.                                          | `Major dairy supplier`                   |
+| `address`               | `String` (max 200) | Customer's physical address.                                                   | `123 Milk Rd.`                           |
+| `city`                  | `String` (max 100) | City where the customer is located.                                            | `Dairyville`                             |
+| `state`                 | `String` (max 100) | State or region where the customer is located.                                 | `ID`                                     |
+| `country`               | `String` (max 100) | Country of the customer.                                                       | `USA`                                    |
+| `zip`                   | `String`           | Zip code of the customer's address.                                            | `83701`                                  |
+| `primary_contact`       | `String` (max 100) | Name of the primary contact person.                                            | `John Doe`                               |
+| `primary_contact_email` | `String`           | Email address of the primary contact.                                          | `john.doe@dairyco.com`                   |
+| `primary_contact_phone` | `String`           | Phone number of the primary contact.                                           | `+1-800-555-1234`                        |
+| `alt_contact`           | `String` (max 100) | Name of the alternate contact person.                                          | `Jane Smith`                             |
+| `alt_contact_email`     | `varchar(255)`     | Email address of the alternate contact.                                        | `jane.smith@dairyco.com`                 |
+| `alt_contact_phone`     | `varchar(255)`     | Phone number of the alternate contact.                                         | `+1-800-555-5678`                        |
 
-- **Primary Key**: `id` - Uniquely identifies each customer.
-- **Unique Key**: `name` - Ensures that each customer name is unique within the system.
+## Field Details
 
----
+### `name`
 
-The `production_order_customers` table provides a structured repository for customer information, supporting effective
-customer management and communication within TamakiMES.
+The `name` field is a descriptive identifier for the customer.
+
+### `description`
+
+An optional field that provides a detailed description of the customer.
+
+### `address`, `city`, `state`, `country`, `zip`
+
+These columns hold the physical location of the customer.
+
+### `primary_contact`, `primary_contact_email`, `primary_contact_phone`
+
+These columns hold the information to reach the primary contact.
+
+### `alt_contact`, `alt_contact_email`, `alt_contact_phone`
+
+These columns hold the information to reach the alternative contact.
