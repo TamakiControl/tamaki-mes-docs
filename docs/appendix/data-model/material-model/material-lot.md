@@ -4,7 +4,7 @@ title: "material_lots"
 description: "Documentation for the material_lots table, outlining its columns and structure."
 ---
 
-# Material Lots
+# Material Lot
 
 ## Overview
 

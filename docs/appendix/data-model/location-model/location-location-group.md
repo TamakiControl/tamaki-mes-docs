@@ -4,7 +4,7 @@ title: "location_location_groups"
 description: "Documentation for the location_location_groups join table, connecting Location and LocationGroup entities."
 ---
 
-# Location-Location Groups
+# Location-Location Group
 
 ## Overview
 

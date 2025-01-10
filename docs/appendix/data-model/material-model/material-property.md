@@ -4,7 +4,7 @@ title: "material_properties"
 description: "Documentation for the material_properties table, outlining its columns and structure."
 ---
 
-# Material Properties
+# Material Property
 
 ## Overview
 

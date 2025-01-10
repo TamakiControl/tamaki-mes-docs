@@ -4,7 +4,7 @@ title: "locations"
 description: "Documentation for the locations table, outlining its columns and structure."
 ---
  
-# Locations
+# Location
  
 ## Overview
  

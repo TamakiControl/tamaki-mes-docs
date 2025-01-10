@@ -4,43 +4,95 @@ title: "production_orders"
 description: "Documentation for the production_orders table, detailing columns and constraints in the database schema."
 ---
 
-# Production Orders Table
+# Production Order
 
 ## Overview
 
-The `production_orders` table manages information related to each production order, including product details,
+The `ProductionOrder` entity manages information related to each production order, including product details,
 scheduling, customer information, and production quantities. This table enables efficient tracking and organization of
 production orders within the TamakiMES system.
 
 ## Table Structure
 
-| Column                | Type           | Description                                                                                                                                                       | Example               |
-|-----------------------|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|
-| `due_date`            | `datetime`     | Expected completion date for the production order.                                                                                                                | `2024-06-15 00:00:00` |
-| `end_date`            | `datetime`     | Date when the production was completed.                                                                                                                           | `2024-07-01 12:00:00` |
-| `name`                | `varchar(255)` | Unique name identifying the production order.                                                                                                                     | `Order001`            |
-| `quantity`            | `double`       | Total quantity planned for production.                                                                                                                            | `500.0`               |
-| `quantity_produced`   | `double`       | Quantity already produced as part of this production order.                                                                                                       | `250.0`               |
-| `quantity_scheduled`  | `double`       | Quantity scheduled for production.                                                                                                                                | `300.0`               |
-| `schedule_priority`   | `varchar(255)` | Priority level for scheduling, determining order in the production queue.                                                                                         | `HIGH`                |
-| `start_date`          | `datetime`     | Date when production on this order began.                                                                                                                         | `2024-05-01 08:00:00` |
-| `status`              | `varchar(255)` | Current status of the production order, such as `IDLE` or `ACTIVE`.                                                                                               | `ACTIVE`              |
-| `location_id`         | `varchar(255)` | Foreign key to `locations`, indicating where the production is taking place. See [locations](../location-model/location.md).                                      | `01FZ8P9BJN-4VYZUKE1` |
-| `product_material_id` | `varchar(255)` | Foreign key to `materials`, referencing the material being produced. See [materials](../material-model/material.md).                                              | `01G8V9S9B9-3QWXS4VC` |
-| `customer_id`         | `varchar(255)` | Foreign key to `production_order_customers`, linking the customer associated with the order. See [production_order_customers](production-order-customer).         | `01H3XZ9JAB-4VKJ5LNY` |
-| `unit_of_measure_id`  | `varchar(255)` | Foreign key to `unit_of_measure`, specifying the unit of measure for quantity. See [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure.md). | `Liters`              |
+The following table outlines the SQL columns for the `production_orders` table, providing a brief description of each, along
+with sample data where applicable.
 
-## Constraints
+| Column                | Type             | Description                                                                                                                               | Example                              |
+|-----------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
+| `id`                  | `String` (ULID)  | Unique identifier for the entity.                                                                                                         | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`       |
+| `enabled`             | `Boolean`        | If the entity is enabled or not.                                                                                                          | `true`                               |
+| `created_date`        | `DateTime`       | Date the entity was created.                                                                                                              | `2024-12-31T19:48:44Z`               |
+| `created_by`          | `String`         | Person who created the entity.                                                                                                            | `TamakiMES`                          |
+| `modified_date`       | `DateTime`       | Date the entity was created.                                                                                                              | `2024-12-31T19:48:44Z`               |
+| `modified_by`         | `String`         | Last person to modify the entity.                                                                                                         | `TamakiMES`                          |
+| `notes`               | `Blob`           | Notes about the entity.                                                                                                                   | `This entity has these extra notes`  |
+| `spare1`              | `String`         | The first spare column that can be used for additional context on the entity.                                                             | `some extra context 1`               |
+| `spare2`              | `String`         | The second spare column that can be used for additional context on the entity.                                                            | `some extra context 2`               |
+| `spare3`              | `String`         | The third spare column that can be used for additional context on the entity.                                                             | `some extra context 3`               |
+| `name`                | `String`         | Unique name identifying the production order.                                                                                             | `Order001`                           |
+| `start_date`          | `DateTime`       | Date when production on this order began.                                                                                                 | `2024-05-01 08:00:00`                |
+| `due_date`            | `DateTime`       | Expected completion date for the production order.                                                                                        | `2024-06-15 00:00:00`                |
+| `end_date`            | `DateTime`       | Date when the production was completed.                                                                                                   | `2024-07-01 12:00:00`                |
+| `quantity`            | `Double`         | Total quantity planned for production.                                                                                                    | `500.0`                              |
+| `quantity_produced`   | `Double`         | Quantity already produced as part of this production order.                                                                               | `250.0`                              |
+| `quantity_scheduled`  | `Double`         | Quantity scheduled for production.                                                                                                        | `300.0`                              |
+| `schedule_priority`   | `String`         | Priority level for scheduling, determining order in the production queue, as defined by the **SchedulePriority** enum.                    | `NORMAL`                             |
+| `status`              | `String`         | Running status of the production order, as defined by the **ProductionOrderStatus** enum.                                                 | `IDLE`                               |
+| `location_id`         | `String` (ULID)  | References the location where the production is taking place. See [locations](../location-model/location).                                | `01FZ8P9BJN-4VYZUKE1`                |
+| `product_material_id` | `String` (ULID)  | References the material being produced. See [materials](../material-model/material).                                                      | `01G8V9S9B9-3QWXS4VC`                |
+| `customer_id`         | `String` (ULID)  | References the customer associated with the order. See [production_order_customers](../production-order-model/production-order-customer). | `01H3XZ9JAB-4VKJ5LNY`                |
+| `unit_of_measure_id`  | `String` (ULID)  | References the unit of measure for quantity. See [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure).              | `01JAP8R5RT-3FPXQABY-7KQZT6VF`       |
 
-- **Primary Key**: `id` - Uniquely identifies each production order.
-- **Unique Key**: `name` - Ensures each production order name is unique within the system.
-- **Foreign Keys**:
-  - `location_id` → `locations(id)`
-  - `product_material_id` → `materials(id)`
-  - `customer_id` → `production_order_customers(id)`
-  - `unit_of_measure_id` → `unit_of_measure(id)`
+## Field Details
 
----
+### `name`
 
-This table structure provides an efficient layout for managing production orders within the TamakiMES system, allowing
-each order to have detailed information on scheduling, quantities, and associated entities.
+The `name` field provides a descriptive identifier for the production order.
+
+### `start_date`, `due_date`, `end_date`
+
+- **start_date**: Timestamp indicating when the production started.
+- **due_date**: Timestamp indicating the expected completion date for the production order.
+- **end_date**: Timestamp indicating when the production was completed.
+
+These timestamps provide temporal context for each production order.
+
+### `quantity`, `quantity_produced`, `quantity_scheduled`
+
+- **quantity**: The quantity of units planned for production.
+- **quantity_produced**: The quantity of units already produced for this production order.
+- **quantity_scheduled**: The quantity of units scheduled for production.
+
+These quantities provide metrics about the progress of the production order.
+
+### `schedule_priority`
+
+Represents the priority of this production order, as defined by the **SchedulePriority** enum, 
+with options such as `LOW`, `NORMAL`, `HIGH`, and `URGENT`.
+
+### `status`
+
+Represents the running status of the production order, as defined by the **ProductionOrderStatus** enum, with options such as 
+`IDLE`, `SCHEDULED`, `RUNNING`, `PAUSED`, `STOPPED`, `CLOSED`, and `CANCELLED`.
+
+### `location_id`
+
+References the `Location` entity where this production order is taking place, allowing precise tracking of where
+this production order is within the facility.
+See [locations](../location-model/location) for details.
+
+### `product_material_id`
+
+References the `Material` entity associated with the production order, providing context about the material's characteristics and
+properties.
+See [materials](../material-model/material) for details.
+
+### `customer_id`
+
+References the `ProductionOrderCustomer` entity associated with the production order, providing us information on the customer.
+See [production_order_customers](../production-order-model/production-order-customer) for details.
+
+### `unit_of_measure_id`
+
+References the unit of measure applicable to this material, such as kilograms or liters, supporting precise tracking of quantities.
+See [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure) for details.
