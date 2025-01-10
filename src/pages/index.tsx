@@ -8,36 +8,47 @@ import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            How it works!
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
+	const { siteConfig } = useDocusaurusContext();
+	return (
+		<header
+			className={clsx('hero', styles.heroBanner)}
+			style={{
+				backgroundImage:
+					'radial-gradient(circle, rgba(61, 61, 61, 0) 15%, rgba(0, 0, 0, 0.2) 78%),url(https://cdn.prod.website-files.com/5f3d8f0947c9a1f4b058e18b/5f773dee4b83a1c4a5d1077b_shutterstock_165228059.jpg)',
+				backgroundPosition: '0 0,100% 0',
+				backgroundSize: 'auto,cover',
+				backgroundAttachment: 'scroll,scroll',
+			}}
+		>
+			<div className='container'>
+				<Heading as='h1' className='hero__title'>
+					<img src='img/tamaki-MES-logo.png' alt='' />
+				</Heading>
+				{/* <p className='hero__subtitle'>{siteConfig.tagline}</p> */}
+				<div className={styles.buttons}>
+					<Link
+						className='button button--primary button--lg mainButton'
+						to='/docs/intro'
+					>
+						Read the docs!
+					</Link>
+				</div>
+			</div>
+		</header>
+	);
 }
 
 export default function Home(): JSX.Element {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
-    </Layout>
-  );
+	const { siteConfig } = useDocusaurusContext();
+	return (
+		<Layout
+			title={`Hello from ${siteConfig.title}`}
+			description='Description will go into a meta tag in <head />'
+		>
+			<HomepageHeader />
+			<main>
+				<HomepageFeatures />
+			</main>
+		</Layout>
+	);
 }

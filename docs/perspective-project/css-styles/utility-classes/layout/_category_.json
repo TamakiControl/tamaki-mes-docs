@@ -1,0 +1,8 @@
+{
+	"label": "Layout",
+	"position": 0,
+	"link": {
+		"type": "generated-index",
+		"description": "These classes can be used to modify the layout of elements on the screen, such as the width, height, margin, and padding, of elements. By using these classes, you can create a consistent layout across all screens in the project and ensure that elements are aligned and spaced correctly."
+	}
+}
