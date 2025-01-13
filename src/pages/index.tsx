@@ -20,6 +20,16 @@ function HomepageHeader() {
 				backgroundAttachment: 'scroll,scroll',
 			}}
 		>
+			<div
+				style={{
+					position: 'absolute',
+					top: 0,
+					bottom: 0,
+					left: 0,
+					right: 0,
+					backdropFilter: 'saturate(130%)',
+				}}
+			></div>
 			<div className='container'>
 				<Heading as='h1' className='hero__title'>
 					<img src='img/tamaki-MES-logo.png' alt='' />
