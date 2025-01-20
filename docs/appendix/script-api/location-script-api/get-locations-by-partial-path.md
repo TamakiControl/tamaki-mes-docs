@@ -1,31 +1,36 @@
 ---
-sidebar_position: 6
+sidebar_position: 4
 title: "getLocationsByPartialPath"
 description: "Retrieves all locations that have paths that contain the provided path."
 ---
 
 # system.mes.location.getLocationsByPartialPath
 
-## Method Description
+## Description
 
-Retrieves all locations with paths that contain the specified partial path. This function returns a JSON list of all
-matching locations.
+Retrieves all [Locations](../../data-model/location-model/location) records with paths that contain the specified partial path.
+
+## Syntax
+```python
+system.mes.location.getLocationsByPartialPath('partial/path/example')
+```
 
 ## Parameters
 
-| Parameter | Type   | Description                                  |
-|-----------|--------|----------------------------------------------|
-| `path`    | String | The partial path to search for in locations. |
+| Parameter | Type     | Description                                  |
+|-----------|----------|----------------------------------------------|
+| `path`    | `String` | The partial path to search for in locations. |
 
 ## Returns
 
-A JSON list of all locations with paths that contain the provided partial path.
+A list of JSON objects representing all locations with paths that include the given partial path.
 
-## Example Usage
+## Code Examples
 
 ```python
 # Retrieve locations by partial path
-matching_locations = system.mes.location.getLocationsByPartialPath(path="partial/path/example")
+matching_locations = system.mes.location.getLocationsByPartialPath('DairyCo')
 
 # Output the list of matching locations
 print(matching_locations)
+```
