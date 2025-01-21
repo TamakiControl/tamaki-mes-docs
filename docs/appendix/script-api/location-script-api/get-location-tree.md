@@ -63,6 +63,6 @@ Returns a list of JSON objects. Each JSON object has the following properties:
 # Retrieve all locations with the substring 'Plant' in their name and their parents
 location_tree = system.mes.location.getLocationTree('Plant')
 
-# Print the location tree
+# Output the location tree
 print(location_tree)
 ```

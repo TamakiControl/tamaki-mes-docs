@@ -62,6 +62,6 @@ temperature_property['highLimit'] = 50
 # Save the property
 saved_property = system.mes.location.saveProperty(**temperature_property)
 
-# Print the JSON representation of the saved property
+# Output the JSON representation of the saved property
 print(saved_property)
 ```

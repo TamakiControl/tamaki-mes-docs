@@ -48,7 +48,7 @@ new_property = system.mes.location.newProperty()
 new_property['name'] = 'Temperature'
 saved_property = system.mes.location.saveProperty(**new_property)
 
-# Print the JSON representation of the saved location
+# Output the JSON representation of the saved location
 print(saved_property)
 
 # Retrieve or create a location property
@@ -68,6 +68,6 @@ temperature_property['defaultValue'] = 20.0
 # Save or update the location property
 updated_property = system.mes.location.saveProperty(**temperature_property)
 
-# Print the JSON representation of the updated location property
+# Output the JSON representation of the updated location property
 print(updated_property)
 ```

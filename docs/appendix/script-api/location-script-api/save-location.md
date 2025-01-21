@@ -50,7 +50,7 @@ new_location = system.mes.location.newLocation()
 new_location['name'] = 'Warehouse'
 saved_location = system.mes.location.saveLocation(**new_location)
 
-# Print the JSON representation of the saved location
+# Output the JSON representation of the saved location
 print(saved_location)
 
 # Create another new location instance to update the previous location.
@@ -68,6 +68,6 @@ location_data['sortOrder'] = 1
 # Save the location to update it in the system
 updated_location = system.mes.location.saveLocation(**location_data)
 
-# Print the JSON representation of the updated location
+# Output the JSON representation of the updated location
 print(updated_location)
 ```

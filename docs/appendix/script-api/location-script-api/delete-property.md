@@ -30,6 +30,6 @@ a JSON object is returned with details about the encountered error.
 ## Code Examples
 
 ```python
-# Deletes a location property by ID or path
+# Delete a location property by ID or path
 system.mes.location.deleteProperty('Temperature')
 ```

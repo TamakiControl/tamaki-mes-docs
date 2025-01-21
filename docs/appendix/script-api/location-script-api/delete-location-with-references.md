@@ -29,6 +29,6 @@ If successful, no response is returned.
 ## Code Examples
 
 ```python
-# Deletes a location by ID or path and all immediate references
+# Delete a location by ID or path and all immediate references
 system.mes.location.deleteLocationWithReferences('DairyCo')
 ```

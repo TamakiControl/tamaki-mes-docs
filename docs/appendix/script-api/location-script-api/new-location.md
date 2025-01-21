@@ -60,6 +60,6 @@ new_location['description'] = 'A new location created via script.'
 # Save the new location to the system
 saved_location = system.mes.location.saveLocation(**new_location)
 
-# Print the JSON representation of the saved location
+# Output the JSON representation of the saved location
 print(saved_location)
 ```

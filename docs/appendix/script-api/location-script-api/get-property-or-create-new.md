@@ -56,9 +56,9 @@ temperature_property['lowLimit'] = -20
 temperature_property['highLimit'] = 50
 # (You can continue setting other properties as needed here)
 
-# Gets the property if it exists, otherwise creates it with the given attributes
+# Get the property if it exists, otherwise creates it with the given attributes
 property = system.mes.location.getPropertyOrCreateNew(**temperature_property)
 
-# Print the JSON representation of the property
+# Output the JSON representation of the property
 print(property)
 ```

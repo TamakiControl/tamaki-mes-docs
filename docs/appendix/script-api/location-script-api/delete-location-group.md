@@ -29,6 +29,6 @@ If successful, no response is returned.
 ## Code Examples
 
 ```python
-# Deletes a location by ID or path
+# Delete a location by ID or path
 system.mes.location.deleteLocationGroup('01JJ4N794J-BYCKRFJN-AY2S5D1N')
 ```
