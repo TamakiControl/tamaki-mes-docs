@@ -24,8 +24,7 @@ system.mes.location.deleteLocationWithReferences(idOrPath)
 
 ## Returns
 
-If successful, no response is returned. If unsuccessful, a ConstraintViolationException 
-error is thrown.
+If successful, no response is returned.
 
 ## Code Examples
 

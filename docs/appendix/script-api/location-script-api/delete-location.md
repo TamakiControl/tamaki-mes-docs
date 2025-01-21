@@ -24,17 +24,12 @@ system.mes.location.deleteLocation(idOrPath)
 
 ## Returns
 
-If successful, no response is returned. If unsuccessful, a JSON object is returned with 
-details about the encountered error.
+If successful, no response is returned. If the location that's being deleted has a reference, 
+a JSON object is returned with details about the encountered error.
 
 ## Code Examples
 
 ```python
 # Deletes a location by ID or path
-delete_information = system.mes.location.deleteLocation('DairyCo')
-
-if len(delete_information) > 0:
-    print('Deletion errors found:', delete_information)
-else:
-    print('Location was deleted.')
+system.mes.location.deleteLocation('DairyCo')
 ```
