@@ -43,7 +43,7 @@ saved_property = system.mes.location.saveProperty(**new_property)
 new_property_value = system.mes.location.newPropertyValue()
 new_property_value['locationId'] = saved_location.id
 new_property_value['propertyId'] = saved_property.id
-new_property_value['dataType'] = 'Int1'
+new_property_value['dataType'] = 'Int'
 new_property_value['value'] = 100
 system.mes.location.savePropertyValue(**new_property_value)
 
