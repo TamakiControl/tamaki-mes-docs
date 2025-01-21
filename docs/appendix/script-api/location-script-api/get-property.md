@@ -1,32 +1,36 @@
 ---
-sidebar_position: 6
+sidebar_position: 18
 title: "getProperty"
 description: "Retrieves a location property by its ID or name."
 ---
 
 # system.mes.location.getProperty
 
-Retrieves a location property by its specified ID or name.
+## Description
 
-## Method Description
+Retrieves a [Location Properties](../../data-model/location-model/location-property) by its specified ID or name.
 
-This function retrieves the details of a location property based on the provided ULID or name. It is useful for
-accessing specific property details, such as configuration and attributes, when the unique identifier or name is known.
+## Syntax
+```python
+system.mes.location.getProperty(idOrName)
+```
+
+## Parameters
+
+| Parameter  | Type     | Description                                            |
+|------------|----------|--------------------------------------------------------|
+| `idOrName` | `String` | The ULID or name of the location property to retrieve. |
 
 ## Returns
 
 A JSON representation of the location property.
 
-## Parameters
-
-| Parameter  | Type   | Description                                            |
-|------------|--------|--------------------------------------------------------|
-| `idOrName` | String | The ULID or name of the location property to retrieve. |
-
-## Example Usage
+## Code Examples
 
 ```python
+# Retrieve a location property by ID or name
+property = system.mes.location.getProperty('Temperature')
 
-    property = system.mes.location.getProperty(id_or_name)
-    property['defaultValue'] = 100
-    system.mes.location.saveProperty(**property)
+# Output the location property
+print(property)
+```

@@ -1,18 +1,19 @@
 ---
-sidebar_position: 16
-title: "saveProperty"
-description: "Creates or updates a location property with specified parameters."
+sidebar_position: 17
+title: "getPropertyOrCreateNew"
+description: "Retrieves or creates a location property by its ID or name depending on if it exists."
 ---
 
-# system.mes.location.saveProperty
+# system.mes.location.getPropertyOrCreateNew
 
 ## Description
 
-Creates or updates a [Location Properties](../../data-model/location-model/location-property) in the system based on the provided parameters.
+Retrieves a [Location Properties](../../data-model/location-model/location-property) if an existing location property exists with the specified ID or name.
+Otherwise, creates a new [Location Properties](../../data-model/location-model/location-property) with the specified name and attributes.
 
 ## Syntax
 ```python
-system.mes.location.saveProperty(**property_data)
+system.mes.location.getPropertyOrCreateNew(**property_data)
 ```
 
 ## Parameters
@@ -36,34 +37,28 @@ system.mes.location.saveProperty(**property_data)
 | `spare2`       | `String`        | Additional field for user-defined context.                                       |
 | `spare3`       | `String`        | Additional field for user-defined context.                                       |
 
+## Returns
+
+A JSON representation of the location property.
+
 ## Code Examples
 
 ```python
-# Create a new location property instance, set the name and save it.
-new_property = system.mes.location.newProperty()
-new_property['name'] = 'Temperature'
-saved_property = system.mes.location.saveProperty(**new_property)
-
-# Print the JSON representation of the saved location
-print(saved_property)
-
-# Retrieve or create a location property
+# Create a new property for temperature
 temperature_property = system.mes.location.newProperty()
 
-# Define property attributes
-temperature_property['id'] = saved_property.id
+# Define property details
 temperature_property['name'] = 'Temperature'
 temperature_property['dataType'] = 'Float'
-temperature_property['lowLimit'] = -20
-temperature_property['highLimit'] = 50
 temperature_property['units'] = 'Celsius'
 temperature_property['nullable'] = False
-temperature_property['defaultValue'] = 20.0
+temperature_property['lowLimit'] = -20
+temperature_property['highLimit'] = 50
 # (You can continue setting other properties as needed here)
 
-# Save or update the location property
-updated_property = system.mes.location.saveProperty(**temperature_property)
+# Gets the property if it exists, otherwise creates it with the given attributes
+property = system.mes.location.getPropertyOrCreateNew(**temperature_property)
 
-# Print the JSON representation of the updated location property
-print(updated_property)
+# Print the JSON representation of the property
+print(property)
 ```
