@@ -8,7 +8,7 @@ description: "Deletes the location group with the given id and any immediate ref
 
 ## Description
 
-Deletes a [Location Groups](../../data-model/location-model/location) by its id.
+Deletes a [Location Groups](../../data-model/location-model/location) record by its id.
 This deletes any references in [Location-Location Groups](../../data-model/location-model/location-location-group).
 
 ## Syntax

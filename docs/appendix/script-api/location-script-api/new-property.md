@@ -8,7 +8,7 @@ description: "Creates a new location property."
 
 ## Description
 
-Creates a new [Location Properties](../../data-model/location-model/location-property) to be formatted with attributes.
+Creates a new [Location Properties](../../data-model/location-model/location-property) record to be formatted with attributes.
 
 ## Syntax
 ```python

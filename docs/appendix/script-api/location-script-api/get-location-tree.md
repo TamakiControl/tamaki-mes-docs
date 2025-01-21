@@ -8,9 +8,9 @@ description: "Retrieves locations as a tree."
 
 ## Description
 
-**No Filter:** Retrieves all locations as a tree structure. 
+**No Filter:** Retrieves all [Locations](../../data-model/location-model/location) records as a tree structure. 
 
-**With a Filter:** Retrieves all locations whose names contain a substring that matches the filter. 
+**With a Filter:** Retrieves all [Locations](../../data-model/location-model/location) records whose names contain a substring that matches the filter. 
 Returns the parent locations even if they don't contain the filter.
 
 ## Syntax

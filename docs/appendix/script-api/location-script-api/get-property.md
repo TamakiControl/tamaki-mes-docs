@@ -8,7 +8,7 @@ description: "Retrieves a location property by its ID or name."
 
 ## Description
 
-Retrieves a [Location Properties](../../data-model/location-model/location-property) by its specified ID or name.
+Retrieves a [Location Properties](../../data-model/location-model/location-property) record by its specified ID or name.
 
 ## Syntax
 ```python

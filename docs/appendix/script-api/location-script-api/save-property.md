@@ -8,7 +8,7 @@ description: "Creates or updates a location property with specified parameters."
 
 ## Description
 
-Creates or updates a [Location Properties](../../data-model/location-model/location-property) in the system based on the provided parameters.
+Creates or updates a [Location Properties](../../data-model/location-model/location-property) record in the system based on the provided parameters.
 
 ## Syntax
 ```python

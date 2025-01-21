@@ -8,7 +8,7 @@ description: "Deletes the location property with the given id or path and any im
 
 ## Description
 
-Deletes a [Location Properties](../../data-model/location-model/location-property) by its id or name. 
+Deletes a [Location Properties](../../data-model/location-model/location-property) record by its id or name. 
 Also deletes immediate references to this property if possible.
 
 ## Syntax

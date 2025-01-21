@@ -8,7 +8,7 @@ description: "Retrieves a list of references to a location with the given id."
 
 ## Description
 
-Retrieves a list of references to a [Location Groups](../../data-model/location-model/location-group) by its id.
+Retrieves a list of references to a [Location Groups](../../data-model/location-model/location-group) record by its id.
 
 ## Syntax
 ```python

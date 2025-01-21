@@ -8,7 +8,7 @@ description: "Validates the specified parameters for a location."
 
 ## Description
 
-Validates the specified parameters for a [Locations](../../data-model/location-model/location) and returns any validation errors. 
+Validates the specified parameters for a [Locations](../../data-model/location-model/location) record and returns any validation errors. 
 This only checks if the location object can be saved based on the attributes given.
 
 ## Syntax
