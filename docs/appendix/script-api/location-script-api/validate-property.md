@@ -39,7 +39,7 @@ system.mes.location.validateLocation(**property_data)
 
 ## Returns
 
-A JSON object where keys are field names and values are lists of validation violation messages.
+Returns a JSON object where keys are field names and values are lists of validation violation messages.
 
 ## Code Examples
 

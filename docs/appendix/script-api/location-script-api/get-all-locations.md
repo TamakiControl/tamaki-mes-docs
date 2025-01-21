@@ -23,7 +23,7 @@ system.mes.location.getAllLocations()
 
 ## Returns
 
-A list of JSON objects representing all locations.
+Returns a list of JSON objects representing all locations.
 
 ## Code Examples
 

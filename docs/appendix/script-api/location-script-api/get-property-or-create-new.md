@@ -39,7 +39,7 @@ system.mes.location.getPropertyOrCreateNew(**property_data)
 
 ## Returns
 
-A JSON representation of the location property.
+Returns a JSON representation of the location property.
 
 ## Code Examples
 

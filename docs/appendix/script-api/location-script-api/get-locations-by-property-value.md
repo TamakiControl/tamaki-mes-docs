@@ -24,7 +24,7 @@ system.mes.location.getLocationsByPropertyValue(idOrName, value)
 
 ## Returns
 
-A JSON list of all locations that have the specified property value.
+Returns a JSON list of all locations that have the specified property value.
 
 ## Code Examples
 

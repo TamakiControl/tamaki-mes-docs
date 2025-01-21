@@ -36,6 +36,10 @@ system.mes.location.saveProperty(**property_data)
 | `spare2`       | `String`        | Additional field for user-defined context.                                       |
 | `spare3`       | `String`        | Additional field for user-defined context.                                       |
 
+## Returns
+
+Returns a JSON representation of the saved location property.
+
 ## Code Examples
 
 ```python

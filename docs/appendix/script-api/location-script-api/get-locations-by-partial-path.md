@@ -23,7 +23,7 @@ system.mes.location.getLocationsByPartialPath('partial/path/example')
 
 ## Returns
 
-A list of JSON objects representing all locations with paths that include the given partial path.
+Returns a list of JSON objects representing all locations with paths that include the given partial path.
 
 ## Code Examples
 
