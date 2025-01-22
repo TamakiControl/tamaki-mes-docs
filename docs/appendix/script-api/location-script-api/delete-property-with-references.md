@@ -18,9 +18,9 @@ system.mes.location.deletePropertyWithReferences(idOrName)
 
 ## Parameters
 
-| Parameter  | Type     | Description                               |
-|------------|----------|-------------------------------------------|
-| `idOrName` | `String` | The ID or name of the location to delete. |
+| Parameter  | Type     | Description                                        |
+|------------|----------|----------------------------------------------------|
+| `idOrName` | `String` | The ID or name of the location property to delete. |
 
 ## Returns
 

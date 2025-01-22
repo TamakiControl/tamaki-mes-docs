@@ -43,7 +43,7 @@ Returns a JSON representation of the saved location property.
 ## Code Examples
 
 ```python
-# Create a new location property instance, set the name and save it.
+# Create a new location property instance, set the name and save it
 new_property = system.mes.location.newProperty()
 new_property['name'] = 'Temperature'
 saved_property = system.mes.location.saveProperty(**new_property)
@@ -51,7 +51,7 @@ saved_property = system.mes.location.saveProperty(**new_property)
 # Output the JSON representation of the saved location
 print(saved_property)
 
-# Retrieve or create a location property
+# Create another new location property instance to update the previous location property
 temperature_property = system.mes.location.newProperty()
 
 # Define property attributes
@@ -65,7 +65,7 @@ temperature_property['nullable'] = False
 temperature_property['defaultValue'] = 20.0
 # (You can continue setting other properties as needed here)
 
-# Save or update the location property
+# Save the location property to update it in the system
 updated_property = system.mes.location.saveProperty(**temperature_property)
 
 # Output the JSON representation of the updated location property

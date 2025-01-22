@@ -1,10 +1,10 @@
 ---
-sidebar_position: 27
-title: "getLocationPropertyValueReferences"
+sidebar_position: 19
+title: "getLocationPropertyReferences"
 description: "Retrieves a list of references to a location property with the given id or path."
 ---
 
-# system.mes.location.getLocationPropertyValueReferences
+# system.mes.location.getLocationPropertyReferences
 
 ## Description
 
