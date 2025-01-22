@@ -13,7 +13,7 @@ This only checks if the location property object can be saved based on the attri
 
 ## Syntax
 ```python
-system.mes.location.validateLocation(**property_data)
+system.mes.location.validateProperty(**property_data)
 ```
 
 ## Parameters

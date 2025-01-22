@@ -1,19 +1,19 @@
 ---
-sidebar_position: 29
-title: "deletePropertyValue"
-description: "Deletes a specified location property value with the given id."
+sidebar_position: 30
+title: "deletePropertyValueWithReferences"
+description: "Deletes the location property value with the given id and any immediate references to this property if possible."
 ---
 
-# system.mes.location.deletePropertyValue
+# system.mes.location.deletePropertyValueWithReferences
 
 ## Description
 
 Deletes a [Location Property Values](../../data-model/location-model/location-property-value) record by its id.
-This cannot delete a location property value with references to it.
+Also deletes immediate references to this location if possible.
 
 ## Syntax
 ```python
-system.mes.location.deletePropertyValue(id)
+system.mes.location.deletePropertyValueWithReferences(id)
 ```
 
 ## Parameters
@@ -30,5 +30,5 @@ If successful, no response is returned.
 
 ```python
 # Delete a location property value by ID
-system.mes.location.deletePropertyValue('01JJ7AFN0V-ZZS5XSAR-05CGEXBW')
+system.mes.location.deletePropertyValueWithReferences('01JJ7AFN0V-ZZS5XSAR-05CGEXBW')
 ```

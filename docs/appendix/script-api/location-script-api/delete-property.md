@@ -9,7 +9,7 @@ description: "Deletes a specified location property by its id or name."
 ## Description
 
 Deletes a [Location Properties](../../data-model/location-model/location-property) record by its id or name.
-This cannot delete a location with references to it.
+This cannot delete a location property with references to it.
 
 ## Syntax
 ```python

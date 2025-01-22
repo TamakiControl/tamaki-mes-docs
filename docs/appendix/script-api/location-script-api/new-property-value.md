@@ -1,40 +1,70 @@
 ---
-sidebar_position: 9
+sidebar_position: 23
 title: "newPropertyValue"
 description: "Creates a new property value for a location."
 ---
 
 # system.mes.location.newPropertyValue
 
-Creates a new property value for a specified location.
+## Description
 
-## Method Description
+Creates a new [Location Property Values](../../data-model/location-model/location-property-value) record to be formatted with attributes.
 
-This function initializes a new property value associated with a location. Property values allow you to store specific
-data under a location's property, enhancing the configurability and custom attributes available for each location.
-
-## Returns
-
-A JSON representation of the newly created location property value.
+## Syntax
+```python
+system.mes.location.newPropertyValue()
+```
 
 ## Parameters
 
-No parameters are required to initialize a new property value. However, fields such as `locationId`, `propertyId`,
-`value`, and `dataType` should be set after creating the property value to define its content and association.
+| Parameter | Type | Description                               |
+|-----------|------|-------------------------------------------|
+| None      | -    | This method does not take any parameters. |
 
-## Example Usage
+## Returns
+
+Returns a JSON representation of the newly created Location Property Value object. The following is a list of keys and default values:
+
+| Key          | Default Value    |
+|--------------|------------------|
+| `locationId` | `null`           |
+| `propertyId` | `null`           |
+| `dataType`   | `String`         |
+| `value`      | `null`           |
+| `id`         | `null`           |
+| `notes`      | `null`           |
+| `enabled`    | `true`           |
+| `spare1`     | `null`           |
+| `spare2`     | `null`           |
+| `spare3`     | `null`           |
+
+## Code Examples
 
 ```python
-def addTemperatureValue(location_id, temperature_value):
-    # Create a new property value for temperature
-    temperature_property_value = system.mes.location.newPropertyValue()
-    
-    # Define property value details
-    temperature_property_value['locationId'] = location_id
-    temperature_property_value['propertyId'] = "01JAP8TF6X-7MFJQ9KJ-0C3BC2HR"  # Example property ULID for Temperature
-    temperature_property_value['value'] = temperature_value
-    temperature_property_value['dataType'] = "Float"
-    
-    # Save the property value
-    saved_property_value = system.mes.location.savePropertyValue(**temperature_property_value)
-    print(saved_property_value)
+# Create a new location instance
+new_location = system.mes.location.newLocation()
+new_location['name'] = 'DairyCo'
+saved_location = system.mes.location.saveLocation(**new_location)
+
+# Create a new property instance
+new_property = system.mes.location.newProperty()
+new_property['name'] = 'Cows'
+new_property['dataType'] = 'Int'
+saved_property = system.mes.location.saveProperty(**new_property)
+ 
+# Create a new property value instance
+new_property_value = system.mes.location.newPropertyValue()
+
+# Define property value details
+new_property_value['locationId'] = saved_location.id
+new_property_value['propertyId'] = saved_property.id
+new_property_value['dataType'] = 'Int' # Must be the same data type as the property
+new_property_value['value'] = 100
+# (You can continue setting other properties as needed here)
+
+# Save the property value
+saved_property_value = system.mes.location.savePropertyValue(**new_property_value)
+
+# Output the JSON representation of the saved location property value
+print(saved_property_value)
+```
