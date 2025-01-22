@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 title: "saveLocation"
 description: "Creates or updates a location with specified parameters."
 ---

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 7
 title: "getLocationsByPropertyValue"
 description: "Retrieves all locations with a specific property value."
 ---

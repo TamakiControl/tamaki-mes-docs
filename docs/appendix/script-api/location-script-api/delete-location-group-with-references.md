@@ -1,5 +1,5 @@
 ---
-sidebar_position: 14
+sidebar_position: 16
 title: "deleteLocationGroupWithReferences"
 description: "Deletes the location group with the given id and any immediate references to this location group if possible."
 ---

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 12
+sidebar_position: 14
 title: "getLocationGroupReferences"
 description: "Retrieves a list of references to a location with the given id."
 ---

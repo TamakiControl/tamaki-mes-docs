@@ -1,5 +1,5 @@
 ---
-sidebar_position: 28
+sidebar_position: 30
 title: "validatePropertyValue"
 description: "Validates a location property value based on provided parameters."
 ---

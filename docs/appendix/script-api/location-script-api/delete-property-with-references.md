@@ -1,5 +1,5 @@
 ---
-sidebar_position: 22
+sidebar_position: 24
 title: "deletePropertyWithReferences"
 description: "Deletes the location property with the given id or path and any immediate references to this property if possible."
 ---

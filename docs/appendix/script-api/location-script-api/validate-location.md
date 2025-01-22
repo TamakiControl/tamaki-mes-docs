@@ -1,5 +1,5 @@
 ---
-sidebar_position: 9
+sidebar_position: 11
 title: "validateLocation"
 description: "Validates the specified parameters for a location."
 ---

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 0
+sidebar_position: 2
 title: "newLocation"
 description: "Creates a new location in the system."
 ---

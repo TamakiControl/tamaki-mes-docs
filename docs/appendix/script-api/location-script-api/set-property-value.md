@@ -1,5 +1,5 @@
 ---
-sidebar_position: 25
+sidebar_position: 27
 title: "setPropertyValue"
 description: "Updates the value of a location property value given a location object and a property object."
 ---

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 4
 title: "findLocations"
 description: "Retrieves Locations based on the specified pagination, sort, and column constraint parameters."
 ---

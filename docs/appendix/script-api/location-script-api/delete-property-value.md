@@ -1,5 +1,5 @@
 ---
-sidebar_position: 29
+sidebar_position: 31
 title: "deletePropertyValue"
 description: "Deletes a specified location property value with the given id."
 ---

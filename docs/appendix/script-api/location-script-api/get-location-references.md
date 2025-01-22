@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 10
 title: "getLocationReferences"
 description: "Retrieves a list of references to a location with the given id or path."
 ---

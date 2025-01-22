@@ -1,5 +1,5 @@
 ---
-sidebar_position: 23
+sidebar_position: 25
 title: "newPropertyValue"
 description: "Creates a new property value for a location."
 ---

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 26
+sidebar_position: 28
 title: "getPropertyValueFor"
 description: "Retrieves a property value for a specified location and property."
 ---

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 6
 title: "getLocationsByPartialPath"
 description: "Retrieves all locations that have paths that contain the provided path."
 ---

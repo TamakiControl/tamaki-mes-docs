@@ -1,5 +1,5 @@
 ---
-sidebar_position: 11
+sidebar_position: 13
 title: "deleteLocationWithReferences"
 description: "Deletes the location with the given id or path and any immediate references to this location if possible."
 ---

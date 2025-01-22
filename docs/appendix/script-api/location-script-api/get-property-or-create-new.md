@@ -1,5 +1,5 @@
 ---
-sidebar_position: 17
+sidebar_position: 19
 title: "getPropertyOrCreateNew"
 description: "Retrieves or creates a location property by its ID or name depending on if it exists."
 ---
