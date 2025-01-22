@@ -9,7 +9,7 @@ description: "Validates a location property value based on provided parameters."
 ## Description
 
 Validates the specified parameters for a [Location Property Values](../../data-model/location-model/location-property-value) record and returns any validation errors. 
-This only checks if the location property object can be saved based on the attributes given.
+This only checks if the location property value object can be saved based on the attributes given.
 
 ## Syntax
 ```python
