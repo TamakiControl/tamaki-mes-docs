@@ -1,14 +1,14 @@
 ---
 sidebar_position: 24
 title: "deletePropertyWithReferences"
-description: "Deletes the location property with the given id or path and any immediate references to this property if possible."
+description: "Deletes the location property with the given ID or path and any immediate references to this property if possible."
 ---
 
 # system.mes.location.deletePropertyWithReferences
 
 ## Description
 
-Deletes a [Location Properties](../../data-model/location-model/location-property) record by its id or name. 
+Deletes a [Location Properties](../../data-model/location-model/location-property) record by its ID or name. 
 Also deletes immediate references to this property if possible.
 
 ## Syntax

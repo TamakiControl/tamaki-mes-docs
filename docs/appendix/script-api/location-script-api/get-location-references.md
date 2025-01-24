@@ -1,14 +1,14 @@
 ---
 sidebar_position: 10
 title: "getLocationReferences"
-description: "Retrieves a list of references to a location with the given id or path."
+description: "Retrieves a list of references to a location with the given ID or path."
 ---
 
 # system.mes.location.getLocationReferences
 
 ## Description
 
-Retrieves a list of references to a [Locations](../../data-model/location-model/location) record by its id or path.
+Retrieves a list of references to a [Locations](../../data-model/location-model/location) record by its ID or path.
 
 ## Syntax
 ```python

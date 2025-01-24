@@ -9,7 +9,7 @@ description: "Updates the value of a location property value given a location ob
 ## Description
 
 Updates the value of a [Location Property Values](../../data-model/location-model/location-property-value) record given 
-a location id or path and a property id or name.
+a location ID or path and a property ID or name.
 
 ## Syntax
 ```python

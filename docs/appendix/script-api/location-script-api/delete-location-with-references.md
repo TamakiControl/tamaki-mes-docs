@@ -1,14 +1,14 @@
 ---
 sidebar_position: 13
 title: "deleteLocationWithReferences"
-description: "Deletes the location with the given id or path and any immediate references to this location if possible."
+description: "Deletes the location with the given ID or path and any immediate references to this location if possible."
 ---
 
 # system.mes.location.deleteLocationWithReferences
 
 ## Description
 
-Deletes a [Locations](../../data-model/location-model/location) record by its id or path. 
+Deletes a [Locations](../../data-model/location-model/location) record by its ID or path. 
 Also deletes immediate references to this location if possible.
 
 ## Syntax

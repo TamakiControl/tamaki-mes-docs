@@ -1,14 +1,14 @@
 ---
 sidebar_position: 5
 title: "getLocation"
-description: "Retrieves the location with the given id or path."
+description: "Retrieves the location with the given ID or path."
 ---
 
 # system.mes.location.getLocation
 
 ## Description
 
-Retrieves a [Locations](../../data-model/location-model/location) record by its id or path.
+Retrieves a [Locations](../../data-model/location-model/location) record by its ID or path.
 
 ## Syntax
 ```python

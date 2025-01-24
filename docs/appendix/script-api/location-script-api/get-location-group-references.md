@@ -1,14 +1,14 @@
 ---
 sidebar_position: 14
 title: "getLocationGroupReferences"
-description: "Retrieves a list of references to a location with the given id."
+description: "Retrieves a list of references to a location with the given ID."
 ---
 
 # system.mes.location.getLocationGroupReferences
 
 ## Description
 
-Retrieves a list of references to a [Location Groups](../../data-model/location-model/location-group) record by its id.
+Retrieves a list of references to a [Location Groups](../../data-model/location-model/location-group) record by its ID.
 
 ## Syntax
 ```python

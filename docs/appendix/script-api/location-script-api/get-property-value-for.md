@@ -42,7 +42,7 @@ Returns a JSON representation of the location property value.
 ## Code Examples
 
 ```python
-# Retrieve a location property value by location id or path and property id or name
+# Retrieve a location property value by location ID or path and property ID or name
 property_value = system.mes.location.getPropertyValueFor('DairyCo', 'Cows')
 
 # Output the location property value

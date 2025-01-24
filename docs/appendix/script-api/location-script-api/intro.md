@@ -23,7 +23,7 @@ Retrieves [Locations](../../data-model/location-model/location) records based on
 
 ### [`getLocation`](./get-location)
 
-Retrieves a [Locations](../../data-model/location-model/location) record by its id or path. Returns a JSON representation of the location.
+Retrieves a [Locations](../../data-model/location-model/location) record by its ID or path. Returns a JSON representation of the location.
 
 ### [`getLocationsByPartialPath`](./get-locations-by-partial-path)
 
@@ -47,7 +47,7 @@ Returns a list of JSON objects.
 
 ### [`getLocationReferences`](./get-location-references)
 
-Retrieves a list of references to a [Locations](../../data-model/location-model/location) record by its id or path. Returns a list of JSON objects.
+Retrieves a list of references to a [Locations](../../data-model/location-model/location) record by its ID or path. Returns a list of JSON objects.
 
 ### [`validateLocation`](./validate-location)
 
@@ -55,23 +55,23 @@ Validates the specified parameters for a [Locations](../../data-model/location-m
 
 ### [`deleteLocation`](./delete-location)
 
-Deletes a [Locations](../../data-model/location-model/location) record by its id or path. This cannot delete a location with references to it. If successful, no response is returned. If the location that's being deleted has a reference, a JSON object is returned with details about the encountered error.
+Deletes a [Locations](../../data-model/location-model/location) record by its ID or path. This cannot delete a location with references to it. If successful, no response is returned. If the location that's being deleted has a reference, a JSON object is returned with details about the encountered error.
 
 ### [`deleteLocationWithReferences`](./delete-location-with-references)
 
-Deletes a [Locations](../../data-model/location-model/location) record by its id or path. Also deletes immediate references to this location if possible. If successful, no response is returned.
+Deletes a [Locations](../../data-model/location-model/location) record by its ID or path. Also deletes immediate references to this location if possible. If successful, no response is returned.
 
 ### [`getLocationGroupReferences`](./get-location-group-references)
 
-Retrieves a list of references to a [Location Groups](../../data-model/location-model/location-group) record by its id. Returns a list of JSON objects.
+Retrieves a list of references to a [Location Groups](../../data-model/location-model/location-group) record by its ID. Returns a list of JSON objects.
 
 ### [`deleteLocationGroup`](./delete-location-group)
 
-Deletes a [Location Groups](../../data-model/location-model/location-group) record by its id. This deletes any references in [Location-Location Groups](../../data-model/location-model/location-location-group). If successful, no response is returned.
+Deletes a [Location Groups](../../data-model/location-model/location-group) record by its ID. This deletes any references in [Location-Location Groups](../../data-model/location-model/location-location-group). If successful, no response is returned.
 
 ### [`deleteLocationGroupWithReferences`](./delete-location-group-with-references)
 
-Deletes a [Location Groups](../../data-model/location-model/location-group) record by its id. This deletes any references in [Location-Location Groups](../../data-model/location-model/location-location-group). If successful, no response is returned.
+Deletes a [Location Groups](../../data-model/location-model/location-group) record by its ID. This deletes any references in [Location-Location Groups](../../data-model/location-model/location-location-group). If successful, no response is returned.
 
 ### [`newProperty`](./new-property)
 
@@ -91,7 +91,7 @@ Retrieves a [Location Properties](../../data-model/location-model/location-prope
 
 ### [`getLocationPropertyReferences`](./get-location-property-references)
 
-Retrieves a list of references to a [Location Properties](../../data-model/location-model/location-property) by its id or name. Returns a list of JSON objects.
+Retrieves a list of references to a [Location Properties](../../data-model/location-model/location-property) by its ID or name. Returns a list of JSON objects.
 
 ### [`validateProperty`](./validate-property)
 
@@ -99,11 +99,11 @@ Validates the specified parameters for a [Location Properties](../../data-model/
 
 ### [`deleteProperty`](./delete-property)
 
-Deletes a [Location Properties](../../data-model/location-model/location-property) record by its id or name. This cannot delete a location property with references to it. If successful, no response is returned. If the property that's being deleted has a reference, a JSON object is returned with details about the encountered error.
+Deletes a [Location Properties](../../data-model/location-model/location-property) record by its ID or name. This cannot delete a location property with references to it. If successful, no response is returned. If the property that's being deleted has a reference, a JSON object is returned with details about the encountered error.
 
 ### [`deletePropertyWithReferences`](./delete-property-with-references)
 
-Deletes a [Location Properties](../../data-model/location-model/location-property) record by its id or name. Also deletes immediate references to this property if possible. If successful, no response is returned.
+Deletes a [Location Properties](../../data-model/location-model/location-property) record by its ID or name. Also deletes immediate references to this property if possible. If successful, no response is returned.
 
 ### [`newPropertyValue`](./new-property-value)
 
@@ -115,7 +115,7 @@ Creates or updates a [Location Property Values](../../data-model/location-model/
 
 ### [`setPropertyValue`](./set-property-value)
 
-Updates the value of a [Location Property Values](../../data-model/location-model/location-property-value) record given a location id or path and a property id or name. Returns a JSON representation of the updated location property value.
+Updates the value of a [Location Property Values](../../data-model/location-model/location-property-value) record given a location ID or path and a property ID or name. Returns a JSON representation of the updated location property value.
 
 ### [`getPropertyValueFor`](./get-property-value-for)
 
@@ -123,7 +123,7 @@ Retrieves a [Location Property Values](../../data-model/location-model/location-
 
 ### [`getLocationPropertyValueReferences`](./get-location-property-value-references)
 
-Retrieves a list of references to a [Location Property Values](../../data-model/location-model/location-property-value) by its id. Returns a list of JSON objects.
+Retrieves a list of references to a [Location Property Values](../../data-model/location-model/location-property-value) by its ID. Returns a list of JSON objects.
 
 ### [`validatePropertyValue`](./validate-property-value)
 
@@ -131,11 +131,11 @@ Validates the specified parameters for a [Location Property Values](../../data-m
 
 ### [`deletePropertyValue`](./delete-property-value)
 
-Deletes a [Location Property Values](../../data-model/location-model/location-property-value) record by its id. This cannot delete a location property value with references to it. If successful, no response is returned.
+Deletes a [Location Property Values](../../data-model/location-model/location-property-value) record by its ID. This cannot delete a location property value with references to it. If successful, no response is returned.
 
 ### [`deletePropertyValueWithReferences`](./delete-property-value-with-references)
 
-Deletes a [Location Property Values](../../data-model/location-model/location-property-value) record by its id. Also deletes immediate references to this location if possible. If successful, no response is returned.
+Deletes a [Location Property Values](../../data-model/location-model/location-property-value) record by its ID. Also deletes immediate references to this location if possible. If successful, no response is returned.
 
 ---
 

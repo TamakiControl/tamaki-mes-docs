@@ -1,14 +1,14 @@
 ---
 sidebar_position: 29
 title: "getLocationPropertyValueReferences"
-description: "Retrieves a list of references to a location property value with the given id."
+description: "Retrieves a list of references to a location property value with the given ID."
 ---
 
 # system.mes.location.getLocationPropertyValueReferences
 
 ## Description
 
-Retrieves a list of references to a [Location Property Values](../../data-model/location-model/location-property-value) by its id.
+Retrieves a list of references to a [Location Property Values](../../data-model/location-model/location-property-value) by its ID.
 
 ## Syntax
 ```python

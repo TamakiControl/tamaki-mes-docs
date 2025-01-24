@@ -48,7 +48,7 @@ new_property['name'] = 'Cows'
 new_property['dataType'] = 'Int'
 saved_property = system.mes.location.saveProperty(**new_property)
  
-# Create a new location property value instance, set the location id and property id and save it
+# Create a new location property value instance, set the location ID and property ID and save it
 new_property_value = system.mes.location.newPropertyValue()
 new_property_value['locationId'] = saved_location.id
 new_property_value['propertyId'] = saved_property.id

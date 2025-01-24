@@ -1,14 +1,14 @@
 ---
 sidebar_position: 23
 title: "deleteProperty"
-description: "Deletes a specified location property by its id or name."
+description: "Deletes a specified location property by its ID or name."
 ---
 
 # system.mes.location.deleteProperty
 
 ## Description
 
-Deletes a [Location Properties](../../data-model/location-model/location-property) record by its id or name.
+Deletes a [Location Properties](../../data-model/location-model/location-property) record by its ID or name.
 This cannot delete a location property with references to it.
 
 ## Syntax

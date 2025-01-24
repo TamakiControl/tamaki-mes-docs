@@ -1,14 +1,14 @@
 ---
 sidebar_position: 15
 title: "deleteLocationGroup"
-description: "Deletes the location group with the given id and any immediate references to this location group if possible."
+description: "Deletes the location group with the given ID and any immediate references to this location group if possible."
 ---
 
 # system.mes.location.deleteLocationGroup
 
 ## Description
 
-Deletes a [Location Groups](../../data-model/location-model/location-group) record by its id.
+Deletes a [Location Groups](../../data-model/location-model/location-group) record by its ID.
 This deletes any references in [Location-Location Groups](../../data-model/location-model/location-location-group).
 
 ## Syntax
