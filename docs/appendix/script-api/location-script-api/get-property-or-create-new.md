@@ -1,19 +1,19 @@
 ---
-sidebar_position: 22
-title: "validateProperty"
-description: "Validates a location property based on provided parameters."
+sidebar_position: 19
+title: "getPropertyOrCreateNew"
+description: "Retrieves or creates a location property by its ID or name depending on if it exists."
 ---
 
-# system.mes.location.validateProperty
+# system.mes.location.getPropertyOrCreateNew
 
 ## Description
 
-Validates the specified parameters for a [Location Properties](../../data-model/location-model/location-property) record and returns any validation errors. 
-This only checks if the location property object can be saved based on the attributes given.
+Retrieves a [Location Properties](../../data-model/location-model/location-property) record if an existing location property exists with the specified ID or name.
+Otherwise, creates a new [Location Properties](../../data-model/location-model/location-property) record with the specified name and attributes.
 
 ## Syntax
 ```python
-system.mes.location.validateProperty(**property_data)
+system.mes.location.getPropertyOrCreateNew(**property_data)
 ```
 
 ## Parameters
@@ -39,29 +39,26 @@ system.mes.location.validateProperty(**property_data)
 
 ## Returns
 
-Returns a JSON object where keys are field names and values are lists of validation violation messages.
+Returns a JSON representation of the location property.
 
 ## Code Examples
 
 ```python
-# Create a location property instance
+# Create a new property for temperature
 temperature_property = system.mes.location.newProperty()
 
-# Define property attributes
+# Define property details
 temperature_property['name'] = 'Temperature'
 temperature_property['dataType'] = 'Float'
-temperature_property['lowLimit'] = -20
-temperature_property['highLimit'] = 50
 temperature_property['units'] = 'Celsius'
 temperature_property['nullable'] = False
-temperature_property['defaultValue'] = 20.0
+temperature_property['lowLimit'] = -20
+temperature_property['highLimit'] = 50
 # (You can continue setting other properties as needed here)
 
-# Validate location property parameters
-validation_errors = system.mes.location.validateProperty(**temperature_property)
+# Get the property if it exists, otherwise creates it with the given attributes
+property = system.mes.location.getPropertyOrCreateNew(**temperature_property)
 
-if len(validation_errors) > 0:
-    print('Validation errors found:', validation_errors)
-else:
-    print('Location property parameters are valid.')
+# Output the JSON representation of the property
+print(property)
 ```
