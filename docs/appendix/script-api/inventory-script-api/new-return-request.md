@@ -1,16 +1,16 @@
 ---
-sidebar_position: 3
-title: "newConsumeRequest"
-description: "Creates a new Consume Request record to be formatted with attributes."
+sidebar_position: 24
+title: "newReturnRequest"
+description: "Creates a new Return Request record to be formatted with attributes."
 ---
 
-# system.mes.inventory.newConsumeRequest
+# system.mes.inventory.newReturnRequest
 
-Creates a new Consume Request record to be formatted with attributes.
+Creates a new Return Request record to be formatted with attributes.
 
 ## Syntax
 ```python
-system.mes.inventory.newConsumeRequest()
+system.mes.inventory.newReturnRequest()
 ```
 
 ## Parameters
@@ -21,19 +21,16 @@ system.mes.inventory.newConsumeRequest()
 
 ## Returns
 
-Returns a JSON representation of the newly created Consume Request object. The following is a list of keys and default values:
+Returns a JSON representation of the newly created Return Request object. The following is a list of keys and default values:
 
 | Key                            | Default Value    |
 |--------------------------------|------------------|
-| `type`                         | `CONSUME`        |
+| `type`                         | `RETURN`         |
 | `quantity`                     | `null`           |
 | `unitOfMeasureSymbol`          | `null`           |
 | `lotIdOrName`                  | `null`           |
 | `materialIdOrPath`             | `null`           |
 | `sourceLocationIdOrPath`       | `null`           |
-| `consumingLotIdOrName`         | `null`           |
-| `destinationLocationIdOrPath`  | `null`           |
-| `createIfNotExists`            | `false`          |
 | `operationId`                  | `null`           |
 | `productionOrderIdOrName`      | `null`           |
 | `materialReasonCodeId`         | `null`           |
@@ -49,19 +46,18 @@ Returns a JSON representation of the newly created Consume Request object. The f
 ## Code Examples
 
 ```python
-# Create a new consume request instance with no initial arguments
-new_request = system.mes.inventory.newConsumeRequest()
+# Create a new return request instance with no initial arguments
+new_request = system.mes.inventory.newReturnRequest()
 
-# Set basic attributes for the new consume request
+# Set basic attributes for the new return request
 new_request['materialIdOrPath'] = 'Bottle/Milk'
 new_request['sourceLocationIdOrPath'] = 'DairyCo'
 new_request['quantity'] = 610
-new_request['createIfNotExists'] = True
 # (You can continue setting other properties as needed here)
 
-# Consume the request
-consumed_request = system.mes.inventory.consume(**new_request)
+# Return the request
+returned_request = system.mes.inventory.returnInventory(**new_request)
 
-# Output the JSON representation of the consumed request
-print(consumed_request)
+# Output the JSON representation of the returned request
+print(returned_request)
 ```
