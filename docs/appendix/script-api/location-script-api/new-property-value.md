@@ -1,14 +1,15 @@
 ---
-sidebar_position: 25
+sidebar_position: 24
 title: "newPropertyValue"
-description: "Creates a new property value for a location."
+description: "Generates an empty non-persisted property values object to provide the structure to save a new record into the database."
 ---
 
 # system.mes.location.newPropertyValue
 
 ## Description
 
-Creates a new [Location Property Values](../../data-model/location-model/location-property-value) record to be formatted with attributes.
+Generates an empty non-persisted [Location Property Values](../../data-model/location-model/location-property-value) object to provide the structure required by the API 
+to save a new record into the database. This method must be combined with the [savePropertyValue](./save-property-value) method in order to persist the record.
 
 ## Syntax
 ```python
@@ -41,18 +42,18 @@ Returns a JSON representation of the newly created Location Property Value objec
 ## Code Examples
 
 ```python
-# Create a new location instance
+# Generate the object structure for a new location object with no initial arguments
 new_location = system.mes.location.newLocation()
 new_location['name'] = 'DairyCo'
 saved_location = system.mes.location.saveLocation(**new_location)
 
-# Create a new property instance
+# Generate the object structure for a new property object with no initial arguments
 new_property = system.mes.location.newProperty()
 new_property['name'] = 'Cows'
 new_property['dataType'] = 'Int'
 saved_property = system.mes.location.saveProperty(**new_property)
  
-# Create a new property value instance
+# Generate the object structure for a new property value object with no initial arguments
 new_property_value = system.mes.location.newPropertyValue()
 
 # Define property value details

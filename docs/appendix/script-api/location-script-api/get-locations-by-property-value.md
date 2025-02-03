@@ -17,10 +17,10 @@ system.mes.location.getLocationsByPropertyValue(idOrName, value)
 
 ## Parameters
 
-| Parameter          | Type     | Description                                            |
-|--------------------|----------|--------------------------------------------------------|
-| `propertyIdOrName` | `String` | The ID or name of the location property to filter by.  |
-| `propertyValue`    | `Mixed`  | The value to search for within the specified property. |
+| Parameter          | Type     | Description                                                                                                                   |
+|--------------------|----------|-------------------------------------------------------------------------------------------------------------------------------|
+| `propertyIdOrName` | `String` | The ID or name of the location property to filter by.                                                                         |
+| `propertyValue`    | `Mixed`  | The value to search for within the specified property. The type is mixed as it depends on what the data type of the property. |
 
 ## Returns
 
@@ -29,18 +29,18 @@ Returns a JSON list of all locations that have the specified property value.
 ## Code Examples
 
 ```python
-# Create a new location instance
+# Generate the object structure for a new location object
 new_location = system.mes.location.newLocation()
 new_location['name'] = 'DairyCo'
 saved_location = system.mes.location.saveLocation(**new_location)
 
-# Create a new property instance
+# Generate the object structure for a new property object
 new_property = system.mes.location.newProperty()
 new_property['name'] = 'Cows'
 new_property['dataType'] = 'Int'
 saved_property = system.mes.location.saveProperty(**new_property)
- 
-# Create a new property value instance
+
+# Generate the object structure for a new property value object
 new_property_value = system.mes.location.newPropertyValue()
 new_property_value['locationId'] = saved_location.id
 new_property_value['propertyId'] = saved_property.id

@@ -11,7 +11,7 @@ Welcome to the Location API documentation. This API provides a comprehensive set
 
 ### [`newLocation`](./new-location)
 
-Creates a new [Locations](../../data-model/location-model/location) record to be formatted with attributes. Returns a JSON representation of the newly created Location object.
+Generates an empty non-persisted [Locations](../../data-model/location-model/location) object to provide the structure required by the API to save a new record into the database. This method must be combined with the [saveLocation](./save-location) method in order to persist the record. Returns a JSON representation of the newly created Location object.
 
 ### [`saveLocation`](./save-location)
 
@@ -23,7 +23,7 @@ Retrieves [Locations](../../data-model/location-model/location) records based on
 
 ### [`getLocation`](./get-location)
 
-Retrieves a [Locations](../../data-model/location-model/location) record by its ID or path. Returns a JSON representation of the location.
+Retrieves a [Locations](../../data-model/location-model/location) record by its ID or path. Returns a JSON representation of the location. Returns nothing if no location is found.
 
 ### [`getLocationsByPartialPath`](./get-locations-by-partial-path)
 
@@ -69,13 +69,9 @@ Retrieves a list of references to a [Location Groups](../../data-model/location-
 
 Deletes a [Location Groups](../../data-model/location-model/location-group) record by its ID. This deletes any references in [Location-Location Groups](../../data-model/location-model/location-location-group). If successful, no response is returned.
 
-### [`deleteLocationGroupWithReferences`](./delete-location-group-with-references)
-
-Deletes a [Location Groups](../../data-model/location-model/location-group) record by its ID. This deletes any references in [Location-Location Groups](../../data-model/location-model/location-location-group). If successful, no response is returned.
-
 ### [`newProperty`](./new-property)
 
-Creates a new [Location Properties](../../data-model/location-model/location-property) record to be formatted with attributes. Returns a JSON representation of the newly created Location Property object.
+Generates an empty non-persisted [Location Properties](../../data-model/location-model/location-property) object to provide the structure required by the API to save a new record into the database. This method must be combined with the [saveProperty](./save-property) method in order to persist the record. Returns a JSON representation of the newly created Location Property object.
 
 ### [`saveProperty`](./save-property)
 
@@ -87,7 +83,7 @@ Retrieves a [Location Properties](../../data-model/location-model/location-prope
 
 ### [`getProperty`](./get-property)
 
-Retrieves a [Location Properties](../../data-model/location-model/location-property) record by its specified ID or name. Returns a JSON representation of the location property.
+Retrieves a [Location Properties](../../data-model/location-model/location-property) record by its specified ID or name. Returns a JSON representation of the location property. Returns nothing if no location property is found.
 
 ### [`getLocationPropertyReferences`](./get-location-property-references)
 
@@ -107,7 +103,7 @@ Deletes a [Location Properties](../../data-model/location-model/location-propert
 
 ### [`newPropertyValue`](./new-property-value)
 
-Creates a new [Location Property Values](../../data-model/location-model/location-property-value) record to be formatted with attributes. Returns a JSON representation of the newly created Location Property Value object.
+Generates an empty non-persisted [Location Property Values](../../data-model/location-model/location-property-value) object to provide the structure required by the API to save a new record into the database. This method must be combined with the [savePropertyValue](./save-property-value) method in order to persist the record. Returns a JSON representation of the newly created Location Property Value object.
 
 ### [`savePropertyValue`](./save-property-value)
 
@@ -119,7 +115,7 @@ Updates the value of a [Location Property Values](../../data-model/location-mode
 
 ### [`getPropertyValueFor`](./get-property-value-for)
 
-Retrieves a [Location Property Values](../../data-model/location-model/location-property-value) record by its location ID or path and by its property ID or name. Returns a JSON representation of the location property value.
+Retrieves a [Location Property Values](../../data-model/location-model/location-property-value) record by its location ID or path and by its property ID or name. Returns a JSON representation of the location property value. Returns nothing if no location property value is found.
 
 ### [`getLocationPropertyValueReferences`](./get-location-property-value-references)
 

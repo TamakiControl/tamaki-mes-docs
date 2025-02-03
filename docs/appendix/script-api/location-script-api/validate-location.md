@@ -41,12 +41,16 @@ system.mes.location.validateLocation(**location_data)
 
 ## Returns
 
-Returns a JSON object where keys are field names and values are lists of validation violation messages.
+Returns a JSON object where keys are field names and values are lists of validation violation messages. The following attributes are required:
+
+| Name          | Type            | Description                |
+|---------------|-----------------|----------------------------|
+| `name`        | `String`        | The name of the location.  |
 
 ## Code Examples
 
 ```python
-# Create a new location instance
+# Generate the object structure for a new location object
 location_data = system.mes.location.newLocation()
 
 # Set basic attributes for the updated location

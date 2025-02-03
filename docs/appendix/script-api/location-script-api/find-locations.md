@@ -26,7 +26,7 @@ Returns a Query Result object with the following properties:
 
 | Name            | Type                                                             | Description                                                                                                      |
 |-----------------|------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| `content`       | `List\<[Location](../../data-model/location-model/location)>`    | The list of all records found that meet the specified criteria                                                   |
+| `content`       | `List`<[Location](../../data-model/location-model/location)>     | The list of all records found that meet the specified criteria                                                   |
 | `totalPages`    | `Integer`                                                        | If pagination is used, this is the number of total pages of records in the database for the specified page size. |
 | `totalElements` | `Long`                                                           | If pagination is used, this is the number of records in the database that meet the specified criteria.           |
 | `pageSize`      | `Integer`                                                        | If pagination is used, this is the specified page size.                                                          |
@@ -43,7 +43,7 @@ Here is an example of how to use a Query Request to retrieve the first ten Locat
 name.
 
 ```python
-# Create a new query request
+# Generate the object structure for a new query request
 queryRequest = system.mes.query.newQueryRequest()  
 
 # Set the basic attributes of the query request
@@ -53,7 +53,7 @@ queryRequest['pageIndex'] = 0
 queryRequest['sortFields'] = ['name']
 queryRequest['sortDirection'] = 'Ascending'
 
-# Create a filter for the query request
+# Generate the object structure for a filter for the query request
 filterRequest = system.mes.query.newFilterRequest()  
 filterRequest['field'] = 'createdDate'  
 filterRequest['condition'] = 'between'  

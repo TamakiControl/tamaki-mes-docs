@@ -1,5 +1,5 @@
 ---
-sidebar_position: 27
+sidebar_position: 26
 title: "setPropertyValue"
 description: "Updates the value of a location property value given a location object and a property object."
 ---
@@ -18,11 +18,11 @@ system.mes.location.setPropertyValue(locationIdOrPath, propertyIdOrName, value)
 
 ## Parameters
 
-| Parameter          | Type            | Description                                                        |
-|--------------------|-----------------|--------------------------------------------------------------------|
-| `locationIdOrPath` | `String`        | The ULID or path of the location.                                  |
-| `propertyIdOrName` | `String`        | The ULID or name of the property for which the value is retrieved. |
-| `value`            | `Mixed`         | The value assigned to the property value if none is provided.      |
+| Parameter          | Type            | Description                                                                                                                          |
+|--------------------|-----------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| `locationIdOrPath` | `String`        | The ULID or path of the location.                                                                                                    |
+| `propertyIdOrName` | `String`        | The ULID or name of the property for which the value is retrieved.                                                                   |
+| `value`            | `Mixed`         | The value assigned to the property value if none is provided. The type is mixed as it depends on what the data type of the property. |
 
 ## Returns
 

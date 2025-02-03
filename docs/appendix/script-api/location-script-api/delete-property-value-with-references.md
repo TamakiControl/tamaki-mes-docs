@@ -1,5 +1,5 @@
 ---
-sidebar_position: 32
+sidebar_position: 31
 title: "deletePropertyValueWithReferences"
 description: "Deletes the location property value with the given ID and any immediate references to this property if possible."
 ---
@@ -24,7 +24,7 @@ system.mes.location.deletePropertyValueWithReferences(id)
 
 ## Returns
 
-If successful, no response is returned.
+If successful, no response is returned. If unsuccessful, an IllegalArgumentException or ConstraintViolationException is thrown.
 
 ## Code Examples
 

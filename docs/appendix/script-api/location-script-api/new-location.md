@@ -1,14 +1,15 @@
 ---
 sidebar_position: 2
 title: "newLocation"
-description: "Creates a new location in the system."
+description: "Generates an empty non-persisted locations object to provide the structure to save a new record into the database."
 ---
 
 # system.mes.location.newLocation
 
 ## Description
 
-Creates a new [Locations](../../data-model/location-model/location) record to be formatted with attributes.
+Generates an empty non-persisted [Locations](../../data-model/location-model/location) object to provide the structure required by the API 
+to save a new record into the database. This method must be combined with the [saveLocation](./save-location) method in order to persist the record.
 
 ## Syntax
 ```python
@@ -49,7 +50,7 @@ Returns a JSON representation of the newly created Location object. The followin
 ## Code Examples
 
 ```python
-# Create a new location instance with no initial arguments
+# Generate the object structure for a new location object with no initial arguments
 new_location = system.mes.location.newLocation()
 
 # Set basic attributes for the new location

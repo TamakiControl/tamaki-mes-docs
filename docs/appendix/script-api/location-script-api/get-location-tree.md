@@ -37,7 +37,7 @@ Returns a list of JSON objects. Each JSON object has the following properties:
 
 | Name                       | Type                 | Description                                                                                                                      |
 |----------------------------|----------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| `children`                 | `List\<JSON Object>` | The children of the location. The JSON objects in the list have the same properties as the parent.                               |
+| `children`                 | `List<JSON Object>`  | The children of the location. The JSON objects in the list have the same properties as the parent.                               |
 | `name`                     | `String`             | The name of the location.                                                                                                        |
 | `description`              | `String`             | A detailed description of the location.                                                                                          |
 | `parentId`                 | `String`             | The ULID of the parent location.                                                                                                 |
@@ -50,7 +50,7 @@ Returns a list of JSON objects. Each JSON object has the following properties:
 | `lotStorageStrategy`       | `String`             | Defines the lot storage strategy (e.g, ALLOW_MULTIPLE, ALLOW_SINGLE_OR_THROW, MERGE_INTO_PREVIOUS, MERGE_INTO_NEW, NO_STORAGE).  |
 | `lotUseStrategy`           | `String`             | Defines the lot usage strategy, such as FIFO or FEFO.                                                                            |
 | `path`                     | `String`             | Path of the location within the hierarchy.                                                                                       |
-| `id`                       | `String` (ULID)      | The ULID of the location (optional, used for updating an existing location).                                                     |
+| `id`                       | `String` (ULID)      | The ULID of the location.                                                                                                        |
 | `notes`                    | `String`             | Notes related to the location.                                                                                                   |
 | `enabled`                  | `Boolean`            | Indicates if the location is active and enabled.                                                                                 |
 | `spare1`                   | `String`             | Additional field for user-defined context.                                                                                       |

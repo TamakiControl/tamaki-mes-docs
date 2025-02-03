@@ -24,8 +24,15 @@ system.mes.location.deleteLocation(idOrPath)
 
 ## Returns
 
-If successful, no response is returned. If the location that's being deleted has a reference, 
-a JSON object is returned with details about the encountered error.
+If successful, no response is returned. If unsuccessful, an InUseException, IllegalArgumentException or ConstraintViolationException is thrown.
+If the location that's being deleted has a reference, an ApiResponse Object is returned with details about the encountered error.
+
+| Name      | Type      | Description                                                 |
+|-----------|---------- |-------------------------------------------------------------|
+| `success` | `Boolean` | Indicates if the delete was successful.                     |
+| `message` | `String`  | The reason why the deletion was successful or unsuccessful. |
+| `data`    | `String`  | The data associated with the deletion.                      |
+| `error`   | `String`  | The errors associated with the deletion.                    |
 
 ## Code Examples
 

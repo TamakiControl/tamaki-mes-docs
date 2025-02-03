@@ -28,7 +28,7 @@ Returns a list of JSON objects. Each JSON object has the following properties:
 | Name         | Type                 | Description                                                        |
 |--------------|----------------------|--------------------------------------------------------------------|
 | `tableName`  | `String`             | The name of the table that the reference is in.                    |
-| `references` | `List\<JSON Object>` | List of JSON objects corresponding to references to the location.  |
+| `references` | `List<JSON Object>`  | List of JSON objects corresponding to references to the location.  |
 
 The JSON Objects in references has the following properties:
 

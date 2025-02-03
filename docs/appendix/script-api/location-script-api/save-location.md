@@ -45,7 +45,7 @@ Returns a JSON representation of the saved location.
 ## Code Examples
 
 ```python
-# Create a new location instance, set the name and save it
+# Generate the object structure for a new location object, set the name and save it
 new_location = system.mes.location.newLocation()
 new_location['name'] = 'Warehouse'
 saved_location = system.mes.location.saveLocation(**new_location)
@@ -53,7 +53,7 @@ saved_location = system.mes.location.saveLocation(**new_location)
 # Output the JSON representation of the saved location
 print(saved_location)
 
-# Create another new location instance to update the previous location
+# Generate the object structure for another new location object to update the previous location
 location_data = system.mes.location.newLocation()
 
 # Set basic attributes for the updated location

@@ -1,14 +1,15 @@
 ---
-sidebar_position: 17
+sidebar_position: 16
 title: "newProperty"
-description: "Creates a new location property."
+description: "Generates an empty non-persisted properties object to provide the structure to save a new record into the database."
 ---
 
 # system.mes.location.newProperty
 
 ## Description
 
-Creates a new [Location Properties](../../data-model/location-model/location-property) record to be formatted with attributes.
+Generates an empty non-persisted [Location Properties](../../data-model/location-model/location-property) object to provide the structure required by the API 
+to save a new record into the database. This method must be combined with the [saveProperty](./save-property) method in order to persist the record.
 
 ## Syntax
 ```python
@@ -47,7 +48,7 @@ Returns a JSON representation of the newly created Location Property object. The
 ## Code Examples
 
 ```python
-# Create a new property for temperature
+# Generate the object structure for a new property object with no initial arguments
 temperature_property = system.mes.location.newProperty()
 
 # Define property details
