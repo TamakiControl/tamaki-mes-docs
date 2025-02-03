@@ -1,42 +1,68 @@
 ---
-sidebar_position: 5
+sidebar_position: 16
 title: "newProperty"
-description: "Creates a new location property."
+description: "Generates an empty non-persisted properties object to provide the structure to save a new record into the database."
 ---
 
 # system.mes.location.newProperty
 
-Creates a new property associated with a location.
+## Description
 
-## Method Description
+Generates an empty non-persisted [Location Properties](../../data-model/location-model/location-property) object to provide the structure required by the API 
+to save a new record into the database. This method must be combined with the [saveProperty](./save-property) method in order to persist the record.
 
-This function initializes a new property that can be associated with locations. Properties are customizable attributes
-that add flexibility to location configurations, such as additional metadata or operational parameters.
-
-## Returns
-
-A JSON representation of the newly created location property.
+## Syntax
+```python
+system.mes.location.newProperty()
+```
 
 ## Parameters
 
-No parameters are required to initialize a new property. However, additional attributes such as `name`, `dataType`, and
-`nullable` should be set after creating the property to define its characteristics.
+| Parameter | Type | Description                               |
+|-----------|------|-------------------------------------------|
+| None      | -    | This method does not take any parameters. |
 
-## Example Usage
+## Returns
+
+Returns a JSON representation of the newly created Location Property object. The following is a list of keys and default values:
+
+| Key              | Default Value    |
+|------------------|------------------|
+| `name`           | `null`           |
+| `description`    | `null`           |
+| `dataType`       | `String`         |
+| `lowLimit`       | `null`           |
+| `highLimit`      | `null`           |
+| `format`         | `null`           |
+| `units`          | `null`           |
+| `options`        | `null`           |
+| `nullable`       | `false`          |
+| `defaultValue`   | `null`           |
+| `id`             | `null`           |
+| `notes`          | `null`           |
+| `enabled`        | `true`           |
+| `spare1`         | `null`           |
+| `spare2`         | `null`           |
+| `spare3`         | `null`           |
+
+## Code Examples
 
 ```python
-def addTemperatureProperty():
-    # Create a new property for temperature
-    temperature_property = system.mes.location.newProperty()
-    
-    # Define property details
-    temperature_property['name'] = "Temperature"
-    temperature_property['dataType'] = "Float"
-    temperature_property['nullable'] = False
-    temperature_property['units'] = "Celsius"
-    temperature_property['lowLimit'] = -20
-    temperature_property['highLimit'] = 50
-    
-    # Save the property
-    saved_property = system.mes.location.saveProperty(**temperature_property)
-    print(saved_property)
+# Generate the object structure for a new property object with no initial arguments
+temperature_property = system.mes.location.newProperty()
+
+# Define property details
+temperature_property['name'] = 'Temperature'
+temperature_property['dataType'] = 'Float'
+temperature_property['units'] = 'Celsius'
+temperature_property['nullable'] = False
+temperature_property['lowLimit'] = -20
+temperature_property['highLimit'] = 50
+# (You can continue setting other properties as needed here)
+
+# Save the property
+saved_property = system.mes.location.saveProperty(**temperature_property)
+
+# Output the JSON representation of the saved property
+print(saved_property)
+```

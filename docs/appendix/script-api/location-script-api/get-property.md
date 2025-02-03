@@ -1,32 +1,55 @@
 ---
-sidebar_position: 6
+sidebar_position: 19
 title: "getProperty"
 description: "Retrieves a location property by its ID or name."
 ---
 
 # system.mes.location.getProperty
 
-Retrieves a location property by its specified ID or name.
+## Description
 
-## Method Description
+Retrieves a [Location Properties](../../data-model/location-model/location-property) record by its specified ID or name.
 
-This function retrieves the details of a location property based on the provided ULID or name. It is useful for
-accessing specific property details, such as configuration and attributes, when the unique identifier or name is known.
-
-## Returns
-
-A JSON representation of the location property.
+## Syntax
+```python
+system.mes.location.getProperty(idOrName)
+```
 
 ## Parameters
 
-| Parameter  | Type   | Description                                            |
-|------------|--------|--------------------------------------------------------|
-| `idOrName` | String | The ULID or name of the location property to retrieve. |
+| Parameter  | Type     | Description                                            |
+|------------|----------|--------------------------------------------------------|
+| `idOrName` | `String` | The ULID or name of the location property to retrieve. |
 
-## Example Usage
+## Returns
+
+Returns a JSON representation of the location property. Returns nothing if no location property is found.
+
+| Name           | Type            | Description                                                                                                          |
+|----------------|-----------------|----------------------------------------------------------------------------------------------------------------------|
+| `name`         | `String`        | The name of the location property.                                                                                   |
+| `description`  | `String`        | A description of the location property.                                                                              |
+| `dataType`     | `String`        | The data type of the property (e.g., Integer, String, Float).                                                        |
+| `lowLimit`     | `Double`        | The minimum value allowed for a numerical property.                                                                  |
+| `highLimit`    | `Double`        | The maximum value allowed for a numerical property.                                                                  |
+| `format`       | `String`        | The format of the property, if applicable.                                                                           |
+| `units`        | `String`        | The measurement units for the property (e.g., Celsius, kg).                                                          |
+| `options`      | `String`        | List of possible values for the property (e.g., `"[option1, option2]"`).                                             |
+| `nullable`     | `Boolean`       | Defines if the property can accept null values.                                                                      |
+| `defaultValue` | `Mixed`         | The default value assigned to the property if none is provided. The type is mixed as it depends on what dataType is. |
+| `id`           | `String` (ULID) | The ULID of the location property.                                                                                   |
+| `notes`        | `String`        | Notes related to the location property.                                                                              |
+| `enabled`      | `Boolean`       | Indicates if the property is active and enabled.                                                                     |
+| `spare1`       | `String`        | Additional field for user-defined context.                                                                           |
+| `spare2`       | `String`        | Additional field for user-defined context.                                                                           |
+| `spare3`       | `String`        | Additional field for user-defined context.                                                                           |
+
+## Code Examples
 
 ```python
+# Retrieve a location property by ID or name
+property = system.mes.location.getProperty('Temperature')
 
-    property = system.mes.location.getProperty(id_or_name)
-    property['defaultValue'] = 100
-    system.mes.location.saveProperty(**property)
+# Output the location property
+print(property)
+```

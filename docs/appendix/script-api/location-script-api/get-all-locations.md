@@ -1,14 +1,19 @@
 ---
-sidebar_position: 4
+sidebar_position: 8
 title: "getAllLocations"
 description: "Retrieves all locations."
 ---
 
 # system.mes.location.getAllLocations
 
-## Method Description
+## Description
 
-Retrieves a list of all locations in the system. This function returns a JSON array representing each location.
+Retrieves a list of all [Locations](../../data-model/location-model/location) records in the system.
+
+## Syntax
+```python
+system.mes.location.getAllLocations()
+```
 
 ## Parameters
 
@@ -18,9 +23,9 @@ Retrieves a list of all locations in the system. This function returns a JSON ar
 
 ## Returns
 
-A JSON list of all locations.
+Returns a list of JSON objects representing all locations.
 
-## Example Usage
+## Code Examples
 
 ```python
 # Retrieve all locations
@@ -28,3 +33,4 @@ all_locations = system.mes.location.getAllLocations()
 
 # Output the list of locations
 print(all_locations)
+```

@@ -1,33 +1,42 @@
 ---
-sidebar_position: 8
+sidebar_position: 22
 title: "deleteProperty"
-description: "Deletes a specified location property."
+description: "Deletes a specified location property by its ID or name."
 ---
 
 # system.mes.location.deleteProperty
 
-Deletes a specified location property by its ID. An option to force deletion is available if the property is still in
-use.
+## Description
 
-## Method Description
+Deletes a [Location Properties](../../data-model/location-model/location-property) record by its ID or name.
+This cannot delete a location property with references to it.
 
-This function deletes a location property based on the provided ID or name. If the property is still in use, setting the
-`force` parameter to `True` allows it to be removed. If the property is referenced by other objects and `force` is not
-set, an `InUseException` will be thrown.
-
-## Throws
-
-- **InUseException**: If the property is still referenced by other objects and `force` is not set to `True`.
+## Syntax
+```python
+system.mes.location.deleteProperty(idOrName)
+```
 
 ## Parameters
 
-| Parameter  | Type    | Description                                                                                           |
-|------------|---------|-------------------------------------------------------------------------------------------------------|
-| `idOrName` | String  | The ULID or name of the property to be deleted.                                                       |
-| `force`    | Boolean | Optional. Set to `True` to forcefully delete the property and all of it's references if it is in use. |
+| Parameter  | Type     | Description                                        |
+|------------|----------|----------------------------------------------------|
+| `idOrName` | `String` | The ID or name of the location property to delete. |
 
-## Example Usage
+## Returns
+
+If successful, no response is returned. If unsuccessful, an InUseException, IllegalArgumentException or ConstraintViolationException is thrown.
+If the property that's being deleted has a reference, an ApiResponse Object is returned with details about the encountered error.
+
+| Name      | Type      | Description                                                 |
+|-----------|---------- |-------------------------------------------------------------|
+| `success` | `Boolean` | Indicates if the delete was successful.                     |
+| `message` | `String`  | The reason why the deletion was successful or unsuccessful. |
+| `data`    | `String`  | The data associated with the deletion.                      |
+| `error`   | `String`  | The errors associated with the deletion.                    |
+
+## Code Examples
 
 ```python
-system.mes.location.deleteProperty("Temperature", force=force)
+# Delete a location property by ID or path
+system.mes.location.deleteProperty('Temperature')
 ```

@@ -1,56 +1,71 @@
 ---
-sidebar_position: 13
+sidebar_position: 25
 title: "savePropertyValue"
 description: "Creates or updates a location property value based on specified parameters."
 ---
 
 # system.mes.location.savePropertyValue
 
-Creates or updates a property value for a specified location. If an ID is provided and corresponds to an existing
-property value, the function updates the existing value; otherwise, a new value is created.
+## Description
 
-## Method Description
+Creates or updates a [Location Property Values](../../data-model/location-model/location-property-value) record in the system based on the provided parameters.
 
-This function allows for the creation or updating of a property value associated with a location. It accepts various
-parameters to define the property value, such as the data type and specific value for the property. This function is
-typically called with an existing property value object, previously retrieved or created with `newPropertyValue()`.
-
-## Returns
-
-A JSON representation of the saved location property value.
-
-## Throws
-
-- **IllegalArgumentException**: Thrown if any expected arguments are missing.
+## Syntax
+```python
+system.mes.location.savePropertyValue(**property_value_data)
+```
 
 ## Parameters
 
-| Parameter    | Type    | Description                                                                         |
-|--------------|---------|-------------------------------------------------------------------------------------|
-| `id`         | String  | The ULID of the location property value (optional, for updating an existing value). |
-| `notes`      | String  | Notes related to the location property value.                                       |
-| `enabled`    | Boolean | If the location property value is enabled.                                          |
-| `value`      | Mixed   | The value of the property.                                                          |
-| `dataType`   | String  | The data type of the property value (e.g., Integer, String, Float).                 |
-| `locationId` | String  | The ULID of the location associated with this property value.                       |
-| `propertyId` | String  | The ULID of the property associated with this value.                                |
-| `spare1`     | String  | Additional field for user-defined context.                                          |
-| `spare2`     | String  | Additional field for user-defined context.                                          |
-| `spare3`     | String  | Additional field for user-defined context.                                          |
+| Parameter      | Type            | Description                                                                                                        |
+|----------------|-----------------|--------------------------------------------------------------------------------------------------------------------|
+| `locationId`   | `String` (ULID) | The ULID of the location.                                                                                          |
+| `propertyId`   | `String` (ULID) | The ULID of the location property.                                                                                 |
+| `dataType`     | `String`        | The data type of the property value. Must be the same as the data type of the property.                            |
+| `value`        | `Mixed`         | The value assigned to the property value if none is provided. The type is mixed as it depends on what dataType is. |
+| `id`           | `String` (ULID) | The ULID of the location property value (optional, for updating an existing property).                             |
+| `notes`        | `String`        | Notes related to the location property value.                                                                      |
+| `enabled`      | `Boolean`       | Indicates if the property value is active and enabled.                                                             |
+| `spare1`       | `String`        | Additional field for user-defined context.                                                                         |
+| `spare2`       | `String`        | Additional field for user-defined context.                                                                         |
+| `spare3`       | `String`        | Additional field for user-defined context.                                                                         |
 
-## Example Usage
+## Returns
+
+Returns a JSON representation of the saved location property value.
+
+## Code Examples
 
 ```python
-def setOrUpdateTemperatureValue(location_id, temperature_value):
-    # Retrieve or create a property value for temperature
-    property_value_data = system.mes.location.newPropertyValue()
-    
-    # Define property value attributes
-    property_value_data['locationId'] = location_id
-    property_value_data['propertyId'] = "01JAP8TF6X-7MFJQ9KJ-0C3BC2HR"  # Example property ULID for Temperature
-    property_value_data['value'] = temperature_value
-    property_value_data['dataType'] = "Float"
-    
-    # Save or update the property value
-    saved_property_value = system.mes.location.savePropertyValue(**property_value_data)
-    print(saved_property_value)
+# Generate the object structure for a new location object
+new_location = system.mes.location.newLocation()
+new_location['name'] = 'DairyCo'
+saved_location = system.mes.location.saveLocation(**new_location)
+
+# Generate the object structure for a new property object
+new_property = system.mes.location.newProperty()
+new_property['name'] = 'Cows'
+new_property['dataType'] = 'Int'
+saved_property = system.mes.location.saveProperty(**new_property)
+ 
+# Generate the object structure for a new property value object with no initial arguments, set the location ID and property ID and save it
+new_property_value = system.mes.location.newPropertyValue()
+new_property_value['locationId'] = saved_location.id
+new_property_value['propertyId'] = saved_property.id
+saved_property_value = system.mes.location.savePropertyValue(**new_property_value)
+
+# Output the JSON representation of the saved location property value
+print(saved_property_value)
+
+# Generate the object structure for another new property value object to update the previous location property value
+property_value_data = system.mes.location.newPropertyValue()
+property_value_data['id'] = saved_property_value.id
+property_value_data['dataType'] = 'Int' # Must be the same data type as the property
+property_value_data['value'] = 100
+
+# Save the location property value to update it in the system
+updated_property_value = system.mes.location.savePropertyValue(**property_value_data)
+
+# Output the JSON representation of the updated location property value
+print(updated_property_value)
+```

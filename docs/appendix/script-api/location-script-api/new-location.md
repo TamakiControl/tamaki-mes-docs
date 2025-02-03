@@ -1,37 +1,66 @@
 ---
 sidebar_position: 2
 title: "newLocation"
-description: "Creates a new location in the system."
+description: "Generates an empty non-persisted locations object to provide the structure to save a new record into the database."
 ---
 
 # system.mes.location.newLocation
 
-## Method Description
+## Description
 
-This function creates a new location record in the system with attributes like name, type, and parent ID, among others.
-It returns a JSON representation of the newly created Location object.
+Generates an empty non-persisted [Locations](../../data-model/location-model/location) object to provide the structure required by the API 
+to save a new record into the database. This method must be combined with the [saveLocation](./save-location) method in order to persist the record.
 
-## Returns
-
-A JSON representation of the newly created Location object.
+## Syntax
+```python
+system.mes.location.newLocation()
+```
 
 ## Parameters
 
-None
+| Parameter | Type | Description                               |
+|-----------|------|-------------------------------------------|
+| None      | -    | This method does not take any parameters. |
 
-## Example Usage
+## Returns
+
+Returns a JSON representation of the newly created Location object. The following is a list of keys and default values:
+
+| Key                        | Default Value    |
+|----------------------------|------------------|
+| `name`                     | `null`           |
+| `description`              | `null`           |
+| `parentId`                 | `null`           |
+| `type`                     | `ENTERPRISE`     |
+| `processType`              | `NONE`           |
+| `sortOrder`                | `0`              |
+| `allowNegativeInventory`   | `false`          |
+| `storageCapacity`          | `null`           |
+| `storageCapacityUnitId`    | `null`           |
+| `lotStorageStrategy`       | `ALLOW_MULTIPLE` |
+| `lotUseStrategy`           | `FIFO`           |
+| `path`                     | `null`           |
+| `id`                       | `null`           |
+| `notes`                    | `null`           |
+| `enabled`                  | `true`           |
+| `spare1`                   | `null`           |
+| `spare2`                   | `null`           |
+| `spare3`                   | `null`           |
+
+## Code Examples
 
 ```python
-# Create a new location instance with no initial arguments
+# Generate the object structure for a new location object with no initial arguments
 new_location = system.mes.location.newLocation()
 
 # Set basic attributes for the new location
-new_location['name'] = 'New Location'
+new_location['name'] = 'NewLocation'
 new_location['description'] = 'A new location created via script.'
 # (You can continue setting other properties as needed here)
 
 # Save the new location to the system
-saved_location = system.mes.location.saveLocation(new_location)
+saved_location = system.mes.location.saveLocation(**new_location)
 
-# Print the JSON representation of the saved location
+# Output the JSON representation of the saved location
 print(saved_location)
+```

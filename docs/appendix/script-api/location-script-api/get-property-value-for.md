@@ -1,37 +1,50 @@
 ---
-sidebar_position: 10
+sidebar_position: 27
 title: "getPropertyValueFor"
 description: "Retrieves a property value for a specified location and property."
 ---
 
 # system.mes.location.getPropertyValueFor
 
-Retrieves the property value for a specified location and property.
+## Description
 
-## Method Description
+Retrieves a [Location Property Values](../../data-model/location-model/location-property-value) record by its location ID or path and by its property ID or name.
 
-This function retrieves the value associated with a specific property for a given location. It allows users to query
-properties directly by the location’s ULID or path and the property’s ULID or name.
-
-## Returns
-
-The property value for the specified location and property if it exists.
+## Syntax
+```python
+system.mes.location.getPropertyValueFor(locationIdOrPath, propertyIdOrName)
+```
 
 ## Parameters
 
-| Parameter          | Type   | Description                                                        |
-|--------------------|--------|--------------------------------------------------------------------|
-| `locationIdOrPath` | String | The ULID or path of the location.                                  |
-| `propertyIdOrName` | String | The ULID or name of the property for which the value is retrieved. |
+| Parameter          | Type     | Description                                                        |
+|--------------------|----------|--------------------------------------------------------------------|
+| `locationIdOrPath` | `String` | The ULID or path of the location.                                  |
+| `propertyIdOrName` | `String` | The ULID or name of the property for which the value is retrieved. |
 
-## Example Usage
+## Returns
+
+Returns a JSON representation of the location property value. Returns nothing if no location property value is found.
+
+| Name           | Type            | Description                                                                                                        |
+|----------------|-----------------|--------------------------------------------------------------------------------------------------------------------|
+| `locationId`   | `String` (ULID) | The ULID of the location.                                                                                          |
+| `propertyId`   | `String` (ULID) | The ULID of the location property.                                                                                 |
+| `dataType`     | `String`        | The data type of the property value. Must be the same as the data type of the property.                            |
+| `value`        | `Mixed`         | The value assigned to the property value if none is provided. The type is mixed as it depends on what dataType is. |
+| `id`           | `String` (ULID) | The ULID of the location property value.                                                                           |
+| `notes`        | `String`        | Notes related to the location property value.                                                                      |
+| `enabled`      | `Boolean`       | Indicates if the property value is active and enabled.                                                             |
+| `spare1`       | `String`        | Additional field for user-defined context.                                                                         |
+| `spare2`       | `String`        | Additional field for user-defined context.                                                                         |
+| `spare3`       | `String`        | Additional field for user-defined context.                                                                         |
+
+## Code Examples
 
 ```python
-def getTemperatureValue(location_id, property_name):
-    # Retrieve the property value for the specified location and property
-    temperature_value = system.mes.location.getPropertyValueFor(location_id, property_name)
-    
-    if temperature_value:
-        print(f"Temperature Value for Location {location_id}: {temperature_value")
-    else:
-        print(f"No property value found for {property_name} at Location {location_id}")
+# Retrieve a location property value by location ID or path and property ID or name
+property_value = system.mes.location.getPropertyValueFor('DairyCo', 'Cows')
+
+# Output the location property value
+print(property_value)
+```

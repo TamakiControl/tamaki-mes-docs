@@ -3,96 +3,135 @@ sidebar_position: 1
 title: "Introduction to Location API"
 description: "Overview of functions available in the Location API."
 ---
-
 # Location API
 
-Welcome to the Location API documentation. This API provides a comprehensive set of functions for managing and
-interacting with locations within the system. Below is a list of available functions, each with a brief description and
-a link to its detailed documentation.
+Welcome to the Location API documentation. This API provides a comprehensive set of functions for managing and interacting with locations within the system. Below is a list of available functions, each with a brief description and a link to its detailed documentation.
 
 ## Function List
 
 ### [`newLocation`](./new-location)
 
-Creates a new location record in the system with attributes like name, type, and parent ID. Returns a JSON
-representation of the new Location object.
-
-### [`getLocation`](./get-location)
-
-Retrieves the location with a specified ID or path. This function returns a JSON representation of the location.
-
-### [`getAllLocations`](./get-all-locations)
-
-Retrieves a list of all locations in the system. The function returns a JSON array of location objects.
-
-### [`getLocationTree`](./get-location-tree)
-
-Retrieves all locations organized in a hierarchical tree structure, allowing for recursive access. Returns a JSON
-representation of the tree.
-
-### [`getLocationsByPartialPath`](./get-locations-by-partial-path)
-
-Retrieves all locations that have paths containing a specified partial path. Returns a JSON list of matching locations.
-
-### [`getLocationsByPropertyValue`](./get-locations-by-property-value)
-
-Retrieves all locations that have a specific value for a given property. This function returns a JSON list of all
-matching locations.
+Generates an empty non-persisted [Locations](../../data-model/location-model/location) object to provide the structure required by the API to save a new record into the database. This method must be combined with the [saveLocation](./save-location) method in order to persist the record. Returns a JSON representation of the newly created Location object.
 
 ### [`saveLocation`](./save-location)
 
-Creates or updates a location based on provided parameters. This function saves the location and returns a JSON
-representation of the saved object.
+Creates or updates a [Locations](../../data-model/location-model/location) record in the system based on the provided parameters. Returns a JSON representation of the saved location.
+
+### [`findLocations`](./find-locations)
+
+Retrieves [Locations](../../data-model/location-model/location) records based on the specified pagination, sort, and column constraint parameters. Returns a Query Result object.
+
+### [`getLocation`](./get-location)
+
+Retrieves a [Locations](../../data-model/location-model/location) record by its ID or path. Returns a JSON representation of the location. Returns nothing if no location is found.
+
+### [`getLocationsByPartialPath`](./get-locations-by-partial-path)
+
+Retrieves all [Locations](../../data-model/location-model/location) records with paths that contain the specified partial path. Returns a list of JSON objects representing all locations with paths that include the given partial path.
+
+### [`getLocationsByPropertyValue`](./get-locations-by-property-value)
+
+Retrieves all [Locations](../../data-model/location-model/location) records that have a property value that matches the provided value. Returns a JSON list of all locations that have the specified property value.
+
+### [`getAllLocations`](./get-all-locations)
+
+Retrieves a list of all [Locations](../../data-model/location-model/location) records in the system. Returns a list of JSON objects representing all locations.
+
+### [`getLocationTree`](./get-location-tree)
+
+**No Filter:** Retrieves all [Locations](../../data-model/location-model/location) records as a tree structure. 
+
+**With a Filter:** Retrieves all [Locations](../../data-model/location-model/location) records whose names contain a substring that matches the filter. Returns the parent locations even if they don't contain the filter.
+
+Returns a list of JSON objects.
+
+### [`getLocationReferences`](./get-location-references)
+
+Retrieves a list of references to a [Locations](../../data-model/location-model/location) record by its ID or path. Returns a list of JSON objects.
 
 ### [`validateLocation`](./validate-location)
 
-Validates a location based on provided parameters. Returns a JSON dictionary where keys are field names and values are
-lists of validation violations.
+Validates the specified parameters for a [Locations](../../data-model/location-model/location) record and returns any validation errors. This only checks if the location object can be saved based on the attributes given. Returns a JSON object where keys are field names and values are lists of validation violation messages.
+
+### [`deleteLocation`](./delete-location)
+
+Deletes a [Locations](../../data-model/location-model/location) record by its ID or path. This cannot delete a location with references to it. If successful, no response is returned. If the location that's being deleted has a reference, a JSON object is returned with details about the encountered error.
+
+### [`deleteLocationWithReferences`](./delete-location-with-references)
+
+Deletes a [Locations](../../data-model/location-model/location) record by its ID or path. Also deletes immediate references to this location if possible. If successful, no response is returned.
+
+### [`getLocationGroupReferences`](./get-location-group-references)
+
+Retrieves a list of references to a [Location Groups](../../data-model/location-model/location-group) record by its ID. Returns a list of JSON objects.
+
+### [`deleteLocationGroup`](./delete-location-group)
+
+Deletes a [Location Groups](../../data-model/location-model/location-group) record by its ID. This deletes any references in [Location-Location Groups](../../data-model/location-model/location-location-group). If successful, no response is returned.
 
 ### [`newProperty`](./new-property)
 
-Creates a new location property. Returns a JSON representation of the newly created property.
-
-### [`getProperty`](./get-property)
-
-Retrieves a location property with the specified ID or name. Returns a JSON representation of the property.
+Generates an empty non-persisted [Location Properties](../../data-model/location-model/location-property) object to provide the structure required by the API to save a new record into the database. This method must be combined with the [saveProperty](./save-property) method in order to persist the record. Returns a JSON representation of the newly created Location Property object.
 
 ### [`saveProperty`](./save-property)
 
-Creates or updates a location property based on provided parameters. If an ID is provided and corresponds to an existing
-property, it updates; otherwise, it creates a new property. Returns a JSON representation of the saved property.
+Creates or updates a [Location Properties](../../data-model/location-model/location-property) record in the system based on the provided parameters. Returns a JSON representation of the saved location property.
 
-### [`deleteProperty`](./delete-property)
+### [`getPropertyOrCreateNew`](./get-property-or-create-new)
 
-Deletes a location property by ID, with an option to force deletion if it is referenced by other objects.
+Retrieves a [Location Properties](../../data-model/location-model/location-property) record if an existing location property exists with the specified ID or name. Otherwise, creates a new [Location Properties](../../data-model/location-model/location-property) record with the specified name and attributes. Returns a JSON representation of the location property.
 
-### [`newPropertyValue`](./new-property-value)
+### [`getProperty`](./get-property)
 
-Creates a new property value for a location. Returns a JSON representation of the newly created property value.
+Retrieves a [Location Properties](../../data-model/location-model/location-property) record by its specified ID or name. Returns a JSON representation of the location property. Returns nothing if no location property is found.
 
-### [`getPropertyValueFor`](./get-property-value-for)
+### [`getLocationPropertyReferences`](./get-location-property-references)
 
-Retrieves the value of a specified property for a given location. Returns the value as a JSON object.
+Retrieves a list of references to a [Location Properties](../../data-model/location-model/location-property) by its ID or name. Returns a list of JSON objects.
 
 ### [`validateProperty`](./validate-property)
 
-Validates a location property based on provided parameters. Returns a JSON dictionary with field names as keys and lists
-of validation violations as values.
+Validates the specified parameters for a [Location Properties](../../data-model/location-model/location-property) record and returns any validation errors. This only checks if the location property object can be saved based on the attributes given. Returns a JSON object where keys are field names and values are lists of validation violation messages.
 
-### [`validatePropertyValue`](./validate-property-value)
+### [`deleteProperty`](./delete-property)
 
-Validates a location property value based on provided parameters. Returns a JSON dictionary with field names as keys and
-lists of validation violations.
+Deletes a [Location Properties](../../data-model/location-model/location-property) record by its ID or name. This cannot delete a location property with references to it. If successful, no response is returned. If the property that's being deleted has a reference, a JSON object is returned with details about the encountered error.
+
+### [`deletePropertyWithReferences`](./delete-property-with-references)
+
+Deletes a [Location Properties](../../data-model/location-model/location-property) record by its ID or name. Also deletes immediate references to this property if possible. If successful, no response is returned.
+
+### [`newPropertyValue`](./new-property-value)
+
+Generates an empty non-persisted [Location Property Values](../../data-model/location-model/location-property-value) object to provide the structure required by the API to save a new record into the database. This method must be combined with the [savePropertyValue](./save-property-value) method in order to persist the record. Returns a JSON representation of the newly created Location Property Value object.
 
 ### [`savePropertyValue`](./save-property-value)
 
-Creates or updates a property value for a location based on provided parameters. If an ID is provided and matches an
-existing value, it updates; otherwise, it creates a new value. Returns a JSON representation of the saved property
-value.
+Creates or updates a [Location Property Values](../../data-model/location-model/location-property-value) record in the system based on the provided parameters. Returns a JSON representation of the saved location property value.
+
+### [`setPropertyValue`](./set-property-value)
+
+Updates the value of a [Location Property Values](../../data-model/location-model/location-property-value) record given a location ID or path and a property ID or name. Returns a JSON representation of the updated location property value.
+
+### [`getPropertyValueFor`](./get-property-value-for)
+
+Retrieves a [Location Property Values](../../data-model/location-model/location-property-value) record by its location ID or path and by its property ID or name. Returns a JSON representation of the location property value. Returns nothing if no location property value is found.
+
+### [`getLocationPropertyValueReferences`](./get-location-property-value-references)
+
+Retrieves a list of references to a [Location Property Values](../../data-model/location-model/location-property-value) by its ID. Returns a list of JSON objects.
+
+### [`validatePropertyValue`](./validate-property-value)
+
+Validates the specified parameters for a [Location Property Values](../../data-model/location-model/location-property-value) record and returns any validation errors. This only checks if the location property value object can be saved based on the attributes given. Returns a JSON object where keys are field names and values are lists of validation violation messages.
 
 ### [`deletePropertyValue`](./delete-property-value)
 
-Deletes a property value for a location by ID.
+Deletes a [Location Property Values](../../data-model/location-model/location-property-value) record by its ID. This cannot delete a location property value with references to it. If successful, no response is returned.
+
+### [`deletePropertyValueWithReferences`](./delete-property-value-with-references)
+
+Deletes a [Location Property Values](../../data-model/location-model/location-property-value) record by its ID. Also deletes immediate references to this location if possible. If successful, no response is returned.
 
 ---
 

@@ -1,54 +1,57 @@
 ---
-sidebar_position: 12
+sidebar_position: 29
 title: "validatePropertyValue"
 description: "Validates a location property value based on provided parameters."
 ---
 
 # system.mes.location.validatePropertyValue
 
-Validates a location property value based on the specified parameters.
+## Description
 
-## Method Description
+Validates the specified parameters for a [Location Property Values](../../data-model/location-model/location-property-value) record and returns any validation errors. 
+This only checks if the location property value object can be saved based on the attributes given.
 
-This function validates the provided parameters for a location property value, such as value and data type, to ensure
-they meet defined standards. If validation violations are found, they are returned in a JSON dictionary format.
-
-## Returns
-
-A JSON dictionary where keys are field names, and values are lists of validation violation messages.
+## Syntax
+```python
+system.mes.location.validatePropertyValue(**property_data)
+```
 
 ## Parameters
 
-| Parameter    | Type    | Description                                                  |
-|--------------|---------|--------------------------------------------------------------|
-| `id`         | String  | The ULID of the location property value.                     |
-| `notes`      | String  | Notes related to the location property value.                |
-| `enabled`    | Boolean | If the location property value is enabled.                   |
-| `value`      | Mixed   | The value of the property.                                   |
-| `dataType`   | String  | The data type of the property value (e.g., Integer, String). |
-| `locationId` | String  | The ULID of the location associated with the property value. |
-| `propertyId` | String  | The ULID of the property associated with the value.          |
-| `spare1`     | String  | Additional field for user-defined context.                   |
-| `spare2`     | String  | Additional field for user-defined context.                   |
-| `spare3`     | String  | Additional field for user-defined context.                   |
+| Parameter      | Type            | Description                                                                                                        |
+|----------------|-----------------|--------------------------------------------------------------------------------------------------------------------|
+| `locationId`   | `String` (ULID) | The ULID of the location.                                                                                          |
+| `propertyId`   | `String` (ULID) | The ULID of the location property.                                                                                 |
+| `dataType`     | `String`        | The data type of the property value. Must be the same as the data type of the property.                            |
+| `value`        | `Mixed`         | The value assigned to the property value if none is provided. The type is mixed as it depends on what dataType is. |
+| `id`           | `String` (ULID) | The ULID of the location property value (optional, for updating an existing property).                             |
+| `notes`        | `String`        | Notes related to the location property value.                                                                      |
+| `enabled`      | `Boolean`       | Indicates if the property value is active and enabled.                                                             |
+| `spare1`       | `String`        | Additional field for user-defined context.                                                                         |
+| `spare2`       | `String`        | Additional field for user-defined context.                                                                         |
+| `spare3`       | `String`        | Additional field for user-defined context.                                                                         |
 
-## Example Usage
+## Returns
+
+Returns a JSON object where keys are field names and values are lists of validation violation messages.
+
+## Code Examples
 
 ```python
-def validateTemperatureValue(location_id, temperature_value):
-    # Define property value details for validation
-    property_value_data = {
-        "locationId": location_id,
-        "propertyId": "01JAP8TF6X-7MFJQ9KJ-0C3BC2HR",  # Example property ULID for Temperature
-        "value": temperature_value,
-        "dataType": "Float"
-    }
-    
-    # Validate the property value
-    validation_errors = system.mes.location.validatePropertyValue(**property_value_data)
-    
-    if validation_errors:
-        print("Validation errors:", validation_errors)
-    else:
-        print("Property value is valid.")
+# Generate the object structure for a new property value object
+property_value_data = system.mes.location.newPropertyValue()
+
+# Define property value details
+property_value_data['locationId'] = system.mes.location.getLocation('DairyCo')['id']
+property_value_data['propertyId'] = system.mes.location.getProperty('Cows')['id']
+property_value_data['dataType'] = 'Int' # Must be the same data type as the property
+property_value_data['value'] = 100
+
+# Validate location property value parameters
+validation_errors = system.mes.location.validatePropertyValue(**property_value_data)
+
+if len(validation_errors) > 0:
+    print('Validation errors found:', validation_errors)
+else:
+    print('Location property value parameters are valid.')
 ```

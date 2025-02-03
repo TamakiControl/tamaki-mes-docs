@@ -1,18 +1,19 @@
 ---
-sidebar_position: 17
-title: "saveProperty"
-description: "Creates or updates a location property with specified parameters."
+sidebar_position: 18
+title: "getPropertyOrCreateNew"
+description: "Retrieves or creates a location property by its ID or name depending on if it exists."
 ---
 
-# system.mes.location.saveProperty
+# system.mes.location.getPropertyOrCreateNew
 
 ## Description
 
-Creates or updates a [Location Properties](../../data-model/location-model/location-property) record in the system based on the provided parameters.
+Retrieves a [Location Properties](../../data-model/location-model/location-property) record if an existing location property exists with the specified ID or name.
+Otherwise, creates a new [Location Properties](../../data-model/location-model/location-property) record with the specified name and attributes.
 
 ## Syntax
 ```python
-system.mes.location.saveProperty(**property_data)
+system.mes.location.getPropertyOrCreateNew(**property_data)
 ```
 
 ## Parameters
@@ -29,7 +30,7 @@ system.mes.location.saveProperty(**property_data)
 | `options`      | `String`        | List of possible values for the property (e.g., `"[option1, option2]"`).                                             |
 | `nullable`     | `Boolean`       | Defines if the property can accept null values.                                                                      |
 | `defaultValue` | `Mixed`         | The default value assigned to the property if none is provided. The type is mixed as it depends on what dataType is. |
-| `id`           | `String` (ULID) | The ULID of the location property (optional, for updating an existing property).                                     |
+| `id`           | `String` (ULID) | The ULID of the location property (optional, for retrieving the existing property).                                  |
 | `notes`        | `String`        | Notes related to the location property.                                                                              |
 | `enabled`      | `Boolean`       | Indicates if the property is active and enabled.                                                                     |
 | `spare1`       | `String`        | Additional field for user-defined context.                                                                           |
@@ -38,36 +39,26 @@ system.mes.location.saveProperty(**property_data)
 
 ## Returns
 
-Returns a JSON representation of the saved location property.
+Returns a JSON representation of the location property.
 
 ## Code Examples
 
 ```python
-# Generate the object structure for a new property object, set the name and save it
-new_property = system.mes.location.newProperty()
-new_property['name'] = 'Temperature'
-saved_property = system.mes.location.saveProperty(**new_property)
-
-# Output the JSON representation of the saved location
-print(saved_property)
-
-# Generate the object structure for another new property object to update the previous property
+# Generate the object structure for a new property object for temperature
 temperature_property = system.mes.location.newProperty()
 
-# Define property attributes
-temperature_property['id'] = saved_property.id
+# Define property details
 temperature_property['name'] = 'Temperature'
 temperature_property['dataType'] = 'Float'
-temperature_property['lowLimit'] = -20
-temperature_property['highLimit'] = 50
 temperature_property['units'] = 'Celsius'
 temperature_property['nullable'] = False
-temperature_property['defaultValue'] = 20.0
+temperature_property['lowLimit'] = -20
+temperature_property['highLimit'] = 50
 # (You can continue setting other properties as needed here)
 
-# Save the location property to update it in the system
-updated_property = system.mes.location.saveProperty(**temperature_property)
+# Get the property if it exists, otherwise creates it with the given attributes
+property = system.mes.location.getPropertyOrCreateNew(**temperature_property)
 
-# Output the JSON representation of the updated location property
-print(updated_property)
+# Output the JSON representation of the property
+print(property)
 ```
