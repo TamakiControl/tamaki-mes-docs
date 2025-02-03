@@ -33,12 +33,7 @@ system.mes.location.validatePropertyValue(**property_data)
 
 ## Returns
 
-Returns a JSON object where keys are field names and values are lists of validation violation messages. The following attributes are required:
-
-| Name           | Type            | Description                         |
-|----------------|-----------------|-------------------------------------|
-| `locationId`   | `String` (ULID) | The ULID of the location.           |
-| `propertyId`   | `String` (ULID) | The ULID of the location property.  |
+Returns a JSON object where keys are field names and values are lists of validation violation messages.
 
 ## Code Examples
 
