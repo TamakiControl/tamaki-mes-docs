@@ -1,12 +1,13 @@
 ---
 sidebar_position: 27
 title: "newChangeStatusRequest"
-description: "Creates a new Change Status Request record to be formatted with attributes."
+description: "Generates an empty non-persisted change status request to provide the structure to save a new record into the database."
 ---
 
 # system.mes.inventory.newChangeStatusRequest
 
-Creates a new Change Status Request record to be formatted with attributes.
+Generates an empty non-persisted Change Status Request to provide the structure required by the API to save a new record into the database. 
+This method must be combined with the [changeStatus](./change-status) method in order to persist the record.
 
 ## Syntax
 ```python
@@ -37,7 +38,7 @@ Returns a JSON representation of the newly created Change Status Request object.
 ## Code Examples
 
 ```python
-# Create a new change status request instance with no initial arguments
+# Generate the object structure for a new change status request object with no initial arguments
 new_request = system.mes.inventory.newChangeStatusRequest()
 
 # Set basic attributes for the new change status requestOPOE

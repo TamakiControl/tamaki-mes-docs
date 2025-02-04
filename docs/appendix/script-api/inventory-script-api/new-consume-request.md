@@ -1,12 +1,13 @@
 ---
 sidebar_position: 3
 title: "newConsumeRequest"
-description: "Creates a new Consume Request record to be formatted with attributes."
+description: "Generates an empty non-persisted consume request to provide the structure to save a new record into the database."
 ---
 
 # system.mes.inventory.newConsumeRequest
 
-Creates a new Consume Request record to be formatted with attributes.
+Generates an empty non-persisted Consume Request to provide the structure required by the API to save a new record into the database. 
+This method must be combined with the [consume](./consume) method in order to persist the record.
 
 ## Syntax
 ```python
@@ -49,7 +50,7 @@ Returns a JSON representation of the newly created Consume Request object. The f
 ## Code Examples
 
 ```python
-# Create a new consume request instance with no initial arguments
+# Generate the object structure for a new consume request object with no initial arguments
 new_request = system.mes.inventory.newConsumeRequest()
 
 # Set basic attributes for the new consume request

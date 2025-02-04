@@ -1,12 +1,13 @@
 ---
 sidebar_position: 24
 title: "newReturnRequest"
-description: "Creates a new Return Request record to be formatted with attributes."
+description: "Generates an empty non-persisted return request to provide the structure to save a new record into the database."
 ---
 
 # system.mes.inventory.newReturnRequest
 
-Creates a new Return Request record to be formatted with attributes.
+Generates an empty non-persisted Return Request to provide the structure required by the API to save a new record into the database. 
+This method must be combined with the [returnInventory](./return-inventory) method in order to persist the record.
 
 ## Syntax
 ```python
@@ -46,7 +47,7 @@ Returns a JSON representation of the newly created Return Request object. The fo
 ## Code Examples
 
 ```python
-# Create a new return request instance with no initial arguments
+# Generate the object structure for a new return request object with no initial arguments
 new_request = system.mes.inventory.newReturnRequest()
 
 # Set basic attributes for the new return request

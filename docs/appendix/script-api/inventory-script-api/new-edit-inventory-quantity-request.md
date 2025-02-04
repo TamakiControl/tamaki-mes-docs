@@ -1,12 +1,13 @@
 ---
 sidebar_position: 30
 title: "newEditInventoryQuantityRequest"
-description: "Creates a new Edit Inventory Quantity Request record to be formatted with attributes."
+description: "Generates an empty non-persisted edit inventory quantity request to provide the structure to save a new record into the database."
 ---
 
 # system.mes.inventory.newEditInventoryQuantityRequest
 
-Creates a new Edit Inventory Quantity Request record to be formatted with attributes.
+Generates an empty non-persisted Edit Inventory Quantity Request to provide the structure required by the API to save a new record into the database. 
+This method must be combined with the [editInventoryQuantity](./edit-inventory-quantity) method in order to persist the record.
 
 ## Syntax
 ```python
@@ -40,7 +41,7 @@ Returns a JSON representation of the newly created Edit Inventory Quantity Reque
 ## Code Examples
 
 ```python
-# Create a new edit inventory quantity request instance with no initial arguments
+# Generate the object structure for a new edit inventory quantity request object with no initial arguments
 new_request = system.mes.inventory.newEditInventoryQuantityRequest()
 
 # Set basic attributes for the new edit inventory quantity request

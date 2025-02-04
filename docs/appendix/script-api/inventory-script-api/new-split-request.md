@@ -1,12 +1,13 @@
 ---
 sidebar_position: 15
 title: "newSplitRequest"
-description: "Creates a new Split Request record to be formatted with attributes."
+description: "Generates an empty non-persisted split request to provide the structure to save a new record into the database."
 ---
 
 # system.mes.inventory.newSplitRequest
 
-Creates a new Split Request record to be formatted with attributes.
+Generates an empty non-persisted Split Request to provide the structure required by the API to save a new record into the database. 
+This method must be combined with the [split](./split) method in order to persist the record.
 
 ## Syntax
 ```python
@@ -43,7 +44,7 @@ Returns a JSON representation of the newly created Split Request object. The fol
 ## Code Examples
 
 ```python
-# Create a new split request instance with no initial arguments
+# Generate the object structure for a new split request object with no initial arguments
 new_request = system.mes.inventory.newSplitRequest()
 
 # Set basic attributes for the new split request

@@ -17,11 +17,11 @@ system.mes.inventory.getInventoryByLotAndLocation(lotIdOrName, materialIdOrPath,
 
 ## Parameters
 
-| Parameter          | Type     | Description                                                       |
-|--------------------|----------|-------------------------------------------------------------------|
-| `lotIdOrName`      | `String` | The ID or name of the material lot associated with the inventory. |
-| `materialIdOrPath` | `String` | The ID or path of the material associated with the inventory.     |
-| `locationIdOrPath` | `String` | The ID or path of the location associated with the inventory.     |
+| Parameter          | Type     | Description                                                         |
+|--------------------|----------|---------------------------------------------------------------------|
+| `lotIdOrName`      | `String` | The ID or name of the material lot associated with the inventory.   |
+| `materialIdOrPath` | `String` | The ID or path of the material associated with the inventory's lot. |
+| `locationIdOrPath` | `String` | The ID or path of the location associated with the inventory.       |
 
 ## Returns
 
@@ -40,12 +40,12 @@ Returns a JSON representation of a material inventory with the following propert
 | `name`                 | `String`        | The name of the inventory.                                                                                 |
 | `productionOrderId`    | `String` (ULID) | The ULID of the production order associated with the inventory.                                            |
 | `productionOrderName`  | `String`        | The name of the production order associated with the inventory.                                            |
-| `materialId`           | `String` (ULID) | The ULID of the material associated with the inventory.                                                    |
-| `materialPath`         | `String`        | The path of the material associated with the inventory.                                                    |
-| `materialDescription`  | `String`        | The description of the material associated with the inventory.                                             |
-| `materialImage`        | `Byte[]`        | The image of the material associated with the inventory.                                                   |
-| `materialClassId`      | `String` (ULID) | The ULID of the material class associated with the inventory.                                              |
-| `materialClassPath`    | `String`        | The path of the material class associated with the inventory.                                              |
+| `materialId`           | `String` (ULID) | The ULID of the material associated with the inventory's lot.                                              |
+| `materialPath`         | `String`        | The path of the material associated with the inventory's lot.                                              |
+| `materialDescription`  | `String`        | The description of the material associated with the inventory's lot.                                       |
+| `materialImage`        | `Byte[]`        | The image of the material associated with the inventory's lot.                                             |
+| `materialClassId`      | `String` (ULID) | The ULID of the material class associated with the inventory's lot.                                        |
+| `materialClassPath`    | `String`        | The path of the material class associated with the inventory's lot.                                        |
 | `id`                   | `String` (ULID) | The ULID of the inventory.                                                                                 |
 | `notes`                | `String`        | Notes related to the inventory.                                                                            |
 | `enabled`              | `Booelean`      | Indicates if the inventory is active and enabled.                                                          |

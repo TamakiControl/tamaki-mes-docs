@@ -15,16 +15,16 @@ system.mes.inventory.validateChangeStatusRequest(**change_status_request)
 
 ## Parameters
 
-| Parameter      | Type            | Description                                                        |
-|----------------|-----------------|--------------------------------------------------------------------|
-| `type`         | `String`        | The type of request used for inventory request deserialization.    |
-| `lotId`        | `String` (ULID) | The ID of the material lot whose status is being updated.          |
-| `newStatus`    | `String`        | The new status to be assigned to the material lot.                 |
-| `operationId`  | `String` (ULID) | The ID of the operation changing the status of this inventory.     |
-| `notes`        | `String`        | Notes related to the change status request.                        |
-| `spare1`       | `String`        | Additional field for user-defined context.                         |
-| `spare2`       | `String`        | Additional field for user-defined context.                         |
-| `spare3`       | `String`        | Additional field for user-defined context.                         |
+| Parameter      | Type            | Description                                                                                                                               |
+|----------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| `type`         | `String`        | The type of request defined by the LotRecordType Enum. It is internally set and must not be modified, as changes may break functionality. |
+| `lotId`        | `String` (ULID) | The ID of the material lot whose status is being updated.                                                                                 |
+| `newStatus`    | `String`        | The new status to be assigned to the material lot.                                                                                        |
+| `operationId`  | `String` (ULID) | The ID of the operation changing the status of this inventory.                                                                            |
+| `notes`        | `String`        | Notes related to the change status request.                                                                                               |
+| `spare1`       | `String`        | Additional field for user-defined context.                                                                                                |
+| `spare2`       | `String`        | Additional field for user-defined context.                                                                                                |
+| `spare3`       | `String`        | Additional field for user-defined context.                                                                                                |
 
 ## Returns
 
@@ -33,7 +33,7 @@ Returns a JSON object where keys are field names and values are lists of validat
 ## Code Examples
 
 ```python
-# Create a new change status request instance with no initial arguments
+# Generate the object structure for a new change status request object with no initial arguments
 change_status_request = system.mes.inventory.newChangeStatusRequest()
 
 # Set basic attributes for the new change status requestOPOE

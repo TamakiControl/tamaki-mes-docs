@@ -58,7 +58,7 @@ Each JSON object has the following properties:
 ## Code Examples
 
 ```python
-# Create a new lot history request instance with no initial arguments
+# Generate the object structure for a new lot history request object with no initial arguments
 new_lot_history_request = system.mes.inventory.newLotHistoryRequest()
 
 # Set basic attributes for the new lot history request

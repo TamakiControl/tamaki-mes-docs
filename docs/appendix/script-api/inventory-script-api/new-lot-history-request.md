@@ -1,12 +1,13 @@
 ---
 sidebar_position: 47
 title: "newLotHistoryRequest"
-description: "Creates a new Lot History Request record to be formatted with attributes."
+description: "Generates an empty non-persisted lot history request to provide the structure to retrieve records from the database."
 ---
 
 # system.mes.inventory.newLotHistoryRequest
 
-Creates a new Lot History Request record to be formatted with attributes.
+Generates an empty non-persisted Lot History Request to provide the structure required by the API to retrieve records from the database. 
+This method must be combined with the [getLotHistory](./get-lot-history) method to retrieve the records.
 
 ## Syntax
 ```python
@@ -37,7 +38,7 @@ Returns a JSON representation of the newly created Lot History Request object. T
 ## Code Examples
 
 ```python
-# Create a new lot history request instance with no initial arguments
+# Generate the object structure for a new lot history request object with no initial arguments
 new_lot_history_request = system.mes.inventory.newLotHistoryRequest()
 
 # Set basic attributes for the new lot history request
