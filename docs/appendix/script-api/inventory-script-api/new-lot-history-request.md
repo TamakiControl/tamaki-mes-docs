@@ -1,40 +1,53 @@
 ---
-sidebar_position: 2
+sidebar_position: 47
 title: "newLotHistoryRequest"
-description: "Creates a new empty LotHistoryRequest."
+description: "Generates an empty non-persisted lot history request to provide the structure to retrieve records from the database."
 ---
 
-# newLotHistoryRequest
+# system.mes.inventory.newLotHistoryRequest
 
-## Method Description
+Generates an empty non-persisted Lot History Request to provide the structure required by the API to retrieve records from the database. 
+This method must be combined with the [getLotHistory](./get-lot-history) method to retrieve the records.
 
-Creates a new empty LotHistoryRequest. This function returns a JSON/Dictionary representation of the new
-LotHistoryRequest. This allows users to see what fields are available and set the desired values before calling
-`getLotHistory`.
+## Syntax
+```python
+system.mes.inventory.newLotHistoryRequest()
+```
+
+## Parameters
+
+| Parameter | Type | Description                               |
+|-----------|------|-------------------------------------------|
+| None      | -    | This method does not take any parameters. |
 
 ## Returns
 
-A JSON/Dictionary representation of the new LotHistoryRequest.
+Returns a JSON representation of the newly created Lot History Request object. The following is a list of keys and default values:
 
-| Field Name           | Type      | Description                                                                                                                           |
-|----------------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------|
-| lotIdOrName          | String    | The ID or name of the lot to retrieve history for.                                                                                    |
-| lotRecordType        | String    | The type of lot record to retrieve. Possible values: CONSUME, PRODUCE, MOVE, SPLIT, MERGE, SCRAP, STATUS_CHANGE, EDIT, RECEIVE, SHIP. |
-| operationId          | String    | The ID or name of the operation to filter by.                                                                                         |
-| orderIdOrName        | String    | The ID or name of the order to filter by.                                                                                             |
-| materialReasonCodeId | String    | The ID of the material reason code to filter by.                                                                                      |
-| startDate            | ISOString | The start date of the history. Only records created after this date will be returned.                                                 |
-| endDate              | ISOString | The end date of the history. Only records created before this date will be returned.                                                  |
-| status               | String    | The status of the lot record to filter by. Possible values: IDLE, RUNNING, COMPLETED, FAULTED, CANCELLED, UNKNOWN.                    |
+| Key                          | Default Value    |
+|------------------------------|------------------|
+| `lotId`                      | `null`           |
+| `lotRecordType`              | `null`           |
+| `operationId`                | `null`           |
+| `productionOrderIdOrName`    | `null`           |
+| `materialReasonCodeId`       | `null`           |
+| `startDate`                  | `null`           |
+| `endDate`                    | `null`           |
+| `status`                     | `null`           |
 
-## Example Usage
+## Code Examples
 
 ```python
-# Create a new empty LotHistoryRequest
-request = system.mes.inventory.newLotHistoryRequest()
-request['orderIdOrName'] = "Order123"
-request['status'] = "COMPLETED"
-request['lotRecordType'] = "PRODUCE"
+# Generate the object structure for a new lot history request object with no initial arguments
+new_lot_history_request = system.mes.inventory.newLotHistoryRequest()
 
-history = system.mes.inventory.getLotHistory(**request)
+# Set basic attributes for the new lot history request
+new_lot_history_request['lotId'] = '01JJCPQWYG-T9CW4G6Z-96XBWYQB'
+# (You can continue setting other properties as needed here)
+
+# Retrieve the lot history
+lot_history = system.mes.inventory.getLotHistory(**new_lot_history_request)
+
+# Output the list of lot history records
+print(lot_history)
 ```

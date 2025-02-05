@@ -6,158 +6,203 @@ description: "Overview of functions available in the Inventory Script API."
 
 # Inventory Script API
 
-Welcome to the Inventory Script API documentation. This API provides a comprehensive set of functions for managing and
-interacting with inventory within the system. Below is a list of available functions, each with a brief description and
-a link to its detailed documentation.
+Welcome to the Inventory Script API documentation. This API provides a comprehensive set of functions for managing and interacting with inventory within the system. Below is a list of available functions, each with a brief description and a link to its detailed documentation.
 
 ## Function List
 
-### [`getInventory`](get-inventory)
+### [`checkLocationHasCapacity`](./check-location-has-capacity)
 
-Retrieves the inventory for a material lot at a location. Returns a JSON representation of the MaterialLotRecord for the
-inventory.
+Checks if the [Locations](../../data-model/location-model/location) record can store the given quantity of material. Returns a boolean indicating whether the location can accommodate the given quantity of inventory. Returns a boolean indicating whether the location can accommodate the given quantity of inventory.
 
-### [`newLotHistoryRequest`](new-lot-history-request)
+**NOTE:** If the Material Lot ID is provided, the Material ID parameter becomes optional but must not be None; instead, use an empty string. If the Material Lot name is provided instead of its ID, the Material ID is required to locate the lot in the database, as two lots with the same name may belong to different materials.
 
-Creates a new empty LotHistoryRequestDTO. Returns a JSON representation of the new LotHistoryRequestDTO object.
+### [`newConsumeRequest`](./new-consume-request)
 
-### [`getLotHistory`](get-lot-history)
+Generates an empty non-persisted Consume Request to provide the structure required by the API to save a new record into the database. This method must be combined with the [consume](./consume) method in order to persist the record. Returns a JSON representation of the newly created Consume Request object.
 
-Retrieves all records of a material lot that match the given criteria. Returns a JSON array of matching lot records.
+### [`consume`](./consume)
 
-### [`newConsumeRequest`](new-consume-request)
+Consumes inventory from the MES based on the provided parameters. Returns a JSON representation of a material lot record for a Consume Request.
 
-Creates a new empty ConsumeRequestDTO. Returns a JSON representation of the new ConsumeRequestDTO object.
+### [`validateConsumeRequest`](./validate-consume-request)
 
-### [`newProduceRequest`](new-produce-request)
+Validates a consume request based on the provided parameters. Returns a JSON object where keys are field names and values are lists of validation violation messages.
 
-Creates a new empty ProduceRequestDTO. Returns a JSON representation of the new ProduceRequestDTO object.
+### [`newUnconsumeRequest`](./new-unconsume-request)
 
-### [`newReceiveRequest`](new-receive-request)
+Generates an empty non-persisted Unconsume Request to provide the structure required by the API to save a new record into the database. This method must be combined with the [unconsume](./unconsume) method in order to persist the record. Returns a JSON representation of the newly created Unconsume Request object.
 
-Creates a new empty ReceiveRequestDTO. Returns a JSON representation of the new ReceiveRequestDTO object.
+### [`unconsume`](./unconsume)
 
-### [`newShipRequest`](new-ship-request)
+Unconsumes inventory from the MES based on the provided parameters. Returns a JSON representation of a material lot record for an Unconsume Request.
 
-Creates a new empty ShipRequestDTO. Returns a JSON representation of the new ShipRequestDTO object.
+### [`validateUnconsumeRequest`](./validate-unconsume-request)
 
-### [`newScrapRequest`](new-scrap-request)
+Validates an unconsume request based on the provided parameters. Returns a JSON object where keys are field names and values are lists of validation violation messages.
 
-Creates a new empty ScrapRequestDTO. Returns a JSON representation of the new ScrapRequestDTO object.
+### [`newProduceRequest`](./new-produce-request)
 
-### [`newMoveRequest`](new-move-request)
+Generates an empty non-persisted Produce Request to provide the structure required by the API to save a new record into the database. This method must be combined with the [produce](./produce) method in order to persist the record. Returns a JSON representation of the newly created Produce Request object.
 
-Creates a new empty MoveRequestDTO. Returns a JSON representation of the new MoveRequestDTO object.
+### [`produce`](./produce)
 
-### [`newSplitRequest`](new-split-request)
+Produces inventory from the MES based on the provided parameters. Returns a JSON representation of a material lot record for a Produce Request.
 
-Creates a new empty SplitRequestDTO. Returns a JSON representation of the new SplitRequestDTO object.
+### [`validateProduceRequest`](./validate-produce-request)
 
-### [`newMergeRequest`](new-merge-request)
+Validates a produce request based on the provided parameters. Returns a JSON object where keys are field names and values are lists of validation violation messages.
 
-Creates a new empty MergeRequestDTO. Returns a JSON representation of the new MergeRequestDTO object.
+### [`newMoveRequest`](./new-move-request)
 
-### [`newChangeStatusRequest`](new-change-status-request)
+Generates an empty non-persisted Move Request to provide the structure required by the API to save a new record into the database. This method must be combined with the [move](./move) method in order to persist the record. Returns a JSON representation of the newly created Move Request object.
 
-Creates a new empty ChangeStatusRequestDTO. Returns a JSON representation of the new ChangeStatusRequestDTO object.
+### [`move`](./move)
 
-### [`newEditInventoryQuantityRequest`](new-edit-inventory-quantity-request)
+Moves inventory from the MES based on the provided parameters. Returns a JSON representation of a material lot record for a Move Request.
 
-Creates a new empty EditInventoryQuantityRequestDTO. Returns a JSON representation of the new
-EditInventoryQuantityRequestDTO object.
+### [`validateMoveRequest`](./validate-move-request)
 
-### [`validateConsumeRequest`](validate-consume-request)
+Validates a move request based on the provided parameters. Returns a JSON object where keys are field names and values are lists of validation violation messages.
 
-Validates a consume request in the MES system. Returns a JSON dictionary with field names as keys and lists of
-validation violations.
+### [`newSplitRequest`](./new-split-request)
 
-### [`validateProduceRequest`](validate-produce-request)
+Generates an empty non-persisted Split Request to provide the structure required by the API to save a new record into the database. This method must be combined with the [split](./split) method in order to persist the record. Returns a JSON representation of the newly created Split Request object.
 
-Validates a produce request in the MES system. Returns a JSON dictionary with field names as keys and lists of
-validation violations.
+### [`split`](./split)
 
-### [`validateReceiveRequest`](validate-receive-request)
+Splits inventory from the MES based on the provided parameters. Returns a JSON representation of a material lot record for a Split Request.
 
-Validates a receive request in the MES system. Returns a JSON dictionary with field names as keys and lists of
-validation violations.
+### [`validateSplitRequest`](./validate-split-request)
 
-### [`validateShipRequest`](validate-ship-request)
+Validates a split request based on the provided parameters. Returns a JSON object where keys are field names and values are lists of validation violation messages.
 
-Validates a ship request in the MES system. Returns a JSON dictionary with field names as keys and lists of validation
-violations.
+### [`newMergeRequest`](./new-merge-request)
 
-### [`validateScrapRequest`](validate-scrap-request)
+Generates an empty non-persisted Merge Request to provide the structure required by the API to save a new record into the database. This method must be combined with the [merge](./merge) method in order to persist the record. Returns a JSON representation of the newly created Merge Request object.
 
-Validates a scrap request in the MES system. Returns a JSON dictionary with field names as keys and lists of validation
-violations.
+### [`merge`](./merge)
 
-### [`validateMoveRequest`](validate-move-request)
+Merges inventory from the MES based on the provided parameters. Returns a JSON representation of a material lot record for a Merge Request.
 
-Validates a move request in the MES system. Returns a JSON dictionary with field names as keys and lists of validation
-violations.
+### [`validateMergeRequest`](./validate-merge-request)
 
-### [`validateSplitRequest`](validate-split-request)
+Validates a merge request based on the provided parameters. Returns a JSON object where keys are field names and values are lists of validation violation messages.
 
-Validates a split request in the MES system. Returns a JSON dictionary with field names as keys and lists of validation
-violations.
+### [`newScrapRequest`](./new-scrap-request)
 
-### [`validateMergeRequest`](validate-merge-request)
+Generates an empty non-persisted Scrap Request to provide the structure required by the API to save a new record into the database. This method must be combined with the [scrap](./scrap) method in order to persist the record. Returns a JSON representation of the newly created Scrap Request object.
 
-Validates a merge request in the MES system. Returns a JSON dictionary with field names as keys and lists of validation
-violations.
+### [`scrap`](./scrap)
 
-### [`validateChangeStatusRequest`](validate-change-status-request)
+Scraps inventory from the MES based on the provided parameters. Returns a JSON representation of a material lot record for a Scrap Request.
 
-Validates a change status request in the MES system. Returns a JSON dictionary with field names as keys and lists of
-validation violations.
+### [`validateScrapRequest`](./validate-scrap-request)
 
-### [`validateEditInventoryQuantityRequest`](validate-edit-inventory-quantity-request)
+Validates a scrap request based on the provided parameters. Returns a JSON object where keys are field names and values are lists of validation violation messages.
 
-Validates an edit inventory quantity request in the MES system. Returns a JSON dictionary with field names as keys and
-lists of validation violations.
+### [`newReturnRequest`](./new-return-request)
 
-### [`consume`](consume.md)
+Generates an empty non-persisted Return Request to provide the structure required by the API to save a new record into the database. This method must be combined with the [returnInventory](./return-inventory) method in order to persist the record. Returns a JSON representation of the newly created Return Request object.
 
-Consumes a quantity of Material Inventory from a material lot at the specified location. Returns a JSON representation
-of the MaterialLotRecord for the consumption.
+### [`returnInventory`](./return-inventory)
 
-### [`produce`](produce.md)
+Returns inventory from the MES based on the provided parameters. Returns a JSON representation of a material lot record for a Return Request.
 
-Produces a quantity of Material Inventory for a material lot at the specified location. Returns a JSON representation of
-the MaterialLotRecord for the production.
+### [`validateReturnRequest`](./validate-return-request)
 
-### [`receive`](receive.md)
+Validates a return request based on the provided parameters. Returns a JSON object where keys are field names and values are lists of validation violation messages.
 
-Receives inventory into the MES system. If the lot indicated does not already exist, it will be created. Returns a JSON
-representation of the MaterialLotRecord for the receive.
+### [`newChangeStatusRequest`](./new-change-status-request)
 
-### [`ship`](ship.md)
+Generates an empty non-persisted Change Status Request to provide the structure required by the API to save a new record into the database. This method must be combined with the [changeStatus](./change-status) method in order to persist the record. Returns a JSON representation of the newly created Change Status Request object.
 
-Ships inventory from the MES system. Returns a JSON representation of the MaterialLotRecord for the shipment.
+### [`changeStatus`](./change-status)
 
-### [`scrap`](scrap.md)
+Changes the status of the material lot from the MES based on the provided parameters. Returns a JSON representation of a material lot record for a Change Status Request.
 
-Scraps inventory from the MES system. Returns a JSON representation of the MaterialLotRecord for the scrapping.
+### [`validateChangeStatusRequest`](./validate-change-status-request)
 
-### [`move`](move.md)
+Validates a change status request based on the provided parameters. Returns a JSON object where keys are field names and values are lists of validation violation messages.
 
-Moves inventory within the MES system. Returns a JSON representation of the MaterialLotRecord for the movement.
+### [`newEditInventoryQuantityRequest`](./new-edit-inventory-quantity-request)
 
-### [`split`](split.md)
+Generates an empty non-persisted Edit Inventory Quantity Request to provide the structure required by the API to save a new record into the database. This method must be combined with the [editInventoryQuantity](./edit-inventory-quantity) method in order to persist the record. Returns a JSON representation of the newly created Edit Inventory Quantity Request object.
 
-Splits a material lot into a new lot in the MES system. Returns a JSON representation of the split result.
+### [`editInventoryQuantity`](./edit-inventory-quantity)
 
-### [`merge`](merge.md)
+Edit inventory quantity from the MES based on the provided parameters. Returns a JSON representation of a material lot record for an Edit Inventory Quantity Request.
 
-Merges two material lots into one in the MES system. Returns a JSON representation of the merge result.
+### [`validateEditInventoryQuantityRequest`](./validate-edit-inventory-quantity-request)
 
-### [`changeStatus`](change-status)
+Validates an edit inventory quantity request based on the provided parameters. Returns a JSON object where keys are field names and values are lists of validation violation messages.
 
-Changes the status of a material lot in the MES system. Returns a JSON representation of the status change result.
+### [`newReceiveRequest`](./new-receive-request)
 
-### [`editInventoryQuantity`](edit-inventory-quantity)
+Generates an empty non-persisted Receive Request to provide the structure required by the API to save a new record into the database. This method must be combined with the [receive](./receive) method in order to persist the record. Returns a JSON representation of the newly created Receive Request object.
 
-Edits the quantity of a material inventory in the MES system. Returns a JSON representation of the edit result.
+### [`receive`](./receive)
+
+Receives inventory into the MES based on the provided parameters. Returns a JSON representation of a material lot record for a Receive Request.
+
+### [`validateReceiveRequest`](./validate-receive-request)
+
+Validates a receive request based on the provided parameters. Returns a JSON object where keys are field names and values are lists of validation violation messages.
+
+### [`newShipRequest`](./new-ship-request)
+
+Generates an empty non-persisted Ship Request to provide the structure required by the API to save a new record into the database. This method must be combined with the [ship](./ship) method in order to persist the record. Returns a JSON representation of the newly created Ship Request object.
+
+### [`ship`](./ship)
+
+Ships inventory from the MES based on the provided parameters. Returns a JSON representation of a material lot record for a Ship Request.
+
+### [`validateShipRequest`](./validate-ship-request)
+
+Validates a ship request based on the provided parameters. Returns a JSON object where keys are field names and values are lists of validation violation messages.
+
+### [`executeInventoryActions`](./execute-inventory-actions)
+
+Executes a list of inventory actions in a single transaction. That means that if any of the actions fail, none of them will be executed, and any changes made to the database will be rolled back. Returns a list of JSON representation of material lot records for the inventory actions executed.
+
+### [`setInventoryMetadata`](./set-inventory-metadata)
+
+Updates the metadata for a given [Material Inventories](../../data-model/material-model/material-inventory) record by its ID. This includes the notes and spare fields. Returns a JSON representation of an inventory.
+
+### [`publishInventoryState() and (List<String>)`](./publish-inventory-state)
+
+**No Parameter:** Publishes all of the [Material Inventories](../../data-model/material-model/material-inventory) to the tag system.
+
+**With a Parameter:** Publishes only the specified [Material Inventories](../../data-model/material-model/material-inventory) to the tag system given the ID or path of the location associated with material inventory.
+
+If successful, no response is returned.
+
+### [`getInventoryForMaterial`](./get-inventory-for-material)
+
+Retrieves the [Material Inventories](../../data-model/material-model/material-inventory) records for a specific material. Returns a list of JSON objects representing all inventories for a specific material.
+
+### [`getInventoryByLotAndLocation`](./get-inventory-by-lot-and-location)
+
+Retrieves the [Material Inventories](../../data-model/material-model/material-inventory) record based on the material lot and location. Returns a JSON representation of a material inventory.
+
+### [`getAllInventory`](./get-all-inventory)
+
+Retrieves all the [Material Inventories](../../data-model/material-model/material-inventory) records. Returns a list of JSON objects representing all material inventories.
+
+### [`getAllInventoryAtLocation`](./get-all-inventory-at-location)
+
+Retrieves all the [Material Inventories](../../data-model/material-model/material-inventory) records at a given location. Returns a list of JSON objects representing all material inventories at the given location.
+
+### [`getAllInventoryForLocationAndChildren`](./get-all-inventory-for-location-and-children)
+
+Retrieves all the [Material Inventories](../../data-model/material-model/material-inventory) records at a given location and its children. Returns a list of JSON objects representing all material inventories at the given location and its children.
+
+### [`newLotHistoryRequest`](./new-lot-history-request)
+
+Generates an empty non-persisted Lot History Request to provide the structure required by the API to retrieve records from the database. This method must be combined with the [getLotHistory](./get-lot-history) method to retrieve the records. Returns a JSON representation of the newly created Lot History Request object.
+
+### [`getLotHistory`](./get-lot-history)
+
+Retrieves all [Material Lot Records](../../data-model/material-model/material-lot-record) given the material lot and other parameters. Returns a list of JSON objects representing all material lot records for a material lot and other parameters.
 
 ---
 

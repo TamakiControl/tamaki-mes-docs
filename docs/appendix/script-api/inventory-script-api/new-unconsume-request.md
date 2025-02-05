@@ -1,17 +1,17 @@
 ---
-sidebar_position: 3
-title: "newConsumeRequest"
-description: "Generates an empty non-persisted consume request to provide the structure to save a new record into the database."
+sidebar_position: 6
+title: "newUnconsumeRequest"
+description: "Generates an empty non-persisted unconsume request to provide the structure to save a new record into the database."
 ---
 
 # system.mes.inventory.newConsumeRequest
 
-Generates an empty non-persisted Consume Request to provide the structure required by the API to save a new record into the database. 
-This method must be combined with the [consume](./consume) method in order to persist the record.
+Generates an empty non-persisted Unconsume Request to provide the structure required by the API to save a new record into the database. 
+This method must be combined with the [unconsume](./unconsume) method in order to persist the record.
 
 ## Syntax
 ```python
-system.mes.inventory.newConsumeRequest()
+system.mes.inventory.newUnconsumeRequest()
 ```
 
 ## Parameters
@@ -22,19 +22,16 @@ system.mes.inventory.newConsumeRequest()
 
 ## Returns
 
-Returns a JSON representation of the newly created Consume Request object. The following is a list of keys and default values:
+Returns a JSON representation of the newly created Unconsume Request object. The following is a list of keys and default values:
 
 | Key                            | Default Value    |
 |--------------------------------|------------------|
-| `type`                         | `CONSUME`        |
+| `type`                         | `UNCONSUME`      |
 | `quantity`                     | `null`           |
 | `unitOfMeasureSymbol`          | `null`           |
 | `lotIdOrName`                  | `null`           |
 | `materialIdOrPath`             | `null`           |
-| `sourceLocationIdOrPath`       | `null`           |
-| `consumingLotIdOrName`         | `null`           |
 | `destinationLocationIdOrPath`  | `null`           |
-| `createIfNotExists`            | `false`          |
 | `operationId`                  | `null`           |
 | `productionOrderIdOrName`      | `null`           |
 | `materialReasonCodeId`         | `null`           |
@@ -50,19 +47,18 @@ Returns a JSON representation of the newly created Consume Request object. The f
 ## Code Examples
 
 ```python
-# Generate the object structure for a new consume request object with no initial arguments
-new_request = system.mes.inventory.newConsumeRequest()
+# Generate the object structure for a new unconsume request object with no initial arguments
+new_request = system.mes.inventory.newUnconsumeRequest()
 
-# Set basic attributes for the new consume request
+# Set basic attributes for the new unconsume request
 new_request['materialIdOrPath'] = 'Bottle/Milk'
-new_request['sourceLocationIdOrPath'] = 'DairyCo'
+new_request['destinationLocationIdOrPath'] = 'DairyCo'
 new_request['quantity'] = 610
-new_request['createIfNotExists'] = True
 # (You can continue setting other properties as needed here)
 
-# Consume the request
-consumed_request = system.mes.inventory.consume(**new_request)
+# Unconsume the request
+unconsumed_request = system.mes.inventory.unconsume(**new_request)
 
-# Output the JSON representation of the consumed request
-print(consumed_request)
+# Output the JSON representation of the unconsumed request
+print(unconsumed_request)
 ```
