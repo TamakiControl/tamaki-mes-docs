@@ -89,10 +89,6 @@ See [locations](../location-model/location) for details.
 Represents the initial state of the inventory lot, specified by the **LotStatus** enum, which includes options such as 
 `OPEN`, `AVAILABLE`, `QA_HOLD`, `EXPIRED`, `SHIPPED`, and `CLOSED`, helping to indicate the status of the lot at the time of the record.
 
-### `quantity`
-
-Specifies the amount of material involved in this action, enabling quantification of the material movement or usage.
-
 ### `start_date` and `end_date`
 
 - **start_date**: Timestamp indicating when the inventory action began.
