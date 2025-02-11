@@ -42,7 +42,7 @@ along with sample data where applicable.
 | `format`               | `String`            | Formatting string for the property, useful for display or input parsing.                                                | `0.00`                                |
 | `nullable`             | `Boolean`           | Indicates if the property value can be null.                                                                            | `false`                               |
 | `options`              | `String`            | Additional options or constraints for the property, if any.                                                             | `Option1, Option2`                    |
-| `units`                | `String`            | Units associated with the property, if applicable.                                                                      | `kW`                                  |
+| `unit_of_measure_id`   | `String` (ULID)     | References the unit of measure for the property. See [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure). | `01JAP8RJBN-4VYZUKE1-LY2QHV8X`       |
 | `material_class_id`    | `String` (ULID)     | References the material class to which this property belongs. See [material_classes](../material-model/material-class). | `01JAP8R5RT-3FPXQABY-7KQZT6VF`        |
 
 ## Field Details
@@ -80,10 +80,10 @@ An optional field for defining how the property should be displayed or input, su
 
 Indicates if the property value is required or can be left empty (`null`).
 
-### `units`
+### `unit_of_measure_id`
 
-Specifies the units of measurement for the property (e.g., "kW" for power). This field helps in standardizing the
-interpretation of values.
+References the unit of measure applicable to this property, such as kilograms or liters, supporting context for values as well as conversions.
+See [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure) for details.
 
 This is for display purposes only and is not a reference to any [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure) entity.
 

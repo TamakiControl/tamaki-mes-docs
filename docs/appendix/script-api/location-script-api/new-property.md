@@ -26,24 +26,26 @@ system.mes.location.newProperty()
 
 Returns a JSON representation of the newly created Location Property object. The following is a list of keys and default values:
 
-| Key              | Default Value    |
-|------------------|------------------|
-| `name`           | `null`           |
-| `description`    | `null`           |
-| `dataType`       | `String`         |
-| `lowLimit`       | `null`           |
-| `highLimit`      | `null`           |
-| `format`         | `null`           |
-| `units`          | `null`           |
-| `options`        | `null`           |
-| `nullable`       | `false`          |
-| `defaultValue`   | `null`           |
-| `id`             | `null`           |
-| `notes`          | `null`           |
-| `enabled`        | `true`           |
-| `spare1`         | `null`           |
-| `spare2`         | `null`           |
-| `spare3`         | `null`           |
+| Key                   | Default Value |
+|-----------------------|---------------|
+| `name`                | `null`        |
+| `description`         | `null`        |
+| `dataType`            | `String`      |
+| `lowLimit`            | `null`        |
+| `highLimit`           | `null`        |
+| `format`              | `null`        |
+| `unitOfMeasureId`     | `null`        |
+| `unitOfMeasureName`   | `null`        |
+| `unitOfMeasureSymbol` | `null`        |
+| `options`             | `null`        |
+| `nullable`            | `false`       |
+| `defaultValue`        | `null`        |
+| `id`                  | `null`        |
+| `notes`               | `null`        |
+| `enabled`             | `true`        |
+| `spare1`              | `null`        |
+| `spare2`              | `null`        |
+| `spare3`              | `null`        |
 
 ## Code Examples
 
@@ -54,7 +56,7 @@ temperature_property = system.mes.location.newProperty()
 # Define property details
 temperature_property['name'] = 'Temperature'
 temperature_property['dataType'] = 'Float'
-temperature_property['units'] = 'Celsius'
+temperature_property['unitOfMeasureId'] = '01JAP8RJBN-4VYZUKE1-LY2QHV8X'
 temperature_property['nullable'] = False
 temperature_property['lowLimit'] = -20
 temperature_property['highLimit'] = 50

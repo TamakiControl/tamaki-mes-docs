@@ -42,7 +42,7 @@ The following table outlines the SQL columns for the `location_properties` table
 | `name`                 | `String`        | Unique name of the property across all properties.                             | `MaxTemperature`                     |
 | `nullable`             | `Boolean`       | Indicates whether the property value can be null.                              | `false`                              |
 | `options`              | `String`        | Additional options or constraints for the property, if any.                    | `Option1, Option2`                   |
-| `units`                | `String`        | Units associated with the property, if applicable.                             | `Celsius`                            |
+| `unit_of_measure_id`   | `String` (ULID) | References the unit of measure for the property. See [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure). | `01JAP8RJBN-4VYZUKE1-LY2QHV8X`       |
 
 ## Field Details
 
@@ -70,9 +70,9 @@ Defines the acceptable range for the property’s values. These constraints help
 Indicates whether the property can have null values, allowing flexibility in optional or required property
 configurations.
 
-### `units`
+### `unit_of_measure_id`
 
-Specifies the units of measurement, such as `kg` or `liters`, making the property more descriptive when associated with
-physical quantities.
+References the unit of measure applicable to this property, such as kilograms or liters, supporting context for values as well as conversions.
+See [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure) for details.
 
 This is for display purposes only and is not a reference to any [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure) entity.

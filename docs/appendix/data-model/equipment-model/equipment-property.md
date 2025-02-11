@@ -18,33 +18,33 @@ equipment.
 The following table outlines the SQL columns for the `equipment_properties` table, providing a brief description of
 each, along with sample data where applicable.
 
-| Column                   | Type                | Description                                                                                                                 | Example                                 |
-|--------------------------|---------------------|-----------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|
-| `id`                     | `String` (ULID)     | Unique identifier for the entity.                                                                                           | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`          |
-| `enabled`                | `Boolean`           | If the entity is enabled or not.                                                                                            | `true`                                  |
-| `created_date`           | `DateTime`          | Date the entity was created.                                                                                                | `2024-12-31T19:48:44Z`                  |
-| `created_by`             | `String`            | Person who created the entity.                                                                                              | `TamakiMES`                             |
-| `modified_date`          | `DateTime`          | Date the entity was created.                                                                                                | `2024-12-31T19:48:44Z`                  |
-| `modified_by`            | `String`            | Last person to modify the entity.                                                                                           | `TamakiMES`                             |
-| `notes`                  | `Blob`              | Notes about the entity.                                                                                                     | `This entity has these extra notes`     |
-| `spare1`                 | `String`            | The first spare column that can be used for additional context on the entity.                                               | `some extra context 1`                  |
-| `spare2`                 | `String`            | The second spare column that can be used for additional context on the entity.                                              | `some extra context 2`                  |
-| `spare3`                 | `String`            | The third spare column that can be used for additional context on the entity.                                               | `some extra context 3`                  |
-| `data_type`              | `String`            | Specifies the data type of the property, such as `INTEGER` or `STRING`.                                                     | `FLOAT`                                 |
-| `default_blob_value`     | `Blob`              | Default binary value for the property if `data_type` is binary-compatible.                                                  | `Binary data`                           |
-| `default_date_value`     | `Datetime`          | Default date value for the property, if applicable.                                                                         | `2024-05-01 00:00:00`                   |
-| `default_float_value`    | `Double`            | Default floating-point value, if applicable.                                                                                | `10.5`                                  |
-| `default_int_value`      | `BigInt`            | Default integer value for the property, if applicable.                                                                      | `100`                                   |
-| `default_string_value`   | `String`            | Default string value for the property, if applicable.                                                                       | `Default Value`                         |
-| `description`            | `String`            | Optional description of the property.                                                                                       | `Temperature setting`                   |
-| `format`                 | `String`            | Optional format string for property display.                                                                                | `#.##`                                  |
-| `high_limit`             | `Double`            | High limit for the property's value, if applicable.                                                                         | `100.0`                                 |
-| `low_limit`              | `Double`            | Low limit for the property's value, if applicable.                                                                          | `0.0`                                   |
-| `name`                   | `String`            | Unique name of the property across all properties.                                                                          | `HorsePower`                            |
-| `nullable`               | `Boolean`           | Indicates whether the property value can be null.                                                                           | `false`                                 |
-| `options`                | `String`            | Additional options or constraints for the property, if any.                                                                 | `Option1, Option2`                      |
-| `units`                  | `String`            | Units associated with the property, if applicable.                                                                          | `kW`                                    |
-| `equipment_class_id`     | `String` (ULID)     | References the equipment class to which this property belongs. See [equipment_classes](../equipment-model/equipment-class). | `01JAP8R5RT-3FPXQABY-7KQZT6VF`          |
+| Column                   | Type                | Description                                                                                                                      | Example                                 |
+|--------------------------|---------------------|----------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|
+| `id`                     | `String` (ULID)     | Unique identifier for the entity.                                                                                                | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`          |
+| `enabled`                | `Boolean`           | If the entity is enabled or not.                                                                                                 | `true`                                  |
+| `created_date`           | `DateTime`          | Date the entity was created.                                                                                                     | `2024-12-31T19:48:44Z`                  |
+| `created_by`             | `String`            | Person who created the entity.                                                                                                   | `TamakiMES`                             |
+| `modified_date`          | `DateTime`          | Date the entity was created.                                                                                                     | `2024-12-31T19:48:44Z`                  |
+| `modified_by`            | `String`            | Last person to modify the entity.                                                                                                | `TamakiMES`                             |
+| `notes`                  | `Blob`              | Notes about the entity.                                                                                                          | `This entity has these extra notes`     |
+| `spare1`                 | `String`            | The first spare column that can be used for additional context on the entity.                                                    | `some extra context 1`                  |
+| `spare2`                 | `String`            | The second spare column that can be used for additional context on the entity.                                                   | `some extra context 2`                  |
+| `spare3`                 | `String`            | The third spare column that can be used for additional context on the entity.                                                    | `some extra context 3`                  |
+| `data_type`              | `String`            | Specifies the data type of the property, such as `INTEGER` or `STRING`.                                                          | `FLOAT`                                 |
+| `default_blob_value`     | `Blob`              | Default binary value for the property if `data_type` is binary-compatible.                                                       | `Binary data`                           |
+| `default_date_value`     | `Datetime`          | Default date value for the property, if applicable.                                                                              | `2024-05-01 00:00:00`                   |
+| `default_float_value`    | `Double`            | Default floating-point value, if applicable.                                                                                     | `10.5`                                  |
+| `default_int_value`      | `BigInt`            | Default integer value for the property, if applicable.                                                                           | `100`                                   |
+| `default_string_value`   | `String`            | Default string value for the property, if applicable.                                                                            | `Default Value`                         |
+| `description`            | `String`            | Optional description of the property.                                                                                            | `Temperature setting`                   |
+| `format`                 | `String`            | Optional format string for property display.                                                                                     | `#.##`                                  |
+| `high_limit`             | `Double`            | High limit for the property's value, if applicable.                                                                              | `100.0`                                 |
+| `low_limit`              | `Double`            | Low limit for the property's value, if applicable.                                                                               | `0.0`                                   |
+| `name`                   | `String`            | Unique name of the property across all properties.                                                                               | `HorsePower`                            |
+| `nullable`               | `Boolean`           | Indicates whether the property value can be null.                                                                                | `false`                                 |
+| `options`                | `String`            | Additional options or constraints for the property, if any.                                                                      | `Option1, Option2`                      |
+| `unit_of_measure_id`     | `String` (ULID)     | References the unit of measure for the property. See [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure). | `01JAP8RJBN-4VYZUKE1-LY2QHV8X`       |
+| `equipment_class_id`     | `String` (ULID)     | References the equipment class to which this property belongs. See [equipment_classes](../equipment-model/equipment-class).      | `01JAP8R5RT-3FPXQABY-7KQZT6VF`          |
 
 ## Field Details
 
@@ -72,10 +72,10 @@ Defines the acceptable range for the property’s values. These constraints help
 Indicates whether the property can have null values, allowing flexibility in optional or required property
 configurations.
 
-### `units`
+### `unit_of_measure_id`
 
-Specifies the units of measurement for the property (e.g., "kW" for power). This field helps in standardizing the
-interpretation of values.
+References the unit of measure applicable to this property, such as kilograms or liters, supporting context for values as well as conversions.
+See [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure) for details.
 
 This is for display purposes only and is not a reference to any [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure) entity.
 
