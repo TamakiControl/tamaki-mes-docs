@@ -27,7 +27,7 @@ system.mes.location.saveLocation(**location_data)
 | `sortOrder`                | `Integer`       | Determines the display order of the location.                                                                                    |
 | `allowNegativeInventory`   | `Boolean`       | Allows inventory to go negative at this location.                                                                                |
 | `storageCapacity`          | `Double`        | Maximum storage capacity allowed at the location.                                                                                |
-| `storageCapacityUnitId`    | `String` (ULID) | The ULID for the storage capacity unit to be used as the default unit of measure for this location. See [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure). |
+| `storageCapacityUnitId`    | `String` (ULID) | The ULID for the storage capacity unit to be used as the default unit of measure for this location. See [unit_of_measure](../../data-model/utility-models/unit-of-measure-model/unit-of-measure). |
 | `lotStorageStrategy`       | `String`        | Defines the lot storage strategy (e.g, ALLOW_MULTIPLE, ALLOW_SINGLE_OR_THROW, MERGE_INTO_PREVIOUS, MERGE_INTO_NEW, NO_STORAGE).  |
 | `lotUseStrategy`           | `String`        | Defines the lot usage strategy, such as FIFO or FEFO.                                                                            |
 | `path`                     | `String`        | Path of the location within the hierarchy.                                                                                       |

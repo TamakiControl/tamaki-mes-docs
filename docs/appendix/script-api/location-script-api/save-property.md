@@ -25,7 +25,7 @@ system.mes.location.saveProperty(**property_data)
 | `lowLimit`     | `Double`        | The minimum value allowed for a numerical property.                                                                  |
 | `highLimit`    | `Double`        | The maximum value allowed for a numerical property.                                                                  |
 | `format`       | `String`        | The format of the property, if applicable.                                                                           |
-| `unitOfMeasureId`     | `String` (ULID) | References the unit of measure for the property. See [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure). |
+| `unitOfMeasureId`     | `String` (ULID) | References the unit of measure for the property. See [unit_of_measure](../../data-model/utility-models/unit-of-measure-model/unit-of-measure). |
 | `unitOfMeasureName`   | `String`        | The name of the uit of measure for the property. For display purposes only.                                                      |
 | `unitOfMeasureSymbol` | `String`        | The name of the uit of measure for the property. For display purposes only.                                                      |
 | `options`      | `String`        | List of possible values for the property (e.g., `"[option1, option2]"`).                                             |
