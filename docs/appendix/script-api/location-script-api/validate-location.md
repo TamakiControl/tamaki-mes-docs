@@ -37,7 +37,7 @@ system.mes.location.validateLocation(**location_data)
 | `enabled`                  | `Boolean`       | Indicates if the location is active and enabled.                                                                                 |
 | `spare1`                   | `String`        | Additional field for user-defined context.                                                                                       |
 | `spare2`                   | `String`        | Additional field for user-defined context.                                                                                       |
-| `spare3`                   | `String`        | Additional field for user-defined context.                                                                                       |~~~~~~~~
+| `spare3`                   | `String`        | Additional field for user-defined context.                                                                                       |
 
 ## Returns
 
@@ -52,7 +52,7 @@ location_data = system.mes.location.newLocation()
 # Set basic attributes for the updated location
 location_data['name'] = 'Warehouse'
 location_data['description'] = 'Main storage location for raw materials.'
-location_data['type'] = 'AREA'
+location_data['type'] = 'AREA'~~~~
 location_data['processType'] = 'STORAGE'
 location_data['sortOrder'] = 1
 # (You can continue setting other properties as needed here)
