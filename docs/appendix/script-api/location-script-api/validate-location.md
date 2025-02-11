@@ -52,7 +52,7 @@ location_data = system.mes.location.newLocation()
 # Set basic attributes for the updated location
 location_data['name'] = 'Warehouse'
 location_data['description'] = 'Main storage location for raw materials.'
-location_data['type'] = 'AREA'~~~~
+location_data['type'] = 'AREA'
 location_data['processType'] = 'STORAGE'
 location_data['sortOrder'] = 1
 # (You can continue setting other properties as needed here)
