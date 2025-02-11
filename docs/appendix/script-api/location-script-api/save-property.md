@@ -25,7 +25,9 @@ system.mes.location.saveProperty(**property_data)
 | `lowLimit`     | `Double`        | The minimum value allowed for a numerical property.                                                                  |
 | `highLimit`    | `Double`        | The maximum value allowed for a numerical property.                                                                  |
 | `format`       | `String`        | The format of the property, if applicable.                                                                           |
-| `units`        | `String`        | The measurement units for the property (e.g., Celsius, kg).                                                          |
+| `unitOfMeasureId`     | `String` (ULID) | References the unit of measure for the property. See [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure). |
+| `unitOfMeasureName`   | `String`        | The name of the uit of measure for the property. For display purposes only.                                                      |
+| `unitOfMeasureSymbol` | `String`        | The name of the uit of measure for the property. For display purposes only.                                                      |
 | `options`      | `String`        | List of possible values for the property (e.g., `"[option1, option2]"`).                                             |
 | `nullable`     | `Boolean`       | Defines if the property can accept null values.                                                                      |
 | `defaultValue` | `Mixed`         | The default value assigned to the property if none is provided. The type is mixed as it depends on what dataType is. |
@@ -60,7 +62,7 @@ temperature_property['name'] = 'Temperature'
 temperature_property['dataType'] = 'Float'
 temperature_property['lowLimit'] = -20
 temperature_property['highLimit'] = 50
-temperature_property['units'] = 'Celsius'
+temperature_property['unitOfMeasureId'] = '01JAP8RJBN-4VYZUKE1-LY2QHV8X'
 temperature_property['nullable'] = False
 temperature_property['defaultValue'] = 20.0
 # (You can continue setting other properties as needed here)

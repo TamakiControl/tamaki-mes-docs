@@ -50,7 +50,7 @@ temperature_property = system.mes.location.newProperty()
 # Define property details
 temperature_property['name'] = 'Temperature'
 temperature_property['dataType'] = 'Float'
-temperature_property['units'] = 'Celsius'
+temperature_property['unitOfMeasureId'] = '01JAP8RJBN-4VYZUKE1-LY2QHV8X'
 temperature_property['nullable'] = False
 temperature_property['lowLimit'] = -20
 temperature_property['highLimit'] = 50
