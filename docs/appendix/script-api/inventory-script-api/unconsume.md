@@ -20,7 +20,7 @@ system.mes.inventory.unconsume(**unconsume_request)
 | `type`                         | `String`        | The type of request defined by the LotRecordType Enum. It is internally set and must not be modified, as changes may break functionality. |
 | `quantity`                     | `Double`        | The quantity to unconsume from the location.                                                                                              |
 | `unitOfMeasureSymbol`          | `String`        | The symbol of the unit of measure for the quantity.                                                                                       |
-| `lotIdOrName`                  | `String`        | The ID or name of material lot that will be unconsuming the given lot.                                                                    |
+| `lotIdOrName`                  | `String`        | The ID or name of the inventory lot that will be unconsuming the given lot.                                                               |
 | `materialIdOrPath`             | `String`        | The ID or path of the material being unconsumed.                                                                                          |
 | `destinationLocationIdOrPath`  | `String`        | The ID or path of the location the unconsumed inventory goes to.                                                                          |
 | `operationId`                  | `String` (ULID) | The ID of the operation unconsuming this inventory.                                                                                       |
@@ -37,7 +37,7 @@ system.mes.inventory.unconsume(**unconsume_request)
 
 ## Returns
 
-Returns a JSON representation of a material lot record for an Unconsume Request.
+Returns a JSON representation of an inventory lot record for an Unconsume Request.
 
 ## Code Examples
 

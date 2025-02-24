@@ -14,7 +14,7 @@ Welcome to the Inventory Script API documentation. This API provides a comprehen
 
 Checks if the [Locations](../../data-model/location-model/location) record can store the given quantity of material. Returns a boolean indicating whether the location can accommodate the given quantity of inventory. Returns a boolean indicating whether the location can accommodate the given quantity of inventory.
 
-**NOTE:** If the Material Lot ID is provided, the Material ID parameter becomes optional but must not be None; instead, use an empty string. If the Material Lot name is provided instead of its ID, the Material ID is required to locate the lot in the database, as two lots with the same name may belong to different materials.
+**NOTE:** If the inventory lot ID is provided, the Material ID parameter becomes optional but must not be None; instead, use an empty string. If the inventory lot name is provided instead of its ID, the Material ID is required to locate the lot in the database, as two lots with the same name may belong to different materials.
 
 ### [`newConsumeRequest`](./new-consume-request)
 
@@ -22,7 +22,7 @@ Generates an empty non-persisted Consume Request to provide the structure requir
 
 ### [`consume`](./consume)
 
-Consumes inventory from the MES based on the provided parameters. Returns a JSON representation of a material lot record for a Consume Request.
+Consumes inventory from the MES based on the provided parameters. Returns a JSON representation of an inventory lot record for a Consume Request.
 
 ### [`validateConsumeRequest`](./validate-consume-request)
 
@@ -34,7 +34,7 @@ Generates an empty non-persisted Unconsume Request to provide the structure requ
 
 ### [`unconsume`](./unconsume)
 
-Unconsumes inventory from the MES based on the provided parameters. Returns a JSON representation of a material lot record for an Unconsume Request.
+Unconsumes inventory from the MES based on the provided parameters. Returns a JSON representation of an inventory lot record for an Unconsume Request.
 
 ### [`validateUnconsumeRequest`](./validate-unconsume-request)
 
@@ -46,7 +46,7 @@ Generates an empty non-persisted Produce Request to provide the structure requir
 
 ### [`produce`](./produce)
 
-Produces inventory from the MES based on the provided parameters. Returns a JSON representation of a material lot record for a Produce Request.
+Produces inventory from the MES based on the provided parameters. Returns a JSON representation of an inventory lot record for a Produce Request.
 
 ### [`validateProduceRequest`](./validate-produce-request)
 
@@ -58,7 +58,7 @@ Generates an empty non-persisted Move Request to provide the structure required 
 
 ### [`move`](./move)
 
-Moves inventory from the MES based on the provided parameters. Returns a JSON representation of a material lot record for a Move Request.
+Moves inventory from the MES based on the provided parameters. Returns a JSON representation of an inventory lot record for a Move Request.
 
 ### [`validateMoveRequest`](./validate-move-request)
 
@@ -70,7 +70,7 @@ Generates an empty non-persisted Split Request to provide the structure required
 
 ### [`split`](./split)
 
-Splits inventory from the MES based on the provided parameters. Returns a JSON representation of a material lot record for a Split Request.
+Splits inventory from the MES based on the provided parameters. Returns a JSON representation of an inventory lot record for a Split Request.
 
 ### [`validateSplitRequest`](./validate-split-request)
 
@@ -82,7 +82,7 @@ Generates an empty non-persisted Merge Request to provide the structure required
 
 ### [`merge`](./merge)
 
-Merges inventory from the MES based on the provided parameters. Returns a JSON representation of a material lot record for a Merge Request.
+Merges inventory from the MES based on the provided parameters. Returns a JSON representation of an inventory lot record for a Merge Request.
 
 ### [`validateMergeRequest`](./validate-merge-request)
 
@@ -94,7 +94,7 @@ Generates an empty non-persisted Scrap Request to provide the structure required
 
 ### [`scrap`](./scrap)
 
-Scraps inventory from the MES based on the provided parameters. Returns a JSON representation of a material lot record for a Scrap Request.
+Scraps inventory from the MES based on the provided parameters. Returns a JSON representation of an inventory lot record for a Scrap Request.
 
 ### [`validateScrapRequest`](./validate-scrap-request)
 
@@ -106,7 +106,7 @@ Generates an empty non-persisted Return Request to provide the structure require
 
 ### [`returnInventory`](./return-inventory)
 
-Returns inventory from the MES based on the provided parameters. Returns a JSON representation of a material lot record for a Return Request.
+Returns inventory from the MES based on the provided parameters. Returns a JSON representation of an inventory lot record for a Return Request.
 
 ### [`validateReturnRequest`](./validate-return-request)
 
@@ -118,7 +118,7 @@ Generates an empty non-persisted Change Status Request to provide the structure 
 
 ### [`changeStatus`](./change-status)
 
-Changes the status of the material lot from the MES based on the provided parameters. Returns a JSON representation of a material lot record for a Change Status Request.
+Changes the status of the inventory lot from the MES based on the provided parameters. Returns a JSON representation of an inventory lot record for a Change Status Request.
 
 ### [`validateChangeStatusRequest`](./validate-change-status-request)
 
@@ -130,7 +130,7 @@ Generates an empty non-persisted Edit Inventory Quantity Request to provide the 
 
 ### [`editInventoryQuantity`](./edit-inventory-quantity)
 
-Edit inventory quantity from the MES based on the provided parameters. Returns a JSON representation of a material lot record for an Edit Inventory Quantity Request.
+Edit inventory quantity from the MES based on the provided parameters. Returns a JSON representation of an inventory lot record for an Edit Inventory Quantity Request.
 
 ### [`validateEditInventoryQuantityRequest`](./validate-edit-inventory-quantity-request)
 
@@ -142,7 +142,7 @@ Generates an empty non-persisted Receive Request to provide the structure requir
 
 ### [`receive`](./receive)
 
-Receives inventory into the MES based on the provided parameters. Returns a JSON representation of a material lot record for a Receive Request.
+Receives inventory into the MES based on the provided parameters. Returns a JSON representation of an inventory lot record for a Receive Request.
 
 ### [`validateReceiveRequest`](./validate-receive-request)
 
@@ -154,7 +154,7 @@ Generates an empty non-persisted Ship Request to provide the structure required 
 
 ### [`ship`](./ship)
 
-Ships inventory from the MES based on the provided parameters. Returns a JSON representation of a material lot record for a Ship Request.
+Ships inventory from the MES based on the provided parameters. Returns a JSON representation of an inventory lot record for a Ship Request.
 
 ### [`validateShipRequest`](./validate-ship-request)
 
@@ -162,39 +162,100 @@ Validates a ship request based on the provided parameters. Returns a JSON object
 
 ### [`executeInventoryActions`](./execute-inventory-actions)
 
-Executes a list of inventory actions in a single transaction. That means that if any of the actions fail, none of them will be executed, and any changes made to the database will be rolled back. Returns a list of JSON representation of material lot records for the inventory actions executed.
+Executes a list of inventory actions in a single transaction. That means that if any of the actions fail, none of them will be executed, and any changes made to the database will be rolled back. Returns a list of JSON representation of inventory lot records for the inventory actions executed.
 
 ### [`setInventoryMetadata`](./set-inventory-metadata)
 
-Updates the metadata for a given [Material Inventories](../../data-model/material-model/material-inventory) record by its ID. This includes the notes and spare fields. Returns a JSON representation of an inventory.
+Updates the metadata for a given [Inventories](../../data-model/inventory-model/inventory) record by its ID. This includes the notes and spare fields. Returns a JSON representation of an inventory.
 
 ### [`publishInventoryState() and (List<String>)`](./publish-inventory-state)
 
-**No Parameter:** Publishes all of the [Material Inventories](../../data-model/material-model/material-inventory) to the tag system.
+**No Parameter:** Publishes all of the [Inventories](../../data-model/inventory-model/inventory) to the tag system.
 
-**With a Parameter:** Publishes only the specified [Material Inventories](../../data-model/material-model/material-inventory) to the tag system given the ID or path of the location associated with material inventory.
+**With a Parameter:** Publishes only the specified [Inventories](../../data-model/inventory-model/inventory) to the tag system given the ID or path of the location associated with the inventory.
 
 If successful, no response is returned.
 
 ### [`getInventoryForMaterial`](./get-inventory-for-material)
 
-Retrieves the [Material Inventories](../../data-model/material-model/material-inventory) records for a specific material. Returns a list of JSON objects representing all inventories for a specific material.
+Retrieves the [Inventories](../../data-model/inventory-model/inventory) records for a specific material. Returns a list of JSON objects representing all inventories for a specific material.
 
 ### [`getInventoryByLotAndLocation`](./get-inventory-by-lot-and-location)
 
-Retrieves the [Material Inventories](../../data-model/material-model/material-inventory) record based on the material lot and location. Returns a JSON representation of a material inventory.
+Retrieves the [Inventories](../../data-model/inventory-model/inventory) record based on the inventory lot and location. Returns a JSON representation of an inventory.
 
 ### [`getAllInventory`](./get-all-inventory)
 
-Retrieves all the [Material Inventories](../../data-model/material-model/material-inventory) records. Returns a list of JSON objects representing all material inventories.
+Retrieves all the [Inventories](../../data-model/inventory-model/inventory) records. Returns a list of JSON objects representing all inventories.
 
 ### [`getAllInventoryAtLocation`](./get-all-inventory-at-location)
 
-Retrieves all the [Material Inventories](../../data-model/material-model/material-inventory) records at a given location. Returns a list of JSON objects representing all material inventories at the given location.
+Retrieves all the [Inventories](../../data-model/inventory-model/inventory) records at a given location. Returns a list of JSON objects representing all inventories at the given location.
 
 ### [`getAllInventoryForLocationAndChildren`](./get-all-inventory-for-location-and-children)
 
-Retrieves all the [Material Inventories](../../data-model/material-model/material-inventory) records at a given location and its children. Returns a list of JSON objects representing all material inventories at the given location and its children.
+Retrieves all the [Inventories](../../data-model/inventory-model/inventory) records at a given location and its children. Returns a list of JSON objects representing all inventories at the given location and its children.
+
+### [`newLot`](./new-lot)  
+
+Generates an empty non-persisted [Inventory Lots](../../data-model/inventory-model/inventory-lot) object to provide the structure required by the API to save a new record into the database. This method must be combined with the [saveLot](./save-lot) method in order to persist the record. Returns a JSON representation of the newly created Inventory Lot object.
+
+### [`saveLot`](./save-lot)  
+
+Creates or updates an [Inventory Lots](../../data-model/inventory-model/inventory-lot) record in the system based on the provided parameters. Returns a JSON representation of the saved inventory lot.
+
+### [`findLots`](./find-lots)  
+
+Retrieves [Inventory Lots](../../data-model/inventory-model/inventory-lot) records based on the specified pagination, sort, and column constraint parameters. Returns a Query Result object.
+
+### [`getLot`](./get-lot)  
+
+Retrieves an [Inventory Lots](../../data-model/inventory-model/inventory-lot) record by its ID. Returns a JSON representation of the inventory lot.
+
+### [`getLotByIdOrNameAndMaterial`](./get-lot-by-id-or-name-and-material)  
+
+Retrieves an [Inventory Lots](../../data-model/inventory-model/inventory-lot) record by its ID or name and by the material ID or path. If no material ID or path is provided, retrieves an [Inventory Lots](../../data-model/inventory-model/inventory-lot) record by its ID or name. Returns a JSON representation of an inventory lot.
+
+### [`getAllLots`](./get-all-lots)  
+
+Retrieves a list of all [Inventory Lots](../../data-model/inventory-model/inventory-lot) records in the system. Returns a list of JSON objects representing all inventory lots.
+
+### [`getLotsForMaterial`](./get-lots-for-material)  
+
+Retrieves a list of all [Inventory Lots](../../data-model/inventory-model/inventory-lot) records in the system for a specified material using its ID or path. Returns a list of JSON objects representing all inventory lots for a specified material.
+
+### [`getInventoryLotReferences`](./get-inventory-lot-references)  
+
+Retrieves a list of references to a [Inventory Lots](../../data-model/inventory-model/inventory-lot) record by its ID. Returns a list of JSON objects.
+
+### [`validateLot`](./validate-lot)  
+
+Validates the specified parameters for an [Inventory Lots](../../data-model/inventory-model/inventory-lot) record and returns any validation errors. 
+This only checks if the inventory lot object can be saved based on the attributes given. Returns a JSON object where keys are field names and values are lists of validation violation messages.
+
+### [`deleteLot`](./delete-lot)  
+
+Deletes an [Inventory Lots](../../data-model/inventory-model/inventory-lot) record by its ID. This cannot delete a inventory lot with references to it. If successful, no response is returned. If the inventory lot that's being deleted has a reference, a JSON object is returned with details about the encountered error.
+
+### [`deleteLotWithReferences`](./delete-lot-with-references)  
+
+Deletes an [Inventory Lots](../../data-model/inventory-model/inventory-lot) record by its ID. Also deletes immediate references to this inventory lot if possible. If successful, no response is returned.
+
+### [`newInventoryLotRecord`](./new-inventory-lot-record)  
+
+Generates an empty non-persisted [Inventory Lot Records](../../data-model/inventory-model/inventory-lot-record) object to provide the structure required by the API to save a new record into the database. This method must be combined with the [saveInventoryLotRecord](./save-inventory-lot-record) method in order to persist the record. Returns a JSON representation of the newly created Inventory Lot Record object.
+
+### [`saveInventoryLotRecord`](./save-inventory-lot-record)  
+
+Creates or updates an [Inventory Lot Records](../../data-model/inventory-model/inventory-lot-record) object in the system based on the provided parameters. Returns a JSON representation of the saved inventory lot record.
+
+### [`getInventoryLotRecordReferences`](./get-inventory-lot-record-references)  
+
+Retrieves a list of references to an [Inventory Lot Records](../../data-model/inventory-model/inventory-lot-record) object by its ID. Returns a list of JSON objects.
+
+### [`validateInventoryLotRecord`](./validate-inventory-lot-record)  
+
+Validates the specified parameters for an [Inventory Lot Records](../../data-model/inventory-model/inventory-lot-record) object and returns any validation errors. This only checks if the inventory lot object can be saved based on the attributes given. Returns a JSON object where keys are field names and values are lists of validation violation messages.
 
 ### [`newLotHistoryRequest`](./new-lot-history-request)
 
@@ -202,7 +263,7 @@ Generates an empty non-persisted Lot History Request to provide the structure re
 
 ### [`getLotHistory`](./get-lot-history)
 
-Retrieves all [Material Lot Records](../../data-model/material-model/material-lot-record) given the material lot and other parameters. Returns a list of JSON objects representing all material lot records for a material lot and other parameters.
+Retrieves all [Inventory Lot Records](../../data-model/inventory-model/inventory-lot-record) given the inventory lot and other parameters. Returns a list of JSON objects representing all inventory lot records for an inventory lot and other parameters.
 
 ---
 

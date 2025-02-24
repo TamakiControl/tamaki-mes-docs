@@ -20,7 +20,7 @@ system.mes.inventory.returnInventory(**return_request)
 | `type`                          | `String`        | The type of request defined by the LotRecordType Enum. It is internally set and must not be modified, as changes may break functionality. |
 | `quantity`                      | `Double`        | The quantity to return from the location.                                                                                                 |
 | `unitOfMeasureSymbol`           | `String`        | The symbol of the unit of measure for the quantity.                                                                                       |
-| `lotIdOrName`                   | `String`        | The ID or name of material lot being returned.                                                                                            |
+| `lotIdOrName`                   | `String`        | The ID or name of the inventory lot being returned.                                                                                       |
 | `materialIdOrPath`              | `String`        | The ID or path of the material being returned.                                                                                            |
 | `sourceLocationIdOrPath`        | `String`        | The ID or path of the location from which inventory will be returned.                                                                     |
 | `operationId`                   | `String` (ULID) | The ID of the operation returning this inventory.                                                                                         |
@@ -37,7 +37,7 @@ system.mes.inventory.returnInventory(**return_request)
 
 ## Returns
 
-Returns a JSON representation of a material lot record for a Return Request.
+Returns a JSON representation of an inventory lot record for a Return Request.
 
 ## Code Examples
 

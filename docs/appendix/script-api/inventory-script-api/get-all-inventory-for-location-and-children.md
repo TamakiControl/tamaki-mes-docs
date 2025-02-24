@@ -8,7 +8,7 @@ description: "Retrieves all inventories at a given location and its children."
 
 ## Description
 
-Retrieves all the [Material Inventories](../../data-model/material-model/material-inventory) records at a given location and its children.
+Retrieves all the [Inventories](../../data-model/inventory-model/inventory) records at a given location and its children.
 
 ## Syntax
 ```python
@@ -23,7 +23,7 @@ system.mes.inventory.getAllInventoryForLocationAndChildren(locationIdOrPath)
 
 ## Returns
 
-Returns a list of JSON objects representing all material inventories at the given location and its children.
+Returns a list of JSON objects representing all inventories at the given location and its children.
 
 ## Example Usage
 

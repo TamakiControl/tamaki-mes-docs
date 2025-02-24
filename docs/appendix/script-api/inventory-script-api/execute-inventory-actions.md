@@ -25,7 +25,7 @@ system.mes.inventory.executeInventoryActions(**{'requests':[records]})
 
 ## Returns
 
-Returns a list of JSON representation of material lot records for the inventory actions executed.
+Returns a list of JSON representation of inventory lot records for the inventory actions executed.
 
 ## Code Examples
 
