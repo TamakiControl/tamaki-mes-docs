@@ -1,6 +1,6 @@
 ---
 title: "findLots"
-description: "Retrieves Material Lots based on the specified pagination, sort, and column constraint parameters."
+description: "Retrieves Inventory Lots based on the specified pagination, sort, and column constraint parameters."
 sidebar_position: 0
 ---
 
@@ -8,7 +8,7 @@ sidebar_position: 0
 
 ## Description
 
-Retrieves [Material Lots](../../data-model/material-model/material-lot.md) based on the specified pagination, sort, and column constraint parameters.
+Retrieves [Inventory Lots](../../data-model/inventory-model/inventory-lot) based on the specified pagination, sort, and column constraint parameters.
 
 ## Permissions
 
@@ -27,7 +27,7 @@ Returns a Query Result object with the following properties:
 
 | Type                                                                   | Name          | Description                                                                                                      |
 |------------------------------------------------------------------------| ------------- | ---------------------------------------------------------------------------------------------------------------- |
-| List\<[MaterialLot](../../data-model/material-model/material-lot.md)> | content       | The list of all records found that meet the specified criteria                                                   |
+| List\<[Inventory Lot](../../data-model/inventory-model/inventory-lot)> | content       | The list of all records found that meet the specified criteria                                                   |
 | Integer                                                                | totalPages    | If pagination is used, this is the number of total pages of records in the database for the specified page size. |
 | Long                                                                   | totalElements | If pagination is used, this is the number of records in the database that meet the specified criteria.           |
 | Integer                                                                | pageSize      | If pagination is used, this is the specified page size.                                                          |
@@ -40,7 +40,7 @@ Returns a Query Result object with the following properties:
 
 ## Code Examples
 
-Here is an example of how to use a Query Request to retrieve the first ten Material Lots created in 2024 sorted by their 
+Here is an example of how to use a Query Request to retrieve the first ten Inventory Lots created in 2024 sorted by their 
 name.
 
 

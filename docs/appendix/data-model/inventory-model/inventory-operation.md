@@ -10,7 +10,7 @@ description: "Documentation for the inventory_operations table, outlining its co
 
 ## Overview
 
-The `InventoryOperation` entity represents an action performed on a material lot or inventory within the MES system. Key attributes include 
+The `InventoryOperation` entity represents an action performed on a inventory lot or inventory within the MES system. Key attributes include 
 lot handling strategies, quantity calculations, and triggers for initiating or completing actions. These fields support 
 precise management of material interactions, enabling efficient tracking and alignment with operational workflows.
 
@@ -216,7 +216,7 @@ See [materials](../material-model/material) for details.
 ### `move_location_id`
 
 References the `Location` entity for movement source or destination, allowing precise tracking of where
-the material lot and inventory is within the facility.
+the inventory lot and inventory is within the facility.
 See [locations](../location-model/location) for details.
 
 ### `operation_id`
