@@ -48,25 +48,33 @@ each, along with sample data where applicable.
 ### `lot_record_type`
 
 Defines the action that was taken on a lot, specified by the **LotRecordType** enum, which includes options such as 
-`CONSUME`, `PRODUCE`, `MOVE`, `SPLIT`, `MERGE`, `SCRAP`, `STATUS_CHANGE`, `EDIT`, `RECEIVE`, and `SHIP`. This helps categorize inventory actions.
+`CONSUME`, `UNCONSUME`, `PRODUCE`, `MOVE`, `SPLIT`, `MERGE`, `SCRAP`, `RETURN`, `STATUS_CHANGE`, `EDIT`, `RECEIVE`, and `SHIP`. This helps categorize inventory actions.
 
 ### `inventory_lot_id`
 
 References the primary `InventoryLot` impacted by the record, which serves as the main context for the inventory action.
+- Consumptions: this the lot being consumed
+- Productions: this is the lot being produced
+- Split: this is the original lot being split
+- Merge: this is the lot being merged into
 See [inventory_lots](../inventory-model/inventory-lot) for details.
 
 ### `secondary_inventory_lot_id`
 
 Points to an optional secondary `InventoryLot` involved in the record, used in cases like splitting or merging.
+- Consumptions: this the lot consuming the primary
+- Productions: this is the lot producing the primary
+- Split: this is the new lot split from the original
+- Merge: this is the lot merging into the primary
 
 ### `operation_record_id`
 
-References the `OperationRecord` associated with this inventory action, providing context for operational activities.
+Optional reference to an `OperationRecord` associated with this inventory action, providing context for operational activities.
 See [operation_records](../operation-model/operation-record) for details.
 
 ### `production_order_id`
 
-Indicates the associated `ProductionOrder`, linking the record to a specific production order. This provides
+Optional reference to an associated `ProductionOrder`, linking the record to a specific production order. This provides
 traceability for production-related inventory activities.
 See [production_orders](../production-order-model/production-order) for details.
 
@@ -78,8 +86,20 @@ See [material_reason_codes](../material-model/material-reason-code) for details.
 
 ### `source_location_id` and `destination_location_id`
 
-- **source_location_id**: Specifies the location where the inventory originates.
-- **destination_location_id**: Specifies the location where the inventory is moved or transferred.
+**source_location_id**: Specifies the location where the inventory originates.
+- Consumptions: this the location of the inventory being consumed from.
+- Productions: this is the location produced inventory comes from
+- Ship: this is the location of the inventory being shipped from
+- Scrap: this is the location of the inventory being scrapped
+- Split: this is the location of the inventory being split
+- Move: this is the location inventory is being moved from
+- EditInventoryQuantity: this is the location of the inventory being edited
+
+**destination_location_id**: Specifies the location where the inventory is moved or transferred.
+- Consumptions: this the location the consumed inventory goes to
+- Productions: this is the location inventory is being produced to
+- Receive: this is the location receiving the inventory
+- Move: this is the location inventory is being moved to
 
 Both fields reference the `Location` entity, facilitating precise tracking of inventory movements within the facility.
 See [locations](../location-model/location) for details.
