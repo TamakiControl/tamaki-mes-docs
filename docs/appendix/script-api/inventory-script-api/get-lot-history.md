@@ -1,12 +1,12 @@
 ---
-sidebar_position: 48
+sidebar_position: 63
 title: "getLotHistory"
-description: "Retrieves all material lot records given the material lot and other parameters."
+description: "Retrieves all inventory lot records given the inventory lot and other parameters."
 ---
 
 # system.mes.inventory.getLotHistory
 
-Retrieves all [Material Lot Records](../../data-model/material-model/material-lot-record) given the material lot and other parameters.
+Retrieves all [Inventory Lot Records](../../data-model/inventory-model/inventory-lot-record) given the inventory lot and other parameters.
 
 ## Syntax
 ```python
@@ -20,6 +20,7 @@ system.mes.inventory.getLotHistory()
 | `lotId`                   | `String` (ULID) | The ID of the lot to retrieve history for.                                                                                                   |
 | `lotRecordType`           | `String`        | The type of lot record to retrieve (e.g CONSUME, UNCONSUME, PRODUCE, MOVE, SPLIT, MERGE, SCRAP, RETURN, STATUS_CHANGE, EDIT, RECEIVE, SHIP). |
 | `operationId`             | `String` (ULID) | The ID of the operation to filter by.                                                                                                        |
+| `inventoryOperationId`    | `String` (ULID) | The ID of the inventory operation to filter by.                                                                                              |
 | `productionOrderIdOrName` | `String`        | The ID or name of the production order to filter by.                                                                                         |
 | `materialReasonCodeId`    | `String` (ULID) | The ID of the material reason code to filter by.                                                                                             |
 | `startDate`               | `Instant`       | The start date of the history. Only records created after this date will be returned.                                                        |
@@ -28,32 +29,33 @@ system.mes.inventory.getLotHistory()
 
 ## Returns
 
-Returns a list of JSON objects representing all material lot records for a material lot and other parameters.
+Returns a list of JSON objects representing all inventory lot records for an inventory lot and other parameters.
 Each JSON object has the following properties:
 
-| Name                       | Type            | Description                                                                                                                       |
-|----------------------------|-----------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| `lotRecordType`            | `String`        | The type of lot record (e.g CONSUME, UNCONSUME, PRODUCE, MOVE, SPLIT, MERGE, SCRAP, RETURN, STATUS_CHANGE, EDIT, RECEIVE, SHIP).  |
-| `materialLotId`            | `String` (ULID) | The ID of the material lot of the inventory.                                                                                      |
-| `materialLotName`          | `String`        | The name of the material lot for the inventory.                                                                                   |
-| `secondaryMaterialLotId`   | `String` (ULID) | The ID of the secondary material lot for the inventory. Used based on the lot record type.                                        |
-| `secondaryMaterialLotName` | `String`        | The name of the secondary material lot for the inventory. Used based on the lot record type.                                      |
-| `operationRecordId`        | `String` (ULID) | The ID of the operation record associated with this material lot.                                                                 |
-| `productionOrderId`        | `String` (ULID) | The ID of the production order associated with this material lot.                                                                 |
-| `materialReasonCodeId`     | `String` (ULID) | The ID of the material reason code associated with this material lot.                                                             |
-| `sourceLocationId`         | `String` (ULID) | The ID of the source location. Used based on the lot record type.                                                                 |
-| `destinationLocationId`    | `String` (ULID) | The ID of the destination location. Used based on the record type.                                                                |
-| `lotStatus`                | `String`        | The status of the material lot for the inventory (e.g OPEN, AVAILABLE, QA_HOLD, EXPIRED, SHIPPED, CLOSED).                        |
-| `quantity`                 | `Double`        | The quantity of material that was affected in the material lot record.                                                            |
-| `startDate`                | `Instant`       | The start date of the material lot record.                                                                                        |
-| `endDate`                  | `Instant`       | The end date of the material lot record.                                                                                          |
-| `status`                   | `String`        | The status of the material lot record (e.g RUNNING, COMPLETED).                                                                   |
-| `id`                       | `String` (ULID) | The ULID of the material lot record.                                                                                              |
-| `notes`                    | `String`        | Notes related to the material lot record.                                                                                         |
-| `enabled`                  | `Booelean`      | Indicates if the material lot record is active and enabled.                                                                       |
-| `spare1`                   | `String`        | Additional field for user-defined context.                                                                                        |
-| `spare2`                   | `String`        | Additional field for user-defined context.                                                                                        |
-| `spare3`                   | `String`        | Additional field for user-defined context.                                                                                        |
+| Name                        | Type            | Description                                                                                                                       |
+|-----------------------------|-----------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| `lotRecordType`             | `String`        | The type of lot record (e.g CONSUME, UNCONSUME, PRODUCE, MOVE, SPLIT, MERGE, SCRAP, RETURN, STATUS_CHANGE, EDIT, RECEIVE, SHIP).  |
+| `inventoryLotId`            | `String` (ULID) | The ID of the inventory lot.                                                                                                      |
+| `inventoryLotName`          | `String`        | The name of the inventory lot.                                                                                                    |
+| `secondaryInventoryLotId`   | `String` (ULID) | The ID of the secondary inventory lot. Used based on the lot record type.                                                         |
+| `secondaryInventoryLotName` | `String`        | The name of the secondary inventory lot. Used based on the lot record type.                                                       |
+| `operationRecordId`         | `String` (ULID) | The ID of the operation record associated with this inventory lot.                                                                |
+| `inventoryOperationId`      | `String` (ULID) | The ID of the inventory operation associated with the inventory lot.                                                              |
+| `productionOrderId`         | `String` (ULID) | The ID of the production order associated with this inventory lot.                                                                |
+| `materialReasonCodeId`      | `String` (ULID) | The ID of the material reason code associated with this inventory lot.                                                            |
+| `sourceLocationId`          | `String` (ULID) | The ID of the source location. Used based on the lot record type.                                                                 |
+| `destinationLocationId`     | `String` (ULID) | The ID of the destination location. Used based on the record type.                                                                |
+| `lotStatus`                 | `String`        | The status of the inventory lot (e.g OPEN, AVAILABLE, QA_HOLD, EXPIRED, SHIPPED, CLOSED).                                         |
+| `quantity`                  | `Double`        | The quantity of material that was affected in the inventory lot record.                                                           |
+| `startDate`                 | `Instant`       | The start date of the inventory lot record.                                                                                       |
+| `endDate`                   | `Instant`       | The end date of the inventory lot record.                                                                                         |
+| `status`                    | `String`        | The status of the inventory lot record (e.g RUNNING, COMPLETED).                                                                  |
+| `id`                        | `String` (ULID) | The ULID of the inventory lot record.                                                                                             |
+| `notes`                     | `String`        | Notes related to the inventory lot record.                                                                                        |
+| `enabled`                   | `Boolean`       | Indicates if the inventory lot record is active and enabled.                                                                      |
+| `spare1`                    | `String`        | Additional field for user-defined context.                                                                                        |
+| `spare2`                    | `String`        | Additional field for user-defined context.                                                                                        |
+| `spare3`                    | `String`        | Additional field for user-defined context.                                                                                        |
 
 ## Code Examples
 
@@ -62,7 +64,7 @@ Each JSON object has the following properties:
 new_lot_history_request = system.mes.inventory.newLotHistoryRequest()
 
 # Set basic attributes for the new lot history request
-new_lot_history_request['lotId'] = '01JJCPQWYG-T9CW4G6Z-96XBWYQB'
+new_lot_history_request['lotId'] = '01JE6F0CE9-T94PZD8R-TH9J01TJ'
 # (You can continue setting other properties as needed here)
 
 # Retrieve the lot history

@@ -20,9 +20,9 @@ system.mes.inventory.split(**split_request)
 | `type`                      | `String`        | The type of request defined by the LotRecordType Enum. It is internally set and must not be modified, as changes may break functionality. |
 | `quantity`                  | `Double`        | The quantity to split from the location.                                                                                                  |
 | `unitOfMeasureSymbol`       | `String`        | The symbol of the unit of measure for the quantity.                                                                                       |
-| `sourceLotId`               | `String` (ULID) | The ID of the material lot being split.                                                                                                   |
+| `sourceLotId`               | `String` (ULID) | The ID of the inventory lot being split.                                                                                                  |
 | `sourceLocationIdOrPath`    | `String`        | The ID or path of the location from which inventory will be split.                                                                        |
-| `destinationLotName`        | `String`        | The name of the material lot the split inventory goes to.                                                                                 |
+| `destinationLotName`        | `String`        | The name of the inventory lot the split inventory goes to.                                                                                |
 | `operationId`               | `String` (ULID) | The ID of the operation splitting this inventory.                                                                                         |
 | `productionOrderIdOrName`   | `String`        | The ID or name of the production order associated with the split.                                                                         |
 | `materialReasonCodeId`      | `String` (ULID) | The ID of the material reason code to add additional context.                                                                             |
@@ -34,7 +34,7 @@ system.mes.inventory.split(**split_request)
 
 ## Returns
 
-Returns a JSON representation of a material lot record for a Split Request.
+Returns a JSON representation of an inventory lot record for a Split Request.
 
 ## Code Examples
 

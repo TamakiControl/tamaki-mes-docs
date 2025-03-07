@@ -20,10 +20,10 @@ system.mes.inventory.validateConsumeRequest(**consume_request)
 | `type`                         | `String`        | The type of request defined by the LotRecordType Enum. It is internally set and must not be modified, as changes may break functionality. |
 | `quantity`                     | `Double`        | The quantity to consume from the location.                                                                                                |
 | `unitOfMeasureSymbol`          | `String`        | The symbol of the unit of measure for the quantity.                                                                                       |
-| `lotIdOrName`                  | `String`        | The ID or name of material lot that will be consuming the given lot.                                                                      |
+| `lotIdOrName`                  | `String`        | The ID or name of the inventory lot that will be consuming the given lot.                                                                 |
 | `materialIdOrPath`             | `String`        | The ID or path of the material being consumed.                                                                                            |
 | `sourceLocationIdOrPath`       | `String`        | The ID or path of the location from which inventory will be consumed.                                                                     |
-| `consumingLotIdOrName`         | `String`        | The ID or name of the material lot from which the material is being consumed.                                                             |
+| `consumingLotIdOrName`         | `String`        | The ID or name of the inventory lot from which the material is being consumed.                                                            |
 | `destinationLocationIdOrPath`  | `String`        | The ID or path of the location the consumed inventory goes to.                                                                            |
 | `createIfNotExists`            | `Boolean`       | Indicates whether the system should create the lot if it does not exist.                                                                  |
 | `operationId`                  | `String` (ULID) | The ID of the operation consuming this inventory.                                                                                         |

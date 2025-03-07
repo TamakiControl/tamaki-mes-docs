@@ -20,7 +20,7 @@ system.mes.inventory.validateReceiveRequest(**receive_request)
 | `type`                          | `String`        | The type of request defined by the LotRecordType Enum. It is internally set and must not be modified, as changes may break functionality. |
 | `quantity`                      | `Double`        | The quantity to receive from the location.                                                                                                |
 | `unitOfMeasureSymbol`           | `String`        | The symbol of the unit of measure for the quantity.                                                                                       |
-| `lotIdOrName`                   | `String`        | The ID or name of the material lot from which the material is being received.                                                             |
+| `lotIdOrName`                   | `String`        | The ID or name of the inventory lot from which the material is being received.                                                            |
 | `materialIdOrPath`              | `String`        | The ID or path of the material being received.                                                                                            |
 | `destinationLocationIdOrPath`   | `String`        | The ID or path of the location the received inventory goes to.                                                                            |
 | `createIfNotExists`             | `Boolean`       | Indicates whether the system should create the lot if it does not exist.                                                                  |

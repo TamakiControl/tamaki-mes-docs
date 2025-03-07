@@ -20,7 +20,7 @@ system.mes.inventory.editInventoryQuantity(**edit_inventory_quantity_request)
 | `type`                          | `String`        | The type of request defined by the LotRecordType Enum. It is internally set and must not be modified, as changes may break functionality. |
 | `newQuantity`                   | `Double`        | The new quantity to be assigned to the inventory.                                                                                         |
 | `unitOfMeasureSymbol`           | `String`        | The symbol of the unit of measure for the quantity.                                                                                       |
-| `lotIdOrName`                   | `String`        | The ID or name of material lot whose quantity is being edited.                                                                            |
+| `lotIdOrName`                   | `String`        | The ID or name of the inventory lot whose quantity is being edited.                                                                       |
 | `materialIdOrPath`              | `String`        | The ID or path of the material whose quantity is being edited.                                                                            |
 | `sourceLocationIdOrPath`        | `String`        | The ID or path of the location from the inventory quantity is being edited.                                                               |
 | `operationId`                   | `String` (ULID) | The ID of the operation editing the quantity of this inventory.                                                                           |
@@ -31,7 +31,7 @@ system.mes.inventory.editInventoryQuantity(**edit_inventory_quantity_request)
 
 ## Returns
 
-Returns a JSON representation of a material lot record for an Edit Inventory Quantity Request.
+Returns a JSON representation of an inventory lot record for an Edit Inventory Quantity Request.
 
 ## Code Examples
 

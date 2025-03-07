@@ -20,7 +20,7 @@ system.mes.inventory.validateShipRequest(**ship_request)
 | `type`                          | `String`        | The type of request defined by the LotRecordType Enum. It is internally set and must not be modified, as changes may break functionality. |
 | `quantity`                      | `Double`        | The quantity to ship from the location.                                                                                                   |
 | `unitOfMeasureSymbol`           | `String`        | The symbol of the unit of measure for the quantity.                                                                                       |
-| `lotIdOrName`                   | `String`        | The ID or name of material lot that will be shipped.                                                                                      |
+| `lotIdOrName`                   | `String`        | The ID or name of the inventory lot that will be shipped.                                                                                 |
 | `materialIdOrPath`              | `String`        | The ID or path of the material being shipped.                                                                                             |
 | `sourceLocationIdOrPath`        | `String`        | The ID or path of the location from which inventory will be shipped.                                                                      |
 | `operationId`                   | `String` (ULID) | The ID of the operation shipping this inventory.                                                                                          |

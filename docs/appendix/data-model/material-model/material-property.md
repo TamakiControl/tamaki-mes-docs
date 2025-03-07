@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 title: "material_properties"
 description: "Documentation for the material_properties table, outlining its columns and structure."
 ---

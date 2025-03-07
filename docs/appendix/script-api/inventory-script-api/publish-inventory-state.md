@@ -8,10 +8,10 @@ description: "Publishes the current inventory state to the tag system."
 
 ## Description
 
-**No Parameter:** Publishes all of the [Material Inventories](../../data-model/material-model/material-inventory) to the tag system.
+**No Parameter:** Publishes all of the [Inventories](../../data-model/inventory-model/inventory) to the tag system.
 
-**With a Parameter:** Publishes only the specified [Material Inventories](../../data-model/material-model/material-inventory) to the tag system given 
-the ID or path of the location associated with material inventory.
+**With a Parameter:** Publishes only the specified [Inventories](../../data-model/inventory-model/inventory) to the tag system given 
+the ID or path of the location associated with the inventory.
 
 ## Syntax
 ```python

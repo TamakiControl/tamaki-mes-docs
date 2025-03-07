@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 6
 title: "material_suppliers"
 description: "Documentation for the material_suppliers table, outlining its columns and structure."
 ---

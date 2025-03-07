@@ -8,7 +8,7 @@ description: "Retrieves all inventories."
 
 ## Description
 
-Retrieves all the [Material Inventories](../../data-model/material-model/material-inventory) records.
+Retrieves all the [Inventories](../../data-model/inventory-model/inventory) records.
 
 ## Syntax
 ```python
@@ -23,7 +23,7 @@ system.mes.inventory.getAllInventory()
 
 ## Returns
 
-Returns a list of JSON objects representing all material inventories.
+Returns a list of JSON objects representing all inventories.
 
 ## Example Usage
 
