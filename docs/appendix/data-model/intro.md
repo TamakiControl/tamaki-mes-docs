@@ -1,3 +1,5 @@
+<!-- TODO -->
+<!-- Add inventory and remove material operations -->
 # TamakiMES Data Model Introduction
 
 This document provides an overview of the data model used in **TamakiMES**. The model is designed to track and manage
