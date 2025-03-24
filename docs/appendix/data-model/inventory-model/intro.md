@@ -23,8 +23,6 @@ Keeps a historical record of changes to inventory lots, such as consumption, pro
 provides details on quantity changes, associated operation records, and linked production orders, enabling a
 comprehensive audit trail for inventory movements.
 
-<!-- TODO -->
-
 ### 4. InventoryOperation
 
 Represents the interaction between operations and inventories, including actions on inventory lots, inventory handling, 
