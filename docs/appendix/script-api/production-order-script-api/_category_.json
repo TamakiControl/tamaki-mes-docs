@@ -2,7 +2,7 @@
   "label": "system.mes.productionOrder",
   "position": 2,
   "link": {
-    "type": "generated-index",
-    "description": "Production Order Script API"
+    "type": "doc",
+    "id": "appendix/script-api/production-order-script-api/intro"
   }
 }
