@@ -8,20 +8,20 @@ description: "Executes a list of inventory actions in a single transaction. That
 
 ## Description
 
-Executes a list of inventory actions in a single transaction. That means that if any of the actions fail, 
+Executes a list of inventory actions in a single transaction. That means that if any of the actions fail,
 none of them will be executed, and any changes made to the database will be rolled back.
 
 ## Syntax
+
 ```python
 system.mes.inventory.executeInventoryActions(**{'requests':[records]})
 ```
 
 ## Parameters
 
-| Parameter  | Type              | Description                                                                             |
-|------------|-------------------|-----------------------------------------------------------------------------------------|
-| `requests` | `List<Requests>`  | List of inventory actions to be executed. They would be in the format of a new request. |
-
+| Parameter  | Type             | Description                                                                             |
+| ---------- | ---------------- | --------------------------------------------------------------------------------------- |
+| `requests` | `List<Requests>` | List of inventory actions to be executed. They would be in the format of a new request. |
 
 ## Returns
 

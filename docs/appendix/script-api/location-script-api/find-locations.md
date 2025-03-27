@@ -11,6 +11,7 @@ description: "Retrieves Locations based on the specified pagination, sort, and c
 Retrieves [Locations](../../data-model/location-model/location) records based on the specified pagination, sort, and column constraint parameters.
 
 ## Syntax
+
 ```python
 system.mes.location.findLocations(**queryRequest)
 ```
@@ -25,7 +26,7 @@ without specifying each parameter individually. Please refer to the [Query Reque
 Returns a Query Result object with the following properties:
 
 | Name            | Type                                                               | Description                                                                                                      |
-|-----------------|--------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| --------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
 | `content`       | `List`&lt;[Location](../../data-model/location-model/location)&gt; | The list of all records found that meet the specified criteria                                                   |
 | `totalPages`    | `Integer`                                                          | If pagination is used, this is the number of total pages of records in the database for the specified page size. |
 | `totalElements` | `Long`                                                             | If pagination is used, this is the number of records in the database that meet the specified criteria.           |
@@ -44,7 +45,7 @@ name.
 
 ```python
 # Generate the object structure for a new query request
-queryRequest = system.mes.query.newQueryRequest()  
+queryRequest = system.mes.query.newQueryRequest()
 
 # Set the basic attributes of the query request
 queryRequest['pageSize'] = 10
@@ -54,15 +55,15 @@ queryRequest['sortFields'] = ['name']
 queryRequest['sortDirection'] = 'Ascending'
 
 # Generate the object structure for a filter for the query request
-filterRequest = system.mes.query.newFilterRequest()  
-filterRequest['field'] = 'createdDate'  
-filterRequest['condition'] = 'between'  
+filterRequest = system.mes.query.newFilterRequest()
+filterRequest['field'] = 'createdDate'
+filterRequest['condition'] = 'between'
 filterRequest['minDateValue'] = '2025-01-01T00:00:00Z'
 filterRequest['maxDateValue'] = '2026-01-01T00:00:00Z'
-    
-filters = [filterRequest]  
-  
-queryRequest['filters'] = filters  
+
+filters = [filterRequest]
+
+queryRequest['filters'] = filters
 
 # Retrieve the locations that match the filter
 result = system.mes.location.findLocations(**queryRequest)

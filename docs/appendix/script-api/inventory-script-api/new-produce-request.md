@@ -6,10 +6,11 @@ description: "Generates an empty non-persisted consume request to provide the st
 
 # system.mes.inventory.newProduceRequest
 
-Generates an empty non-persisted Produce Request to provide the structure required by the API to save a new record into the database. 
+Generates an empty non-persisted Produce Request to provide the structure required by the API to save a new record into the database.
 This method must be combined with the [produce](./produce) method in order to persist the record.
 
 ## Syntax
+
 ```python
 system.mes.inventory.newProduceRequest()
 ```
@@ -17,36 +18,36 @@ system.mes.inventory.newProduceRequest()
 ## Parameters
 
 | Parameter | Type | Description                               |
-|-----------|------|-------------------------------------------|
+| --------- | ---- | ----------------------------------------- |
 | None      | -    | This method does not take any parameters. |
 
 ## Returns
 
 Returns a JSON representation of the newly created Produce Request object. The following is a list of keys and default values:
 
-| Key                              | Default Value    |
-|----------------------------------|------------------|
-| `type`                           | `PRODUCE`        |
-| `quantity`                       | `null`           |
-| `unitOfMeasureSymbol`            | `null`           |
-| `lotIdOrName`                    | `null`           |
-| `materialIdOrPath`               | `null`           |
-| `destinationLocationIdOrPath`    | `null`           |
-| `producingLotIdOrName`           | `null`           |
-| `sourceLocationIdOrPath`         | `null`           |
-| `createIfNotExists`              | `false`          |
-| `operationId`                    | `null`           |
-| `productionOrderIdOrName`        | `null`           |
-| `incrementProductionOrderCount`  | `false`          |
-| `materialReasonCodeId`           | `null`           |
-| `startDate`                      | Current Time     |
-| `endDate`                        | `null`           |
-| `ongoing`                        | `false`          |
-| `inventoryName`                  | `null`           |
-| `notes`                          | `null`           |
-| `spare1`                         | `null`           |
-| `spare2`                         | `null`           |
-| `spare3`                         | `null`           |
+| Key                             | Default Value |
+| ------------------------------- | ------------- |
+| `type`                          | `PRODUCE`     |
+| `quantity`                      | `null`        |
+| `unitOfMeasureSymbol`           | `null`        |
+| `lotIdOrName`                   | `null`        |
+| `materialIdOrPath`              | `null`        |
+| `destinationLocationIdOrPath`   | `null`        |
+| `producingLotIdOrName`          | `null`        |
+| `sourceLocationIdOrPath`        | `null`        |
+| `createIfNotExists`             | `false`       |
+| `operationId`                   | `null`        |
+| `productionOrderIdOrName`       | `null`        |
+| `incrementProductionOrderCount` | `false`       |
+| `materialReasonCodeId`          | `null`        |
+| `startDate`                     | Current Time  |
+| `endDate`                       | `null`        |
+| `ongoing`                       | `false`       |
+| `inventoryName`                 | `null`        |
+| `notes`                         | `null`        |
+| `spare1`                        | `null`        |
+| `spare2`                        | `null`        |
+| `spare3`                        | `null`        |
 
 ## Code Examples
 

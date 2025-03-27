@@ -18,7 +18,7 @@ The following table outlines the SQL columns for the `personnel_certifications` 
 each, along with sample data where applicable.
 
 | Column        | Type                | Description                                                      | Example                                                        |
-|---------------|---------------------|------------------------------------------------------------------|----------------------------------------------------------------|
+| ------------- | ------------------- | ---------------------------------------------------------------- | -------------------------------------------------------------- |
 | `id`          | `String` (ULID)     | Unique identifier for the certification.                         | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`                                 |
 | `name`        | `String`            | Name of the certification. Must be unique.                       | `Forklift Operator`                                            |
 | `description` | `String` (max 2048) | Detailed description of the certification requirements or scope. | `Certified to operate forklifts in the warehouse environment.` |

@@ -28,8 +28,8 @@ system.mes.productionOrder.getProductionOrderPropertyOrCreateNew(**property_data
 | `highLimit`           | `Double`        | The maximum value allowed for a numerical property.                                                                  |
 | `format`              | `String`        | The format of the property, if applicable.                                                                           |
 | `unitOfMeasureId`     | `String` (ULID) | The ULID of the unit of measure for this production order property.                                                  |
-| `unitOfMeasureName`   | `String`        | The name of the unit of measure for the production order property. For display purposes only.                         |
-| `unitOfMeasureSymbol` | `String`        | The symbol of the unit of measure for the production order property. For display purposes only.                         |
+| `unitOfMeasureName`   | `String`        | The name of the unit of measure for the production order property. For display purposes only.                        |
+| `unitOfMeasureSymbol` | `String`        | The symbol of the unit of measure for the production order property. For display purposes only.                      |
 | `options`             | `String`        | List of possible values for the property (e.g., `"[option1, option2]"`).                                             |
 | `nullable`            | `Boolean`       | Defines if the property can accept null values.                                                                      |
 | `defaultValue`        | `Mixed`         | The default value assigned to the property if none is provided. The type is mixed as it depends on what dataType is. |

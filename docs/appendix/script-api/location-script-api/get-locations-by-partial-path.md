@@ -11,6 +11,7 @@ description: "Retrieves all locations that have paths that contain the provided 
 Retrieves all [Locations](../../data-model/location-model/location) records with paths that contain the specified partial path.
 
 ## Syntax
+
 ```python
 system.mes.location.getLocationsByPartialPath('partial/path/example')
 ```
@@ -18,7 +19,7 @@ system.mes.location.getLocationsByPartialPath('partial/path/example')
 ## Parameters
 
 | Parameter | Type     | Description                                  |
-|-----------|----------|----------------------------------------------|
+| --------- | -------- | -------------------------------------------- |
 | `path`    | `String` | The partial path to search for in locations. |
 
 ## Returns

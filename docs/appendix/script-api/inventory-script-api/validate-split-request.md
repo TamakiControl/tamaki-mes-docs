@@ -9,28 +9,29 @@ description: "Validates a split request based on the provided parameters."
 Validates a split request based on the provided parameters.
 
 ## Syntax
+
 ```python
 system.mes.inventory.validateSplitRequest(**split_request)
 ```
 
 ## Parameters
 
-| Parameter                   | Type            | Description                                                                                                                               |
-|-----------------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| `type`                      | `String`        | The type of request defined by the LotRecordType Enum. It is internally set and must not be modified, as changes may break functionality. |
-| `quantity`                  | `Double`        | The quantity to split from the location.                                                                                                  |
-| `unitOfMeasureSymbol`       | `String`        | The symbol of the unit of measure for the quantity.                                                                                       |
-| `sourceLotId`               | `String` (ULID) | The ID of the inventory lot being split.                                                                                                  |
-| `sourceLocationIdOrPath`    | `String`        | The ID or path of the location from which inventory will be split.                                                                        |
-| `destinationLotName`        | `String`        | The name of the inventory lot the split inventory goes to.                                                                                |
-| `operationId`               | `String` (ULID) | The ID of the operation splitting this inventory.                                                                                         |
-| `productionOrderIdOrName`   | `String`        | The ID or name of the production order associated with the split.                                                                         |
-| `materialReasonCodeId`      | `String` (ULID) | The ID of the material reason code to add additional context.                                                                             |
-| `destinationInventoryName`  | `String`        | The name of the inventory the split inventory goes to.                                                                                    |
-| `notes`                     | `String`        | Notes related to the split request.                                                                                                       |
-| `spare1`                    | `String`        | Additional field for user-defined context.                                                                                                |
-| `spare2`                    | `String`        | Additional field for user-defined context.                                                                                                |
-| `spare3`                    | `String`        | Additional field for user-defined context.                                                                                                |
+| Parameter                  | Type            | Description                                                                                                                               |
+| -------------------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`                     | `String`        | The type of request defined by the LotRecordType Enum. It is internally set and must not be modified, as changes may break functionality. |
+| `quantity`                 | `Double`        | The quantity to split from the location.                                                                                                  |
+| `unitOfMeasureSymbol`      | `String`        | The symbol of the unit of measure for the quantity.                                                                                       |
+| `sourceLotId`              | `String` (ULID) | The ID of the inventory lot being split.                                                                                                  |
+| `sourceLocationIdOrPath`   | `String`        | The ID or path of the location from which inventory will be split.                                                                        |
+| `destinationLotName`       | `String`        | The name of the inventory lot the split inventory goes to.                                                                                |
+| `operationId`              | `String` (ULID) | The ID of the operation splitting this inventory.                                                                                         |
+| `productionOrderIdOrName`  | `String`        | The ID or name of the production order associated with the split.                                                                         |
+| `materialReasonCodeId`     | `String` (ULID) | The ID of the material reason code to add additional context.                                                                             |
+| `destinationInventoryName` | `String`        | The name of the inventory the split inventory goes to.                                                                                    |
+| `notes`                    | `String`        | Notes related to the split request.                                                                                                       |
+| `spare1`                   | `String`        | Additional field for user-defined context.                                                                                                |
+| `spare2`                   | `String`        | Additional field for user-defined context.                                                                                                |
+| `spare3`                   | `String`        | Additional field for user-defined context.                                                                                                |
 
 ## Returns
 

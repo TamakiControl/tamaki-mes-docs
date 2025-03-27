@@ -10,10 +10,11 @@ description: "Publishes the current inventory state to the tag system."
 
 **No Parameter:** Publishes all of the [Inventories](../../data-model/inventory-model/inventory) to the tag system.
 
-**With a Parameter:** Publishes only the specified [Inventories](../../data-model/inventory-model/inventory) to the tag system given 
+**With a Parameter:** Publishes only the specified [Inventories](../../data-model/inventory-model/inventory) to the tag system given
 the ID or path of the location associated with the inventory.
 
 ## Syntax
+
 ```python
 system.mes.inventory.publishInventoryState()
 system.mes.inventory.publishInventoryState([locationIdsOrPaths])
@@ -22,14 +23,14 @@ system.mes.inventory.publishInventoryState([locationIdsOrPaths])
 ## Parameters
 
 **No Parameter:**
-| Parameter | Type | Description                               |
+| Parameter | Type | Description |
 |-----------|------|-------------------------------------------|
-| None      | -    | This method does not take any parameters. |
+| None | - | This method does not take any parameters. |
 
 **With a Parameter:**
-| Parameter            | Type            | Description                                                         |
+| Parameter | Type | Description |
 |----------------------|-----------------|---------------------------------------------------------------------|
-| `locationIdsOrPaths` | `List\<String>` | List of IDs or paths of the location associated with the inventory. |
+| `locationIdsOrPaths` | `List<String>` | List of IDs or paths of the location associated with the inventory. |
 
 ## Returns
 

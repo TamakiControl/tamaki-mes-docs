@@ -9,25 +9,26 @@ description: "Edit inventory quantity from the MES based on the provided paramet
 Edit inventory quantity from the MES based on the provided parameters.
 
 ## Syntax
+
 ```python
 system.mes.inventory.editInventoryQuantity(**edit_inventory_quantity_request)
 ```
 
 ## Parameters
 
-| Parameter                       | Type            | Description                                                                                                                               |
-|---------------------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| `type`                          | `String`        | The type of request defined by the LotRecordType Enum. It is internally set and must not be modified, as changes may break functionality. |
-| `newQuantity`                   | `Double`        | The new quantity to be assigned to the inventory.                                                                                         |
-| `unitOfMeasureSymbol`           | `String`        | The symbol of the unit of measure for the quantity.                                                                                       |
-| `lotIdOrName`                   | `String`        | The ID or name of the inventory lot whose quantity is being edited.                                                                       |
-| `materialIdOrPath`              | `String`        | The ID or path of the material whose quantity is being edited.                                                                            |
-| `sourceLocationIdOrPath`        | `String`        | The ID or path of the location from the inventory quantity is being edited.                                                               |
-| `operationId`                   | `String` (ULID) | The ID of the operation editing the quantity of this inventory.                                                                           |
-| `notes`                         | `String`        | Notes related to the edit inventory quantity request.                                                                                     |
-| `spare1`                        | `String`        | Additional field for user-defined context.                                                                                                |
-| `spare2`                        | `String`        | Additional field for user-defined context.                                                                                                |
-| `spare3`                        | `String`        | Additional field for user-defined context.                                                                                                |
+| Parameter                | Type            | Description                                                                                                                               |
+| ------------------------ | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`                   | `String`        | The type of request defined by the LotRecordType Enum. It is internally set and must not be modified, as changes may break functionality. |
+| `newQuantity`            | `Double`        | The new quantity to be assigned to the inventory.                                                                                         |
+| `unitOfMeasureSymbol`    | `String`        | The symbol of the unit of measure for the quantity.                                                                                       |
+| `lotIdOrName`            | `String`        | The ID or name of the inventory lot whose quantity is being edited.                                                                       |
+| `materialIdOrPath`       | `String`        | The ID or path of the material whose quantity is being edited.                                                                            |
+| `sourceLocationIdOrPath` | `String`        | The ID or path of the location from the inventory quantity is being edited.                                                               |
+| `operationId`            | `String` (ULID) | The ID of the operation editing the quantity of this inventory.                                                                           |
+| `notes`                  | `String`        | Notes related to the edit inventory quantity request.                                                                                     |
+| `spare1`                 | `String`        | Additional field for user-defined context.                                                                                                |
+| `spare2`                 | `String`        | Additional field for user-defined context.                                                                                                |
+| `spare3`                 | `String`        | Additional field for user-defined context.                                                                                                |
 
 ## Returns
 

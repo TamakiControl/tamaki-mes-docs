@@ -18,23 +18,23 @@ each inventory lot is stored.
 The following table outlines the SQL columns for the `inventory` table, providing a brief description of each,
 along with sample data where applicable.
 
-| Column                | Type            | Description                                                                                                         | Example                              |
-|-----------------------|-----------------|---------------------------------------------------------------------------------------------------------------------|--------------------------------------|
-| `id`                  | `String` (ULID) | Unique identifier for the entity.                                                                                   | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`       |
-| `enabled`             | `Boolean`       | If the entity is enabled or not.                                                                                    | `true`                               |
-| `created_date`        | `DateTime`      | Date the entity was created.                                                                                        | `2024-12-31T19:48:44Z`               |
-| `created_by`          | `String`        | Person who created the entity.                                                                                      | `TamakiMES`                          |
-| `modified_date`       | `DateTime`      | Date the entity was created.                                                                                        | `2024-12-31T19:48:44Z`               |
-| `modified_by`         | `String`        | Last person to modify the entity.                                                                                   | `TamakiMES`                          |
-| `notes`               | `Blob`          | Notes about the entity.                                                                                             | `This entity has these extra notes`  |
-| `spare1`              | `String`        | The first spare column that can be used for additional context on the entity.                                       | `some extra context 1`               |
-| `spare2`              | `String`        | The second spare column that can be used for additional context on the entity.                                      | `some extra context 2`               |
-| `spare3`              | `String`        | The third spare column that can be used for additional context on the entity.                                       | `some extra context 3`               |
-| `name`                | `String`        | Name of the inventory at that location at that time.                                                                | `165456432135659`                    |
-| `quantity`            | `Double`        | Current quantity of material in this inventory record.                                                              | `250.0`                              |
-| `location_id`         | `String` (ULID) | References the location where the inventory is stored. See [locations](../location-model/location).                 | `01JAP8R5RT-3FPXQABY-7KQZT6VF`       |
-| `inventory_lot_id`    | `String` (ULID) | References the inventory lot stored in this location. See [inventory_lots](../inventory-model/inventory-lot).       | `01JAP8RJBN-4VYZUKE1-LY2QHV8X`       |
-| `production_order_id` | `String` (ULID) | References the associated production order. See [production_orders](../production-order-model/production-order).    | `01JAP8RJBN-7KQZT6VF-Q5VUZYPW`       |
+| Column                | Type            | Description                                                                                                      | Example                             |
+| --------------------- | --------------- | ---------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
+| `id`                  | `String` (ULID) | Unique identifier for the entity.                                                                                | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
+| `enabled`             | `Boolean`       | If the entity is enabled or not.                                                                                 | `true`                              |
+| `created_date`        | `DateTime`      | Date the entity was created.                                                                                     | `2024-12-31T19:48:44Z`              |
+| `created_by`          | `String`        | Person who created the entity.                                                                                   | `TamakiMES`                         |
+| `modified_date`       | `DateTime`      | Date the entity was created.                                                                                     | `2024-12-31T19:48:44Z`              |
+| `modified_by`         | `String`        | Last person to modify the entity.                                                                                | `TamakiMES`                         |
+| `notes`               | `Blob`          | Notes about the entity.                                                                                          | `This entity has these extra notes` |
+| `spare1`              | `String`        | The first spare column that can be used for additional context on the entity.                                    | `some extra context 1`              |
+| `spare2`              | `String`        | The second spare column that can be used for additional context on the entity.                                   | `some extra context 2`              |
+| `spare3`              | `String`        | The third spare column that can be used for additional context on the entity.                                    | `some extra context 3`              |
+| `name`                | `String`        | Name of the inventory at that location at that time.                                                             | `165456432135659`                   |
+| `quantity`            | `Double`        | Current quantity of material in this inventory record.                                                           | `250.0`                             |
+| `location_id`         | `String` (ULID) | References the location where the inventory is stored. See [locations](../location-model/location).              | `01JAP8R5RT-3FPXQABY-7KQZT6VF`      |
+| `inventory_lot_id`    | `String` (ULID) | References the inventory lot stored in this location. See [inventory_lots](../inventory-model/inventory-lot).    | `01JAP8RJBN-4VYZUKE1-LY2QHV8X`      |
+| `production_order_id` | `String` (ULID) | References the associated production order. See [production_orders](../production-order-model/production-order). | `01JAP8RJBN-7KQZT6VF-Q5VUZYPW`      |
 
 ## Field Details
 

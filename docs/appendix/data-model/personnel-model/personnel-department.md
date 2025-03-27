@@ -18,7 +18,7 @@ The following table outlines the SQL columns for the `personnel_departments` tab
 each, along with sample data where applicable.
 
 | Column        | Type                | Description                                                               | Example                        |
-|---------------|---------------------|---------------------------------------------------------------------------|--------------------------------|
+| ------------- | ------------------- | ------------------------------------------------------------------------- | ------------------------------ |
 | `id`          | `String` (ULID)     | Unique identifier for the department.                                     | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1` |
 | `parent_id`   | `String` (ULID)     | References the parent department, establishing a hierarchy.               | `01JAP8R5RT-3FPXQABY-7KQZT6VF` |
 | `name`        | `String`            | Name of the department. Required and unique within its parent department. | `Engineering`                  |

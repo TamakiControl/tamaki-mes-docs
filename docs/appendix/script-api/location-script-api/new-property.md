@@ -8,10 +8,11 @@ description: "Generates an empty non-persisted properties object to provide the 
 
 ## Description
 
-Generates an empty non-persisted [Location Properties](../../data-model/location-model/location-property) object to provide the structure required by the API 
+Generates an empty non-persisted [Location Properties](../../data-model/location-model/location-property) object to provide the structure required by the API
 to save a new record into the database. This method must be combined with the [saveProperty](./save-property) method in order to persist the record.
 
 ## Syntax
+
 ```python
 system.mes.location.newProperty()
 ```
@@ -19,15 +20,15 @@ system.mes.location.newProperty()
 ## Parameters
 
 | Parameter | Type | Description                               |
-|-----------|------|-------------------------------------------|
+| --------- | ---- | ----------------------------------------- |
 | None      | -    | This method does not take any parameters. |
 
 ## Returns
 
-Returns a JSON representation of the newly created Location Property object. The following is a list of keys and default values:
+Returns a JSON representation of the newly created location property object. The following is a list of keys and default values:
 
 | Key                   | Default Value |
-|-----------------------|---------------|
+| --------------------- | ------------- |
 | `name`                | `null`        |
 | `description`         | `null`        |
 | `dataType`            | `String`      |

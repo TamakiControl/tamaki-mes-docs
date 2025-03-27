@@ -12,15 +12,16 @@ Deletes an [Inventory Lots](../../data-model/inventory-model/inventory-lot) reco
 This cannot delete a inventory lot with references to it.
 
 ## Syntax
+
 ```python
 system.mes.inventory.deleteLot(id)
 ```
 
 ## Parameters
 
-| Parameter  | Type            | Description                               |
-|------------|-----------------|-------------------------------------------|
-| `id`       | `String` (ULID) | The ID of the inventory lots to retrieve. |
+| Parameter | Type            | Description                               |
+| --------- | --------------- | ----------------------------------------- |
+| `id`      | `String` (ULID) | The ID of the inventory lots to retrieve. |
 
 ## Returns
 
@@ -28,7 +29,7 @@ If successful, no response is returned. If unsuccessful, an InUseException, Ille
 If the inventory lot that's being deleted has a reference, an ApiResponse Object is returned with details about the encountered error.
 
 | Name      | Type      | Description                                                 |
-|-----------|---------- |-------------------------------------------------------------|
+| --------- | --------- | ----------------------------------------------------------- |
 | `success` | `Boolean` | Indicates if the delete was successful.                     |
 | `message` | `String`  | The reason why the deletion was successful or unsuccessful. |
 | `data`    | `String`  | The data associated with the deletion.                      |

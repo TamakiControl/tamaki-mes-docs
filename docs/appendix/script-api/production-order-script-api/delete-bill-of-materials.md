@@ -19,8 +19,8 @@ system.mes.productionOrder.deleteBillOfMaterials(id)
 
 ## Parameters
 
-| Parameter | Type            | Description                               |
-| --------- | --------------- | ----------------------------------------- |
+| Parameter | Type            | Description                                |
+| --------- | --------------- | ------------------------------------------ |
 | `id`      | `String` (ULID) | The ID of the bill of materials to delete. |
 
 ## Returns

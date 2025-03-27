@@ -11,6 +11,7 @@ description: "Retrieves all locations."
 Retrieves a list of all [Locations](../../data-model/location-model/location) records in the system.
 
 ## Syntax
+
 ```python
 system.mes.location.getAllLocations()
 ```
@@ -18,7 +19,7 @@ system.mes.location.getAllLocations()
 ## Parameters
 
 | Parameter | Type | Description                               |
-|-----------|------|-------------------------------------------|
+| --------- | ---- | ----------------------------------------- |
 | None      | -    | This method does not take any parameters. |
 
 ## Returns

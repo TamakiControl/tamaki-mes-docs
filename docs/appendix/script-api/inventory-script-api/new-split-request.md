@@ -6,10 +6,11 @@ description: "Generates an empty non-persisted split request to provide the stru
 
 # system.mes.inventory.newSplitRequest
 
-Generates an empty non-persisted Split Request to provide the structure required by the API to save a new record into the database. 
+Generates an empty non-persisted Split Request to provide the structure required by the API to save a new record into the database.
 This method must be combined with the [split](./split) method in order to persist the record.
 
 ## Syntax
+
 ```python
 system.mes.inventory.newSplitRequest()
 ```
@@ -17,29 +18,29 @@ system.mes.inventory.newSplitRequest()
 ## Parameters
 
 | Parameter | Type | Description                               |
-|-----------|------|-------------------------------------------|
+| --------- | ---- | ----------------------------------------- |
 | None      | -    | This method does not take any parameters. |
 
 ## Returns
 
 Returns a JSON representation of the newly created Split Request object. The following is a list of keys and default values:
 
-| Key                              | Default Value    |
-|----------------------------------|------------------|
-| `type`                           | `SPLIT`          |
-| `quantity`                       | `null`           |
-| `unitOfMeasureSymbol`            | `null`           |
-| `sourceLotId`                    | `null`           |
-| `sourceLocationIdOrPath`         | `null`           |
-| `destinationLotName`             | `null`           |
-| `operationId`                    | `null`           |
-| `productionOrderIdOrName`        | `null`           |
-| `materialReasonCodeId`           | `null`           |
-| `destinationInventoryName`       | `null`           |
-| `notes`                          | `null`           |
-| `spare1`                         | `null`           |
-| `spare2`                         | `null`           |
-| `spare3`                         | `null`           |
+| Key                        | Default Value |
+| -------------------------- | ------------- |
+| `type`                     | `SPLIT`       |
+| `quantity`                 | `null`        |
+| `unitOfMeasureSymbol`      | `null`        |
+| `sourceLotId`              | `null`        |
+| `sourceLocationIdOrPath`   | `null`        |
+| `destinationLotName`       | `null`        |
+| `operationId`              | `null`        |
+| `productionOrderIdOrName`  | `null`        |
+| `materialReasonCodeId`     | `null`        |
+| `destinationInventoryName` | `null`        |
+| `notes`                    | `null`        |
+| `spare1`                   | `null`        |
+| `spare2`                   | `null`        |
+| `spare3`                   | `null`        |
 
 ## Code Examples
 

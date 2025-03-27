@@ -8,21 +8,22 @@ description: "Updates the value of a location property value given a location ob
 
 ## Description
 
-Updates the value of a [Location Property Values](../../data-model/location-model/location-property-value) record given 
+Updates the value of a [Location Property Values](../../data-model/location-model/location-property-value) record given
 a location ID or path and a property ID or name.
 
 ## Syntax
+
 ```python
 system.mes.location.setPropertyValue(locationIdOrPath, propertyIdOrName, value)
 ```
 
 ## Parameters
 
-| Parameter          | Type            | Description                                                                                                                          |
-|--------------------|-----------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| `locationIdOrPath` | `String`        | The ULID or path of the location.                                                                                                    |
-| `propertyIdOrName` | `String`        | The ULID or name of the property for which the value is retrieved.                                                                   |
-| `value`            | `Mixed`         | The value assigned to the property value if none is provided. The type is mixed as it depends on what the data type of the property. |
+| Parameter          | Type     | Description                                                                                                                          |
+| ------------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `locationIdOrPath` | `String` | The ULID or path of the location.                                                                                                    |
+| `propertyIdOrName` | `String` | The ULID or name of the property for which the value is retrieved.                                                                   |
+| `value`            | `Mixed`  | The value assigned to the property value if none is provided. The type is mixed as it depends on what the data type of the property. |
 
 ## Returns
 

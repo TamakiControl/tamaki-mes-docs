@@ -17,20 +17,20 @@ could represent a collection of storage areas or production cells.
 The following table outlines the SQL columns for the `location_groups` table, providing a brief description of each,
 along with sample data where applicable.
 
-| Column          | Type            | Description                                                                                          | Example                              |
-|-----------------|-----------------|------------------------------------------------------------------------------------------------------|--------------------------------------|
-| `id`            | `String` (ULID) | Unique identifier for the entity.                                                                    | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`       |
-| `enabled`       | `Boolean`       | If the entity is enabled or not.                                                                     | `true`                               |
-| `created_date`  | `DateTime`      | Date the entity was created.                                                                         | `2024-12-31T19:48:44Z`               |
-| `created_by`    | `String`        | Person who created the entity.                                                                       | `TamakiMES`                          |
-| `modified_date` | `DateTime`      | Date the entity was created.                                                                         | `2024-12-31T19:48:44Z`               |
-| `modified_by`   | `String`        | Last person to modify the entity.                                                                    | `TamakiMES`                          |
-| `notes`         | `Blob`          | Notes about the entity.                                                                              | `This entity has these extra notes`  |
-| `spare1`        | `String`        | The first spare column that can be used for additional context on the entity.                        | `some extra context 1`               |
-| `spare2`        | `String`        | The second spare column that can be used for additional context on the entity.                       | `some extra context 2`               |
-| `spare3`        | `String`        | The third spare column that can be used for additional context on the entity.                        | `some extra context 3`               |
-| `name`          | `String`        | Name of the location group.                                                                          | `Storage Areas`                      |
-| `description`   | `String`        | Optional description providing details about the location group.                                     | `Group of all storage locations.`    |
+| Column          | Type            | Description                                                                    | Example                             |
+| --------------- | --------------- | ------------------------------------------------------------------------------ | ----------------------------------- |
+| `id`            | `String` (ULID) | Unique identifier for the entity.                                              | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
+| `enabled`       | `Boolean`       | If the entity is enabled or not.                                               | `true`                              |
+| `created_date`  | `DateTime`      | Date the entity was created.                                                   | `2024-12-31T19:48:44Z`              |
+| `created_by`    | `String`        | Person who created the entity.                                                 | `TamakiMES`                         |
+| `modified_date` | `DateTime`      | Date the entity was created.                                                   | `2024-12-31T19:48:44Z`              |
+| `modified_by`   | `String`        | Last person to modify the entity.                                              | `TamakiMES`                         |
+| `notes`         | `Blob`          | Notes about the entity.                                                        | `This entity has these extra notes` |
+| `spare1`        | `String`        | The first spare column that can be used for additional context on the entity.  | `some extra context 1`              |
+| `spare2`        | `String`        | The second spare column that can be used for additional context on the entity. | `some extra context 2`              |
+| `spare3`        | `String`        | The third spare column that can be used for additional context on the entity.  | `some extra context 3`              |
+| `name`          | `String`        | Name of the location group.                                                    | `Storage Areas`                     |
+| `description`   | `String`        | Optional description providing details about the location group.               | `Group of all storage locations.`   |
 
 ## Field Details
 
@@ -49,7 +49,7 @@ The `LocationGroup` entity is linked to multiple `Location` entities through a m
 association is managed through a join table, `location_location_groups`, which contains the following columns:
 
 | Column              | Type            | Description                                                                                   |
-|---------------------|-----------------|-----------------------------------------------------------------------------------------------|
+| ------------------- | --------------- | --------------------------------------------------------------------------------------------- |
 | `location_group_id` | `String` (ULID) | References the `LocationGroup` this entry belongs to.                                         |
 | `location_id`       | `String` (ULID) | References the specific `Location` in the group. See [locations](../location-model/location). |
 

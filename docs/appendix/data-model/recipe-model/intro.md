@@ -1,3 +1,1 @@
 # Recipe Model
-
-

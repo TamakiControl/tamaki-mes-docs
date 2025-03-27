@@ -17,17 +17,17 @@ categorization, reporting, and managing subsets of locations within the manufact
 The following table outlines the SQL columns for the `location_location_groups` table, providing a brief description of
 each.
 
-| Column              | Type            | Description                                                                                                                | Example                        |
-|---------------------|-----------------|----------------------------------------------------------------------------------------------------------------------------|--------------------------------|
-| `location_group_id` | `String` (ULID) | References the `LocationGroup` this entry is associated with. See [location_groups](../location-model/location-group).     | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1` |
-| `location_id`       | `String` (ULID) | References the specific `Location` within the group. See [locations](../location-model/location).                          | `01JAP8R5RT-3FPXQABY-7KQZT6VF` |
+| Column              | Type            | Description                                                                                                            | Example                        |
+| ------------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| `location_group_id` | `String` (ULID) | References the `LocationGroup` this entry is associated with. See [location_groups](../location-model/location-group). | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1` |
+| `location_id`       | `String` (ULID) | References the specific `Location` within the group. See [locations](../location-model/location).                      | `01JAP8R5RT-3FPXQABY-7KQZT6VF` |
 
 ## Field Details
 
 ### `location_group_id`
 
 This column references the `LocationGroup` entity that the location belongs to, allowing for flexible grouping of
-locations based on shared attributes or functionality. 
+locations based on shared attributes or functionality.
 See [location_groups](../location-model/location-group) for details.
 
 ### `location_id`

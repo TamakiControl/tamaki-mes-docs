@@ -14,6 +14,7 @@ Checks if the [Locations](../../data-model/location-model/location) record can s
 This can be left as an empty string.
 
 ## Syntax
+
 ```python
 system.mes.inventory.checkLocationHasCapacity(locationIdOrPath, lotIdOrName, materialId, quantity)
 ```
@@ -21,7 +22,7 @@ system.mes.inventory.checkLocationHasCapacity(locationIdOrPath, lotIdOrName, mat
 ## Parameters
 
 | Parameter          | Type     | Description                                                         |
-|--------------------|----------|---------------------------------------------------------------------|
+| ------------------ | -------- | ------------------------------------------------------------------- |
 | `locationIdOrPath` | `String` | The ID or path of the location associated with the inventory.       |
 | `lotIdOrName`      | `String` | The ID or name of the inventory lot associated with the inventory.  |
 | `materialIdOrPath` | `String` | The ID or path of the material associated with the inventory's lot. |

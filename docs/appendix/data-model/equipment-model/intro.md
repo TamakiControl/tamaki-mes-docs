@@ -17,27 +17,27 @@ apply to all equipment within that category.
 ### 2. Equipment
 
 Represents individual instances of equipment within the facility. Each equipment item is linked to an
-Equipment Class, inheriting standard properties, while also maintaining unique data specific to that item (e.g., 
+Equipment Class, inheriting standard properties, while also maintaining unique data specific to that item (e.g.,
 location, status). This provides a clear structure for managing both individual items and groups of similar assets.
 
 ### 3. EquipmentProperty
 
-Defines the attributes that are common across all items within an Equipment Class, such as "Horsepower" for motors 
+Defines the attributes that are common across all items within an Equipment Class, such as "Horsepower" for motors
 or "Capacity" for tanks. This enables standardized property definitions for each category of equipment.
 
 ### 4. EquipmentPropertyValue
 
-Stores specific values for each property at the individual equipment level, allowing customization per item. 
+Stores specific values for each property at the individual equipment level, allowing customization per item.
 This ensures that each piece of equipment can be configured and tracked based on its unique specifications.
 
 ### 5. EquipmentMaintenanceOrder
 
-Tracks maintenance tasks for equipment, including scheduling and status updates. Maintenance Orders help 
+Tracks maintenance tasks for equipment, including scheduling and status updates. Maintenance Orders help
 ensure that equipment remains in optimal condition, with logs for planned and completed maintenance activities.
 
 ### 6. EquipmentMaintenancePlan
 
-Establishes recurring or triggered maintenance schedules for equipment, ensuring proactive upkeep. Maintenance 
+Establishes recurring or triggered maintenance schedules for equipment, ensuring proactive upkeep. Maintenance
 Plans can automatically generate Maintenance Orders based on predefined triggers or schedules.
 
 ---

@@ -11,32 +11,33 @@ description: "Creates or updates a location property with specified parameters."
 Creates or updates a [Location Properties](../../data-model/location-model/location-property) record in the system based on the provided parameters.
 
 ## Syntax
+
 ```python
 system.mes.location.saveProperty(**property_data)
 ```
 
 ## Parameters
 
-| Parameter      | Type            | Description                                                                                                          |
-|----------------|-----------------|----------------------------------------------------------------------------------------------------------------------|
-| `name`         | `String`        | The name of the location property.                                                                                   |
-| `description`  | `String`        | A description of the location property.                                                                              |
-| `dataType`     | `String`        | The data type of the property (e.g., Integer, String, Float).                                                        |
-| `lowLimit`     | `Double`        | The minimum value allowed for a numerical property.                                                                  |
-| `highLimit`    | `Double`        | The maximum value allowed for a numerical property.                                                                  |
-| `format`       | `String`        | The format of the property, if applicable.                                                                           |
-| `unitOfMeasureId`     | `String` (ULID) | References the unit of measure for the property. See [unit_of_measure](../../data-model/utility-models/unit-of-measure-model/unit-of-measure). |
-| `unitOfMeasureName`   | `String`        | The name of the uit of measure for the property. For display purposes only.                                                      |
-| `unitOfMeasureSymbol` | `String`        | The name of the uit of measure for the property. For display purposes only.                                                      |
-| `options`      | `String`        | List of possible values for the property (e.g., `"[option1, option2]"`).                                             |
-| `nullable`     | `Boolean`       | Defines if the property can accept null values.                                                                      |
-| `defaultValue` | `Mixed`         | The default value assigned to the property if none is provided. The type is mixed as it depends on what dataType is. |
-| `id`           | `String` (ULID) | The ULID of the location property (optional, for updating an existing property).                                     |
-| `notes`        | `String`        | Notes related to the location property.                                                                              |
-| `enabled`      | `Boolean`       | Indicates if the property is active and enabled.                                                                     |
-| `spare1`       | `String`        | Additional field for user-defined context.                                                                           |
-| `spare2`       | `String`        | Additional field for user-defined context.                                                                           |
-| `spare3`       | `String`        | Additional field for user-defined context.                                                                           |
+| Parameter             | Type            | Description                                                                                                          |
+| --------------------- | --------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `name`                | `String`        | The name of the location property.                                                                                   |
+| `description`         | `String`        | A description of the location property.                                                                              |
+| `dataType`            | `String`        | The data type of the property (e.g., Integer, String, Float).                                                        |
+| `lowLimit`            | `Double`        | The minimum value allowed for a numerical property.                                                                  |
+| `highLimit`           | `Double`        | The maximum value allowed for a numerical property.                                                                  |
+| `format`              | `String`        | The format of the property, if applicable.                                                                           |
+| `unitOfMeasureId`     | `String` (ULID) | The ULID of the unit of measure for this property.                                                                   |
+| `unitOfMeasureName`   | `String`        | The name of the unit of measure for the property. For display purposes only.                                         |
+| `unitOfMeasureSymbol` | `String`        | The symbol of the unit of measure for the property. For display purposes only.                                       |
+| `options`             | `String`        | List of possible values for the property (e.g., `"[option1, option2]"`).                                             |
+| `nullable`            | `Boolean`       | Defines if the property can accept null values.                                                                      |
+| `defaultValue`        | `Mixed`         | The default value assigned to the property if none is provided. The type is mixed as it depends on what dataType is. |
+| `id`                  | `String` (ULID) | The ULID of the location property (optional, for updating an existing property).                                     |
+| `notes`               | `String`        | Notes related to the location property.                                                                              |
+| `enabled`             | `Boolean`       | Indicates if the property is active and enabled.                                                                     |
+| `spare1`              | `String`        | Additional field for user-defined context.                                                                           |
+| `spare2`              | `String`        | Additional field for user-defined context.                                                                           |
+| `spare3`              | `String`        | Additional field for user-defined context.                                                                           |
 
 ## Returns
 
@@ -50,7 +51,7 @@ new_property = system.mes.location.newProperty()
 new_property['name'] = 'Temperature'
 saved_property = system.mes.location.saveProperty(**new_property)
 
-# Output the JSON representation of the saved location
+# Output the JSON representation of the saved property
 print(saved_property)
 
 # Generate the object structure for another new property object to update the previous property

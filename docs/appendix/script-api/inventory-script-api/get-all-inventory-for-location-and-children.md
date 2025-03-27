@@ -11,15 +11,16 @@ description: "Retrieves all inventories at a given location and its children."
 Retrieves all the [Inventories](../../data-model/inventory-model/inventory) records at a given location and its children.
 
 ## Syntax
+
 ```python
 system.mes.inventory.getAllInventoryForLocationAndChildren(locationIdOrPath)
 ```
 
 ## Parameters
 
-| Parameter          | Type     | Description                                                       |
-|--------------------|----------|-------------------------------------------------------------------|
-| `locationIdOrPath` | `String` | The ID or path of the location associated with the inventory.     |
+| Parameter          | Type     | Description                                                   |
+| ------------------ | -------- | ------------------------------------------------------------- |
+| `locationIdOrPath` | `String` | The ID or path of the location associated with the inventory. |
 
 ## Returns
 

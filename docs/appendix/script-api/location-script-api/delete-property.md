@@ -12,6 +12,7 @@ Deletes a [Location Properties](../../data-model/location-model/location-propert
 This cannot delete a location property with references to it.
 
 ## Syntax
+
 ```python
 system.mes.location.deleteProperty(idOrName)
 ```
@@ -19,7 +20,7 @@ system.mes.location.deleteProperty(idOrName)
 ## Parameters
 
 | Parameter  | Type     | Description                                        |
-|------------|----------|----------------------------------------------------|
+| ---------- | -------- | -------------------------------------------------- |
 | `idOrName` | `String` | The ID or name of the location property to delete. |
 
 ## Returns
@@ -28,7 +29,7 @@ If successful, no response is returned. If unsuccessful, an InUseException, Ille
 If the property that's being deleted has a reference, an ApiResponse Object is returned with details about the encountered error.
 
 | Name      | Type      | Description                                                 |
-|-----------|---------- |-------------------------------------------------------------|
+| --------- | --------- | ----------------------------------------------------------- |
 | `success` | `Boolean` | Indicates if the delete was successful.                     |
 | `message` | `String`  | The reason why the deletion was successful or unsuccessful. |
 | `data`    | `String`  | The data associated with the deletion.                      |
@@ -37,6 +38,6 @@ If the property that's being deleted has a reference, an ApiResponse Object is r
 ## Code Examples
 
 ```python
-# Delete a location property by ID or path
+# Delete a location property by ID or name
 system.mes.location.deleteProperty('Temperature')
 ```

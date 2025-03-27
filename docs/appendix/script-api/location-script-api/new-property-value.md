@@ -8,10 +8,11 @@ description: "Generates an empty non-persisted property values object to provide
 
 ## Description
 
-Generates an empty non-persisted [Location Property Values](../../data-model/location-model/location-property-value) object to provide the structure required by the API 
+Generates an empty non-persisted [Location Property Values](../../data-model/location-model/location-property-value) object to provide the structure required by the API
 to save a new record into the database. This method must be combined with the [savePropertyValue](./save-property-value) method in order to persist the record.
 
 ## Syntax
+
 ```python
 system.mes.location.newPropertyValue()
 ```
@@ -19,25 +20,25 @@ system.mes.location.newPropertyValue()
 ## Parameters
 
 | Parameter | Type | Description                               |
-|-----------|------|-------------------------------------------|
+| --------- | ---- | ----------------------------------------- |
 | None      | -    | This method does not take any parameters. |
 
 ## Returns
 
-Returns a JSON representation of the newly created Location Property Value object. The following is a list of keys and default values:
+Returns a JSON representation of the newly created location property Value object. The following is a list of keys and default values:
 
-| Key          | Default Value    |
-|--------------|------------------|
-| `locationId` | `null`           |
-| `propertyId` | `null`           |
-| `dataType`   | `String`         |
-| `value`      | `null`           |
-| `id`         | `null`           |
-| `notes`      | `null`           |
-| `enabled`    | `true`           |
-| `spare1`     | `null`           |
-| `spare2`     | `null`           |
-| `spare3`     | `null`           |
+| Key          | Default Value |
+| ------------ | ------------- |
+| `locationId` | `null`        |
+| `propertyId` | `null`        |
+| `dataType`   | `String`      |
+| `value`      | `null`        |
+| `id`         | `null`        |
+| `notes`      | `null`        |
+| `enabled`    | `true`        |
+| `spare1`     | `null`        |
+| `spare2`     | `null`        |
+| `spare3`     | `null`        |
 
 ## Code Examples
 
@@ -52,7 +53,7 @@ new_property = system.mes.location.newProperty()
 new_property['name'] = 'Cows'
 new_property['dataType'] = 'Int'
 saved_property = system.mes.location.saveProperty(**new_property)
- 
+
 # Generate the object structure for a new property value object with no initial arguments
 new_property_value = system.mes.location.newPropertyValue()
 

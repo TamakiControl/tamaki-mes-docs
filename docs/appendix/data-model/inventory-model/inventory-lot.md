@@ -18,7 +18,7 @@ The following table outlines the SQL columns for the `inventory_lots` table, pro
 with sample data where applicable.
 
 | Column               | Type            | Description                                                                                                                          | Example                             |
-|----------------------|-----------------|--------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------|
+| -------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------- |
 | `id`                 | `String` (ULID) | Unique identifier for the entity.                                                                                                    | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
 | `enabled`            | `Boolean`       | If the entity is enabled or not.                                                                                                     | `true`                              |
 | `created_date`       | `DateTime`      | Date the entity was created.                                                                                                         | `2024-12-31T19:48:44Z`              |
