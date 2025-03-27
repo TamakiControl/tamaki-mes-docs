@@ -8,10 +8,11 @@ description: "Deletes the location with the given ID or path and any immediate r
 
 ## Description
 
-Deletes a [Locations](../../data-model/location-model/location) record by its ID or path. 
+Deletes a [Locations](../../data-model/location-model/location) record by its ID or path.
 Also deletes immediate references to this location if possible.
 
 ## Syntax
+
 ```python
 system.mes.location.deleteLocationWithReferences(idOrPath)
 ```
@@ -19,7 +20,7 @@ system.mes.location.deleteLocationWithReferences(idOrPath)
 ## Parameters
 
 | Parameter  | Type     | Description                               |
-|------------|----------|-------------------------------------------|
+| ---------- | -------- | ----------------------------------------- |
 | `idOrPath` | `String` | The ID or path of the location to delete. |
 
 ## Returns

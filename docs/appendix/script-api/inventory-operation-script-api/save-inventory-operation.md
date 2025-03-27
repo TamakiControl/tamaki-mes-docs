@@ -11,6 +11,7 @@ description: "Creates or updates an inventory operation with specified parameter
 Creates or updates an [Inventory Operations](../../data-model/inventory-model/inventory-operation) record in the system based on the provided parameters.
 
 ## Syntax
+
 ```python
 system.mes.inventory.operation.saveInventoryOperation(**inventory_operation_data)
 ```
@@ -18,7 +19,7 @@ system.mes.inventory.operation.saveInventoryOperation(**inventory_operation_data
 ## Parameters
 
 | Parameter                         | Type            | Description                                                                                                        |
-|-----------------------------------|-----------------|--------------------------------------------------------------------------------------------------------------------|
+| --------------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------ |
 | `operationId`                     | `String` (ULID) | The ULID of the operation associated with this inventory operation.                                                |
 | `operationName`                   | `String`        | The name of the operation associated with this inventory operation.                                                |
 | `name`                            | `String`        | The name of the inventory operation.                                                                               |

@@ -8,28 +8,29 @@ description: "Validates a location property value based on provided parameters."
 
 ## Description
 
-Validates the specified parameters for a [Location Property Values](../../data-model/location-model/location-property-value) record and returns any validation errors. 
+Validates the specified parameters for a [Location Property Values](../../data-model/location-model/location-property-value) record and returns any validation errors.
 This only checks if the location property value object can be saved based on the attributes given.
 
 ## Syntax
+
 ```python
 system.mes.location.validatePropertyValue(**property_data)
 ```
 
 ## Parameters
 
-| Parameter      | Type            | Description                                                                                                        |
-|----------------|-----------------|--------------------------------------------------------------------------------------------------------------------|
-| `locationId`   | `String` (ULID) | The ULID of the location.                                                                                          |
-| `propertyId`   | `String` (ULID) | The ULID of the location property.                                                                                 |
-| `dataType`     | `String`        | The data type of the property value. Must be the same as the data type of the property.                            |
-| `value`        | `Mixed`         | The value assigned to the property value if none is provided. The type is mixed as it depends on what dataType is. |
-| `id`           | `String` (ULID) | The ULID of the location property value (optional, for updating an existing property).                             |
-| `notes`        | `String`        | Notes related to the location property value.                                                                      |
-| `enabled`      | `Boolean`       | Indicates if the property value is active and enabled.                                                             |
-| `spare1`       | `String`        | Additional field for user-defined context.                                                                         |
-| `spare2`       | `String`        | Additional field for user-defined context.                                                                         |
-| `spare3`       | `String`        | Additional field for user-defined context.                                                                         |
+| Parameter    | Type            | Description                                                                                                        |
+| ------------ | --------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `locationId` | `String` (ULID) | The ULID of the location.                                                                                          |
+| `propertyId` | `String` (ULID) | The ULID of the location property.                                                                                 |
+| `dataType`   | `String`        | The data type of the property value. Must be the same as the data type of the property.                            |
+| `value`      | `Mixed`         | The value assigned to the property value if none is provided. The type is mixed as it depends on what dataType is. |
+| `id`         | `String` (ULID) | The ULID of the location property value (optional, for updating an existing property).                             |
+| `notes`      | `String`        | Notes related to the location property value.                                                                      |
+| `enabled`    | `Boolean`       | Indicates if the property value is active and enabled.                                                             |
+| `spare1`     | `String`        | Additional field for user-defined context.                                                                         |
+| `spare2`     | `String`        | Additional field for user-defined context.                                                                         |
+| `spare3`     | `String`        | Additional field for user-defined context.                                                                         |
 
 ## Returns
 

@@ -11,29 +11,30 @@ description: "Retrieves a list of references to a inventory lots record with the
 Retrieves a list of references to a [Inventory Lots](../../data-model/inventory-model/inventory-lot) record by its ID.
 
 ## Syntax
+
 ```python
 system.mes.inventory.getInventoryLotReferences(id)
 ```
 
 ## Parameters
 
-| Parameter  | Type            | Description                              |
-|------------|-----------------|------------------------------------------|
-| `id`       | `String` (ULID) | The ID of the inventory lot to retrieve. |
+| Parameter | Type            | Description                              |
+| --------- | --------------- | ---------------------------------------- |
+| `id`      | `String` (ULID) | The ID of the inventory lot to retrieve. |
 
 ## Returns
 
 Returns a list of JSON objects. Each JSON object has the following properties:
 
-| Name         | Type                 | Description                                                            |
-|--------------|----------------------|------------------------------------------------------------------------|
-| `tableName`  | `String`             | The name of the table that the reference is in.                        |
-| `references` | `List<JSON Object>`  | List of JSON objects corresponding to references to the inventory lot. |
+| Name         | Type                | Description                                                            |
+| ------------ | ------------------- | ---------------------------------------------------------------------- |
+| `tableName`  | `String`            | The name of the table that the reference is in.                        |
+| `references` | `List<JSON Object>` | List of JSON objects corresponding to references to the inventory lot. |
 
 The JSON Objects in references has the following properties:
 
 | Name        | Type            | Description                                                   |
-|-------------|-----------------|---------------------------------------------------------------|
+| ----------- | --------------- | ------------------------------------------------------------- |
 | `fkColName` | `String`        | The name of the foreign key column.                           |
 | `id`        | `String` (ULID) | The ULID of the object that is referencing the inventory lot. |
 

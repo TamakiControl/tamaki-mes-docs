@@ -18,36 +18,36 @@ independently for operational, maintenance, and reporting purposes.
 The following table outlines the SQL columns for the `equipment` table, providing a brief description of each, along
 with sample data where applicable.
 
-| Column               | Type                | Description                                                                                                                                                        | Example                                        |
-|----------------------|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------|
-| `id`                 | `String` (ULID)     | Unique identifier for the entity.                                                                                                                                  | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`                 |
-| `enabled`            | `Boolean`           | If the entity is enabled or not.                                                                                                                                   | `true`                                         |
-| `created_date`       | `DateTime`          | Date the entity was created.                                                                                                                                       | `2024-12-31T19:48:44Z`                         |
-| `created_by`         | `String`            | Person who created the entity.                                                                                                                                     | `TamakiMES`                                    |
-| `modified_date`      | `DateTime`          | Date the entity was created.                                                                                                                                       | `2024-12-31T19:48:44Z`                         |
-| `modified_by`        | `String`            | Last person to modify the entity.                                                                                                                                  | `TamakiMES`                                    |
-| `notes`              | `Blob`              | Notes about the entity.                                                                                                                                            | `This entity has these extra notes`            |
-| `spare1`             | `String`            | The first spare column that can be used for additional context on the entity.                                                                                      | `some extra context 1`                         |
-| `spare2`             | `String`            | The second spare column that can be used for additional context on the entity.                                                                                     | `some extra context 2`                         |
-| `spare3`             | `String`            | The third spare column that can be used for additional context on the entity.                                                                                      | `some extra context 3`                         |
-| `equipment_class_id` | `String` (ULID)     | References the equipment class to which this item belongs. See [equipment_classes](../equipment-model/equipment-class).                                            | `01JAP8R5RT-3FPXQABY-7KQZT6VF`                 |
-| `location_id`        | `String` (ULID)     | Indicates where the equipment is stored or currently in use. See [locations](../location-model/location).                                                          | `01JAP8RJBN-4VYZUKE1-LY2QHV8X`                 |
-| `name`               | `String`            | The name of the specific equipment item, unique within the equipment class.                                                                                        | `Forklift #12`                                 |
-| `description`        | `String` (max 2048) | Detailed description of the equipment item.                                                                                                                        | `Electric forklift used for material handling` |
-| `status`             | `String`            | Current operational status of the equipment. Possible values: `OPERATIONAL`, `DOWN`, `UNDER_MAINTENANCE`, `UNKNOWN`, as defined by the **EquipmentStatus** enum.   | `OPERATIONAL`                                  |
+| Column               | Type                | Description                                                                                                                                                      | Example                                        |
+| -------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| `id`                 | `String` (ULID)     | Unique identifier for the entity.                                                                                                                                | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`                 |
+| `enabled`            | `Boolean`           | If the entity is enabled or not.                                                                                                                                 | `true`                                         |
+| `created_date`       | `DateTime`          | Date the entity was created.                                                                                                                                     | `2024-12-31T19:48:44Z`                         |
+| `created_by`         | `String`            | Person who created the entity.                                                                                                                                   | `TamakiMES`                                    |
+| `modified_date`      | `DateTime`          | Date the entity was created.                                                                                                                                     | `2024-12-31T19:48:44Z`                         |
+| `modified_by`        | `String`            | Last person to modify the entity.                                                                                                                                | `TamakiMES`                                    |
+| `notes`              | `Blob`              | Notes about the entity.                                                                                                                                          | `This entity has these extra notes`            |
+| `spare1`             | `String`            | The first spare column that can be used for additional context on the entity.                                                                                    | `some extra context 1`                         |
+| `spare2`             | `String`            | The second spare column that can be used for additional context on the entity.                                                                                   | `some extra context 2`                         |
+| `spare3`             | `String`            | The third spare column that can be used for additional context on the entity.                                                                                    | `some extra context 3`                         |
+| `equipment_class_id` | `String` (ULID)     | References the equipment class to which this item belongs. See [equipment_classes](../equipment-model/equipment-class).                                          | `01JAP8R5RT-3FPXQABY-7KQZT6VF`                 |
+| `location_id`        | `String` (ULID)     | Indicates where the equipment is stored or currently in use. See [locations](../location-model/location).                                                        | `01JAP8RJBN-4VYZUKE1-LY2QHV8X`                 |
+| `name`               | `String`            | The name of the specific equipment item, unique within the equipment class.                                                                                      | `Forklift #12`                                 |
+| `description`        | `String` (max 2048) | Detailed description of the equipment item.                                                                                                                      | `Electric forklift used for material handling` |
+| `status`             | `String`            | Current operational status of the equipment. Possible values: `OPERATIONAL`, `DOWN`, `UNDER_MAINTENANCE`, `UNKNOWN`, as defined by the **EquipmentStatus** enum. | `OPERATIONAL`                                  |
 
 ## Field Details
 
 ### `equipment_class_id`
 
 References the `EquipmentClass` that this item belongs to, allowing the equipment to inherit properties and attributes
-defined by the class. 
+defined by the class.
 See [equipment_classes](../equipment-model/equipment-class) for details.
 
 ### `location_id`
 
 Links to the `Location` entity, specifying the physical location of the equipment. This enables tracking of where the
-equipment is deployed or stored within the facility. 
+equipment is deployed or stored within the facility.
 See [locations](../location-model/location) for details.
 
 ### `name`

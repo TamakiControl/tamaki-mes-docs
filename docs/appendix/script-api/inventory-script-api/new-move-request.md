@@ -6,10 +6,11 @@ description: "Generates an empty non-persisted move request to provide the struc
 
 # system.mes.inventory.newMoveRequest
 
-Generates an empty non-persisted Move Request to provide the structure required by the API to save a new record into the database. 
+Generates an empty non-persisted Move Request to provide the structure required by the API to save a new record into the database.
 This method must be combined with the [move](./move) method in order to persist the record.
 
 ## Syntax
+
 ```python
 system.mes.inventory.newMoveRequest()
 ```
@@ -17,33 +18,33 @@ system.mes.inventory.newMoveRequest()
 ## Parameters
 
 | Parameter | Type | Description                               |
-|-----------|------|-------------------------------------------|
+| --------- | ---- | ----------------------------------------- |
 | None      | -    | This method does not take any parameters. |
 
 ## Returns
 
 Returns a JSON representation of the newly created Move Request object. The following is a list of keys and default values:
 
-| Key                              | Default Value    |
-|----------------------------------|------------------|
-| `type`                           | `MOVE`           |
-| `quantity`                       | `null`           |
-| `unitOfMeasureSymbol`            | `null`           |
-| `lotIdOrName`                    | `null`           |
-| `materialIdOrPath`               | `null`           |
-| `sourceLocationIdOrPath`         | `null`           |
-| `destinationLocationIdOrPath`    | `null`           |
-| `operationId`                    | `null`           |
-| `productionOrderIdOrName`        | `null`           |
-| `materialReasonCodeId`           | `null`           |
-| `startDate`                      | Current Time     |
-| `endDate`                        | `null`           |
-| `ongoing`                        | `false`          |
-| `destinationInventoryName`       | `null`           |
-| `notes`                          | `null`           |
-| `spare1`                         | `null`           |
-| `spare2`                         | `null`           |
-| `spare3`                         | `null`           |
+| Key                           | Default Value |
+| ----------------------------- | ------------- |
+| `type`                        | `MOVE`        |
+| `quantity`                    | `null`        |
+| `unitOfMeasureSymbol`         | `null`        |
+| `lotIdOrName`                 | `null`        |
+| `materialIdOrPath`            | `null`        |
+| `sourceLocationIdOrPath`      | `null`        |
+| `destinationLocationIdOrPath` | `null`        |
+| `operationId`                 | `null`        |
+| `productionOrderIdOrName`     | `null`        |
+| `materialReasonCodeId`        | `null`        |
+| `startDate`                   | Current Time  |
+| `endDate`                     | `null`        |
+| `ongoing`                     | `false`       |
+| `destinationInventoryName`    | `null`        |
+| `notes`                       | `null`        |
+| `spare1`                      | `null`        |
+| `spare2`                      | `null`        |
+| `spare3`                      | `null`        |
 
 ## Code Examples
 

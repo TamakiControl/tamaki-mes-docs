@@ -11,31 +11,32 @@ description: "Retrieves a list of references to a location property value with t
 Retrieves a list of references to a [Location Property Values](../../data-model/location-model/location-property-value) by its ID.
 
 ## Syntax
+
 ```python
 system.mes.location.getLocationPropertyValueReferences(id)
 ```
 
 ## Parameters
 
-| Parameter  | Type     | Description                                          |
-|------------|----------|------------------------------------------------------|
-| `id`       | `String` | The ULID of the location property value to retrieve. |
+| Parameter | Type     | Description                                          |
+| --------- | -------- | ---------------------------------------------------- |
+| `id`      | `String` | The ULID of the location property value to retrieve. |
 
 ## Returns
 
 Returns a list of JSON objects. Each JSON object has the following properties:
 
-| Name         | Type                 | Description                                                        |
-|--------------|----------------------|--------------------------------------------------------------------|
-| `tableName`  | `String`             | The name of the table that the reference is in.                    |
-| `references` | `List<JSON Object>`  | List of JSON objects corresponding to references to the location.  |
+| Name         | Type                | Description                                                                      |
+| ------------ | ------------------- | -------------------------------------------------------------------------------- |
+| `tableName`  | `String`            | The name of the table that the reference is in.                                  |
+| `references` | `List<JSON Object>` | List of JSON objects corresponding to references to the location property value. |
 
 The JSON Objects in references has the following properties:
 
-| Name        | Type            | Description                                              |
-|-------------|-----------------|----------------------------------------------------------|
-| `fkColName` | `String`        | The name of the foreign key column.                      |
-| `id`        | `String` (ULID) | The ULID of the object that is referencing the location. |
+| Name        | Type            | Description                                                             |
+| ----------- | --------------- | ----------------------------------------------------------------------- |
+| `fkColName` | `String`        | The name of the foreign key column.                                     |
+| `id`        | `String` (ULID) | The ULID of the object that is referencing the location property value. |
 
 ## Code Examples
 

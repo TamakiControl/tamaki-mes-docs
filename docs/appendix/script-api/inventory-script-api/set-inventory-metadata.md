@@ -8,10 +8,11 @@ description: "Updates the metadata for a given inventory by its ID. This include
 
 ## Description
 
-Updates the metadata for a given [Inventories](../../data-model/inventory-model/inventory) record by its ID. 
+Updates the metadata for a given [Inventories](../../data-model/inventory-model/inventory) record by its ID.
 This includes the notes and spare fields.
 
 ## Syntax
+
 ```python
 system.mes.inventory.setInventoryMetadata(inventoryId, notes, spare1, spare2, spare3, name, productionOrderId)
 ```
@@ -19,7 +20,7 @@ system.mes.inventory.setInventoryMetadata(inventoryId, notes, spare1, spare2, sp
 ## Parameters
 
 | Parameter           | Type            | Description                                                     |
-|---------------------|-----------------|-----------------------------------------------------------------|
+| ------------------- | --------------- | --------------------------------------------------------------- |
 | `inventoryId`       | `String` (ULID) | The ID of the inventory to update.                              |
 | `notes`             | `String`        | Notes related to the location property value.                   |
 | `spare1`            | `String`        | Additional field for user-defined context.                      |

@@ -8,10 +8,11 @@ description: "Deletes the location property with the given ID or name and any im
 
 ## Description
 
-Deletes a [Location Properties](../../data-model/location-model/location-property) record by its ID or name. 
+Deletes a [Location Properties](../../data-model/location-model/location-property) record by its ID or name.
 Also deletes immediate references to this property if possible.
 
 ## Syntax
+
 ```python
 system.mes.location.deletePropertyWithReferences(idOrName)
 ```
@@ -19,7 +20,7 @@ system.mes.location.deletePropertyWithReferences(idOrName)
 ## Parameters
 
 | Parameter  | Type     | Description                                        |
-|------------|----------|----------------------------------------------------|
+| ---------- | -------- | -------------------------------------------------- |
 | `idOrName` | `String` | The ID or name of the location property to delete. |
 
 ## Returns

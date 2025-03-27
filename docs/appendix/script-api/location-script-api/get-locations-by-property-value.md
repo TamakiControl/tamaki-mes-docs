@@ -11,6 +11,7 @@ description: "Retrieves all locations with a specific property value."
 Retrieves all [Locations](../../data-model/location-model/location) records that have a property value that matches the provided value.
 
 ## Syntax
+
 ```python
 system.mes.location.getLocationsByPropertyValue(idOrName, value)
 ```
@@ -18,7 +19,7 @@ system.mes.location.getLocationsByPropertyValue(idOrName, value)
 ## Parameters
 
 | Parameter          | Type     | Description                                                                                                                   |
-|--------------------|----------|-------------------------------------------------------------------------------------------------------------------------------|
+| ------------------ | -------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | `propertyIdOrName` | `String` | The ID or name of the location property to filter by.                                                                         |
 | `propertyValue`    | `Mixed`  | The value to search for within the specified property. The type is mixed as it depends on what the data type of the property. |
 

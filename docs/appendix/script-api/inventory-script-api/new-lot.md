@@ -6,10 +6,11 @@ description: "Generates an empty non-persisted inventory lot object to provide t
 
 # system.mes.inventory.newLot
 
-Generates an empty non-persisted [Inventory Lots](../../data-model/inventory-model/inventory-lot) object to provide the structure required by the API 
+Generates an empty non-persisted [Inventory Lots](../../data-model/inventory-model/inventory-lot) object to provide the structure required by the API
 to save a new record into the database. This method must be combined with the [saveLot](./save-lot) method in order to persist the record.
 
 ## Syntax
+
 ```python
 system.mes.inventory.newLot()
 ```
@@ -17,29 +18,29 @@ system.mes.inventory.newLot()
 ## Parameters
 
 | Parameter | Type | Description                               |
-|-----------|------|-------------------------------------------|
+| --------- | ---- | ----------------------------------------- |
 | None      | -    | This method does not take any parameters. |
 
 ## Returns
 
 Returns a JSON representation of the newly created Inventory Lot object. The following is a list of keys and default values:
 
-| Key               | Default Value    |
-|-------------------|------------------|
-| `name`            | `null`           |
-| `materialId`      | `null`           |
-| `status`          | `OPEN`           |
-| `totalQuantity`   | `0.0`            |
-| `unitOfMeasureId` | `null`           |
-| `expirationDate`  | `null`           |
-| `closedDate`      | `null`           |
-| `supplierId`      | `null`           |
-| `id`              | `null`           |
-| `notes`           | `null`           |
-| `enabled`         | `true`           |
-| `spare1`          | `null`           |
-| `spare2`          | `null`           |
-| `spare3`          | `null`           |
+| Key               | Default Value |
+| ----------------- | ------------- |
+| `name`            | `null`        |
+| `materialId`      | `null`        |
+| `status`          | `OPEN`        |
+| `totalQuantity`   | `0.0`         |
+| `unitOfMeasureId` | `null`        |
+| `expirationDate`  | `null`        |
+| `closedDate`      | `null`        |
+| `supplierId`      | `null`        |
+| `id`              | `null`        |
+| `notes`           | `null`        |
+| `enabled`         | `true`        |
+| `spare1`          | `null`        |
+| `spare2`          | `null`        |
+| `spare3`          | `null`        |
 
 ## Code Examples
 

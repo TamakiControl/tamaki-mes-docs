@@ -11,6 +11,7 @@ description: "Creates or updates an inventory lot record with specified paramete
 Creates or updates an [Inventory Lot Records](../../data-model/inventory-model/inventory-lot-record) object in the system based on the provided parameters.
 
 ## Syntax
+
 ```python
 system.mes.inventory.saveInventoryLotRecord(**lot_record_data)
 ```
@@ -18,7 +19,7 @@ system.mes.inventory.saveInventoryLotRecord(**lot_record_data)
 ## Parameters
 
 | Parameter                   | Type            | Description                                                                                          |
-|-----------------------------|-----------------|------------------------------------------------------------------------------------------------------|
+| --------------------------- | --------------- | ---------------------------------------------------------------------------------------------------- |
 | `lotRecordType`             | `String`        | The type of change for the record.                                                                   |
 | `inventoryLotId`            | `String` (ULID) | The ULID of the primary inventory lot for the inventory lot record.                                  |
 | `inventoryLotName`          | `String`        | The name of the primary inventory lot for the inventory lot record.                                  |

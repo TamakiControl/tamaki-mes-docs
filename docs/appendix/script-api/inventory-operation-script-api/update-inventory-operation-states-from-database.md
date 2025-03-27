@@ -10,7 +10,7 @@ description: "Updates the current inventory operation state from the database."
 
 **No Parameter:** Updates the states of all the [Inventory Operations](../../data-model/inventory-model/inventory-operation) from the database.
 
-**With a Parameter:**  Updates the states of only the specified [Inventory Operations](../../data-model/inventory-model/inventory-operation) from the database given 
+**With a Parameter:** Updates the states of only the specified [Inventory Operations](../../data-model/inventory-model/inventory-operation) from the database given
 the ID of the inventory operations.
 
 ## Syntax

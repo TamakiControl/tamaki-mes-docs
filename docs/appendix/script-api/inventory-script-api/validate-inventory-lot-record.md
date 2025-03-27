@@ -8,10 +8,11 @@ description: "Validates the specified parameters for an inventory lot record."
 
 ## Description
 
-Validates the specified parameters for an [Inventory Lot Records](../../data-model/inventory-model/inventory-lot-record) object and returns any validation errors. 
+Validates the specified parameters for an [Inventory Lot Records](../../data-model/inventory-model/inventory-lot-record) object and returns any validation errors.
 This only checks if the inventory lot object can be saved based on the attributes given.
 
 ## Syntax
+
 ```python
 system.mes.inventory.validateInventoryLotRecord(**lot_record_data)
 ```
@@ -19,7 +20,7 @@ system.mes.inventory.validateInventoryLotRecord(**lot_record_data)
 ## Parameters
 
 | Parameter                   | Type            | Description                                                                                          |
-|-----------------------------|-----------------|------------------------------------------------------------------------------------------------------|
+| --------------------------- | --------------- | ---------------------------------------------------------------------------------------------------- |
 | `lotRecordType`             | `String`        | The type of change for the record.                                                                   |
 | `inventoryLotId`            | `String` (ULID) | The ULID of the primary inventory lot for the inventory lot record.                                  |
 | `inventoryLotName`          | `String`        | The name of the primary inventory lot for the inventory lot record.                                  |

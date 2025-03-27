@@ -17,12 +17,12 @@ organizing personnel activities by time and place.
 The following table outlines the SQL columns for the `personnel_shifts` table, providing a brief description of each,
 along with sample data where applicable.
 
-| Column             | Type            | Description                                                                                           | Example                        |
-|--------------------|-----------------|-------------------------------------------------------------------------------------------------------|--------------------------------|
-| `id`               | `String` (ULID) | Unique identifier for the shift.                                                                      | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1` |
-| `name`             | `String`        | Name of the shift. Must be unique.                                                                    | `Night Shift`                  |
-| `description`      | `String`        | Optional description of the shift.                                                                    | `Shift covering night hours.`  |
-| `ignitionSchedule` | `String`        | Name of the schedule in Ignition's scheduling system.                                                 | `Night_Schedule`               |
+| Column             | Type            | Description                                                                                       | Example                        |
+| ------------------ | --------------- | ------------------------------------------------------------------------------------------------- | ------------------------------ |
+| `id`               | `String` (ULID) | Unique identifier for the shift.                                                                  | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1` |
+| `name`             | `String`        | Name of the shift. Must be unique.                                                                | `Night Shift`                  |
+| `description`      | `String`        | Optional description of the shift.                                                                | `Shift covering night hours.`  |
+| `ignitionSchedule` | `String`        | Name of the schedule in Ignition's scheduling system.                                             | `Night_Schedule`               |
 | `location_id`      | `String` (ULID) | References the location where the shift takes place. See [locations](../location-model/location). | `01JAP8R5RT-3FPXQABY-7KQZT6VF` |
 
 ## Field Details

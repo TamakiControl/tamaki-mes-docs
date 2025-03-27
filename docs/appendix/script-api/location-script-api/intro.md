@@ -3,6 +3,7 @@ sidebar_position: 1
 title: "Introduction to Location API"
 description: "Overview of functions available in the Location API."
 ---
+
 # Location API
 
 Welcome to the Location API documentation. This API provides a comprehensive set of functions for managing and interacting with locations within the system. Below is a list of available functions, each with a brief description and a link to its detailed documentation.
@@ -11,7 +12,7 @@ Welcome to the Location API documentation. This API provides a comprehensive set
 
 ### [`newLocation`](./new-location)
 
-Generates an empty non-persisted [Locations](../../data-model/location-model/location) object to provide the structure required by the API to save a new record into the database. This method must be combined with the [saveLocation](./save-location) method in order to persist the record. Returns a JSON representation of the newly created Location object.
+Generates an empty non-persisted [Locations](../../data-model/location-model/location) object to provide the structure required by the API to save a new record into the database. This method must be combined with the [saveLocation](./save-location) method in order to persist the record. Returns a JSON representation of the newly created location object.
 
 ### [`saveLocation`](./save-location)
 
@@ -39,7 +40,7 @@ Retrieves a list of all [Locations](../../data-model/location-model/location) re
 
 ### [`getLocationTree`](./get-location-tree)
 
-**No Filter:** Retrieves all [Locations](../../data-model/location-model/location) records as a tree structure. 
+**No Filter:** Retrieves all [Locations](../../data-model/location-model/location) records as a tree structure.
 
 **With a Filter:** Retrieves all [Locations](../../data-model/location-model/location) records whose names contain a substring that matches the filter. Returns the parent locations even if they don't contain the filter.
 
@@ -71,7 +72,7 @@ Deletes a [Location Groups](../../data-model/location-model/location-group) reco
 
 ### [`newProperty`](./new-property)
 
-Generates an empty non-persisted [Location Properties](../../data-model/location-model/location-property) object to provide the structure required by the API to save a new record into the database. This method must be combined with the [saveProperty](./save-property) method in order to persist the record. Returns a JSON representation of the newly created Location Property object.
+Generates an empty non-persisted [Location Properties](../../data-model/location-model/location-property) object to provide the structure required by the API to save a new record into the database. This method must be combined with the [saveProperty](./save-property) method in order to persist the record. Returns a JSON representation of the newly created location property object.
 
 ### [`saveProperty`](./save-property)
 
@@ -103,7 +104,7 @@ Deletes a [Location Properties](../../data-model/location-model/location-propert
 
 ### [`newPropertyValue`](./new-property-value)
 
-Generates an empty non-persisted [Location Property Values](../../data-model/location-model/location-property-value) object to provide the structure required by the API to save a new record into the database. This method must be combined with the [savePropertyValue](./save-property-value) method in order to persist the record. Returns a JSON representation of the newly created Location Property Value object.
+Generates an empty non-persisted [Location Property Values](../../data-model/location-model/location-property-value) object to provide the structure required by the API to save a new record into the database. This method must be combined with the [savePropertyValue](./save-property-value) method in order to persist the record. Returns a JSON representation of the newly created location property Value object.
 
 ### [`savePropertyValue`](./save-property-value)
 
@@ -128,10 +129,6 @@ Validates the specified parameters for a [Location Property Values](../../data-m
 ### [`deletePropertyValue`](./delete-property-value)
 
 Deletes a [Location Property Values](../../data-model/location-model/location-property-value) record by its ID. This cannot delete a location property value with references to it. If successful, no response is returned.
-
-### [`deletePropertyValueWithReferences`](./delete-property-value-with-references)
-
-Deletes a [Location Property Values](../../data-model/location-model/location-property-value) record by its ID. Also deletes immediate references to this location if possible. If successful, no response is returned.
 
 ---
 

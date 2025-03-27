@@ -11,6 +11,7 @@ description: "Retrieves all inventory lots."
 Retrieves a list of all [Inventory Lots](../../data-model/inventory-model/inventory-lot) records in the system.
 
 ## Syntax
+
 ```python
 system.mes.inventory.getAllLots()
 ```
@@ -18,7 +19,7 @@ system.mes.inventory.getAllLots()
 ## Parameters
 
 | Parameter | Type | Description                               |
-|-----------|------|-------------------------------------------|
+| --------- | ---- | ----------------------------------------- |
 | None      | -    | This method does not take any parameters. |
 
 ## Returns

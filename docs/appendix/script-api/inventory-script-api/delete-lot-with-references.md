@@ -8,19 +8,20 @@ description: "Deletes the inventory lot with the given ID and any immediate refe
 
 ## Description
 
-Deletes an [Inventory Lots](../../data-model/inventory-model/inventory-lot) record by its ID. 
+Deletes an [Inventory Lots](../../data-model/inventory-model/inventory-lot) record by its ID.
 Also deletes immediate references to this inventory lot if possible.
 
 ## Syntax
+
 ```python
 system.mes.inventory.deleteLotWithReferences(id)
 ```
 
 ## Parameters
 
-| Parameter  | Type            | Description                               |
-|------------|-----------------|-------------------------------------------|
-| `id`       | `String` (ULID) | The ID of the inventory lots to retrieve. |
+| Parameter | Type            | Description                               |
+| --------- | --------------- | ----------------------------------------- |
+| `id`      | `String` (ULID) | The ID of the inventory lots to retrieve. |
 
 ## Returns
 

@@ -1,6 +1,6 @@
 # Location Model Overview
 
-The **Location** model in *TamakiMES* is designed to represent the hierarchical structure and characteristics of
+The **Location** model in _TamakiMES_ is designed to represent the hierarchical structure and characteristics of
 physical locations within a manufacturing environment. Each location can be a part of a larger organizational structure,
 support specific types of processes, and include attributes like storage capabilities, inventory strategies, and maximum
 capacities.
@@ -25,19 +25,19 @@ The **location_location_groups** table is a join table that establishes a many-t
 **LocationGroup** entities. This structure enables locations to be organized into various groups, which can be used for
 categorization, reporting, and managing subsets of locations within the manufacturing environment.
 
-### 4. LocationProperty 
+### 4. LocationProperty
 
 Defines a property that can apply to multiple locations, such as "Temperature Control" or "Storage Type."
 
 ### 5. LocationPropertyValue
 
-Stores the actual values of properties for specific locations, allowing each location to have unique characteristics 
+Stores the actual values of properties for specific locations, allowing each location to have unique characteristics
 based on its configuration.
 
 ---
 
 ## Summary
 
-The Location model in *TamakiMES* provides a robust framework for organizing, managing, and configuring the physical and
+The Location model in _TamakiMES_ provides a robust framework for organizing, managing, and configuring the physical and
 logical layout of a manufacturing facility. Through hierarchical locations, groupings, and customizable properties, the
 model supports complex facility structures and flexible inventory strategies.

@@ -1,7 +1,7 @@
 # Inventory Model Overview
 
-The **Inventory** model organizes and manages stock levels, movement, and traceability within the system, ensuring 
-efficient inventory control. It supports functions such as location-based tracking, lot management, and historical 
+The **Inventory** model organizes and manages stock levels, movement, and traceability within the system, ensuring
+efficient inventory control. It supports functions such as location-based tracking, lot management, and historical
 record-keeping for audits and production. This model consists of the following primary entities:
 
 ---
@@ -25,11 +25,11 @@ comprehensive audit trail for inventory movements.
 
 ### 4. InventoryOperation
 
-Represents the interaction between operations and inventories, including actions on inventory lots, inventory handling, 
+Represents the interaction between operations and inventories, including actions on inventory lots, inventory handling,
 and quantity management. It ensures accurate tracking and alignment of materials with operational processes.
 
 ---
 
-Each entity in this model supports stock tracking, lot management, and inventory movement, enhancing the overall accuracy 
-and control of materials within the system. The **Inventory** model integrates closely with material and production management, 
+Each entity in this model supports stock tracking, lot management, and inventory movement, enhancing the overall accuracy
+and control of materials within the system. The **Inventory** model integrates closely with material and production management,
 enabling real-time visibility, traceability, and compliance across the supply chain and manufacturing lifecycle.

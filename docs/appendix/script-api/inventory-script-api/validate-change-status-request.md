@@ -9,22 +9,23 @@ description: "Validates a change status request based on the provided parameters
 Validates a change status request based on the provided parameters.
 
 ## Syntax
+
 ```python
 system.mes.inventory.validateChangeStatusRequest(**change_status_request)
 ```
 
 ## Parameters
 
-| Parameter      | Type            | Description                                                                                                                               |
-|----------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| `type`         | `String`        | The type of request defined by the LotRecordType Enum. It is internally set and must not be modified, as changes may break functionality. |
-| `lotId`        | `String` (ULID) | The ID of the inventory lot whose status is being updated.                                                                                |
-| `newStatus`    | `String`        | The new status to be assigned to the inventory lot.                                                                                       |
-| `operationId`  | `String` (ULID) | The ID of the operation changing the status of this inventory.                                                                            |
-| `notes`        | `String`        | Notes related to the change status request.                                                                                               |
-| `spare1`       | `String`        | Additional field for user-defined context.                                                                                                |
-| `spare2`       | `String`        | Additional field for user-defined context.                                                                                                |
-| `spare3`       | `String`        | Additional field for user-defined context.                                                                                                |
+| Parameter     | Type            | Description                                                                                                                               |
+| ------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`        | `String`        | The type of request defined by the LotRecordType Enum. It is internally set and must not be modified, as changes may break functionality. |
+| `lotId`       | `String` (ULID) | The ID of the inventory lot whose status is being updated.                                                                                |
+| `newStatus`   | `String`        | The new status to be assigned to the inventory lot.                                                                                       |
+| `operationId` | `String` (ULID) | The ID of the operation changing the status of this inventory.                                                                            |
+| `notes`       | `String`        | Notes related to the change status request.                                                                                               |
+| `spare1`      | `String`        | Additional field for user-defined context.                                                                                                |
+| `spare2`      | `String`        | Additional field for user-defined context.                                                                                                |
+| `spare3`      | `String`        | Additional field for user-defined context.                                                                                                |
 
 ## Returns
 

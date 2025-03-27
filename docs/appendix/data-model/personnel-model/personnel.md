@@ -17,16 +17,16 @@ management, covering assignments, schedules, and skill tracking within the organ
 The following table outlines the SQL columns for the `personnel` table, providing a brief description of each, along
 with sample data where applicable.
 
-| Column                    | Type            | Description                                                                                                       | Example                        |
-|---------------------------|-----------------|-------------------------------------------------------------------------------------------------------------------|--------------------------------|
-| `id`                      | `String` (ULID) | Unique identifier for the person.                                                                                 | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1` |
+| Column                    | Type            | Description                                                                                                   | Example                        |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| `id`                      | `String` (ULID) | Unique identifier for the person.                                                                             | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1` |
 | `personnel_department_id` | `String` (ULID) | References the department to which the person is assigned. See [personnel_departments](personnel-department). | `01JAP8R5RT-3FPXQABY-7KQZT6VF` |
 | `personnel_shift_id`      | `String` (ULID) | Optional reference to the shift assigned to the person. See [personnel_shifts](personnel-shift).              | `01JAP8RJBN-4VYZUKE1-LY2QHV8X` |
-| `personStatus`            | `Enum`          | Status of the person, such as `ACTIVE` or `INACTIVE`.                                                             | `ACTIVE`                       |
-| `firstName`               | `String`        | First name of the individual.                                                                                     | `John`                         |
-| `lastName`                | `String`        | Last name of the individual.                                                                                      | `Doe`                          |
-| `initials`                | `String`        | Generated initials for the person based on their first and last names.                                            | `JD`                           |
-| `username`                | `String`        | Unique username of the person, typically tied to the defined user source.                                         | `jdoe`                         |
+| `personStatus`            | `Enum`          | Status of the person, such as `ACTIVE` or `INACTIVE`.                                                         | `ACTIVE`                       |
+| `firstName`               | `String`        | First name of the individual.                                                                                 | `John`                         |
+| `lastName`                | `String`        | Last name of the individual.                                                                                  | `Doe`                          |
+| `initials`                | `String`        | Generated initials for the person based on their first and last names.                                        | `JD`                           |
+| `username`                | `String`        | Unique username of the person, typically tied to the defined user source.                                     | `jdoe`                         |
 
 ## Field Details
 

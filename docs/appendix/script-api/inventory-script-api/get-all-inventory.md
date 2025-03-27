@@ -11,6 +11,7 @@ description: "Retrieves all inventories."
 Retrieves all the [Inventories](../../data-model/inventory-model/inventory) records.
 
 ## Syntax
+
 ```python
 system.mes.inventory.getAllInventory()
 ```
@@ -18,7 +19,7 @@ system.mes.inventory.getAllInventory()
 ## Parameters
 
 | Parameter | Type | Description                               |
-|-----------|------|-------------------------------------------|
+| --------- | ---- | ----------------------------------------- |
 | None      | -    | This method does not take any parameters. |
 
 ## Returns
