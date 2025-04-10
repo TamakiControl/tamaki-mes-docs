@@ -1,0 +1,43 @@
+---
+sidebar_position: 59
+title: "deleteMaterialReasonCode"
+description: "Deletes the material reason code with the given ID."
+---
+
+# system.mes.material.deleteMaterialReasonCode
+
+## Description
+
+Deletes a [Material Reason Codes](../../data-model/material-model/material-reason-code) record by its ID.
+This cannot delete a material reason code with references to it.
+
+## Syntax
+
+```python
+system.mes.material.deleteMaterialReasonCode(id)
+```
+
+## Parameters
+
+| Parameter | Type            | Description                                   |
+| --------- | --------------- | --------------------------------------------- |
+| `id`      | `String` (ULID) | The ID of the material reason code to delete. |
+
+## Returns
+
+If successful, no response is returned. If unsuccessful, an InUseException, IllegalArgumentException or ConstraintViolationException is thrown.
+If the material reason code that's being deleted has a reference, an ApiResponse Object is returned with details about the encountered error.
+
+| Name      | Type      | Description                                                 |
+| --------- | --------- | ----------------------------------------------------------- |
+| `success` | `Boolean` | Indicates if the delete was successful.                     |
+| `message` | `String`  | The reason why the deletion was successful or unsuccessful. |
+| `data`    | `String`  | The data associated with the deletion.                      |
+| `error`   | `String`  | The errors associated with the deletion.                    |
+
+## Code Examples
+
+```python
+# Delete a material reason code by ID
+system.mes.material.deleteMaterialReasonCode('01JRG9XR3F-2ZQ532FM-TPR50GY6')
+```
