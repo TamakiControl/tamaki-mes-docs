@@ -4,7 +4,7 @@ title: "deleteMaterialClasses"
 description: "Deletes all material classes with the given IDs or paths."
 ---
 
-# system.mes.material.deleteMaterialClass
+# system.mes.material.deleteMaterialClasses
 
 ## Description
 
