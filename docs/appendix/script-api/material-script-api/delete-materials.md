@@ -25,7 +25,7 @@ system.mes.material.deleteMaterials(idsOrPaths)
 
 ## Returns
 
-If successful, no response is returned. If unsuccessful, an InUseException, IllegalArgumentException or ConstraintViolationException is thrown.
+If successful, no response is returned. If unsuccessful, an IllegalArgumentException or ConstraintViolationException is thrown.
 If the material that's being deleted has a reference, an ApiResponse Object is returned with details about the encountered error.
 
 | Name      | Type      | Description                                                 |

@@ -188,7 +188,8 @@ Retrieves a [Material Property Values](../../data-model/material-model/material-
 
 ### [`getPropertiesAndValuesForMaterial`](./get-properties-and-values-for-material)
 
-<!-- TODO -->
+Retrieves all [Material Properties](../../data-model/material-model/material-property) and [Material Property Values](../../data-model/material-model/material-property-value)
+records by its material ID or path. Returns a list of JSON objects representing all material properties and property values for a given material.
 
 ### [`getMaterialPropertyValueReferences`](./get-material-property-value-references)
 
