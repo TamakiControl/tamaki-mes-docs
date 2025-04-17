@@ -1,0 +1,61 @@
+---
+sidebar_position: 23
+title: "validateMaterial"
+description: "Validates the specified parameters for a material."
+---
+
+# system.mes.material.validateMaterial
+
+## Description
+
+Validates the specified parameters for a [Materials](../../data-model/material-model/material) record and returns any validation errors.
+This only checks if the material object can be saved based on the attributes given.
+
+## Syntax
+
+```python
+system.mes.material.validateMaterial(**material_data)
+```
+
+## Parameters
+
+| Parameter         | Type            | Description                                                                  |
+| ----------------- | --------------- | ---------------------------------------------------------------------------- |
+| `name`            | `String`        | The name of the material.                                                    |
+| `description`     | `String`        | The description of the material.                                             |
+| `path`            | `String`        | The path to the material.                                                    |
+| `materialClassId` | `String` (ULID) | The ULID of the material class associated with this material.                |
+| `erpId`           | `String` (ULID) | The ULID of the erp associated with this material.                           |
+| `unitOfMeasureId` | `String` (ULID) | The ULID of the unit of measure associated with this material.               |
+| `shelfLifeDays`   | `Integer`       | The shelf life in days of this material.                                     |
+| `id`              | `String` (ULID) | The ULID of the material (optional, used for updating an existing material). |
+| `notes`           | `String`        | Notes related to the material.                                               |
+| `enabled`         | `Boolean`       | Indicates if the material is active and enabled.                             |
+| `spare1`          | `String`        | Additional field for user-defined context.                                   |
+| `spare2`          | `String`        | Additional field for user-defined context.                                   |
+| `spare3`          | `String`        | Additional field for user-defined context.                                   |
+
+## Returns
+
+Returns a JSON object where keys are field names and values are lists of validation violation messages.
+
+## Code Examples
+
+```python
+# Generate the object structure for a new material object
+material_data = system.mes.material.newMaterial()
+
+# Set basic attributes for the new material
+material_data['materialClassId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
+material_data['name'] = '5391537510212'
+material_data['unitOfMeasureId'] = '01JCH3ENDJ-351WQQPX-WRBNTY4C'
+# (You can continue setting other properties as needed here)
+
+# Validate material parameters
+validation_errors = system.mes.material.validateMaterial(**material_data)
+
+if len(validation_errors) > 0:
+    print('Validation errors found:', validation_errors)
+else:
+    print('Material parameters are valid.')
+```
