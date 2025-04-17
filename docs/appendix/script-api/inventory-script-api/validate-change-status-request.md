@@ -37,7 +37,7 @@ Returns a JSON object where keys are field names and values are lists of validat
 # Generate the object structure for a new change status request object with no initial arguments
 change_status_request = system.mes.inventory.newChangeStatusRequest()
 
-# Set basic attributes for the new change status requestOPOE
+# Set basic attributes for the new change status request
 change_status_request['newStatus'] = 'AVAILABLE'
 change_status_request['lotId'] = '01JJCQEJYG-E31FHVTF-JB6WEJTC'
 # (You can continue setting other properties as needed here)

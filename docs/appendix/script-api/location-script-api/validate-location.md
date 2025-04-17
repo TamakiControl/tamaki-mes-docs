@@ -50,7 +50,7 @@ Returns a JSON object where keys are field names and values are lists of validat
 # Generate the object structure for a new location object
 location_data = system.mes.location.newLocation()
 
-# Set basic attributes for the updated location
+# Set basic attributes for the new location
 location_data['name'] = 'Warehouse'
 location_data['description'] = 'Main storage location for raw materials.'
 location_data['type'] = 'AREA'

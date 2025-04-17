@@ -41,9 +41,9 @@ The JSON Objects in references has the following properties:
 ## Code Examples
 
 ```python
-# Retrieve the references for the inventory operations specified
-inventory_operations_references = system.mes.inventory.operation.getInventoryOperationReferences('01JPAND53P-BZ61RZHZ-V7C6EEHG')
+# Retrieve the references for the inventory operation specified
+inventory_operation_references = system.mes.inventory.operation.getInventoryOperationReferences('01JPAND53P-BZ61RZHZ-V7C6EEHG')
 
-# Output the inventory operations references
-print(inventory_operations_references)
+# Output the inventory operation references
+print(inventory_operation_references)
 ```

@@ -49,7 +49,7 @@ Returns a JSON object where keys are field names and values are lists of validat
 # Generate the object structure for a new bill of materials object
 bill_of_materials_data = system.mes.productionOrder.newBillOfMaterials()
 
-# Set basic attributes for the updated bill of materials
+# Set basic attributes for the new bill of materials
 bill_of_materials_data['quantityOrder'] = 1000.0
 bill_of_materials_data['materialGroup'] = 'CAN'
 bill_of_materials_data['unitOfMeasureId'] = '01JCH3EPVP-1MNNDJTS-37Z75NGB'

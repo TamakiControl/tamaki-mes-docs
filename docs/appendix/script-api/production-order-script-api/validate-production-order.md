@@ -53,7 +53,7 @@ Returns a JSON object where keys are field names and values are lists of validat
 # Generate the object structure for a new production order object
 production_order_data = system.mes.productionOrder.newProductionOrder()
 
-# Set basic attributes for the updated production order
+# Set basic attributes for the new production order
 production_order_data['productId'] = '01JCH3ENGW-82KJDZDR-JHGYCXQN'
 production_order_data['name'] = 'Order001'
 production_order_data['unitOfMeasureId'] = '01JCH3EPVP-1MNNDJTS-37Z75NGB'

@@ -14,7 +14,7 @@ Welcome to the Inventory Script API documentation. This API provides a comprehen
 
 Checks if the [Locations](../../data-model/location-model/location) record can store the given quantity of material. Returns a boolean indicating whether the location can accommodate the given quantity of inventory. Returns a boolean indicating whether the location can accommodate the given quantity of inventory.
 
-**NOTE:** If the inventory lot ID is provided, the Material ID parameter becomes optional but must not be None; instead, use an empty string. If the inventory lot name is provided instead of its ID, the Material ID is required to locate the lot in the database, as two lots with the same name may belong to different materials.
+**NOTE:** If the inventory lot ID is provided, the material ID parameter becomes optional but must not be None; instead, use an empty string. If the inventory lot name is provided instead of its ID, the material ID is required to locate the lot in the database, as two lots with the same name may belong to different materials.
 
 ### [`newConsumeRequest`](./new-consume-request)
 

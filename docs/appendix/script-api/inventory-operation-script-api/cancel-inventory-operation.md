@@ -18,9 +18,9 @@ system.mes.inventory.operation.cancelInventoryOperation(inventoryOperationId)
 
 ## Parameters
 
-| Parameter            | Type            | Description                                  |
-| -------------------- | --------------- | -------------------------------------------- |
-| inventoryOperationId | `String` (ULID) | The ID of the inventory operation to cancel. |
+| Parameter              | Type            | Description                                  |
+| ---------------------- | --------------- | -------------------------------------------- |
+| `inventoryOperationId` | `String` (ULID) | The ID of the inventory operation to cancel. |
 
 ## Returns
 

@@ -25,7 +25,7 @@ system.mes.location.newPropertyValue()
 
 ## Returns
 
-Returns a JSON representation of the newly created location property Value object. The following is a list of keys and default values:
+Returns a JSON representation of the newly created location property value object. The following is a list of keys and default values:
 
 | Key          | Default Value |
 | ------------ | ------------- |
@@ -43,12 +43,12 @@ Returns a JSON representation of the newly created location property Value objec
 ## Code Examples
 
 ```python
-# Generate the object structure for a new location object with no initial arguments
+# Generate the object structure for a new location object
 new_location = system.mes.location.newLocation()
 new_location['name'] = 'DairyCo'
 saved_location = system.mes.location.saveLocation(**new_location)
 
-# Generate the object structure for a new property object with no initial arguments
+# Generate the object structure for a new property object
 new_property = system.mes.location.newProperty()
 new_property['name'] = 'Cows'
 new_property['dataType'] = 'Int'
