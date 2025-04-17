@@ -55,21 +55,21 @@ saved_property = system.mes.location.saveProperty(**new_property)
 print(saved_property)
 
 # Generate the object structure for another new property object to update the previous property
-temperature_property = system.mes.location.newProperty()
+property_data = system.mes.location.newProperty()
 
 # Define property attributes
-temperature_property['id'] = saved_property.id
-temperature_property['name'] = 'Temperature'
-temperature_property['dataType'] = 'Float'
-temperature_property['lowLimit'] = -20
-temperature_property['highLimit'] = 50
-temperature_property['unitOfMeasureId'] = '01JAP8RJBN-4VYZUKE1-LY2QHV8X'
-temperature_property['nullable'] = False
-temperature_property['defaultValue'] = 20.0
+property_data['id'] = saved_property.id
+property_data['name'] = 'Temperature'
+property_data['dataType'] = 'Float'
+property_data['lowLimit'] = -20
+property_data['highLimit'] = 50
+property_data['unitOfMeasureId'] = '01JAP8RJBN-4VYZUKE1-LY2QHV8X'
+property_data['nullable'] = False
+property_data['defaultValue'] = 20.0
 # (You can continue setting other properties as needed here)
 
 # Save the location property to update it in the system
-updated_property = system.mes.location.saveProperty(**temperature_property)
+updated_property = system.mes.location.saveProperty(**property_data)
 
 # Output the JSON representation of the updated location property
 print(updated_property)

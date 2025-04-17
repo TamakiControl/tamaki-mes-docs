@@ -104,7 +104,7 @@ Deletes a [Location Properties](../../data-model/location-model/location-propert
 
 ### [`newPropertyValue`](./new-property-value)
 
-Generates an empty non-persisted [Location Property Values](../../data-model/location-model/location-property-value) object to provide the structure required by the API to save a new record into the database. This method must be combined with the [savePropertyValue](./save-property-value) method in order to persist the record. Returns a JSON representation of the newly created location property Value object.
+Generates an empty non-persisted [Location Property Values](../../data-model/location-model/location-property-value) object to provide the structure required by the API to save a new record into the database. This method must be combined with the [savePropertyValue](./save-property-value) method in order to persist the record. Returns a JSON representation of the newly created location property value object.
 
 ### [`savePropertyValue`](./save-property-value)
 
