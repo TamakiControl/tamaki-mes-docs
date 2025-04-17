@@ -93,7 +93,7 @@ Retrieves a [Operation Records](../../data-model/operation-model/operation-recor
 
 Retrieves a list of references to an [Operation Records](../../data-model/operation-model/operation-record) object by its ID. Returns a list of JSON objects.
 
-### [`updateOperationStatesFromDatabase`](./deupdate-operation-states-from-database)
+### [`updateOperationStatesFromDatabase`](./update-operation-states-from-database)
 
 **No Parameter:** Updates the states of all the [Operations](../../data-model/operation-model/operation) from the database.
 
