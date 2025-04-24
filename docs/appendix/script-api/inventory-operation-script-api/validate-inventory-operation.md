@@ -4,7 +4,7 @@ title: "validateInventoryOperation"
 description: "Validates the specified parameters for an inventory operation."
 ---
 
-# system.mes.inventory.validateLot
+# system.mes.inventory.operation.validateInventoryOperation
 
 ## Description
 
@@ -36,7 +36,7 @@ system.mes.inventory.operation.validateInventoryOperation(**inventory_operation_
 | `sourceLocationPath`              | `String`        | The path of the location for movement source.                                                                      |
 | `destinationLocationId`           | `String` (ULID) | The ULID of the location for movement destination.                                                                 |
 | `destinationLocationPath`         | `String`        | The path of the location for movement destination.                                                                 |
-| `materialSource`                  | `String`        | The strategy used for resolving material id for an operation.                                                      |
+| `materialSource`                  | `String`        | The strategy used for resolving material ID for an operation.                                                      |
 | `materialId`                      | `String` (ULID) | The ULID of the material associated with the inventory operation.                                                  |
 | `materialPath`                    | `String`        | The path of the material associated with the inventory operation.                                                  |
 | `materialExpression`              | `String`        | The Ignition expression for the material associated with this inventory operation.                                 |
@@ -87,5 +87,5 @@ validation_errors = system.mes.inventory.operation.validateInventoryOperation(**
 if len(validation_errors) > 0:
     print('Validation errors found:', validation_errors)
 else:
-    print('Lot parameters are valid.')
+    print('Inventory operation parameters are valid.')
 ```
