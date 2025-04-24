@@ -1,7 +1,7 @@
 ---
 sidebar_position: 31
 title: "deleteProductionOrderPropertyValueWithReferences"
-description: "Deletes the production order property value with the given ID and any immediate references to this property if possible."
+description: "Deletes the production order property value with the given ID and any immediate references to this property value if possible."
 ---
 
 # system.mes.productionOrder.deleteProductionOrderPropertyValueWithReferences

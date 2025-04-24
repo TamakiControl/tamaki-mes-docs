@@ -30,6 +30,6 @@ If successful, no response is returned. If unsuccessful, an IllegalArgumentExcep
 ## Code Examples
 
 ```python
-# Delete a location property by ID or path and all immediate references
-system.mes.location.deletePropertyWithReferences('Cows')
+# Delete a location property by ID or name and all immediate references
+system.mes.location.deletePropertyWithReferences('Temperature')
 ```

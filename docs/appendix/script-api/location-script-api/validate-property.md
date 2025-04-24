@@ -48,20 +48,20 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new property object
-temperature_property = system.mes.location.newProperty()
+new_property = system.mes.location.newProperty()
 
 # Define property attributes
-temperature_property['name'] = 'Temperature'
-temperature_property['dataType'] = 'Float'
-temperature_property['lowLimit'] = -20
-temperature_property['highLimit'] = 50
-temperature_property['unitOfMeasureId'] = '01JAP8RJBN-4VYZUKE1-LY2QHV8X'
-temperature_property['nullable'] = False
-temperature_property['defaultValue'] = 20.0
+new_property['name'] = 'Temperature'
+new_property['dataType'] = 'Float'
+new_property['lowLimit'] = -20
+new_property['highLimit'] = 50
+new_property['unitOfMeasureId'] = '01JAP8RJBN-4VYZUKE1-LY2QHV8X'
+new_property['nullable'] = False
+new_property['defaultValue'] = 20.0
 # (You can continue setting other properties as needed here)
 
 # Validate location property parameters
-validation_errors = system.mes.location.validateProperty(**temperature_property)
+validation_errors = system.mes.location.validateProperty(**new_property)
 
 if len(validation_errors) > 0:
     print('Validation errors found:', validation_errors)

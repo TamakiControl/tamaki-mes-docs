@@ -25,7 +25,7 @@ system.mes.productionOrder.setPropertyValues(productionOrderIdOrName, values)
 | `values`                  | `Mixed`  | The values assigned to the property values if none is provided. The type is mixed as it depends on what the data type of the property. |
 
 <!-- TODO: Get clarification -->
-## Returns
+<!-- ## Returns
 
 Returns a JSON representation of the updated production order property value.
 
@@ -37,4 +37,4 @@ updated_property_value = system.mes.productionOrder.setPropertyValue('01JPMTA7K3
 
 # Output the JSON representation of the updated production order property value
 print(updated_property_value)
-```
+``` -->

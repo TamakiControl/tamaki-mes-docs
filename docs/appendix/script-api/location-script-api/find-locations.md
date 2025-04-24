@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 title: "findLocations"
-description: "Retrieves Locations based on the specified pagination, sort, and column constraint parameters."
+description: "Retrieves locations based on the specified pagination, sort, and column constraint parameters."
 ---
 
 # system.mes.location.findLocations
@@ -40,7 +40,7 @@ Returns a Query Result object with the following properties:
 
 ## Code Examples
 
-Here is an example of how to use a Query Request to retrieve the first ten Locations created in 2025 sorted by their
+Here is an example of how to use a Query Request to retrieve the first ten locations created in 2025 sorted by their
 name.
 
 ```python
