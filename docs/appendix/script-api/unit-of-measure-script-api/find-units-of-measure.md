@@ -1,10 +1,10 @@
 ---
 sidebar_position: 5
-title: "findUnitOfMeasure"
+title: "findUnitsOfMeasure"
 description: "Retrieves units of measure based on the specified pagination, sort, and column constraint parameters."
 ---
 
-# system.mes.unitOfMeasure.findUnitOfMeasure
+# system.mes.unitOfMeasure.findUnitsOfMeasure
 
 ## Description
 
@@ -13,12 +13,12 @@ Retrieves [Units Of Measure](../../data-model/utility-models/unit-of-measure-mod
 ## Syntax
 
 ```python
-system.mes.unitOfMeasure.findUnitOfMeasure(**queryRequest)
+system.mes.unitOfMeasure.findUnitsOfMeasure(**queryRequest)
 ```
 
 ## Parameters
 
-Using Python keyword arguments, a [Query Request](../query-script-api/query-request) can be passed to the `findUnitOfMeasure` function
+Using Python keyword arguments, a [Query Request](../query-script-api/query-request) can be passed to the `findUnitsOfMeasure` function
 without specifying each parameter individually. Please refer to the [Query Request](../query-script-api/query-request) documentation for a list of parameters.
 
 ## Returns
