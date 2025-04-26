@@ -2,7 +2,7 @@
   "label": "system.mes.unitOfMeasure",
   "position": 2,
   "link": {
-    "type": "generated-index",
-    "description": "Data Model."
+    "type": "doc",
+    "id": "appendix/script-api/unit-of-measure-script-api/intro"
   }
 }
