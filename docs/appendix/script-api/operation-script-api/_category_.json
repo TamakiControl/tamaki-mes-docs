@@ -2,7 +2,7 @@
   "label": "system.mes.operation",
   "position": 2,
   "link": {
-    "type": "generated-index",
-    "description": "Data Model."
+    "type": "doc",
+    "id": "appendix/script-api/operation-script-api/intro"
   }
 }
