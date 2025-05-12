@@ -45,3 +45,25 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build  # Path to the built files
           keep_files: true  # Keeps existing files in the gh-pages branch
+
+  run-scraper:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Prepare config string
+        id: prep
+        run: |
+          CONFIG=$(jq -c . config.json)
+          echo "CONFIG=$CONFIG" >> $GITHUB_ENV
+
+      - name: Run docsearch-scraper
+        run: |
+          docker run -i --env-file .env \
+            -e CONFIG="${{ env.CONFIG }}" \
+            typesense/docsearch-scraper:0.11.0
