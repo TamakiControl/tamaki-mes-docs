@@ -1,48 +1,23 @@
 {
   "index_name": "tamaki-mes-docs",
-  "start_urls": [
-    "https://tamakicontrol.github.io/tamaki-mes-docs/"
-  ],
-  "sitemap_urls": [
-    "https://tamakicontrol.github.io/tamaki-mes-docs/sitemap.xml"
-  ],
+  "start_urls": ["https://tamakicontrol.github.io/tamaki-mes-docs/"],
+  "sitemap_urls": ["https://tamakicontrol.github.io/tamaki-mes-docs/sitemap.xml"],
+  "allowed_domains": ["tamakicontrol.github.io"],
+  "js_render": false,
   "sitemap_alternate_links": true,
-  "js_render": true,
-  "selectors": {
-    "lvl0": {
-      "selector": "(//ul[contains(@class,'menu__list')]//a[contains(@class, 'menu__link menu__link--sublist menu__link--active')]/text() | //nav[contains(@class, 'navbar')]//a[contains(@class, 'navbar__link--active')]/text())[last()]",
-      "type": "xpath",
-      "global": true,
-      "default_value": "Documentation"
-    },
-    "lvl1": "header h1",
-    "lvl2": "article h2",
-    "lvl3": "article h3",
-    "lvl4": "article h4",
-    "lvl5": "article h5, article td:first-child",
-    "lvl6": "article h6",
-    "text": "article p, article li, article td:last-child"
-  },
   "strip_chars": " .,;:#",
-  "custom_settings": {
-    "separatorsToIndex": "_",
-    "attributesForFaceting": [
-      "language",
-      "version",
-      "type",
-      "docusaurus_tag"
-    ],
-    "attributesToRetrieve": [
-      "hierarchy",
-      "content",
-      "anchor",
-      "url",
-      "url_without_anchor",
-      "type"
-    ]
-  },
-  "conversation_id": [
-    "833762294"
-  ],
-  "nb_hits": 46250
+  "selectors": {
+    "default": {
+      "lvl0": {
+        "selector": ".navbar__title",
+        "global": true,
+        "default_value": "Documentation"
+      },
+      "lvl1": "article h1, .markdown h1",
+      "lvl2": "article h2, .markdown h2",
+      "lvl3": "article h3, .markdown h3",
+      "lvl4": "article h4, .markdown h4",
+      "text": "article p, article li, .markdown p, .markdown li"
+    }
+  }
 }
