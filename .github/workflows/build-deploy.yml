@@ -47,7 +47,15 @@ jobs:
           keep_files: true  # Keeps existing files in the gh-pages branch
 
   run-scraper:
+    needs: build-and-deploy
     runs-on: ubuntu-latest
+
+    env:
+      TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_API_KEY }}
+      TYPESENSE_HOST: ${{ secrets.TYPESENSE_HOST }}
+      TYPESENSE_PORT: ${{ secrets.TYPESENSE_PORT }}
+      TYPESENSE_PROTOCOL: ${{ secrets.TYPESENSE_PROTOCOL }}
+      TYPESENSE_COLLECTION_NAME: ${{ secrets.TYPESENSE_COLLECTION_NAME }}
 
     steps:
       - name: Checkout repository
@@ -56,10 +64,18 @@ jobs:
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
+      - name: Create .env file
+        run: |
+          echo "TYPESENSE_API_KEY=${{ secrets.TYPESENSE_API_KEY }}" > .env
+          echo "TYPESENSE_HOST=${{ secrets.TYPESENSE_HOST }}" >> .env
+          echo "TYPESENSE_PORT=${{ secrets.TYPESENSE_PORT }}" >> .env
+          echo "TYPESENSE_PROTOCOL=${{ secrets.TYPESENSE_PROTOCOL }}" >> .env
+          echo "TYPESENSE_COLLECTION_NAME=${{ secrets.TYPESENSE_COLLECTION_NAME }}" >> .env
+
       - name: Prepare config string
         id: prep
         run: |
-          CONFIG=$(jq -c . config.json)
+          CONFIG=$(jq -c . typesense-config.json)
           echo "CONFIG=$CONFIG" >> $GITHUB_ENV
 
       - name: Run docsearch-scraper
