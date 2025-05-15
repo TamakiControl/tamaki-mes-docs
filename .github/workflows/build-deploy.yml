@@ -90,5 +90,5 @@ jobs:
       - name: Run docsearch-scraper
         run: |
           docker run -i --env-file .env \
-            -e CONFIG='${{ env.CONFIG }}' \
+            -e CONFIG="${{ env.CONFIG }}" \
             typesense/docsearch-scraper:0.11.0
