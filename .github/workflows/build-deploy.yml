@@ -75,8 +75,17 @@ jobs:
       - name: Prepare config string
         id: prep
         run: |
-          CONFIG=$(jq -c . typesense-config.json)
-          echo "CONFIG=$CONFIG" >> $GITHUB_ENV
+          if [ -f typesense-config.json ]; then
+            CONFIG=$(jq -c . typesense-config.json)
+            if [ -z "$CONFIG" ]; then
+              echo "typesense-config.json is empty or improperly formatted."
+              exit 1
+            fi
+            echo "CONFIG=$CONFIG" >> $GITHUB_ENV
+          else
+            echo "typesense-config.json file not found."
+            exit 1
+          fi
 
       - name: Run docsearch-scraper
         run: |
