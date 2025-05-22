@@ -68,7 +68,7 @@ consistently.
 
 ### `allow_negative_inventory`
 
-- **allow_negative_inventory**: Specifies whether the location permits negative inventory, useful for locations where
+Specifies whether the location permits negative inventory. This is useful for locations where
   overdraws may be intentional.
 
 ### `storage_capacity` and `storage_capacity_unit_id`
