@@ -40,5 +40,5 @@ See [locations](../location-model/location) for details.
 Each entry in the `location_location_groups` table associates one `Location` with one `LocationGroup`, enabling a
 many-to-many relationship. This allows:
 
-- Multiple `Location` entities to be grouped under one or more `LocationGroups`.
+- Multiple `Location` entities to be grouped under one or more `LocationGroup`.
 - Each `LocationGroup` to contain multiple `Location` entries, facilitating flexible grouping and management.

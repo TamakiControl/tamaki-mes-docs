@@ -65,21 +65,6 @@ See [personnel](personnel.md) for more details.
 
 ---
 
-### 4. Personnel Shift
-
-Represents shifts that individuals are assigned to, allowing shift schedules to be linked to departments or locations
-within the facility.
-
-#### Key Fields:
-
-- **name**: Name of the shift (e.g., "Morning Shift")
-- **ignitionSchedule**: Reference to the associated Ignition schedule
-- **location**: Location where the shift operates
-
-See [personnel_shifts](personnel-shift) for more details.
-
----
-
 ## Entity Relationships
 
 The Personnel model supports various relationships between entities to allow hierarchical and organizational

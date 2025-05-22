@@ -34,24 +34,7 @@ along with sample data where applicable.
 
 ## Field Details
 
-### `name`
-
-The `name` field provides a unique identifier for the location group, used to distinguish it from other groups.
-
 ### `description`
 
 An optional field for a more detailed description of the location group, which can provide additional context on its
 purpose or the types of locations it includes.
-
-### Locations
-
-The `LocationGroup` entity is linked to multiple `Location` entities through a many-to-many relationship. This
-association is managed through a join table, `location_location_groups`, which contains the following columns:
-
-| Column              | Type            | Description                                                                                   |
-| ------------------- | --------------- | --------------------------------------------------------------------------------------------- |
-| `location_group_id` | `String` (ULID) | References the `LocationGroup` this entry belongs to.                                         |
-| `location_id`       | `String` (ULID) | References the specific `Location` in the group. See [locations](../location-model/location). |
-
-The many-to-many relationship allows each `LocationGroup` to contain multiple `Location` entities, and each `Location`
-can belong to multiple `LocationGroups`. This structure supports flexible grouping and categorization within the system.

@@ -4,7 +4,7 @@ title: "personnel_person_certifications"
 description: "Documentation for the personnel_person_certifications table, outlining its columns and structure."
 ---
 
-# Personnel Certifications
+# Person-Personnel Certifications
 
 ## Overview
 
@@ -14,14 +14,13 @@ certifications with individuals.
 
 ## Table Structure
 
-The following table outlines the SQL columns for the `personnel_certifications` table, providing a brief description of
+The following table outlines the SQL columns for the `person_personnel_certifications` table, providing a brief description of
 each, along with sample data where applicable.
 
-| Column        | Type                | Description                                     | Example                                       |
-| ------------- | ------------------- | ----------------------------------------------- | --------------------------------------------- |
-| `id`          | `String` (ULID)     | Unique identifier for the certification record. | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`                |
-| `name`        | `String`            | Name of the certification. Must be unique.      | `First Aid Training`                          |
-| `description` | `String` (max 2048) | Optional description of the certification.      | `Basic first aid certification covering CPR.` |
+| Column             | Type            | Description                                                                                                                                    | Example                        |
+|--------------------|-----------------|------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------|
+| `person_id`        | `String` (ULID) | References the `Person` this entry is associated with. See [personnel](../personnel-model/personnel).                                          | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1` |
+| `certification_id` | `String` (ULID) | References the specific `PersonnelCertification` within the group. See [personnel_certifications](../personnel-model/personnel-certification). | `01JAP8R5RT-3FPXQABY-7KQZT6VF` |
 
 ## Field Details
 
