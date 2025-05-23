@@ -14,25 +14,25 @@ that contains the metadata of the document.
 
 ## Table Structure
 
-The following table outlines the SQL columns for the `utilities_document_data` table, providing a brief description of each,
+The following table outlines the SQL columns for the `document_data` table, providing a brief description of each,
 along with sample data where applicable.
 
-| Column          | Type            | Description                                                                                      | Example                             |
-| --------------- | --------------- | ------------------------------------------------------------------------------------------------ | ----------------------------------- |
-| `id`            | `String` (ULID) | Unique identifier for the entity.                                                                | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
-| `enabled`       | `Boolean`       | If the entity is enabled or not.                                                                 | `true`                              |
-| `created_date`  | `DateTime`      | Date the entity was created.                                                                     | `2024-12-31T19:48:44Z`              |
-| `created_by`    | `String`        | Person who created the entity.                                                                   | `TamakiMES`                         |
-| `modified_date` | `DateTime`      | Date the entity was created.                                                                     | `2024-12-31T19:48:44Z`              |
-| `modified_by`   | `String`        | Last person to modify the entity.                                                                | `TamakiMES`                         |
-| `notes`         | `Blob`          | Notes about the entity.                                                                          | `This entity has these extra notes` |
-| `spare1`        | `String`        | The first spare column that can be used for additional context on the entity.                    | `some extra context 1`              |
-| `spare2`        | `String`        | The second spare column that can be used for additional context on the entity.                   | `some extra context 2`              |
-| `spare3`        | `String`        | The third spare column that can be used for additional context on the entity.                    | `some extra context 3`              |
-| `data`          | `Blob`          | Stores the data of the uploaded document (binary large object).                                  | `Binary data`                       |
-| `status`        | `String`        | The status of the uploaded document, as defined by the **DocumentStatus** enum.                  | `ACTIVE`                            |
-| `version`       | `Integer`       | Version of the uploaded Document. Must be greater than 0.                                        | `1`                                 |
-| `document_id`   | `String` (ULID) | References a document. See [utilities_documents](../../utility-models/document-model/documents). | `01JAP8RJBN-9WTGQRQW-Y3XCRTXF`      |
+| Column          | Type            | Description                                                                                                      | Example                             |
+|-----------------|-----------------|------------------------------------------------------------------------------------------------------------------|-------------------------------------|
+| `id`            | `String` (ULID) | Unique identifier for the entity.                                                                                | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
+| `enabled`       | `Boolean`       | If the entity is enabled or not.                                                                                 | `true`                              |
+| `created_date`  | `DateTime`      | Date the entity was created.                                                                                     | `2024-12-31T19:48:44Z`              |
+| `created_by`    | `String`        | Person who created the entity.                                                                                   | `TamakiMES`                         |
+| `modified_date` | `DateTime`      | Date the entity was modified. Value is null upon creation, and gets initially populated upon the first edit.     | `2024-12-31T19:48:44Z`              |
+| `modified_by`   | `String`        | Last person to modify the entity. Value is null upon creation, and gets initially populated upon the first edit. | `TamakiMES`                         |
+| `notes`         | `Blob`          | Notes about the entity.                                                                                          | `This entity has these extra notes` |
+| `spare1`        | `String`        | The first spare column that can be used for additional context on the entity.                                    | `some extra context 1`              |
+| `spare2`        | `String`        | The second spare column that can be used for additional context on the entity.                                   | `some extra context 2`              |
+| `spare3`        | `String`        | The third spare column that can be used for additional context on the entity.                                    | `some extra context 3`              |
+| `data`          | `Blob`          | Stores the data of the uploaded document (binary large object).                                                  | `Binary data`                       |
+| `status`        | `String` (Enum) | The status of the uploaded document, as defined by the **DocumentStatus** enum.                                  | `ACTIVE`                            |
+| `version`       | `Integer`       | Version of the uploaded Document. Must be greater than 0.                                                        | `1`                                 |
+| `document_id`   | `String` (ULID) | References a document. See [documents](../../utility-models/document-model/documents).                           | `01JAP8RJBN-9WTGQRQW-Y3XCRTXF`      |
 
 ## Field Details
 
@@ -53,4 +53,4 @@ and updates to files.
 ### `document_id`
 
 References a `Document` entity that contains the metadata for the uploaded document.
-See [utilities_documents](../../utility-models/document-model/documents) for details.
+See [documents](../../utility-models/document-model/documents) for details.

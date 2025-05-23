@@ -16,31 +16,31 @@ This entity facilitates tracking supplier information, ensuring consistency in p
 The following table outlines the SQL columns for the `material_suppliers` table, providing a brief description of
 each, along with sample data where applicable.
 
-| Column                  | Type               | Description                                                                    | Example                             |
-| ----------------------- | ------------------ | ------------------------------------------------------------------------------ | ----------------------------------- |
-| `id`                    | `String` (ULID)    | Unique identifier for the entity.                                              | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
-| `enabled`               | `Boolean`          | If the entity is enabled or not.                                               | `true`                              |
-| `created_date`          | `DateTime`         | Date the entity was created.                                                   | `2024-12-31T19:48:44Z`              |
-| `created_by`            | `String`           | Person who created the entity.                                                 | `TamakiMES`                         |
-| `modified_date`         | `DateTime`         | Date the entity was created.                                                   | `2024-12-31T19:48:44Z`              |
-| `modified_by`           | `String`           | Last person to modify the entity.                                              | `TamakiMES`                         |
-| `notes`                 | `Blob`             | Notes about the entity.                                                        | `This entity has these extra notes` |
-| `spare1`                | `String`           | The first spare column that can be used for additional context on the entity.  | `some extra context 1`              |
-| `spare2`                | `String`           | The second spare column that can be used for additional context on the entity. | `some extra context 2`              |
-| `spare3`                | `String`           | The third spare column that can be used for additional context on the entity.  | `some extra context 3`              |
-| `name`                  | `String`           | The name of the supplier.                                                      | `The Aluminum Company`              |
-| `description`           | `String` (max 500) | Detailed description of the supplier.                                          | `Supplier for Aluminum`             |
-| `address`               | `String` (max 200) | The address of the supplier.                                                   | `205 Shoshone St N`                 |
-| `city`                  | `String` (max 100) | The city of the supplier.                                                      | `Twin Falls`                        |
-| `state`                 | `String` (max 100) | The state of the supplier.                                                     | `Idaho`                             |
-| `country`               | `String` (max 100) | The country of the supplier.                                                   | `USA`                               |
-| `zip`                   | `String`           | The zip code of the supplier.                                                  | `83301`                             |
-| `primary_contact`       | `String` (max 100) | The primary contact's name.                                                    | `John Smith`                        |
-| `primary_contact_email` | `String`           | The primary contact's email.                                                   | `john.smith@gmail.com`              |
-| `primary_contact_phone` | `String`           | The primary contact's phone number.                                            | `+1-800-555-1234`                   |
-| `alt_contact`           | `String` (max 100) | The alternative contact's name.                                                | `Will Smith`                        |
-| `alt_contact_email`     | `String`           | The alternative contact's email.                                               | `Will.smith@gmail.com`              |
-| `alt_contact_phone`     | `String`           | The alternative contact's phone number.                                        | `+1-800-555-5678`                   |
+| Column                  | Type               | Description                                                                                                      | Example                             |
+|-------------------------|--------------------|------------------------------------------------------------------------------------------------------------------|-------------------------------------|
+| `id`                    | `String` (ULID)    | Unique identifier for the entity.                                                                                | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
+| `enabled`               | `Boolean`          | If the entity is enabled or not.                                                                                 | `true`                              |
+| `created_date`          | `DateTime`         | Date the entity was created.                                                                                     | `2024-12-31T19:48:44Z`              |
+| `created_by`            | `String`           | Person who created the entity.                                                                                   | `TamakiMES`                         |
+| `modified_date`         | `DateTime`         | Date the entity was modified. Value is null upon creation, and gets initially populated upon the first edit.     | `2024-12-31T19:48:44Z`              |
+| `modified_by`           | `String`           | Last person to modify the entity. Value is null upon creation, and gets initially populated upon the first edit. | `TamakiMES`                         |
+| `notes`                 | `Blob`             | Notes about the entity.                                                                                          | `This entity has these extra notes` |
+| `spare1`                | `String`           | The first spare column that can be used for additional context on the entity.                                    | `some extra context 1`              |
+| `spare2`                | `String`           | The second spare column that can be used for additional context on the entity.                                   | `some extra context 2`              |
+| `spare3`                | `String`           | The third spare column that can be used for additional context on the entity.                                    | `some extra context 3`              |
+| `name`                  | `String`           | The name of the supplier.                                                                                        | `The Aluminum Company`              |
+| `description`           | `String` (max 500) | Detailed description of the supplier.                                                                            | `Supplier for Aluminum`             |
+| `address`               | `String` (max 200) | The address of the supplier.                                                                                     | `205 Shoshone St N`                 |
+| `city`                  | `String` (max 100) | The city of the supplier.                                                                                        | `Twin Falls`                        |
+| `state`                 | `String` (max 100) | The state of the supplier.                                                                                       | `Idaho`                             |
+| `country`               | `String` (max 100) | The country of the supplier.                                                                                     | `USA`                               |
+| `zip`                   | `String`           | The zip code of the supplier.                                                                                    | `83301`                             |
+| `primary_contact`       | `String` (max 100) | The primary contact's name.                                                                                      | `John Smith`                        |
+| `primary_contact_email` | `String`           | The primary contact's email.                                                                                     | `john.smith@gmail.com`              |
+| `primary_contact_phone` | `String`           | The primary contact's phone number.                                                                              | `+1-800-555-1234`                   |
+| `alt_contact`           | `String` (max 100) | The alternative contact's name.                                                                                  | `Will Smith`                        |
+| `alt_contact_email`     | `String`           | The alternative contact's email.                                                                                 | `Will.smith@gmail.com`              |
+| `alt_contact_phone`     | `String`           | The alternative contact's phone number.                                                                          | `+1-800-555-5678`                   |
 
 ## Field Details
 

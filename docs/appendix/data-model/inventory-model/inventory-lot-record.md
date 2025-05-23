@@ -18,18 +18,18 @@ The following table outlines the SQL columns for the `inventory_lot_records` tab
 each, along with sample data where applicable.
 
 | Column                       | Type            | Description                                                                                                                       | Example                             |
-| ---------------------------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
+|------------------------------|-----------------|-----------------------------------------------------------------------------------------------------------------------------------|-------------------------------------|
 | `id`                         | `String` (ULID) | Unique identifier for the entity.                                                                                                 | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
 | `enabled`                    | `Boolean`       | If the entity is enabled or not.                                                                                                  | `true`                              |
 | `created_date`               | `DateTime`      | Date the entity was created.                                                                                                      | `2024-12-31T19:48:44Z`              |
 | `created_by`                 | `String`        | Person who created the entity.                                                                                                    | `TamakiMES`                         |
-| `modified_date`              | `DateTime`      | Date the entity was created.                                                                                                      | `2024-12-31T19:48:44Z`              |
-| `modified_by`                | `String`        | Last person to modify the entity.                                                                                                 | `TamakiMES`                         |
+| `modified_date`              | `DateTime`      | Date the entity was modified. Value is null upon creation, and gets initially populated upon the first edit.                      | `2024-12-31T19:48:44Z`              |
+| `modified_by`                | `String`        | Last person to modify the entity. Value is null upon creation, and gets initially populated upon the first edit.                  | `TamakiMES`                         |
 | `notes`                      | `Blob`          | Notes about the entity.                                                                                                           | `This entity has these extra notes` |
 | `spare1`                     | `String`        | The first spare column that can be used for additional context on the entity.                                                     | `some extra context 1`              |
 | `spare2`                     | `String`        | The second spare column that can be used for additional context on the entity.                                                    | `some extra context 2`              |
 | `spare3`                     | `String`        | The third spare column that can be used for additional context on the entity.                                                     | `some extra context 3`              |
-| `lot_record_type`            | `String`        | Describes the action that was taken on a lot, as defined by the **LotRecordType** enum.                                           | `CONSUME`                           |
+| `lot_record_type`            | `String` (Enum) | Describes the action that was taken on a lot, as defined by the **LotRecordType** enum.                                           | `CONSUME`                           |
 | `inventory_lot_id`           | `String` (ULID) | References the primary inventory lot affected by the record. See [inventory_lots](../inventory-model/inventory-lot).              | `01JAP8R5RT-3FPXQABY-7KQZT6VF`      |
 | `secondary_inventory_lot_id` | `String` (ULID) | References a secondary inventory lot involved in the record, if applicable.                                                       | `01JAP8RJBN-9WTGQRQW-Y3XCRTXF`      |
 | `operation_record_id`        | `String` (ULID) | References the associated operation record. See [operation_records](../operation-model/operation-record).                         | `01JAP8RJBN-4VYZUKE1-LY2QHV8X`      |
@@ -37,11 +37,11 @@ each, along with sample data where applicable.
 | `material_reason_code_id`    | `String` (ULID) | References an optional reason code for the inventory action. See [material_reason_codes](../material-model/material-reason-code). | `01JAP8R5RT-3FPXQABY-7KQZT6VF`      |
 | `source_location_id`         | `String` (ULID) | Location where the inventory is sourced. See [locations](../location-model/location).                                             | `01JAP8RJBN-4VYZUKE1-LY2QHV8X`      |
 | `destination_location_id`    | `String` (ULID) | Location where the inventory is transferred. See [locations](../location-model/location).                                         | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
-| `lot_status`                 | `String`        | Initial status of the inventory lot, as defined by the **LotStatus** enum.                                                        | `OPEN`                              |
+| `lot_status`                 | `String` (Enum) | Initial status of the inventory lot, as defined by the **LotStatus** enum.                                                        | `OPEN`                              |
 | `quantity`                   | `Double`        | Quantity of material involved in the record.                                                                                      | `100.5`                             |
 | `start_date`                 | `DateTime`      | Timestamp marking the beginning of the change.                                                                                    | `2024-05-10T08:00:00Z`              |
 | `end_date`                   | `DateTime`      | Timestamp marking the end of the change.                                                                                          | `2024-05-10T10:00:00Z`              |
-| `status`                     | `String`        | Status of the inventory lot record, as defined by the **Status** enum.                                                            | `RUNNING`                           |
+| `status`                     | `String` (Enum) | Status of the inventory lot record, as defined by the **Status** enum.                                                            | `RUNNING`                           |
 
 ## Field Details
 
