@@ -6,16 +6,16 @@ in structure and layout, regardless of the content that is added to them. This m
 
 ---
 
-### 1. Documents
-
-Represents specific documents within the database. The table contains metadata on uploaded documents
-such as the name, document type, latest version, and the unique path needed to reach the document in the database.
-
-### 2. DocumentData
+### 1. DocumentData
 
 Represents the data of documents within the database. The table contains the actual data
 of the documents, the status and version of the file and the document_id that links it to a **Documents** entity
 that contains the metadata of the document.
+
+### 2. Documents
+
+Represents specific documents within the database. The table contains metadata on uploaded documents
+such as the name, document type, latest version, and the unique path needed to reach the document in the database.
 
 ---
 

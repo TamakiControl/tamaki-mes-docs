@@ -18,13 +18,13 @@ The following table outlines the SQL columns for the `production_orders` table, 
 with sample data where applicable.
 
 | Column                | Type            | Description                                                                                                                               | Example                             |
-| --------------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
+|-----------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------|
 | `id`                  | `String` (ULID) | Unique identifier for the entity.                                                                                                         | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
 | `enabled`             | `Boolean`       | If the entity is enabled or not.                                                                                                          | `true`                              |
 | `created_date`        | `DateTime`      | Date the entity was created.                                                                                                              | `2024-12-31T19:48:44Z`              |
 | `created_by`          | `String`        | Person who created the entity.                                                                                                            | `TamakiMES`                         |
-| `modified_date`       | `DateTime`      | Date the entity was created.                                                                                                              | `2024-12-31T19:48:44Z`              |
-| `modified_by`         | `String`        | Last person to modify the entity.                                                                                                         | `TamakiMES`                         |
+| `modified_date`       | `DateTime`      | Date the entity was modified. Value is null upon creation, and gets initially populated upon the first edit.                              | `2024-12-31T19:48:44Z`              |
+| `modified_by`         | `String`        | Last person to modify the entity. Value is null upon creation, and gets initially populated upon the first edit.                          | `TamakiMES`                         |
 | `notes`               | `Blob`          | Notes about the entity.                                                                                                                   | `This entity has these extra notes` |
 | `spare1`              | `String`        | The first spare column that can be used for additional context on the entity.                                                             | `some extra context 1`              |
 | `spare2`              | `String`        | The second spare column that can be used for additional context on the entity.                                                            | `some extra context 2`              |
@@ -36,8 +36,8 @@ with sample data where applicable.
 | `quantity`            | `Double`        | Total quantity planned for production.                                                                                                    | `500.0`                             |
 | `quantity_produced`   | `Double`        | Quantity already produced as part of this production order.                                                                               | `250.0`                             |
 | `quantity_scheduled`  | `Double`        | Quantity scheduled for production.                                                                                                        | `300.0`                             |
-| `schedule_priority`   | `String`        | Priority level for scheduling, determining order in the production queue, as defined by the **SchedulePriority** enum.                    | `NORMAL`                            |
-| `status`              | `String`        | Running status of the production order, as defined by the **ProductionOrderStatus** enum.                                                 | `IDLE`                              |
+| `schedule_priority`   | `String` (Enum) | Priority level for scheduling, determining order in the production queue, as defined by the **SchedulePriority** enum.                    | `NORMAL`                            |
+| `status`              | `String` (Enum) | Running status of the production order, as defined by the **ProductionOrderStatus** enum.                                                 | `IDLE`                              |
 | `location_id`         | `String` (ULID) | References the location where the production is taking place. See [locations](../location-model/location).                                | `01FZ8P9BJN-4VYZUKE1`               |
 | `product_material_id` | `String` (ULID) | References the material being produced. See [materials](../material-model/material).                                                      | `01G8V9S9B9-3QWXS4VC`               |
 | `customer_id`         | `String` (ULID) | References the customer associated with the order. See [production_order_customers](../production-order-model/production-order-customer). | `01H3XZ9JAB-4VKJ5LNY`               |

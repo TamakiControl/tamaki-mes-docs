@@ -17,24 +17,24 @@ management, covering assignments, schedules, and skill tracking within the organ
 The following table outlines the SQL columns for the `personnel` table, providing a brief description of each, along
 with sample data where applicable.
 
-| Column                    | Type            | Description                                                                                                   | Example                             |
-|---------------------------|-----------------|---------------------------------------------------------------------------------------------------------------|-------------------------------------|
-| `id`                      | `String` (ULID) | Unique identifier for the person.                                                                             | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
-| `enabled`                 | `Boolean`       | If the entity is enabled or not.                                                                              | `true`                              |
-| `created_date`            | `DateTime`      | Date the entity was created.                                                                                  | `2024-12-31T19:48:44Z`              |
-| `created_by`              | `String`        | Person who created the entity.                                                                                | `TamakiMES`                         |
-| `modified_date`           | `DateTime`      | Date the entity was created.                                                                                  | `2024-12-31T19:48:44Z`              |
-| `modified_by`             | `String`        | Last person to modify the entity.                                                                             | `TamakiMES`                         |
-| `notes`                   | `Blob`          | Notes about the entity.                                                                                       | `This entity has these extra notes` |
-| `spare1`                  | `String`        | The first spare column that can be used for additional context on the entity.                                 | `some extra context 1`              |
-| `spare2`                  | `String`        | The second spare column that can be used for additional context on the entity.                                | `some extra context 2`              |
-| `spare3`                  | `String`        | The third spare column that can be used for additional context on the entity.                                 | `some extra context 3`              |
-| `personnel_department_id` | `String` (ULID) | References the department to which the person is assigned. See [personnel_departments](personnel-department). | `01JAP8R5RT-3FPXQABY-7KQZT6VF`      |
-| `person_status`           | `String` (Enum) | Status of the person, such as `ACTIVE` or `INACTIVE`.                                                         | `ACTIVE`                            |
-| `first_name`              | `String`        | First name of the individual.                                                                                 | `John`                              |
-| `last_name`               | `String`        | Last name of the individual.                                                                                  | `Doe`                               |
-| `initials`                | `String`        | Generated initials for the person based on their first and last names.                                        | `JD`                                |
-| `username`                | `String`        | Unique username of the person, typically tied to the defined user source.                                     | `jdoe`                              |
+| Column                    | Type            | Description                                                                                                      | Example                             |
+|---------------------------|-----------------|------------------------------------------------------------------------------------------------------------------|-------------------------------------|
+| `id`                      | `String` (ULID) | Unique identifier for the person.                                                                                | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
+| `enabled`                 | `Boolean`       | If the entity is enabled or not.                                                                                 | `true`                              |
+| `created_date`            | `DateTime`      | Date the entity was created.                                                                                     | `2024-12-31T19:48:44Z`              |
+| `created_by`              | `String`        | Person who created the entity.                                                                                   | `TamakiMES`                         |
+| `modified_date`           | `DateTime`      | Date the entity was modified. Value is null upon creation, and gets initially populated upon the first edit.     | `2024-12-31T19:48:44Z`              |
+| `modified_by`             | `String`        | Last person to modify the entity. Value is null upon creation, and gets initially populated upon the first edit. | `TamakiMES`                         |
+| `notes`                   | `Blob`          | Notes about the entity.                                                                                          | `This entity has these extra notes` |
+| `spare1`                  | `String`        | The first spare column that can be used for additional context on the entity.                                    | `some extra context 1`              |
+| `spare2`                  | `String`        | The second spare column that can be used for additional context on the entity.                                   | `some extra context 2`              |
+| `spare3`                  | `String`        | The third spare column that can be used for additional context on the entity.                                    | `some extra context 3`              |
+| `personnel_department_id` | `String` (ULID) | References the department to which the person is assigned. See [personnel_departments](personnel-department).    | `01JAP8R5RT-3FPXQABY-7KQZT6VF`      |
+| `person_status`           | `String` (Enum) | Status of the person, such as `ACTIVE` or `INACTIVE`.                                                            | `ACTIVE`                            |
+| `first_name`              | `String`        | First name of the individual.                                                                                    | `John`                              |
+| `last_name`               | `String`        | Last name of the individual.                                                                                     | `Doe`                               |
+| `initials`                | `String`        | Generated initials for the person based on their first and last names.                                           | `JD`                                |
+| `username`                | `String`        | Unique username of the person, typically tied to the defined user source.                                        | `jdoe`                              |
 
 ## Field Details
 

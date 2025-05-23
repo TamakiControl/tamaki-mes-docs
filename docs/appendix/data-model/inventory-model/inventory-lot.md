@@ -18,20 +18,20 @@ The following table outlines the SQL columns for the `inventory_lots` table, pro
 with sample data where applicable.
 
 | Column               | Type            | Description                                                                                                                          | Example                             |
-| -------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------- |
+|----------------------|-----------------|--------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------|
 | `id`                 | `String` (ULID) | Unique identifier for the entity.                                                                                                    | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
 | `enabled`            | `Boolean`       | If the entity is enabled or not.                                                                                                     | `true`                              |
 | `created_date`       | `DateTime`      | Date the entity was created.                                                                                                         | `2024-12-31T19:48:44Z`              |
 | `created_by`         | `String`        | Person who created the entity.                                                                                                       | `TamakiMES`                         |
-| `modified_date`      | `DateTime`      | Date the entity was created.                                                                                                         | `2024-12-31T19:48:44Z`              |
-| `modified_by`        | `String`        | Last person to modify the entity.                                                                                                    | `TamakiMES`                         |
+| `modified_date`      | `DateTime`      | Date the entity was modified. Value is null upon creation, and gets initially populated upon the first edit.                         | `2024-12-31T19:48:44Z`              |
+| `modified_by`        | `String`        | Last person to modify the entity. Value is null upon creation, and gets initially populated upon the first edit.                     | `TamakiMES`                         |
 | `notes`              | `Blob`          | Notes about the entity.                                                                                                              | `This entity has these extra notes` |
 | `spare1`             | `String`        | The first spare column that can be used for additional context on the entity.                                                        | `some extra context 1`              |
 | `spare2`             | `String`        | The second spare column that can be used for additional context on the entity.                                                       | `some extra context 2`              |
 | `spare3`             | `String`        | The third spare column that can be used for additional context on the entity.                                                        | `some extra context 3`              |
 | `name`               | `String`        | Name of the lot, unique within the context of its parent material.                                                                   | `Batch #1001`                       |
 | `material_id`        | `String` (ULID) | References the material associated with this lot. See [materials](../material-model/material).                                       | `01JAP8R5RT-3FPXQABY-7KQZT6VF`      |
-| `status`             | `String`        | Current status of the inventory lot, as defined by the **LotStatus** enum.                                                           | `OPEN`                              |
+| `status`             | `String` (Enum) | Current status of the inventory lot, as defined by the **LotStatus** enum.                                                           | `OPEN`                              |
 | `total_quantity`     | `Double`        | Total quantity of material contained in the lot.                                                                                     | `1500.0`                            |
 | `expiration_date`    | `DateTime`      | Optional field indicating the expected expiration date of the lot.                                                                   | `2024-12-31T23:59:59Z`              |
 | `closed_date`        | `DateTime`      | Optional field indicating the date the lot was closed.                                                                               | `2024-01-15T12:00:00Z`              |
