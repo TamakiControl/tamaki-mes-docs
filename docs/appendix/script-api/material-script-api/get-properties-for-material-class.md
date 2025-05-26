@@ -4,7 +4,7 @@ title: "getPropertiesForMaterialClass"
 description: "Retrieves all material properties for a material class."
 ---
 
-# system.mes.material.getProperty
+# system.mes.material.getPropertiesForMaterialClass
 
 ## Description
 

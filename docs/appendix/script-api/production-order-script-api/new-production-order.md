@@ -26,16 +26,16 @@ system.mes.productionOrder.newProductionOrder()
 Returns a JSON representation of the newly created production order object. The following is a list of keys and default values:
 
 | Key                 | Default Value |
-| ------------------- | ------------- |
+| ------------------- |---------------|
 | `name`              | `null`        |
 | `productId`         | `null`        |
 | `customerId`        | `null`        |
 | `locationId`        | `null`        |
 | `status`            | `IDLE`        |
 | `schedulePriority`  | `NORMAL`      |
-| `quantity`          | `0`           |
-| `quantityProduced`  | `0`           |
-| `quantityScheduled` | `0`           |
+| `quantity`          | `0.0`         |
+| `quantityProduced`  | `0.0`         |
+| `quantityScheduled` | `0.0`         |
 | `startDate`         | `null`        |
 | `endDate`           | `null`        |
 | `dueDate`           | `null`        |

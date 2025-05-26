@@ -66,7 +66,7 @@ filters = [filterRequest]
 queryRequest['filters'] = filters
 
 # Retrieve the units of measure that match the filter
-result = system.mes.unitOfMeasure.findUnitOfMeasure(**queryRequest)
+result = system.mes.unitOfMeasure.findUnitsOfMeasure(**queryRequest)
 
 # Output the units of measure that match the filter.
 print(result)

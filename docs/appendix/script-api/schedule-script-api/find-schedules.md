@@ -24,18 +24,18 @@ system.mes.schedule.findSchedules(**queryRequest)
 
 Returns a Query Result object with the following properties:
 
-| Type                                                            | Name          | Description                                                                                                      |
-|-----------------------------------------------------------------| ------------- | ---------------------------------------------------------------------------------------------------------------- |
-| List\<[Recipe](../../data-model/schedule-model/schedule.md)> | content       | The list of all records found that meet the specified criteria                                                   |
-| Integer                                                         | totalPages    | If pagination is used, this is the number of total pages of records in the database for the specified page size. |
-| Long                                                            | totalElements | If pagination is used, this is the number of records in the database that meet the specified criteria.           |
-| Integer                                                         | pageSize      | If pagination is used, this is the specified page size.                                                          |
-| Integer                                                         | pageIndex     | If pagination is used, this is the specified page index.                                                         |
-| Boolean                                                         | hasContent    | True if an records were found that meet the specified criteria.                                                  |
-| Boolean                                                         | isFirst       | If pagination is used, this is true if the first page was returned.                                              |
-| Boolean                                                         | isLast        | If pagination is used, this is true if the last page was returned.                                               |
-| Boolean                                                         | hasNext       | If pagination is used, this is true if there is a page of content available after this one.                      |
-| Boolean                                                         | hasPrevious   | If pagination is used, this is true if there is a page of content available before this one.                     |
+| Name            | Type                                                           | Description                                                                                                      |
+|-----------------|----------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| `content`       | `List`\<[Recipe](../../data-model/schedule-model/schedule.md)> | The list of all records found that meet the specified criteria                                                   |
+| `totalPages`    | `Integer`                                                      | If pagination is used, this is the number of total pages of records in the database for the specified page size. |
+| `totalElements` | `Long`                                                         | If pagination is used, this is the number of records in the database that meet the specified criteria.           |
+| `pageSize`      | `Integer`                                                      | If pagination is used, this is the specified page size.                                                          |
+| `pageIndex`     | `Integer`                                                      | If pagination is used, this is the specified page index.                                                         |
+| `hasContent`    | `Boolean`                                                      | True if an records were found that meet the specified criteria.                                                  |
+| `isFirst`       | `Boolean`                                                      | If pagination is used, this is true if the first page was returned.                                              |
+| `isLast`        | `Boolean`                                                      | If pagination is used, this is true if the last page was returned.                                               |
+| `hasNext`       | `Boolean`                                                      | If pagination is used, this is true if there is a page of content available after this one.                      |
+| `hasPrevious`   | `Boolean`                                                      | If pagination is used, this is true if there is a page of content available before this one.                     |
 
 ## Code Examples
 
