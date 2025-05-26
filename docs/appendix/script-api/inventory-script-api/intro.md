@@ -237,10 +237,6 @@ This only checks if the inventory lot object can be saved based on the attribute
 
 Deletes an [Inventory Lots](../../data-model/inventory-model/inventory-lot) record by its ID. This cannot delete a inventory lot with references to it. If successful, no response is returned. If the inventory lot that's being deleted has a reference, a JSON object is returned with details about the encountered error.
 
-### [`deleteLotWithReferences`](./delete-lot-with-references)
-
-Deletes an [Inventory Lots](../../data-model/inventory-model/inventory-lot) record by its ID. Also deletes immediate references to this inventory lot if possible. If successful, no response is returned.
-
 ### [`newInventoryLotRecord`](./new-inventory-lot-record)
 
 Generates an empty non-persisted [Inventory Lot Records](../../data-model/inventory-model/inventory-lot-record) object to provide the structure required by the API to save a new record into the database. This method must be combined with the [saveInventoryLotRecord](./save-inventory-lot-record) method in order to persist the record. Returns a JSON representation of the newly created Inventory Lot Record object.
