@@ -39,5 +39,5 @@ If the material class that's being deleted has a reference, an ApiResponse Objec
 
 ```python
 # Delete all material classes by the given IDs or paths
-system.mes.material.deleteMaterialClass(['RAW', 'IRB'])
+system.mes.material.deleteMaterialClasses(['RAW', 'IRB'])
 ```

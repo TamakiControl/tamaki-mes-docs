@@ -42,6 +42,7 @@ Returns a JSON representation of the saved material reason code.
 new_material_reason_code = system.mes.material.newMaterialReasonCode()
 new_material_reason_code['lotRecordType'] = 'CONSUME'
 new_material_reason_code['reasonCode'] = 'SCRP001'
+material_reason_code_data['requireComments'] = True
 saved_material_reason_code = system.mes.material.saveMaterialReasonCode(**new_material_reason_code)
 
 # Output the JSON representation of the saved material reason code

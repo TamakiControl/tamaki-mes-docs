@@ -47,6 +47,7 @@ new_material_reason_code = system.mes.material.newMaterialReasonCode()
 # Set basic attributes for the new material reason code
 new_material_reason_code['lotRecordType'] = 'CONSUME'
 new_material_reason_code['reasonCode'] = 'SCRP001'
+new_material_reason_code['requiredComments'] = True
 # (You can continue setting other properties as needed here)
 
 # Save the new material reason code to the system

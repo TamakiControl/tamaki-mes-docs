@@ -43,7 +43,7 @@ Returns a JSON representation of the material property value. Returns nothing if
 
 ```python
 # Retrieve a material property value by its ID
-property_value = system.mes.material.getPropertyValueFor('01JRDP4APW-5D56ZQ8C-8949XKYT')
+property_value = system.mes.material.getPropertyValue('01JRDP4APW-5D56ZQ8C-8949XKYT')
 
 # Output the material property value
 print(property_value)

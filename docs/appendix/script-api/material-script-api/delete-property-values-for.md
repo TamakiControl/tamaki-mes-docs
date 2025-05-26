@@ -40,5 +40,5 @@ If the property value that's being deleted has a reference, an ApiResponse Objec
 
 ```python
 # Delete all material property values by the material path and property names
-system.mes.material.deletePropertyValueFor('IRB/5391537510212', ['Density', 'Melting Point'])
+system.mes.material.deletePropertyValuesFor('IRB/5391537510212', ['Density', 'Melting Point'])
 ```

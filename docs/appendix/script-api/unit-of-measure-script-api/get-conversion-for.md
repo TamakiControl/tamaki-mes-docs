@@ -32,7 +32,7 @@ Returns a JSON representation of the unit of measure conversion. Returns nothing
 
 ```python
 # Retrieve a unit of measure conversion by the units of measure and the material ID.
-uomc = system.mes.unitOfMeasure.getUnitOfMeasureConversion('Pound', 'Kg', '01JCH3TP3Y-4B080WHN-MSR8RVP5')
+uomc = system.mes.unitOfMeasure.getConversionFor('Pound', 'Kilogram', '01JCH3TP3Y-4B080WHN-MSR8RVP5')
 
 # Output the unit of measure conversion
 print(uomc)

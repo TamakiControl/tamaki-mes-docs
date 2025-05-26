@@ -28,7 +28,7 @@ Returns a boolean indicating whether the material exists.
 
 ```python
 # Check whether the material exists
-material_exists = system.mes.material.doesMaterialExist('5391537510212')
+material_exists = system.mes.material.doesMaterialExist('IRB/5391537510212')
 
 # Output the boolean result
 print(material_exists)

@@ -44,7 +44,7 @@ Returns a JSON representation of the material property value. Returns nothing if
 
 ```python
 # Retrieve all material property values by material ID or path
-property_values = system.mes.material.getPropertyValueFor('IRB/5391537510212')
+property_values = system.mes.material.getPropertyValuesForMaterial('IRB/5391537510212')
 
 # Output the material property values
 print(property_values)
