@@ -58,10 +58,6 @@ Validates the specified parameters for a [Locations](../../data-model/location-m
 
 Deletes a [Locations](../../data-model/location-model/location) record by its ID or path. This cannot delete a location with references to it. If successful, no response is returned. If the location that's being deleted has a reference, a JSON object is returned with details about the encountered error.
 
-### [`deleteLocationWithReferences`](./delete-location-with-references)
-
-Deletes a [Locations](../../data-model/location-model/location) record by its ID or path. Also deletes immediate references to this location if possible. If successful, no response is returned.
-
 ### [`getLocationGroupReferences`](./get-location-group-references)
 
 Retrieves a list of references to a [Location Groups](../../data-model/location-model/location-group) record by its ID. Returns a list of JSON objects.
@@ -97,10 +93,6 @@ Validates the specified parameters for a [Location Properties](../../data-model/
 ### [`deleteProperty`](./delete-property)
 
 Deletes a [Location Properties](../../data-model/location-model/location-property) record by its ID or name. This cannot delete a location property with references to it. If successful, no response is returned. If the property that's being deleted has a reference, a JSON object is returned with details about the encountered error.
-
-### [`deletePropertyWithReferences`](./delete-property-with-references)
-
-Deletes a [Location Properties](../../data-model/location-model/location-property) record by its ID or name. Also deletes immediate references to this property if possible. If successful, no response is returned.
 
 ### [`newPropertyValue`](./new-property-value)
 

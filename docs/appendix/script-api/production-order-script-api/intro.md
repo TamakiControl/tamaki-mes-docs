@@ -49,11 +49,6 @@ This only checks if the production order object can be saved based on the attrib
 Deletes a [Production Orders](../../data-model/production-order-model/production-order) record by its ID.
 This cannot delete a production order with references to it. If successful, no response is returned.
 
-### [`deleteProductionOrderWithReferences`](./delete-production-order-with-references)
-
-Deletes a [Production Orders](../../data-model/production-order-model/production-order) record by its ID.
-Also deletes immediate references to this production order if possible. If successful, no response is returned.
-
 ### [`newProductionOrderProperty`](./new-production-order-property)
 
 Generates an empty non-persisted [Production Order Properties](../../data-model/production-order-model/production-order-property) object to provide the structure required by the API
@@ -89,11 +84,6 @@ This only checks if the production order property object can be saved based on t
 
 Deletes a [Production Order Properties](../../data-model/production-order-model/production-order-property) record by its ID.
 This cannot delete a production order property with references to it. If successful, no response is returned.
-
-### [`deleteProductionOrderPropertyWithReferences`](./delete-production-order-property-with-references)
-
-Deletes a [Production Order Properties](../../data-model/production-order-model/production-order-property) record by its ID.
-Also deletes immediate references to this property if possible. If successful, no response is returned.
 
 ### [`newProductionOrderPropertyValue`](./new-production-order-property-value)
 
@@ -140,11 +130,6 @@ This only checks if the production order property value object can be saved base
 Deletes a [Production Order Property Values](../../data-model/production-order-model/production-order-property-value) record by its ID.
 This cannot delete a production order property value with references to it. If successful, no response is returned.
 
-### [`deleteProductionOrderPropertyValueWithReferences`](./delete-production-order-property-value-with-references)
-
-Deletes a [Production Order Property Values](../../data-model/production-order-model/production-order-property-value) record by its ID.
-Also deletes immediate references to this production order property value if possible. If successful, no response is returned.
-
 ### [`newBillOfMaterials`](./new-bill-of-materials)
 
 Generates an empty non-persisted [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) object to provide the structure required by the API
@@ -180,20 +165,10 @@ This only checks if the bill of materials object can be saved based on the attri
 Deletes a [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) record by its ID.
 This cannot delete a bill of materials with references to it. If successful, no response is returned.
 
-### [`deleteBillOfMaterialsWithReferences`](./delete-bill-of-materials-with-references)
-
-Deletes a [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) record by its ID.
-Also deletes immediate references to this bill of materials if possible. If successful, no response is returned.
-
 ### [`deleteAllBillOfMaterialsForOrder`](./delete-all-bill-of-materials-for-order)
 
 Deletes all [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) records associated with a production order ID.
 This cannot delete any bill of materials with references to it. If successful, no response is returned.
-
-### [`deleteAllBillOfMaterialsWithReferencesForOrder`](./delete-all-bill-of-materials-with-references-for-order)
-
-Deletes all [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) records associated with a production order ID.
-Also deletes immediate references to the bill of materials if possible. If successful, no response is returned.
 
 ---
 
