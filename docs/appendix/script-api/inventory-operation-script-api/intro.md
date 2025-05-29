@@ -50,10 +50,6 @@ This only checks if the inventory operation object can be saved based on the att
 
 Deletes an [Inventory Operations](../../data-model/inventory-model/inventory-operation) record by its ID. This cannot delete an inventory operation with references to it. If successful, no response is returned.
 
-### [deleteInventoryOperationWithReferences](./delete-inventory-operation-with-references)
-
-Deletes an [Inventory Operations](../../data-model/inventory-model/inventory-operation) record by its ID. Also deletes immediate references to this inventory operation if possible. If successful, no response is returned.
-
 ### [executeInventoryOperation](./execute-inventory-operation)
 
 Executes an [Inventory Operations](../../data-model/inventory-model/inventory-operation) object and creates a new inventory lot record without having to start and then stop the operation.

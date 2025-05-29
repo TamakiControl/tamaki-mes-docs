@@ -53,17 +53,9 @@ This only checks if the material class object can be saved based on the attribut
 
 Deletes a [Material Classes](../../data-model/material-model/material-class) record by its ID or path. This cannot delete a material class with references to it. If successful, no response is returned.
 
-### [`deleteMaterialClassWithReferences`](./delete-material-class-with-references)
-
-Deletes a [Material Classes](../../data-model/material-model/material-class) record by its ID or path. Also deletes immediate references to this material class if possible. If successful, no response is returned.
-
 ### [`deleteMaterialClasses`](./delete-material-classes)
 
 Deletes all [Material Classes](../../data-model/material-model/material-class) records by the given IDs or paths. This cannot delete any material classes with references to it. If successful, no response is returned.
-
-### [`deleteMaterialClassesWithReferences`](./delete-material-classes-with-references)
-
-Deletes all [Material Classes](../../data-model/material-model/material-class) records by the given IDs or paths. Also deletes immediate references to the material classes if possible. If successful, no response is returned.
 
 ### [`newMaterial`](./new-material)
 
@@ -108,17 +100,9 @@ This only checks if the material object can be saved based on the attributes giv
 
 Deletes a [Materials](../../data-model/material-model/material) record by its ID or path. This cannot delete a material with references to it. If successful, no response is returned.
 
-### [`deleteMaterialWithReferences`](./delete-material-with-references)
-
-Deletes a [Materials](../../data-model/material-model/material) record by its ID or path. Also deletes immediate references to this material if possible. If successful, no response is returned.
-
 ### [`deleteMaterials`](./delete-materials)
 
 Deletes all [Materials](../../data-model/material-model/material) records by the given IDs or paths. This cannot delete any materials with references to it. If successful, no response is returned.
-
-### [`deleteMaterialsWithReferences`](./delete-materials-with-references)
-
-Deletes all [Materials](../../data-model/material-model/material) records by the given IDs or paths. Also deletes immediate references to the materials if possible. If successful, no response is returned.
 
 ### [`newProperty`](./new-property)
 
@@ -154,10 +138,6 @@ This only checks if the material property object can be saved based on the attri
 ### [`deleteProperty`](./delete-property)
 
 Deletes a [Material Properties](../../data-model/material-model/material-property) record by its ID. This cannot delete a material property with references to it. If successful, no response is returned.
-
-### [`deletePropertyWithReferences`](./delete-property-with-references)
-
-Deletes a [Material Properties](../../data-model/material-model/material-property) record by its ID. Also deletes immediate references to this property if possible. If successful, no response is returned.
 
 ### [`newPropertyValue`](./new-property-value)
 
@@ -204,33 +184,17 @@ This only checks if the material property value object can be saved based on the
 
 Deletes a [Material Property Values](../../data-model/material-model/material-property-value) record by its ID. This cannot delete a material property value with references to it. If successful, no response is returned.
 
-### [`deletePropertyValueWithReferences`](./delete-property-value-with-references)
-
-Deletes a [Material Property Values](../../data-model/material-model/material-property-value) record by its ID. Also deletes immediate references to this material property value if possible. If successful, no response is returned.
-
 ### [`deletePropertyValueFor`](./delete-property-value-for)
 
 Deletes a [Material Property Values](../../data-model/material-model/material-property-value) record given the material path and property name. This cannot delete a material property value with references to it. If successful, no response is returned.
-
-### [`deletePropertyValueWithReferencesFor`](./delete-property-value-with-references-for)
-
-Deletes a [Material Property Values](../../data-model/material-model/material-property-value) record given the material path and property name. Also deletes immediate references to this material property value if possible. If successful, no response is returned.
 
 ### [`deletePropertyValues`](./delete-property-values)
 
 Deletes all [Material Property Values](../../data-model/material-model/material-property-value) records by the given IDs. This cannot delete any material property value with references to it. If successful, no response is returned.
 
-### [`deletePropertyValuesWithReferences`](./delete-property-values-with-references)
-
-Deletes all [Material Property Values](../../data-model/material-model/material-property-value) records by the given IDs. Also deletes immediate references to any material property value if possible. If successful, no response is returned.
-
 ### [`deletePropertyValuesFor`](./delete-property-values-for)
 
 Deletes all [Material Property Values](../../data-model/material-model/material-property-value) records given the material path and property names. This cannot delete any material property value with references to it. If successful, no response is returned.
-
-### [`deletePropertyValuesWithReferencesFor`](./delete-property-values-with-references-for)
-
-Deletes all [Material Property Values](../../data-model/material-model/material-property-value) records given the material path and property names. Also deletes immediate references to any material property value if possible. If successful, no response is returned.
 
 ### [`newMaterialReasonCode`](./new-material-reason-code)
 

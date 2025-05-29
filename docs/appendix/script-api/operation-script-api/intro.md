@@ -53,10 +53,6 @@ This only checks if the operation object can be saved based on the attributes gi
 
 Deletes an [Operations](../../data-model/operation-model/operation) record by its ID. This cannot delete an operation with references to it. If successful, no response is returned.
 
-### [`deleteOperationWithReferences`](./delete-operation-with-references)
-
-Deletes an [Operations](../../data-model/operation-model/operation) record by its ID. Also deletes immediate references to this operation if possible. If successful, no response is returned.
-
 ### [`startOperation`](./start-operation)
 
 Starts an [Operations](../../data-model/operation-model/operation) object. Returns a JSON object of the operation execution result for the start of the operation.

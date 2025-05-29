@@ -54,11 +54,6 @@ This only checks if the unit of measure object can be saved based on the attribu
 Deletes a [Units Of Measure](../../data-model/utility-models/unit-of-measure-model/unit-of-measure) record by its ID.
 This cannot delete a unit of measure with references to it. If successful, no response is returned.
 
-### [`deleteUnitOfMeasureWithReferences`](./delete-unit-of-measure-with-references)
-
-Deletes a [Units Of Measure](../../data-model/utility-models/unit-of-measure-model/unit-of-measure) record by its ID.
-Also deletes immediate references to this unit of measure if possible. If successful, no response is returned.
-
 ### [`newUnitOfMeasureConversion`](./new-unit-of-measure-conversion)
 
 Generates an empty non-persisted [Unit Of Measure Conversions](../../data-model/utility-models/unit-of-measure-model/unit-of-measure-conversion) object to provide the structure required by the API
@@ -101,11 +96,6 @@ This only checks if the unit of measure conversion object can be saved based on 
 
 Deletes a [Unit Of Measure Conversions](../../data-model/utility-models/unit-of-measure-model/unit-of-measure-conversion) record by its ID.
 This cannot delete a unit of measure conversion with references to it. If successful, no response is returned.
-
-### [`deleteUnitOfMeasureConversionWithReferences`](./delete-unit-of-measure-conversion-with-references)
-
-Deletes a [Unit Of Measure Conversions](../../data-model/utility-models/unit-of-measure-model/unit-of-measure-conversion) record by its ID.
-Also deletes immediate references to this unit of measure conversion if possible. If successful, no response is returned.
 
 ### [`addConversion`](./add-conversion)
 
