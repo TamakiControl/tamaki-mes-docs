@@ -4,7 +4,7 @@ title: "exportAsJson"
 description: "Exports all operations as a JSON string (UTF-8 encoded)"
 ---
 
-# system.mes.operation.importFromJson
+# system.mes.operation.exportAsJson
 
 ## Description
 

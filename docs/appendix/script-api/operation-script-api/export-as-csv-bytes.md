@@ -4,7 +4,7 @@ title: "exportAsCsvBytes"
 description: "Exports all operations as raw bytes in CSV format (UTF-8 encoded)"
 ---
 
-# system.mes.operation.importFromJson
+# system.mes.operation.exportAsCsvBytes
 
 ## Description
 

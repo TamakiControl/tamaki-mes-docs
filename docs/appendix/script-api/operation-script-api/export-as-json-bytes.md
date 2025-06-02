@@ -4,7 +4,7 @@ title: "exportAsJsonBytes"
 description: "Exports all operations as raw bytes in JSON format (UTF-8 encoded)"
 ---
 
-# system.mes.operation.importFromJson
+# system.mes.operation.exportAsJsonBytes
 
 ## Description
 
