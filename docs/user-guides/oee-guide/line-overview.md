@@ -79,14 +79,16 @@ Refer to [tables](TODO) for information on how tables work in Tamaki MES.
 
 Selecting a row in the table allows the two buttons in the top left of the downtime records section to be selected.
 
-The ![img_3.png](img_3.png) button opens the downtime reason selection popup:
+The `Set Downtime Reason` button, <img src="img_3.png" alt="img_3.png" style="vertical-align: middle;">, opens the downtime reason selection popup:
+
 ![img.png](img.png)
 **Sections:**
 - **Downtime Reason Selection Tree:** Allows users to select a reason for the downtime event from a hierarchical list of predefined reasons.
 - **Acknowledge Button:** Clicking this button acknowledges the downtime event, marking it as reviewed and preventing further edits.
 - **Notes Field:** A text field for users to add additional notes or comments related to the downtime event.
 
-The ![img_4.png](img_4.png) button opens the Split Downtime Event popup:
+The `Split Downtime Event` button, <img src="img_4.png" alt="img_4.png" style="vertical-align: middle;">, opens the Split Downtime Event popup:
+
 ![img_2.png](img_2.png)
 **Sections:**
 - Select and drag the middle slider to choose the split point for the downtime event.
