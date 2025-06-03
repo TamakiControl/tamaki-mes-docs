@@ -15,6 +15,9 @@ description: "OEE Setup Configuration"
 **Description:**
 - The Setup screen allows users to configure the OEE model, including defining [States](#states), [Modes](#modes), [Downtime Reasons](#downtime-reasons), and other [OEE Configurations](#oee-configuration). This screen is essential for customizing the OEE tracking system to fit the specific needs of the manufacturing operation.
 
+**How to use:**
+- To populate the [OEE Configurations](#oee-configuration), [States](#states), [Modes](#modes), and [Downtime Reasons](#downtime-reasons) tabs, the user must first select a location from the location tree on the left side of the screen. This selection will determine which configurations are displayed and modified.
+
 ## OEE Configuration
 
 **Example:**
@@ -77,7 +80,7 @@ TODO
 
 ##### Enable Availability
 
-Enables availability TODO
+Enables availability tracking.
 
 ##### State Expression
 
