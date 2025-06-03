@@ -7,10 +7,10 @@ description: "OEE Setup Configuration"
 # Setup
 
 **Navigation:**
-![setup-navigation.png](setup-navigation.png)
+![Setup navigation menu](setup-navigation.png)
 
 **Example:**
-![setup.png](setup.png)
+![Setup screen interface](setup.png)
 
 **Description:**
 - The Setup screen allows users to configure the OEE model, including defining [States](#states), [Modes](#modes), [Downtime Reasons](#downtime-reasons), and other [OEE Configurations](#oee-configuration). This screen is essential for customizing the OEE tracking system to fit the specific needs of the manufacturing operation.
@@ -21,31 +21,31 @@ description: "OEE Setup Configuration"
 ## OEE Configuration
 
 **Example:**
-![setup-oee-configuration.png](setup-oee-configuration.png)
+![OEE Configuration tab](setup-oee-configuration.png)
 
 ### OEE Configuration Workflow
 
 1. Select a location from the dropdown menu to configure OEE settings for that specific location.
 2. Set the [Max Record Duration](#max-record-duration) and [Prune Days](#prune-days).
-3. fill out the [Mode Expression](#mode-expression).
-4. configure the [Availability](#availability) settings:
+3. Fill out the [Mode Expression](#mode-expression).
+4. Configure the [Availability](#availability) settings:
    - [Enable Availability](#enable-availability).
-   - fill out the [State Expression](#state-expression).
-   - configure the [Downtime Reason Source](#downtime-reason-source) and [Downtime Reason Expression](#downtime-reason-expression).
-5. configure the [Performance](#performance) settings:
+   - Fill out the [State Expression](#state-expression).
+   - Configure the [Downtime Reason Source](#downtime-reason-source) and [Downtime Reason Expression](#downtime-reason-expression).
+5. Configure the [Performance](#performance) settings:
    - [Enable Performance](#enable-performance).
-   - fill out the [Production Count Unit of Measure](#production-count-unit-of-measure).
-   - fill out the [Production Rate Time Unit](#production-rate-time-unit).
-   - fill out the [Production Count Expression](#production-count-expression).
-   - select the [Production Count Calculation Type](#production-count-calculation-type).
-   - set the [Production Count Overflow Value](#production-count-overflow-value).
-   - configure the [Standard Rate Source](#standard-rate-source) and set the [Standard Rate (PCS/Minute)](#standard-rate-pcs-minute).
-6. configure the [Quality](#quality) settings:
+   - Fill out the [Production Count Unit of Measure](#production-count-unit-of-measure).
+   - Fill out the [Production Rate Time Unit](#production-rate-time-unit).
+   - Fill out the [Production Count Expression](#production-count-expression).
+   - Select the [Production Count Calculation Type](#production-count-calculation-type).
+   - Set the [Production Count Overflow Value](#production-count-overflow-value).
+   - Configure the [Standard Rate Source](#standard-rate-source) and set the [Standard Rate](#standard-rate-uomtime-unit).
+6. Configure the [Quality](#quality) settings:
     - [Enable Quality](#enable-quality).
-    - fill out the [Waste Count Expression](#waste-count-expression).
-    - select the [Waste Count Calculation Type](#waste-count-calculation-type).
-    - set the [Waste Count Overflow Value](#waste-count-overflow-value).
-7. configure the [Production Order Source](#production-order-source).
+    - Fill out the [Waste Count Expression](#waste-count-expression).
+    - Select the [Waste Count Calculation Type](#waste-count-calculation-type).
+    - Set the [Waste Count Overflow Value](#waste-count-overflow-value).
+7. Configure the [Production Order Source](#production-order-source).
 8. Save the configuration by clicking the "Confirm" button at the bottom of the screen.
 
 ### OEE Configuration Fields
@@ -64,13 +64,13 @@ Toggles the OEE tracking for the selected location.
 
 #### Max Record Duration
 
-Maximum duration for an OEE record in seconds. Normally following events OEE record to end:
-- event A TODO
-- event B TODO
-- event C TODO
+Maximum duration for an OEE record in seconds. Normally, the following events cause an OEE record to end:
+- Event A TODO
+- Event B TODO
+- Event C TODO
 - ETC... TODO
 
-If none of those events occur within the [Max Record Duration](#max-record-duration), then the OEE record will end anyway. The purpose of this is to control the granularity of the records. TODO Changing this value will not affect existing records, but will apply to new records created after the change.
+If none of those events occur within the [Max Record Duration](#max-record-duration), the OEE record will end automatically. The purpose of this is to control the granularity of the records. TODO Changing this value will not affect existing records, but will apply to new records created after the change.
 
 #### Prune Days
 
@@ -93,7 +93,7 @@ The [Expression Field](terms-and-definitions#expression-field) where the PLC tag
 ##### Downtime Reason Source
 
 Opens a dropdown with the following options:
-- **Manual:** The downtime reason will be manually selected by the user when a downtime event occurs using the [Downtime Entry](downtime-entry) Page.
+- **Manual:** The downtime reason will be manually selected by the user when a downtime event occurs using the [Downtime Entry](downtime-entry) page.
 - **Expression:** The downtime reason will be determined by the [Downtime Reason Expression](#downtime-reason-expression) field.
 
 ##### Downtime Reason Expression
@@ -179,7 +179,7 @@ TODO The [Expression Field](terms-and-definitions#expression-field) where the PL
 ## States
 
 **Example:**
-![setup-states.png](setup-states.png)
+![States configuration tab](setup-states.png)
 
 ### State Workflow
 
@@ -195,14 +195,14 @@ Deletes the selected state.
 #### Edit
 
 Opens the following popup to edit the selected state (in this case, "Downtime"):
-![setup-states-edit.png](setup-states-edit.png)
+![Edit state popup](setup-states-edit.png)
 
 Refer to [Edit or Create New State Popup Fields](#edit-or-create-new-state-popup-fields) for details on the popup.
 
 #### Create New
 
 Opens the following popup to create a new state:
-![setup-states-create-new.png](setup-states-create-new.png)
+![Create new state popup](setup-states-create-new.png)
 
 Refer to [Edit or Create New State Popup Fields](#edit-or-create-new-state-popup-fields) for details on the popup.
 
@@ -218,7 +218,7 @@ The name of the state, and what is displayed in the [Line Graphic](line-overview
 
 ##### Interruption Location
 
-This is a dropdown that allows the user to select interruption location.
+This is a dropdown that allows the user to select an interruption location.
 
 The interruption location is the location that is causing the state of the selected location to be set to the selected state. 
 
@@ -250,7 +250,7 @@ The color associated with the state, used for visual representation in the OEE t
 ## Modes
 
 **Example:**
-![setup-modes.png](setup-modes.png)
+![Modes configuration tab](setup-modes.png)
 
 ### Mode Workflow
 
@@ -266,14 +266,14 @@ Deletes the selected mode.
 #### Edit
 
 Opens the following popup to edit the selected mode (in this case, "CIP"):
-![setup-modes-edit.png](setup-modes-edit.png)
+![Edit mode popup](setup-modes-edit.png)
 
 Refer to [Edit or Create New Mode Popup Fields](#edit-or-create-new-mode-popup-fields) for details on the popup.
 
 #### Create New
 
 Opens the following popup to create a new mode:
-![setup-modes-create-new.png](setup-modes-create-new.png)
+![Create new mode popup](setup-modes-create-new.png)
 
 Refer to [Edit or Create New Mode Popup Fields](#edit-or-create-new-mode-popup-fields) for details on the popup.
 
@@ -315,7 +315,7 @@ The fixed value for the expected duration of the mode, defined in seconds. This 
 ## Downtime Reasons
 
 **Example:**
-![setup-downtime-reasons.png](setup-downtime-reasons.png)
+![Downtime reasons configuration tab](setup-downtime-reasons.png)
 
 ### Downtime Reasons Workflow
 
@@ -326,9 +326,9 @@ The fixed value for the expected duration of the mode, defined in seconds. This 
 
 #### Downtime Reason Tree
 
-The downtime reason tree displays the hierarchy of downtime reasons. It allows users to navigate through the downtime reasons, making it add or edit a downtime reason.
+The downtime reason tree displays the hierarchy of downtime reasons. It allows users to navigate through the downtime reasons, making it easier to add or edit a downtime reason.
 
-To edit a downtime reason, select it from the tree to populate the right side of the screen. see [Edit or Create New Downtime Reason Popup Fields](#edit-or-create-new-downtime-reason-popup-fields) for details on the popup.
+To edit a downtime reason, select it from the tree to populate the right side of the screen. See [Edit or Create New Downtime Reason Fields](#edit-or-create-new-downtime-reason-fields) for details on the fields.
 
 To create a new downtime reason, right-click either on empty space in the tree, or on the downtime reason which you want to use as the parent reason. Click `Add Downtime Reason` in the context menu that appears from right-clicking. This will populate the right side of the screen with empty values, and set the [Parent Downtime Reason](#parent-downtime-reason) to what was right-clicked (see [Edit or Create New Downtime Reason Fields](#edit-or-create-new-downtime-reason-fields)).
 
@@ -349,3 +349,4 @@ TODO The integer code for the downtime reason, matching the PLC tag that indicat
 #### Parent Downtime Reason
 
 The parent downtime reason, which is used to create a hierarchy of downtime reasons. This allows for categorization and grouping of related downtime reasons, making it easier to analyze and report on downtime events. TODO This field is not editable.
+

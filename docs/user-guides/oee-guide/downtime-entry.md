@@ -7,10 +7,10 @@ description: "OEE Downtime Entry Screen"
 # Downtime Entry
 
 **Navigation:**
-![downtime-entry-navigation.png](downtime-entry-navigation.png)
+![Downtime entry navigation menu](downtime-entry-navigation.png)
 
 **Example:**
-![downtime-entry.png](downtime-entry.png)
+![Downtime entry screen interface](downtime-entry.png)
 
 **Description:**
 TODO changing while I was writing this.

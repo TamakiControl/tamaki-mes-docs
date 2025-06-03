@@ -7,10 +7,10 @@ description: "OEE Line Overview Screen"
 # Line Overview
 
 **Navigation:**
-![line-overview-navigation.png](line-overview-navigation.png)
+![Line overview navigation menu](line-overview-navigation.png)
 
 **Example:**
-![line-overview.png](line-overview.png)
+![Line overview screen interface](line-overview.png)
 
 **Description:**
 - The Line Overview screen provides a comprehensive view of the production line's performance, including OEE metrics, downtime records, and a graphical representation of the line's status. It allows users to monitor the overall effectiveness of the equipment and identify areas for improvement.
@@ -22,24 +22,25 @@ description: "OEE Line Overview Screen"
 
 ## Top Bar
 **Example:**
-![line-overview-top-bar.png](line-overview-top-bar.png)
+![Line overview top bar section](line-overview-top-bar.png)
+
 **Description:**
 - The top bar of the Line Overview screen displays key information about the selected line, including:
   - **Current Order Status**: 
-  ![line-overview-top-bar-current-order-status.png](line-overview-top-bar-current-order-status.png)
-  The percentage of the current order that has been completed, the state of the order, and what may be causing delays (i.e. what is starving it).
+  ![Current order status display](line-overview-top-bar-current-order-status.png)
+  The percentage of the current order that has been completed, the state of the order, and what may be causing delays (i.e., what is starving it).
 
   - **Current OEE**:
-  ![line-overview-top-bar-current-oee.png](line-overview-top-bar-current-oee.png)
+  ![Current OEE metrics display](line-overview-top-bar-current-oee.png)
   The overall equipment effectiveness of the line, calculated based on availability, performance, and quality metrics.
 
   - **OEE State Timeline**:
-  ![line-overview-top-bar-oee-state-timeline.png](line-overview-top-bar-oee-state-timeline.png)
-  A timeline that shows the historical OEE state of the line, allowing users to see trends and patterns over time. Hover over the coloured bars that make up the timeline to see the start time, end time, and duration of the event associated with the colour (see [States](setup#states) for what state each colour represents).
+  ![OEE state timeline visualization](line-overview-top-bar-oee-state-timeline.png)
+  A timeline that shows the historical OEE state of the line, allowing users to see trends and patterns over time. Hover over the colored bars that make up the timeline to see the start time, end time, and duration of the event associated with the color (see [States](setup#states) for what state each color represents).
   
 ## Line Graphic
 **Example:**
-![line-overview-line-graphic.png](line-overview-line-graphic.png)
+![Line graphic visualization](line-overview-line-graphic.png)
 
 **Description:**
 - The line graphic provides a visual representation of the production line, showing the current state of each piece of equipment. It includes:
@@ -48,7 +49,8 @@ description: "OEE Line Overview Screen"
   - **Interactive Elements**: Users can click on individual pieces of equipment to view detailed information and historical data.
 
 Selecting a node opens the following popup:
-![img_1.png](img_1.png)
+![Node details popup](img_1.png)
+
 These table details include:
 
 | **Field** | **Description**                    |
@@ -93,3 +95,5 @@ The `Split Downtime Event` button, <img src="img_4.png" alt="img_4.png" style="v
 **Sections:**
 - Select and drag the middle slider to choose the split point for the downtime event.
 - Click `Confirm` to split the selected downtime event into two separate events at the chosen point.
+
+

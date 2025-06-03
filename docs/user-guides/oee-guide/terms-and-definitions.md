@@ -118,28 +118,25 @@ TODO
   - **Common Formulas Button:** <img src="img_9.png" alt="img_9.png" style="vertical-align: middle;">
     - Opens a dropdown menu with options to insert common functions into the expression field. Selecting a function will insert it into the `Text Entry Section` (see [Ignition Expression Language Documentation](https://www.docs.inductiveautomation.com/docs/8.1/platform/expression-language-and-syntax) for more details):
       - <img src="img_10.png" alt="img_10.png" style="vertical-align: middle;">
-  - **Tag Selector Button:** <img src="img_5.png" alt="img_5.png" style="vertical-align: middle;">
+  - **Tag Selector Button:** <img src="img_5.png" alt="Tag selector button icon" style="vertical-align: middle;">
     - Opens a tag selector popup, allowing users to select a PLC tag to bind to the expression field:
-    - <img src="img_13.png" alt="img_13.png" style="vertical-align: middle;">
-     1. The top dropdown allows users to select the tag provider, and the tree below allows users to navigate through the tags in the selected provider.
-    2. To add a tag to the `Text Entry Section`, either select the tag and click `Confirm`, or just double-click the desired tag.
-
-
-
+    - <img src="img_13.png" alt="Tag selector popup interface" style="vertical-align: middle;">
+      1. The top dropdown allows users to select the tag provider, and the tree below allows users to navigate through the tags in the selected provider.
+      2. To add a tag to the `Text Entry Section`, either select the tag and click `Confirm`, or just double-click the desired tag.
 
 - **Tutorials:**
   - **Syntax:** Please refer to the [Ignition Expression Language Documentation](https://www.docs.inductiveautomation.com/docs/8.1/platform/expression-language-and-syntax) for detailed information on the syntax of expression fields.
   - **Example workflows:**
-    - **Binding the PLC mode tag of a location to track it's OEE:**
+    - **Binding the PLC mode tag of a location to track its OEE:**
       1. Navigate to the [OEE Setup](setup) screen.
-      2. Select the location from the location tree on the left side of the screen to modify. (if the location does not have an OEE configuration, you will need to create one first by clicking `Create Config` <img src="img_14.png" alt="img_14.png" style="vertical-align: middle; width: 250px; height: auto;">).
+      2. Select the location from the location tree on the left side of the screen to modify. (if the location does not have an OEE configuration, you will need to create one first by clicking `Create Config` <img src="img_14.png" alt="Create Config button" style="vertical-align: middle; width: 250px; height: auto;">).
       3. Locate the `Mode Expression` field in the OEE Configuration tab.
-      4. Select the tag selector button on the right side of the `Mode Expression` field: <img src="img_5.png" alt="img_5.png" style="vertical-align: middle;">
+      4. Select the tag selector button on the right side of the `Mode Expression` field: <img src="img_5.png" alt="Tag selector button icon" style="vertical-align: middle;">
       5. In the tag selector popup, navigate to the PLC mode tag for the selected location and select it: 
-         - <img src="img_6.png" alt="img_6.png" style="vertical-align: middle;">
-      6. Click the `Confirm` to input the PLC mode tag to the `Mode Expression` field.
+         - <img src="img_6.png" alt="PLC tag selection example" style="vertical-align: middle;">
+      6. Click the `Confirm` button to input the PLC mode tag to the `Mode Expression` field.
       7. The tag will now be bound to the OEE model, allowing it to track the mode of the location in real-time:
-         - <img src="img_7.png" alt="img_7.png" style="vertical-align: middle;">
+         - <img src="img_7.png" alt="Completed mode expression binding" style="vertical-align: middle;">
   - **TODO:**
     - Add more examples of how to use the expression field in different scenarios.
 
