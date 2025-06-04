@@ -26,12 +26,14 @@ This document provides definitions and explanations of key terms related to Over
 ## State
 - **Definition:** 
   - The current operational status of a piece of equipment or production line.
+  - Data model [state](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Fstate.md), [state record](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Foee-state-record.md)
 - **Purpose:**
   - To indicate whether the equipment is running, stopped, or in a fault condition.
 
 ## Mode
 - **Definition:** 
   - The operational mode of a piece of equipment, such as running, setup, maintenance, or idle.
+  - Data model [mode](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Fmode.md), [mode record](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Foee-mode-record.md)
 - **Purpose:**
   - To categorize the operational state of equipment based on its current function or activity.
 
@@ -69,23 +71,21 @@ This document provides definitions and explanations of key terms related to Over
   - To evaluate the effectiveness of the production process in delivering products that meet quality requirements.
 
 ## Downtime Reason
-TODO
 - **Definition:** 
   - The specific cause of downtime for a piece of equipment or production line.
+  - Data model [downtime reason](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Foee-downtime-reason.md)
 - **Purpose:**
   - To categorize and analyze the reasons for equipment downtime, enabling targeted improvements to reduce future occurrences.
 
 ## Production Count
-TODO
 - **Definition:** 
   - The total number of units produced by a piece of equipment or production line during a specific time period.
 - **Purpose:**
   - To track production output and measure the efficiency of the manufacturing process.
 
 ## Waste Count
-TODO
 - **Definition:** 
-  - The total number of defective or non-conforming units produced during a specific time period.
+  - The total number of units that were produced but did not meet quality standards, resulting in waste.
 - **Purpose:**
   - To quantify the amount of waste generated in the production process, helping to identify areas for quality improvement.
 

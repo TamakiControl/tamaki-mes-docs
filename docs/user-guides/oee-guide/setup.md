@@ -52,11 +52,11 @@ description: "OEE Setup Configuration"
 
 #### Export
 
-Exports the OEE configuration for the selected location to a TODO file. This can be useful for backup purposes or for transferring configurations between different instances of Tamaki MES.
+Exports the OEE configuration for the selected location to an Excel file. This can be useful for backup purposes or for transferring configurations between different instances of Tamaki MES.
 
 #### Delete
 
-Deletes the OEE configuration for the selected location. TODO This will remove all OEE records for this location, so use with caution.
+Deletes the OEE configuration for the selected location. This will not affect any existing OEE Records at this location, they will remain.
 
 #### Enabled
 
@@ -65,12 +65,13 @@ Toggles the OEE tracking for the selected location.
 #### Max Record Duration
 
 Maximum duration for an OEE record in seconds. Normally, the following events cause an OEE record to end:
-- Event A TODO
-- Event B TODO
-- Event C TODO
-- ETC... TODO
+- OEE Mode change at the location.
+- Standard rate change at the location.
+- Production order change at the location.
+- [future] Operation start or end at the location.
+- [future] Shift start or end at the location.
 
-If none of those events occur within the [Max Record Duration](#max-record-duration), the OEE record will end automatically. The purpose of this is to control the granularity of the records. TODO Changing this value will not affect existing records, but will apply to new records created after the change.
+If none of those events occur within the [Max Record Duration](#max-record-duration), the OEE record will end automatically. The purpose of this is to control the granularity of the records. Changing this value will not affect existing records, but will apply to new records created after the change.
 
 #### Prune Days
 
@@ -78,13 +79,13 @@ Number of days to retain OEE records. (If blank, records will be kept indefinite
 
 #### [Mode](terms-and-definitions#mode) Expression
 
-The [Expression Field](terms-and-definitions#expression-field) where the PLC tag for the [Mode](terms-and-definitions#mode) of the location is bound to the OEE model.
+The [Expression Field](terms-and-definitions#expression-field) is evaluated to an integer value corresponding to a [Mode](terms-and-definitions#mode)'s code of the location is bound to the OEE model.
 
 #### Availability
 
 ##### Enable Availability
 
-Enables availability tracking for the OEE Records. TODO This allows the system to track when the equipment is available for production and when it is not.
+Enables availability tracking for the OEE Records. This allows the system to track when the location is running and when it is not, providing insights into the operational efficiency of the equipment.
 
 ##### State Expression
 
@@ -104,7 +105,7 @@ The [Expression Field](terms-and-definitions#expression-field) where the PLC tag
 
 ##### Enable Performance
 
-Enables performance tracking for the OEE Records. TODO This allows the system to track the production count and rate of the equipment.
+Enables performance tracking for the OEE Records. This allows the system to track the production count and rate of the location.
 
 ##### Production Count Unit of Measure
 
@@ -123,12 +124,11 @@ The [Expression Field](terms-and-definitions#expression-field) where the PLC tag
 ##### Production Count Calculation Type
 
 Opens a dropdown with the following options:
-- **Direct:** TODO The production count will be calculated directly from the value in the [Production Count Expression](#production-count-expression) field.
-- **Delta:** The production count will be calculated as the (TODO involves the [Production Count Overflow Value](#production-count-overflow-value)).
+- **Direct:** The production count will be calculated directly from the value in the [Production Count Expression](#production-count-expression) field.
+- **Delta:** The production count will be calculated as the difference between the current value and the previous value. This uses the [Production Count Overflow Value](#production-count-overflow-value) to know when the value has rolled over back to 0.
 
 ##### Production Count Overflow Value
-
-TODO
+The tag capturing production count will roll over to 0 when it reaches this value. This is used to calculate the production count when then [Production Count Calculation Type](#production-count-calculation-type) is set to `delta`.
 
 ##### Standard Rate Source
 
@@ -138,7 +138,7 @@ Opens a dropdown with the following options:
 
 ##### Standard Rate  ([UoM](#production-count-unit-of-measure)/[Time Unit](#production-rate-time-unit))
 
-The fixed value for the [Standard Rate](terms-and-definitions#standard-rate) of the location, defined in the unit of measure and time unit specified in the [Production Count Unit of Measure](#production-count-unit-of-measure) and [Production Rate Time Unit](#production-rate-time-unit) fields. TODO This is used to define the expected production rate for the equipment.
+The fixed value for the [Standard Rate](terms-and-definitions#standard-rate) of the location, defined in the unit of measure and time unit specified in the [Production Count Unit of Measure](#production-count-unit-of-measure) and [Production Rate Time Unit](#production-rate-time-unit) fields. This is used to define the expected production rate for the location.
 
 ##### Standard Rate Expression ([UoM](#production-count-unit-of-measure)/[Time Unit](#production-rate-time-unit))
 
@@ -148,7 +148,7 @@ The [Expression Field](terms-and-definitions#expression-field) where the PLC tag
 
 ##### Enable Quality
 
-Enables quality tracking for the OEE Records. TODO This allows the system to track the waste count and rate of the equipment.
+Enables quality tracking for the OEE Records. This allows the system to track the waste count and rate of the location.
 
 ##### Waste Count Expression
 
@@ -157,24 +157,24 @@ The [Expression Field](terms-and-definitions#expression-field) where the PLC tag
 ##### Waste Count Calculation Type
 
 Opens a dropdown with the following options:
-- **Direct:** TODO The waste count will be calculated directly from the value in the [Waste Count Expression](#waste-count-expression) field.
-- **Delta:** The waste count will be calculated as the (TODO involves the [Waste Count Overflow Value](#waste-count-overflow-value)).
+- **Direct:** The waste count will be calculated directly from the value in the [Waste Count Expression](#waste-count-expression) field.
+- **Delta:**  The waste count will be calculated as the difference between the current value and the previous value. This uses the [Waste Count Overflow Value](#waste-count-overflow-value) to know when the value has rolled over back to 0.
 
 ##### Waste Count Overflow Value
 
-TODO
+The tag capturing waste count will roll over to 0 when it reaches this value. This is used to calculate the waste count when then [Waste Count Calculation Type](#waste-count-calculation-type) is set to `delta`.
 
 #### Production Order
 
 ##### Production Order Source
 
 Opens a dropdown with the following options:
-- **None:** TODO No production order will be tracked for the location.
+- **None:** No production order will be tracked for the location.
 - **Expression:** The production order will be determined by the [Production Order Expression](#production-order-expression) field.
 
 ##### Production Order Expression
 
-TODO The [Expression Field](terms-and-definitions#expression-field) where the PLC tag for the [Production Order](terms-and-definitions#production-order) of the location is bound to the OEE model.
+The [Expression Field](terms-and-definitions#expression-field) where the PLC tag for the [Production Order](terms-and-definitions#production-order) of the location is bound to the OEE model.
 
 ## States
 
@@ -237,11 +237,11 @@ This is the integer code for the state, matching the PLC tag that indicates the 
 ##### State Calculation Type
 
 This is a dropdown that allows the user to select how the OEE record of the state will be handled. The options are:
-- **Idle:** TODO how the OEE record handles this state.
-- **Running:** TODO how the OEE record handles this state.
-- **Downtime:** TODO how the OEE record handles this state.
-- **Starved:** TODO how the OEE record handles this state.
-- **Blocked:** TODO how the OEE record handles this state.
+- **Idle:** This is the default state for the OEE record, indicating that the location is not currently running or producing anything.
+- **Running:** This is the state for the OEE record when the location is actively producing items. This state is counted towards the OEE calculation as running time.
+- **Downtime:** This is the state for the OEE record when the location is not producing items due to a planned or unplanned downtime event. 
+- **Starved:** This is the state for the OEE record when the location is not producing items because it is waiting for input from a previous location in the production line.
+- **Blocked:** This is the state for the OEE record when the location is not producing items because it is waiting for output to be accepted by a subsequent location in the production line.
 
 ##### Colour
 
@@ -281,7 +281,7 @@ Refer to [Edit or Create New Mode Popup Fields](#edit-or-create-new-mode-popup-f
 
 #### Name
 
-The name of the mode, and what is displayed in the TODO. This should be a descriptive name that clearly indicates the purpose of the mode (e.g. `Idle`, `Production`, `Product Changover`, `Maintenance`).
+The name of the mode. This should be a descriptive name that clearly indicates the purpose of the mode (e.g. `Idle`, `Production`, `Product Changover`, `Maintenance`).
 
 #### Mode Code
 
@@ -290,13 +290,13 @@ The integer code for the mode, matching the PLC tag that indicates the mode of t
 #### Mode Calculation Type
 
 This is a dropdown that allows the user to select how the OEE record of the mode will be handled. The options are:
-- **Schedule Production:** TODO how the OEE record handles this mode.
-- **Scheduled Downtime:** TODO how the OEE record handles this mode.
-- **Unscheduled Downtime:** TODO how the OEE record handles this mode.
+- **Schedule Production:** This mode is used for scheduled production runs, where the location is expected to produce items according to a predefined schedule.
+- **Scheduled Downtime:** This mode is used for planned downtime events, such as maintenance or setup changes, where the location is not expected to produce items.
+- **Unscheduled Downtime:** This mode is used for when the location is not planned to be producing items but not due to a planned downtime event. This could be simply idle time between production runs.
 
 #### Colour
 
-The color associated with the mode, used for visual representation in the TODO.
+The color associated with the mode, used for visual representation.
 
 #### Expected Duration Source
 
@@ -316,6 +316,8 @@ The fixed value for the expected duration of the mode, defined in seconds. This 
 
 **Example:**
 ![Downtime reasons configuration tab](setup-downtime-reasons.png)
+
+### Downtime Reasons Model [oee downtime reason](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Foee-downtime-reason.md)
 
 ### Downtime Reasons Workflow
 
@@ -340,13 +342,13 @@ The name of the downtime reason, which is displayed in [Downtime Entry](downtime
 
 #### Description
 
-A concise, detailed description of the downtime reason, providing additional context and information about the cause of the downtime. TODO This can help operators and managers understand the issue better and take appropriate actions.
+A concise, detailed description of the downtime reason, providing additional context and information about the cause of the downtime. This can help operators and managers understand the issue better and take appropriate actions.
 
 #### Code
 
-TODO The integer code for the downtime reason, matching the PLC tag that indicates the downtime reason of the location. This code is used to identify the downtime reason in the PLC and should be unique for each downtime reason.
+The integer code for the downtime reason, matching the PLC tag that indicates the downtime reason of the location. This code is used to identify the downtime reason in the PLC and should be unique for each downtime reason.
 
 #### Parent Downtime Reason
 
-The parent downtime reason, which is used to create a hierarchy of downtime reasons. This allows for categorization and grouping of related downtime reasons, making it easier to analyze and report on downtime events. TODO This field is not editable.
+The parent downtime reason, which is used to create a hierarchy of downtime reasons. This allows for categorization and grouping of related downtime reasons, making it easier to analyze and report on downtime events.
 
