@@ -66,9 +66,7 @@ const config: Config = {
 			typesenseServerConfig: {
 				nodes: [
 					{
-						host: process.env.NODE_ENV === 'production'
-							? process.env.TYPESENSE_HOST
-							: 'localhost',
+						host: process.env.TYPESENSE_HOST,
 						port: process.env.TYPESENSE_PORT,
 						protocol: process.env.TYPESENSE_PROTOCOL,
 					},
