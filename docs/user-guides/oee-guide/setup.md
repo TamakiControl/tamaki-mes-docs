@@ -46,7 +46,7 @@ description: "OEE Setup Configuration"
     - Select the [Waste Count Calculation Type](#waste-count-calculation-type).
     - Set the [Waste Count Overflow Value](#waste-count-overflow-value).
 7. Configure the [Production Order Source](#production-order-source).
-8. Save the configuration by clicking the "Confirm" button at the bottom of the screen.
+8. Save the configuration by clicking the `Confirm` button at the bottom of the screen.
 
 ### OEE Configuration Fields
 
@@ -183,8 +183,16 @@ The [Expression Field](terms-and-definitions#expression-field) where the PLC tag
 
 ### State Workflow
 
-1. Click on the "Add State" button to create a new state.
-2. TODO
+#### Create New State
+1. Click on the `Create New` button to create a new state.
+2. Fill out the fields in the popup that appears (see [Edit or Create New State Popup Fields](#edit-or-create-new-state-popup-fields) for details).
+3. Click the `Confirm` button to save the new state.
+
+#### Edit State
+1. Select a state from the list on the left side of the screen.
+2. Click on the `Edit` button to open the edit popup.
+3. Modify the fields in the popup as needed (see [Edit or Create New State Popup Fields](#edit-or-create-new-state-popup-fields) for details).
+4. Click the `Confirm` button to save the changes.
 
 ### State Fields
 
@@ -254,8 +262,16 @@ The color associated with the state, used for visual representation in the OEE t
 
 ### Mode Workflow
 
-1. Click on the "Add Mode" button to create a new mode.
-2. TODO
+#### Create New Mode
+1. Click on the `Create New` button to create a new mode.
+2. Fill out the fields in the popup that appears (see [Edit or Create New Mode Popup Fields](#edit-or-create-new-mode-popup-fields) for details).
+3. Click the `Confirm` button to save the new mode.
+
+#### Edit Mode
+1. Select a mode from the list on the left side of the screen.
+2. Click on the `Edit` button to open the edit popup.
+3. Modify the fields in the popup as needed (see [Edit or Create New Mode Popup Fields](#edit-or-create-new-mode-popup-fields) for details).
+4. Click the `Confirm` button to save the changes.
 
 ### Mode Fields
 
@@ -321,8 +337,16 @@ The fixed value for the expected duration of the mode, defined in seconds. This 
 
 ### Downtime Reasons Workflow
 
-1. Click on the "Add Downtime Reason" button to create a new downtime reason.
-2. TODO
+##### Create New Downtime Reason
+1. right-click either on empty space in the tree, or on the downtime reason which you want to use as the parent reason.
+2. Click `Add Downtime Reason` in the context menu that appears from right-clicking. This will populate the right side of the screen with empty values, and set the [Parent Downtime Reason](#parent-downtime-reason) to what was right-clicked (see [Edit or Create New Downtime Reason Fields](#edit-or-create-new-downtime-reason-fields)).
+3. Fill out the fields on the right side of the screen (see [Edit or Create New Downtime Reason Fields](#edit-or-create-new-downtime-reason-fields) for details).
+4. Click the `Confirm` button to save the new downtime reason.
+
+##### Edit Downtime Reason
+1. Select a downtime reason from the tree on the left side of the screen. The right side of the screen will be populated with the details of the selected downtime reason.
+2. Modify the fields on the right side of the screen as needed (see [Edit or Create New Downtime Reason Fields](#edit-or-create-new-downtime-reason-fields) for details).
+3. Click the `Confirm` button to save the changes.
 
 ### Downtime Reasons Fields
 
@@ -332,7 +356,7 @@ The downtime reason tree displays the hierarchy of downtime reasons. It allows u
 
 To edit a downtime reason, select it from the tree to populate the right side of the screen. See [Edit or Create New Downtime Reason Fields](#edit-or-create-new-downtime-reason-fields) for details on the fields.
 
-To create a new downtime reason, right-click either on empty space in the tree, or on the downtime reason which you want to use as the parent reason. Click `Add Downtime Reason` in the context menu that appears from right-clicking. This will populate the right side of the screen with empty values, and set the [Parent Downtime Reason](#parent-downtime-reason) to what was right-clicked (see [Edit or Create New Downtime Reason Fields](#edit-or-create-new-downtime-reason-fields)).
+To create a new downtime reason, 
 
 ### Edit or Create New Downtime Reason Fields
 
