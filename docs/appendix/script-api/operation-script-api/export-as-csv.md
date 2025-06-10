@@ -33,7 +33,7 @@ csvString = system.mes.operation.exportAsCsv()
 system.perspective.download("operations.csv", csvBytes)
 ```
 
-### Vision
+### Script Console
 ```python
 csvString = system.mes.operation.exportAsCsv()
 path = system.file.saveFile("operations.csv")

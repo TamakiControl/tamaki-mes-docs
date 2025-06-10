@@ -33,7 +33,7 @@ jsonString = system.mes.operation.exportAsJson()
 system.perspective.download("operations.json", jsonBytes)
 ```
 
-### Vision
+### Script Console
 ```python
 jsonString = system.mes.operation.exportAsJson()
 path = system.file.saveFile("operations.json")
