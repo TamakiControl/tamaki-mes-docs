@@ -116,10 +116,6 @@ Retrieves a list of [Production Order Property Values](../../data-model/producti
 Retrieves a [Production Order Property Values](../../data-model/production-order-model/production-order-property-value) record given
 a production order ID and a property ID or name. Returns a JSON representation of the production order property value.
 
-### [`getProductionOrderPropertyValueReferences`](./get-production-order-property-value-references)
-
-Retrieves a list of references to a [Production Order Property Values](../../data-model/production-order-model/production-order-property-value) record by its ID. Returns a list of JSON objects.
-
 ### [`validateProductionOrderPropertyValue`](./validate-production-order-property-value)
 
 Validates the specified parameters for a [Production Order Property Values](../../data-model/production-order-model/production-order-property-value) record and returns any validation errors.
