@@ -33,7 +33,7 @@ jsonString = system.mes.location.exportAsJson()
 system.perspective.download("locations.json", jsonBytes)
 ```
 
-### Vision
+### Script Console
 ```python
 jsonString = system.mes.location.exportAsJson()
 path = system.file.saveFile("locations.json")
