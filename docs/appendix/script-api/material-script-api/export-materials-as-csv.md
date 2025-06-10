@@ -33,7 +33,7 @@ csvString = system.mes.material.exportMaterialsAsCsv()
 system.perspective.download("materials.csv", csvBytes)
 ```
 
-### Vision
+### Script Console
 ```python
 csvString = system.mes.material.exportMaterialsAsCsv()
 path = system.file.saveFile("materials.csv")

@@ -33,7 +33,7 @@ jsonString = system.mes.material.exportMaterialsAsJson()
 system.perspective.download("materials.json", jsonBytes)
 ```
 
-### Vision
+### Script Console
 ```python
 jsonString = system.mes.material.exportMaterialsAsJson()
 path = system.file.saveFile("materials.json")
