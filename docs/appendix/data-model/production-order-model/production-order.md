@@ -93,12 +93,12 @@ See [materials](../material-model/material) for details.
 References the `ProductionOrderCustomer` entity associated with the production order, providing us information on the customer.
 See [production_order_customers](../production-order-model/production-order-customer) for details.
 
-### `unit_of_measure_id`
-
-References the unit of measure applicable to this material, such as kilograms or liters, supporting precise tracking of quantities.
-See [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure) for details.
-
 ### `schedule_shift_record_id`
 
 References the `ScheduleShiftRecord` entity that defines the shift during which this production order is scheduled. This relationship connects the production order to its specific shift instance, allowing for better tracking of production orders within the context of scheduled shifts.
 See [schedule_shift_records](../schedule-shift-model/schedule-shift-record) for details.
+
+### `unit_of_measure_id`
+
+References the unit of measure applicable to this material, such as kilograms or liters, supporting precise tracking of quantities.
+See [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure) for details.
