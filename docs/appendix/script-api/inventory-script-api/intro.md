@@ -235,7 +235,7 @@ This only checks if the inventory lot object can be saved based on the attribute
 
 ### [`deleteLot`](./delete-lot)
 
-Deletes an [Inventory Lots](../../data-model/inventory-model/inventory-lot) record by its ID. This cannot delete a inventory lot with references to it. If successful, no response is returned. If the inventory lot that's being deleted has a reference, a JSON object is returned with details about the encountered error.
+Deletes an [Inventory Lots](../../data-model/inventory-model/inventory-lot) record by its ID. This cannot delete a inventory lot with references to it. If successful, an ApiResponse Object is returned with the success bool set True. If the inventory lot that's being deleted has a reference, a JSON object is returned with details about the encountered error.
 
 ### [`newInventoryLotRecord`](./new-inventory-lot-record)
 

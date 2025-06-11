@@ -52,7 +52,7 @@ This only checks if the unit of measure object can be saved based on the attribu
 ### [`deleteUnitOfMeasure`](./delete-unit-of-measure)
 
 Deletes a [Units Of Measure](../../data-model/utility-models/unit-of-measure-model/unit-of-measure) record by its ID.
-This cannot delete a unit of measure with references to it. If successful, no response is returned.
+This cannot delete a unit of measure with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
 
 ### [`newUnitOfMeasureConversion`](./new-unit-of-measure-conversion)
 
@@ -95,7 +95,7 @@ This only checks if the unit of measure conversion object can be saved based on 
 ### [`deleteUnitOfMeasureConversion`](./delete-unit-of-measure-conversion)
 
 Deletes a [Unit Of Measure Conversions](../../data-model/utility-models/unit-of-measure-model/unit-of-measure-conversion) record by its ID.
-This cannot delete a unit of measure conversion with references to it. If successful, no response is returned.
+This cannot delete a unit of measure conversion with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
 
 ### [`addConversion`](./add-conversion)
 

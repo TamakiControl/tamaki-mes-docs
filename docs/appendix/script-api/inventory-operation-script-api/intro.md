@@ -48,7 +48,7 @@ This only checks if the inventory operation object can be saved based on the att
 
 ### [deleteInventoryOperation](./delete-inventory-operation)
 
-Deletes an [Inventory Operations](../../data-model/inventory-model/inventory-operation) record by its ID. This cannot delete an inventory operation with references to it. If successful, no response is returned.
+Deletes an [Inventory Operations](../../data-model/inventory-model/inventory-operation) record by its ID. This cannot delete an inventory operation with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
 
 ### [executeInventoryOperation](./execute-inventory-operation)
 

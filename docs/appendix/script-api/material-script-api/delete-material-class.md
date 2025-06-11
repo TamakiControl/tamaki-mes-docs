@@ -25,7 +25,7 @@ system.mes.material.deleteMaterialClass(idOrPath)
 
 ## Returns
 
-If successful, no response is returned. If unsuccessful, an IllegalArgumentException or ConstraintViolationException is thrown.
+If successful, an ApiResponse Object is returned with the success bool set True. If unsuccessful, an IllegalArgumentException or ConstraintViolationException is thrown.
 If the material class that's being deleted has a reference, an ApiResponse Object is returned with details about the encountered error.
 
 | Name      | Type      | Description                                                 |

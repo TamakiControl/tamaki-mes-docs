@@ -47,7 +47,7 @@ This only checks if the production order object can be saved based on the attrib
 ### [`deleteProductionOrder`](./delete-production-order)
 
 Deletes a [Production Orders](../../data-model/production-order-model/production-order) record by its ID.
-This cannot delete a production order with references to it. If successful, no response is returned.
+This cannot delete a production order with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
 
 ### [`newProductionOrderProperty`](./new-production-order-property)
 
@@ -83,7 +83,7 @@ This only checks if the production order property object can be saved based on t
 ### [`deleteProductionOrderProperty`](./delete-production-order-property)
 
 Deletes a [Production Order Properties](../../data-model/production-order-model/production-order-property) record by its ID.
-This cannot delete a production order property with references to it. If successful, no response is returned.
+This cannot delete a production order property with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
 
 ### [`newProductionOrderPropertyValue`](./new-production-order-property-value)
 
@@ -124,7 +124,7 @@ This only checks if the production order property value object can be saved base
 ### [`deleteProductionOrderPropertyValue`](./delete-production-order-property-value)
 
 Deletes a [Production Order Property Values](../../data-model/production-order-model/production-order-property-value) record by its ID.
-This cannot delete a production order property value with references to it. If successful, no response is returned.
+This cannot delete a production order property value with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
 
 ### [`newBillOfMaterials`](./new-bill-of-materials)
 
@@ -159,12 +159,12 @@ This only checks if the bill of materials object can be saved based on the attri
 ### [`deleteBillOfMaterials`](./delete-bill-of-materials)
 
 Deletes a [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) record by its ID.
-This cannot delete a bill of materials with references to it. If successful, no response is returned.
+This cannot delete a bill of materials with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
 
 ### [`deleteAllBillOfMaterialsForOrder`](./delete-all-bill-of-materials-for-order)
 
 Deletes all [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) records associated with a production order ID.
-This cannot delete any bill of materials with references to it. If successful, no response is returned.
+This cannot delete any bill of materials with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
 
 ---
 

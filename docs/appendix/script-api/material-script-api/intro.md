@@ -51,11 +51,11 @@ This only checks if the material class object can be saved based on the attribut
 
 ### [`deleteMaterialClass`](./delete-material-class)
 
-Deletes a [Material Classes](../../data-model/material-model/material-class) record by its ID or path. This cannot delete a material class with references to it. If successful, no response is returned.
+Deletes a [Material Classes](../../data-model/material-model/material-class) record by its ID or path. This cannot delete a material class with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
 
 ### [`deleteMaterialClasses`](./delete-material-classes)
 
-Deletes all [Material Classes](../../data-model/material-model/material-class) records by the given IDs or paths. This cannot delete any material classes with references to it. If successful, no response is returned.
+Deletes all [Material Classes](../../data-model/material-model/material-class) records by the given IDs or paths. This cannot delete any material classes with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
 
 ### [`newMaterial`](./new-material)
 
@@ -98,11 +98,11 @@ This only checks if the material object can be saved based on the attributes giv
 
 ### [`deleteMaterial`](./delete-material)
 
-Deletes a [Materials](../../data-model/material-model/material) record by its ID or path. This cannot delete a material with references to it. If successful, no response is returned.
+Deletes a [Materials](../../data-model/material-model/material) record by its ID or path. This cannot delete a material with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
 
 ### [`deleteMaterials`](./delete-materials)
 
-Deletes all [Materials](../../data-model/material-model/material) records by the given IDs or paths. This cannot delete any materials with references to it. If successful, no response is returned.
+Deletes all [Materials](../../data-model/material-model/material) records by the given IDs or paths. This cannot delete any materials with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
 
 ### [`newProperty`](./new-property)
 
@@ -137,7 +137,7 @@ This only checks if the material property object can be saved based on the attri
 
 ### [`deleteProperty`](./delete-property)
 
-Deletes a [Material Properties](../../data-model/material-model/material-property) record by its ID. This cannot delete a material property with references to it. If successful, no response is returned.
+Deletes a [Material Properties](../../data-model/material-model/material-property) record by its ID. This cannot delete a material property with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
 
 ### [`newPropertyValue`](./new-property-value)
 
@@ -182,19 +182,19 @@ This only checks if the material property value object can be saved based on the
 
 ### [`deletePropertyValue`](./delete-property-value)
 
-Deletes a [Material Property Values](../../data-model/material-model/material-property-value) record by its ID. This cannot delete a material property value with references to it. If successful, no response is returned.
+Deletes a [Material Property Values](../../data-model/material-model/material-property-value) record by its ID. This cannot delete a material property value with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
 
 ### [`deletePropertyValueFor`](./delete-property-value-for)
 
-Deletes a [Material Property Values](../../data-model/material-model/material-property-value) record given the material path and property name. This cannot delete a material property value with references to it. If successful, no response is returned.
+Deletes a [Material Property Values](../../data-model/material-model/material-property-value) record given the material path and property name. This cannot delete a material property value with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
 
 ### [`deletePropertyValues`](./delete-property-values)
 
-Deletes all [Material Property Values](../../data-model/material-model/material-property-value) records by the given IDs. This cannot delete any material property value with references to it. If successful, no response is returned.
+Deletes all [Material Property Values](../../data-model/material-model/material-property-value) records by the given IDs. This cannot delete any material property value with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
 
 ### [`deletePropertyValuesFor`](./delete-property-values-for)
 
-Deletes all [Material Property Values](../../data-model/material-model/material-property-value) records given the material path and property names. This cannot delete any material property value with references to it. If successful, no response is returned.
+Deletes all [Material Property Values](../../data-model/material-model/material-property-value) records given the material path and property names. This cannot delete any material property value with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
 
 ### [`newMaterialReasonCode`](./new-material-reason-code)
 
@@ -220,7 +220,7 @@ This only checks if the material reason code object can be saved based on the at
 
 ### [`deleteMaterialReasonCode`](./delete-material-reason-code)
 
-Deletes a [Material Reason Codes](../../data-model/material-model/material-reason-code) record by its ID. This cannot delete a material reason code with references to it. If successful, no response is returned.
+Deletes a [Material Reason Codes](../../data-model/material-model/material-reason-code) record by its ID. This cannot delete a material reason code with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
 
 ---
 
