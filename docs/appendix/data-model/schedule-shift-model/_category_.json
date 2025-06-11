@@ -1,6 +1,6 @@
 {
-  "label": "Scheduling Model",
-  "position": 10,
+  "label": "Schedule Shift Model",
+  "position": 11,
   "link": {
     "type": "doc",
     "id": "appendix/data-model/schedule-model/intro"
