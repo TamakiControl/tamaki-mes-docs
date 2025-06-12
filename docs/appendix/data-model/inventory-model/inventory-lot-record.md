@@ -111,7 +111,7 @@ See [locations](../location-model/location) for details.
 
 ### `schedule_shift_record_id`
 
-References the `ScheduleShiftRecord` entity that defines the shift during which this inventory action was performed. This links the inventory action to a specific shift, allowing for better tracking of inventory activities over time.
+References the `ScheduleShiftRecord` entity that was active during which this inventory action was performed. This links the inventory action to a specific shift record, allowing for better tracking of inventory activities over time.
 See [schedule_shift_records](../schedule-shift-model/schedule-shift-record) for details.
 
 
