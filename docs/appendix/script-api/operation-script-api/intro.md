@@ -51,7 +51,7 @@ This only checks if the operation object can be saved based on the attributes gi
 
 ### [`deleteOperation`](./delete-operation)
 
-Deletes an [Operations](../../data-model/operation-model/operation) record by its ID. This cannot delete an operation with references to it. If successful, no response is returned.
+Deletes an [Operations](../../data-model/operation-model/operation) record by its ID. This cannot delete an operation with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
 
 ### [`startOperation`](./start-operation)
 
