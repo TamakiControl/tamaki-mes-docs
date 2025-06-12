@@ -31,13 +31,13 @@ each, along with sample data where applicable.
 | `name`                      | `String`        | Name identifier for the schedule shift.                                                                                                            | `Morning Shift`                     |
 | `running_conflict_strategy` | `String` (Enum) | Strategy for handling conflicts when a new shift starts while another is still running.                                                            | `THROW_EXCEPTION`                   |
 | `schedule_name`             | `String`        | Name of schedule that defines this shift's timings.                                                                                                | `Weekday Schedule`                  |
-| `schedule_source`           | `String`        | Source of the schedule that defines this shift's timings.                                                                                          | `MES_INTERNAL`                      |
+| `schedule_source`           | `String` (Enum) | Source of the schedule that defines this shift's timings (eg. `IGNITION_SCHEDULE`, `INGITION_EXPRESSION`, `MES_SCHEDULE`).                         | `IGNITION_SCHEDULE`                 |
 | `start_trigger_expression`  | `String`        | Expression used to determine when the shift should start.                                                                                          | `0 0 6 * * 1-5`                     |
 | `start_trigger_type`        | `String` (Enum) | Type of trigger mechanism used to start the shift (eg. `RISING_EDGE`, `FALLING_EDGE`, `CHANGE`).                                                   | `CHANGE`                            |
 | `stop_trigger_expression`   | `String`        | Expression used to determine when the shift should end.                                                                                            | `0 0 14 * * 1-5`                    |
 | `stop_trigger_type`         | `String` (Enum) | Type of trigger mechanism used to end the shift (eg. `RISING_EDGE`, `FALLING_EDGE`, `CHANGE`).                                                     | `CHANGE`                            |
-| `current_shift_record_id`   | `String` (ULID) | Reference to the current active shift record for this schedule shift. See [schedule_shift_records](../schedule-shift-model/schedule-shift-record). | `01G8V9S9B9-3QWXS4VC`               |
-| `location_id`               | `String` (ULID) | Reference to the location where this schedule shift runs. See [locations](../location-model/location).                                             | `01FZ8P9BJN-4VYZUKE1`               |
+| `current_shift_record_id`   | `String` (ULID) | Reference to the current active shift record for this schedule shift. See [schedule_shift_records](../schedule-shift-model/schedule-shift-record). | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
+| `location_id`               | `String` (ULID) | Reference to the location where this schedule shift runs. See [locations](../location-model/location).                                             | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
 
 ## Field Details
 
@@ -52,9 +52,16 @@ Specifies how the system should handle situations where a new shift is triggered
 - `THROW_EXCEPTION`: Throws an exception if a shift is already running.
 - `STOP_PREVIOUS`: Stops the previous shift and starts a new one.
 
-### `schedule_name` and `schedule_source`
+### `schedule_name`
 
-These fields identify the template or pattern that the shift follows and the source system or methodology used to generate the shift schedule.
+This field references the name of the schedule that defines the timings for this shift. It is used to link the shift pattern to a specific schedule configuration, which may include start and end times, days of the week, and other scheduling rules.
+
+### `schedule_source` 
+
+`schedule_source` can have the following values:
+- `IGNITION_SCHEDULE`: Indicates it needs to have a corresponding schedule in the alarming section of the gateway: [Ignition Alarming Schedules](https://www.docs.inductiveautomation.com/docs/8.1/platform/alarming/alarming-schedules).
+- `IGNITION_EXPRESSION`: Indicates that you need start and stop expression triggers.
+- `MES_SCHEDULE`: TBD
 
 ### `start_trigger_expression` and `start_trigger_type`
 
@@ -70,4 +77,4 @@ References the currently active shift record associated with this schedule shift
 
 ### `location_id`
 
-References the location where this shift schedule applies, linking the shift to a specific area of the manufacturing facility.
+References the location where this shift schedule applies. If there is no shift running at the specified location, this field can be null. When looking for the `ScheduleShift` of a specific location, the system will first check if there is a shift running at that location. If not, it will check that location's parent location, and so on, until it finds the first `ScheduleShift` for a location that encompasses its own location.

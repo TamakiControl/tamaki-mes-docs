@@ -30,8 +30,8 @@ each, along with sample data where applicable.
 | `end_date`          | `DateTime`      | Actual end date and time when the shift ended or is expected to end.                                                                                          | `2025-01-01T14:00:00Z`              |
 | `start_date`        | `DateTime`      | Actual start date and time when the shift began.                                                                                                              | `2024-12-31T06:00:00Z`              |
 | `status`            | `String` (Enum) | Current status of the shift. Possible values: `IDLE`, `RUNNING`, `COMPLETED`, `FAULTED`, `CANCELLED`, `UNKNOWN`, `PAUSED`, as defined by the **Status** enum. | `IDLE`                              |
-| `location_id`       | `String` (ULID) | Reference to the location where this shift runs. See [locations](../location-model/location).                                                                 | `01G8V9S9B9-3QWXS4VC`               |
-| `schedule_shift_id` | `String` (ULID) | Reference to the schedule shift that defines the pattern for this shift instance. See [schedule_shifts](../schedule-shift-model/schedule-shift).              | `01FZ8P9BJN-4VYZUKE1`               |
+| `location_id`       | `String` (ULID) | Reference to the location where this shift runs. See [locations](../location-model/location).                                                                 | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
+| `schedule_shift_id` | `String` (ULID) | Reference to the schedule shift that defines the pattern for this shift instance. See [schedule_shifts](../schedule-shift-model/schedule-shift).              | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
 
 ## Field Details
 

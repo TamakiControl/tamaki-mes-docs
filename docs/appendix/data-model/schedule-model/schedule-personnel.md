@@ -29,8 +29,8 @@ each, along with sample data where applicable.
 | `spare3`                     | `String`        | The third spare column that can be used for additional context on the entity.                                                                      | `some extra context 3`              |
 | `end_date`                   | `DateTime`      | Planned end date and time for the personnel assignment.                                                                                            | `2025-01-01T19:48:44Z`              |
 | `start_date`                 | `DateTime`      | Planned start date and time for the personnel assignment.                                                                                          | `2024-12-31T19:48:44Z`              |
-| `person_id`                  | `String` (ULID) | Reference to the person that is assigned to the schedule. See [personnel](../personnel-model/personnel).                                           | `01G8V9S9B9-3QWXS4VC`               |
-| `schedule_id`                | `String` (ULID) | Reference to the schedule that the person is assigned to. See [schedules](../schedule-model/schedule).                                             | `01FZ8P9BJN-4VYZUKE1`               |
+| `person_id`                  | `String` (ULID) | Reference to the person that is assigned to the schedule. See [personnel](../personnel-model/personnel).                                           | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
+| `schedule_id`                | `String` (ULID) | Reference to the schedule that the person is assigned to. See [schedules](../schedule-model/schedule).                                             | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
 
 ## Field Details
 
