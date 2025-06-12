@@ -76,5 +76,5 @@ See [production_orders](../production-order-model/production-order) for details.
 
 ### `schedule_shift_record_id`
 
-References the `ScheduleShiftRecord` entity that defines the shift during which this operation was performed. This relationship connects the operation record to its specific shift instance, allowing for better tracking of operations within the context of scheduled shifts.
+References the `ScheduleShiftRecord` entity that was active during which this operation was performed. This relationship connects the operation record to its specific shift record instance, allowing for better tracking of operations within the context of scheduled shifts.
 See [schedule_shift_records](../schedule-shift-model/schedule-shift-record) for details.
