@@ -48,7 +48,7 @@ description: "OEE Line Overview Screen"
   A timeline that shows the historical OEE state of the line, allowing users to see trends and patterns over time. Hover over the colored bars that make up the timeline to see the start time, end time, and duration of the event associated with the color (see [States](setup#states) for what state each color represents).
   
     - Clicking on a bar in the timeline will open a popup with more detailed information about the event:
-      - <img src={require('./images/img_19.png').default} alt="Timeline event details popup showing duration and state information" align="center" />
+      - <img src={require('./images/timeline-event-details.png').default} alt="Timeline event details popup showing duration and state information" align="center" />
   
 ## Line Graphic
 **Example:**
@@ -63,7 +63,7 @@ description: "OEE Line Overview Screen"
 
 Selecting a node opens the following popup:
 
-<img src={require('./images/img_1.png').default} alt="Node details popup showing step, status, and other information about the selected equipment" />
+<img src={require('./images/node-details-popup.png').default} alt="Node details popup showing step, status, and other information about the selected equipment" />
 
 These table details include:
 
@@ -96,18 +96,18 @@ Refer to [tables](TODO) for information on how tables work in Tamaki MES.
 
 Selecting a row in the table allows the two buttons in the top left of the downtime records section to be selected.
 
-The `Set Downtime Reason` button, <img src={require('./images/img_3.png').default} alt="Set Downtime Reason Button" align="center" width="30" />, opens the downtime reason selection popup:
+The `Set Downtime Reason` button, <img src={require('./images/button-set-reason.png').default} alt="Set Downtime Reason Button" align="center" width="30" />, opens the downtime reason selection popup:
 
-<img src={require('./images/img.png').default} alt="Downtime reason selection popup with hierarchical tree of reasons and notes field" />
+<img src={require('./images/downtime-reason-popup.png').default} alt="Downtime reason selection popup with hierarchical tree of reasons and notes field" />
 
 **Sections:**
 - **Downtime Reason Selection Tree:** Allows users to select a reason for the downtime event from a hierarchical list of predefined reasons.
 - **Acknowledge Button:** Clicking this button acknowledges the downtime event, marking it as reviewed and preventing further edits.
 - **Notes Field:** A text field for users to add additional notes or comments related to the downtime event.
 
-The `Split Downtime Event` button, <img src={require('./images/img_4.png').default} alt="Split Downtime Event Button" align="center" width="30" />, opens the Split Downtime Event popup:
+The `Split Downtime Event` button, <img src={require('./images/button-split-event.png').default} alt="Split Downtime Event Button" align="center" width="30" />, opens the Split Downtime Event popup:
 
-<img src={require('./images/img_2.png').default} alt="Split Downtime Event popup with slider to select the split point between two events" />
+<img src={require('./images/split-event-popup.png').default} alt="Split Downtime Event popup with slider to select the split point between two events" />
 
 **Sections:**
 

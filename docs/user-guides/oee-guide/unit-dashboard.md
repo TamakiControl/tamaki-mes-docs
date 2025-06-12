@@ -12,7 +12,7 @@ description: "OEE Unit Dashboard Screen"
 
 **Example:**
 
-<img src={require('./images/img_15.png').default} alt="Complete Unit Dashboard screen showing OEE metrics, state timeline, and performance charts" />
+<img src={require('./images/unit-dashboard-full.png').default} alt="Complete Unit Dashboard screen showing OEE metrics, state timeline, and performance charts" />
 
 **Description:**
 - The Unit Dashboard screen provides a detailed view of the performance and status of individual units within the production line. It allows users to monitor the effectiveness of each unit, track downtime, and analyze performance metrics.
@@ -27,7 +27,7 @@ description: "OEE Unit Dashboard Screen"
 ## Top Bar
 **Example:**
 
-<img src={require('./images/img_16.png').default} alt="Top bar section of Unit Dashboard showing OEE, availability, performance, and quality metrics" />
+<img src={require('./images/unit-dashboard-top-bar.png').default} alt="Top bar section of Unit Dashboard showing OEE, availability, performance, and quality metrics" />
 
 **Description:**
 - The top bar of the Unit Dashboard displays key information about the selected unit, including:
@@ -40,7 +40,7 @@ description: "OEE Unit Dashboard Screen"
 ## Pie Chart
 **Example:**
 
-<img src={require('./images/img_17.png').default} alt="Pie chart showing distribution of different operational states for the selected unit" />
+<img src={require('./images/unit-dashboard-pie-chart.png').default} alt="Pie chart showing distribution of different operational states for the selected unit" />
 
 **Description:**
 - The pie chart provides a visual representation of the different states of the unit, allowing users to quickly assess the distribution of time spent in each state. The chart is color-coded to match the states defined in the [States](setup#states) section.
@@ -48,18 +48,18 @@ description: "OEE Unit Dashboard Screen"
 ## OEE State Timeline
 **Example:**
 
-<img src={require('./images/img_18.png').default} alt="OEE state timeline showing color-coded periods of different operational states for the unit" />
+<img src={require('./images/unit-dashboard-state-timeline.png').default} alt="OEE state timeline showing color-coded periods of different operational states for the unit" />
 
 **Description:**
 - A timeline that shows the historical OEE state of the line, allowing users to see trends and patterns over time. Hover over the colored bars that make up the timeline to see the start time, end time, and duration of the event associated with the colour (see [States](setup#states) for what state each color represents).
 - Clicking on a bar in the timeline will open a popup with more detailed information about the event:
   
-  <img src={require('./images/img_19.png').default} alt="Timeline event details popup showing duration and state information" align="center" width="200" />
+  <img src={require('./images/timeline-event-details.png').default} alt="Timeline event details popup showing duration and state information" align="center" width="200" />
   
 ## OEE Metrics by Hour
 **Example:**
 
-<img src={require('./images/img_20.png').default} alt="Hourly breakdown of OEE metrics showing performance trends throughout the day" />
+<img src={require('./images/unit-dashboard-metrics-by-hour.png').default} alt="Hourly breakdown of OEE metrics showing performance trends throughout the day" />
 
 **Description:**
 - The OEE Metrics by Hour section provides a detailed breakdown of OEE metrics for each hour of the day. This allows users to analyze performance trends and identify specific time periods where performance may have been affected.
@@ -67,7 +67,7 @@ description: "OEE Unit Dashboard Screen"
 ## Top Downtime Reasons
 **Example:**
 
-<img src={require('./images/img_21.png').default} alt="Bar chart showing the most common downtime reasons and their durations" />
+<img src={require('./images/unit-dashboard-top-downtime.png').default} alt="Bar chart showing the most common downtime reasons and their durations" />
 
 **Description:**
 - The Top Downtime Reasons chart displays the most common reasons for downtime in the selected unit. This helps users identify recurring issues and prioritize improvements to reduce downtime.
