@@ -95,7 +95,7 @@ See [production_order_customers](../production-order-model/production-order-cust
 
 ### `schedule_shift_record_id`
 
-References the `ScheduleShiftRecord` entity that defines the shift during which this production order is scheduled. This relationship connects the production order to its specific shift instance, allowing for better tracking of production orders within the context of scheduled shifts.
+References the `ScheduleShiftRecord` entity that was active at the location the production order ran. This relationship connects the production order to its specific shift instance, allowing for better tracking of production orders within the context of scheduled shifts.
 See [schedule_shift_records](../schedule-shift-model/schedule-shift-record) for details.
 
 ### `unit_of_measure_id`
