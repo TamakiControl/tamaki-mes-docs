@@ -7,10 +7,12 @@ description: "OEE Unit Dashboard Screen"
 # Unit Dashboard
 
 **Navigation:**
-![Unit dashboard navigation menu](unit-dashboard-navigation.png)
+
+<img src={require('./images/unit-dashboard-navigation.png').default} alt="Navigation menu showing the Unit Dashboard selection in the OEE module" />
 
 **Example:**
-![img_15.png](img_15.png)
+
+<img src={require('./images/img_15.png').default} alt="Complete Unit Dashboard screen showing OEE metrics, state timeline, and performance charts" />
 
 **Description:**
 - The Unit Dashboard screen provides a detailed view of the performance and status of individual units within the production line. It allows users to monitor the effectiveness of each unit, track downtime, and analyze performance metrics.
@@ -24,7 +26,8 @@ description: "OEE Unit Dashboard Screen"
 
 ## Top Bar
 **Example:**
-![img_16.png](img_16.png)
+
+<img src={require('./images/img_16.png').default} alt="Top bar section of Unit Dashboard showing OEE, availability, performance, and quality metrics" />
 
 **Description:**
 - The top bar of the Unit Dashboard displays key information about the selected unit, including:
@@ -36,31 +39,35 @@ description: "OEE Unit Dashboard Screen"
 
 ## Pie Chart
 **Example:**
-![img_17.png](img_17.png)
+
+<img src={require('./images/img_17.png').default} alt="Pie chart showing distribution of different operational states for the selected unit" />
 
 **Description:**
 - The pie chart provides a visual representation of the different states of the unit, allowing users to quickly assess the distribution of time spent in each state. The chart is color-coded to match the states defined in the [States](setup#states) section.
 
 ## OEE State Timeline
 **Example:**
-![img_18.png](img_18.png)
+
+<img src={require('./images/img_18.png').default} alt="OEE state timeline showing color-coded periods of different operational states for the unit" />
 
 **Description:**
 - A timeline that shows the historical OEE state of the line, allowing users to see trends and patterns over time. Hover over the colored bars that make up the timeline to see the start time, end time, and duration of the event associated with the colour (see [States](setup#states) for what state each color represents).
 - Clicking on a bar in the timeline will open a popup with more detailed information about the event:
-  - <img src="img_19.png" alt="img_19.png" style="vertical-align: middle;">
+  
+  <img src={require('./images/img_19.png').default} alt="Timeline event details popup showing duration and state information" align="center" width="200" />
   
 ## OEE Metrics by Hour
 **Example:**
-![img_20.png](img_20.png)
+
+<img src={require('./images/img_20.png').default} alt="Hourly breakdown of OEE metrics showing performance trends throughout the day" />
 
 **Description:**
 - The OEE Metrics by Hour section provides a detailed breakdown of OEE metrics for each hour of the day. This allows users to analyze performance trends and identify specific time periods where performance may have been affected.
 
 ## Top Downtime Reasons
 **Example:**
-![img_21.png](img_21.png)
+
+<img src={require('./images/img_21.png').default} alt="Bar chart showing the most common downtime reasons and their durations" />
 
 **Description:**
 - The Top Downtime Reasons chart displays the most common reasons for downtime in the selected unit. This helps users identify recurring issues and prioritize improvements to reduce downtime.
-

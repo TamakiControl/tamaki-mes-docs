@@ -3,7 +3,6 @@ sidebar_position: 0
 ---
 
 # User Guides
----
 
 ### 1. OEE (Overall Equipment Effectiveness)
 

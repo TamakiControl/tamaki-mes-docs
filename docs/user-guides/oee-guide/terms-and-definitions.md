@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 title: "Terms and Definitions"
 description: "OEE Terms and Definitions"
 ---
@@ -100,7 +100,8 @@ TODO
 ## Expression Field
 
 - **Example:**
-![img_8.png](img_8.png)
+
+<img src={require('./images/img_8.png').default} alt="Expression field interface showing text input area with function buttons and tag selectors" />
 
 - **Definition:**
   - An expression field is a customizable input that allows users to attach PLC tags to Ignition variables, and then modify them with calculations using Ignition's [Ignition Expression Language Documentation](https://www.docs.inductiveautomation.com/docs/8.1/platform/expression-language-and-syntax). It can be used to create complex logic for determining states, modes, or other operational parameters.
@@ -112,15 +113,21 @@ TODO
   - **Text Entry Section:**
     - A text input field where users can enter expressions using the [Ignition Expression Language Documentation](https://www.docs.inductiveautomation.com/docs/8.1/platform/expression-language-and-syntax). This section is automatically populated using the tag selector button.
     - Additional logic can be added to the expression field using the [Ignition Expression Language Documentation](https://www.docs.inductiveautomation.com/docs/8.1/platform/expression-language-and-syntax), allowing for complex calculations and logic to be applied to the PLC tag data.
-  - **Common Logical Operators Button:** <img src="img_11.png" alt="img_11.png" style="vertical-align: middle;">
+  - **Common Logical Operators Button:** <img src={require('./images/img_11.png').default} alt="Common Logical Operators Button" align="center" width="30" />
     - Opens a dropdown menu with common logical operators that can be inserted into the expression field. Selecting an operator will insert it into the `Text Entry Section` (see [Ignition Expression Language Documentation](https://www.docs.inductiveautomation.com/docs/8.1/platform/expression-language-and-syntax) for more details):
-      - <img src="img_12.png" alt="img_12.png" style="vertical-align: middle;">
-  - **Common Formulas Button:** <img src="img_9.png" alt="img_9.png" style="vertical-align: middle;">
+    
+      <img src={require('./images/img_12.png').default} alt="Dropdown menu of logical operators including AND, OR, NOT, and comparison operators" />
+
+  - **Common Formulas Button:** <img src={require('./images/img_9.png').default} alt="Common Formulas Button" align="center" width="30" />
     - Opens a dropdown menu with options to insert common functions into the expression field. Selecting a function will insert it into the `Text Entry Section` (see [Ignition Expression Language Documentation](https://www.docs.inductiveautomation.com/docs/8.1/platform/expression-language-and-syntax) for more details):
-      - <img src="img_10.png" alt="img_10.png" style="vertical-align: middle;">
-  - **Tag Selector Button:** <img src="img_5.png" alt="Tag selector button icon" style="vertical-align: middle;">
+
+      <img src={require('./images/img_10.png').default} alt="Dropdown menu of common formulas and functions for data calculation and manipulation" />
+      
+  - **Tag Selector Button:** <img src={require('./images/img_5.png').default} alt="Tag selector button icon" align="center" width="30" />
     - Opens a tag selector popup, allowing users to select a PLC tag to bind to the expression field:
-    - <img src="img_13.png" alt="Tag selector popup interface" style="vertical-align: middle;">
+
+    <img src={require('./images/img_13.png').default} alt="Tag selector popup interface with tag provider dropdown and hierarchical tag browser" />
+
       1. The top dropdown allows users to select the tag provider, and the tree below allows users to navigate through the tags in the selected provider.
       2. To add a tag to the `Text Entry Section`, either select the tag and click `Confirm`, or just double-click the desired tag.
 
@@ -129,14 +136,19 @@ TODO
   - **Example workflows:**
     - **Binding the PLC mode tag of a location to track its OEE:**
       1. Navigate to the [OEE Setup](setup) screen.
-      2. Select the location from the location tree on the left side of the screen to modify. (if the location does not have an OEE configuration, you will need to create one first by clicking `Create Config` <img src="img_14.png" alt="Create Config button" style="vertical-align: middle; width: 250px; height: auto;">).
+      2. Select the location from the location tree on the left side of the screen to modify. (if the location does not have an OEE configuration, you will need to create one first by clicking `Create Config` <img src={require('./images/img_14.png').default} alt="Create Config button" align="center" width="250" />).
+      
       3. Locate the `Mode Expression` field in the OEE Configuration tab.
-      4. Select the tag selector button on the right side of the `Mode Expression` field: <img src="img_5.png" alt="Tag selector button icon" style="vertical-align: middle;">
-      5. In the tag selector popup, navigate to the PLC mode tag for the selected location and select it: 
-         - <img src="img_6.png" alt="PLC tag selection example" style="vertical-align: middle;">
+      4. Select the tag selector button on the right side of the `Mode Expression` field: <img src={require('./images/img_5.png').default} alt="Tag selector button icon" align="center" width="30" />
+      
+      5. In the tag selector popup, navigate to the PLC mode tag for the selected location and select it:
+
+         <img src={require('./images/img_6.png').default} alt="PLC tag selection example" align="center" />
+         
       6. Click the `Confirm` button to input the PLC mode tag to the `Mode Expression` field.
       7. The tag will now be bound to the OEE model, allowing it to track the mode of the location in real-time:
-         - <img src="img_7.png" alt="Completed mode expression binding" style="vertical-align: middle;">
+         
+         <img src={require('./images/img_7.png').default} alt="Completed mode expression binding" align="center" width="500" />
+
   - **TODO:**
     - Add more examples of how to use the expression field in different scenarios.
-

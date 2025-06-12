@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 2
 title: "Setup"
 description: "OEE Setup Configuration"
 ---
@@ -7,10 +7,12 @@ description: "OEE Setup Configuration"
 # Setup
 
 **Navigation:**
-![Setup navigation menu](setup-navigation.png)
+
+<img src={require('./images/setup-navigation.png').default} alt="Navigation menu showing the Setup selection in the OEE module" />
 
 **Example:**
-![Setup screen interface](setup.png)
+
+<img src={require('./images/setup.png').default} alt="Complete Setup screen showing configuration tabs and location tree" />
 
 **Description:**
 - The Setup screen allows users to configure the OEE model, including defining [States](#states), [Modes](#modes), [Downtime Reasons](#downtime-reasons), and other [OEE Configurations](#oee-configuration). This screen is essential for customizing the OEE tracking system to fit the specific needs of the manufacturing operation.
@@ -21,7 +23,8 @@ description: "OEE Setup Configuration"
 ## OEE Configuration
 
 **Example:**
-![OEE Configuration tab](setup-oee-configuration.png)
+
+<img src={require('./images/setup-oee-configuration.png').default} alt="OEE Configuration tab with fields for modes, availability, performance and quality settings" />
 
 ### OEE Configuration Workflow
 
@@ -179,7 +182,8 @@ The [Expression Field](terms-and-definitions#expression-field) where the PLC tag
 ## States
 
 **Example:**
-![States configuration tab](setup-states.png)
+
+<img src={require('./images/setup-states.png').default} alt="States configuration tab showing list of operational states with their codes and calculation types" />
 
 ### State Workflow
 
@@ -203,14 +207,14 @@ Deletes the selected state.
 #### Edit
 
 Opens the following popup to edit the selected state (in this case, "Downtime"):
-![Edit state popup](setup-states-edit.png)
+<img src={require('./images/setup-states-edit.png').default} alt="Edit state popup with fields for state name, code, calculation type and color selection" />
 
 Refer to [Edit or Create New State Popup Fields](#edit-or-create-new-state-popup-fields) for details on the popup.
 
 #### Create New
 
 Opens the following popup to create a new state:
-![Create new state popup](setup-states-create-new.png)
+<img src={require('./images/setup-states-create-new.png').default} alt="Create new state popup with empty fields for defining state properties" />
 
 Refer to [Edit or Create New State Popup Fields](#edit-or-create-new-state-popup-fields) for details on the popup.
 
@@ -258,7 +262,7 @@ The color associated with the state, used for visual representation in the OEE t
 ## Modes
 
 **Example:**
-![Modes configuration tab](setup-modes.png)
+<img src={require('./images/setup-modes.png').default} alt="Modes configuration tab showing list of operational modes with their codes and calculation types" />
 
 ### Mode Workflow
 
@@ -282,14 +286,14 @@ Deletes the selected mode.
 #### Edit
 
 Opens the following popup to edit the selected mode (in this case, "CIP"):
-![Edit mode popup](setup-modes-edit.png)
+<img src={require('./images/setup-modes-edit.png').default} alt="Edit mode popup with fields for mode name, code, calculation type and color selection" />
 
 Refer to [Edit or Create New Mode Popup Fields](#edit-or-create-new-mode-popup-fields) for details on the popup.
 
 #### Create New
 
 Opens the following popup to create a new mode:
-![Create new mode popup](setup-modes-create-new.png)
+<img src={require('./images/setup-modes-create-new.png').default} alt="Create new mode popup with empty fields for defining mode properties" />
 
 Refer to [Edit or Create New Mode Popup Fields](#edit-or-create-new-mode-popup-fields) for details on the popup.
 
@@ -331,7 +335,7 @@ The fixed value for the expected duration of the mode, defined in seconds. This 
 ## Downtime Reasons
 
 **Example:**
-![Downtime reasons configuration tab](setup-downtime-reasons.png)
+<img src={require('./images/setup-downtime-reasons.png').default} alt="Downtime reasons configuration tab showing hierarchical tree of downtime reason categories" />
 
 ### Downtime Reasons Model [oee downtime reason](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Foee-downtime-reason.md)
 
@@ -375,4 +379,3 @@ The integer code for the downtime reason, matching the PLC tag that indicates th
 #### Parent Downtime Reason
 
 The parent downtime reason, which is used to create a hierarchy of downtime reasons. This allows for categorization and grouping of related downtime reasons, making it easier to analyze and report on downtime events.
-
