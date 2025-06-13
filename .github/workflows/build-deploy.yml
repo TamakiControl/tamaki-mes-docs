@@ -3,7 +3,7 @@ name: Deploy Docusaurus to GitHub Pages
 on:
   push:
     branches:
-      - master  # Deploy when changes are pushed to the main branch. Adjust if needed.
+      - bug/typesense-search-not-working-properly  # Deploy when changes are pushed to the main branch. Adjust if needed.
 
 jobs:
   build-and-deploy:
@@ -44,8 +44,15 @@ jobs:
           # Use Docusaurus's own server which correctly handles the site's baseUrl
           # Run it in the background on port 8080
           npm run serve -- --port 8080 &
-          # Wait for server to start before proceeding
-          sleep 5
+          # Wait for server to start by polling the port
+          echo "Waiting for server to start..."
+          timeout 30s bash -c '
+            while ! curl -s --head http://localhost:8080 > /dev/null;
+            do
+              echo -n "."
+              sleep 1
+            done'
+          echo "Server started!"
           sudo apt-get update && sudo apt-get install -y jq
 
       - name: Create .env file
