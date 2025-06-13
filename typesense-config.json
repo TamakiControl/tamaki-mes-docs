@@ -19,5 +19,59 @@
       "lvl4": "article h4, .markdown h4",
       "text": "article p, article li, .markdown p, .markdown li"
     }
+  },
+  "custom_settings": {
+    "field_definitions": [
+      {
+        "name": "hierarchy.lvl0",
+        "type": "string",
+        "facet": true,
+        "optional": true
+      },
+      {
+        "name": "hierarchy.lvl1",
+        "type": "string",
+        "facet": true,
+        "optional": true
+      },
+      {
+        "name": "hierarchy.lvl2",
+        "type": "string",
+        "facet": true,
+        "optional": true
+      },
+      {
+        "name": "hierarchy.lvl3",
+        "type": "string",
+        "facet": true,
+        "optional": true
+      },
+      {
+        "name": "hierarchy.lvl4",
+        "type": "string",
+        "facet": true,
+        "optional": true
+      },
+      {
+        "name": "hierarchy.lvl5",
+        "type": "string",
+        "facet": true,
+        "optional": true
+      },
+      {
+        "name": "hierarchy.lvl6",
+        "type": "string",
+        "facet": true,
+        "optional": true
+      },
+      {"name": "content", "type": "string", "optional": true},
+      {"name": "url", "type": "string", "facet": true},
+      {"name": "url_without_anchor", "type": "string", "optional": true},
+      {"name": "anchor", "type": "string", "optional": true},
+      {"name": "type", "type": "string", "facet": true, "optional": true},
+      {"name": ".*_tag", "type": "string", "facet": true, "optional": true},
+      {"name": "language", "type": "string", "facet": true, "optional": true},
+      {"name": "item_priority", "type": "int64"}
+    ]
   }
 }

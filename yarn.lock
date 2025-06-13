@@ -2020,19 +2020,19 @@
     tslib "^2.6.0"
     utility-types "^3.10.0"
 
-"@docusaurus/theme-search-algolia@^3.8.1", "@docusaurus/theme-search-algolia@3.8.1":
-  version "3.8.1"
-  resolved "https://registry.npmjs.org/@docusaurus/theme-search-algolia/-/theme-search-algolia-3.8.1.tgz"
-  integrity sha512-NBFH5rZVQRAQM087aYSRKQ9yGEK9eHd+xOxQjqNpxMiV85OhJDD4ZGz6YJIod26Fbooy54UWVdzNU0TFeUUUzQ==
+"@docusaurus/theme-search-algolia@3.7.0":
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/@docusaurus/theme-search-algolia/-/theme-search-algolia-3.7.0.tgz#2108ddf0b300b82de7c2b9ff9fcf62121b66ea37"
+  integrity sha512-Al/j5OdzwRU1m3falm+sYy9AaB93S1XF1Lgk9Yc6amp80dNxJVplQdQTR4cYdzkGtuQqbzUA8+kaoYYO0RbK6g==
   dependencies:
-    "@docsearch/react" "^3.9.0"
-    "@docusaurus/core" "3.8.1"
-    "@docusaurus/logger" "3.8.1"
-    "@docusaurus/plugin-content-docs" "3.8.1"
-    "@docusaurus/theme-common" "3.8.1"
-    "@docusaurus/theme-translations" "3.8.1"
-    "@docusaurus/utils" "3.8.1"
-    "@docusaurus/utils-validation" "3.8.1"
+    "@docsearch/react" "^3.8.1"
+    "@docusaurus/core" "3.7.0"
+    "@docusaurus/logger" "3.7.0"
+    "@docusaurus/plugin-content-docs" "3.7.0"
+    "@docusaurus/theme-common" "3.7.0"
+    "@docusaurus/theme-translations" "3.7.0"
+    "@docusaurus/utils" "3.7.0"
+    "@docusaurus/utils-validation" "3.7.0"
     algoliasearch "^5.17.1"
     algoliasearch-helper "^3.22.6"
     clsx "^2.0.0"
