@@ -8,11 +8,11 @@ description: "OEE Setup Configuration"
 
 **Navigation:**
 
-<img src={require('./images/setup-navigation.png').default} alt="Navigation menu showing the Setup selection in the OEE module" />
+![Navigation menu showing the Setup selection in the OEE module](./images/setup-navigation.png)
 
 **Example:**
 
-<img src={require('./images/setup.png').default} alt="Complete Setup screen showing configuration tabs and location tree" />
+![Complete Setup screen showing configuration tabs and location tree](./images/setup.png)
 
 **Description:**
 - The Setup screen allows users to configure the OEE model, including defining [States](#states), [Modes](#modes), [Downtime Reasons](#downtime-reasons), and other [OEE Configurations](#oee-configuration). This screen is essential for customizing the OEE tracking system to fit the specific needs of the manufacturing operation.
@@ -24,7 +24,7 @@ description: "OEE Setup Configuration"
 
 **Example:**
 
-<img src={require('./images/setup-oee-configuration.png').default} alt="OEE Configuration tab with fields for modes, availability, performance and quality settings" />
+![OEE Configuration tab with fields for modes, availability, performance and quality settings](./images/setup-oee-configuration.png)
 
 ### OEE Configuration Workflow
 
@@ -183,7 +183,7 @@ The [Expression Field](terms-and-definitions#expression-field) where the PLC tag
 
 **Example:**
 
-<img src={require('./images/setup-states.png').default} alt="States configuration tab showing list of operational states with their codes and calculation types" />
+![States configuration tab showing list of operational states with their codes and calculation types](./images/setup-states.png)
 
 ### State Workflow
 
@@ -207,14 +207,16 @@ Deletes the selected state.
 #### Edit
 
 Opens the following popup to edit the selected state (in this case, "Downtime"):
-<img src={require('./images/setup-states-edit.png').default} alt="Edit state popup with fields for state name, code, calculation type and color selection" />
+
+![Edit state popup with fields for state name, code, calculation type and color selection](./images/setup-states-edit.png)
 
 Refer to [Edit or Create New State Popup Fields](#edit-or-create-new-state-popup-fields) for details on the popup.
 
 #### Create New
 
 Opens the following popup to create a new state:
-<img src={require('./images/setup-states-create-new.png').default} alt="Create new state popup with empty fields for defining state properties" />
+
+![Create new state popup with empty fields for defining state properties](./images/setup-states-create-new.png)
 
 Refer to [Edit or Create New State Popup Fields](#edit-or-create-new-state-popup-fields) for details on the popup.
 
@@ -262,7 +264,8 @@ The color associated with the state, used for visual representation in the OEE t
 ## Modes
 
 **Example:**
-<img src={require('./images/setup-modes.png').default} alt="Modes configuration tab showing list of operational modes with their codes and calculation types" />
+
+![Modes configuration tab showing list of operational modes with their codes and calculation types](./images/setup-modes.png)
 
 ### Mode Workflow
 
@@ -286,14 +289,16 @@ Deletes the selected mode.
 #### Edit
 
 Opens the following popup to edit the selected mode (in this case, "CIP"):
-<img src={require('./images/setup-modes-edit.png').default} alt="Edit mode popup with fields for mode name, code, calculation type and color selection" />
+
+![Edit mode popup with fields for mode name, code, calculation type and color selection](./images/setup-modes-edit.png)
 
 Refer to [Edit or Create New Mode Popup Fields](#edit-or-create-new-mode-popup-fields) for details on the popup.
 
 #### Create New
 
 Opens the following popup to create a new mode:
-<img src={require('./images/setup-modes-create-new.png').default} alt="Create new mode popup with empty fields for defining mode properties" />
+
+![Create new mode popup with empty fields for defining mode properties](./images/setup-modes-create-new.png)
 
 Refer to [Edit or Create New Mode Popup Fields](#edit-or-create-new-mode-popup-fields) for details on the popup.
 
@@ -335,7 +340,8 @@ The fixed value for the expected duration of the mode, defined in seconds. This 
 ## Downtime Reasons
 
 **Example:**
-<img src={require('./images/setup-downtime-reasons.png').default} alt="Downtime reasons configuration tab showing hierarchical tree of downtime reason categories" />
+
+![Downtime reasons configuration tab showing hierarchical tree of downtime reason categories](./images/setup-downtime-reasons.png)
 
 ### Downtime Reasons Model [oee downtime reason](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Foee-downtime-reason.md)
 

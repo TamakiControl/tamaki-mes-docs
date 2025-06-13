@@ -101,7 +101,7 @@ TODO
 
 - **Example:**
 
-<img src={require('./images/expression-field-overview.png').default} alt="Expression field interface showing text input area with function buttons and tag selectors" />
+![Expression field interface showing text input area with function buttons and tag selectors](./images/expression-field-overview.png)
 
 - **Definition:**
   - An expression field is a customizable input that allows users to attach PLC tags to Ignition variables, and then modify them with calculations using Ignition's [Ignition Expression Language Documentation](https://www.docs.inductiveautomation.com/docs/8.1/platform/expression-language-and-syntax). It can be used to create complex logic for determining states, modes, or other operational parameters.
@@ -113,20 +113,20 @@ TODO
   - **Text Entry Section:**
     - A text input field where users can enter expressions using the [Ignition Expression Language Documentation](https://www.docs.inductiveautomation.com/docs/8.1/platform/expression-language-and-syntax). This section is automatically populated using the tag selector button.
     - Additional logic can be added to the expression field using the [Ignition Expression Language Documentation](https://www.docs.inductiveautomation.com/docs/8.1/platform/expression-language-and-syntax), allowing for complex calculations and logic to be applied to the PLC tag data.
-  - **Common Logical Operators Button:** <img src={require('./images/button-logical-operators.png').default} alt="Common Logical Operators Button" align="center" width="30" />
+  - **Common Logical Operators Button:** ![Common Logical Operators Button](./images/button-logical-operators.png#icon)
     - Opens a dropdown menu with common logical operators that can be inserted into the expression field. Selecting an operator will insert it into the `Text Entry Section` (see [Ignition Expression Language Documentation](https://www.docs.inductiveautomation.com/docs/8.1/platform/expression-language-and-syntax) for more details):
     
-      <img src={require('./images/dropdown-logical-operators.png').default} alt="Dropdown menu of logical operators including AND, OR, NOT, and comparison operators" />
+      ![Dropdown menu of logical operators including AND, OR, NOT, and comparison operators](./images/dropdown-logical-operators.png)
 
-  - **Common Formulas Button:** <img src={require('./images/button-common-formulas.png').default} alt="Common Formulas Button" align="center" width="30" />
+  - **Common Formulas Button:** ![Common Formulas Button](./images/button-common-formulas.png#icon)
     - Opens a dropdown menu with options to insert common functions into the expression field. Selecting a function will insert it into the `Text Entry Section` (see [Ignition Expression Language Documentation](https://www.docs.inductiveautomation.com/docs/8.1/platform/expression-language-and-syntax) for more details):
 
-      <img src={require('./images/dropdown-common-formulas.png').default} alt="Dropdown menu of common formulas and functions for data calculation and manipulation" />
+      ![Dropdown menu of common formulas and functions for data calculation and manipulation](./images/dropdown-common-formulas.png)
       
-  - **Tag Selector Button:** <img src={require('./images/button-tag-selector.png').default} alt="Tag selector button icon" align="center" width="30" />
+  - **Tag Selector Button:** ![Tag selector button icon](./images/button-tag-selector.png#icon)
     - Opens a tag selector popup, allowing users to select a PLC tag to bind to the expression field:
 
-    <img src={require('./images/tag-selector-popup.png').default} alt="Tag selector popup interface with tag provider dropdown and hierarchical tag browser" />
+    ![Tag selector popup interface with tag provider dropdown and hierarchical tag browser](./images/tag-selector-popup.png)
 
       1. The top dropdown allows users to select the tag provider, and the tree below allows users to navigate through the tags in the selected provider.
       2. To add a tag to the `Text Entry Section`, either select the tag and click `Confirm`, or just double-click the desired tag.
@@ -136,19 +136,19 @@ TODO
   - **Example workflows:**
     - **Binding the PLC mode tag of a location to track its OEE:**
       1. Navigate to the [OEE Setup](setup) screen.
-      2. Select the location from the location tree on the left side of the screen to modify. (if the location does not have an OEE configuration, you will need to create one first by clicking `Create Config` <img src={require('./images/button-create-config.png').default} alt="Create Config button" align="center" width="250" />).
+      2. Select the location from the location tree on the left side of the screen to modify. (if the location does not have an OEE configuration, you will need to create one first by clicking `Create Config` ![Create Config button](./images/button-create-config.png)).
       
       3. Locate the `Mode Expression` field in the OEE Configuration tab.
-      4. Select the tag selector button on the right side of the `Mode Expression` field: <img src={require('./images/button-tag-selector.png').default} alt="Tag selector button icon" align="center" width="30" />
+      4. Select the tag selector button on the right side of the `Mode Expression` field: ![Tag selector button icon](./images/button-tag-selector.png#icon)
       
       5. In the tag selector popup, navigate to the PLC mode tag for the selected location and select it:
 
-         <img src={require('./images/tag-selection-example.png').default} alt="PLC tag selection example" align="center" />
+         ![PLC tag selection example](./images/tag-selection-example.png)
          
       6. Click the `Confirm` button to input the PLC mode tag to the `Mode Expression` field.
       7. The tag will now be bound to the OEE model, allowing it to track the mode of the location in real-time:
          
-         <img src={require('./images/completed-mode-binding.png').default} alt="Completed mode expression binding" align="center" width="500" />
+         ![Completed mode expression binding](./images/completed-mode-binding.png)
 
   - **TODO:**
     - Add more examples of how to use the expression field in different scenarios.

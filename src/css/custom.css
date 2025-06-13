@@ -181,3 +181,47 @@ td:has(img) {
 .theme-doc-sidebar-container div div a img {
 	height: 65px;
 }
+
+.footer--dark {
+	--ifm-footer-background-color: #382856;
+	--ifm-footer-title-color: var(--ifm-color-primary-lighter);
+}
+
+.navbar {
+	height: 100px;
+}
+
+.navbar__logo {
+	height: 80px;
+	width: auto;
+}
+
+.navbar__title {
+	font-size: 2rem;
+	font-weight: 700;
+	color: var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .navbar__title {
+	color: var(--ifm-color-primary-lighter);
+}
+
+[data-theme='dark'] .navbar__logo {
+	filter: none;
+}
+
+.markdown img {
+	border-radius: 0.5rem;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.markdown img[src$='#icon'] {
+	display: inline-block;
+	vertical-align: middle;
+	width: 30px;
+	box-shadow: none;
+	border-radius: 0;
+}
