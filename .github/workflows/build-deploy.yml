@@ -59,20 +59,16 @@ jobs:
             -H "X-TYPESENSE-API-KEY: ${{ secrets.TYPESENSE_API_KEY }}" \
             "https://${{ secrets.TYPESENSE_HOST }}:${{ secrets.TYPESENSE_PORT }}/aliases/${{ secrets.TYPESENSE_COLLECTION_NAME }}" || true
 
-      - name: Create scraper config
-        id: prep
+      - name: Create scraper config file
         run: |
-          CONFIG=$(cat typesense-config.json | jq '.start_urls = ["http://host.docker.internal:8080/tamaki-mes-docs/"] | .sitemap_urls = ["http://host.docker.internal:8080/tamaki-mes-docs/sitemap.xml"] | .allowed_domains = ["host.docker.internal"]' | jq -c .)
-          if [ -z "$CONFIG" ]; then
-            echo "typesense-config.json is empty or improperly formatted."
-            exit 1
-          fi
-          echo "CONFIG=$CONFIG" >> $GITHUB_ENV
+          CONFIG_CONTENT=$(cat typesense-config.json | jq '.start_urls = ["http://host.docker.internal:8080/tamaki-mes-docs/"] | .sitemap_urls = ["http://host.docker.internal:8080/tamaki-mes-docs/sitemap.xml"] | .allowed_domains = ["host.docker.internal"]')
+          echo "$CONFIG_CONTENT" > gh-action-scraper-config.json
 
       - name: Run docsearch-scraper
         run: |
           docker run -i --env-file .env \
-            -e CONFIG="${{ env.CONFIG }}" \
+            -e "CONFIG=/config.json" \
+            -v "$(pwd)/gh-action-scraper-config.json:/config.json:ro" \
             typesense/docsearch-scraper:0.11.0
 
       - name: Deploy to GitHub Pages
