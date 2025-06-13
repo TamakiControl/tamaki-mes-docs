@@ -67,6 +67,7 @@ jobs:
       - name: Run docsearch-scraper
         run: |
           docker run -i --env-file .env \
+            --add-host=host.docker.internal:host-gateway \
             -e "CONFIG=/config.json" \
             -v "$(pwd)/gh-action-scraper-config.json:/config.json:ro" \
             typesense/docsearch-scraper:0.11.0
