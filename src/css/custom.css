@@ -182,11 +182,6 @@ td:has(img) {
 	height: 65px;
 }
 
-.footer--dark {
-	--ifm-footer-background-color: #382856;
-	--ifm-footer-title-color: var(--ifm-color-primary-lighter);
-}
-
 .navbar {
 	height: 100px;
 }
