@@ -56,7 +56,7 @@ description: "OEE Downtime Entry Screen"
 | **Duration**        | Duration of the downtime event.                                                                                                                 |
 | **State**           | State of the Location during the downtime event.                                                                                                |
 | **Location**        | Location that the downtime event is occuring for.                                                                                               |
-| **Colour**          | TODO Colour of the state of the downtime event.                                                                                                 |
+| **Color**          | TODO Color of the state of the downtime event.                                                                                                 |
 | **Type**            | Type of the downtime event.                                                                                                                     |
 | **Downtime Reason** | Downtime reason associated with the downtime event. see [OEE Downtime Reason Model](../../appendix/data-model/oee-model/oee-downtime-reason.md) |
 | **Notes**           | Additional notes or comments about the downtime event.                                                                                          |

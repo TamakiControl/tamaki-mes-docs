@@ -255,7 +255,7 @@ This is a dropdown that allows the user to select how the OEE record of the stat
 - **Starved:** This is the state for the OEE record when the location is not producing items because it is waiting for input from a previous location in the production line.
 - **Blocked:** This is the state for the OEE record when the location is not producing items because it is waiting for output to be accepted by a subsequent location in the production line.
 
-##### Colour
+##### Color
 
 The color associated with the state, used for visual representation in the OEE timeline and [Line Graphic](line-overview#line-graphic).
 
@@ -314,7 +314,7 @@ This is a dropdown that allows the user to select how the OEE record of the mode
 - **Scheduled Downtime:** This mode is used for planned downtime events, such as maintenance or setup changes, where the location is not expected to produce items.
 - **Unscheduled Downtime:** This mode is used for when the location is not planned to be producing items but not due to a planned downtime event. This could be simply idle time between production runs.
 
-#### Colour
+#### Color
 
 The color associated with the mode, used for visual representation.
 

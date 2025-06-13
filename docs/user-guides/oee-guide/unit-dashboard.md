@@ -51,7 +51,7 @@ description: "OEE Unit Dashboard Screen"
 <img src={require('./images/unit-dashboard-state-timeline.png').default} alt="OEE state timeline showing color-coded periods of different operational states for the unit" />
 
 **Description:**
-- A timeline that shows the historical OEE state of the line, allowing users to see trends and patterns over time. Hover over the colored bars that make up the timeline to see the start time, end time, and duration of the event associated with the colour (see [States](setup#states) for what state each color represents).
+- A timeline that shows the historical OEE state of the line, allowing users to see trends and patterns over time. Hover over the colored bars that make up the timeline to see the start time, end time, and duration of the event associated with the color (see [States](setup#states) for what state each color represents).
 - Clicking on a bar in the timeline will open a popup with more detailed information about the event:
   
   <img src={require('./images/timeline-event-details.png').default} alt="Timeline event details popup showing duration and state information" align="center" width="200" />
