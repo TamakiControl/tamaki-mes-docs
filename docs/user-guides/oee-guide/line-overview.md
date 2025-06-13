@@ -92,7 +92,7 @@ Change the [Mode](setup#modes) of the note by clicking `On`, `Off`, `Resume`, Or
   - **Reason Codes**: The reason for each downtime event, allowing users to categorize and analyze downtime causes.
   - **Notes**: Additional notes or comments related to each downtime event, providing context and details for analysis.
 
-Refer to [tables](TODO) for information on how tables work in Tamaki MES.
+Refer to tables (TODO add link to table docs) for information on how tables work in Tamaki MES.
 
 Selecting a row in the table allows the two buttons in the top left of the downtime records section to be selected.
 
