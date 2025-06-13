@@ -61,7 +61,7 @@ jobs:
 
       - name: Create scraper config file
         run: |
-          CONFIG_CONTENT=$(cat typesense-config.json | jq '.start_urls = ["http://host.docker.internal:8080/tamaki-mes-docs/"] | .sitemap_urls = ["http://host.docker.internal:8080/tamaki-mes-docs/sitemap.xml"] | .allowed_domains = ["host.docker.internal"]')
+          CONFIG_CONTENT=$(cat typesense-config.json | jq '.start_urls = ["http://host.docker.internal:8080/"] | .sitemap_urls = ["http://host.docker.internal:8080/sitemap.xml"] | .allowed_domains = ["host.docker.internal"]')
           echo "$CONFIG_CONTENT" > gh-action-scraper-config.json
 
       - name: Run docsearch-scraper
