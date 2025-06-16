@@ -1,20 +1,19 @@
 ---
-sidebar_position: 38
-title: "validateBillOfMaterials"
-description: "Validates the specified parameters for a bill of materials."
+sidebar_position: 33
+title: "saveBillOfMaterialsItem"
+description: "Creates or updates a bill of materials with specified parameters."
 ---
 
-# system.mes.productionOrder.validateBillOfMaterials
+# system.mes.productionOrder.saveBillOfMaterialsItem
 
 ## Description
 
-Validates the specified parameters for a [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) record and returns any validation errors.
-This only checks if the bill of materials object can be saved based on the attributes given.
+Creates or updates a [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) record in the system based on the provided parameters.
 
 ## Syntax
 
 ```python
-system.mes.productionOrder.validateBillOfMaterials(**bill_of_materials_data)
+system.mes.productionOrder.saveBillOfMaterialsItem(**bill_of_materials_data)
 ```
 
 ## Parameters
@@ -41,27 +40,39 @@ system.mes.productionOrder.validateBillOfMaterials(**bill_of_materials_data)
 
 ## Returns
 
-Returns a JSON object where keys are field names and values are lists of validation violation messages.
+Returns a JSON representation of the saved bill of materials.
 
 ## Code Examples
 
 ```python
-# Generate the object structure for a new bill of materials object
-bill_of_materials_data = system.mes.productionOrder.newBillOfMaterials()
+# Generate the object structure for a new bill of materials object, set the initial arguments and save it
+new_bill_of_materials = system.mes.productionOrder.newBillOfMaterialsItem()
+new_bill_of_materials['quantityOrder'] = 1000.0
+new_bill_of_materials['materialGroup'] = 'CAN'
+new_bill_of_materials['unitOfMeasureId'] = '01JCH3EPVP-1MNNDJTS-37Z75NGB'
+new_bill_of_materials['materialId'] = '01JCH3ENGW-82KJDZDR-JHGYCXQN'
+new_bill_of_materials['quantityPerProducedUnit'] = 10.0
+saved_bill_of_materials = system.mes.productionOrder.saveBillOfMaterialsItem(**new_bill_of_materials)
 
-# Set basic attributes for the new bill of materials
+# Output the JSON representation of the saved bill of materials
+print(saved_bill_of_materials)
+
+# Generate the object structure for another new bill of materials to update the previous bill of materials
+bill_of_materials_data = system.mes.productionOrder.newBillOfMaterialsItem()
+
+# Set basic attributes for the updated bill of materials
+bill_of_materials_data['id'] = saved_bill_of_materials.id
 bill_of_materials_data['quantityOrder'] = 1000.0
 bill_of_materials_data['materialGroup'] = 'CAN'
 bill_of_materials_data['unitOfMeasureId'] = '01JCH3EPVP-1MNNDJTS-37Z75NGB'
 bill_of_materials_data['materialId'] = '01JCH3ENGW-82KJDZDR-JHGYCXQN'
 bill_of_materials_data['quantityPerProducedUnit'] = 10.0
+bill_of_materials_data['position'] = 1
 # (You can continue setting other properties as needed here)
 
-# Validate bill of materials parameters
-validation_errors = system.mes.productionOrder.validateBillOfMaterials(**bill_of_materials_data)
+# Save the bill of materials to update it in the system
+updated_bill_of_materials = system.mes.productionOrder.saveBillOfMaterialsItem(**bill_of_materials_data)
 
-if len(validation_errors) > 0:
-    print('Validation errors found:', validation_errors)
-else:
-    print('Bill of materials parameters are valid.')
+# Output the JSON representation of the updated bill of materials
+print(updated_bill_of_materials)
 ```
