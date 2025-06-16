@@ -30,7 +30,7 @@ function HomepageHeader() {
 					backdropFilter: 'saturate(130%)',
 				}}
 			></div>
-			<div className='container'>
+			<div className='container' style={{ position: 'relative', zIndex: 1 }}>
 				<Heading as='h1' className='hero__title'>
 					<img src='img/tamaki-MES-logo.png' alt='' />
 				</Heading>
