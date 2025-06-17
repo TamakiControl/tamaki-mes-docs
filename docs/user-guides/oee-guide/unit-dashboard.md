@@ -22,7 +22,8 @@ description: "OEE Unit Dashboard Screen"
 - [Pie Chart](#pie-chart)
 - [OEE State Timeline](#oee-state-timeline)
 - [OEE Metrics by Hour](#oee-metrics-by-hour)
-- [Top Downtime Reasons](#top-downtime-reasons)
+- [Downtime Reasons Pareto Chart](#downtime-reasons-pareto-chart)
+- [Time Selection Sidebar](#time-selection-sidebar)
 
 ## Top Bar
 **Example:**
@@ -71,3 +72,27 @@ description: "OEE Unit Dashboard Screen"
 
 **Description:**
 - The Downtime Reasons Pareto chart displays the most common reasons for downtime in the selected unit. Along with the cumulative frequency, This helps users identify recurring issues and prioritize improvements to reduce downtime. This chart defaults to showing the top level reason codes in the hierarchy, click on any bar to drill down.
+
+## Time Selection Sidebar
+**Example:**
+
+![Time selection sidebar showing options to select time range for data display](./images/unit-dashboard-time-selection.png)
+
+**Description:**
+- The Time Selection sidebar allows users to select the time range for which they want to view data on the Unit Dashboard. Users can choose from predefined ranges or specify a custom range to analyze performance metrics and downtime reasons for specific periods.
+
+### Components
+
+- **Time Range Selection**: The user can select between realtime and historical data.
+  - **Realtime**: The user can select a duration, time unit (hours, minutes, or seconds), and a refresh interval.
+
+![Realtime dashboard configuration panel with duration and refresh interval options](images/unit-dashboard-realtime-config-panel.png)
+
+  - **Historical**: The user can select a start and end date to view historical data.
+
+![Historical date range selector showing calendar interface for start and end date selection](images/unit-dashboard-historical-date-selector.png)
+
+- **Location Selection Tree**: 
+  - The user can select a specific location to filter the data displayed on the dashboard. The tree structure allows for easy navigation through the hierarchy of locations.
+
+![Hierarchical location selection tree showing expandable facility, area, and unit nodes](images/unit-dashboard-location-hierarchy-tree.png)

@@ -73,7 +73,7 @@ This document provides definitions and explanations of key terms related to Over
 ## Downtime Reason
 - **Definition:** 
   - The specific cause of downtime for a piece of equipment or production line.
-  - Data model [downtime reason](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Foee-downtime-reason.md)
+  - Data Model: [Downtime Reason](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Foee-downtime-reason.md)
 - **Purpose:**
   - To categorize and analyze the reasons for equipment downtime, enabling targeted improvements to reduce future occurrences.
 
@@ -90,12 +90,11 @@ This document provides definitions and explanations of key terms related to Over
   - To quantify the amount of waste generated in the production process, helping to identify areas for quality improvement.
 
 ## Production Order
-TODO
 - **Definition:** 
-  - A document or system entry that specifies the details of a production run, including the items to be produced, quantities, and timelines.
+  - Represents a specific production order, detailing information such as product, quantity, status, and associated customer.
+  - Data Model: [Production Order](..%2F..%2Fappendix%2Fdata-model%2Fproduction-order-model%2Fproduction-order.md)
 - **Purpose:**
-  - To provide a structured approach to managing production activities, ensuring that resources are allocated efficiently and production goals are met.
-
+  - Enables efficient tracking and organization of production orders within the TamakiMES system.
 
 ## Expression Field
 
