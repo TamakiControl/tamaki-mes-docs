@@ -46,9 +46,9 @@ description: "OEE Downtime Entry Screen"
 **Description:**
 - The Downtime Event Table displays a list of downtime events that have been entered for the selected location and downtime reason. Each row in the table represents a specific downtime event.
 
-## Components
+### Components
 
-### Table Columns
+#### Table Columns
 | **Column**          | **Description**                                                                                                                                 |
 |---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Start Date**      | Start date of the downtime event.                                                                                                               |
@@ -56,38 +56,61 @@ description: "OEE Downtime Entry Screen"
 | **Duration**        | Duration of the downtime event.                                                                                                                 |
 | **State**           | State of the Location during the downtime event.                                                                                                |
 | **Location**        | Location that the downtime event is occuring for.                                                                                               |
-| **Color**          | TODO Color of the state of the downtime event.                                                                                                 |
+| **Color**           | TODO Color of the state of the downtime event.                                                                                                  |
 | **Type**            | Type of the downtime event.                                                                                                                     |
 | **Downtime Reason** | Downtime reason associated with the downtime event. see [OEE Downtime Reason Model](../../appendix/data-model/oee-model/oee-downtime-reason.md) |
 | **Notes**           | Additional notes or comments about the downtime event.                                                                                          |
 | **Acknowledged**    | Boolean of whether the downtime event has been acknowledged.                                                                                    |
 
-### Table Buttons
+#### Table Buttons
 
-#### View Event Details
-- The View Event Details button ![View Event Details Button](./images/button-view-details.png#icon) opens the following popup:
+##### View Event Details
 
-![View Event Details popup showing comprehensive information about the selected downtime event](./images/popup-view-event-details.png)
+- The `View Event Details` button, ![View Event Details Button](./images/line-overview-button-view-event-details.png#icon), opens the Downtime Event Details popup:
 
-**Description:** Displays detailed information about the selected downtime event. This includes the start and end times, duration, state, location, downtime reason, notes, and whether the event has been acknowledged.
+![Downtime Event Details popup showing detailed information about the selected downtime event](./images/line-overview-downtime-event-details-popup.png)
 
-#### Acknowledge Event
-- The Acknowledge Event button ![Acknowledge Event Button](./images/button-acknowledge-event.png#icon) opens the following popup:
+- **Sections:**
+  - **Top Bar State:** displays the current [State](terms-and-definitions#state) of the downtime event and its corresponding color.
+  - **Basic and Timing Information:** Displays the basic information about the downtime event, including the following:
+      - Location
+      - Calculation Type
+      - Duration
+      - Start Date
+      - End Date
+      - Acknowledged (Yes/No)
+      - Acknowledged By
+      - Notes
+  - **Downtime Information:** Displays the information about the downtime, including the following:
+      - Downtime Reason
+      - Reason Path
+      - Interruption Location
 
-![Acknowledge Event popup allowing users to mark the event as reviewed with optional notes](./images/popup-acknowledge-event.png)
+##### Acknowledge Event
 
-**Description:** Allows users to acknowledge the selected downtime event. TODO Acknowledging an event marks it as reviewed and prevents further edits. Users can also add notes related to the acknowledgment.
+- The `Acknowledge Downtime Event` button, ![Acknowledge Downtime Event Button](./images/line-overview-button-acknowledge-event.png#icon), opens the Acknowledge Downtime Event popup:
 
-#### Set Reason Code
-- The Set Reason Code button ![Set Reason Code Button](./images/button-set-reason.png#icon) opens the downtime reason selection popup:
+![Acknowledge Downtime Event popup with acknowledgment confirmation and notes field](./images/line-overview-acknowledge-downtime-event-popup.png)
 
-![Set Reason Code popup with tree structure for selecting the specific cause of downtime](./images/popup-set-reason.png)
+- **Sections:**
+  - **Confirm:** Click `Confirm` to acknowledge the selected downtime event, marking it as reviewed and preventing further edits.
 
-**Description:** TODO Allows users to select a downtime reason for the selected event. The popup displays a tree structure of predefined downtime reasons, enabling users to choose the most appropriate reason for the downtime event. Users can also add notes related to the downtime reason.
+##### Set Reason Code
+ 
+- The `Set Downtime Reason` button, ![Set Downtime Reason Button](./images/button-set-reason.png#icon), opens the downtime reason selection popup:
 
-#### Split Downtime Event
-- The Split Downtime Event button ![Split Downtime Event Button](./images/button-split-event.png#icon) opens the Split Downtime Event popup:
+![Downtime reason selection popup with hierarchical tree of reasons and notes field](./images/downtime-reason-popup.png)
 
-![Split Downtime Event popup with slider control to divide a downtime event into two separate events](./images/popup-split-event.png)
+- **Sections:**
+  - **Downtime Reason Selection Tree:** Allows users to select a reason for the downtime event from a hierarchical list of predefined reasons.
+  - **Acknowledge Button:** Clicking this button acknowledges the downtime event, marking it as reviewed and preventing further edits.
+  - **Notes Field:** A text field for users to add additional notes or comments related to the downtime event.
 
-**Description:** Allows users to split the selected downtime event into two separate events. This is useful when a downtime event spans multiple reasons or states. The popup allows users to drag the split line to adjust the start and end times of the new event.
+##### Split Downtime Event
+- The `Split Downtime Event` button, ![Split Downtime Event Button](./images/button-split-event.png#icon), opens the Split Downtime Event popup:
+
+![Split Downtime Event popup with slider to select the split point between two events](./images/split-event-popup.png)
+
+- **Sections:**
+  - **Slider:** Select and drag the middle slider to choose the split point for the downtime event.
+  - **Confirm:** Click `Confirm` to split the selected downtime event into two separate events at the chosen point.

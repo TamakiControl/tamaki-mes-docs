@@ -114,7 +114,7 @@ This document provides definitions and explanations of key terms related to Over
 
 - **Components:**
   - **Text Entry Section:**
-    - A text input field where users can specify expressions to be evaluated. This component can also gets automatically populated by the user's selection when using the tag selector button.
+    - A text input field where users can specify expressions to be evaluated. This component can also get automatically populated by the user's selection when using the tag selector button.
     - Additional logic can be added to the expression field, allowing for complex calculations and logic to be applied to the PLC tag data.
   - **Common Logical Operators Button:** ![Common Logical Operators Button](./images/button-logical-operators.png#icon)
     - Opens a dropdown menu with common logical operators that can be inserted into the expression field. Selecting an operator will insert it into the `Text Entry Section` (see [Ignition Expression Language Documentation](https://www.docs.inductiveautomation.com/docs/8.1/platform/expression-language-and-syntax) for more details):
