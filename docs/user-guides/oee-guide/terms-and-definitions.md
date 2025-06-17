@@ -54,7 +54,7 @@ This document provides definitions and explanations of key terms related to Over
   - It identifies losses due to slow cycles or reduced speed.
 - **Formula**:
 ```
-    Performance = (Actual Production Rate / Ideal Production Rate)
+    Performance = Actual Production Rate / Ideal Production Rate
 ```
 - **Purpose**:
   - To assess how efficiently the equipment is operating relative to its designed capacity.
