@@ -145,7 +145,7 @@ The fixed value for the [Standard Rate](terms-and-definitions#standard-rate) of 
 
 ##### Standard Rate Expression ([UoM](#production-count-unit-of-measure)/[Time Unit](#production-rate-time-unit))
 
-The [Expression Field](terms-and-definitions#expression-field) where the PLC tag for the [Standard Rate](terms-and-definitions#standard-rate) of the location is bound to the OEE model.
+This is where the value for the [Standard Rate](terms-and-definitions#standard-rate) is specified for the location. This can be a static value but will most likely be a tag binding to reflect the PLC's value for the standard rate for the product running at the machine [Expression Field](terms-and-definitions#expression-field).
 
 #### Quality
 
