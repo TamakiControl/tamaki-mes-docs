@@ -348,7 +348,7 @@ The fixed value for the expected duration of the mode, defined in seconds. This 
 ### Downtime Reasons Workflow
 
 ##### Create New Downtime Reason
-1. right-click either on empty space in the tree, or on the downtime reason which you want to use as the parent reason.
+1. Right-click either on empty space in the tree, or on the downtime reason which you want to use as the parent reason.
 2. Click `Add Downtime Reason` in the context menu that appears from right-clicking. This will populate the right side of the screen with empty values, and set the [Parent Downtime Reason](#parent-downtime-reason) to what was right-clicked (see [Edit or Create New Downtime Reason Fields](#edit-or-create-new-downtime-reason-fields)).
 3. Fill out the fields on the right side of the screen (see [Edit or Create New Downtime Reason Fields](#edit-or-create-new-downtime-reason-fields) for details).
 4. Click the `Confirm` button to save the new downtime reason.
