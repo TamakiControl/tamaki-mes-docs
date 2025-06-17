@@ -35,7 +35,7 @@ This document provides definitions and explanations of key terms related to Over
   - The operational mode of a piece of equipment, such as running, setup, maintenance, or idle.
   - Data model [mode](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Fmode.md), [mode record](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Foee-mode-record.md)
 - **Purpose:**
-  - To categorize the operational state of equipment based on its current function or activity.
+  - To categorize the operational mode of equipment based on its current function or activity.
 
 ## Availability
 - **Definition:** 
