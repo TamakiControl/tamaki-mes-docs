@@ -10,6 +10,7 @@ This document provides definitions and explanations of key terms related to Over
 ## OEE (Overall Equipment Effectiveness)
 - **Definition:** 
   - A measure of how effectively a manufacturing operation is utilized compared to its full potential.
+  - Configuration: [OEE Configuration](setup#oee-configuration)
 - **Formula**:
 ```
     OEE = (Availability) x (Performance) x (Quality)
@@ -27,6 +28,7 @@ This document provides definitions and explanations of key terms related to Over
 - **Definition:** 
   - The current operational status of a piece of equipment or production line.
   - Data model [state](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Fstate.md), [state record](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Foee-state-record.md)
+  - Configuration: [States](setup#states)
 - **Purpose:**
   - To indicate whether the equipment is running, stopped, or in a fault condition.
 
@@ -34,6 +36,7 @@ This document provides definitions and explanations of key terms related to Over
 - **Definition:** 
   - The operational mode of a piece of equipment, such as running, setup, maintenance, or idle.
   - Data model [mode](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Fmode.md), [mode record](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Foee-mode-record.md)
+  - Configuration: [Modes](setup#modes)
 - **Purpose:**
   - To categorize the operational mode of equipment based on its current function or activity.
 
@@ -74,6 +77,7 @@ This document provides definitions and explanations of key terms related to Over
 - **Definition:** 
   - The specific cause of downtime for a piece of equipment or production line.
   - Data Model: [Downtime Reason](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Foee-downtime-reason.md)
+  - Configuration: [Downtime Reasons](setup#downtime-reasons)
 - **Purpose:**
   - To categorize and analyze the reasons for equipment downtime, enabling targeted improvements to reduce future occurrences.
 

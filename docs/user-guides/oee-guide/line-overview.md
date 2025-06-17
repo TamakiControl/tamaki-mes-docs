@@ -48,7 +48,8 @@ description: "OEE Line Overview Screen"
   A timeline that shows the historical OEE state of the line, allowing users to see trends and patterns over time. Hover over the colored bars that make up the timeline to see the start time, end time, and duration of the event associated with the color (see [States](setup#states) for what state each color represents).
   
     - Clicking on a bar in the timeline will open a popup with more detailed information about the event:
-      - ![Timeline event details popup showing duration and state information](./images/timeline-event-details.png)
+
+    ![Timeline event details popup showing duration and state information](./images/timeline-event-details.png)
   
 ## Line Graphic
 **Example:**
@@ -94,6 +95,33 @@ Change the [Mode](setup#modes) of the note by clicking `On`, `Off`, `Resume`, Or
 
 
 Selecting a row in the table allows the two buttons in the top left of the downtime records section to be selected.
+
+The `View Event Details` button, ![View Event Details Button](./images/line-overview-button-view-event-details.png#icon), opens the Downtime Event Details popup:
+
+![Downtime Event Details popup showing detailed information about the selected downtime event](./images/line-overview-downtime-event-details-popup.png)
+
+**Sections:**
+- **Top Bar State:** displays the current [State](terms-and-definitions#state) of the downtime event and its corresponding color.
+- **Basic and Timing Information:** Displays the basic information about the downtime event, including the following:
+  - Location
+  - Calculation Type
+  - Duration
+  - Start Date
+  - End Date
+  - Acknowledged (Yes/No)
+  - Acknowledged By
+  - Notes
+- **Downtime Information:** Displays the information about the downtime, including the following:
+  - Downtime Reason
+  - Reason Path
+  - Interruption Location
+
+The `Acknowledge Downtime Event` button, ![Acknowledge Downtime Event Button](./images/line-overview-button-acknowledge-event.png#icon), opens the Acknowledge Downtime Event popup:
+
+![Acknowledge Downtime Event popup with acknowledgment confirmation and notes field](./images/line-overview-acknowledge-downtime-event-popup.png)
+
+**Sections:**
+- **Confirm:** Clicking this button acknowledges the downtime event.
 
 The `Set Downtime Reason` button, ![Set Downtime Reason Button](./images/button-set-reason.png#icon), opens the downtime reason selection popup:
 
