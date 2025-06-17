@@ -128,7 +128,7 @@ This is where the production count value is specified for the location [Producti
 
 Opens a dropdown with the following options:
 - **Direct:** The production count will be calculated directly from the value in the [Production Count Expression](#production-count-expression) field.
-- **Delta:** The production count will be calculated as the difference between the current value and the previous value. This uses the [Production Count Overflow Value](#production-count-overflow-value) to know when the value has rolled over back to 0.
+- **Delta:** The production count will be calculated as the difference between the current value and the previous value. This uses the [Production Count Overflow Value](#production-count-overflow-value) to know when the value has rolled over back to 0. This only handles a maximum of 1 rollover between evaluations.
 
 ##### Production Count Overflow Value
 The tag capturing production count will roll over to 0 when it reaches this value. This is used to calculate the production count when then [Production Count Calculation Type](#production-count-calculation-type) is set to `delta`.
