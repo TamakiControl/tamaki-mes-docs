@@ -92,7 +92,7 @@ Enables availability tracking for the OEE Records. This allows the system to tra
 
 ##### State Expression
 
-The [Expression Field](terms-and-definitions#expression-field) where the PLC tag for the [State](terms-and-definitions#state) of the location is bound to the OEE model.
+This is where the Oee State's code number is specified for this location [State](terms-and-definitions#state). This can be a static value but will most likely be a tag binding to reflect the PLC's value for the state of the machine [Expression Field](terms-and-definitions#expression-field).
 
 ##### Downtime Reason Source
 
