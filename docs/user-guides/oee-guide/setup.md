@@ -78,7 +78,7 @@ If none of those events occur within the [Max Record Duration](#max-record-durat
 
 #### Prune Days
 
-Number of days to retain OEE records. (If blank, records will be kept indefinitely)
+Number of days to retain OEE records in the database before deleting. (If blank, records will be kept indefinitely)
 
 #### [Mode](terms-and-definitions#mode) Expression
 
