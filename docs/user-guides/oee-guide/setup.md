@@ -74,7 +74,7 @@ Maximum duration for an OEE record in seconds. Normally, the following events ca
 - [future] Operation start or end at the location.
 - [future] Shift start or end at the location.
 
-If none of those events occur within the [Max Record Duration](#max-record-duration), the OEE record will end automatically. The purpose of this is to control the granularity of the records. Changing this value will not affect existing records, but will apply to new records created after the change.
+If none of those events occur within the [Max Record Duration](#max-record-duration), the OEE record will to cut over to the next record automatically. The purpose of this is to control the granularity of the records. Changing this value will not affect existing records, but will apply to new records created after the change.
 
 #### Prune Days
 
