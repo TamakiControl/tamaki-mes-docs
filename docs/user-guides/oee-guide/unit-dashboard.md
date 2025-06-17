@@ -64,7 +64,7 @@ description: "OEE Unit Dashboard Screen"
 **Description:**
 - The OEE Metrics by Hour section provides a detailed breakdown of OEE metrics for each hour of the day. This allows users to analyze performance trends and identify specific time periods where performance may have been affected.
 
-## Top Downtime Reasons
+## Downtime Reasons Pareto Chart
 **Example:**
 
 ![Bar chart showing the most common downtime reasons and their durations](./images/unit-dashboard-top-downtime.png)
