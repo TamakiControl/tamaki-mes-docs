@@ -4,7 +4,7 @@ title: "modes"
 description: "Documentation for the modes table, outlining its columns and structure."
 ---
 
-# Operation
+# Mode
 
 ## Overview
 
