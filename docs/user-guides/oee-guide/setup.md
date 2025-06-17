@@ -122,7 +122,7 @@ For example, if this field is set to `Minutes`, and the [Production Count Unit o
 
 ##### Production Count Expression
 
-The [Expression Field](terms-and-definitions#expression-field) where the PLC tag for the [Production Count](terms-and-definitions#production-count) of the location is bound to the OEE model.
+This is where the production count value is specified for the location [Production Count](terms-and-definitions#production-count). This can be a static value but will most likely be a tag binding to reflect the PLC's value for the current production count at the machine [Expression Field](terms-and-definitions#expression-field).
 
 ##### Production Count Calculation Type
 
