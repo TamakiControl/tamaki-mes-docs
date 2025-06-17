@@ -13,14 +13,14 @@ Retrieves the [Production Order Bill of Materials](../../data-model/production-o
 ## Syntax
 
 ```python
-system.mes.productionOrder.getBillOfMaterialsForOrder(productionOrderId)
+system.mes.productionOrder.getBillOfMaterialsForOrder(productionOrderIdOrName)
 ```
 
 ## Parameters
 
-| Parameter           | Type            | Description                                                         |
-| ------------------- | --------------- | ------------------------------------------------------------------- |
-| `productionOrderId` | `String` (ULID) | The ULID of the production order to retrieve the bill of materials. |
+| Parameter               | Type            | Description                                                         |
+| ----------------------- | --------------- | ------------------------------------------------------------------- |
+| `productionOrderIdOrName` | `String`      | The ID or Name of the production order to retrieve the bill of materials. |
 
 ## Returns
 

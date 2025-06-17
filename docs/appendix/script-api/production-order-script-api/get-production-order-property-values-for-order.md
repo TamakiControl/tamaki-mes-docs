@@ -13,14 +13,14 @@ Retrieves a list of [Production Order Property Values](../../data-model/producti
 ## Syntax
 
 ```python
-system.mes.productionOrder.getProductionOrderPropertyValuesForOrder(productionOrderId)
+system.mes.productionOrder.getProductionOrderPropertyValuesForOrder(productionOrderIdOrName)
 ```
 
 ## Parameters
 
-| Parameter           | Type            | Description                                                                        |
-| ------------------- | --------------- | ---------------------------------------------------------------------------------- |
-| `productionOrderId` | `String` (ULID) | The ULID of the production order to retrieve the production order property values. |
+| Parameter               | Type            | Description                                                                              |
+| ----------------------- | --------------- | ---------------------------------------------------------------------------------------- |
+| `productionOrderIdOrName` | `String`      | The ID or Name of the production order to retrieve the production order property values. |
 
 ## Returns
 
