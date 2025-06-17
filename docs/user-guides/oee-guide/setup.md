@@ -177,7 +177,7 @@ Opens a dropdown with the following options:
 
 ##### Production Order Expression
 
-The [Expression Field](terms-and-definitions#expression-field) where the PLC tag for the [Production Order](terms-and-definitions#production-order) of the location is bound to the OEE model.
+This is where the name or id of the [Production Order](terms-and-definitions#production-order) running at the location. This can be a static value but will most likely be a tag binding to reflect the PLC's value for the current production order name running at the machine [Expression Field](terms-and-definitions#expression-field).
 
 ## States
 
