@@ -43,7 +43,7 @@ This document provides definitions and explanations of key terms related to Over
   - It accounts for downtime due to maintenance, breakdowns, and other interruptions.
 - **Formula**:
 ```
-    Availability = (Total Production Time - Downtime) / Total Production Time
+    Availability = Total Running Time / Total Scheduled Time
 ```
 - **Purpose**:
   - To measure the effectiveness of equipment utilization by identifying periods when it is not available for production.
