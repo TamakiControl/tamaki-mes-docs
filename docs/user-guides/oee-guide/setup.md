@@ -102,7 +102,7 @@ Opens a dropdown with the following options:
 
 ##### Downtime Reason Expression
 
-The [Expression Field](terms-and-definitions#expression-field) where the PLC tag for the [Downtime Reason](terms-and-definitions#downtime-reason) of the location is bound to the OEE model.
+This is where the Downtime Reason's fault code is specified for this location [Downtime Reason](terms-and-definitions#downtime-reason). This can be a static value but will most likely be a tag binding to reflect the PLC's value for the fault code of the machine [Expression Field](terms-and-definitions#expression-field).
 
 #### Performance
 
