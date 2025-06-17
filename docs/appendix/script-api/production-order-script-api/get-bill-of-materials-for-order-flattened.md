@@ -37,7 +37,7 @@ Returns a list of flattened JSON objects representing the bill of materials asso
 | `unitOfMeasureSymbol`      | `String`        | The symbol of the unit of measure for this bill of materials.              |
 | `productionOrderName`      | `String`        | The name of the production order associated with this bill of materials.   |
 | `subs`                     | `List<JSON>`    | List of sub-components related to this bill of materials item.             |
-| `productId`                | `String` (ULID) | The ULID for the material produce to be produced.                          |
+| `productId`                | `String` (ULID) | The ULID for the material to be produced.                          |
 | `productionOrderId`        | `String` (ULID) | The ULID for the production order associated with this bill of materials.  |
 | `materialName`             | `String`        | The name of the material that is a component of the produce.               |
 | `materialId`               | `String` (ULID) | The ULID of the material that is a component of the produce.               |
