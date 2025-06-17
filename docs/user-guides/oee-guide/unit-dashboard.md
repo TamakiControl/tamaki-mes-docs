@@ -70,4 +70,4 @@ description: "OEE Unit Dashboard Screen"
 ![Bar chart showing the most common downtime reasons and their durations](./images/unit-dashboard-top-downtime.png)
 
 **Description:**
-- The Top Downtime Reasons chart displays the most common reasons for downtime in the selected unit. This helps users identify recurring issues and prioritize improvements to reduce downtime.
+- The Downtime Reasons Pareto chart displays the most common reasons for downtime in the selected unit. Along with the cumulative frequency, This helps users identify recurring issues and prioritize improvements to reduce downtime. This chart defaults to showing the top level reason codes in the hierarchy, click on any bar to drill down.
