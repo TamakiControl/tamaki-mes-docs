@@ -161,7 +161,7 @@ The [Expression Field](terms-and-definitions#expression-field) where the PLC tag
 
 Opens a dropdown with the following options:
 - **Direct:** The waste count will be calculated directly from the value in the [Waste Count Expression](#waste-count-expression) field.
-- **Delta:**  The waste count will be calculated as the difference between the current value and the previous value. This uses the [Waste Count Overflow Value](#waste-count-overflow-value) to know when the value has rolled over back to 0.
+- **Delta:**  The waste count will be calculated as the difference between the current value and the previous value. This uses the [Waste Count Overflow Value](#waste-count-overflow-value) to know when the value has rolled over back to 0. This only handles a maximum of 1 rollover between evaluations.
 
 ##### Waste Count Overflow Value
 
