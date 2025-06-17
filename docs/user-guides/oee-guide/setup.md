@@ -380,7 +380,7 @@ A concise, detailed description of the downtime reason, providing additional con
 
 #### Code
 
-The integer code for the downtime reason, matching the PLC tag that indicates the downtime reason of the location. This code is used to identify the downtime reason in the PLC and should be unique for each downtime reason.
+The integer code for the downtime reason, matching the PLC tag that indicates the downtime reason or fault code of the location. This code is used to identify the downtime reason in the PLC and should be unique for each downtime reason.
 
 #### Parent Downtime Reason
 
