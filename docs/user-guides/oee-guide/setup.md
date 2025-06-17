@@ -67,7 +67,7 @@ Toggles the OEE tracking for the selected location.
 
 #### Max Record Duration
 
-Maximum duration for an OEE record in seconds. Normally, the following events cause an OEE record to end:
+Maximum duration for an OEE record in seconds. Normally, the following events cause an OEE record to cut over to the next record:
 - OEE Mode change at the location.
 - Standard rate change at the location.
 - Production order change at the location.
