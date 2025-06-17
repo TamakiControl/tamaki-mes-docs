@@ -149,6 +149,3 @@ TODO
       7. The tag will now be bound to the OEE model, allowing it to track the mode of the location in real-time:
          
          ![Completed mode expression binding](./images/completed-mode-binding.png)
-
-  - **TODO:**
-    - Add more examples of how to use the expression field in different scenarios.
