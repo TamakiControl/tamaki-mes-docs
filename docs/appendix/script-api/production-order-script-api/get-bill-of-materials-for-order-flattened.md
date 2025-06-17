@@ -8,7 +8,7 @@ description: "Retrieves a flattened representation of all bill of materials reco
 
 ## Description
 
-Retrieves a flattened representation of all [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) records associated with the given production order ID. This method flattens the bill of materials to a single level, no subs.
+Retrieves a flattened representation of all [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) records associated with the given production order ID. This method flattens the bill of materials to a single level, no substitutions.
 
 ## Syntax
 
