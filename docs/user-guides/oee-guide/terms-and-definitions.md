@@ -65,7 +65,7 @@ This document provides definitions and explanations of key terms related to Over
   - It identifies defects and rework, impacting overall production efficiency.
 - **Formula**:
 ```
-    Quality = (Good Units Produced / Total Units Produced)
+    Quality = Good Units Produced / Total Units Produced
 ```
 - **Purpose**:
   - To evaluate the effectiveness of the production process in delivering products that meet quality requirements.
