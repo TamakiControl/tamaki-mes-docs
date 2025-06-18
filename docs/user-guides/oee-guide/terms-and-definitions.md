@@ -27,7 +27,7 @@ This document provides definitions and explanations of key terms related to Over
 ## State
 - **Definition:** 
   - The current operational status of a piece of equipment or production line.
-  - Data model [state](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Fstate.md), [state record](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Foee-state-record.md)
+  - Data model [state](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Foee-state.md), [state record](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Foee-state-record.md)
   - Configuration: [States](setup#states)
 - **Purpose:**
   - To indicate whether the equipment is running, stopped, or in a fault condition.
@@ -35,7 +35,7 @@ This document provides definitions and explanations of key terms related to Over
 ## Mode
 - **Definition:** 
   - The operational mode of a piece of equipment, such as running, setup, maintenance, or idle.
-  - Data model [mode](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Fmode.md), [mode record](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Foee-mode-record.md)
+  - Data model [mode](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Foee-mode.md), [mode record](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Foee-mode-record.md)
   - Configuration: [Modes](setup#modes)
 - **Purpose:**
   - To categorize the operational mode of equipment based on its current function or activity.
