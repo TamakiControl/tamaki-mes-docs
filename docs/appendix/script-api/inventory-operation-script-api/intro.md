@@ -21,6 +21,14 @@ This method must be combined with the [saveInventoryOperation](./save-inventory-
 
 Creates or updates an [Inventory Operations](../../data-model/inventory-model/inventory-operation) record in the system based on the provided parameters. Returns a JSON representation of the saved inventory operation.
 
+### [getInventoryOperation](./get-inventory-operation)
+
+Retrieves an [Inventory Operations](../../data-model/inventory-model/inventory-operation) object by its unique identifier. Returns a JSON object representing the inventory operation.
+
+### [getAllInventoryOperations](./get-all-inventory-operations)
+
+Retrieves all [Inventory Operations](../../data-model/inventory-model/inventory-operation) records configured in the system. Returns a JSON array of inventory operation objects.
+
 ### [getInventoryOperationsByOperation](./get-inventory-operations-by-operation)
 
 Retrieves all the [Inventory Operations](../../data-model/inventory-model/inventory-operation) records for a given operation. Returns a list of JSON objects representing all inventory operations for a given operation.
@@ -28,10 +36,6 @@ Retrieves all the [Inventory Operations](../../data-model/inventory-model/invent
 ### [getInventoryOperationsByLocation](./get-inventory-operations-by-location)
 
 Retrieves all the [Inventory Operations](../../data-model/inventory-model/inventory-operation) records at a given location. Returns a list of JSON objects representing all inventory operations at the given location.
-
-### [getInventoryOperations](./get-inventory-operations)
-
-Retrieves all the [Inventory Operations](../../data-model/inventory-model/inventory-operation) records. Returns a list of JSON objects representing all inventory operations.
 
 ### [getInventoryOperationReferences](./get-inventory-operation-references)
 
@@ -49,6 +53,14 @@ This only checks if the inventory operation object can be saved based on the att
 ### [deleteInventoryOperation](./delete-inventory-operation)
 
 Deletes an [Inventory Operations](../../data-model/inventory-model/inventory-operation) record by its ID. This cannot delete an inventory operation with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
+
+### [isSourceLocationRequired](./is-source-location-required)
+
+Determines if a source location is required for a specific [Inventory Operations](../../data-model/inventory-model/inventory-operation) type. Returns a boolean value indicating whether a source location is required.
+
+### [isDestinationLocationRequired](./is-destination-location-required)
+
+Determines if a destination location is required for a specific [Inventory Operations](../../data-model/inventory-model/inventory-operation) type. Returns a boolean value indicating whether a destination location is required.
 
 ### [executeInventoryOperation](./execute-inventory-operation)
 
