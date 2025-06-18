@@ -1,10 +1,10 @@
 ---
 sidebar_position: 37
-title: "getBillOfMaterialsReferences"
+title: "getBillOfMaterialsItemReferences"
 description: "Retrieves a list of references to a bill of materials with the given ID."
 ---
 
-# system.mes.productionOrder.getBillOfMaterialsReferences
+# system.mes.productionOrder.getBillOfMaterialsItemReferences
 
 ## Description
 
@@ -13,7 +13,7 @@ Retrieves a list of references to a [Production Order Bill of Materials](../../d
 ## Syntax
 
 ```python
-system.mes.productionOrder.getBillOfMaterialsReferences(id)
+system.mes.productionOrder.getBillOfMaterialsItemReferences(id)
 ```
 
 ## Parameters
@@ -42,7 +42,7 @@ The JSON Objects in references has the following properties:
 
 ```python
 # Retrieve the references for the bill of materials specified
-bill_of_materials_references = system.mes.productionOrder.getBillOfMaterialsReferences('01JQ31CZMB-E7QA782B-5B521H4M')
+bill_of_materials_references = system.mes.productionOrder.getBillOfMaterialsItemReferences('01JQ31CZMB-E7QA782B-5B521H4M')
 
 # Output the bill of materials references
 print(bill_of_materials_references)

@@ -1,10 +1,10 @@
 ---
 sidebar_position: 39
-title: "deleteBillOfMaterials"
+title: "deleteBillOfMaterialsItem"
 description: "Deletes the bill of materials with the given ID."
 ---
 
-# system.mes.productionOrder.deleteBillOfMaterials
+# system.mes.productionOrder.deleteBillOfMaterialsItem
 
 ## Description
 
@@ -14,7 +14,7 @@ This cannot delete a bill of materials with references to it.
 ## Syntax
 
 ```python
-system.mes.productionOrder.deleteBillOfMaterials(id)
+system.mes.productionOrder.deleteBillOfMaterialsItem(id)
 ```
 
 ## Parameters
@@ -39,5 +39,5 @@ If the bill of materials that's being deleted has a reference, an ApiResponse Ob
 
 ```python
 # Delete a bill of materials by ID
-system.mes.productionOrder.deleteBillOfMaterials('01JQ31CZMB-E7QA782B-5B521H4M')
+system.mes.productionOrder.deleteBillOfMaterialsItem('01JQ31CZMB-E7QA782B-5B521H4M')
 ```
