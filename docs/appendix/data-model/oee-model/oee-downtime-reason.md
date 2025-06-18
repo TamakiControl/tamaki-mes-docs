@@ -1,12 +1,14 @@
 ---
-sidebar_position: 7
+sidebar_position: 6
 title: "oee_downtime_reasons"
-description: "Documentation for the states oee_downtime_reasons, outlining its columns and structure."
+description: "Documentation for the oee_downtime_reasons table, outlining its columns and structure."
 ---
 
-# Operation
+# OEE Downtime Reason
 
 ## Overview
+
+TODO: Add overview description of OEE Downtime Reason entity
 
 ## Table Structure
 
@@ -25,6 +27,8 @@ with sample data where applicable.
 | `spare1`                                  | `String`            | The first spare column that can be used for additional context on the entity.                                                                 | `some extra context 1`                                                                                         |
 | `spare2`                                  | `String`            | The second spare column that can be used for additional context on the entity.                                                                | `some extra context 2`                                                                                         |
 | `spare3`                                  | `String`            | The third spare column that can be used for additional context on the entity.                                                                 | `some extra context 3`                                                                                         |
+TODO: add more rows to match the actual table structure
 
 ## Field Details
 
+TODO: Add field-specific details

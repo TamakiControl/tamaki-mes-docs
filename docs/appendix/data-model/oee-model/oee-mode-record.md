@@ -1,12 +1,14 @@
 ---
-sidebar_position: 5
+sidebar_position: 4
 title: "oee_mode_records"
 description: "Documentation for the oee_mode_records table, outlining its columns and structure."
 ---
 
-# Operation
+# OEE Mode Record
 
 ## Overview
+
+TODO: Add overview description of OEE Mode Record entity
 
 ## Table Structure
 
@@ -25,6 +27,8 @@ with sample data where applicable.
 | `spare1`                                  | `String`            | The first spare column that can be used for additional context on the entity.                                                                 | `some extra context 1`                                                                                         |
 | `spare2`                                  | `String`            | The second spare column that can be used for additional context on the entity.                                                                | `some extra context 2`                                                                                         |
 | `spare3`                                  | `String`            | The third spare column that can be used for additional context on the entity.                                                                 | `some extra context 3`                                                                                         |
+TODO: add more rows to match the actual table structure
 
 ## Field Details
 
+TODO: Add field-specific details

@@ -1,12 +1,14 @@
 ---
-sidebar_position: 6
+sidebar_position: 5
 title: "oee_state_records"
 description: "Documentation for the oee_state_records table, outlining its columns and structure."
 ---
 
-# Operation
+# OEE State Record
 
 ## Overview
+
+TODO: Add overview description of OEE State Record entity
 
 ## Table Structure
 
@@ -25,6 +27,8 @@ with sample data where applicable.
 | `spare1`                                  | `String`            | The first spare column that can be used for additional context on the entity.                                                                 | `some extra context 1`                                                                                         |
 | `spare2`                                  | `String`            | The second spare column that can be used for additional context on the entity.                                                                | `some extra context 2`                                                                                         |
 | `spare3`                                  | `String`            | The third spare column that can be used for additional context on the entity.                                                                 | `some extra context 3`                                                                                         |
+TODO: add more rows to match the actual table structure
 
 ## Field Details
 
+TODO: Add field-specific details
