@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 title: "location_location_groups"
 description: "Documentation for the location_location_groups join table, connecting Location and LocationGroup entities."
 ---
