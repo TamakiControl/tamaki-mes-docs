@@ -8,7 +8,7 @@ description: "Starts an inventory operation."
 
 ## Description
 
-Starts an [Inventory Operations](../../data-model/inventory-model/inventory-operation) object.
+Starts an [Inventory Operations](../../data-model/inventory-model/inventory-operation) object. This function initiates the inventory operation and creates an inventory lot record with a specified start time but a null end time, indicating that the operation is currently in progress. The operation remains active until explicitly ended.
 
 ## Syntax
 
@@ -29,7 +29,7 @@ system.mes.inventory.operation.startInventoryOperation(inventoryOperationId, pri
 
 ## Returns
 
-Returns a JSON object of the inventory lot record for the start of the inventory operation.
+Returns a JSON object of the inventory lot record of the inventory operation. The record will have a defined start time but a null end time, indicating the operation is currently active.
 
 ## Example Usage
 
