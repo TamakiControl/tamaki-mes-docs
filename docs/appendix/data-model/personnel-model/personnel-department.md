@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 2
 title: "personnel_departments"
 description: "Documentation for the personnel_departments table, outlining its columns and structure."
 ---
