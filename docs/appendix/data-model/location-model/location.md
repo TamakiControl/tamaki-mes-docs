@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 title: "locations"
 description: "Documentation for the locations table, outlining its columns and structure."
 ---

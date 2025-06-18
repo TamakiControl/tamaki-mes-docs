@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 title: "location_groups"
 description: "Documentation for the location_groups table, outlining its columns and structure."
 ---

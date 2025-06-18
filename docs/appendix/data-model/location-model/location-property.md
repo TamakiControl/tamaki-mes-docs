@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 4
 title: "location_properties"
 description: "Documentation for the location_properties table, outlining its columns and structure."
 ---
