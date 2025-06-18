@@ -1,10 +1,10 @@
 ---
-sidebar_position: 5
-title: "personnel_person_certifications"
-description: "Documentation for the personnel_person_certifications table, outlining its columns and structure."
+sidebar_position: 4
+title: "person_personnel_certifications"
+description: "Documentation for the person_personnel_certifications table, outlining its columns and structure."
 ---
 
-# Person-Personnel Certifications
+# Person Personnel Certifications
 
 ## Overview
 

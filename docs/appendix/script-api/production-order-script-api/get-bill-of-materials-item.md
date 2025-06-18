@@ -1,10 +1,10 @@
 ---
 sidebar_position: 34
-title: "getBillOfMaterials"
+title: "getBillOfMaterialsItem"
 description: "Retrieves the bill of materials with the given ID."
 ---
 
-# system.mes.productionOrder.getProductionOrder
+# system.mes.productionOrder.getBillOfMaterialsItem
 
 ## Description
 
@@ -13,7 +13,7 @@ Retrieves a [Production Order Bill of Materials](../../data-model/production-ord
 ## Syntax
 
 ```python
-system.mes.productionOrder.getBillOfMaterials(id)
+system.mes.productionOrder.getBillOfMaterialsItem(id)
 ```
 
 ## Parameters
@@ -50,7 +50,7 @@ Returns a JSON representation of the bill of materials. Returns nothing if no bi
 
 ```python
 # Retrieve a bill of materials by ID
-bill_of_materials = system.mes.productionOrder.getBillOfMaterials('01JQ31CZMB-E7QA782B-5B521H4M')
+bill_of_materials = system.mes.productionOrder.getBillOfMaterialsItem('01JQ31CZMB-E7QA782B-5B521H4M')
 
 # Output the bill of materials
 print(bill_of_materials)

@@ -126,16 +126,16 @@ This only checks if the production order property value object can be saved base
 Deletes a [Production Order Property Values](../../data-model/production-order-model/production-order-property-value) record by its ID.
 This cannot delete a production order property value with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
 
-### [`newBillOfMaterials`](./new-bill-of-materials)
+### [`newBillOfMaterialsItem`](./new-bill-of-materials-item)
 
 Generates an empty non-persisted [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) object to provide the structure required by the API
-to save a new record into the database. This method must be combined with the [saveBillOfMaterials](./save-bill-of-materials) method in order to persist the record. Returns a JSON representation of the newly created bill of materials object.
+to save a new record into the database. This method must be combined with the [saveBillOfMaterials](./save-bill-of-materials-item) method in order to persist the record. Returns a JSON representation of the newly created bill of materials object.
 
-### [`saveBillOfMaterials`](./save-bill-of-materials)
+### [`saveBillOfMaterialsItem`](./save-bill-of-materials-item)
 
 Creates or updates a [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) record in the system based on the provided parameters. Returns a JSON representation of the saved bill of materials.
 
-### [`getBillOfMaterials`](./get-bill-of-materials)
+### [`getBillOfMaterialsItem`](./get-bill-of-materials-item)
 
 Retrieves a [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) record by its ID. Returns a JSON representation of the bill of materials.
 
@@ -143,25 +143,33 @@ Retrieves a [Production Order Bill of Materials](../../data-model/production-ord
 
 Retrieves the [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) record associated with a production order ID. Returns a JSON representation of the bill of materials associated with the given production order.
 
+### [`getBillOfMaterialsForOrderFlattened`](./get-bill-of-materials-for-order-flattened)
+
+Retrieves a flattened representation of all [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) records associated with a production order ID. This provides an easier-to-consume format where material relationships are flattened out. Returns a list of flattened JSON objects representing the bill of materials.
+
 ### [`getBillOfMaterialsFor`](./get-bill-of-materials-for)
 
 Retrieves the [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) record associated with a production order ID and a material ID or path. Returns a JSON representation of the bill of materials associated with the given production order and material.
 
-### [`getBillOfMaterialsReferences`](./get-bill-of-materials-references)
+### [`getBillOfMaterialsReferences`](./get-bill-of-materials-item-references)
 
 Retrieves a list of references to a [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) record by its ID. Returns a list of JSON objects.
 
-### [`validateBillOfMaterials`](./validate-bill-of-materials)
+### [`validateBillOfMaterialsItem`](./validate-bill-of-materials-item)
 
 Validates the specified parameters for a [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) record and returns any validation errors.
 This only checks if the bill of materials object can be saved based on the attributes given. Returns a JSON object where keys are field names and values are lists of validation violation messages.
 
-### [`deleteBillOfMaterials`](./delete-bill-of-materials)
+### [`deleteBillOfMaterialsItem`](./delete-bill-of-materials-item)
 
 Deletes a [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) record by its ID.
 This cannot delete a bill of materials with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
 
-### [`deleteAllBillOfMaterialsForOrder`](./delete-all-bill-of-materials-for-order)
+### [`swapBillOfMaterialsPositions`](./swap-bill-of-materials-positions)
+
+Swaps the position values of two [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) records within the same production order. This is useful for reordering bill of materials items in a user interface. If successful, an ApiResponse Object is returned with the success bool set True.
+
+### [`deleteBillOfMaterialsForOrder`](./delete-bill-of-materials-for-order)
 
 Deletes all [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) records associated with a production order ID.
 This cannot delete any bill of materials with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
