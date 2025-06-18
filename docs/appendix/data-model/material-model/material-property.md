@@ -85,8 +85,6 @@ Indicates if the property value is required or can be left empty (`null`).
 References the unit of measure applicable to this property, such as kilograms or liters, supporting context for values as well as conversions.
 See [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure) for details.
 
-This is for display purposes only and is not a reference to any [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure) entity.
-
 ### `material_class_id`
 
 References the `MaterialClass` entity associated with this property, ensuring that each material within the class can

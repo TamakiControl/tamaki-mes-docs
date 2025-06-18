@@ -77,8 +77,6 @@ configurations.
 References the unit of measure applicable to this property, such as kilograms or liters, supporting context for values as well as conversions.
 See [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure) for details.
 
-This is for display purposes only and is not a reference to any [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure) entity.
-
 ### `equipment_class_id`
 
 References the `EquipmentClass` that this property applies to. This relationship allows the property to be defined at
