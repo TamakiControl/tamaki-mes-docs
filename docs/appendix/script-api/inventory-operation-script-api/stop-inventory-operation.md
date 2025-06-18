@@ -1,14 +1,14 @@
 ---
 sidebar_position: 14
 title: "stopInventoryOperation"
-description: "Stop an inventory operation."
+description: "Stops an inventory operation and records its end state."
 ---
 
 # system.mes.inventory.operation.stopInventoryOperation
 
 ## Description
 
-Stops an [Inventory Operations](../../data-model/inventory-model/inventory-operation) object.
+Stops the [Inventory Operations](../../data-model/inventory-model/inventory-operation) object with the provided id. This action finds the currently running inventory lot record, records the specified quantity and end state into it, sets its end time to the specified date (or current time if not specified), and updates its status to completed. This effectively concludes the active operation and finalizes the lot record.
 
 ## Syntax
 
@@ -27,7 +27,7 @@ system.mes.inventory.operation.stopInventoryOperation(inventoryOperationId, quan
 
 ## Returns
 
-Returns a JSON object of the inventory lot record for the end of the inventory operation.
+Returns a JSON object of the updated inventory lot record with the completed operation details, including the end time and final quantity.
 
 ## Example Usage
 
