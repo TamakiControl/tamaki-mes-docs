@@ -28,7 +28,7 @@ description: "OEE Downtime Entry Screen"
 ![Location Tree panel showing hierarchical structure of production equipment locations](./images/downtime-entry-location-tree.png)
 
 **Description:**
-- TODO The Location Tree displays the hierarchy of locations within the production line. Users can select a specific location to view and manage downtime events associated with that location. The tree structure allows for easy navigation through different levels of the production line.
+- The Location Tree displays the hierarchy of locations within the production line. Users can select a specific location to view and manage downtime events associated with that location. The tree structure allows for easy navigation through different levels of the production line.
 
 ## Downtime Reason Tree
 **Example:**
