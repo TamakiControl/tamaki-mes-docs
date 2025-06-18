@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 3
 title: "personnel_certifications"
 description: "Documentation for the personnel_certifications table, outlining its columns and structure."
 ---
