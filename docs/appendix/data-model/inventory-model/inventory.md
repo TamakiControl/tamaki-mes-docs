@@ -26,7 +26,7 @@ along with sample data where applicable.
 | `created_by`          | `String`        | Person who created the entity.                                                                                   | `TamakiMES`                         |
 | `modified_date`       | `DateTime`      | Date the entity was modified. Value is null upon creation, and gets initially populated upon the first edit.     | `2024-12-31T19:48:44Z`              |
 | `modified_by`         | `String`        | Last person to modify the entity. Value is null upon creation, and gets initially populated upon the first edit. | `TamakiMES`                         |
-| `notes`               | `Blob`          | Notes about the entity.                                                                                          | `This entity has these extra notes` |
+| `notes`               | `String`        | Notes about the entity.                                                                                          | `This entity has these extra notes` |
 | `spare1`              | `String`        | The first spare column that can be used for additional context on the entity.                                    | `some extra context 1`              |
 | `spare2`              | `String`        | The second spare column that can be used for additional context on the entity.                                   | `some extra context 2`              |
 | `spare3`              | `String`        | The third spare column that can be used for additional context on the entity.                                    | `some extra context 3`              |

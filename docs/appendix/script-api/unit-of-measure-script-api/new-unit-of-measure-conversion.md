@@ -48,7 +48,7 @@ new_uomc = system.mes.unitOfMeasure.newUnitOfMeasureConversion()
 
 # Set basic attributes for the new unit of measure
 new_uomc['toId'] = '01JCH3T85P-KVCB8ZR5-0B83A3SX'
-new_uomc['conversionFactor'] = '0.33'
+new_uomc['conversionFactor'] = 0.33
 new_uomc['fromId'] = '01JCH4NB3J-BTERAZ27-QEQQN4ME'
 # (You can continue setting other properties as needed here)
 
