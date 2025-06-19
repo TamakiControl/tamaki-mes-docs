@@ -9,21 +9,21 @@ description: "Updates the value of a production order property value given a pro
 ## Description
 
 Updates the value of a [Production Order Property Values](../../data-model/production-order-model/production-order-property-value) record given
-a production order ID and a property ID or name.
+a production order ID or name and a property ID or name.
 
 ## Syntax
 
 ```python
-system.mes.productionOrder.setPropertyValue(productionOrderId, propertyIdOrName, value)
+system.mes.productionOrder.setPropertyValue(productionOrderIdOrName, propertyIdOrName, value)
 ```
 
 ## Parameters
 
-| Parameter           | Type            | Description                                                                                                                          |
-| ------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `productionOrderId` | `String` (ULID) | The ULID of the production order.                                                                                                    |
-| `propertyIdOrName`  | `String`        | The ULID or name of the property for which the value is retrieved.                                                                   |
-| `value`             | `Mixed`         | The value assigned to the property value if none is provided. The type is mixed as it depends on what the data type of the property. |
+| Parameter                 | Type      | Description                                                                                                                          |
+|---------------------------|-----------|--------------------------------------------------------------------------------------------------------------------------------------|
+| `productionOrderIdOrName` | `String`  | The ULID or name of the production order.                                                                                            |
+| `propertyIdOrName`        | `String`  | The ULID or name of the property for which the value is retrieved.                                                                   |
+| `value`                   | `Mixed`   | The value assigned to the property value if none is provided. The type is mixed as it depends on what the data type of the property. |
 
 ## Returns
 

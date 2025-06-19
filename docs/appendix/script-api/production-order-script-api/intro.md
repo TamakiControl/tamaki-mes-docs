@@ -27,10 +27,6 @@ Retrieves [Production Orders](../../data-model/production-order-model/production
 
 Retrieves a [Production Orders](../../data-model/production-order-model/production-order) record by its ID or name. Returns a JSON representation of the production order.
 
-### [`getProductionOrderByName`](./get-production-order-by-name)
-
-Retrieves a [Production Orders](../../data-model/production-order-model/production-order) record by its name. Returns a JSON representation of the production order.
-
 ### [`getAllProductionOrders`](./get-all-production-orders)
 
 Retrieves a list of all [Production Orders](../../data-model/production-order-model/production-order) records in the system. Returns a list of JSON objects representing all production orders.
