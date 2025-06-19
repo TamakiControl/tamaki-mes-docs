@@ -14,20 +14,20 @@ This includes the notes and spare fields.
 ## Syntax
 
 ```python
-system.mes.inventory.setInventoryMetadata(inventoryId, notes, spare1, spare2, spare3, name, productionOrderId)
+system.mes.inventory.setInventoryMetadata(inventoryId, notes, spare1, spare2, spare3, name, productionOrderIdOrName)
 ```
 
 ## Parameters
 
-| Parameter           | Type            | Description                                                     |
-| ------------------- | --------------- | --------------------------------------------------------------- |
-| `inventoryId`       | `String` (ULID) | The ID of the inventory to update.                              |
-| `notes`             | `String`        | Notes related to the location property value.                   |
-| `spare1`            | `String`        | Additional field for user-defined context.                      |
-| `spare2`            | `String`        | Additional field for user-defined context.                      |
-| `spare3`            | `String`        | Additional field for user-defined context.                      |
-| `name`              | `String`        | The name of the inventory.                                      |
-| `productionOrderId` | `String` (ULID) | The ID of the production order to associate with the inventory. |
+| Parameter                 | Type           | Description                                                             |
+|---------------------------| -------------- |-------------------------------------------------------------------------|
+| `inventoryId`             | `String` (ULID) | The ID of the inventory to update.                                      |
+| `notes`                   | `String`       | Notes related to the location property value.                           |
+| `spare1`                  | `String`       | Additional field for user-defined context.                              |
+| `spare2`                  | `String`       | Additional field for user-defined context.                              |
+| `spare3`                  | `String`       | Additional field for user-defined context.                              |
+| `name`                    | `String`       | The name of the inventory.                                              |
+| `productionOrderIdOrName` | `String`| The ID or Name of the production order to associate with the inventory. |
 
 ## Returns
 

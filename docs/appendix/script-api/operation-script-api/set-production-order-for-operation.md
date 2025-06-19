@@ -13,22 +13,22 @@ Sets the production order for a given [Operations](../../data-model/operation-mo
 ## Syntax
 
 ```python
-system.mes.operation.setProductionOrderForOperation(locationId, operationName, productionOrderId)
-system.mes.operation.setProductionOrderForOperation(operationId, productionOrderId)
+system.mes.operation.setProductionOrderForOperation(locationId, operationName, productionOrderIdOrName)
+system.mes.operation.setProductionOrderForOperation(operationId, productionOrderIdOrName)
 ```
 
 ## Parameters
 
-| Parameter           | Type            | Description                                                     |
-| ------------------- | --------------- | --------------------------------------------------------------- |
-| `locationId`        | `String` (ULID) | The ID of the location associated with the operation.           |
-| `operationName`     | `String`        | The name of the operation.                                      |
-| `productionOrderId` | `String` (ULID) | The ID of the production order to associate with the operation. |
+| Parameter               | Type            | Description                                                         |
+| ----------------------- | --------------- | ------------------------------------------------------------------- |
+| `locationId`            | `String` (ULID) | The ID of the location associated with the operation.               |
+| `operationName`         | `String`        | The name of the operation.                                          |
+| `productionOrderIdOrName` | `String`      | The ID or Name of the production order to associate with the operation. |
 
-| Parameter           | Type            | Description                                                     |
-| ------------------- | --------------- | --------------------------------------------------------------- |
-| `operationId`       | `String` (ULID) | The ID of the operation.                                        |
-| `productionOrderId` | `String` (ULID) | The ID of the production order to associate with the operation. |
+| Parameter               | Type            | Description                                                         |
+| ----------------------- | --------------- | ------------------------------------------------------------------- |
+| `operationId`           | `String` (ULID) | The ID of the operation.                                            |
+| `productionOrderIdOrName` | `String`      | The ID or Name of the production order to associate with the operation. |
 
 ## Returns
 

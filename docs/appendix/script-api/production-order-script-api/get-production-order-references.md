@@ -8,19 +8,19 @@ description: "Retrieves a list of references to a production order with the give
 
 ## Description
 
-Retrieves a list of references to a [Production Orders](../../data-model/production-order-model/production-order) record by its ID.
+Retrieves a list of references to a [Production Orders](../../data-model/production-order-model/production-order) record by its ID or Name.
 
 ## Syntax
 
 ```python
-system.mes.productionOrder.getProductionOrderReferences(id)
+system.mes.productionOrder.getProductionOrderReferences(productionOrderIdOrName)
 ```
 
 ## Parameters
 
-| Parameter | Type            | Description                                 |
-| --------- | --------------- | ------------------------------------------- |
-| `id`      | `String` (ULID) | The ID of the production order to retrieve. |
+| Parameter                   | Type     | Description                                         |
+|-----------------------------|----------|-----------------------------------------------------|
+| `productionOrderIdOrName`   | `String` | The ID or name of the production order to retrieve. |
 
 ## Returns
 
