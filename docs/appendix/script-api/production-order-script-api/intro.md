@@ -27,10 +27,6 @@ Retrieves [Production Orders](../../data-model/production-order-model/production
 
 Retrieves a [Production Orders](../../data-model/production-order-model/production-order) record by its ID or name. Returns a JSON representation of the production order.
 
-### [`getProductionOrderByName`](./get-production-order-by-name)
-
-Retrieves a [Production Orders](../../data-model/production-order-model/production-order) record by its name. Returns a JSON representation of the production order.
-
 ### [`getAllProductionOrders`](./get-all-production-orders)
 
 Retrieves a list of all [Production Orders](../../data-model/production-order-model/production-order) records in the system. Returns a list of JSON objects representing all production orders.
@@ -97,7 +93,7 @@ Creates or updates a [Production Order Property Values](../../data-model/product
 ### [`setPropertyValue`](./set-property-value)
 
 Updates the value of a [Production Order Property Values](../../data-model/production-order-model/production-order-property-value) record given
-a production order ID and a property ID or name. Returns a JSON representation of the updated production order property value.
+a production order ID or name and a property ID or name. Returns a JSON representation of the updated production order property value.
 
 ### [`setPropertyValues`](./set-property-values)
 
@@ -109,12 +105,12 @@ Retrieves a [Production Order Property Values](../../data-model/production-order
 
 ### [`getProductionOrderPropertyValuesForOrder`](./get-production-order-property-values-for-order)
 
-Retrieves a list of [Production Order Property Values](../../data-model/production-order-model/production-order-property-value) records associated with a production order ID. Returns a list of JSON objects representing all production order property values associated with the given production order.
+Retrieves a list of [Production Order Property Values](../../data-model/production-order-model/production-order-property-value) records associated with a production order ID or name. Returns a list of JSON objects representing all production order property values associated with the given production order.
 
 ### [`getProductionOrderPropertyValueFor`](./get-production-order-property-value-for)
 
 Retrieves a [Production Order Property Values](../../data-model/production-order-model/production-order-property-value) record given
-a production order ID and a property ID or name. Returns a JSON representation of the production order property value.
+a production order ID or name and a property ID or name. Returns a JSON representation of the production order property value.
 
 ### [`validateProductionOrderPropertyValue`](./validate-production-order-property-value)
 
@@ -141,15 +137,15 @@ Retrieves a [Production Order Bill of Materials](../../data-model/production-ord
 
 ### [`getBillOfMaterialsForOrder`](./get-bill-of-materials-for-order)
 
-Retrieves the [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) record associated with a production order ID. Returns a JSON representation of the bill of materials associated with the given production order.
+Retrieves the [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) record associated with a production order ID or name. Returns a JSON representation of the bill of materials associated with the given production order.
 
 ### [`getBillOfMaterialsForOrderFlattened`](./get-bill-of-materials-for-order-flattened)
 
-Retrieves a flattened representation of all [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) records associated with a production order ID. This provides an easier-to-consume format where material relationships are flattened out. Returns a list of flattened JSON objects representing the bill of materials.
+Retrieves a flattened representation of all [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) records associated with a production order ID or name. This provides an easier-to-consume format where material relationships are flattened out. Returns a list of flattened JSON objects representing the bill of materials.
 
 ### [`getBillOfMaterialsFor`](./get-bill-of-materials-for)
 
-Retrieves the [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) record associated with a production order ID and a material ID or path. Returns a JSON representation of the bill of materials associated with the given production order and material.
+Retrieves the [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) record associated with a production order ID or name and a material ID or path. Returns a JSON representation of the bill of materials associated with the given production order and material.
 
 ### [`getBillOfMaterialsReferences`](./get-bill-of-materials-item-references)
 
@@ -171,7 +167,7 @@ Swaps the position values of two [Production Order Bill of Materials](../../data
 
 ### [`deleteBillOfMaterialsForOrder`](./delete-bill-of-materials-for-order)
 
-Deletes all [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) records associated with a production order ID.
+Deletes all [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) records associated with a production order ID or name.
 This cannot delete any bill of materials with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
 
 ---

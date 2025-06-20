@@ -8,19 +8,19 @@ description: "Retrieves the bill of materials given a production order object."
 
 ## Description
 
-Retrieves the [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) record associated with a production order ID.
+Retrieves the [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) record associated with a production order ID or Name.
 
 ## Syntax
 
 ```python
-system.mes.productionOrder.getBillOfMaterialsForOrder(productionOrderId)
+system.mes.productionOrder.getBillOfMaterialsForOrder(productionOrderIdOrName)
 ```
 
 ## Parameters
 
-| Parameter           | Type            | Description                                                         |
-| ------------------- | --------------- | ------------------------------------------------------------------- |
-| `productionOrderId` | `String` (ULID) | The ULID of the production order to retrieve the bill of materials. |
+| Parameter               | Type            | Description                                                         |
+| ----------------------- | --------------- | ------------------------------------------------------------------- |
+| `productionOrderIdOrName` | `String`      | The ID or Name of the production order to retrieve the bill of materials. |
 
 ## Returns
 

@@ -8,20 +8,20 @@ description: "Deletes the production order with the given ID."
 
 ## Description
 
-Deletes a [Production Orders](../../data-model/production-order-model/production-order) record by its ID.
+Deletes a [Production Orders](../../data-model/production-order-model/production-order) record by its ID or name.
 This cannot delete a production order with references to it.
 
 ## Syntax
 
 ```python
-system.mes.productionOrder.deleteProductionOrder(id)
+system.mes.productionOrder.deleteProductionOrder(productionOrderIdOrName)
 ```
 
 ## Parameters
 
-| Parameter | Type            | Description                               |
-| --------- | --------------- | ----------------------------------------- |
-| `id`      | `String` (ULID) | The ID of the production order to delete. |
+| Parameter                 | Type      | Description                                       |
+|---------------------------|-----------|---------------------------------------------------|
+| `productionOrderIdOrName` | `String`  | The ID or name of the production order to delete. |
 
 ## Returns
 

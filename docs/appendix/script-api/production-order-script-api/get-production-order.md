@@ -13,14 +13,14 @@ Retrieves a [Production Orders](../../data-model/production-order-model/producti
 ## Syntax
 
 ```python
-system.mes.productionOrder.getProductionOrder(idOrName)
+system.mes.productionOrder.getProductionOrder(productionOrderIdOrName)
 ```
 
 ## Parameters
 
-| Parameter  | Type     | Description                                         |
-| ---------- | -------- | --------------------------------------------------- |
-| `idOrName` | `String` | The ID or name of the production order to retrieve. |
+| Parameter                 | Type     | Description                                         |
+|---------------------------| -------- | --------------------------------------------------- |
+| `productionOrderIdOrName` | `String` | The ID or name of the production order to retrieve. |
 
 ## Returns
 

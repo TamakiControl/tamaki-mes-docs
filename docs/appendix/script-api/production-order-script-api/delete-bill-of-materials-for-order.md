@@ -8,20 +8,20 @@ description: "Deletes all bill of materials given a production order object."
 
 ## Description
 
-Deletes all [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) records associated with a production order ID.
+Deletes all [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) records associated with a production order ID or name.
 This cannot delete any bill of materials with references to it.
 
 ## Syntax
 
 ```python
-system.mes.productionOrder.deleteBillOfMaterialsForOrder(productionOrderId)
+system.mes.productionOrder.deleteBillOfMaterialsForOrder(productionOrderIdOrName)
 ```
 
 ## Parameters
 
-| Parameter           | Type            | Description                                                       |
-| ------------------- | --------------- | ----------------------------------------------------------------- |
-| `productionOrderId` | `String` (ULID) | The ULID of the production order to delete all bill of materials. |
+| Parameter                 | Type     | Description                                                               |
+|---------------------------|----------|---------------------------------------------------------------------------|
+| `productionOrderIdOrName` | `String` | The ULID or name of the production order to delete all bill of materials. |
 
 ## Returns
 

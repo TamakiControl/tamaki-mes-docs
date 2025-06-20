@@ -8,19 +8,19 @@ description: "Retrieves a flattened representation of all bill of materials reco
 
 ## Description
 
-Retrieves a flattened representation of all [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) records associated with the given production order ID. This method flattens the bill of materials to a single level, no substitutions.
+Retrieves a flattened representation of all [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) records associated with the given production order ID or name. This method flattens the bill of materials to a single level, no substitutions.
 
 ## Syntax
 
 ```python
-system.mes.productionOrder.getBillOfMaterialsForOrderFlattened(productionOrderId)
+system.mes.productionOrder.getBillOfMaterialsForOrderFlattened(productionOrderIdOrName)
 ```
 
 ## Parameters
 
-| Parameter           | Type            | Description                                                                   |
-|---------------------|-----------------|-------------------------------------------------------------------------------|
-| `productionOrderId` | `String` (ULID) | The ULID of the production order to retrieve the flattened bill of materials. |
+| Parameter                 | Type     | Description                                                                           |
+|---------------------------|----------|---------------------------------------------------------------------------------------|
+| `productionOrderIdOrName` | `String` | The ULID or name of the production order to retrieve the flattened bill of materials. |
 
 ## Returns
 
