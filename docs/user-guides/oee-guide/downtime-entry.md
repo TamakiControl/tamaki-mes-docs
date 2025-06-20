@@ -56,7 +56,7 @@ description: "OEE Downtime Entry Screen"
 | **Duration**        | Duration of the downtime event.                                                                                                                 |
 | **State**           | State of the Location during the downtime event.                                                                                                |
 | **Location**        | Location that the downtime event is occuring for.                                                                                               |
-| **Color**           | Color of the state of the downtime event.                                                                                                  |
+| **Color**           | Color of the state of the downtime event.                                                                                                       |
 | **Type**            | Type of the downtime event.                                                                                                                     |
 | **Downtime Reason** | Downtime reason associated with the downtime event. see [OEE Downtime Reason Model](../../appendix/data-model/oee-model/oee-downtime-reason.md) |
 | **Notes**           | Additional notes or comments about the downtime event.                                                                                          |
@@ -66,9 +66,9 @@ description: "OEE Downtime Entry Screen"
 
 ##### View Event Details
 
-- The `View Event Details` button, ![View Event Details Button](./images/line-overview-button-view-event-details.png#icon), opens the Downtime Event Details popup:
+- The `View Event Details` button, ![View Event Details Button](images/downtime-entry-button-view-event-details.png#icon), opens the Downtime Event Details popup:
 
-![Downtime Event Details popup showing detailed information about the selected downtime event](./images/line-overview-downtime-event-details-popup.png)
+![Downtime Event Details popup showing detailed information about the selected downtime event](images/downtime-entry-downtime-event-details-popup.png)
 
 - **Sections:**
   - **Top Bar State:** displays the current [State](terms-and-definitions#state) of the downtime event and its corresponding color.
@@ -88,9 +88,9 @@ description: "OEE Downtime Entry Screen"
 
 ##### Acknowledge Event
 
-- The `Acknowledge Downtime Event` button, ![Acknowledge Downtime Event Button](./images/line-overview-button-acknowledge-event.png#icon), opens the Acknowledge Downtime Event popup:
+- The `Acknowledge Downtime Event` button, ![Acknowledge Downtime Event Button](images/downtime-entry-button-acknowledge-event.png#icon), opens the Acknowledge Downtime Event popup:
 
-![Acknowledge Downtime Event popup with acknowledgment confirmation and notes field](./images/line-overview-acknowledge-downtime-event-popup.png)
+![Acknowledge Downtime Event popup with acknowledgment confirmation and notes field](images/downtime-entry-acknowledge-downtime-event-popup.png)
 
 - **Sections:**
   - **Confirm:** Click `Confirm` to acknowledge the selected downtime event, marking it as reviewed and preventing further edits.

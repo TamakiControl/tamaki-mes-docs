@@ -228,7 +228,7 @@ Toggles the state on or off.
 
 ##### Name
 
-The name of the state, and what is displayed in the [Line Graphic](line-overview#line-graphic). This should be a descriptive name that clearly indicates the purpose of the state (e.g., "Running", "Downtime", "Setup").
+The name of the state. This should be a descriptive name that clearly indicates the purpose of the state (e.g., "Running", "Downtime", "Setup").
 
 ##### Interruption Location
 
@@ -259,7 +259,7 @@ This is a dropdown that allows the user to select how the OEE record of the stat
 
 ##### Color
 
-The color associated with the state, used for visual representation in the OEE timeline and [Line Graphic](line-overview#line-graphic).
+The color associated with the state, used for visual representation in the [OEE timeline](unit-dashboard#oee-state-timeline).
 
 ## Modes
 
@@ -372,7 +372,7 @@ To create a new downtime reason,
 
 #### Name
 
-The name of the downtime reason, which is displayed in [Downtime Entry](downtime-entry), [Downtime Records](line-overview#downtime-records), and other places in the MES. This should be a descriptive name that clearly indicates the cause of the downtime.
+The name of the downtime reason, which is displayed in [Downtime Entry](downtime-entry) and other places in the MES. This should be a descriptive name that clearly indicates the cause of the downtime.
 
 #### Description
 
