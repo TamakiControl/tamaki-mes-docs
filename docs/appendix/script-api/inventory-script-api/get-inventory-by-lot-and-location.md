@@ -58,7 +58,7 @@ Returns a JSON representation of an inventory with the following properties:
 
 ```python
 # Retrieve inventory at a lot and location
-inventory_lot_location = system.mes.inventory.checkLocationHasCapacity('425e29ed-2780-430a-95cf-79431ec0e3e5', 'Bottle/Milk', 'DairyCo')
+inventory_lot_location = system.mes.inventory.getInventoryByLotAndLocation('425e29ed-2780-430a-95cf-79431ec0e3e5', 'Bottle/Milk', 'DairyCo')
 
 # Output the inventory
 print(inventory_lot_location)
