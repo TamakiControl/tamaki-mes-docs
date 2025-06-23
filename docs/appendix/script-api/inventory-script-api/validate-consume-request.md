@@ -1,12 +1,12 @@
 ---
 sidebar_position: 5
 title: "validateConsumeRequest"
-description: "Validates a consume request based on the provided parameters."
+description: "Validates the specified parameters for a consume request and returns any validation errors."
 ---
 
 # system.mes.inventory.validateConsumeRequest
 
-Validates a consume request based on the provided parameters.
+Validates the specified parameters for a consume request and returns any validation errors. This only checks if the consume request can be processed based on the attributes given, without actually performing the consumption. Use this function to verify your parameters before executing the actual consume operation.
 
 ## Syntax
 
