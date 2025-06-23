@@ -28,6 +28,7 @@ system.mes.inventory.consume(**consume_request)
 | `destinationLocationIdOrPath` | `String`        | The ID or path of the location the consumed inventory goes to.                                                                            |
 | `createIfNotExists`           | `Boolean`       | Indicates whether the system should create the lot if it does not exist.                                                                  |
 | `operationId`                 | `String` (ULID) | The ID of the operation consuming this inventory.                                                                                         |
+| `inventoryOperationId`        | `String` (ULID) | The ID of the inventory operation related to this consume action.                                                                         |
 | `productionOrderIdOrName`     | `String`        | The ID or name of the production order associated with the consumption.                                                                   |
 | `materialReasonCodeId`        | `String` (ULID) | The ID of the material reason code to add additional context.                                                                             |
 | `startDate`                   | `Instant`       | The start date and time of the consumption.                                                                                               |
@@ -41,7 +42,30 @@ system.mes.inventory.consume(**consume_request)
 
 ## Returns
 
-Returns a JSON representation of an inventory lot record for a Consume Request.
+Returns a JSON representation of an inventory lot record for a Consume Request with the following key properties:
+
+| Name                      | Type            | Description                                                                               |
+|---------------------------| --------------- | ----------------------------------------------------------------------------------------- |
+| `lotRecordType`           | `String`        | The type of lot record (CONSUME in this case).                                            |
+| `inventoryLotId`          | `String` (ULID) | The ID of the primary inventory lot associated with this record.                          |
+| `inventoryLotName`        | `String`        | The name of the primary inventory lot.                                                    |
+| `secondaryInventoryLotId` | `String` (ULID) | The ID of the secondary inventory lot (the lot consuming the primary).                  |
+| `operationRecordId`       | `String` (ULID) | The ID of the operation record associated with this inventory lot record.                 |
+| `inventoryOperationId`    | `String` (ULID) | The ID of the inventory operation associated with this inventory lot record.              |
+| `productionOrderId`       | `String` (ULID) | The ID of the production order associated with this record.                               |
+| `sourceLocationId`        | `String` (ULID) | The ID of the location where inventory is being consumed from.                            |
+| `destinationLocationId`   | `String` (ULID) | The ID of the location where consumed inventory goes to.                                  |
+| `lotStatus`               | `String`        | The status of the lot.                                                                    |
+| `quantity`                | `Double`        | The quantity of units consumed.                                                           |
+| `startDate`               | `Instant`       | The beginning timestamp of the consumption.                                               |
+| `endDate`                 | `Instant`       | The end timestamp of the consumption.                                                     |
+| `status`                  | `String`        | The status of the record (RUNNING, COMPLETED, FAULTED).                                   |
+| `id`                      | `String` (ULID) | The ID of the inventory lot record.                                                       |
+| `notes`                   | `String`        | Notes related to the record.                                                              |
+| `enabled`                 | `Boolean`       | Indicates if the record is active and enabled.                                            |
+| `spare1`                  | `String`        | Additional field for user-defined context.                                                |
+| `spare2`                  | `String`        | Additional field for user-defined context.                                                |
+| `spare3`                  | `String`        | Additional field for user-defined context.                                                |
 
 ## Code Examples
 
