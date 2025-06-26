@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 title: "inventory_operations"
 description: "Documentation for the inventory_operations table, outlining its columns and structure."
 ---
@@ -83,7 +83,7 @@ Represents the current status of the inventory operation, as defined by the **St
 
 ### `current_record_id`
 
-References the current [InventoryLotRecord](../inventory-lot-record-model/inventory-lot-record) associated with the 
+References the current [InventoryLotRecord](../inventory-operation-model/inventory-lot-record) associated with the 
 inventory operation. Used in the case of a gateway restart.
 
 ### `operation_type`
