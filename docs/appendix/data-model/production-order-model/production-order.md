@@ -17,31 +17,32 @@ production orders within the TamakiMES system.
 The following table outlines the SQL columns for the `production_orders` table, providing a brief description of each, along
 with sample data where applicable.
 
-| Column                | Type            | Description                                                                                                                               | Example                             |
-|-----------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------|
-| `id`                  | `String` (ULID) | Unique identifier for the entity.                                                                                                         | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
-| `enabled`             | `Boolean`       | If the entity is enabled or not.                                                                                                          | `true`                              |
-| `created_date`        | `DateTime`      | Date the entity was created.                                                                                                              | `2024-12-31T19:48:44Z`              |
-| `created_by`          | `String`        | Person who created the entity.                                                                                                            | `TamakiMES`                         |
-| `modified_date`       | `DateTime`      | Date the entity was modified. Value is null upon creation, and gets initially populated upon the first edit.                              | `2024-12-31T19:48:44Z`              |
-| `modified_by`         | `String`        | Last person to modify the entity. Value is null upon creation, and gets initially populated upon the first edit.                          | `TamakiMES`                         |
-| `notes`               | `Blob`          | Notes about the entity.                                                                                                                   | `This entity has these extra notes` |
-| `spare1`              | `String`        | The first spare column that can be used for additional context on the entity.                                                             | `some extra context 1`              |
-| `spare2`              | `String`        | The second spare column that can be used for additional context on the entity.                                                            | `some extra context 2`              |
-| `spare3`              | `String`        | The third spare column that can be used for additional context on the entity.                                                             | `some extra context 3`              |
-| `name`                | `String`        | Unique name identifying the production order.                                                                                             | `Order001`                          |
-| `start_date`          | `DateTime`      | Date when production on this order began.                                                                                                 | `2024-05-01 08:00:00`               |
-| `due_date`            | `DateTime`      | Expected completion date for the production order.                                                                                        | `2024-06-15 00:00:00`               |
-| `end_date`            | `DateTime`      | Date when the production was completed.                                                                                                   | `2024-07-01 12:00:00`               |
-| `quantity`            | `Double`        | Total quantity planned for production.                                                                                                    | `500.0`                             |
-| `quantity_produced`   | `Double`        | Quantity already produced as part of this production order.                                                                               | `250.0`                             |
-| `quantity_scheduled`  | `Double`        | Quantity scheduled for production.                                                                                                        | `300.0`                             |
-| `schedule_priority`   | `String` (Enum) | Priority level for scheduling, determining order in the production queue, as defined by the **SchedulePriority** enum.                    | `NORMAL`                            |
-| `status`              | `String` (Enum) | Running status of the production order, as defined by the **ProductionOrderStatus** enum.                                                 | `IDLE`                              |
-| `location_id`         | `String` (ULID) | References the location where the production is taking place. See [locations](../location-model/location).                                | `01FZ8P9BJN-4VYZUKE1`               |
-| `product_material_id` | `String` (ULID) | References the material being produced. See [materials](../material-model/material).                                                      | `01G8V9S9B9-3QWXS4VC`               |
-| `customer_id`         | `String` (ULID) | References the customer associated with the order. See [production_order_customers](../production-order-model/production-order-customer). | `01H3XZ9JAB-4VKJ5LNY`               |
-| `unit_of_measure_id`  | `String` (ULID) | References the unit of measure for quantity. See [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure).              | `01JAP8R5RT-3FPXQABY-7KQZT6VF`      |
+| Column                     | Type            | Description                                                                                                                               | Example                             |
+|----------------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------|
+| `id`                       | `String` (ULID) | Unique identifier for the entity.                                                                                                         | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
+| `enabled`                  | `Boolean`       | If the entity is enabled or not.                                                                                                          | `true`                              |
+| `created_date`             | `DateTime`      | Date the entity was created.                                                                                                              | `2024-12-31T19:48:44Z`              |
+| `created_by`               | `String`        | Person who created the entity.                                                                                                            | `TamakiMES`                         |
+| `modified_date`            | `DateTime`      | Date the entity was modified. Value is null upon creation, and gets initially populated upon the first edit.                              | `2024-12-31T19:48:44Z`              |
+| `modified_by`              | `String`        | Last person to modify the entity. Value is null upon creation, and gets initially populated upon the first edit.                          | `TamakiMES`                         |
+| `notes`                    | `String`        | Notes about the entity.                                                                                                                   | `This entity has these extra notes` |
+| `spare1`                   | `String`        | The first spare column that can be used for additional context on the entity.                                                             | `some extra context 1`              |
+| `spare2`                   | `String`        | The second spare column that can be used for additional context on the entity.                                                            | `some extra context 2`              |
+| `spare3`                   | `String`        | The third spare column that can be used for additional context on the entity.                                                             | `some extra context 3`              |
+| `name`                     | `String`        | Unique name identifying the production order.                                                                                             | `Order001`                          |
+| `start_date`               | `DateTime`      | Date when production on this order began.                                                                                                 | `2024-05-01 08:00:00`               |
+| `due_date`                 | `DateTime`      | Expected completion date for the production order.                                                                                        | `2024-06-15 00:00:00`               |
+| `end_date`                 | `DateTime`      | Date when the production was completed.                                                                                                   | `2024-07-01 12:00:00`               |
+| `quantity`                 | `Double`        | Total quantity planned for production.                                                                                                    | `500.0`                             |
+| `quantity_produced`        | `Double`        | Quantity already produced as part of this production order.                                                                               | `250.0`                             |
+| `quantity_scheduled`       | `Double`        | Quantity scheduled for production.                                                                                                        | `300.0`                             |
+| `schedule_priority`        | `String` (Enum) | Priority level for scheduling, determining order in the production queue, as defined by the **SchedulePriority** enum.                    | `NORMAL`                            |
+| `status`                   | `String` (Enum) | Running status of the production order, as defined by the **ProductionOrderStatus** enum.                                                 | `IDLE`                              |
+| `location_id`              | `String` (ULID) | References the location where the production is taking place. See [locations](../location-model/location).                                | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
+| `product_material_id`      | `String` (ULID) | References the material being produced. See [materials](../material-model/material).                                                      | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
+| `customer_id`              | `String` (ULID) | References the customer associated with the order. See [production_order_customers](../production-order-model/production-order-customer). | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
+| `schedule_shift_record_id` | `String` (ULID) | References the associated schedule shift record. See [schedule_shift_records](../schedule-shift-model/schedule-shift-record).             | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
+| `unit_of_measure_id`       | `String` (ULID) | References the unit of measure for quantity. See [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure).              | `01JAP8R5RT-3FPXQABY-7KQZT6VF`      |
 
 ## Field Details
 
@@ -91,6 +92,11 @@ See [materials](../material-model/material) for details.
 
 References the `ProductionOrderCustomer` entity associated with the production order, providing us information on the customer.
 See [production_order_customers](../production-order-model/production-order-customer) for details.
+
+### `schedule_shift_record_id`
+
+References the `ScheduleShiftRecord` entity that was active at the location the production order ran. This relationship connects the production order to its specific shift instance, allowing for better tracking of production orders within the context of scheduled shifts.
+See [schedule_shift_records](../schedule-shift-model/schedule-shift-record) for details.
 
 ### `unit_of_measure_id`
 

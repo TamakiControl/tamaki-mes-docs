@@ -39,30 +39,21 @@ jobs:
         run: |
           npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build  # Path to the built files
-          keep_files: true  # Keeps existing files in the gh-pages branch
-
-  run-scraper:
-    needs: build-and-deploy
-    runs-on: ubuntu-latest
-
-    env:
-      TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_API_KEY }}
-      TYPESENSE_HOST: ${{ secrets.TYPESENSE_HOST }}
-      TYPESENSE_PORT: ${{ secrets.TYPESENSE_PORT }}
-      TYPESENSE_PROTOCOL: ${{ secrets.TYPESENSE_PROTOCOL }}
-      TYPESENSE_COLLECTION_NAME: ${{ secrets.TYPESENSE_COLLECTION_NAME }}
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Install jq
-        run: sudo apt-get update && sudo apt-get install -y jq
+      - name: Serve site for scraper
+        run: |
+          # Use Docusaurus's own server which correctly handles the site's baseUrl
+          # Run it in the background on port 8080
+          npm run serve -- --port 8080 &
+          # Wait for server to start by polling the port
+          echo "Waiting for server to start..."
+          timeout 30s bash -c '
+            while ! curl -s --head http://localhost:8080 > /dev/null;
+            do
+              echo -n "."
+              sleep 1
+            done'
+          echo "Server started!"
+          sudo apt-get update && sudo apt-get install -y jq
 
       - name: Create .env file
         run: |
@@ -71,24 +62,30 @@ jobs:
           echo "TYPESENSE_PORT=${{ secrets.TYPESENSE_PORT }}" >> .env
           echo "TYPESENSE_PROTOCOL=${{ secrets.TYPESENSE_PROTOCOL }}" >> .env
           echo "TYPESENSE_COLLECTION_NAME=${{ secrets.TYPESENSE_COLLECTION_NAME }}" >> .env
-
-      - name: Prepare config string
-        id: prep
+          
+      - name: Clean previous alias to prevent scraper bug
         run: |
-          if [ -f typesense-config.json ]; then
-            CONFIG=$(jq -c . typesense-config.json)
-            if [ -z "$CONFIG" ]; then
-              echo "typesense-config.json is empty or improperly formatted."
-              exit 1
-            fi
-            echo "CONFIG=$CONFIG" >> $GITHUB_ENV
-          else
-            echo "typesense-config.json file not found."
-            exit 1
-          fi
+          curl -i -X DELETE \
+            -H "X-TYPESENSE-API-KEY: ${{ secrets.TYPESENSE_API_KEY }}" \
+            "https://${{ secrets.TYPESENSE_HOST }}:${{ secrets.TYPESENSE_PORT }}/aliases/${{ secrets.TYPESENSE_COLLECTION_NAME }}" || true
+
+      - name: Create scraper config file
+        run: |
+          # The docusaurus serve command respects the baseUrl, so we must include it in the scraper's start_urls
+          CONFIG_CONTENT=$(cat typesense-config.json | jq '.start_urls = ["http://host.docker.internal:8080${{ secrets.BASE_URL }}"] | .sitemap_urls = ["http://host.docker.internal:8080${{ secrets.BASE_URL }}sitemap.xml"] | .allowed_domains = ["host.docker.internal"]')
+          echo "$CONFIG_CONTENT" > gh-action-scraper-config.json
 
       - name: Run docsearch-scraper
         run: |
           docker run -i --env-file .env \
-            -e CONFIG="${{ env.CONFIG }}" \
+            --add-host=host.docker.internal:host-gateway \
+            -e "CONFIG=/config.json" \
+            -v "$(pwd)/gh-action-scraper-config.json:/config.json:ro" \
             typesense/docsearch-scraper:0.11.0
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build  # Path to the built files
+          keep_files: true  # Keeps existing files in the gh-pages branch

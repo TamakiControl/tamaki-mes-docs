@@ -41,9 +41,9 @@ Returns a JSON representation of the saved unit of measure conversion.
 # Generate the object structure for a new unit of measure conversion object, set the parameters and save it
 new_uomc = system.mes.unitOfMeasure.newUnitOfMeasureConversion()
 new_uomc['toId'] = '01JCH3T85P-KVCB8ZR5-0B83A3SX'
-new_uomc['conversionFactor'] = '0.33'
+new_uomc['conversionFactor'] = 0.33
 new_uomc['fromId'] = '01JCH4NB3J-BTERAZ27-QEQQN4ME'
-saved_uomc = system.mes.unitOfMeasure.saveUnitOfMeasureConversion(**new_uom)
+saved_uomc = system.mes.unitOfMeasure.saveUnitOfMeasureConversion(**new_uomc)
 
 # Output the JSON representation of the saved unit of measure conversion
 print(saved_uomc)
@@ -53,7 +53,7 @@ uomc_data = system.mes.unitOfMeasure.newUnitOfMeasureConversion()
 
 # Set basic attributes for the updated unit of measure conversion
 uomc_data['toId'] = '01JCH3T85P-KVCB8ZR5-0B83A3SX'
-uomc_data['conversionFactor'] = '0.33'
+uomc_data['conversionFactor'] = 0.33
 uomc_data['fromId'] = '01JCH4NB3J-BTERAZ27-QEQQN4ME'
 uomc_data['notes'] = 'Conversion from L to BT'
 # (You can continue setting other properties as needed here)

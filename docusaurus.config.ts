@@ -31,6 +31,8 @@ const config: Config = {
 		locales: ['en'],
 	},
 
+	plugins: [require.resolve('docusaurus-plugin-image-zoom')],
+
 	presets: [
 		[
 			'classic',
@@ -66,7 +68,9 @@ const config: Config = {
 			typesenseServerConfig: {
 				nodes: [
 					{
-						host: process.env.TYPESENSE_HOST,
+						host: process.env.NODE_ENV === 'production'
+							? process.env.TYPESENSE_HOST
+							: 'localhost',
 						port: process.env.TYPESENSE_PORT,
 						protocol: process.env.TYPESENSE_PROTOCOL,
 					},
@@ -81,6 +85,14 @@ const config: Config = {
 
 		// Replace with your project's social card
 		image: 'img/tamaki-logo.png',
+		zoom: {
+			selector: '.markdown :not(em) > img',
+			background: {
+				light: 'rgb(255, 255, 255)',
+				dark: 'rgb(50, 50, 50)',
+			},
+			config: {},
+		},
 		navbar: {
 			title: '',
 			logo: {

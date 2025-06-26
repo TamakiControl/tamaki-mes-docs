@@ -15,15 +15,16 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "scrape:local": "docker run -i --env-file .env -e \"CONFIG=/config.json\" -v \"%cd%/typesense-config.dev.json:/config.json:ro\" typesense/docsearch-scraper:0.11.0"
   },
   "dependencies": {
     "@docusaurus/core": "3.7.0",
     "@docusaurus/plugin-sitemap": "^3.7.0",
     "@docusaurus/preset-classic": "3.7.0",
-    "@docusaurus/theme-search-algolia": "^3.7.0",
     "@mdx-js/react": "^3.1.0",
     "clsx": "^2.1.1",
+    "docusaurus-plugin-image-zoom": "^3.0.1",
     "docusaurus-theme-search-typesense": "^0.23.0-0",
     "dotenv": "^16.4.7",
     "prism-react-renderer": "^2.4.1",
@@ -31,9 +32,9 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.7.0",
-    "@docusaurus/tsconfig": "3.7.0",
-    "@docusaurus/types": "3.7.0",
+    "@docusaurus/module-type-aliases": "^3.8.1",
+    "@docusaurus/tsconfig": "^3.8.1",
+    "@docusaurus/types": "^3.8.1",
     "typescript": "~5.7.3"
   },
   "browserslist": {
