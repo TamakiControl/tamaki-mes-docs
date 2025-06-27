@@ -44,28 +44,30 @@ system.mes.inventory.consume(**consume_request)
 
 Returns a JSON representation of an inventory lot record for a Consume Request with the following key properties:
 
-| Name                      | Type            | Description                                                                               |
-|---------------------------| --------------- | ----------------------------------------------------------------------------------------- |
-| `lotRecordType`           | `String`        | The type of lot record (CONSUME in this case).                                            |
-| `inventoryLotId`          | `String` (ULID) | The ID of the primary inventory lot associated with this record.                          |
-| `inventoryLotName`        | `String`        | The name of the primary inventory lot.                                                    |
-| `secondaryInventoryLotId` | `String` (ULID) | The ID of the secondary inventory lot (the lot consuming the primary).                  |
-| `operationRecordId`       | `String` (ULID) | The ID of the operation record associated with this inventory lot record.                 |
-| `inventoryOperationId`    | `String` (ULID) | The ID of the inventory operation associated with this inventory lot record.              |
-| `productionOrderId`       | `String` (ULID) | The ID of the production order associated with this record.                               |
-| `sourceLocationId`        | `String` (ULID) | The ID of the location where inventory is being consumed from.                            |
-| `destinationLocationId`   | `String` (ULID) | The ID of the location where consumed inventory goes to.                                  |
-| `lotStatus`               | `String`        | The status of the lot.                                                                    |
-| `quantity`                | `Double`        | The quantity of units consumed.                                                           |
-| `startDate`               | `Instant`       | The beginning timestamp of the consumption.                                               |
-| `endDate`                 | `Instant`       | The end timestamp of the consumption.                                                     |
-| `status`                  | `String`        | The status of the record (RUNNING, COMPLETED, FAULTED).                                   |
-| `id`                      | `String` (ULID) | The ID of the inventory lot record.                                                       |
-| `notes`                   | `String`        | Notes related to the record.                                                              |
-| `enabled`                 | `Boolean`       | Indicates if the record is active and enabled.                                            |
-| `spare1`                  | `String`        | Additional field for user-defined context.                                                |
-| `spare2`                  | `String`        | Additional field for user-defined context.                                                |
-| `spare3`                  | `String`        | Additional field for user-defined context.                                                |
+| Name                        | Type            | Description                                                                                          |
+|-----------------------------| --------------- | ---------------------------------------------------------------------------------------------------- |
+| `lotRecordType`             | `String`        | The type of change for the record.                                                                   |
+| `inventoryLotId`            | `String` (ULID) | The ULID of the primary inventory lot for the inventory lot record.                                  |
+| `inventoryLotName`          | `String`        | The name of the primary inventory lot for the inventory lot record.                                  |
+| `secondaryInventoryLotId`   | `String` (ULID) | The ULID of the secondary inventory lot for the inventory lot record.                                |
+| `secondaryInventoryLotName` | `String`        | The name of the secondary inventory lot for the inventory lot record.                                |
+| `operationRecordId`         | `String` (ULID) | The ULID of the operation record for the inventory lot record.                                       |
+| `inventoryOperationId`      | `String` (ULID) | The ULID of the inventory operation for the inventory lot record.                                    |
+| `productionOrderId`         | `String` (ULID) | The ULID of the production order for the inventory lot record.                                       |
+| `materialReasonCodeId`      | `String` (ULID) | The ULID of the material reason code for the inventory lot record.                                   |
+| `sourceLocationId`          | `String` (ULID) | The source location of the inventory or lot being operated.                                          |
+| `destinationLocationId`     | `String` (ULID) | The destination location of the inventory or lot being operated.                                     |
+| `lotStatus`                 | `String`        | The status of the inventory lot.                                                                     |
+| `quantity`                  | `Double`        | The quantity of units being changed depending on the lotRecordType.                                  |
+| `startDate`                 | `Instant`       | The beginning timestamp of the inventory lot change.                                                 |
+| `endDate`                   | `Instant`       | The end timestamp of the inventory lot change.                                                       |
+| `status`                    | `String`        | The status of the inventory lot record (e.g. Running, Completed, Faulted).                           |
+| `id`                        | `String` (ULID) | The ULID of the inventory lot record (optional, used for updating an existing inventory lot record). |
+| `notes`                     | `String`        | Notes related to the inventory lot.                                                                  |
+| `enabled`                   | `Boolean`       | Indicates if the inventory lot is active and enabled.                                                |
+| `spare1`                    | `String`        | Additional field for user-defined context.                                                           |
+| `spare2`                    | `String`        | Additional field for user-defined context.                                                           |
+| `spare3`                    | `String`        | Additional field for user-defined context.                                                           |
 
 ## Code Examples
 
@@ -84,5 +86,5 @@ new_request['createIfNotExists'] = True
 consumed_request = system.mes.inventory.consume(**new_request)
 
 # Output the JSON representation of the consumed request
-print(consumed_request)
+print(str(consumed_request))
 ```
