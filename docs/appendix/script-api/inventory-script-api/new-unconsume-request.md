@@ -34,6 +34,7 @@ Returns a JSON representation of the newly created Unconsume Request object. The
 | `materialIdOrPath`            | `null`        |
 | `destinationLocationIdOrPath` | `null`        |
 | `operationId`                 | `null`        |
+| `inventoryOperationId`        | `null`        |
 | `productionOrderIdOrName`     | `null`        |
 | `materialReasonCodeId`        | `null`        |
 | `startDate`                   | Current Time  |

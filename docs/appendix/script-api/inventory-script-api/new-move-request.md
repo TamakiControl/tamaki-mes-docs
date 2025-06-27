@@ -35,6 +35,7 @@ Returns a JSON representation of the newly created Move Request object. The foll
 | `sourceLocationIdOrPath`      | `null`        |
 | `destinationLocationIdOrPath` | `null`        |
 | `operationId`                 | `null`        |
+| `inventoryOperationId`        | `null`        |
 | `productionOrderIdOrName`     | `null`        |
 | `materialReasonCodeId`        | `null`        |
 | `startDate`                   | Current Time  |

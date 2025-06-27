@@ -28,6 +28,7 @@ system.mes.inventory.validateConsumeRequest(**consume_request)
 | `destinationLocationIdOrPath` | `String`        | The ID or path of the location the consumed inventory goes to.                                                                            |
 | `createIfNotExists`           | `Boolean`       | Indicates whether the system should create the lot if it does not exist.                                                                  |
 | `operationId`                 | `String` (ULID) | The ID of the operation consuming this inventory.                                                                                         |
+| `inventoryOperationId`        | `String` (ULID) | The ID of the inventory operation related to this consume action.                                                                         |
 | `productionOrderIdOrName`     | `String`        | The ID or name of the production order associated with the consumption.                                                                   |
 | `materialReasonCodeId`        | `String` (ULID) | The ID of the material reason code to add additional context.                                                                             |
 | `startDate`                   | `Instant`       | The start date and time of the consumption.                                                                                               |

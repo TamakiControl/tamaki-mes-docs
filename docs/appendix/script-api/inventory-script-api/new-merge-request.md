@@ -32,6 +32,7 @@ Returns a JSON representation of the newly created Merge Request object. The fol
 | `destinationLotId`        | `null`        |
 | `locationId`              | `null`        |
 | `operationId`             | `null`        |
+| `inventoryOperationId`    | `null`        |
 | `productionOrderIdOrName` | `null`        |
 | `materialReasonCodeId`    | `null`        |
 | `notes`                   | `null`        |

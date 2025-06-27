@@ -26,6 +26,7 @@ system.mes.inventory.validateMoveRequest(**move_request)
 | `sourceLocationIdOrPath`      | `String`        | The ID or path of the location from which inventory will be moved.                                                                        |
 | `destinationLocationIdOrPath` | `String`        | The ID or path of the location the moved inventory goes to.                                                                               |
 | `operationId`                 | `String` (ULID) | The ID of the operation moving this inventory.                                                                                            |
+| `inventoryOperationId`        | `String` (ULID) | The ID of the inventory operation related to this move action.                                                                            |
 | `productionOrderIdOrName`     | `String`        | The ID or name of the production order associated with the move.                                                                          |
 | `materialReasonCodeId`        | `String` (ULID) | The ID of the material reason code to add additional context.                                                                             |
 | `startDate`                   | `Instant`       | The start date and time of the move.                                                                                                      |

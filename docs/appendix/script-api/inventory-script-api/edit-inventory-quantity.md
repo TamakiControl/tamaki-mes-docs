@@ -25,6 +25,7 @@ system.mes.inventory.editInventoryQuantity(**edit_inventory_quantity_request)
 | `materialIdOrPath`       | `String`        | The ID or path of the material whose quantity is being edited.                                                                            |
 | `sourceLocationIdOrPath` | `String`        | The ID or path of the location from the inventory quantity is being edited.                                                               |
 | `operationId`            | `String` (ULID) | The ID of the operation editing the quantity of this inventory.                                                                           |
+| `inventoryOperationId`   | `String` (ULID) | The ID of the inventory operation related to this edit inventory quantity action.                                                         |
 | `notes`                  | `String`        | Notes related to the edit inventory quantity request.                                                                                     |
 | `spare1`                 | `String`        | Additional field for user-defined context.                                                                                                |
 | `spare2`                 | `String`        | Additional field for user-defined context.                                                                                                |
