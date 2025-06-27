@@ -8,7 +8,7 @@ description: "Starts an inventory operation."
 
 ## Description
 
-Starts an [Inventory Operations](../../data-model/inventory-model/inventory-operation) object. This function initiates the inventory operation and creates an inventory lot record with a specified start time but a null end time, indicating that the operation is currently in progress. The operation remains active until explicitly ended.
+Starts an [Inventory Operation](../../data-model/inventory-model/inventory-operation). This function initiates the inventory operation and creates an inventory lot record with a specified start time but a null end time, indicating that the operation is currently in progress. The operation remains active until explicitly ended.
 
 ## Syntax
 

@@ -8,7 +8,7 @@ description: "Stops an inventory operation and records its end state."
 
 ## Description
 
-Stops the [Inventory Operations](../../data-model/inventory-model/inventory-operation) object with the provided id. This action finds the currently running inventory lot record, records the specified quantity and end state into it, sets its end time to the specified date (or current time if not specified), and updates its status to completed. This effectively concludes the active operation and finalizes the lot record.
+Stops the [Inventory Operation](../../data-model/inventory-model/inventory-operation) with the provided id. This action finds the currently running inventory lot record, records the specified quantity and end state into it, sets its end time to the specified date (or current time if not specified), and updates its status to completed. This effectively concludes the active operation and finalizes the lot record.
 
 ## Syntax
 
