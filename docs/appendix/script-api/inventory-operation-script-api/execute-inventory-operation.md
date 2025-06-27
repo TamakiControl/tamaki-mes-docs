@@ -8,8 +8,8 @@ description: "Executes an inventory operation and creates a new inventory lot re
 
 ## Description
 
-Executes an [Inventory Operations](../../data-model/inventory-model/inventory-operation) object and creates a new inventory lot record without having to start and then stop the operation.
-If [Inventory Operations](../../data-model/inventory-model/inventory-operation) object is already started, this will act as a [stopInventoryOperation](./stop-inventory-operation).
+Executes an [Inventory Operations](../../data-model/inventory-model/inventory-operation) and creates a new inventory lot record without having to start and then stop the operation.
+If [Inventory Operations](../../data-model/inventory-model/inventory-operation) is already started, this will act as a [stopInventoryOperation](./stop-inventory-operation).
 
 ## Syntax
 
