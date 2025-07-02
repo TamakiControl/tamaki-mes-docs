@@ -30,26 +30,25 @@ description: "OEE Setup Configuration"
 
 1. Select a location from the dropdown menu to configure OEE settings for that specific location.
 2. Set the [Max Record Duration](#max-record-duration) and [Prune Days](#prune-days).
-3. Fill out the [Mode Expression](#mode-expression).
-4. Configure the [Availability](#availability) settings:
+3. Set the [Max Flush Interval](#max-flush-interval) and the [Max Time Between Executions](#max-time-between-executions).
+4. Fill out the [Mode Expression](#mode-expression).
+5. Configure the [Availability](#availability) settings:
    - [Enable Availability](#enable-availability).
    - Fill out the [State Expression](#state-expression).
    - Configure the [Downtime Reason Source](#downtime-reason-source) and [Downtime Reason Expression](#downtime-reason-expression).
-5. Configure the [Performance](#performance) settings:
+6. Configure the [Performance](#performance) settings:
    - [Enable Performance](#enable-performance).
    - Fill out the [Production Count Unit of Measure](#production-count-unit-of-measure).
    - Fill out the [Production Rate Time Unit](#production-rate-time-unit).
    - Fill out the [Production Count Expression](#production-count-expression).
-   - Select the [Production Count Calculation Type](#production-count-calculation-type).
    - Set the [Production Count Overflow Value](#production-count-overflow-value).
    - Configure the [Standard Rate Source](#standard-rate-source) and set the [Standard Rate](#standard-rate-uomtime-unit).
-6. Configure the [Quality](#quality) settings:
+7. Configure the [Quality](#quality) settings:
     - [Enable Quality](#enable-quality).
     - Fill out the [Waste Count Expression](#waste-count-expression).
-    - Select the [Waste Count Calculation Type](#waste-count-calculation-type).
     - Set the [Waste Count Overflow Value](#waste-count-overflow-value).
-7. Configure the [Production Order Source](#production-order-source).
-8. Save the configuration by clicking the `Confirm` button at the bottom of the screen.
+8. Configure the [Production Order Source](#production-order-source).
+9. Save the configuration by clicking the `Confirm` button at the bottom of the screen.
 
 ### OEE Configuration Fields
 
@@ -79,6 +78,14 @@ If none of those events occur within the [Max Record Duration](#max-record-durat
 #### Prune Days
 
 Number of days to retain OEE records in the database before deleting. (If blank, records will be kept indefinitely)
+
+#### Max Flush Interval
+
+Maximum time oee data being flushed into the database from the data collection service.
+
+#### Max Time Between Executions
+
+Maximum number of seconds between data collection evaluating data.
 
 #### [Mode](terms-and-definitions#mode) Expression
 
@@ -124,14 +131,8 @@ For example, if this field is set to `Minutes`, and the [Production Count Unit o
 
 This is where the production count value is specified for the location [Production Count](terms-and-definitions#production-count). This can be a static value but will most likely be a tag binding to reflect the PLC's value for the current production count at the machine [Expression Field](terms-and-definitions#expression-field).
 
-##### Production Count Calculation Type
-
-Opens a dropdown with the following options:
-- **Direct:** The production count will be calculated directly from the value in the [Production Count Expression](#production-count-expression) field.
-- **Delta:** The production count will be calculated as the difference between the current value and the previous value. This uses the [Production Count Overflow Value](#production-count-overflow-value) to know when the value has rolled over back to 0. This only handles a maximum of 1 rollover between evaluations.
-
 ##### Production Count Overflow Value
-The tag capturing production count will roll over to 0 when it reaches this value. This is used to calculate the production count when then [Production Count Calculation Type](#production-count-calculation-type) is set to `delta`.
+The tag capturing production count will roll over to 0 when it reaches this value. This is used to calculate the production count.
 
 ##### Standard Rate Source
 
@@ -157,15 +158,9 @@ Enables quality tracking for the OEE Records. This allows the system to track th
 
 The [Expression Field](terms-and-definitions#expression-field) where the PLC tag for the [Waste Count](terms-and-definitions#waste-count) of the location is bound to the OEE model.
 
-##### Waste Count Calculation Type
-
-Opens a dropdown with the following options:
-- **Direct:** The waste count will be calculated directly from the value in the [Waste Count Expression](#waste-count-expression) field.
-- **Delta:**  The waste count will be calculated as the difference between the current value and the previous value. This uses the [Waste Count Overflow Value](#waste-count-overflow-value) to know when the value has rolled over back to 0. This only handles a maximum of 1 rollover between evaluations.
-
 ##### Waste Count Overflow Value
 
-The tag capturing waste count will roll over to 0 when it reaches this value. This is used to calculate the waste count when then [Waste Count Calculation Type](#waste-count-calculation-type) is set to `delta`.
+The tag capturing waste count will roll over to 0 when it reaches this value. This is used to calculate the waste count.
 
 #### Production Order
 

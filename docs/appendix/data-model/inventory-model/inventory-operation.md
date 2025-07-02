@@ -40,9 +40,9 @@ with sample data where applicable.
 | `secondary_lot_resolution_strategy`   | `String` (Enum) | Strategy used to get the secondary lot code, as defined by the **LotResolutionStrategy** enum.                                                             | `AUTO_GENERATE`                                                                                                |
 | `material_expression`                 | `String`        | The Ignition expression for materials. Must return the id of the material.                                                                                 | See [Ignition Docs](https://www.docs.inductiveautomation.com/docs/8.1/platform/expression-language-and-syntax) |
 | `material_source`                     | `String` (Enum) | Strategy used for resolving the material id for an operation, as defined by the **MaterialResolutionStrategy** enum.                                       | `STATIC`                                                                                                       |
-| `quantity_calc_type`                  | `String` (Enum) | Calculation type for quantity, as defined by the **CountCalcType** enum. Only used if quantitySource is EXPRESSION.                                        | `DIRECT`                                                                                                       |
+| `quantity_calc_type`                  | `String` (Enum) | Calculation type for quantity, as defined by the **CountCalcType** enum. Only used if quantitySource is EXPRESSION.                                        | `DELTA`                                                                                                        |
 | `quantity_expression`                 | `String`        | The Ignition expression for quantity.                                                                                                                      | See [Ignition Docs](https://www.docs.inductiveautomation.com/docs/8.1/platform/expression-language-and-syntax) |
-| `quantity_overflow_value`             | `Double`        | Overflow value for the quantity. Only used if quantitySource is EXPRESSION and the quantityCalcType is RISING.                                             | `100.0`                                                                                                        |
+| `quantity_overflow_value`             | `Double`        | Overflow value for the quantity. Only used if quantitySource is EXPRESSION and the quantityCalcType is DELTA.                                              | `100.0`                                                                                                        |
 | `quantity_source`                     | `String` (Enum) | Source of the quantity of an inventory operation, as defined by the **QuantitySource** enum.                                                               | `EXPRESSION`                                                                                                   |
 | `start_trigger_expression`            | `String`        | The Ignition expression to trigger the start of the transfer of materials.                                                                                 | See [Ignition Docs](https://www.docs.inductiveautomation.com/docs/8.1/platform/expression-language-and-syntax) |
 | `start_trigger_type`                  | `String` (Enum) | Trigger type when starting the transfer of materials, as defined by the **TriggerType** enum.                                                              | `RISING_EDGE`                                                                                                  |
@@ -123,7 +123,7 @@ by the **MaterialResolutionStrategy** enum, with possible values:
 ### `quantity_calc_type`
 
 Calculation type for quantity, as defined by the **CountCalcType** enum,
-with options such as `DIRECT`, and `RISING`. Only used if quantitySource is EXPRESSION.
+The only option is `DELTA`. Only used if quantitySource is `EXPRESSION`.
 
 ### `quantity_expression`
 
@@ -132,7 +132,7 @@ See [Ignition Docs](https://www.docs.inductiveautomation.com/docs/8.1/platform/e
 
 ### `quantity_overflow_value`
 
-Overflow value for the quantity. Only used if quantitySource is EXPRESSION and the quantityCalcType is RISING.
+Overflow value for the quantity. Only used if quantitySource is `EXPRESSION` and the quantityCalcType is `DELTA`.
 
 ### `quantity_source`
 
