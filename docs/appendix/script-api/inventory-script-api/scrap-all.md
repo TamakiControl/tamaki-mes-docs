@@ -69,7 +69,6 @@ Returns a list of JSON representation of each inventory lot records created for 
 new_request = system.mes.inventory.newScrapAllRequest()
 
 # Set basic attributes for the new scrap all request
-# Set basic attributes for the new consume request
 new_request['materialIdOrPath'] = 'Bottle/Milk'
 new_request['sourceLocationIdOrPath'] = 'DairyCo'
 
