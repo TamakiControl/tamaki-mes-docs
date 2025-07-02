@@ -18,7 +18,9 @@ system.mes.inventory.operation.getAllInventoryOperations()
 
 ## Parameters
 
-This function does not take any parameters.
+| Parameter | Type | Nullable | Description                                 |
+|-----------|------|----------|---------------------------------------------|
+| None      | -    | -        | This function does not take any parameters. |
 
 ## Returns
 

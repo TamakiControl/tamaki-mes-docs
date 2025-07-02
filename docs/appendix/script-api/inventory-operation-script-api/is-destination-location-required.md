@@ -18,9 +18,9 @@ system.mes.inventory.operation.isDestinationLocationRequired(lotRecordType)
 
 ## Parameters
 
-| Parameter       | Type     | Description                                                        |
-| --------------- | -------- | ------------------------------------------------------------------ |
-| `lotRecordType` | `String` | The type of inventory operation to check (e.g., CONSUME, PRODUCE). |
+| Parameter       | Type     | Nullable | Description                                                        |
+|-----------------|----------|----------|--------------------------------------------------------------------|
+| `lotRecordType` | `String` | False    | The type of inventory operation to check (e.g., CONSUME, PRODUCE). |
 
 ## Returns
 

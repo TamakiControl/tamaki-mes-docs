@@ -20,7 +20,7 @@ system.mes.inventory.operation.validateInventoryOperation(**inventory_operation_
 ## Parameters
 
 | Parameter                         | Type            | Description                                                                                                        |
-| --------------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------ |
+|-----------------------------------|-----------------|--------------------------------------------------------------------------------------------------------------------|
 | `operationId`                     | `String` (ULID) | The ULID of the operation associated with this inventory operation.                                                |
 | `operationName`                   | `String`        | The name of the operation associated with this inventory operation.                                                |
 | `name`                            | `String`        | The name of the inventory operation.                                                                               |
