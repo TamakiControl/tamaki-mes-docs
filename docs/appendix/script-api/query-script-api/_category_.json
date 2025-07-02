@@ -2,7 +2,7 @@
   "label": "system.mes.query",
   "position": 2,
   "link": {
-    "type": "generated-index",
-    "description": "Query Script API"
+    "type": "doc",
+    "id": "appendix/script-api/query-script-api/intro"
   }
 }
