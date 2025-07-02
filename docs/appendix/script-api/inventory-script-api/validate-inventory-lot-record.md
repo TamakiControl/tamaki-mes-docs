@@ -20,7 +20,7 @@ system.mes.inventory.validateInventoryLotRecord(**lot_record_data)
 ## Parameters
 
 | Parameter                   | Type            | Description                                                                                          |
-| --------------------------- | --------------- | ---------------------------------------------------------------------------------------------------- |
+|-----------------------------|-----------------|------------------------------------------------------------------------------------------------------|
 | `lotRecordType`             | `String`        | The type of change for the record.                                                                   |
 | `inventoryLotId`            | `String` (ULID) | The ULID of the primary inventory lot for the inventory lot record.                                  |
 | `inventoryLotName`          | `String`        | The name of the primary inventory lot for the inventory lot record.                                  |

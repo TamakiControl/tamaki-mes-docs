@@ -17,7 +17,7 @@ system.mes.inventory.validateEditInventoryQuantityRequest(**edit_inventory_quant
 ## Parameters
 
 | Parameter                | Type            | Description                                                                                                                               |
-| ------------------------ | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+|--------------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | `type`                   | `String`        | The type of request defined by the LotRecordType Enum. It is internally set and must not be modified, as changes may break functionality. |
 | `newQuantity`            | `Double`        | The new quantity to be assigned to the inventory.                                                                                         |
 | `unitOfMeasureSymbol`    | `String`        | The symbol of the unit of measure for the quantity.                                                                                       |

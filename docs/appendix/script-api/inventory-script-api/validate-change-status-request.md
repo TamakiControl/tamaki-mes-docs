@@ -17,7 +17,7 @@ system.mes.inventory.validateChangeStatusRequest(**change_status_request)
 ## Parameters
 
 | Parameter     | Type            | Description                                                                                                                               |
-| ------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+|---------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | `type`        | `String`        | The type of request defined by the LotRecordType Enum. It is internally set and must not be modified, as changes may break functionality. |
 | `lotId`       | `String` (ULID) | The ID of the inventory lot whose status is being updated.                                                                                |
 | `newStatus`   | `String`        | The new status to be assigned to the inventory lot.                                                                                       |

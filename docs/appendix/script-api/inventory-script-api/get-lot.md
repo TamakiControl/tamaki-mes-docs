@@ -18,16 +18,16 @@ system.mes.inventory.getLot(id)
 
 ## Parameters
 
-| Parameter | Type            | Description                               |
-| --------- | --------------- | ----------------------------------------- |
-| `id`      | `String` (ULID) | The ID of the inventory lots to retrieve. |
+| Parameter | Type            | Nullable | Description                               |
+|-----------|-----------------|----------|-------------------------------------------|
+| `id`      | `String` (ULID) | False    | The ID of the inventory lots to retrieve. |
 
 ## Returns
 
 Returns a JSON representation of the inventory lot. Returns nothing if no inventory lot is found.
 
 | Name              | Type            | Description                                                            |
-| ----------------- | --------------- | ---------------------------------------------------------------------- |
+|-------------------|-----------------|------------------------------------------------------------------------|
 | `name`            | `String`        | The name of the inventory lot.                                         |
 | `materialId`      | `String` (ULID) | The ULID of the material associated with this inventory lot.           |
 | `status`          | `String`        | The status of the inventory lot.                                       |

@@ -17,7 +17,7 @@ system.mes.inventory.validateUnconsumeRequest(**unconsume_request)
 ## Parameters
 
 | Parameter                     | Type            | Description                                                                                                                               |
-| ----------------------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+|-------------------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | `type`                        | `String`        | The type of request defined by the LotRecordType Enum. It is internally set and must not be modified, as changes may break functionality. |
 | `quantity`                    | `Double`        | The quantity to unconsume from the location.                                                                                              |
 | `unitOfMeasureSymbol`         | `String`        | The symbol of the unit of measure for the quantity.                                                                                       |

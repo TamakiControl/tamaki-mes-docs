@@ -20,7 +20,7 @@ system.mes.inventory.validateLot(**lot_data)
 ## Parameters
 
 | Parameter         | Type            | Description                                                                            |
-| ----------------- | --------------- | -------------------------------------------------------------------------------------- |
+|-------------------|-----------------|----------------------------------------------------------------------------------------|
 | `name`            | `String`        | The name of the inventory lot.                                                         |
 | `materialId`      | `String` (ULID) | The ULID of the material associated with this inventory lot.                           |
 | `status`          | `String`        | The status of the inventory lot.                                                       |

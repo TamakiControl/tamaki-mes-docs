@@ -18,18 +18,18 @@ system.mes.inventory.getInventoryByLotAndLocation(lotIdOrName, materialIdOrPath,
 
 ## Parameters
 
-| Parameter          | Type     | Description                                                         |
-| ------------------ | -------- | ------------------------------------------------------------------- |
-| `lotIdOrName`      | `String` | The ID or name of the inventory lot associated with the inventory.  |
-| `materialIdOrPath` | `String` | The ID or path of the material associated with the inventory's lot. |
-| `locationIdOrPath` | `String` | The ID or path of the location associated with the inventory.       |
+| Parameter          | Type     | Nullable | Description                                                         |
+|--------------------|----------|----------|---------------------------------------------------------------------|
+| `lotIdOrName`      | `String` | False    | The ID or name of the inventory lot associated with the inventory.  |
+| `materialIdOrPath` | `String` | False    | The ID or path of the material associated with the inventory's lot. |
+| `locationIdOrPath` | `String` | False    | The ID or path of the location associated with the inventory.       |
 
 ## Returns
 
 Returns a JSON representation of an inventory with the following properties:
 
 | Name                  | Type            | Description                                                                               |
-| --------------------- | --------------- | ----------------------------------------------------------------------------------------- |
+|-----------------------|-----------------|-------------------------------------------------------------------------------------------|
 | `storageLocationId`   | `String` (ULID) | The ULID of the storage location of the inventory.                                        |
 | `storageLocationPath` | `String`        | The path of the storage location of the inventory.                                        |
 | `lotId`               | `String` (ULID) | The ULID of the inventory lot.                                                            |

@@ -17,7 +17,7 @@ system.mes.inventory.validateMergeRequest(**merge_request)
 ## Parameters
 
 | Parameter                 | Type            | Description                                                                                                                               |
-| ------------------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+|---------------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | `type`                    | `String`        | The type of request defined by the LotRecordType Enum. It is internally set and must not be modified, as changes may break functionality. |
 | `sourceLotId`             | `String` (ULID) | The ID of the lot that will be merged and closed.                                                                                         |
 | `destinationLotId`        | `String` (ULID) | The ID of the final inventory lot that will be merged into.                                                                               |

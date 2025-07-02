@@ -16,19 +16,20 @@ system.mes.inventory.merge(**merge_request)
 
 ## Parameters
 
-| Parameter                 | Type            | Description                                                                                                                               |
-| ------------------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`                    | `String`        | The type of request defined by the LotRecordType Enum. It is internally set and must not be modified, as changes may break functionality. |
-| `sourceLotId`             | `String` (ULID) | The ID of the lot that will be merged and closed.                                                                                         |
-| `destinationLotId`        | `String` (ULID) | The ID of the final inventory lot that will be merged into.                                                                               |
-| `locationId`              | `String` (ULID) | The ID of the location the merged inventory goes to.                                                                                      |
-| `operationId`             | `String` (ULID) | The ID of the operation merging this inventory.                                                                                           |
-| `productionOrderIdOrName` | `String`        | The ID or name of the production order associated with the merge.                                                                         |
-| `materialReasonCodeId`    | `String` (ULID) | The ID of the material reason code to add additional context.                                                                             |
-| `notes`                   | `String`        | Notes related to the merge request.                                                                                                       |
-| `spare1`                  | `String`        | Additional field for user-defined context.                                                                                                |
-| `spare2`                  | `String`        | Additional field for user-defined context.                                                                                                |
-| `spare3`                  | `String`        | Additional field for user-defined context.                                                                                                |
+| Parameter                 | Type            | Nullable | Description                                                                                                                               |
+|---------------------------|-----------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| `type`                    | `String`        | True     | The type of request defined by the LotRecordType Enum. It is internally set and must not be modified, as changes may break functionality. |
+| `sourceLotId`             | `String` (ULID) | False    | The ID of the lot that will be merged and closed.                                                                                         |
+| `destinationLotId`        | `String` (ULID) | False    | The ID of the final inventory lot that will be merged into.                                                                               |
+| `locationId`              | `String` (ULID) | True     | The ID of the location the merged inventory goes to.                                                                                      |
+| `operationId`             | `String` (ULID) | True     | The ID of the operation merging this inventory.                                                                                           |
+| `productionOrderIdOrName` | `String`        | True     | The ID or name of the production order associated with the merge.                                                                         |
+| `materialReasonCodeId`    | `String` (ULID) | True     | The ID of the material reason code to add additional context.                                                                             |
+| `inventoryOperationId`    | `String` (ULID) | True     | The ID of the inventory operation related to this merge.                                                                                  |
+| `notes`                   | `String`        | True     | Notes related to the merge request.                                                                                                       |
+| `spare1`                  | `String`        | True     | Additional field for user-defined context.                                                                                                |
+| `spare2`                  | `String`        | True     | Additional field for user-defined context.                                                                                                |
+| `spare3`                  | `String`        | True     | Additional field for user-defined context.                                                                                                |
 
 ## Returns
 
