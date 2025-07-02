@@ -19,13 +19,13 @@ system.mes.query.validateQueryRequest(**queryRequest)
 
 ## Parameters
 
-| Parameter        | Type                      | Description                                                                                                    |
-| ---------------- | ------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `pageSize`       | `Integer`                 | Number of records to return per page. If null, pagination will not be applied.                                |
-| `pageIndex`      | `Integer`                 | Index of the page to return. If null, pagination will not be applied.                                         |
-| `sortFields`     | `List<String>`            | List of fields to sort by. These should be names as they appear in the entity class.                          |
-| `sortDirections` | `List<String>`            | Direction to sort the fields by. Default is ASC.                                                              |
-| `filters`        | `List<FilterRequestDTO>`  | List of filters to apply to the query.                                                                        |
+| Parameter        | Type                     | Description                                                                          |
+|------------------|--------------------------|--------------------------------------------------------------------------------------|
+| `pageSize`       | `Integer`                | Number of records to return per page. If null, pagination will not be applied.       |
+| `pageIndex`      | `Integer`                | Index of the page to return. If null, pagination will not be applied.                |
+| `sortFields`     | `List<String>`           | List of fields to sort by. These should be names as they appear in the entity class. |
+| `sortDirections` | `List<String>`           | Direction to sort the fields by. Default is ASC.                                     |
+| `filters`        | `List<FilterRequestDTO>` | List of filters to apply to the query.                                               |
 
 ## Returns
 

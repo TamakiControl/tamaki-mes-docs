@@ -18,7 +18,7 @@ system.mes.query.newQueryRequest()
 ## Parameters
 
 | Parameter | Type | Description                               |
-| --------- | ---- | ----------------------------------------- |
+|-----------|------|-------------------------------------------|
 | None      | -    | This method does not take any parameters. |
 
 ## Returns

@@ -19,7 +19,7 @@ system.mes.query.newFilterRequest()
 ## Parameters
 
 | Parameter | Type | Description                               |
-| --------- | ---- | ----------------------------------------- |
+|-----------|------|-------------------------------------------|
 | None      | -    | This method does not take any parameters. |
 
 ## Returns
@@ -27,7 +27,7 @@ system.mes.query.newFilterRequest()
 Returns a JSON representation of the newly created filter request object. The following is a list of keys and default values:
 
 | Key               | Default Value |
-| ----------------- | ------------- |
+|-------------------|---------------|
 | `field`           | `null`        |
 | `type`            | `null`        |
 | `condition`       | `null`        |
