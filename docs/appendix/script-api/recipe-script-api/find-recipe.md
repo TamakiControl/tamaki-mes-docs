@@ -15,7 +15,7 @@ Retrieves [Recipes](../../data-model/recipe-model/recipe.md) based on the specif
 This scripting function has no client permission restrictions.
 
 ## Syntax
-Using Python keyword arguments, a [Query Request](../query-script-api/query-request.md) can be passed to the `findRecipes` function
+Using Python keyword arguments, a [Query Request](../query-script-api/new-query-request.md) can be passed to the `findRecipes` function
 without specifying each parameter individually. Please refer to the Query Request documentation for a list of parameters.
 ```python
 system.mes.recipe.findRecipes(**queryRequest)
