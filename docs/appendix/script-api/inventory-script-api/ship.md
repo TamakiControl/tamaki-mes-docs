@@ -25,6 +25,7 @@ system.mes.inventory.ship(**ship_request)
 | `materialIdOrPath`        | `String`        | The ID or path of the material being shipped.                                                                                             |
 | `sourceLocationIdOrPath`  | `String`        | The ID or path of the location from which inventory will be shipped.                                                                      |
 | `operationId`             | `String` (ULID) | The ID of the operation shipping this inventory.                                                                                          |
+| `inventoryOperationId`    | `String` (ULID) | The ID of the inventory operation related to this ship action.                                                                            |
 | `productionOrderIdOrName` | `String`        | The ID or name of the production order associated with the ship.                                                                          |
 | `materialReasonCodeId`    | `String` (ULID) | The ID of the material reason code to add additional context.                                                                             |
 | `startDate`               | `Instant`       | The start date and time of the ship.                                                                                                      |

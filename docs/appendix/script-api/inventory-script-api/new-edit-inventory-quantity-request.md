@@ -34,6 +34,7 @@ Returns a JSON representation of the newly created Edit Inventory Quantity Reque
 | `materialIdOrPath`       | `null`        |
 | `sourceLocationIdOrPath` | `null`        |
 | `operationId`            | `null`        |
+| `inventoryOperationId`   | `null`        |
 | `notes`                  | `null`        |
 | `spare1`                 | `null`        |
 | `spare2`                 | `null`        |
