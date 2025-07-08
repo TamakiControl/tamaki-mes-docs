@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.7.0">
 <title data-rh="true">Setup | Tamaki MES</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://tamakicontrol.github.io/tamaki-mes-docs/img/tamaki-logo.png"><meta data-rh="true" name="twitter:image" content="https://tamakicontrol.github.io/tamaki-mes-docs/img/tamaki-logo.png"><meta data-rh="true" property="og:url" content="https://tamakicontrol.github.io/tamaki-mes-docs/docs/user-guides/oee-guide/setup"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Setup | Tamaki MES"><meta data-rh="true" name="description" content="OEE Setup Configuration"><meta data-rh="true" property="og:description" content="OEE Setup Configuration"><link data-rh="true" rel="icon" href="/tamaki-mes-docs/img/tamaki-favicon.png"><link data-rh="true" rel="canonical" href="https://tamakicontrol.github.io/tamaki-mes-docs/docs/user-guides/oee-guide/setup"><link data-rh="true" rel="alternate" href="https://tamakicontrol.github.io/tamaki-mes-docs/docs/user-guides/oee-guide/setup" hreflang="en"><link data-rh="true" rel="alternate" href="https://tamakicontrol.github.io/tamaki-mes-docs/docs/user-guides/oee-guide/setup" hreflang="x-default"><link rel="search" type="application/opensearchdescription+xml" title="Tamaki MES" href="/tamaki-mes-docs/opensearch.xml"><link rel="stylesheet" href="/tamaki-mes-docs/assets/css/styles.db17c3d9.css">
-<script src="/tamaki-mes-docs/assets/js/runtime~main.924b57b7.js" defer="defer"></script>
+<script src="/tamaki-mes-docs/assets/js/runtime~main.174e6597.js" defer="defer"></script>
 <script src="/tamaki-mes-docs/assets/js/main.2394041c.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -23,11 +23,12 @@
 </ul>
 <h2 class="anchor anchorWithHideOnScrollNavbar_JmiO" id="oee-configuration">OEE Configuration<a href="#oee-configuration" class="hash-link" aria-label="Direct link to OEE Configuration" title="Direct link to OEE Configuration">​</a></h2>
 <p><strong>Example:</strong></p>
-<p><img decoding="async" loading="lazy" alt="OEE Configuration tab with fields for modes, availability, performance and quality settings" src="/tamaki-mes-docs/assets/images/setup-oee-configuration-b7e588e6009c67ea333b721ef06a99c3.png" width="1407" height="981" class="img_wQsy"></p>
+<p><img decoding="async" loading="lazy" alt="OEE Configuration tab with fields for modes, availability, performance and quality settings" src="/tamaki-mes-docs/assets/images/setup-oee-configuration-e6e60d1d5b0b995d8987696ca7ca5d65.png" width="1406" height="979" class="img_wQsy"></p>
 <h3 class="anchor anchorWithHideOnScrollNavbar_JmiO" id="oee-configuration-workflow">OEE Configuration Workflow<a href="#oee-configuration-workflow" class="hash-link" aria-label="Direct link to OEE Configuration Workflow" title="Direct link to OEE Configuration Workflow">​</a></h3>
 <ol>
 <li>Select a location from the dropdown menu to configure OEE settings for that specific location.</li>
 <li>Set the <a href="#max-record-duration">Max Record Duration</a> and <a href="#prune-days">Prune Days</a>.</li>
+<li>Set the <a href="#max-flush-interval">Max Flush Interval</a> and the <a href="#max-time-between-executions">Max Time Between Executions</a>.</li>
 <li>Fill out the <a href="#mode-expression">Mode Expression</a>.</li>
 <li>Configure the <a href="#availability">Availability</a> settings:<!-- -->
 <ul>
@@ -42,7 +43,6 @@
 <li>Fill out the <a href="#production-count-unit-of-measure">Production Count Unit of Measure</a>.</li>
 <li>Fill out the <a href="#production-rate-time-unit">Production Rate Time Unit</a>.</li>
 <li>Fill out the <a href="#production-count-expression">Production Count Expression</a>.</li>
-<li>Select the <a href="#production-count-calculation-type">Production Count Calculation Type</a>.</li>
 <li>Set the <a href="#production-count-overflow-value">Production Count Overflow Value</a>.</li>
 <li>Configure the <a href="#standard-rate-source">Standard Rate Source</a> and set the <a href="#standard-rate-uomtime-unit">Standard Rate</a>.</li>
 </ul>
@@ -51,7 +51,6 @@
 <ul>
 <li><a href="#enable-quality">Enable Quality</a>.</li>
 <li>Fill out the <a href="#waste-count-expression">Waste Count Expression</a>.</li>
-<li>Select the <a href="#waste-count-calculation-type">Waste Count Calculation Type</a>.</li>
 <li>Set the <a href="#waste-count-overflow-value">Waste Count Overflow Value</a>.</li>
 </ul>
 </li>
@@ -77,6 +76,10 @@
 <p>If none of those events occur within the <a href="#max-record-duration">Max Record Duration</a>, the OEE record will to cut over to the next record automatically. The purpose of this is to control the granularity of the records. Changing this value will not affect existing records, but will apply to new records created after the change.</p>
 <h4 class="anchor anchorWithHideOnScrollNavbar_JmiO" id="prune-days">Prune Days<a href="#prune-days" class="hash-link" aria-label="Direct link to Prune Days" title="Direct link to Prune Days">​</a></h4>
 <p>Number of days to retain OEE records in the database before deleting. (If blank, records will be kept indefinitely)</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_JmiO" id="max-flush-interval">Max Flush Interval<a href="#max-flush-interval" class="hash-link" aria-label="Direct link to Max Flush Interval" title="Direct link to Max Flush Interval">​</a></h4>
+<p>Maximum time oee data being flushed into the database from the data collection service.</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_JmiO" id="max-time-between-executions">Max Time Between Executions<a href="#max-time-between-executions" class="hash-link" aria-label="Direct link to Max Time Between Executions" title="Direct link to Max Time Between Executions">​</a></h4>
+<p>Maximum number of seconds between data collection evaluating data.</p>
 <h4 class="anchor anchorWithHideOnScrollNavbar_JmiO" id="mode-expression"><a href="/tamaki-mes-docs/docs/user-guides/oee-guide/terms-and-definitions#mode">Mode</a> Expression<a href="#mode-expression" class="hash-link" aria-label="Direct link to mode-expression" title="Direct link to mode-expression">​</a></h4>
 <p>The <a href="/tamaki-mes-docs/docs/user-guides/oee-guide/terms-and-definitions#expression-field">Expression Field</a> is evaluated to an integer value corresponding to a <a href="/tamaki-mes-docs/docs/user-guides/oee-guide/terms-and-definitions#mode">Mode</a>&#x27;s code of the location is bound to the OEE model.</p>
 <h4 class="anchor anchorWithHideOnScrollNavbar_JmiO" id="availability">Availability<a href="#availability" class="hash-link" aria-label="Direct link to Availability" title="Direct link to Availability">​</a></h4>
@@ -102,14 +105,8 @@
 <p>For example, if this field is set to <code>Minutes</code>, and the <a href="#production-count-unit-of-measure">Production Count Unit of Measure</a> is set to <code>Pound</code>, then the production rate will be calculated in <code>Pounds per Minute</code>.</p>
 <h5 class="anchor anchorWithHideOnScrollNavbar_JmiO" id="production-count-expression">Production Count Expression<a href="#production-count-expression" class="hash-link" aria-label="Direct link to Production Count Expression" title="Direct link to Production Count Expression">​</a></h5>
 <p>This is where the production count value is specified for the location <a href="/tamaki-mes-docs/docs/user-guides/oee-guide/terms-and-definitions#production-count">Production Count</a>. This can be a static value but will most likely be a tag binding to reflect the PLC&#x27;s value for the current production count at the machine <a href="/tamaki-mes-docs/docs/user-guides/oee-guide/terms-and-definitions#expression-field">Expression Field</a>.</p>
-<h5 class="anchor anchorWithHideOnScrollNavbar_JmiO" id="production-count-calculation-type">Production Count Calculation Type<a href="#production-count-calculation-type" class="hash-link" aria-label="Direct link to Production Count Calculation Type" title="Direct link to Production Count Calculation Type">​</a></h5>
-<p>Opens a dropdown with the following options:</p>
-<ul>
-<li><strong>Direct:</strong> The production count will be calculated directly from the value in the <a href="#production-count-expression">Production Count Expression</a> field.</li>
-<li><strong>Delta:</strong> The production count will be calculated as the difference between the current value and the previous value. This uses the <a href="#production-count-overflow-value">Production Count Overflow Value</a> to know when the value has rolled over back to 0. This only handles a maximum of 1 rollover between evaluations.</li>
-</ul>
 <h5 class="anchor anchorWithHideOnScrollNavbar_JmiO" id="production-count-overflow-value">Production Count Overflow Value<a href="#production-count-overflow-value" class="hash-link" aria-label="Direct link to Production Count Overflow Value" title="Direct link to Production Count Overflow Value">​</a></h5>
-<p>The tag capturing production count will roll over to 0 when it reaches this value. This is used to calculate the production count when then <a href="#production-count-calculation-type">Production Count Calculation Type</a> is set to <code>delta</code>.</p>
+<p>The tag capturing production count will roll over to 0 when it reaches this value. This is used to calculate the production count.</p>
 <h5 class="anchor anchorWithHideOnScrollNavbar_JmiO" id="standard-rate-source">Standard Rate Source<a href="#standard-rate-source" class="hash-link" aria-label="Direct link to Standard Rate Source" title="Direct link to Standard Rate Source">​</a></h5>
 <p>Opens a dropdown with the following options:</p>
 <ul>
@@ -125,14 +122,8 @@
 <p>Enables quality tracking for the OEE Records. This allows the system to track the waste count and rate of the location.</p>
 <h5 class="anchor anchorWithHideOnScrollNavbar_JmiO" id="waste-count-expression">Waste Count Expression<a href="#waste-count-expression" class="hash-link" aria-label="Direct link to Waste Count Expression" title="Direct link to Waste Count Expression">​</a></h5>
 <p>The <a href="/tamaki-mes-docs/docs/user-guides/oee-guide/terms-and-definitions#expression-field">Expression Field</a> where the PLC tag for the <a href="/tamaki-mes-docs/docs/user-guides/oee-guide/terms-and-definitions#waste-count">Waste Count</a> of the location is bound to the OEE model.</p>
-<h5 class="anchor anchorWithHideOnScrollNavbar_JmiO" id="waste-count-calculation-type">Waste Count Calculation Type<a href="#waste-count-calculation-type" class="hash-link" aria-label="Direct link to Waste Count Calculation Type" title="Direct link to Waste Count Calculation Type">​</a></h5>
-<p>Opens a dropdown with the following options:</p>
-<ul>
-<li><strong>Direct:</strong> The waste count will be calculated directly from the value in the <a href="#waste-count-expression">Waste Count Expression</a> field.</li>
-<li><strong>Delta:</strong>  The waste count will be calculated as the difference between the current value and the previous value. This uses the <a href="#waste-count-overflow-value">Waste Count Overflow Value</a> to know when the value has rolled over back to 0. This only handles a maximum of 1 rollover between evaluations.</li>
-</ul>
 <h5 class="anchor anchorWithHideOnScrollNavbar_JmiO" id="waste-count-overflow-value">Waste Count Overflow Value<a href="#waste-count-overflow-value" class="hash-link" aria-label="Direct link to Waste Count Overflow Value" title="Direct link to Waste Count Overflow Value">​</a></h5>
-<p>The tag capturing waste count will roll over to 0 when it reaches this value. This is used to calculate the waste count when then <a href="#waste-count-calculation-type">Waste Count Calculation Type</a> is set to <code>delta</code>.</p>
+<p>The tag capturing waste count will roll over to 0 when it reaches this value. This is used to calculate the waste count.</p>
 <h4 class="anchor anchorWithHideOnScrollNavbar_JmiO" id="production-order">Production Order<a href="#production-order" class="hash-link" aria-label="Direct link to Production Order" title="Direct link to Production Order">​</a></h4>
 <h5 class="anchor anchorWithHideOnScrollNavbar_JmiO" id="production-order-source">Production Order Source<a href="#production-order-source" class="hash-link" aria-label="Direct link to Production Order Source" title="Direct link to Production Order Source">​</a></h5>
 <p>Opens a dropdown with the following options:</p>
