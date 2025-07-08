@@ -18,8 +18,8 @@ system.mes.material.findMaterialClasses(**queryRequest)
 
 ## Parameters
 
-Using Python keyword arguments, a [Query Request](../query-script-api/query-request) can be passed to the `findMaterialClasses` function
-without specifying each parameter individually. Please refer to the [Query Request](../query-script-api/query-request) documentation for a list of parameters.
+Using Python keyword arguments, a [Query Request](../query-script-api/new-query-request) can be passed to the `findMaterialClasses` function
+without specifying each parameter individually. Please refer to the [Query Request](../query-script-api/new-query-request) documentation for a list of parameters.
 
 ## Returns
 
