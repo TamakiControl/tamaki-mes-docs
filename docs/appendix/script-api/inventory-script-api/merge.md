@@ -23,6 +23,7 @@ system.mes.inventory.merge(**merge_request)
 | `destinationLotId`        | `String` (ULID) | The ID of the final inventory lot that will be merged into.                                                                               |
 | `locationId`              | `String` (ULID) | The ID of the location the merged inventory goes to.                                                                                      |
 | `operationId`             | `String` (ULID) | The ID of the operation merging this inventory.                                                                                           |
+| `inventoryOperationId`    | `String` (ULID) | The ID of the inventory operation related to this merge action.                                                                           |
 | `productionOrderIdOrName` | `String`        | The ID or name of the production order associated with the merge.                                                                         |
 | `materialReasonCodeId`    | `String` (ULID) | The ID of the material reason code to add additional context.                                                                             |
 | `notes`                   | `String`        | Notes related to the merge request.                                                                                                       |

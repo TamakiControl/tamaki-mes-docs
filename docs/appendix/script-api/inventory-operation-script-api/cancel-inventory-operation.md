@@ -8,7 +8,7 @@ description: "Cancels an inventory operation. This will stop the operation and c
 
 ## Description
 
-Cancels an [Inventory Operations](../../data-model/inventory-model/inventory-operation) object.
+Cancels an [Inventory Operations](../../data-model/inventory-model/inventory-operation) object. This function finds the currently running inventory lot record associated with the specified inventory operation, sets its end time to the current time, and updates its status to CANCELLED. The inventory operation status is also updated to CANCELLED. This effectively terminates an active operation without recording additional inventory quantity changes.
 
 ## Syntax
 
@@ -24,7 +24,7 @@ system.mes.inventory.operation.cancelInventoryOperation(inventoryOperationId)
 
 ## Returns
 
-Returns a JSON object of the inventory lot record for the cancelled inventory operation.
+Returns a JSON object of the updated inventory lot record with the cancelled operation details, including the end time and cancelled status.
 
 ## Example Usage
 
