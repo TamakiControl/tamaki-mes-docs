@@ -9,7 +9,7 @@ description: "Validates a material property value based on provided parameters."
 ## Description
 
 Validates the specified parameters for a [Material Property Values](../../data-model/material-model/material-property-value) record and returns any validation errors.
-This only checks if the material property value object can be saved based on the attributes given.
+This only checks if the material property value object can be saved based on the attributes given, without actually creating or modifying the material property value. Use this function to verify your parameters before executing a save material property value operation.
 
 ## Syntax
 

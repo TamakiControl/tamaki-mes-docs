@@ -1,12 +1,12 @@
 ---
 sidebar_position: 20
 title: "validateMergeRequest"
-description: "Validates a merge request based on the provided parameters."
+description: "Validates the specified parameters for a merge request and returns any validation errors."
 ---
 
 # system.mes.inventory.validateMergeRequest
 
-Validates a merge request based on the provided parameters.
+Validates the specified parameters for a merge request and returns any validation errors. This only checks if the merge request can be processed based on the attributes given, without actually performing the merge. Use this function to verify your parameters before executing the actual merge operation.
 
 ## Syntax
 

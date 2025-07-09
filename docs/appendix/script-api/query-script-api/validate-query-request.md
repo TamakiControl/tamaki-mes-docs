@@ -9,7 +9,7 @@ sidebar_position: 5
 ## Description
 
 Validates the specified parameters for a [Query Request](./new-query-request) record and returns any validation errors.
-This only checks if the query request object can be saved based on the attributes given.
+This only checks if the query request can be performed based on the attributes given, without actually executing the query request. Use this function to verify your parameters before executing a query request operation.
 
 ## Syntax
 

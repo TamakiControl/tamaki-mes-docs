@@ -9,7 +9,7 @@ description: "Validates the specified parameters for an operation."
 ## Description
 
 Validates the specified parameters for an [Operations](../../data-model/operation-model/operation) record and returns any validation errors.
-This only checks if the operation object can be saved based on the attributes given.
+This only checks if the operation object can be saved based on the attributes given, without actually creating or modifying the operation. Use this function to verify your parameters before executing save operation.
 
 ## Syntax
 

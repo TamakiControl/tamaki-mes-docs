@@ -1,12 +1,12 @@
 ---
 sidebar_position: 35
 title: "validateReceiveRequest"
-description: "Validates a receive request based on the provided parameters."
+description: "Validates the specified parameters for a receive request and returns any validation errors."
 ---
 
 # system.mes.inventory.validateReceiveRequest
 
-Validates a receive request based on the provided parameters.
+Validates the specified parameters for a receive request and returns any validation errors. This only checks if the receive request can be processed based on the attributes given, without actually performing the inventory receipt. Use this function to verify your parameters before executing the actual receive operation.
 
 ## Syntax
 
