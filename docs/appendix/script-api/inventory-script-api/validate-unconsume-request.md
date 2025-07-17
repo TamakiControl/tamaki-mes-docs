@@ -1,12 +1,12 @@
 ---
 sidebar_position: 8
 title: "validateUnconsumeRequest"
-description: "Validates an unconsume request based on the provided parameters."
+description: "Validates the specified parameters for an unconsume request and returns any validation errors."
 ---
 
 # system.mes.inventory.validateUnconsumeRequest
 
-Validates an unconsume request based on the provided parameters.
+Validates the specified parameters for an unconsume request and returns any validation errors. This only checks if the unconsume request can be processed based on the attributes given, without actually performing the unconsumption. Use this function to verify your parameters before executing the actual unconsume operation.
 
 ## Syntax
 

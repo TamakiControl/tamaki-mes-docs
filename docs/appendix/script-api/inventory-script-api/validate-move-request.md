@@ -1,12 +1,12 @@
 ---
 sidebar_position: 14
 title: "validateMoveRequest"
-description: "Validates a move request based on the provided parameters."
+description: "Validates the specified parameters for a move request and returns any validation errors."
 ---
 
 # system.mes.inventory.validateMoveRequest
 
-Validates a move request based on the provided parameters.
+Validates the specified parameters for a move request and returns any validation errors. This only checks if the move request can be processed based on the attributes given, without actually performing the inventory move. Use this function to verify your parameters before executing the actual move operation.
 
 ## Syntax
 

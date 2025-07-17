@@ -9,7 +9,7 @@ description: "Validates the specified parameters for a material class."
 ## Description
 
 Validates the specified parameters for a [Material Classes](../../data-model/material-model/material-class) record and returns any validation errors.
-This only checks if the material class object can be saved based on the attributes given.
+This only checks if the material class object can be saved based on the attributes given, without actually creating or modifying the material class. Use this function to verify your parameters before executing a save material class operation.
 
 ## Syntax
 

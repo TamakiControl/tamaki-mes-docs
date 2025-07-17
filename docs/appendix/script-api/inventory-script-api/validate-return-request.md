@@ -1,12 +1,12 @@
 ---
 sidebar_position: 26
 title: "validateReturnRequest"
-description: "Validates a return request based on the provided parameters."
+description: "Validates the specified parameters for a return request and returns any validation errors."
 ---
 
 # system.mes.inventory.validateReturnRequest
 
-Validates a return request based on the provided parameters.
+Validates the specified parameters for a return request and returns any validation errors. This only checks if the return request can be processed based on the attributes given, without actually performing the inventory return. Use this function to verify your parameters before executing the actual return operation.
 
 ## Syntax
 
