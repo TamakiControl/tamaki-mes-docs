@@ -50,7 +50,7 @@ queryRequest["pageSize"] = 10
 queryRequest["pageIndex"] = 0
 
 queryRequest["sortFields"] = ["name"]
-queryRequest["sortDirection"] = "Ascending"
+queryRequest["sortDirections"] = ["Ascending"]
 
 filterRequest = system.mes.query.newFilterRequest()  
 filterRequest["field"] = "createdDate"  

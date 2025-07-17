@@ -30,7 +30,7 @@ Returns a JSON representation of the newly created query request object. The fol
 | `pageSize`      | `null`        |
 | `pageIndex`     | `null`        |
 | `sortFields`    | `null`        |
-| `sortDirection` | `null`        |
+| `sortDirections` | `null`        |
 | `filters`       | `null`        |
 
 ## Code Examples
@@ -43,7 +43,7 @@ new_query_request = system.mes.query.newQueryRequest()
 new_query_request["pageSize"] = 10
 new_query_request["pageIndex"] = 0
 new_query_request["sortFields"] = ["name"]
-new_query_request["sortDirection"] = "Ascending"
+new_query_request["sortDirections"] = ["Ascending"]
 # (You can continue setting other properties as needed here)
 
 # Use the query request to find materials
