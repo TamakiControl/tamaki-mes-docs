@@ -27,7 +27,7 @@ Returns a Query Result object with the following properties:
 
 | Name            | Type                                                                           | Description                                                                                                      |
 | --------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
-| `content`       | `List`&lt;[Material Class](../../data-model/material-model/material-class)&gt; | The list of all records found that meet the specified criteria                                                   |
+| `content`       | `List`<[Material Class](../../data-model/material-model/material-class)> | The list of all records found that meet the specified criteria                                                   |
 | `totalPages`    | `Integer`                                                                      | If pagination is used, this is the number of total pages of records in the database for the specified page size. |
 | `totalElements` | `Long`                                                                         | If pagination is used, this is the number of records in the database that meet the specified criteria.           |
 | `pageSize`      | `Integer`                                                                      | If pagination is used, this is the specified page size.                                                          |
