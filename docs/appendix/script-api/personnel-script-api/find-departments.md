@@ -1,25 +1,24 @@
 ---
-sidebar_position: 18
-title: "findOperationRecords"
-description: "Retrieves operation records based on the specified pagination, sort, and column constraint parameters."
+sidebar_position: 6
+title: "findDepartments"
+description: "Retrieves departments based on the specified pagination, sort, and column constraint parameters."
 ---
 
-# system.mes.operation.findOperationRecords
+# system.mes.personnel.findDepartments
 
 ## Description
 
-Retrieves [Operation Records](../../data-model/operation-model/operation-record) records based on the specified pagination, sort, and column constraint parameters.
+Retrieves [Personnel Department](../../data-model/personnel-model/personnel-department) records based on the specified pagination, sort, and column constraint parameters.
 
 ## Syntax
 
-```python
-system.mes.operation.findOperationRecords(**queryRequest)
+```
+system.mes.personnel.findDepartments(**queryRequest)
 ```
 
 ## Parameters
 
-Using Python keyword arguments, a [Query Request](../query-script-api/new-query-request) can be passed to the `findOperationRecords` function
-without specifying each parameter individually. Please refer to the [Query Request](../query-script-api/new-query-request) documentation for a list of parameters.
+Using Python keyword arguments, a [Query Request](../query-script-api/new-query-request) can be passed to the `findDepartments` function without specifying each parameter individually. Please refer to the [Query Request](../query-script-api/new-query-request) documentation for a list of parameters.
 
 ## Returns
 
@@ -27,7 +26,7 @@ Returns a Query Result object with the following properties:
 
 | Name            | Type                                                                                 | Description                                                                                                      |
 | --------------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
-| `content`       | `List`<[Operation Records](../../data-model/operation-model/operation-record)> | The list of all records found that meet the specified criteria                                                   |
+| `content`       | `List`<[Personnel Department](../../data-model/personnel-model/personnel-department)> | The list of all records found that meet the specified criteria                                                   |
 | `totalPages`    | `Integer`                                                                            | If pagination is used, this is the number of total pages of records in the database for the specified page size. |
 | `totalElements` | `Long`                                                                               | If pagination is used, this is the number of records in the database that meet the specified criteria.           |
 | `pageSize`      | `Integer`                                                                            | If pagination is used, this is the specified page size.                                                          |
@@ -40,10 +39,7 @@ Returns a Query Result object with the following properties:
 
 ## Code Examples
 
-Here is an example of how to use a Query Request to retrieve the first ten operation records created in 2025 sorted by their
-name.
-
-```python
+```
 # Generate the object structure for a new query request
 queryRequest = system.mes.query.newQueryRequest()
 
@@ -65,9 +61,9 @@ filters = [filterRequest]
 
 queryRequest['filters'] = filters
 
-# Retrieve the operation records that match the filter
-result = system.mes.operation.findOperationRecords(**queryRequest)
+# Retrieve the departments that match the filter
+result = system.mes.personnel.findDepartments(**queryRequest)
 
-# Output the operation records that match the filter.
+# Output the departments that match the filter.
 print(result)
 ```
