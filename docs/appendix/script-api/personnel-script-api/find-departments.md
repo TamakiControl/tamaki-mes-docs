@@ -24,18 +24,18 @@ Using Python keyword arguments, a [Query Request](../query-script-api/new-query-
 
 Returns a Query Result object with the following properties:
 
-| Name            | Type                                                                                 | Description                                                                                                      |
-| --------------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
-| `content`       | `List`<[Personnel Department](../../data-model/personnel-model/personnel-department)> | The list of all records found that meet the specified criteria                                                   |
-| `totalPages`    | `Integer`                                                                            | If pagination is used, this is the number of total pages of records in the database for the specified page size. |
-| `totalElements` | `Long`                                                                               | If pagination is used, this is the number of records in the database that meet the specified criteria.           |
-| `pageSize`      | `Integer`                                                                            | If pagination is used, this is the specified page size.                                                          |
-| `pageIndex`     | `Integer`                                                                            | If pagination is used, this is the specified page index.                                                         |
-| `hasContent`    | `Boolean`                                                                            | True if any records were found that meet the specified criteria.                                                 |
-| `isFirst`       | `Boolean`                                                                            | If pagination is used, this is true if the first page was returned.                                              |
-| `isLast`        | `Boolean`                                                                            | If pagination is used, this is true if the last page was returned.                                               |
-| `hasNext`       | `Boolean`                                                                            | If pagination is used, this is true if there is a page of content available after this one.                      |
-| `hasPrevious`   | `Boolean`                                                                            | If pagination is used, this is true if there is a page of content available before this one.                     |
+| Name            | Type                                                                                        | Description                                                                                                      |
+| --------------- |---------------------------------------------------------------------------------------------| ---------------------------------------------------------------------------------------------------------------- |
+| `content`       | `List`&lt;[Personnel Department](../../data-model/personnel-model/personnel-department)&gt; | The list of all records found that meet the specified criteria                                                   |
+| `totalPages`    | `Integer`                                                                                   | If pagination is used, this is the number of total pages of records in the database for the specified page size. |
+| `totalElements` | `Long`                                                                                      | If pagination is used, this is the number of records in the database that meet the specified criteria.           |
+| `pageSize`      | `Integer`                                                                                   | If pagination is used, this is the specified page size.                                                          |
+| `pageIndex`     | `Integer`                                                                                   | If pagination is used, this is the specified page index.                                                         |
+| `hasContent`    | `Boolean`                                                                                   | True if any records were found that meet the specified criteria.                                                 |
+| `isFirst`       | `Boolean`                                                                                   | If pagination is used, this is true if the first page was returned.                                              |
+| `isLast`        | `Boolean`                                                                                   | If pagination is used, this is true if the last page was returned.                                               |
+| `hasNext`       | `Boolean`                                                                                   | If pagination is used, this is true if there is a page of content available after this one.                      |
+| `hasPrevious`   | `Boolean`                                                                                   | If pagination is used, this is true if there is a page of content available before this one.                     |
 
 ## Code Examples
 

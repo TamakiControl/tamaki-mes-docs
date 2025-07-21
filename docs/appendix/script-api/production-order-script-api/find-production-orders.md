@@ -27,7 +27,7 @@ Returns a Query Result object with the following properties:
 
 | Name            | Type                                                                                       | Description                                                                                                      |
 | --------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
-| `content`       | `List`<[Production Order](../../data-model/production-order-model/production-order)> | The list of all records found that meet the specified criteria                                                   |
+| `content`       | `List`&lt;[Production Order](../../data-model/production-order-model/production-order)&gt; | The list of all records found that meet the specified criteria                                                   |
 | `totalPages`    | `Integer`                                                                                  | If pagination is used, this is the number of total pages of records in the database for the specified page size. |
 | `totalElements` | `Long`                                                                                     | If pagination is used, this is the number of records in the database that meet the specified criteria.           |
 | `pageSize`      | `Integer`                                                                                  | If pagination is used, this is the specified page size.                                                          |

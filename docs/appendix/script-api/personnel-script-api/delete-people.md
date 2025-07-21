@@ -19,9 +19,9 @@ system.mes.personnel.deletePeople(ids)
 
 ## Parameters
 
-| Parameter        | Type           | Description                                       |
-|------------------| -------------- |---------------------------------------------------|
-| `idsOrUsernames` | `List<String>` | List of IDs or usernames of the people to delete. |
+| Parameter        | Type                 | Description                                       |
+|------------------|----------------------|---------------------------------------------------|
+| `idsOrUsernames` | `List&lt;String&gt;` | List of IDs or usernames of the people to delete. |
 
 ## Returns
 
