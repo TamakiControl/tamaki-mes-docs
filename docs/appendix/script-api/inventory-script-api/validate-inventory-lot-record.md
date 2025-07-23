@@ -1,15 +1,12 @@
 ---
-sidebar_position: 61
+sidebar_position: 42
 title: "validateInventoryLotRecord"
-description: "Validates the specified parameters for an inventory lot record."
+description: "Validates the specified parameters for a new inventory lot record and returns any validation errors."
 ---
 
 # system.mes.inventory.validateInventoryLotRecord
 
-## Description
-
-Validates the specified parameters for an [Inventory Lot Records](../../data-model/inventory-model/inventory-lot-record) object and returns any validation errors.
-This only checks if the inventory lot object can be saved based on the attributes given.
+Validates the specified parameters for an inventory lot record and returns any validation errors. This only checks if the inventory lot record can be saved based on the attributes given, without actually creating or modifying any inventory lot records. Use this function to verify your parameters before executing a save inventory lot records request.
 
 ## Syntax
 

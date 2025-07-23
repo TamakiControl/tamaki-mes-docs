@@ -9,7 +9,7 @@ description: "Validates the specified parameters for a unit of measure."
 ## Description
 
 Validates the specified parameters for a [Units Of Measure](../../data-model/utility-models/unit-of-measure-model/unit-of-measure) record and returns any validation errors.
-This only checks if the unit of measure object can be saved based on the attributes given.
+This only checks if the unit of measure object can be saved based on the attributes given, without actually creating or modifying the unit of measure. Use this function to verify your parameters before executing a save unit of measure operation.
 
 ## Syntax
 

@@ -9,7 +9,7 @@ description: "Validates a production order property based on provided parameters
 ## Description
 
 Validates the specified parameters for a [Production Order Properties](../../data-model/production-order-model/production-order-property) record and returns any validation errors.
-This only checks if the production order property object can be saved based on the attributes given.
+This only checks if the production order property object can be saved based on the attributes given, without actually creating or modifying the production order property. Use this function to verify your parameters before executing a save production order property operation.
 
 ## Syntax
 

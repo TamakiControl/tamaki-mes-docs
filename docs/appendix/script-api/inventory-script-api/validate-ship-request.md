@@ -1,12 +1,12 @@
 ---
 sidebar_position: 38
 title: "validateShipRequest"
-description: "Validates a ship request based on the provided parameters."
+description: "Validates the specified parameters for a ship request and returns any validation errors."
 ---
 
 # system.mes.inventory.validateShipRequest
 
-Validates a ship request based on the provided parameters.
+Validates the specified parameters for a ship request and returns any validation errors. This only checks if the ship request can be processed based on the attributes given, without actually performing the inventory shipping. Use this function to verify your parameters before executing the actual ship operation.
 
 ## Syntax
 

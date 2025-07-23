@@ -1,12 +1,12 @@
 ---
 sidebar_position: 14
 title: "validateChangeStatusRequest"
-description: "Validates a change status request based on the provided parameters."
+description: "Validates the specified parameters for a change status request and returns any validation errors."
 ---
 
 # system.mes.inventory.validateChangeStatusRequest
 
-Validates a change status request based on the provided parameters.
+Validates the specified parameters for a change status request and returns any validation errors. This only checks if the status change request can be processed based on the attributes given, without actually changing the inventory status. Use this function to verify your parameters before executing the actual status change operation.
 
 ## Syntax
 

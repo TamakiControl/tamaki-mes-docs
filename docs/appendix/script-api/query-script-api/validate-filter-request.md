@@ -9,7 +9,7 @@ sidebar_position: 4
 ## Description
 
 Validates the specified parameters for a [Filter Request](./new-filter-request) record and returns any validation errors.
-This only checks if the filter request object can be saved based on the attributes given.
+This only checks if the filter request can be performed based on the attributes given, without actually executing the filter request. Use this function to verify your parameters before executing a filter request operation.
 
 ## Syntax
 
