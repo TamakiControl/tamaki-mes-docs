@@ -110,6 +110,10 @@ Updates the value of a [Location Property Values](../../data-model/location-mode
 
 Retrieves a [Location Property Values](../../data-model/location-model/location-property-value) record by its location ID or path and by its property ID or name. Returns a JSON representation of the location property value. Returns nothing if no location property value is found.
 
+### [`getPropertyValue`](./get-property-value)
+
+Retrieves a [Location Property Values](../../data-model/location-model/location-property-value) record directly by its ID. Returns a JSON representation of the location property value. Returns nothing if no location property value is found.
+
 ### [`getLocationPropertyValueReferences`](./get-location-property-value-references)
 
 Retrieves a list of references to a [Location Property Values](../../data-model/location-model/location-property-value) by its ID. Returns a list of JSON objects.
