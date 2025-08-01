@@ -27,7 +27,7 @@ system.mes.location.getPropertyValue(id)
 Returns a JSON representation of the location property value. Returns nothing if no location property value is found.
 
 | Name         | Type            | Description                                                                                                        |
-| ------------ | --------------- | ------------------------------------------------------------------------------------------------------------------ |
+|--------------|-----------------|--------------------------------------------------------------------------------------------------------------------|
 | `locationId` | `String` (ULID) | The ULID of the location.                                                                                          |
 | `propertyId` | `String` (ULID) | The ULID of the location property.                                                                                 |
 | `dataType`   | `String`        | The data type of the property value. Must be the same as the data type of the property.                            |

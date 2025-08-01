@@ -126,6 +126,18 @@ Validates the specified parameters for a [Location Property Values](../../data-m
 
 Deletes a [Location Property Values](../../data-model/location-model/location-property-value) record by its ID. This cannot delete a location property value with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
 
+### [`getChildren`](./get-children)
+
+Retrieves all direct children of a [Locations](../../data-model/location-model/location) record by its ID or path. Returns a list of JSON objects representing the direct child locations of the specified location.
+
+### [`getAllLocationProperties`](./get-all-location-properties)
+
+Retrieves a list of all [Location Properties](../../data-model/location-model/location-property) records in the system. Returns a list of JSON objects representing all location properties.
+
+### [`getLocationPropertyValues`](./get-location-property-values)
+
+Retrieves a list of all [Location Property Values](../../data-model/location-model/location-property-value) records for a given location. Returns a list of JSON objects representing all property values for the specified location.
+
 ---
 
 Explore each function’s documentation for detailed usage examples and additional information.
