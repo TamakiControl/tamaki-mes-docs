@@ -58,14 +58,6 @@ Validates the specified parameters for a [Locations](../../data-model/location-m
 
 Deletes a [Locations](../../data-model/location-model/location) record by its ID or path. This cannot delete a location with references to it. If successful, an ApiResponse Object is returned with the success bool set True. If the location that's being deleted has a reference, a JSON object is returned with details about the encountered error.
 
-### [`getLocationGroupReferences`](./get-location-group-references)
-
-Retrieves a list of references to a [Location Groups](../../data-model/location-model/location-group) record by its ID. Returns a list of JSON objects.
-
-### [`deleteLocationGroup`](./delete-location-group)
-
-Deletes a [Location Groups](../../data-model/location-model/location-group) record by its ID. This deletes any references in [Location-Location Groups](../../data-model/location-model/location-location-group). If successful, an ApiResponse Object is returned with the success bool set True.
-
 ### [`newProperty`](./new-property)
 
 Generates an empty non-persisted [Location Properties](../../data-model/location-model/location-property) object to provide the structure required by the API to save a new record into the database. This method must be combined with the [saveProperty](./save-property) method in order to persist the record. Returns a JSON representation of the newly created location property object.

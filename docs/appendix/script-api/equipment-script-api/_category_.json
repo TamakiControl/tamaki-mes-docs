@@ -1,8 +1,0 @@
-{
-  "label": "system.mes.equipment",
-  "position": 2,
-  "link": {
-    "type": "generated-index",
-    "description": "Equipment Script API"
-  }
-}

@@ -13,23 +13,11 @@ The **Location** entity represents physical or logical locations within the faci
 be of various types, such as `ENTERPRISE`, `SITE`, `AREA`, or `UNIT`, allowing flexible representation from high-level
 company structures down to specific production units.
 
-### 2. location_groups
-
-**LocationGroup** enables the creation of logical groupings of locations. These groups are useful for organizing
-locations into sets that can be managed collectively, such as grouping all locations in a specific department or
-production area.
-
-### 3. location_location_groups
-
-The **location_location_groups** table is a join table that establishes a many-to-many relationship between the **Location** and
-**LocationGroup** entities. This structure enables locations to be organized into various groups, which can be used for
-categorization, reporting, and managing subsets of locations within the manufacturing environment.
-
-### 4. location_properties
+### 2. location_properties
 
 Defines a property that can apply to multiple locations, such as "Temperature Control" or "Storage Type."
 
-### 5. location_property_values
+### 3. location_property_values
 
 Stores the actual values of properties for specific locations, allowing each location to have unique characteristics
 based on its configuration.
