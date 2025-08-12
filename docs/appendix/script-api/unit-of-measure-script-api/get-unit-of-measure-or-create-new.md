@@ -19,10 +19,10 @@ system.mes.unitOfMeasure.getUnitOfMeasureOrCreateNew(name, symbol)
 
 ## Parameters
 
-| Parameter | Type     | Description                        |
-| --------- | -------- | ---------------------------------- |
-| `name`    | `String` | The name of the unit of measure.   |
-| `symbol`  | `String` | The symbol of the unit of measure. |
+| Parameter | Type     | Nullable | Description                        |
+|-----------|----------|----------|------------------------------------|
+| `name`    | `String` | False    | The name of the unit of measure.   |
+| `symbol`  | `String` | False    | The symbol of the unit of measure. |
 
 ## Returns
 

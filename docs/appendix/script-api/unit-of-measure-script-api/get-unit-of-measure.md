@@ -18,16 +18,16 @@ system.mes.unitOfMeasure.getUnitOfMeasure(idOrName)
 
 ## Parameters
 
-| Parameter  | Type     | Description                                        |
-| ---------- | -------- | -------------------------------------------------- |
-| `idOrName` | `String` | The ID or name of the unit of measure to retrieve. |
+| Parameter  | Type     | Nullable | Description                                        |
+|------------|----------|----------|----------------------------------------------------|
+| `idOrName` | `String` | False    | The ID or name of the unit of measure to retrieve. |
 
 ## Returns
 
 Returns a JSON representation of the unit of measure. Returns nothing if no unit of measure is found.
 
 | Name      | Type            | Description                                             |
-| --------- | --------------- | ------------------------------------------------------- |
+|-----------|-----------------|---------------------------------------------------------|
 | `name`    | `String`        | The name of the unit of measure.                        |
 | `symbol`  | `String`        | The symbol of the unit of measure.                      |
 | `id`      | `String` (ULID) | The ULID of the unit of measure.                        |

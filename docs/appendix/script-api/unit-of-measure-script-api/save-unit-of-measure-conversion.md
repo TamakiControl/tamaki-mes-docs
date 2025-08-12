@@ -18,18 +18,18 @@ system.mes.unitOfMeasure.saveUnitOfMeasureConversion(**uomc_data)
 
 ## Parameters
 
-| Parameter          | Type            | Description                                                                                                      |
-| ------------------ | --------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `fromId`           | `String` (ULID) | The unit of measure the conversion is converting from.                                                           |
-| `toId`             | `String` (ULID) | The unit of measure the conversion is converting to.                                                             |
-| `conversionFactor` | `Double`        | The number used to change the unit of measure from one set to the other.                                         |
-| `materialId`       | `String` (ULID) | The material associated with the unit of measure conversion.                                                     |
-| `id`               | `String` (ULID) | The ULID of the unit of measure conversion (optional, used for updating an existing unit of measure conversion). |
-| `notes`            | `String`        | Notes related to the unit of measure conversion.                                                                 |
-| `enabled`          | `Boolean`       | Indicates if the unit of measure conversion is active and enabled.                                               |
-| `spare1`           | `String`        | Additional field for user-defined context.                                                                       |
-| `spare2`           | `String`        | Additional field for user-defined context.                                                                       |
-| `spare3`           | `String`        | Additional field for user-defined context.                                                                       |
+| Parameter          | Type            | Nullable | Description                                                                                                      |
+|--------------------|-----------------|----------|------------------------------------------------------------------------------------------------------------------|
+| `fromId`           | `String` (ULID) | False    | The unit of measure the conversion is converting from.                                                           |
+| `toId`             | `String` (ULID) | False    | The unit of measure the conversion is converting to.                                                             |
+| `conversionFactor` | `Double`        | False    | The number used to change the unit of measure from one set to the other.                                         |
+| `materialId`       | `String` (ULID) | True     | The material associated with the unit of measure conversion.                                                     |
+| `id`               | `String` (ULID) | True     | The ULID of the unit of measure conversion (optional, used for updating an existing unit of measure conversion). |
+| `notes`            | `String`        | True     | Notes related to the unit of measure conversion.                                                                 |
+| `enabled`          | `Boolean`       | True     | Indicates if the unit of measure conversion is active and enabled. Default value is `true`                       |
+| `spare1`           | `String`        | True     | Additional field for user-defined context.                                                                       |
+| `spare2`           | `String`        | True     | Additional field for user-defined context.                                                                       |
+| `spare3`           | `String`        | True     | Additional field for user-defined context.                                                                       |
 
 ## Returns
 
