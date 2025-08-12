@@ -19,7 +19,7 @@ system.mes.inventory.getInventoryForMaterial(materialIdOrPath)
 ## Parameters
 
 | Parameter          | Type     | Nullable | Description                                                         |
-| ------------------ | -------- | -------- | ------------------------------------------------------------------- |
+|--------------------|----------|----------|---------------------------------------------------------------------|
 | `materialIdOrPath` | `String` | False    | The ID or path of the material associated with the inventory's lot. |
 
 ## Returns
@@ -28,7 +28,7 @@ Returns a list of JSON objects representing all inventories for a specific mater
 Each JSON object has the following properties:
 
 | Name                  | Type            | Description                                                                               |
-| --------------------- | --------------- | ----------------------------------------------------------------------------------------- |
+|-----------------------|-----------------|-------------------------------------------------------------------------------------------|
 | `locationId`          | `String` (ULID) | The ULID of the storage location of the inventory.                                        |
 | `locationPath`        | `String`        | The path of the storage location of the inventory.                                        |
 | `lotId`               | `String` (ULID) | The ULID of the inventory lot.                                                            |
