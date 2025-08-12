@@ -19,10 +19,10 @@ system.mes.material.deletePropertyValueFor(materialPath, propertyName)
 
 ## Parameters
 
-| Parameter      | Type     | Description               |
-| -------------- | -------- | ------------------------- |
-| `materialPath` | `String` | The path of the material. |
-| `propertyName` | `String` | The name of the property. |
+| Parameter      | Type     | Nullable | Description               |
+|----------------|----------|----------|---------------------------|
+| `materialPath` | `String` | False    | The path of the material. |
+| `propertyName` | `String` | False    | The name of the property. |
 
 ## Returns
 
@@ -30,7 +30,7 @@ If successful, an ApiResponse Object is returned with the success bool set True.
 If the property value that's being deleted has a reference, an ApiResponse Object is returned with details about the encountered error.
 
 | Name      | Type      | Description                                                 |
-| --------- | --------- | ----------------------------------------------------------- |
+|-----------|-----------|-------------------------------------------------------------|
 | `success` | `Boolean` | Indicates if the delete was successful.                     |
 | `message` | `String`  | The reason why the deletion was successful or unsuccessful. |
 | `data`    | `String`  | The data associated with the deletion.                      |

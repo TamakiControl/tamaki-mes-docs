@@ -18,17 +18,17 @@ system.mes.material.getValueForMaterialAndProperty(materialIdOrPath, propertyIdO
 
 ## Parameters
 
-| Parameter          | Type     | Description                                                        |
-| ------------------ | -------- | ------------------------------------------------------------------ |
-| `materialIdOrPath` | `String` | The ULID or path of the material.                                  |
-| `propertyIdOrName` | `String` | The ULID or name of the property for which the value is retrieved. |
+| Parameter          | Type     | Nullable | Description                                                        |
+|--------------------|----------|----------|--------------------------------------------------------------------|
+| `materialIdOrPath` | `String` | False    | The ULID or path of the material.                                  |
+| `propertyIdOrName` | `String` | False    | The ULID or name of the property for which the value is retrieved. |
 
 ## Returns
 
 Returns a JSON representation of the material property value. Returns nothing if no material property value is found.
 
 | Name                 | Type            | Description                                                                                                        |
-| -------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------ |
+|----------------------|-----------------|--------------------------------------------------------------------------------------------------------------------|
 | `materialId`         | `String` (ULID) | The ULID of the material.                                                                                          |
 | `materialPropertyId` | `String` (ULID) | The ULID of the material property.                                                                                 |
 | `dataType`           | `String`        | The data type of the property value. Must be the same as the data type of the property.                            |

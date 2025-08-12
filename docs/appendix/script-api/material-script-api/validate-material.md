@@ -19,21 +19,21 @@ system.mes.material.validateMaterial(**material_data)
 
 ## Parameters
 
-| Parameter         | Type            | Description                                                                  |
-| ----------------- | --------------- | ---------------------------------------------------------------------------- |
-| `name`            | `String`        | The name of the material.                                                    |
-| `description`     | `String`        | The description of the material.                                             |
-| `path`            | `String`        | The path to the material.                                                    |
-| `materialClassId` | `String` (ULID) | The ULID of the material class associated with this material.                |
-| `erpId`           | `String` (ULID) | The ULID of the erp associated with this material.                           |
-| `unitOfMeasureId` | `String` (ULID) | The ULID of the unit of measure associated with this material.               |
-| `shelfLifeDays`   | `Integer`       | The shelf life in days of this material.                                     |
-| `id`              | `String` (ULID) | The ULID of the material (optional, used for updating an existing material). |
-| `notes`           | `String`        | Notes related to the material.                                               |
-| `enabled`         | `Boolean`       | Indicates if the material is active and enabled.                             |
-| `spare1`          | `String`        | Additional field for user-defined context.                                   |
-| `spare2`          | `String`        | Additional field for user-defined context.                                   |
-| `spare3`          | `String`        | Additional field for user-defined context.                                   |
+| Parameter         | Type            | Nullable | Description                                                                  |
+|-------------------|-----------------|----------|------------------------------------------------------------------------------|
+| `name`            | `String`        | False    | The name of the material.                                                    |
+| `description`     | `String`        | True     | The description of the material.                                             |
+| `path`            | `String`        | True     | The path to the material.                                                    |
+| `materialClassId` | `String` (ULID) | False    | The ULID of the material class associated with this material.                |
+| `erpId`           | `String` (ULID) | True     | The ULID of the erp associated with this material.                           |
+| `unitOfMeasureId` | `String` (ULID) | False    | The ULID of the unit of measure associated with this material.               |
+| `shelfLifeDays`   | `Integer`       | True     | The shelf life in days of this material.                                     |
+| `id`              | `String` (ULID) | True     | The ULID of the material (optional, used for updating an existing material). |
+| `notes`           | `String`        | True     | Notes related to the material.                                               |
+| `enabled`         | `Boolean`       | True     | Indicates if the material is active and enabled. Default value is `true`.    |
+| `spare1`          | `String`        | True     | Additional field for user-defined context.                                   |
+| `spare2`          | `String`        | True     | Additional field for user-defined context.                                   |
+| `spare3`          | `String`        | True     | Additional field for user-defined context.                                   |
 
 ## Returns
 

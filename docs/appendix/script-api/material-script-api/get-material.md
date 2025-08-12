@@ -18,16 +18,16 @@ system.mes.material.getMaterial(idOrPath)
 
 ## Parameters
 
-| Parameter  | Type     | Description                                 |
-| ---------- | -------- | ------------------------------------------- |
-| `idOrPath` | `String` | The ID or path of the material to retrieve. |
+| Parameter  | Type     | Nullable | Description                                 |
+|------------|----------|----------|---------------------------------------------|
+| `idOrPath` | `String` | False    | The ID or path of the material to retrieve. |
 
 ## Returns
 
 Returns a JSON representation of the material. Returns nothing if no material is found.
 
 | Name              | Type            | Description                                                    |
-| ----------------- | --------------- | -------------------------------------------------------------- |
+|-------------------|-----------------|----------------------------------------------------------------|
 | `name`            | `String`        | The name of the material.                                      |
 | `description`     | `String`        | The description of the material.                               |
 | `path`            | `String`        | The path to the material.                                      |
