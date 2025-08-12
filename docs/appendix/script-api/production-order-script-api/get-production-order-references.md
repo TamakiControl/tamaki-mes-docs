@@ -18,23 +18,23 @@ system.mes.productionOrder.getProductionOrderReferences(productionOrderIdOrName)
 
 ## Parameters
 
-| Parameter                   | Type     | Description                                         |
-|-----------------------------|----------|-----------------------------------------------------|
-| `productionOrderIdOrName`   | `String` | The ID or name of the production order to retrieve. |
+| Parameter                   | Type     | Nullable | Description                                         |
+|-----------------------------|----------|----------|-----------------------------------------------------|
+| `productionOrderIdOrName`   | `String` | False    | The ID or name of the production order to retrieve. |
 
 ## Returns
 
 Returns a list of JSON objects. Each JSON object has the following properties:
 
 | Name         | Type                | Description                                                               |
-| ------------ | ------------------- | ------------------------------------------------------------------------- |
+|--------------|---------------------|---------------------------------------------------------------------------|
 | `tableName`  | `String`            | The name of the table that the reference is in.                           |
 | `references` | `List<JSON Object>` | List of JSON objects corresponding to references to the production order. |
 
 The JSON Objects in references has the following properties:
 
 | Name        | Type            | Description                                                      |
-| ----------- | --------------- | ---------------------------------------------------------------- |
+|-------------|-----------------|------------------------------------------------------------------|
 | `fkColName` | `String`        | The name of the foreign key column.                              |
 | `id`        | `String` (ULID) | The ULID of the object that is referencing the production order. |
 

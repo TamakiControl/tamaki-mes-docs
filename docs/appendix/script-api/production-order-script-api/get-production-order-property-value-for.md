@@ -19,27 +19,27 @@ system.mes.productionOrder.getProductionOrderPropertyValueFor(productionOrderIdO
 
 ## Parameters
 
-| Parameter                  | Type            | Description                                                        |
-|----------------------------| --------------- |--------------------------------------------------------------------|
-| `productionOrderIdOrName`  | `String`      | The ULID or Name of the production order.                          |
-| `propertyIdOrName`         | `String`        | The ULID or name of the property for which the value is retrieved. |
+| Parameter                 | Type     | Nullable | Description                                                        |
+|---------------------------|----------|----------|--------------------------------------------------------------------|
+| `productionOrderIdOrName` | `String` | False    | The ULID or Name of the production order.                          |
+| `propertyIdOrName`        | `String` | False    | The ULID or name of the property for which the value is retrieved. |
 
 ## Returns
 
 Returns a JSON representation of the production order property value. Returns nothing if no production order property value is found.
 
-| Name                    | Type            | Description                                                                                                        |
-| ----------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `productionOrderId`     | `String` (ULID) | The ULID of the production order.                                                                                  |
-| `propertyId`            | `String` (ULID) | The ULID of the production order property.                                                                         |
-| `dataType`              | `String`        | The data type of the property value. Must be the same as the data type of the property.                            |
-| `value`                 | `Mixed`         | The value assigned to the property value if none is provided. The type is mixed as it depends on what dataType is. |
-| `id`                    | `String` (ULID) | The ULID of the production order property value (optional, for updating an existing property).                     |
-| `notes`                 | `String`        | Notes related to the production order property value.                                                              |
-| `enabled`               | `Boolean`       | Indicates if the property value is active and enabled.                                                             |
-| `spare1`                | `String`        | Additional field for user-defined context.                                                                         |
-| `spare2`                | `String`        | Additional field for user-defined context.                                                                         |
-| `spare3`                | `String`        | Additional field for user-defined context.                                                                         |
+| Name                | Type            | Description                                                                                                        |
+|---------------------|-----------------|--------------------------------------------------------------------------------------------------------------------|
+| `productionOrderId` | `String` (ULID) | The ULID of the production order.                                                                                  |
+| `propertyId`        | `String` (ULID) | The ULID of the production order property.                                                                         |
+| `dataType`          | `String`        | The data type of the property value. Must be the same as the data type of the property.                            |
+| `value`             | `Mixed`         | The value assigned to the property value if none is provided. The type is mixed as it depends on what dataType is. |
+| `id`                | `String` (ULID) | The ULID of the production order property value (optional, for updating an existing property).                     |
+| `notes`             | `String`        | Notes related to the production order property value.                                                              |
+| `enabled`           | `Boolean`       | Indicates if the property value is active and enabled.                                                             |
+| `spare1`            | `String`        | Additional field for user-defined context.                                                                         |
+| `spare2`            | `String`        | Additional field for user-defined context.                                                                         |
+| `spare3`            | `String`        | Additional field for user-defined context.                                                                         |
 
 ## Code Examples
 

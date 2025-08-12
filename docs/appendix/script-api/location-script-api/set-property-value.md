@@ -20,7 +20,7 @@ system.mes.location.setPropertyValue(locationIdOrPath, propertyIdOrName, value)
 ## Parameters
 
 | Parameter          | Type     | Nullable | Description                                                                                                                          |
-| ------------------ | -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+|--------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------|
 | `locationIdOrPath` | `String` | False    | The ULID or path of the location.                                                                                                    |
 | `propertyIdOrName` | `String` | False    | The ULID or name of the property for which the value is retrieved.                                                                   |
 | `value`            | `Mixed`  | True     | The value assigned to the property value if none is provided. The type is mixed as it depends on what the data type of the property. |

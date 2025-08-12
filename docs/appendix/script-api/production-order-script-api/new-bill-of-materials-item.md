@@ -17,16 +17,16 @@ system.mes.productionOrder.newBillOfMaterialsItem()
 
 ## Parameters
 
-| Parameter | Type | Description                               |
-| --------- | ---- | ----------------------------------------- |
-| None      | -    | This method does not take any parameters. |
+| Parameter | Type | Nullable | Description                               |
+|-----------|------|----------|-------------------------------------------|
+| None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
 
 Returns a JSON representation of the newly created bill of materials object. The following is a list of keys and default values:
 
 | Key                       | Default Value |
-| ------------------------- | ------------- |
+|---------------------------|---------------|
 | `productId`               | `null`        |
 | `productionOrderId`       | `null`        |
 | `materialName`            | `null`        |

@@ -18,16 +18,16 @@ system.mes.productionOrder.getProductionOrderPropertyValue(id)
 
 ## Parameters
 
-| Parameter | Type            | Description                                                  |
-| --------- | --------------- | ------------------------------------------------------------ |
-| `id`      | `String` (ULID) | The ULID of the production order property value to retrieve. |
+| Parameter | Type            | Nullable | Description                                                  |
+|-----------|-----------------|----------|--------------------------------------------------------------|
+| `id`      | `String` (ULID) | False    | The ULID of the production order property value to retrieve. |
 
 ## Returns
 
 Returns a JSON representation of the production order property value. Returns nothing if no production order property value is found.
 
 | Name                | Type            | Description                                                                                                        |
-| ------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------ |
+|---------------------|-----------------|--------------------------------------------------------------------------------------------------------------------|
 | `productionOrderId` | `String` (ULID) | The ULID of the production order.                                                                                  |
 | `propertyId`        | `String` (ULID) | The ULID of the production order property.                                                                         |
 | `dataType`          | `String`        | The data type of the property value. Must be the same as the data type of the property.                            |

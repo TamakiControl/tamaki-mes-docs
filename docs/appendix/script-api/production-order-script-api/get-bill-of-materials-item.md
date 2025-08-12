@@ -18,16 +18,16 @@ system.mes.productionOrder.getBillOfMaterialsItem(id)
 
 ## Parameters
 
-| Parameter | Type            | Description                                  |
-| --------- | --------------- | -------------------------------------------- |
-| `id`      | `String` (ULID) | The ID of the bill of materials to retrieve. |
+| Parameter | Type            | Nullable | Description                                  |
+|-----------|-----------------|----------|----------------------------------------------|
+| `id`      | `String` (ULID) | False    | The ID of the bill of materials to retrieve. |
 
 ## Returns
 
 Returns a JSON representation of the bill of materials. Returns nothing if no bill of materials is found.
 
 | Name                      | Type            | Description                                                                |
-| ------------------------- | --------------- | -------------------------------------------------------------------------- |
+|---------------------------|-----------------|----------------------------------------------------------------------------|
 | `productId`               | `String` (ULID) | The ULID for the material produce to be produced.                          |
 | `productionOrderId`       | `String` (ULID) | The ULID for the production order associated with this bill of materials.  |
 | `materialName`            | `String`        | The name of the material that is a component of the produce.               |

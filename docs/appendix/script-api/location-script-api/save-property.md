@@ -19,10 +19,10 @@ system.mes.location.saveProperty(**property_data)
 ## Parameters
 
 | Parameter             | Type            | Nullable | Description                                                                                                          |
-| --------------------- | --------------- | -------- | -------------------------------------------------------------------------------------------------------------------- |
+|-----------------------|-----------------|----------|----------------------------------------------------------------------------------------------------------------------|
 | `name`                | `String`        | False    | The name of the location property.                                                                                   |
 | `description`         | `String`        | True     | A description of the location property.                                                                              |
-| `dataType`            | `String`        | False    | The data type of the property (e.g., Integer, String, Float). Default value is `String`.                            |
+| `dataType`            | `String`        | False    | The data type of the property (e.g., Integer, String, Float). Default value is `String`.                             |
 | `lowLimit`            | `Double`        | True     | The minimum value allowed for a numerical property.                                                                  |
 | `highLimit`           | `Double`        | True     | The maximum value allowed for a numerical property.                                                                  |
 | `format`              | `String`        | True     | The format of the property, if applicable.                                                                           |

@@ -19,9 +19,9 @@ system.mes.productionOrder.deleteBillOfMaterialsForOrder(productionOrderIdOrName
 
 ## Parameters
 
-| Parameter                 | Type     | Description                                                               |
-|---------------------------|----------|---------------------------------------------------------------------------|
-| `productionOrderIdOrName` | `String` | The ULID or name of the production order to delete all bill of materials. |
+| Parameter                 | Type     | Nullable | Description                                                               |
+|---------------------------|----------|----------|---------------------------------------------------------------------------|
+| `productionOrderIdOrName` | `String` | False    | The ULID or name of the production order to delete all bill of materials. |
 
 ## Returns
 
@@ -29,7 +29,7 @@ If successful, an ApiResponse Object is returned with the success bool set True.
 If the bill of materials that's being deleted has a reference, an ApiResponse Object is returned with details about the encountered error.
 
 | Name      | Type      | Description                                                 |
-| --------- | --------- | ----------------------------------------------------------- |
+|-----------|-----------|-------------------------------------------------------------|
 | `success` | `Boolean` | Indicates if the delete was successful.                     |
 | `message` | `String`  | The reason why the deletion was successful or unsuccessful. |
 | `data`    | `String`  | The data associated with the deletion.                      |

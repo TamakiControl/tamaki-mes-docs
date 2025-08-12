@@ -19,7 +19,7 @@ system.mes.location.savePropertyValue(**property_value_data)
 ## Parameters
 
 | Parameter    | Type            | Nullable | Description                                                                                                        |
-| ------------ | --------------- | -------- | ------------------------------------------------------------------------------------------------------------------ |
+|--------------|-----------------|----------|--------------------------------------------------------------------------------------------------------------------|
 | `locationId` | `String` (ULID) | False    | The ULID of the location.                                                                                          |
 | `propertyId` | `String` (ULID) | False    | The ULID of the location property.                                                                                 |
 | `dataType`   | `String`        | True     | The data type of the property value. Must be the same as the data type of the property. Default value is `String`. |
