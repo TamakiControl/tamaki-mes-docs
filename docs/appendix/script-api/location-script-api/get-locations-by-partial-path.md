@@ -18,9 +18,9 @@ system.mes.location.getLocationsByPartialPath('partial/path/example')
 
 ## Parameters
 
-| Parameter | Type     | Description                                  |
-| --------- | -------- | -------------------------------------------- |
-| `path`    | `String` | The partial path to search for in locations. |
+| Parameter | Type     | Nullable | Description                                  |
+|-----------|----------|----------|----------------------------------------------|
+| `path`    | `String` | False    | The partial path to search for in locations. |
 
 ## Returns
 

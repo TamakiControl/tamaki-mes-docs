@@ -23,21 +23,23 @@ system.mes.location.getLocationTree(filter)
 ## Parameters
 
 **No Filter:**
-| Parameter | Type | Description |
-|-----------|------|-------------------------------------------|
-| None | - | This method does not take any parameters. |
+
+| Parameter | Type | Nullable | Description                               |
+|-----------|------|----------|-------------------------------------------|
+| None      | -    | -        | This method does not take any parameters. |
 
 **With a Filter:**
-| Parameter | Type | Description |
-|-----------|----------|--------------------------------------------------------------|
-| `name` | `String` | The name or substring of a name of the location to retrieve. |
+
+| Parameter | Type     | Nullable | Description                                                  |
+|-----------|----------|----------|--------------------------------------------------------------|
+| `filter`  | `String` | True     | The name or substring of a name of the location to retrieve. |
 
 ## Returns
 
 Returns a list of JSON objects. Each JSON object has the following properties:
 
 | Name                     | Type                | Description                                                                                                                     |
-| ------------------------ | ------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+|--------------------------|---------------------|---------------------------------------------------------------------------------------------------------------------------------|
 | `children`               | `List<JSON Object>` | The children of the location. The JSON objects in the list have the same properties as the parent.                              |
 | `name`                   | `String`            | The name of the location.                                                                                                       |
 | `description`            | `String`            | A detailed description of the location.                                                                                         |
