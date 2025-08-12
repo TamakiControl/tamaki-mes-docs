@@ -18,16 +18,16 @@ system.mes.operation.getOperation(id)
 
 ## Parameters
 
-| Parameter | Type            | Description                          |
-| --------- | --------------- | ------------------------------------ |
-| `id`      | `String` (ULID) | The ID of the operation to retrieve. |
+| Parameter | Type            | Nullable | Description                          |
+|-----------|-----------------|----------|--------------------------------------|
+| `id`      | `String` (ULID) | False    | The ID of the operation to retrieve. |
 
 ## Returns
 
 Returns a JSON representation of the operation. Returns nothing if no operation is found.
 
 | Name                                  | Type            | Description                                                                                   |
-| ------------------------------------- | --------------- | --------------------------------------------------------------------------------------------- |
+|---------------------------------------|-----------------|-----------------------------------------------------------------------------------------------|
 | `locationId`                          | `String` (ULID) | The ULID of the location associated with the operation.                                       |
 | `locationPath`                        | `String`        | The path of the location associated with the operation.                                       |
 | `name`                                | `String`        | The name of the operation.                                                                    |

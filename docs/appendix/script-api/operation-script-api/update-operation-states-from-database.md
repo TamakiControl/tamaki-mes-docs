@@ -22,17 +22,17 @@ system.mes.operation.updateOperationStatesFromDatabase([operationIds])
 
 ## Parameters
 
-**No Parameter:**
+### Method 1: Update all operations
 
-| Parameter | Type | Description                               |
-| --------- | ---- | ----------------------------------------- |
-| None      | -    | This method does not take any parameters. |
+| Parameter | Type | Nullable | Description                               |
+|-----------|------|----------|-------------------------------------------|
+| None      | -    | -        | This method does not take any parameters. |
 
-**With a Parameter:**
+### Method 2: Update specific operations
 
-| Parameter      | Type                  | Description                    |
-| -------------- | --------------------- | ------------------------------ |
-| `operationIds` | `List<String>` (ULID) | List of IDs of the operations. |
+| Parameter      | Type                  | Nullable | Description                    |
+|----------------|-----------------------|----------|--------------------------------|
+| `operationIds` | `List<String>` (ULID) | True     | List of IDs of the operations. |
 
 ## Returns
 

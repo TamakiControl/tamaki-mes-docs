@@ -16,11 +16,22 @@ header row.
 
 ```python
 system.mes.operation.exportAsCsvBytes()
+system.mes.operation.exportAsCsvBytes(locationIdOrPaths)
 ```
 
 ## Parameters
 
-No parameters.
+### Method 1: Export all operations
+
+| Parameter | Type | Nullable | Description                               |
+|-----------|------|----------|-------------------------------------------|
+| None      | -    | -        | This method does not take any parameters. |
+
+### Method 2: Export operations for specific locations
+
+| Parameter           | Type       | Nullable | Description                                                 |
+|---------------------|------------|----------|-------------------------------------------------------------|
+| `locationIdOrPaths` | `String[]` | False    | The IDs or paths of the locations to export operations for. |
 
 ## Returns
 
@@ -33,5 +44,3 @@ A Byte array (Byte[]) containing the raw byte data of the CSV export.
 csvBytes = system.mes.operation.exportAsCsvBytes()
 system.perspective.download("operations.csv", csvBytes)
 ```
-
-
