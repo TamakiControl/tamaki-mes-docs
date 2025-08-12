@@ -29,9 +29,9 @@ system.mes.inventory.getInventoryByLotAndLocation(lotIdOrName, materialIdOrPath,
 Returns a JSON representation of an inventory with the following properties:
 
 | Name                  | Type            | Description                                                                               |
-|-----------------------|-----------------|-------------------------------------------------------------------------------------------|
-| `storageLocationId`   | `String` (ULID) | The ULID of the storage location of the inventory.                                        |
-| `storageLocationPath` | `String`        | The path of the storage location of the inventory.                                        |
+| --------------------- | --------------- | ----------------------------------------------------------------------------------------- |
+| `locationId`          | `String` (ULID) | The ULID of the storage location of the inventory.                                        |
+| `locationPath`        | `String`        | The path of the storage location of the inventory.                                        |
 | `lotId`               | `String` (ULID) | The ULID of the inventory lot.                                                            |
 | `lotName`             | `String`        | The name of the inventory lot.                                                            |
 | `lotStatus`           | `String`        | The status of the inventory lot (e.g OPEN, AVAILABLE, QA_HOLD, EXPIRED, SHIPPED, CLOSED). |
@@ -58,7 +58,7 @@ Returns a JSON representation of an inventory with the following properties:
 
 ```python
 # Retrieve inventory at a lot and location
-inventory_lot_location = system.mes.inventory.checkLocationHasCapacity('425e29ed-2780-430a-95cf-79431ec0e3e5', 'Bottle/Milk', 'DairyCo')
+inventory_lot_location = system.mes.inventory.getInventoryByLotAndLocation('425e29ed-2780-430a-95cf-79431ec0e3e5', 'Bottle/Milk', 'DairyCo')
 
 # Output the inventory
 print(inventory_lot_location)

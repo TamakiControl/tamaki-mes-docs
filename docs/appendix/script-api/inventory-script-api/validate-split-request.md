@@ -1,12 +1,12 @@
 ---
 sidebar_position: 17
 title: "validateSplitRequest"
-description: "Validates a split request based on the provided parameters."
+description: "Validates the specified parameters for a split request and returns any validation errors."
 ---
 
 # system.mes.inventory.validateSplitRequest
 
-Validates a split request based on the provided parameters.
+Validates the specified parameters for a split request and returns any validation errors. This only checks if the split request can be processed based on the attributes given, without actually performing the inventory splitting. Use this function to verify your parameters before executing the actual split operation.
 
 ## Syntax
 
@@ -25,6 +25,7 @@ system.mes.inventory.validateSplitRequest(**split_request)
 | `sourceLocationIdOrPath`   | `String`        | The ID or path of the location from which inventory will be split.                                                                        |
 | `destinationLotName`       | `String`        | The name of the inventory lot the split inventory goes to.                                                                                |
 | `operationId`              | `String` (ULID) | The ID of the operation splitting this inventory.                                                                                         |
+| `inventoryOperationId`     | `String` (ULID) | The ID of the inventory operation related to this split action.                                                                           |
 | `productionOrderIdOrName`  | `String`        | The ID or name of the production order associated with the split.                                                                         |
 | `materialReasonCodeId`     | `String` (ULID) | The ID of the material reason code to add additional context.                                                                             |
 | `destinationInventoryName` | `String`        | The name of the inventory the split inventory goes to.                                                                                    |

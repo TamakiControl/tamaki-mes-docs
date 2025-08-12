@@ -1,7 +1,7 @@
 ---
 sidebar_position: 21
 title: "validateProperty"
-description: "Validates a location property based on provided parameters."
+description: "Validates the specified parameters for a location property and returns any validation errors."
 ---
 
 # system.mes.location.validateProperty
@@ -9,7 +9,7 @@ description: "Validates a location property based on provided parameters."
 ## Description
 
 Validates the specified parameters for a [Location Properties](../../data-model/location-model/location-property) record and returns any validation errors.
-This only checks if the location property object can be saved based on the attributes given.
+This only checks if the location property object can be saved based on the attributes given, without actually creating or modifying the property. Use this function to verify your parameters before executing a save location properties operation.
 
 ## Syntax
 

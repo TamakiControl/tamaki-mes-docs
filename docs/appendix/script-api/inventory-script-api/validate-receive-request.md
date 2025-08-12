@@ -1,12 +1,12 @@
 ---
 sidebar_position: 35
 title: "validateReceiveRequest"
-description: "Validates a receive request based on the provided parameters."
+description: "Validates the specified parameters for a receive request and returns any validation errors."
 ---
 
 # system.mes.inventory.validateReceiveRequest
 
-Validates a receive request based on the provided parameters.
+Validates the specified parameters for a receive request and returns any validation errors. This only checks if the receive request can be processed based on the attributes given, without actually performing the inventory receipt. Use this function to verify your parameters before executing the actual receive operation.
 
 ## Syntax
 
@@ -26,6 +26,7 @@ system.mes.inventory.validateReceiveRequest(**receive_request)
 | `destinationLocationIdOrPath` | `String`        | The ID or path of the location the received inventory goes to.                                                                            |
 | `createIfNotExists`           | `Boolean`       | Indicates whether the system should create the lot if it does not exist.                                                                  |
 | `operationId`                 | `String` (ULID) | The ID of the operation receiving this inventory.                                                                                         |
+| `inventoryOperationId`        | `String` (ULID) | The ID of the inventory operation related to this receive action.                                                                         |
 | `productionOrderIdOrName`     | `String`        | The ID or name of the production order associated with the receipt.                                                                       |
 | `materialReasonCodeId`        | `String` (ULID) | The ID of the material reason code to add additional context.                                                                             |
 | `startDate`                   | `Instant`       | The start date and time of the receipt.                                                                                                   |

@@ -1,12 +1,12 @@
 ---
 sidebar_position: 32
 title: "validateEditInventoryQuantityRequest"
-description: "Validates an edit inventory quantity request based on the provided parameters."
+description: "Validates the specified parameters for an edit inventory quantity request and returns any validation errors."
 ---
 
 # system.mes.inventory.validateEditInventoryQuantityRequest
 
-Validates an edit inventory quantity request based on the provided parameters.
+Validates the specified parameters for an edit inventory quantity request and returns any validation errors. This only checks if the quantity edit request can be processed based on the attributes given, without actually modifying the inventory quantity. Use this function to verify your parameters before executing the actual edit operation.
 
 ## Syntax
 
@@ -25,6 +25,7 @@ system.mes.inventory.validateEditInventoryQuantityRequest(**edit_inventory_quant
 | `materialIdOrPath`       | `String`        | The ID or path of the material whose quantity is being edited.                                                                            |
 | `sourceLocationIdOrPath` | `String`        | The ID or path of the location from the inventory quantity is being edited.                                                               |
 | `operationId`            | `String` (ULID) | The ID of the operation editing the quantity of this inventory.                                                                           |
+| `inventoryOperationId`   | `String` (ULID) | The ID of the inventory operation related to this edit inventory quantity action.                                                         |
 | `notes`                  | `String`        | Notes related to the edit inventory quantity request.                                                                                     |
 | `spare1`                 | `String`        | Additional field for user-defined context.                                                                                                |
 | `spare2`                 | `String`        | Additional field for user-defined context.                                                                                                |

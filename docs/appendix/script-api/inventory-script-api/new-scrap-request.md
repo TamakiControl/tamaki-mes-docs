@@ -34,6 +34,7 @@ Returns a JSON representation of the newly created Scrap Request object. The fol
 | `materialIdOrPath`        | `null`        |
 | `sourceLocationIdOrPath`  | `null`        |
 | `operationId`             | `null`        |
+| `inventoryOperationId`    | `null`        |
 | `productionOrderIdOrName` | `null`        |
 | `materialReasonCodeId`    | `null`        |
 | `startDate`               | Current Time  |

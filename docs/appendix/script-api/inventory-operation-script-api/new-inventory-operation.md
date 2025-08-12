@@ -56,7 +56,7 @@ Returns a JSON representation of the newly created Inventory Operation object. T
 | `inventoryNameExpression`         | `null`          |
 | `quantitySource`                  | `EXPRESSION`    |
 | `quantityExpression`              | `null`          |
-| `quantityCalcType`                | `DIRECT`        |
+| `quantityCalcType`                | `DELTA`         |
 | `quantityOverflowValue`           | `null`          |
 | `unitOfMeasureId`                 | `null`          |
 | `unitOfMeasureName`               | `null`          |

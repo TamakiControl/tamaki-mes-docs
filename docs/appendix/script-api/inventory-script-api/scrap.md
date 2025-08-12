@@ -25,7 +25,7 @@ system.mes.inventory.scrap(**scrap_request)
 | `materialIdOrPath`        | `String`        | False    | The ID or path of the material being scrapped.                                                                                            |
 | `sourceLocationIdOrPath`  | `String`        | False    | The ID or path of the location from which inventory will be scrapped.                                                                     |
 | `operationId`             | `String` (ULID) | True     | The ID of the operation scrapping this inventory.                                                                                         |
-| `inventoryOperationId`    | `String`        | True     | The ID of the inventory operation related to this scrap action.                                                                           |
+| `inventoryOperationId`    | `String` (ULID) | True     | The ID of the inventory operation related to this scrap action.                                                                           |
 | `productionOrderIdOrName` | `String`        | True     | The ID or name of the production order associated with the scrap.                                                                         |
 | `materialReasonCodeId`    | `String` (ULID) | True     | The ID of the material reason code to add additional context.                                                                             |
 | `startDate`               | `Instant`       | False    | The start date and time of the scrap. Default value is `Current Instant`.                                                                 |

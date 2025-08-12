@@ -37,6 +37,7 @@ Returns a JSON representation of the newly created Produce Request object. The f
 | `sourceLocationIdOrPath`        | `null`        |
 | `createIfNotExists`             | `false`       |
 | `operationId`                   | `null`        |
+| `inventoryOperationId`          | `null`        |
 | `productionOrderIdOrName`       | `null`        |
 | `incrementProductionOrderCount` | `false`       |
 | `materialReasonCodeId`          | `null`        |

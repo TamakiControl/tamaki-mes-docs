@@ -1,12 +1,12 @@
 ---
 sidebar_position: 26
 title: "validateReturnRequest"
-description: "Validates a return request based on the provided parameters."
+description: "Validates the specified parameters for a return request and returns any validation errors."
 ---
 
 # system.mes.inventory.validateReturnRequest
 
-Validates a return request based on the provided parameters.
+Validates the specified parameters for a return request and returns any validation errors. This only checks if the return request can be processed based on the attributes given, without actually performing the inventory return. Use this function to verify your parameters before executing the actual return operation.
 
 ## Syntax
 
@@ -25,6 +25,7 @@ system.mes.inventory.validateReturnRequest(**return_request)
 | `materialIdOrPath`        | `String`        | The ID or path of the material being returned.                                                                                            |
 | `sourceLocationIdOrPath`  | `String`        | The ID or path of the location from which inventory will be returned.                                                                     |
 | `operationId`             | `String` (ULID) | The ID of the operation returning this inventory.                                                                                         |
+| `inventoryOperationId`    | `String` (ULID) | The ID of the inventory operation related to this return action.                                                                          |
 | `productionOrderIdOrName` | `String`        | The ID or name of the production order associated with the return.                                                                        |
 | `materialReasonCodeId`    | `String` (ULID) | The ID of the material reason code to add additional context.                                                                             |
 | `startDate`               | `Instant`       | The start date and time of the return.                                                                                                    |

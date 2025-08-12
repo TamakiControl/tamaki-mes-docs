@@ -25,7 +25,7 @@ system.mes.inventory.returnInventory(**return_request)
 | `materialIdOrPath`        | `String`        | False    | The ID or path of the material being returned.                                                                                            |
 | `sourceLocationIdOrPath`  | `String`        | False    | The ID or path of the location from which inventory will be returned.                                                                     |
 | `operationId`             | `String` (ULID) | True     | The ID of the operation returning this inventory.                                                                                         |
-| `inventoryOperationId`    | `String`        | True     | The ID of the inventory operation related to this return.                                                                                 |
+| `inventoryOperationId`    | `String` (ULID) | True     | The ID of the inventory operation related to this return action.                                                                          |
 | `productionOrderIdOrName` | `String`        | True     | The ID or name of the production order associated with the return.                                                                        |
 | `materialReasonCodeId`    | `String` (ULID) | True     | The ID of the material reason code to add additional context.                                                                             |
 | `startDate`               | `Instant`       | False    | The start date and time of the return. Default value is `Current Instant`.                                                                |

@@ -34,6 +34,7 @@ Returns a JSON representation of the newly created Split Request object. The fol
 | `sourceLocationIdOrPath`   | `null`        |
 | `destinationLotName`       | `null`        |
 | `operationId`              | `null`        |
+| `inventoryOperationId`     | `null`        |
 | `productionOrderIdOrName`  | `null`        |
 | `materialReasonCodeId`     | `null`        |
 | `destinationInventoryName` | `null`        |

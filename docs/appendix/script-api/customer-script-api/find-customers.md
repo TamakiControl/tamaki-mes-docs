@@ -15,7 +15,7 @@ Retrieves [Customers](../../data-model/production-order-model/production-order-c
 This scripting function has no client permission restrictions.
 
 ## Syntax
-Using Python keyword arguments, a [Query Request](../query-script-api/query-request.md) can be passed to the `findCustomers` function
+Using Python keyword arguments, a [Query Request](../query-script-api/new-query-request.md) can be passed to the `findCustomers` function
 without specifying each parameter individually. Please refer to the Query Request documentation for a list of parameters.
 ```python
 system.mes.customer.findCustomers(**queryRequest)
@@ -51,7 +51,7 @@ queryRequest["pageSize"] = 10
 queryRequest["pageIndex"] = 0
 
 queryRequest["sortFields"] = ["name"]
-queryRequest["sortDirection"] = "Ascending"
+queryRequest["sortDirections"] = ["Ascending"]
 
 filterRequest = system.mes.query.newFilterRequest()  
 filterRequest["field"] = "createdDate"  

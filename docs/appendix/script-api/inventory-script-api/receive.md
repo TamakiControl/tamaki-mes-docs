@@ -26,7 +26,7 @@ system.mes.inventory.receive(**receive_request)
 | `destinationLocationIdOrPath` | `String`        | False    | The ID or path of the location the received inventory goes to.                                                                            |
 | `createIfNotExists`           | `Boolean`       | False    | Indicates whether the system should create the lot if it does not exist. Default value is `false`.                                        |
 | `operationId`                 | `String` (ULID) | True     | The ID of the operation receiving this inventory.                                                                                         |
-| `inventoryOperationId`        | `String`        | True     | The ID of the inventory operation related to this receipt.                                                                                |
+| `inventoryOperationId`        | `String` (ULID) | True     | The ID of the inventory operation related to this receive action.                                                                         |
 | `productionOrderIdOrName`     | `String`        | True     | The ID or name of the production order associated with the receipt.                                                                       |
 | `materialReasonCodeId`        | `String` (ULID) | True     | The ID of the material reason code to add additional context.                                                                             |
 | `startDate`                   | `Instant`       | False    | The start date and time of the receipt. Default value is `Current Instant`.                                                               |

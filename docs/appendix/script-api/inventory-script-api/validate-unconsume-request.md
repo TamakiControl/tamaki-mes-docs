@@ -1,12 +1,12 @@
 ---
 sidebar_position: 8
 title: "validateUnconsumeRequest"
-description: "Validates an unconsume request based on the provided parameters."
+description: "Validates the specified parameters for an unconsume request and returns any validation errors."
 ---
 
 # system.mes.inventory.validateUnconsumeRequest
 
-Validates an unconsume request based on the provided parameters.
+Validates the specified parameters for an unconsume request and returns any validation errors. This only checks if the unconsume request can be processed based on the attributes given, without actually performing the unconsumption. Use this function to verify your parameters before executing the actual unconsume operation.
 
 ## Syntax
 
@@ -28,6 +28,7 @@ system.mes.inventory.validateUnconsumeRequest(**unconsume_request)
 | `destinationLocationIdOrPath` | `String`        | The ID or path of the location the unconsumed inventory goes to.                                                                          |
 | `createIfNotExists`           | `Boolean`       | Indicates whether the system should create the lot if it does not exist.                                                                  |
 | `operationId`                 | `String` (ULID) | The ID of the operation unconsuming this inventory.                                                                                       |
+| `inventoryOperationId`        | `String` (ULID) | The ID of the inventory operation related to this unconsume action.                                                                       |
 | `productionOrderIdOrName`     | `String`        | The ID or name of the production order associated with the unconsumption.                                                                 |
 | `materialReasonCodeId`        | `String` (ULID) | The ID of the material reason code to add additional context.                                                                             |
 | `startDate`                   | `Instant`       | The start date and time of the unconsumption.                                                                                             |

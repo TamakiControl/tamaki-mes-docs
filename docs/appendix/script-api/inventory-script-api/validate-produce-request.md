@@ -1,12 +1,12 @@
 ---
 sidebar_position: 11
 title: "validateProduceRequest"
-description: "Validates a produce request based on the provided parameters."
+description: "Validates the specified parameters for a produce request and returns any validation errors."
 ---
 
 # system.mes.inventory.validateProduceRequest
 
-Validates a produce request based on the provided parameters.
+Validates the specified parameters for a produce request and returns any validation errors. This only checks if the produce request can be processed based on the attributes given, without actually performing the production. Use this function to verify your parameters before executing the actual produce operation.
 
 ## Syntax
 
@@ -28,6 +28,7 @@ system.mes.inventory.validateProduceRequest(**produce_request)
 | `sourceLocationIdOrPath`        | `String`        | The ID or path of the location from which inventory will be produced.                                                                     |
 | `createIfNotExists`             | `Boolean`       | Indicates whether the system should create the lot if it does not exist.                                                                  |
 | `operationId`                   | `String` (ULID) | The ID of the operation producing this inventory.                                                                                         |
+| `inventoryOperationId`          | `String` (ULID) | The ID of the inventory operation related to this produce action.                                                                         |
 | `productionOrderIdOrName`       | `String`        | The ID or name of the production order associated with the production.                                                                    |
 | `incrementProductionOrderCount` | `Boolean`       | Indicates whether to increment the production order count.                                                                                |
 | `materialReasonCodeId`          | `String` (ULID) | The ID of the material reason code to add additional context.                                                                             |

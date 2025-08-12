@@ -34,6 +34,7 @@ Returns a JSON representation of the newly created Return Request object. The fo
 | `materialIdOrPath`        | `null`        |
 | `sourceLocationIdOrPath`  | `null`        |
 | `operationId`             | `null`        |
+| `inventoryOperationId`    | `null`        |
 | `productionOrderIdOrName` | `null`        |
 | `materialReasonCodeId`    | `null`        |
 | `startDate`               | Current Time  |

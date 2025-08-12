@@ -1,12 +1,12 @@
 ---
 sidebar_position: 23
 title: "validateScrapRequest"
-description: "Validates a scrap request based on the provided parameters."
+description: "Validates the specified parameters for a scrap request and returns any validation errors."
 ---
 
 # system.mes.inventory.validateScrapRequest
 
-Validates a scrap request based on the provided parameters.
+Validates the specified parameters for a scrap request and returns any validation errors. This only checks if the scrap request can be processed based on the attributes given, without actually performing the inventory scrapping. Use this function to verify your parameters before executing the actual scrap operation.
 
 ## Syntax
 
@@ -25,6 +25,7 @@ system.mes.inventory.validateScrapRequest(**scrap_request)
 | `materialIdOrPath`        | `String`        | The ID or path of the material being scrapped.                                                                                            |
 | `sourceLocationIdOrPath`  | `String`        | The ID or path of the location from which inventory will be scrapped.                                                                     |
 | `operationId`             | `String` (ULID) | The ID of the operation scrapping this inventory.                                                                                         |
+| `inventoryOperationId`    | `String` (ULID) | The ID of the inventory operation related to this scrap action.                                                                           |
 | `productionOrderIdOrName` | `String`        | The ID or name of the production order associated with the scrap.                                                                         |
 | `materialReasonCodeId`    | `String` (ULID) | The ID of the material reason code to add additional context.                                                                             |
 | `startDate`               | `Instant`       | The start date and time of the scrap.                                                                                                     |

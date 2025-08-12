@@ -50,7 +50,7 @@ system.mes.inventory.operation.saveInventoryOperation(**inventory_operation_data
 | `quantitySource`                  | `String`        | False    | The source of the quantity of an inventory operation. Default value is `EXPRESSION`.                                             |
 | `quantityExpression`              | `String`        | True     | The Ignition expression to specify the quantity.                                                                                 |
 | `quantityCalcType`                | `String`        | False    | The calculation type for quantity. Only used if quantitySource is `EXPRESSION`. Default value is `DELTA`.                        |
-| `quantityOverflowValue`           | `String`        | True     | The overflow value for the quantity. Only used if quantitySource is EXPRESSION and the quantityCalcType is RISING.               |
+| `quantityOverflowValue`           | `String`        | True     | The overflow value for the quantity. Only used if quantitySource is EXPRESSION and the quantityCalcType is DELTA.                |
 | `unitOfMeasureId`                 | `String` (ULID) | True     | The ULID of the unit of measure associated with the inventory operation.                                                         |
 | `unitOfMeasureName`               | `String`        | True     | The name of the unit of measure associated with the inventory operation.                                                         |
 | `unitOfMeasureResolutionStrategy` | `String`        | False    | The source of the unit of measure associated with the inventory operation. Default value is `STATIC`.                            |

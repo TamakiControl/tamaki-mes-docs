@@ -9,7 +9,7 @@ description: "Validates the specified parameters for a material reason code."
 ## Description
 
 Validates the specified parameters for a [Material Reason Codes](../../data-model/material-model/material-reason-code) record and returns any validation errors.
-This only checks if the material reason code object can be saved based on the attributes given.
+This only checks if the material reason code object can be saved based on the attributes given, without actually creating or modifying the material reason code. Use this function to verify your parameters before executing a save material reason code operation.
 
 ## Syntax
 

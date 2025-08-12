@@ -35,6 +35,7 @@ Returns a JSON representation of the newly created Receive Request object. The f
 | `destinationLocationIdOrPath` | `null`        |
 | `createIfNotExists`           | `false`       |
 | `operationId`                 | `null`        |
+| `inventoryOperationId`        | `null`        |
 | `productionOrderIdOrName`     | `null`        |
 | `materialReasonCodeId`        | `null`        |
 | `startDate`                   | Current Time  |

@@ -25,7 +25,7 @@ system.mes.inventory.split(**split_request)
 | `sourceLocationIdOrPath`   | `String`        | False    | The ID or path of the location from which inventory will be split.                                                                        |
 | `destinationLotName`       | `String`        | False    | The name of the inventory lot the split inventory goes to.                                                                                |
 | `operationId`              | `String` (ULID) | True     | The ID of the operation splitting this inventory.                                                                                         |
-| `inventoryOperationId`     | `String`        | True     | The ID of the inventory operation related to this split.                                                                                  |
+| `inventoryOperationId`     | `String` (ULID) | True     | The ID of the inventory operation related to this split action.                                                                           |
 | `productionOrderIdOrName`  | `String`        | True     | The ID or name of the production order associated with the split.                                                                         |
 | `materialReasonCodeId`     | `String` (ULID) | True     | The ID of the material reason code to add additional context.                                                                             |
 | `destinationInventoryName` | `String`        | True     | The name of the inventory the split inventory goes to.                                                                                    |

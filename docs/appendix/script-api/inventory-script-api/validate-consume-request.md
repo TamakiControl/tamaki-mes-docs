@@ -1,12 +1,12 @@
 ---
 sidebar_position: 5
 title: "validateConsumeRequest"
-description: "Validates a consume request based on the provided parameters."
+description: "Validates the specified parameters for a consume request and returns any validation errors."
 ---
 
 # system.mes.inventory.validateConsumeRequest
 
-Validates a consume request based on the provided parameters.
+Validates the specified parameters for a consume request and returns any validation errors. This only checks if the consume request can be processed based on the attributes given, without actually performing the consumption. Use this function to verify your parameters before executing the actual consume operation.
 
 ## Syntax
 
@@ -28,6 +28,7 @@ system.mes.inventory.validateConsumeRequest(**consume_request)
 | `destinationLocationIdOrPath` | `String`        | The ID or path of the location the consumed inventory goes to.                                                                            |
 | `createIfNotExists`           | `Boolean`       | Indicates whether the system should create the lot if it does not exist.                                                                  |
 | `operationId`                 | `String` (ULID) | The ID of the operation consuming this inventory.                                                                                         |
+| `inventoryOperationId`        | `String` (ULID) | The ID of the inventory operation related to this consume action.                                                                         |
 | `productionOrderIdOrName`     | `String`        | The ID or name of the production order associated with the consumption.                                                                   |
 | `materialReasonCodeId`        | `String` (ULID) | The ID of the material reason code to add additional context.                                                                             |
 | `startDate`                   | `Instant`       | The start date and time of the consumption.                                                                                               |

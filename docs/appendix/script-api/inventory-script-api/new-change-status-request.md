@@ -25,16 +25,17 @@ system.mes.inventory.newChangeStatusRequest()
 
 Returns a JSON representation of the newly created Change Status Request object. The following is a list of keys and default values:
 
-| Key           | Default Value   |
-|---------------|-----------------|
-| `type`        | `STATUS_CHANGE` |
-| `lotId`       | `null`          |
-| `newStatus`   | `null`          |
-| `operationId` | `null`          |
-| `notes`       | `null`          |
-| `spare1`      | `null`          |
-| `spare2`      | `null`          |
-| `spare3`      | `null`          |
+| Key                     | Default Value   |
+|-------------------------|-----------------|
+| `type`                  | `STATUS_CHANGE` |
+| `lotId`                 | `null`          |
+| `newStatus`             | `null`          |
+| `operationId`           | `null`          |
+| `inventoryOperationId`  | `null`          |
+| `notes`                 | `null`          |
+| `spare1`                | `null`          |
+| `spare2`                | `null`          |
+| `spare3`                | `null`          |
 
 ## Code Examples
 

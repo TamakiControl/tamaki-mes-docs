@@ -24,9 +24,9 @@ system.mes.inventory.unconsume(**unconsume_request)
 | `lotIdOrName`                 | `String`        | True     | The ID or name of the inventory lot that will be unconsuming the given lot.                                                               |
 | `materialIdOrPath`            | `String`        | False    | The ID or path of the material being unconsumed.                                                                                          |
 | `destinationLocationIdOrPath` | `String`        | False    | The ID or path of the location the unconsumed inventory goes to.                                                                          |
-| `sourceLocationIdOrPath`      | `String`        | True     | The ID or path of the location where the inventory is being unconsumed from.                                                              |
+| `sourceLocationIdOrPath`      | `String`        | True     | The ID or path of the location where the inventory is being unconsumed from. TODO                                                         |
 | `operationId`                 | `String` (ULID) | True     | The ID of the operation unconsuming this inventory.                                                                                       |
-| `inventoryOperationId`        | `String`        | True     | The ID of the inventory operation related to this un-consumption.                                                                         |
+| `inventoryOperationId`        | `String` (ULID) | True     | The ID of the inventory operation related to this unconsume action.                                                                       |
 | `productionOrderIdOrName`     | `String`        | True     | The ID or name of the production order associated with the unconsumption.                                                                 |
 | `materialReasonCodeId`        | `String` (ULID) | True     | The ID of the material reason code to add additional context.                                                                             |
 | `startDate`                   | `Instant`       | False    | The start date and time of the unconsumption. Default value is `Current Instant`.                                                         |

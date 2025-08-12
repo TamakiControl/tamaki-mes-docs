@@ -28,6 +28,7 @@ system.mes.inventory.produce(**produce_request)
 | `sourceLocationIdOrPath`        | `String`        | True     | The ID or path of the location from which inventory will be produced.                                                                     |
 | `createIfNotExists`             | `Boolean`       | False    | Indicates whether the system should create the lot if it does not exist. Default value is `false`.                                        |
 | `operationId`                   | `String` (ULID) | True     | The ID of the operation producing this inventory.                                                                                         |
+| `inventoryOperationId`          | `String` (ULID) | TBD      | The ID of the inventory operation related to this produce action.                                                                         |
 | `productionOrderIdOrName`       | `String`        | True     | The ID or name of the production order associated with the production.                                                                    |
 | `incrementProductionOrderCount` | `Boolean`       | False    | Indicates whether to increment the production order count. Default value is `false`.                                                      |
 | `materialReasonCodeId`          | `String` (ULID) | True     | The ID of the material reason code to add additional context.                                                                             |

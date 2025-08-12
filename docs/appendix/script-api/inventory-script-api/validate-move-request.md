@@ -1,12 +1,12 @@
 ---
 sidebar_position: 14
 title: "validateMoveRequest"
-description: "Validates a move request based on the provided parameters."
+description: "Validates the specified parameters for a move request and returns any validation errors."
 ---
 
 # system.mes.inventory.validateMoveRequest
 
-Validates a move request based on the provided parameters.
+Validates the specified parameters for a move request and returns any validation errors. This only checks if the move request can be processed based on the attributes given, without actually performing the inventory move. Use this function to verify your parameters before executing the actual move operation.
 
 ## Syntax
 
@@ -26,6 +26,7 @@ system.mes.inventory.validateMoveRequest(**move_request)
 | `sourceLocationIdOrPath`      | `String`        | The ID or path of the location from which inventory will be moved.                                                                        |
 | `destinationLocationIdOrPath` | `String`        | The ID or path of the location the moved inventory goes to.                                                                               |
 | `operationId`                 | `String` (ULID) | The ID of the operation moving this inventory.                                                                                            |
+| `inventoryOperationId`        | `String` (ULID) | The ID of the inventory operation related to this move action.                                                                            |
 | `productionOrderIdOrName`     | `String`        | The ID or name of the production order associated with the move.                                                                          |
 | `materialReasonCodeId`        | `String` (ULID) | The ID of the material reason code to add additional context.                                                                             |
 | `startDate`                   | `Instant`       | The start date and time of the move.                                                                                                      |
