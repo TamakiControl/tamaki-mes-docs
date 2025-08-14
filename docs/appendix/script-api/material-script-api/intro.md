@@ -213,6 +213,10 @@ Retrieves a [Material Reason Codes](../../data-model/material-model/material-rea
 
 Retrieves a list of all [Material Reason Codes](../../data-model/material-model/material-reason-code) records in the system. Returns a list of JSON objects representing all material reason codes.
 
+### [`findMaterialReasonCodes`](./find-material-reason-codes)
+
+Retrieves [Material Reason Codes](../../data-model/material-model/material-reason-code) records based on the specified pagination, sort, and column constraint parameters. Returns a Query Result object.
+
 ### [`validateMaterialReasonCode`](./validate-material-reason-code)
 
 Validates the specified parameters for a [Material Reason Codes](../../data-model/material-model/material-reason-code) record and returns any validation errors.
