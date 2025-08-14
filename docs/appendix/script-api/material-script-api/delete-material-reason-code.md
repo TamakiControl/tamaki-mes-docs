@@ -1,5 +1,5 @@
 ---
-sidebar_position: 59
+sidebar_position: 60
 title: "deleteMaterialReasonCode"
 description: "Deletes the material reason code with the given ID."
 ---
