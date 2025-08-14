@@ -19,9 +19,9 @@ system.mes.inventory.executeInventoryActions(**{'requests':[records]})
 
 ## Parameters
 
-| Parameter  | Type             | Description                                                                             |
-| ---------- | ---------------- | --------------------------------------------------------------------------------------- |
-| `requests` | `List<Requests>` | List of inventory actions to be executed. They would be in the format of a new request. |
+| Parameter  | Type             | Nullable | Description                                                                             |
+|------------|------------------|----------|-----------------------------------------------------------------------------------------|
+| `requests` | `List<Requests>` | False    | List of inventory actions to be executed. They would be in the format of a new request. |
 
 ## Returns
 

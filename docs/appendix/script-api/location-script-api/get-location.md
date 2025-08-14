@@ -18,9 +18,9 @@ system.mes.location.getLocation(idOrPath)
 
 ## Parameters
 
-| Parameter  | Type     | Description                                 |
-| ---------- | -------- | ------------------------------------------- |
-| `idOrPath` | `String` | The ID or path of the location to retrieve. |
+| Parameter  | Type     | Nullable | Description                                 |
+|------------|----------|----------|---------------------------------------------|
+| `idOrPath` | `String` | False    | The ID or path of the location to retrieve. |
 
 ## Returns
 

@@ -17,16 +17,16 @@ system.mes.inventory.newLot()
 
 ## Parameters
 
-| Parameter | Type | Description                               |
-| --------- | ---- | ----------------------------------------- |
-| None      | -    | This method does not take any parameters. |
+| Parameter | Type | Nullable | Description                               |
+|-----------|------|----------|-------------------------------------------|
+| None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
 
 Returns a JSON representation of the newly created Inventory Lot object. The following is a list of keys and default values:
 
 | Key               | Default Value |
-| ----------------- | ------------- |
+|-------------------|---------------|
 | `name`            | `null`        |
 | `materialId`      | `null`        |
 | `status`          | `OPEN`        |

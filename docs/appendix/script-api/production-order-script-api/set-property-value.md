@@ -19,11 +19,11 @@ system.mes.productionOrder.setPropertyValue(productionOrderIdOrName, propertyIdO
 
 ## Parameters
 
-| Parameter                 | Type      | Description                                                                                                                          |
-|---------------------------|-----------|--------------------------------------------------------------------------------------------------------------------------------------|
-| `productionOrderIdOrName` | `String`  | The ULID or name of the production order.                                                                                            |
-| `propertyIdOrName`        | `String`  | The ULID or name of the property for which the value is retrieved.                                                                   |
-| `value`                   | `Mixed`   | The value assigned to the property value if none is provided. The type is mixed as it depends on what the data type of the property. |
+| Parameter                 | Type      | Nullable | Description                                                                                                                          |
+|---------------------------|-----------|----------|--------------------------------------------------------------------------------------------------------------------------------------|
+| `productionOrderIdOrName` | `String`  | False    | The ULID or name of the production order.                                                                                            |
+| `propertyIdOrName`        | `String`  | False    | The ULID or name of the property for which the value is retrieved.                                                                   |
+| `value`                   | `Mixed`   | False    | The value assigned to the property value if none is provided. The type is mixed as it depends on what the data type of the property. |
 
 ## Returns
 

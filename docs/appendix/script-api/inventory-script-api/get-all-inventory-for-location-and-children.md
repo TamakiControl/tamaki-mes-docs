@@ -18,13 +18,13 @@ system.mes.inventory.getAllInventoryForLocationAndChildren(locationIdOrPath)
 
 ## Parameters
 
-| Parameter          | Type     | Description                                                   |
-| ------------------ | -------- | ------------------------------------------------------------- |
-| `locationIdOrPath` | `String` | The ID or path of the location associated with the inventory. |
+| Parameter          | Type     | Nullable | Description                                                   |
+|--------------------|----------|----------|---------------------------------------------------------------|
+| `locationIdOrPath` | `String` | True     | The ID or path of the location associated with the inventory. |
 
 ## Returns
 
-Returns a list of JSON objects representing all inventories at the given location and its children.
+Returns a list of JSON objects representing all inventories at the given location and its children. if locationIdOrPath is null, it will return all inventories in the system.
 
 ## Example Usage
 

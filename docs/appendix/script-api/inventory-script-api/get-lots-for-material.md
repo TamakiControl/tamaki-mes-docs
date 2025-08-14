@@ -18,9 +18,9 @@ system.mes.inventory.getLotsForMaterial(materialIdOrPath)
 
 ## Parameters
 
-| Parameter          | Type     | Description                                                         |
-| ------------------ | -------- | ------------------------------------------------------------------- |
-| `materialIdOrPath` | `String` | The ID or path of the material associated with the inventory's lot. |
+| Parameter          | Type     | Nullable | Description                                                         |
+|--------------------|----------|----------|---------------------------------------------------------------------|
+| `materialIdOrPath` | `String` | False    | The ID or path of the material associated with the inventory's lot. |
 
 ## Returns
 

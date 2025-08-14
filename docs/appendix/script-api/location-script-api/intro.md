@@ -102,6 +102,10 @@ Updates the value of a [Location Property Values](../../data-model/location-mode
 
 Retrieves a [Location Property Values](../../data-model/location-model/location-property-value) record by its location ID or path and by its property ID or name. Returns a JSON representation of the location property value. Returns nothing if no location property value is found.
 
+### [`getPropertyValue`](./get-property-value)
+
+Retrieves a [Location Property Values](../../data-model/location-model/location-property-value) record directly by its ID. Returns a JSON representation of the location property value. Returns nothing if no location property value is found.
+
 ### [`getLocationPropertyValueReferences`](./get-location-property-value-references)
 
 Retrieves a list of references to a [Location Property Values](../../data-model/location-model/location-property-value) by its ID. Returns a list of JSON objects.
@@ -113,6 +117,18 @@ Validates the specified parameters for a [Location Property Values](../../data-m
 ### [`deletePropertyValue`](./delete-property-value)
 
 Deletes a [Location Property Values](../../data-model/location-model/location-property-value) record by its ID. This cannot delete a location property value with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
+
+### [`getChildren`](./get-children)
+
+Retrieves all direct children of a [Locations](../../data-model/location-model/location) record by its ID or path. Returns a list of JSON objects representing the direct child locations of the specified location.
+
+### [`getAllLocationProperties`](./get-all-location-properties)
+
+Retrieves a list of all [Location Properties](../../data-model/location-model/location-property) records in the system. Returns a list of JSON objects representing all location properties.
+
+### [`getLocationPropertyValues`](./get-location-property-values)
+
+Retrieves a list of all [Location Property Values](../../data-model/location-model/location-property-value) records for a given location. Returns a list of JSON objects representing all property values for the specified location.
 
 ---
 

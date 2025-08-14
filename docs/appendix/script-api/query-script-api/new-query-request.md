@@ -17,21 +17,21 @@ system.mes.query.newQueryRequest()
 
 ## Parameters
 
-| Parameter | Type | Description                               |
-|-----------|------|-------------------------------------------|
-| None      | -    | This method does not take any parameters. |
+| Parameter | Type | Nullable | Description                               |
+|-----------|------|----------|-------------------------------------------|
+| None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
 
 Returns a JSON representation of the newly created query request object. The following is a list of keys and default values:
 
-| Key             | Default Value |
-|-----------------|---------------|
-| `pageSize`      | `null`        |
-| `pageIndex`     | `null`        |
-| `sortFields`    | `null`        |
+| Key              | Default Value |
+|------------------|---------------|
+| `pageSize`       | `null`        |
+| `pageIndex`      | `null`        |
+| `sortFields`     | `null`        |
 | `sortDirections` | `null`        |
-| `filters`       | `null`        |
+| `filters`        | `null`        |
 
 ## Code Examples
 

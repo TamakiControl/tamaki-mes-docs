@@ -18,9 +18,9 @@ system.mes.productionOrder.getBillOfMaterialsForOrder(productionOrderIdOrName)
 
 ## Parameters
 
-| Parameter               | Type            | Description                                                         |
-| ----------------------- | --------------- | ------------------------------------------------------------------- |
-| `productionOrderIdOrName` | `String`      | The ID or Name of the production order to retrieve the bill of materials. |
+| Parameter                 | Type     | Nullable | Description                                                               |
+|---------------------------|----------|----------|---------------------------------------------------------------------------|
+| `productionOrderIdOrName` | `String` | False    | The ID or Name of the production order to retrieve the bill of materials. |
 
 ## Returns
 

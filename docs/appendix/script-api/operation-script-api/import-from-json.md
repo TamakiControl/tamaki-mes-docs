@@ -18,18 +18,14 @@ functionality to ensure the correct format of the JSON file.
 ## Syntax
 
 ```python
-system.mes.operation.importFromJson(importString)
 system.mes.operation.importFromJson(importBytes)
 ```
 
 ## Parameters
 
-Either a string or bytes array representing the JSON content.
-
-| Parameter          | Type     | Description                                                   |
-| ------------------ |----------| ------------------------------------------------------------- |
-| `importString`     | `String` | The JSON content as a string.                                  |
-| `importBytes`      | `PyArray` | The JSON content as raw bytes.                                 |
+| Parameter     | Type      | Nullable | Description                    |
+|---------------|-----------|----------|--------------------------------|
+| `importBytes` | `PyArray` | False    | The JSON content as raw bytes. |
 
 ## Returns
 

@@ -19,9 +19,9 @@ system.mes.material.deleteMaterial(idOrPath)
 
 ## Parameters
 
-| Parameter  | Type     | Description                               |
-| ---------- | -------- | ----------------------------------------- |
-| `idOrPath` | `String` | The ID or path of the material to delete. |
+| Parameter  | Type     | Nullable | Description                               |
+|------------|----------|----------|-------------------------------------------|
+| `idOrPath` | `String` | False    | The ID or path of the material to delete. |
 
 ## Returns
 
@@ -29,7 +29,7 @@ If successful, an ApiResponse Object is returned with the success bool set True.
 If the material that's being deleted has a reference, an ApiResponse Object is returned with details about the encountered error.
 
 | Name      | Type      | Description                                                 |
-| --------- | --------- | ----------------------------------------------------------- |
+|-----------|-----------|-------------------------------------------------------------|
 | `success` | `Boolean` | Indicates if the delete was successful.                     |
 | `message` | `String`  | The reason why the deletion was successful or unsuccessful. |
 | `data`    | `String`  | The data associated with the deletion.                      |

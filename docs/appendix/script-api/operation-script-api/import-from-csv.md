@@ -18,18 +18,14 @@ functionality to ensure the correct format of the CSV file.
 ## Syntax
 
 ```python
-system.mes.operation.importFromCsv(importString)
 system.mes.operation.importFromCsv(importBytes)
 ```
 
 ## Parameters
 
-Either a string or bytes array representing the CSV content. 
-
-| Parameter          | Type     | Description                                                   |
-| ------------------ |----------| ------------------------------------------------------------- |
-| `importString`     | `String` | The CSV content as a string.                                  |
-| `importBytes`      | `PyArray` | The CSV content as raw bytes.                                 |
+| Parameter     | Type      | Nullable | Description                   |
+|---------------|-----------|----------|-------------------------------|
+| `importBytes` | `PyArray` | False    | The CSV content as raw bytes. |
 
 ## Returns
 

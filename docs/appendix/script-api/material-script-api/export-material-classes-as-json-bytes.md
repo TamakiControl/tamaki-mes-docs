@@ -20,7 +20,9 @@ system.mes.material.exportMaterialClassesAsJsonBytes()
 
 ## Parameters
 
-No parameters.
+| Parameter | Type | Nullable | Description                               |
+|-----------|------|----------|-------------------------------------------|
+| None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
 
@@ -33,5 +35,3 @@ A Byte array (Byte[]) containing the raw byte data of the JSON export.
 jsonBytes = system.mes.material.exportMaterialClassesAsJsonBytes()
 system.perspective.download("material_classes.json", jsonBytes)
 ```
-
-
