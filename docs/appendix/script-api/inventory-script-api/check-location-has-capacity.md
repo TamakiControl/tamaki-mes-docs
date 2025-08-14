@@ -21,12 +21,12 @@ system.mes.inventory.checkLocationHasCapacity(locationIdOrPath, lotIdOrName, mat
 
 ## Parameters
 
-| Parameter          | Type     | Description                                                         |
-| ------------------ | -------- | ------------------------------------------------------------------- |
-| `locationIdOrPath` | `String` | The ID or path of the location associated with the inventory.       |
-| `lotIdOrName`      | `String` | The ID or name of the inventory lot associated with the inventory.  |
-| `materialIdOrPath` | `String` | The ID or path of the material associated with the inventory's lot. |
-| `quantity`         | `String` | The quantity of inventory to store.                                 |
+| Parameter          | Type     | Nullable | Description                                                         |
+|--------------------|----------|----------|---------------------------------------------------------------------|
+| `locationIdOrPath` | `String` | False    | The ID or path of the location associated with the inventory.       |
+| `lotIdOrName`      | `String` | False    | The ID or name of the inventory lot associated with the inventory.  |
+| `materialIdOrPath` | `String` | False    | The ID or path of the material associated with the inventory's lot. |
+| `quantity`         | `String` | False    | The quantity of inventory to store.                                 |
 
 ## Returns
 

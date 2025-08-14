@@ -19,16 +19,20 @@ system.mes.operation.setProductionOrderForOperation(operationId, productionOrder
 
 ## Parameters
 
-| Parameter               | Type            | Description                                                         |
-| ----------------------- | --------------- | ------------------------------------------------------------------- |
-| `locationId`            | `String` (ULID) | The ID of the location associated with the operation.               |
-| `operationName`         | `String`        | The name of the operation.                                          |
-| `productionOrderIdOrName` | `String`      | The ID or Name of the production order to associate with the operation. |
+### Method 1: Set by Operation ID
 
-| Parameter               | Type            | Description                                                         |
-| ----------------------- | --------------- | ------------------------------------------------------------------- |
-| `operationId`           | `String` (ULID) | The ID of the operation.                                            |
-| `productionOrderIdOrName` | `String`      | The ID or Name of the production order to associate with the operation. |
+| Parameter                 | Type            | Nullable | Description                                                             |
+|---------------------------|-----------------|----------|-------------------------------------------------------------------------|
+| `operationId`             | `String` (ULID) | False    | The ID of the operation.                                                |
+| `productionOrderIdOrName` | `String`        | False    | The ID or Name of the production order to associate with the operation. |
+
+### Method 2: Set by Location and Operation Name
+
+| Parameter                 | Type            | Nullable | Description                                                             |
+|---------------------------|-----------------|----------|-------------------------------------------------------------------------|
+| `locationId`              | `String` (ULID) | False    | The ID of the location associated with the operation.                   |
+| `operationName`           | `String`        | False    | The name of the operation.                                              |
+| `productionOrderIdOrName` | `String`        | False    | The ID or Name of the production order to associate with the operation. |
 
 ## Returns
 

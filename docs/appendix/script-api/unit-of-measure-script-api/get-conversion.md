@@ -18,16 +18,16 @@ system.mes.unitOfMeasure.getConversion(id)
 
 ## Parameters
 
-| Parameter | Type            | Description                                           |
-| --------- | --------------- | ----------------------------------------------------- |
-| `id`      | `String` (ULID) | The ID of the unit of measure conversion to retrieve. |
+| Parameter | Type            | Nullable | Description                                           |
+|-----------|-----------------|----------|-------------------------------------------------------|
+| `id`      | `String` (ULID) | False    | The ID of the unit of measure conversion to retrieve. |
 
 ## Returns
 
 Returns a JSON representation of the unit of measure conversion. Returns nothing if no unit of measure conversion is found.
 
 | Name               | Type            | Description                                                              |
-| ------------------ | --------------- | ------------------------------------------------------------------------ |
+|--------------------|-----------------|--------------------------------------------------------------------------|
 | `fromId`           | `String` (ULID) | The unit of measure the conversion is converting from.                   |
 | `toId`             | `String` (ULID) | The unit of measure the conversion is converting to.                     |
 | `conversionFactor` | `Double`        | The number used to change the unit of measure from one set to the other. |

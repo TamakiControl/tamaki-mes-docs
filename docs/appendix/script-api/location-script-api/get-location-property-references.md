@@ -18,9 +18,9 @@ system.mes.location.getLocationPropertyReferences(idOrName)
 
 ## Parameters
 
-| Parameter  | Type     | Description                                            |
-| ---------- | -------- | ------------------------------------------------------ |
-| `idOrName` | `String` | The ULID or name of the location property to retrieve. |
+| Parameter  | Type     | Nullable | Description                                            |
+|------------|----------|----------|--------------------------------------------------------|
+| `idOrName` | `String` | False    | The ULID or name of the location property to retrieve. |
 
 ## Returns
 

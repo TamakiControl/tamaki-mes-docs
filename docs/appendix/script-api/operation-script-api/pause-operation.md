@@ -19,14 +19,18 @@ system.mes.operation.pauseOperation(locationId, operationName)
 
 ## Parameters
 
-| Parameter     | Type            | Description                       |
-| ------------- | --------------- | --------------------------------- |
-| `operationId` | `String` (ULID) | The ID of the operation to pause. |
+### Method 1: Pause by Operation ID
 
-| Parameter       | Type            | Description                                           |
-| --------------- | --------------- | ----------------------------------------------------- |
-| `locationId`    | `String` (ULID) | The ID of the location associated with the operation. |
-| `operationName` | `Instant`       | The name of the operation.                            |
+| Parameter     | Type            | Nullable | Description                       |
+|---------------|-----------------|----------|-----------------------------------|
+| `operationId` | `String` (ULID) | False    | The ID of the operation to pause. |
+
+### Method 2: Pause by Location and Operation Name
+
+| Parameter       | Type            | Nullable | Description                                           |
+|-----------------|-----------------|----------|-------------------------------------------------------|
+| `locationId`    | `String` (ULID) | False    | The ID of the location associated with the operation. |
+| `operationName` | `String`        | False    | The name of the operation.                            |
 
 ## Returns
 

@@ -18,16 +18,16 @@ system.mes.material.getMaterialByErpId(erpId)
 
 ## Parameters
 
-| Parameter | Type            | Description                                                 |
-| --------- | --------------- | ----------------------------------------------------------- |
-| `erpId`   | `String` (ULID) | The ID of the erp associated with the material to retrieve. |
+| Parameter | Type            | Nullable | Description                                                 |
+|-----------|-----------------|----------|-------------------------------------------------------------|
+| `erpId`   | `String` (ULID) | False    | The ID of the erp associated with the material to retrieve. |
 
 ## Returns
 
 Returns a JSON representation of the material. Returns nothing if no material is found.
 
 | Name              | Type            | Description                                                    |
-| ----------------- | --------------- | -------------------------------------------------------------- |
+|-------------------|-----------------|----------------------------------------------------------------|
 | `name`            | `String`        | The name of the material.                                      |
 | `description`     | `String`        | The description of the material.                               |
 | `path`            | `String`        | The path to the material.                                      |

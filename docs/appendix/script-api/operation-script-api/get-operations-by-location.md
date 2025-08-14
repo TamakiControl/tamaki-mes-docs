@@ -18,9 +18,9 @@ system.mes.operation.getOperationsByLocation(locationIdOrPath)
 
 ## Parameters
 
-| Parameter          | Type     | Description                                                   |
-| ------------------ | -------- | ------------------------------------------------------------- |
-| `locationIdOrPath` | `String` | The ID or path of the location associated with the operation. |
+| Parameter          | Type     | Nullable | Description                                                   |
+|--------------------|----------|----------|---------------------------------------------------------------|
+| `locationIdOrPath` | `String` | False    | The ID or path of the location associated with the operation. |
 
 ## Returns
 

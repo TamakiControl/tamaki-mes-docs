@@ -19,16 +19,16 @@ system.mes.material.getPropertyValuesForMaterial(idOrPath)
 
 ## Parameters
 
-| Parameter  | Type     | Description                       |
-| ---------- | -------- | --------------------------------- |
-| `idOrPath` | `String` | The ULID or path of the material. |
+| Parameter  | Type     | Nullable | Description                       |
+|------------|----------|----------|-----------------------------------|
+| `idOrPath` | `String` | False    | The ULID or path of the material. |
 
 ## Returns
 
 Returns a JSON representation of the material property value. Returns nothing if no material property value is found.
 
 | Name                 | Type            | Description                                                                                                        |
-| -------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------ |
+|----------------------|-----------------|--------------------------------------------------------------------------------------------------------------------|
 | `materialId`         | `String` (ULID) | The ULID of the material.                                                                                          |
 | `materialPropertyId` | `String` (ULID) | The ULID of the material property.                                                                                 |
 | `dataType`           | `String`        | The data type of the property value. Must be the same as the data type of the property.                            |

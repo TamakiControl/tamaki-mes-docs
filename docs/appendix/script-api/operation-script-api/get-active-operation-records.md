@@ -18,9 +18,9 @@ system.mes.operation.getActiveOperationRecords()
 
 ## Parameters
 
-| Parameter | Type | Description                               |
-| --------- | ---- | ----------------------------------------- |
-| None      | -    | This method does not take any parameters. |
+| Parameter | Type | Nullable | Description                               |
+|-----------|------|----------|-------------------------------------------|
+| None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
 

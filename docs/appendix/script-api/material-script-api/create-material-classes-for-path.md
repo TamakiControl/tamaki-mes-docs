@@ -16,9 +16,9 @@ system.mes.material.createMaterialClassesForPath(path)
 
 ## Parameters
 
-| Parameter | Type     | Description                                                        |
-| --------- | -------- | ------------------------------------------------------------------ |
-| `path`    | `String` | The path where each material class name is the parent of the next. |
+| Parameter | Type     | Nullable | Description                                                        |
+|-----------|----------|----------|--------------------------------------------------------------------|
+| `path`    | `String` | False    | The path where each material class name is the parent of the next. |
 
 ## Returns
 

@@ -16,9 +16,9 @@ system.mes.unitOfMeasure.doesUnitOfMeasureExist(idOrName)
 
 ## Parameters
 
-| Parameter  | Type     | Description                                       |
-| ---------- | -------- | ------------------------------------------------- |
-| `idOrName` | `String` | The ULID or name of the unit of measure to check. |
+| Parameter  | Type     | Nullable | Description                                       |
+|------------|----------|----------|---------------------------------------------------|
+| `idOrName` | `String` | False    | The ULID or name of the unit of measure to check. |
 
 ## Returns
 

@@ -18,7 +18,7 @@ system.mes.inventory.newScrapAllRequest()
 ## Parameters
 
 | Parameter | Type | Description                               |
-| --------- | ---- | ----------------------------------------- |
+|-----------|------|-------------------------------------------|
 | None      | -    | This method does not take any parameters. |
 
 ## Returns
@@ -26,7 +26,7 @@ system.mes.inventory.newScrapAllRequest()
 Returns a JSON representation of the newly created Scrap All Request object. The following is a list of keys and default values:
 
 | Key                       | Default Value |
-| ------------------------- | ------------- |
+|---------------------------|---------------|
 | `type`                    | `SCRAP`       |
 | `sourceLocationIdOrPath`  | `null`        |
 | `materialIdOrPath`        | `null`        |

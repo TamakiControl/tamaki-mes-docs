@@ -18,10 +18,10 @@ system.mes.location.getPropertyValueFor(locationIdOrPath, propertyIdOrName)
 
 ## Parameters
 
-| Parameter          | Type     | Description                                                        |
-| ------------------ | -------- | ------------------------------------------------------------------ |
-| `locationIdOrPath` | `String` | The ULID or path of the location.                                  |
-| `propertyIdOrName` | `String` | The ULID or name of the property for which the value is retrieved. |
+| Parameter          | Type     | Nullable | Description                                                        |
+|--------------------|----------|----------|--------------------------------------------------------------------|
+| `locationIdOrPath` | `String` | False    | The ULID or path of the location.                                  |
+| `propertyIdOrName` | `String` | False    | The ULID or name of the property for which the value is retrieved. |
 
 ## Returns
 

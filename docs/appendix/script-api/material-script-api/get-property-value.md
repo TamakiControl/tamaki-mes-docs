@@ -18,16 +18,16 @@ system.mes.material.getPropertyValue(id)
 
 ## Parameters
 
-| Parameter | Type            | Description                              |
-| --------- | --------------- | ---------------------------------------- |
-| `id`      | `String` (ULID) | The ULID of the material property value. |
+| Parameter | Type            | Nullable | Description                              |
+|-----------|-----------------|----------|------------------------------------------|
+| `id`      | `String` (ULID) | False    | The ULID of the material property value. |
 
 ## Returns
 
 Returns a JSON representation of the material property value. Returns nothing if no material property value is found.
 
 | Name                 | Type            | Description                                                                                                        |
-| -------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------ |
+|----------------------|-----------------|--------------------------------------------------------------------------------------------------------------------|
 | `materialId`         | `String` (ULID) | The ULID of the material.                                                                                          |
 | `materialPropertyId` | `String` (ULID) | The ULID of the material property.                                                                                 |
 | `dataType`           | `String`        | The data type of the property value. Must be the same as the data type of the property.                            |

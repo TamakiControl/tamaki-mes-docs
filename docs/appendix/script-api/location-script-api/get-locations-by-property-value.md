@@ -18,10 +18,10 @@ system.mes.location.getLocationsByPropertyValue(idOrName, value)
 
 ## Parameters
 
-| Parameter          | Type     | Description                                                                                                                   |
-| ------------------ | -------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `propertyIdOrName` | `String` | The ID or name of the location property to filter by.                                                                         |
-| `propertyValue`    | `Mixed`  | The value to search for within the specified property. The type is mixed as it depends on what the data type of the property. |
+| Parameter          | Type     | Nullable | Description                                            |
+|--------------------|----------|----------|--------------------------------------------------------|
+| `propertyIdOrName` | `String` | False    | The ID or name of the location property to filter by.  |
+| `propertyValue`    | `String` | False    | The value to search for within the specified property. |
 
 ## Returns
 

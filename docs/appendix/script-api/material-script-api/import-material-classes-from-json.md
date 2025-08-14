@@ -26,10 +26,10 @@ system.mes.material.importMaterialClassesFromJson(importBytes)
 
 Either a string or bytes array representing the JSON content.
 
-| Parameter          | Type     | Description                                                   |
-| ------------------ |----------| ------------------------------------------------------------- |
-| `importString`     | `String` | The JSON content as a string.                                  |
-| `importBytes`      | `PyArray` | The JSON content as raw bytes.                                 |
+| Parameter      | Type      | Nullable | Description                    |
+|----------------|-----------|----------|--------------------------------|
+| `importString` | `String`  | False    | The JSON content as a string.  |
+| `importBytes`  | `PyArray` | False    | The JSON content as raw bytes. |
 
 ## Returns
 

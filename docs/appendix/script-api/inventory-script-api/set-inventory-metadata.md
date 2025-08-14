@@ -19,15 +19,15 @@ system.mes.inventory.setInventoryMetadata(inventoryId, notes, spare1, spare2, sp
 
 ## Parameters
 
-| Parameter                 | Type           | Description                                                             |
-|---------------------------| -------------- |-------------------------------------------------------------------------|
-| `inventoryId`             | `String` (ULID) | The ID of the inventory to update.                                      |
-| `notes`                   | `String`       | Notes related to the location property value.                           |
-| `spare1`                  | `String`       | Additional field for user-defined context.                              |
-| `spare2`                  | `String`       | Additional field for user-defined context.                              |
-| `spare3`                  | `String`       | Additional field for user-defined context.                              |
-| `name`                    | `String`       | The name of the inventory.                                              |
-| `productionOrderIdOrName` | `String`| The ID or Name of the production order to associate with the inventory. |
+| Parameter                 | Type            | Nullable | Description                                                             |
+|---------------------------|-----------------|----------|-------------------------------------------------------------------------|
+| `inventoryId`             | `String` (ULID) | False    | The ID of the inventory to update.                                      |
+| `notes`                   | `String`        | True     | Notes related to the location property value.                           |
+| `spare1`                  | `String`        | True     | Additional field for user-defined context.                              |
+| `spare2`                  | `String`        | True     | Additional field for user-defined context.                              |
+| `spare3`                  | `String`        | True     | Additional field for user-defined context.                              |
+| `name`                    | `String`        | True     | The name of the inventory.                                              |
+| `productionOrderIdOrName` | `String`        | True     | The ID or Name of the production order to associate with the inventory. |
 
 ## Returns
 

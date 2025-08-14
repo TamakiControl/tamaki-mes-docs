@@ -19,21 +19,21 @@ system.mes.query.validateFilterRequest(**filterRequest)
 
 ## Parameters
 
-| Parameter         | Type            | Description                                                                                           |
-|-------------------|-----------------|-------------------------------------------------------------------------------------------------------|
-| `field`           | `String`        | Name of the field to filter by. This should be the name as it appears in the entity class (required). |
-| `type`            | `String`        | Type of the field being filtered by. If not provided, the type will be inferred from the value.       |
-| `condition`       | `String`        | Condition used to compare the field against the value (required).                                     |
-| `stringValue`     | `String`        | String value to compare the database field value against.                                             |
-| `numberValue`     | `Double`        | Numerical value to compare the database field value against.                                          |
-| `dateValue`       | `Instant`       | Date value to compare the database field value against.                                               |
-| `minNumberValue`  | `Double`        | Minimum numerical value for the field. Only used when the condition is BETWEEN.                       |
-| `maxNumberValue`  | `Double`        | Maximum numerical value for the field. Only used when the condition is BETWEEN.                       |
-| `minDateValue`    | `Instant`       | Minimum date value for the field. Only used when the condition is BETWEEN.                            |
-| `maxDateValue`    | `Instant`       | Maximum date value for the field. Only used when the condition is BETWEEN.                            |
-| `stringListValue` | `List<String>`  | List of String values to compare the database field value against.                                    |
-| `numberListValue` | `List<Double>`  | List of Numerical values to compare the database field value against.                                 |
-| `dateListValue`   | `List<Instant>` | List of Date values to compare the database field value against.                                      |
+| Parameter         | Type            | Nullable | Description                                                                                           |
+|-------------------|-----------------|----------|-------------------------------------------------------------------------------------------------------|
+| `field`           | `String`        | False    | Name of the field to filter by. This should be the name as it appears in the entity class (required). |
+| `type`            | `String`        | True     | Type of the field being filtered by. If not provided, the type will be inferred from the value.       |
+| `condition`       | `String`        | False    | Condition used to compare the field against the value (required).                                     |
+| `stringValue`     | `String`        | True     | String value to compare the database field value against.                                             |
+| `numberValue`     | `Double`        | True     | Numerical value to compare the database field value against.                                          |
+| `dateValue`       | `Instant`       | True     | Date value to compare the database field value against.                                               |
+| `minNumberValue`  | `Double`        | True     | Minimum numerical value for the field. Only used when the condition is BETWEEN.                       |
+| `maxNumberValue`  | `Double`        | True     | Maximum numerical value for the field. Only used when the condition is BETWEEN.                       |
+| `minDateValue`    | `Instant`       | True     | Minimum date value for the field. Only used when the condition is BETWEEN.                            |
+| `maxDateValue`    | `Instant`       | True     | Maximum date value for the field. Only used when the condition is BETWEEN.                            |
+| `stringListValue` | `List<String>`  | True     | List of String values to compare the database field value against.                                    |
+| `numberListValue` | `List<Double>`  | True     | List of Numerical values to compare the database field value against.                                 |
+| `dateListValue`   | `List<Instant>` | True     | List of Date values to compare the database field value against.                                      |
 
 ## Returns
 
