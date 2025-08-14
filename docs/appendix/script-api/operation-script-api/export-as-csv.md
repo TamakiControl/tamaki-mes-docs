@@ -15,11 +15,22 @@ Streams operation data from the database and formats it as a CSV string, includi
 
 ```python
 system.mes.operation.exportAsCsv()
+system.mes.operation.exportAsCsv(locationIdOrPaths)
 ```
 
 ## Parameters
 
-No parameters.
+### Method 1: Export all operations
+
+| Parameter | Type | Nullable | Description                               |
+|-----------|------|----------|-------------------------------------------|
+| None      | -    | -        | This method does not take any parameters. |
+
+### Method 2: Export operations for specific locations
+
+| Parameter           | Type       | Nullable | Description                                                 |
+|---------------------|------------|----------|-------------------------------------------------------------|
+| `locationIdOrPaths` | `String[]` | False    | The IDs or paths of the locations to export operations for. |
 
 ## Returns
 
@@ -40,5 +51,3 @@ path = system.file.saveFile("operations.csv")
 if path is not None:
 	system.file.writeFile(path, csvString)
 ```
-
-

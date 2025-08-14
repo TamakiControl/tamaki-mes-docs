@@ -16,9 +16,9 @@ system.mes.material.doesMaterialClassExist(idOrPath)
 
 ## Parameters
 
-| Parameter  | Type     | Description                                      |
-| ---------- | -------- | ------------------------------------------------ |
-| `idOrPath` | `String` | The ULID or path of the material class to check. |
+| Parameter  | Type     | Nullable | Description                                      |
+|------------|----------|----------|--------------------------------------------------|
+| `idOrPath` | `String` | False    | The ULID or path of the material class to check. |
 
 ## Returns
 

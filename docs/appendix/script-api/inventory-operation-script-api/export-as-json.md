@@ -19,7 +19,9 @@ system.mes.inventory.operation.exportAsJson()
 
 ## Parameters
 
-No parameters.
+| Parameter | Type | Nullable | Description                                 |
+|-----------|------|----------|---------------------------------------------|
+| None      | -    | -        | This function does not take any parameters. |
 
 ## Returns
 

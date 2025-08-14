@@ -18,9 +18,9 @@ system.mes.inventory.operation.getInventoryOperationsByOperation(operationId)
 
 ## Parameters
 
-| Parameter     | Type            | Description                                                      |
-| ------------- | --------------- | ---------------------------------------------------------------- |
-| `operationId` | `String` (ULID) | The ID of the operation associated with the inventory operation. |
+| Parameter     | Type            | Nullable | Description                                                      |
+|---------------|-----------------|----------|------------------------------------------------------------------|
+| `operationId` | `String` (ULID) | False    | The ID of the operation associated with the inventory operation. |
 
 ## Returns
 

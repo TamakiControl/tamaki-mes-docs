@@ -19,16 +19,16 @@ system.mes.material.newPropertyValue()
 
 ## Parameters
 
-| Parameter | Type | Description                               |
-| --------- | ---- | ----------------------------------------- |
-| None      | -    | This method does not take any parameters. |
+| Parameter | Type | Nullable | Description                               |
+|-----------|------|----------|-------------------------------------------|
+| None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
 
 Returns a JSON representation of the newly created material property value object. The following is a list of keys and default values:
 
 | Key                  | Default Value |
-| -------------------- | ------------- |
+|----------------------|---------------|
 | `materialId`         | `null`        |
 | `materialPropertyId` | `null`        |
 | `dataType`           | `String`      |

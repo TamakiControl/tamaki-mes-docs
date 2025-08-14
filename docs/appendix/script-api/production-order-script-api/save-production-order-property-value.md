@@ -18,18 +18,18 @@ system.mes.productionOrder.saveProductionOrderPropertyValue(**property_value_dat
 
 ## Parameters
 
-| Parameter           | Type            | Description                                                                                                        |
-| ------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `productionOrderId` | `String` (ULID) | The ULID of the production order.                                                                                  |
-| `propertyId`        | `String` (ULID) | The ULID of the production order property.                                                                         |
-| `dataType`          | `String`        | The data type of the property value. Must be the same as the data type of the property.                            |
-| `value`             | `Mixed`         | The value assigned to the property value if none is provided. The type is mixed as it depends on what dataType is. |
-| `id`                | `String` (ULID) | The ULID of the production order property value (optional, for updating an existing property).                     |
-| `notes`             | `String`        | Notes related to the production order property value.                                                              |
-| `enabled`           | `Boolean`       | Indicates if the property value is active and enabled.                                                             |
-| `spare1`            | `String`        | Additional field for user-defined context.                                                                         |
-| `spare2`            | `String`        | Additional field for user-defined context.                                                                         |
-| `spare3`            | `String`        | Additional field for user-defined context.                                                                         |
+| Parameter           | Type            | Nullable | Description                                                                                                        |
+|---------------------|-----------------|----------|--------------------------------------------------------------------------------------------------------------------|
+| `productionOrderId` | `String` (ULID) | False    | The ULID of the production order.                                                                                  |
+| `propertyId`        | `String` (ULID) | False    | The ULID of the production order property.                                                                         |
+| `dataType`          | `String`        | True     | The data type of the property value. Must be the same as the data type of the property. Default value is `String`  |
+| `value`             | `Mixed`         | True     | The value assigned to the property value if none is provided. The type is mixed as it depends on what dataType is. |
+| `id`                | `String` (ULID) | True     | The ULID of the production order property value (optional, for updating an existing property).                     |
+| `notes`             | `String`        | True     | Notes related to the production order property value.                                                              |
+| `enabled`           | `Boolean`       | True     | Indicates if the property value is active and enabled. Default value is `true`                                     |
+| `spare1`            | `String`        | True     | Additional field for user-defined context.                                                                         |
+| `spare2`            | `String`        | True     | Additional field for user-defined context.                                                                         |
+| `spare3`            | `String`        | True     | Additional field for user-defined context.                                                                         |
 
 ## Returns
 

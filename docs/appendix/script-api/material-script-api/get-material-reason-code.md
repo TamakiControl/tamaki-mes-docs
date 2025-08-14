@@ -18,16 +18,16 @@ system.mes.material.getMaterialReasonCode(materialReasonCodeIdOrCode)
 
 ## Parameters
 
-| Parameter                    | Type     | Description                                                    |
-| ---------------------------- | -------- | -------------------------------------------------------------- |
-| `materialReasonCodeIdOrCode` | `String` | The ID or reason code of the material reason code to retrieve. |
+| Parameter                    | Type     | Nullable | Description                                                    |
+|------------------------------|----------|----------|----------------------------------------------------------------|
+| `materialReasonCodeIdOrCode` | `String` | False    | The ID or reason code of the material reason code to retrieve. |
 
 ## Returns
 
 Returns a JSON representation of the material reason code. Returns nothing if no material reason code is found.
 
 | Name              | Type            | Description                                                                     |
-| ----------------- | --------------- | ------------------------------------------------------------------------------- |
+|-------------------|-----------------|---------------------------------------------------------------------------------|
 | `lotRecordType`   | `String`        | The action that was taken on a lot.                                             |
 | `reasonCode`      | `String`        | The unique code identifying the reason for material handling.                   |
 | `description`     | `String`        | The detailed description of the reason for the material activity.               |

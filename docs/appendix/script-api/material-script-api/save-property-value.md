@@ -18,18 +18,18 @@ system.mes.material.savePropertyValue(**property_value_data)
 
 ## Parameters
 
-| Parameter            | Type            | Description                                                                                                        |
-| -------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `materialId`         | `String` (ULID) | The ULID of the material.                                                                                          |
-| `materialPropertyId` | `String` (ULID) | The ULID of the material property.                                                                                 |
-| `dataType`           | `String`        | The data type of the property value. Must be the same as the data type of the property.                            |
-| `value`              | `Mixed`         | The value assigned to the property value if none is provided. The type is mixed as it depends on what dataType is. |
-| `id`                 | `String` (ULID) | The ULID of the material property value (optional, for updating an existing property).                             |
-| `notes`              | `String`        | Notes related to the material property value.                                                                      |
-| `enabled`            | `Boolean`       | Indicates if the property value is active and enabled.                                                             |
-| `spare1`             | `String`        | Additional field for user-defined context.                                                                         |
-| `spare2`             | `String`        | Additional field for user-defined context.                                                                         |
-| `spare3`             | `String`        | Additional field for user-defined context.                                                                         |
+| Parameter            | Type            | Nullable | Description                                                                                                        |
+|----------------------|-----------------|----------|--------------------------------------------------------------------------------------------------------------------|
+| `materialId`         | `String` (ULID) | False    | The ULID of the material.                                                                                          |
+| `materialPropertyId` | `String` (ULID) | False    | The ULID of the material property.                                                                                 |
+| `dataType`           | `String`        | True     | The data type of the property value. Must be the same as the data type of the property. Default value is `String`. |
+| `value`              | `Mixed`         | True     | The value assigned to the property value if none is provided. The type is mixed as it depends on what dataType is. |
+| `id`                 | `String` (ULID) | True     | The ULID of the material property value (optional, for updating an existing property).                             |
+| `notes`              | `String`        | True     | Notes related to the material property value.                                                                      |
+| `enabled`            | `Boolean`       | True     | Indicates if the property value is active and enabled. Default value is `true`.                                    |
+| `spare1`             | `String`        | True     | Additional field for user-defined context.                                                                         |
+| `spare2`             | `String`        | True     | Additional field for user-defined context.                                                                         |
+| `spare3`             | `String`        | True     | Additional field for user-defined context.                                                                         |
 
 ## Returns
 

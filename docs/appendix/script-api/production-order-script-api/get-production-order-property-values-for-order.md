@@ -18,9 +18,9 @@ system.mes.productionOrder.getProductionOrderPropertyValuesForOrder(productionOr
 
 ## Parameters
 
-| Parameter               | Type            | Description                                                                              |
-| ----------------------- | --------------- | ---------------------------------------------------------------------------------------- |
-| `productionOrderIdOrName` | `String`      | The ID or Name of the production order to retrieve the production order property values. |
+| Parameter                 | Type     | Nullable | Description                                                                              |
+|---------------------------|----------|----------|------------------------------------------------------------------------------------------|
+| `productionOrderIdOrName` | `String` | False    | The ID or Name of the production order to retrieve the production order property values. |
 
 ## Returns
 

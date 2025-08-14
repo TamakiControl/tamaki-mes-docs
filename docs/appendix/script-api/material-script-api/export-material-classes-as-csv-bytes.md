@@ -20,7 +20,9 @@ system.mes.material.exportMaterialClassesAsCsvBytes()
 
 ## Parameters
 
-No parameters.
+| Parameter | Type | Nullable | Description                               |
+|-----------|------|----------|-------------------------------------------|
+| None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
 
@@ -33,5 +35,3 @@ A Byte array (Byte[]) containing the raw byte data of the CSV export.
 csvBytes = system.mes.material.exportMaterialClassesAsCsvBytes()
 system.perspective.download("material_classes.csv", csvBytes)
 ```
-
-

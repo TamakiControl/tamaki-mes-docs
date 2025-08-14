@@ -21,12 +21,16 @@ system.mes.operation.findOperations(**queryRequest)
 Using Python keyword arguments, a [Query Request](../query-script-api/new-query-request) can be passed to the `findOperations` function
 without specifying each parameter individually. Please refer to the [Query Request](../query-script-api/new-query-request) documentation for a list of parameters.
 
+| Parameter      | Type            | Nullable | Description                                                                                                                                                                                                                                                                                                |
+|----------------|-----------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `queryRequest` | `Query Request` | False    | Using Python keyword arguments, a [Query Request](../query-script-api/new-query-request) can be passed to the `findOperations` function without specifying each parameter individually. Please refer to the [Query Request](../query-script-api/new-query-request) documentation for a list of parameters. |
+
 ## Returns
 
 Returns a Query Result object with the following properties:
 
 | Name            | Type                                                                   | Description                                                                                                      |
-| --------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+|-----------------|------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
 | `content`       | `List`&lt;[Operations](../../data-model/operation-model/operation)&gt; | The list of all records found that meet the specified criteria                                                   |
 | `totalPages`    | `Integer`                                                              | If pagination is used, this is the number of total pages of records in the database for the specified page size. |
 | `totalElements` | `Long`                                                                 | If pagination is used, this is the number of records in the database that meet the specified criteria.           |

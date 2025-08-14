@@ -18,23 +18,23 @@ system.mes.inventory.getInventoryLotRecordReferences(id)
 
 ## Parameters
 
-| Parameter | Type            | Description                                     |
-| --------- | --------------- | ----------------------------------------------- |
-| `id`      | `String` (ULID) | The ID of the inventory lot record to retrieve. |
+| Parameter | Type            | Nullable | Description                                     |
+|-----------|-----------------|----------|-------------------------------------------------|
+| `id`      | `String` (ULID) | False    | The ID of the inventory lot record to retrieve. |
 
 ## Returns
 
 Returns a list of JSON objects. Each JSON object has the following properties:
 
 | Name         | Type                | Description                                                                   |
-| ------------ | ------------------- | ----------------------------------------------------------------------------- |
+|--------------|---------------------|-------------------------------------------------------------------------------|
 | `tableName`  | `String`            | The name of the table that the reference is in.                               |
 | `references` | `List<JSON Object>` | List of JSON objects corresponding to references to the inventory lot record. |
 
 The JSON Objects in references has the following properties:
 
 | Name        | Type            | Description                                                          |
-| ----------- | --------------- | -------------------------------------------------------------------- |
+|-------------|-----------------|----------------------------------------------------------------------|
 | `fkColName` | `String`        | The name of the foreign key column.                                  |
 | `id`        | `String` (ULID) | The ULID of the object that is referencing the inventory lot record. |
 

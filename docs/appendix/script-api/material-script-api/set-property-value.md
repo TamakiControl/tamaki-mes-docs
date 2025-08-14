@@ -19,11 +19,11 @@ system.mes.material.setPropertyValue(materialIdOrPath, propertyIdOrName, value)
 
 ## Parameters
 
-| Parameter          | Type     | Description                                                                                                                          |
-| ------------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `materialIdOrPath` | `String` | The ULID or path of the material.                                                                                                    |
-| `propertyIdOrName` | `String` | The ULID or name of the property for which the value is retrieved.                                                                   |
-| `value`            | `Mixed`  | The value assigned to the property value if none is provided. The type is mixed as it depends on what the data type of the property. |
+| Parameter          | Type     | Nullable | Description                                                                                                                          |
+|--------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------|
+| `materialIdOrPath` | `String` | False    | The ULID or path of the material.                                                                                                    |
+| `propertyIdOrName` | `String` | False    | The ULID or name of the property for which the value is retrieved.                                                                   |
+| `value`            | `Mixed`  | True     | The value assigned to the property value if none is provided. The type is mixed as it depends on what the data type of the property. |
 
 ## Returns
 

@@ -18,26 +18,26 @@ system.mes.productionOrder.saveProductionOrderProperty(**property_data)
 
 ## Parameters
 
-| Parameter             | Type            | Description                                                                                                          |
-| --------------------- | --------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `name`                | `String`        | The name of the production order property.                                                                           |
-| `description`         | `String`        | A description of the production order property.                                                                      |
-| `dataType`            | `String`        | The data type of the property (e.g., Integer, String, Float).                                                        |
-| `lowLimit`            | `Double`        | The minimum value allowed for a numerical property.                                                                  |
-| `highLimit`           | `Double`        | The maximum value allowed for a numerical property.                                                                  |
-| `format`              | `String`        | The format of the property, if applicable.                                                                           |
-| `unitOfMeasureId`     | `String` (ULID) | The ULID of the unit of measure for this production order property.                                                  |
-| `unitOfMeasureName`   | `String`        | The name of the unit of measure for this production order property. For display purposes only.                       |
-| `unitOfMeasureSymbol` | `String`        | The symbol of the unit of measure for this production order property. For display purposes only.                     |
-| `options`             | `String`        | List of possible values for the property (e.g., `"[option1, option2]"`).                                             |
-| `nullable`            | `Boolean`       | Defines if the property can accept null values.                                                                      |
-| `defaultValue`        | `Mixed`         | The default value assigned to the property if none is provided. The type is mixed as it depends on what dataType is. |
-| `id`                  | `String` (ULID) | The ULID of the production order property (optional, for updating an existing property).                             |
-| `notes`               | `String`        | Notes related to the production order property.                                                                      |
-| `enabled`             | `Boolean`       | Indicates if the property is active and enabled.                                                                     |
-| `spare1`              | `String`        | Additional field for user-defined context.                                                                           |
-| `spare2`              | `String`        | Additional field for user-defined context.                                                                           |
-| `spare3`              | `String`        | Additional field for user-defined context.                                                                           |
+| Parameter             | Type            | Nullable | Description                                                                                                          |
+|-----------------------|-----------------|----------|----------------------------------------------------------------------------------------------------------------------|
+| `name`                | `String`        | False    | The name of the production order property.                                                                           |
+| `description`         | `String`        | True     | A description of the production order property.                                                                      |
+| `dataType`            | `String`        | False    | The data type of the property (e.g., Integer, String, Float). Default value is `String`                              |
+| `lowLimit`            | `Double`        | True     | The minimum value allowed for a numerical property.                                                                  |
+| `highLimit`           | `Double`        | True     | The maximum value allowed for a numerical property.                                                                  |
+| `format`              | `String`        | True     | The format of the property, if applicable.                                                                           |
+| `unitOfMeasureId`     | `String` (ULID) | True     | The ULID of the unit of measure for this production order property.                                                  |
+| `unitOfMeasureName`   | `String`        | True     | The name of the unit of measure for this production order property. For display purposes only.                       |
+| `unitOfMeasureSymbol` | `String`        | True     | The symbol of the unit of measure for this production order property. For display purposes only.                     |
+| `options`             | `String`        | True     | List of possible values for the property (e.g., `"[option1, option2]"`).                                             |
+| `nullable`            | `Boolean`       | False    | Defines if the property can accept null values. Default value is `false`                                             |
+| `defaultValue`        | `Mixed`         | True     | The default value assigned to the property if none is provided. The type is mixed as it depends on what dataType is. |
+| `id`                  | `String` (ULID) | True     | The ULID of the production order property (optional, for updating an existing property).                             |
+| `notes`               | `String`        | True     | Notes related to the production order property.                                                                      |
+| `enabled`             | `Boolean`       | True     | Indicates if the property is active and enabled. Default value is `true`                                             |
+| `spare1`              | `String`        | True     | Additional field for user-defined context.                                                                           |
+| `spare2`              | `String`        | True     | Additional field for user-defined context.                                                                           |
+| `spare3`              | `String`        | True     | Additional field for user-defined context.                                                                           |
 
 ## Returns
 

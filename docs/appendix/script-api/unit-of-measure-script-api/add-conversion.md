@@ -18,12 +18,12 @@ system.mes.unitOfMeasure.addConversion(fromIdOrName, toIdOrName, conversionFacto
 
 ## Parameters
 
-| Parameter          | Type            | Description                                              |
-| ------------------ | --------------- | -------------------------------------------------------- |
-| `fromIdOrName`     | `String`        | The ULID or name of the from unit of measure to check.   |
-| `toIdOrName`       | `String`        | The ULID or name of the to unit of measure to check.     |
-| `conversionFactor` | `Double`        | The conversion factor between the units of measure.      |
-| `materialId`       | `String` (ULID) | The ULID of the material associated with the conversion. |
+| Parameter          | Type            | Nullable | Description                                              |
+|--------------------|-----------------|----------|----------------------------------------------------------|
+| `fromIdOrName`     | `String`        | False    | The ULID or name of the from unit of measure to check.   |
+| `toIdOrName`       | `String`        | False    | The ULID or name of the to unit of measure to check.     |
+| `conversionFactor` | `Double`        | False    | The conversion factor between the units of measure.      |
+| `materialId`       | `String` (ULID) | True     | The ULID of the material associated with the conversion. |
 
 ## Returns
 

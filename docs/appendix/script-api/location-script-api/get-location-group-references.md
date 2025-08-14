@@ -18,9 +18,9 @@ system.mes.location.getLocationGroupReferences(id)
 
 ## Parameters
 
-| Parameter | Type            | Description                               |
-| --------- | --------------- | ----------------------------------------- |
-| `id`      | `String` (ULID) | The ID of the location group to retrieve. |
+| Parameter | Type            | Nullable | Description                               |
+|-----------|-----------------|----------|-------------------------------------------|
+| `id`      | `String` (ULID) | False    | The ID of the location group to retrieve. |
 
 ## Returns
 

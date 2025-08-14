@@ -18,10 +18,10 @@ system.mes.productionOrder.getBillOfMaterialsFor(productionOrderIdOrName, materi
 
 ## Parameters
 
-| Parameter                 | Type      | Description                                                                     |
-|---------------------------|-----------|---------------------------------------------------------------------------------|
-| `productionOrderIdOrName` | `String`  | The ULID or name of the production order associated with the bill of materials. |
-| `materialIdOrPath`        | `String`  | The ULID or path of the material associated with the bill of materials.         |
+| Parameter                 | Type      | Nullable | Description                                                                     |
+|---------------------------|-----------|----------|---------------------------------------------------------------------------------|
+| `productionOrderIdOrName` | `String`  | False    | The ULID or name of the production order associated with the bill of materials. |
+| `materialIdOrPath`        | `String`  | False    | The ULID or path of the material associated with the bill of materials.         |
 
 ## Returns
 

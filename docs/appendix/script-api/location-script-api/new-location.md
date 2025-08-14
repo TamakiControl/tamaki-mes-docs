@@ -19,16 +19,16 @@ system.mes.location.newLocation()
 
 ## Parameters
 
-| Parameter | Type | Description                               |
-| --------- | ---- | ----------------------------------------- |
-| None      | -    | This method does not take any parameters. |
+| Parameter | Type | Nullable | Description                               |
+|-----------|------|----------|-------------------------------------------|
+| None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
 
 Returns a JSON representation of the newly created location object. The following is a list of keys and default values:
 
 | Key                      | Default Value    |
-| ------------------------ | ---------------- |
+|--------------------------|------------------|
 | `name`                   | `null`           |
 | `description`            | `null`           |
 | `parentId`               | `null`           |
@@ -38,7 +38,7 @@ Returns a JSON representation of the newly created location object. The followin
 | `allowNegativeInventory` | `false`          |
 | `storageCapacity`        | `null`           |
 | `storageCapacityUnitId`  | `null`           |
-| `lotStorageStrategy`     | `ALLOW_MULTIPLE` |
+| `lotStorageStrategy`     | `NO_STORAGE`     |
 | `lotUseStrategy`         | `FIFO`           |
 | `path`                   | `null`           |
 | `id`                     | `null`           |

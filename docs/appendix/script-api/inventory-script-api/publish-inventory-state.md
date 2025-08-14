@@ -23,14 +23,16 @@ system.mes.inventory.publishInventoryState([locationIdsOrPaths])
 ## Parameters
 
 **No Parameter:**
-| Parameter | Type | Description |
-|-----------|------|-------------------------------------------|
-| None | - | This method does not take any parameters. |
+
+| Parameter | Type | Nullable | Description                               |
+|-----------|------|----------|-------------------------------------------|
+| None      | -    | -        | This method does not take any parameters. |
 
 **With a Parameter:**
-| Parameter | Type | Description |
-|----------------------|-----------------|---------------------------------------------------------------------|
-| `locationIdsOrPaths` | `List<String>` | List of IDs or paths of the location associated with the inventory. |
+
+| Parameter            | Type           | Nullable | Description                                                                                   |
+|----------------------|----------------|----------|-----------------------------------------------------------------------------------------------|
+| `locationIdsOrPaths` | `List<String>` | False    | List of IDs or paths of the locations associated with the inventories to publish to the tags. |
 
 ## Returns
 

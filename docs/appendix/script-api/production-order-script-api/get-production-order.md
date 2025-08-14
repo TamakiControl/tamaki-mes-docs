@@ -18,16 +18,16 @@ system.mes.productionOrder.getProductionOrder(productionOrderIdOrName)
 
 ## Parameters
 
-| Parameter                 | Type     | Description                                         |
-|---------------------------| -------- | --------------------------------------------------- |
-| `productionOrderIdOrName` | `String` | The ID or name of the production order to retrieve. |
+| Parameter                 | Type     | Nullable | Description                                         |
+|---------------------------|----------|----------|-----------------------------------------------------|
+| `productionOrderIdOrName` | `String` | False    | The ID or name of the production order to retrieve. |
 
 ## Returns
 
 Returns a JSON representation of the production order. Returns nothing if no production order is found.
 
 | Name                | Type                | Description                                                                                               |
-| ------------------- | ------------------- | --------------------------------------------------------------------------------------------------------- |
+|---------------------|---------------------|-----------------------------------------------------------------------------------------------------------|
 | `productName`       | `String`            | The name of the material produce to be produced in this production order.                                 |
 | `customerName`      | `String`            | The name of the customer that is associated with this production order.                                   |
 | `locationName`      | `String`            | The name of the location that is associated with this production order.                                   |

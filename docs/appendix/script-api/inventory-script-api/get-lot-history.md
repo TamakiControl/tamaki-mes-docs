@@ -16,17 +16,17 @@ system.mes.inventory.getLotHistory()
 
 ## Parameters
 
-| Parameter                 | Type            | Description                                                                                                                                  |
-| ------------------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `lotId`                   | `String` (ULID) | The ID of the lot to retrieve history for.                                                                                                   |
-| `lotRecordType`           | `String`        | The type of lot record to retrieve (e.g CONSUME, UNCONSUME, PRODUCE, MOVE, SPLIT, MERGE, SCRAP, RETURN, STATUS_CHANGE, EDIT, RECEIVE, SHIP). |
-| `operationId`             | `String` (ULID) | The ID of the operation to filter by.                                                                                                        |
-| `inventoryOperationId`    | `String` (ULID) | The ID of the inventory operation to filter by.                                                                                              |
-| `productionOrderIdOrName` | `String`        | The ID or name of the production order to filter by.                                                                                         |
-| `materialReasonCodeId`    | `String` (ULID) | The ID of the material reason code to filter by.                                                                                             |
-| `startDate`               | `Instant`       | The start date of the history. Only records created after this date will be returned.                                                        |
-| `endDate`                 | `Instant`       | The end date of the history. Only records created before this date will be returned.                                                         |
-| `status`                  | `String`        | The status of the lot record to filter by (e.g IDLE, RUNNING, COMPLETED, FAULTED, CANCELLED, UNKNOWN, PAUSED).                               |
+| Parameter                 | Type            | Nullable | Description                                                                                                                                  |
+|---------------------------|-----------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| `lotId`                   | `String` (ULID) | False    | The ID of the lot to retrieve history for.                                                                                                   |
+| `lotRecordType`           | `String`        | True     | The type of lot record to retrieve (e.g CONSUME, UNCONSUME, PRODUCE, MOVE, SPLIT, MERGE, SCRAP, RETURN, STATUS_CHANGE, EDIT, RECEIVE, SHIP). |
+| `operationId`             | `String` (ULID) | True     | The ID of the operation to filter by.                                                                                                        |
+| `inventoryOperationId`    | `String` (ULID) | True     | The ID of the inventory operation to filter by.                                                                                              |
+| `productionOrderIdOrName` | `String`        | True     | The ID or name of the production order to filter by.                                                                                         |
+| `materialReasonCodeId`    | `String` (ULID) | True     | The ID of the material reason code to filter by.                                                                                             |
+| `startDate`               | `Instant`       | True     | The start date of the history. Only records created after this date will be returned.                                                        |
+| `endDate`                 | `Instant`       | True     | The end date of the history. Only records created before this date will be returned.                                                         |
+| `status`                  | `String`        | True     | The status of the lot record to filter by (e.g IDLE, RUNNING, COMPLETED, FAULTED, CANCELLED, UNKNOWN, PAUSED).                               |
 
 ## Returns
 
@@ -34,7 +34,7 @@ Returns a list of JSON objects representing all inventory lot records for an inv
 Each JSON object has the following properties:
 
 | Name                        | Type            | Description                                                                                                                      |
-| --------------------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+|-----------------------------|-----------------|----------------------------------------------------------------------------------------------------------------------------------|
 | `lotRecordType`             | `String`        | The type of lot record (e.g CONSUME, UNCONSUME, PRODUCE, MOVE, SPLIT, MERGE, SCRAP, RETURN, STATUS_CHANGE, EDIT, RECEIVE, SHIP). |
 | `inventoryLotId`            | `String` (ULID) | The ID of the inventory lot.                                                                                                     |
 | `inventoryLotName`          | `String`        | The name of the inventory lot.                                                                                                   |

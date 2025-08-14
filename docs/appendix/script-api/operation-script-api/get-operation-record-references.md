@@ -18,9 +18,9 @@ system.mes.operation.getOperationRecordReferences(id)
 
 ## Parameters
 
-| Parameter | Type            | Description                                 |
-| --------- | --------------- | ------------------------------------------- |
-| `id`      | `String` (ULID) | The ID of the operation record to retrieve. |
+| Parameter | Type            | Nullable | Description                                 |
+| --------- | --------------- | -------- | ------------------------------------------- |
+| `id`      | `String` (ULID) | False    | The ID of the operation record to retrieve. |
 
 ## Returns
 

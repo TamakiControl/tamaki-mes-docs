@@ -19,9 +19,9 @@ system.mes.productionOrder.deleteProductionOrderPropertyValue(id)
 
 ## Parameters
 
-| Parameter | Type            | Description                                              |
-| --------- | --------------- | -------------------------------------------------------- |
-| `id`      | `String` (ULID) | The ID of the production order property value to delete. |
+| Parameter | Type            | Nullable | Description                                              |
+|-----------|-----------------|----------|----------------------------------------------------------|
+| `id`      | `String` (ULID) | False    | The ID of the production order property value to delete. |
 
 ## Returns
 
@@ -29,7 +29,7 @@ If successful, an ApiResponse Object is returned with the success bool set True.
 If the property value that's being deleted has a reference, an ApiResponse Object is returned with details about the encountered error.
 
 | Name      | Type      | Description                                                 |
-| --------- | --------- | ----------------------------------------------------------- |
+|-----------|-----------|-------------------------------------------------------------|
 | `success` | `Boolean` | Indicates if the delete was successful.                     |
 | `message` | `String`  | The reason why the deletion was successful or unsuccessful. |
 | `data`    | `String`  | The data associated with the deletion.                      |
