@@ -25,7 +25,7 @@ system.mes.inventory.operation.startInventoryOperation(inventoryOperationId, pri
 | `secondaryLotIdOrName` | `String`        | True     | The ID or name of the secondary lot to start.                           |
 | `materialIdOrPath`     | `String`        | True     | The ID or path of the material associated with the inventory operation. |
 | `inventoryName`        | `String`        | True     | The name of the inventory associated with the inventory operation.      |
-| `startDate`            | `Instant`       | True     | The start date of the inventory operation.                              |
+| `startDateMillis`      | `Long`          | True     | The start date of the inventory operation.                              |
 
 ## Returns
 
