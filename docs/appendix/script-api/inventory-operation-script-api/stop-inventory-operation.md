@@ -23,7 +23,7 @@ system.mes.inventory.operation.stopInventoryOperation(inventoryOperationId, quan
 | `inventoryOperationId` | `String` (ULID) | False    | The ID of the inventory operation to end.                          |
 | `quantity`             | `Double`        | False    | The quantity that the inventory operation processed.               |
 | `inventoryName`        | `String`        | True     | The name of the inventory associated with the inventory operation. |
-| `endDate`              | `Instant`       | True     | The end date of the inventory operation.                           |
+| `endDateMillis`        | `Long`          | True     | The end date of the inventory operation.                           |
 
 ## Returns
 
