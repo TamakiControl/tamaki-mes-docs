@@ -51,7 +51,7 @@ References the name of the schedule that defines the timings for this shift. It 
 ### `schedule_source`
 
 `schedule_source` can have the following values:
-- `IGNITION_SCHEDULE`: Requires a corresponding schedule in the Alarming section of the Ignition gateway. See: https://www.docs.inductiveautomation.com/docs/8.1/platform/alarming/alarming-schedules
+- `IGNITION_SCHEDULE`: Requires a corresponding schedule in the Alarming section of the Ignition gateway. See: [Alarming Schedules documentation](https://www.docs.inductiveautomation.com/docs/8.1/platform/alarming/alarming-schedules)
 - `IGNITION_EXPRESSION`: Use start and stop expression triggers.
 - `MES_SCHEDULE`: TBD
 
