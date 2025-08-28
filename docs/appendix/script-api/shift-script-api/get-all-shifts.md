@@ -1,20 +1,20 @@
 ---
 sidebar_position: 4
 title: "getAllShifts"
-description: "Retrieves all schedule shifts."
+description: "Retrieves all shifts."
 ---
 
-# system.mes.schedule.shift.getAllShifts
+# system.mes.shift.getAllShifts
 
 ## Description
 
-Retrieves a list of all [Schedule Shifts](../../data-model/schedule-shift-model/schedule-shift) records in the system.
+Retrieves a list of all [Shifts](../../data-model/shift-model/shift) records in the system.
 
 ## Syntax
 
 ```python
-system.mes.schedule.shift.getAllShifts()
-system.mes.schedule.shift.getAllShifts(includeDisabled)
+system.mes.shift.getAllShifts()
+system.mes.shift.getAllShifts(includeDisabled)
 ```
 
 ## Parameters
@@ -33,16 +33,16 @@ system.mes.schedule.shift.getAllShifts(includeDisabled)
 
 ## Returns
 
-Returns a list of JSON objects representing all schedule shifts.
+Returns a list of JSON objects representing all shifts.
 
 ## Code Examples
 
 ```python
-# Retrieve all schedule shifts (enabled only)
-shifts = system.mes.schedule.shift.getAllShifts()
+# Retrieve all shifts (enabled only)
+shifts = system.mes.shift.getAllShifts()
 print(shifts)
 
-# Retrieve all schedule shifts, including disabled
-all_shifts = system.mes.schedule.shift.getAllShifts(True)
+# Retrieve all shifts, including disabled
+all_shifts = system.mes.shift.getAllShifts(True)
 print(all_shifts)
 ```

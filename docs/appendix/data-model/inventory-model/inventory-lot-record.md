@@ -37,7 +37,7 @@ each, along with sample data where applicable.
 | `material_reason_code_id`    | `String` (ULID) | References an optional reason code for the inventory action. See [material_reason_codes](../material-model/material-reason-code). | `01JAP8R5RT-3FPXQABY-7KQZT6VF`      |
 | `source_location_id`         | `String` (ULID) | Location where the inventory is sourced. See [locations](../location-model/location).                                             | `01JAP8RJBN-4VYZUKE1-LY2QHV8X`      |
 | `destination_location_id`    | `String` (ULID) | Location where the inventory is transferred. See [locations](../location-model/location).                                         | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
-| `schedule_shift_record_id`   | `String` (ULID) | References the associated schedule shift record. See [schedule_shift_records](../schedule-shift-model/schedule-shift-record).     | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
+| `schedule_shift_record_id`   | `String` (ULID) | References the associated shift record. See [shift_records](../shift-model/shift-record).                                         | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
 | `lot_status`                 | `String` (Enum) | Initial status of the inventory lot, as defined by the **LotStatus** enum.                                                        | `OPEN`                              |
 | `quantity`                   | `Double`        | Quantity of material involved in the record.                                                                                      | `100.5`                             |
 | `start_date`                 | `DateTime`      | Timestamp marking the beginning of the change.                                                                                    | `2024-05-10T08:00:00Z`              |
@@ -111,8 +111,8 @@ See [locations](../location-model/location) for details.
 
 ### `schedule_shift_record_id`
 
-References the `ScheduleShiftRecord` entity that was active during which this inventory action was performed. This links the inventory action to a specific shift record, allowing for better tracking of inventory activities over time.
-See [schedule_shift_records](../schedule-shift-model/schedule-shift-record) for details.
+References the `ShiftRecord` entity that was active during which this inventory action was performed. This links the inventory action to a specific shift record, allowing for better tracking of inventory activities over time.
+See [shift_records](../shift-model/shift-record) for details.
 
 
 ### `lot_status`

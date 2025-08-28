@@ -1,20 +1,20 @@
 ---
 sidebar_position: 22
 title: "reloadStateFromDB"
-description: "Reloads the Schedule Shift state from the database (re-reads trigger expressions)."
+description: "Reloads the Shift state from the database (re-reads trigger expressions)."
 ---
 
-# system.mes.schedule.shift.reloadStateFromDB
+# system.mes.shift.reloadStateFromDB
 
 ## Description
 
-Reloads the Schedule Shift state from the database. Use this after making manual database updates to ensure in-memory
+Reloads the Shift state from the database. Use this after making manual database updates to ensure in-memory
 trigger expressions and related cached state are refreshed.
 
 ## Syntax
 
 ```python
-system.mes.schedule.shift.reloadStateFromDB()
+system.mes.shift.reloadStateFromDB()
 ```
 
 ## Parameters
@@ -30,6 +30,6 @@ No return value.
 ## Code Examples
 
 ```python
-# Reload schedule shift trigger expressions and state from DB
-system.mes.schedule.shift.reloadStateFromDB()
+# Reload shift trigger expressions and state from DB
+system.mes.shift.reloadStateFromDB()
 ```

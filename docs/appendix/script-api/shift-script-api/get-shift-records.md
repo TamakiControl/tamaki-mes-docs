@@ -1,20 +1,20 @@
 ---
 sidebar_position: 17
 title: "getShiftRecords"
-description: "Retrieves all schedule shift records for a location within a time range."
+description: "Retrieves all shift records for a location within a time range."
 ---
 
-# system.mes.schedule.shift.getShiftRecords
+# system.mes.shift.getShiftRecords
 
 ## Description
 
-Retrieves all [Schedule Shift Records](../../data-model/schedule-shift-model/schedule-shift-record) for the given
+Retrieves all [Shift Records](../../data-model/shift-model/shift-record) for the given
 location within the specified time range.
 
 ## Syntax
 
 ```python
-system.mes.schedule.shift.getShiftRecords(locationIdOrPath, startDateMillis, endDateMillis)
+system.mes.shift.getShiftRecords(locationIdOrPath, startDateMillis, endDateMillis)
 ```
 
 ## Parameters
@@ -27,12 +27,12 @@ system.mes.schedule.shift.getShiftRecords(locationIdOrPath, startDateMillis, end
 
 ## Returns
 
-Returns a list of JSON objects representing the schedule shift records.
+Returns a list of JSON objects representing the shift records.
 
 ## Code Examples
 
 ```python
 # List records between two timestamps
-records = system.mes.schedule.shift.getShiftRecords('DairyCo/Plant1/Line1', 1735689600000, 1735776000000)
+records = system.mes.shift.getShiftRecords('DairyCo/Plant1/Line1', 1735689600000, 1735776000000)
 print(records)
 ```
