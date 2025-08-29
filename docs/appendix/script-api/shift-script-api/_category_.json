@@ -1,0 +1,8 @@
+{
+  "label": "system.mes.shift",
+  "position": 2,
+  "link": {
+    "type": "doc",
+    "id": "appendix/script-api/shift-script-api/intro"
+  }
+}
