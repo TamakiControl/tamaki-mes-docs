@@ -49,7 +49,7 @@ values:
 | `spare2`                  | `null`              |
 | `spare3`                  | `null`              |
 
-Valid values for `shiftScheduleSource` are `IGNITION_SCHEDULE`, `IGNITION_EXPRESSION`, `MES_SCHEDULE`.
+Valid values for `shiftScheduleSource` are `IGNITION_SCHEDULE`, `IGNITION_EXPRESSION`.
 
 ## Code Examples
 
