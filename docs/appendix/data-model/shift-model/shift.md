@@ -10,6 +10,8 @@ description: "Documentation for the shifts table, outlining its columns and stru
 
 The `Shift` entity defines a shift configuration at a location. It establishes how a shift is identified, where it runs, how to resolve conflicts with other shifts, and optionally how it starts and stops via schedule/expressions.
 
+A Shift is understood to be associated to a specific location as well as all its descendent locations unless another shift is configured on any of those decedents .
+
 ## Table Structure
 
 The following table outlines the SQL columns for the `shifts` table, providing a brief description of each, along with sample data where applicable.
