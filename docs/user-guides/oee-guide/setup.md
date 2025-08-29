@@ -373,6 +373,10 @@ The name of the downtime reason, which is displayed in [Downtime Entry](downtime
 
 A concise, detailed description of the downtime reason, providing additional context and information about the cause of the downtime. This can help operators and managers understand the issue better and take appropriate actions.
 
+#### Location
+
+The location to which the downtime reason is associated. If left blank, the downtime reason will be available for all locations.
+
 #### Code
 
 The integer code for the downtime reason, matching the PLC tag that indicates the downtime reason or fault code of the location. This code is used to identify the downtime reason in the PLC and should be unique for each downtime reason.

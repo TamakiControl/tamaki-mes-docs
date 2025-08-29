@@ -23,7 +23,9 @@ description: "OEE Unit Dashboard Screen"
 - [OEE State Timeline](#oee-state-timeline)
 - [OEE Metrics by Hour](#oee-metrics-by-hour)
 - [Downtime Reasons Pareto Chart](#downtime-reasons-pareto-chart)
-- [Time Selection Sidebar](#time-selection-sidebar)
+- [Performance Details Chart](#performance-details-chart)
+- [Quality Details Chart](#quality-details-chart)
+- [Time Selection Sidebar](#time-and-location-selection-sidebar)
 
 ## Top Bar
 **Example:**
@@ -44,16 +46,16 @@ description: "OEE Unit Dashboard Screen"
 ![Pie chart showing distribution of different operational states for the selected unit](./images/unit-dashboard-pie-chart.png)
 
 **Description:**
-- The pie chart provides a visual representation of the different states of the unit, allowing users to quickly assess the distribution of time spent in each state. The chart is color-coded to match the states defined in the [States](setup#states) section.
+- The pie chart provides a visual representation of the different modes of the unit, with the exception that the mode, `Production`, is broken down into its states. The reason that this image seems to be showing only states is because the only mode present in the time frame of this screenshot is `Production`. allowing users to quickly assess the distribution of time spent in each state and mode. The chart is color-coded to match the states and modes defined in the [States](setup#states) and [Modes](setup#modes) sections .
 
-## OEE State Timeline
+## OEE State and Mode Timelines
 **Example:**
 
 ![OEE state timeline showing color-coded periods of different operational states for the unit](./images/unit-dashboard-state-timeline.png)
 
 **Description:**
-- A timeline that shows the historical OEE state of the line, allowing users to see trends and patterns over time. Hover over the colored bars that make up the timeline to see the start time, end time, and duration of the event associated with the color (see [States](setup#states) for what state each color represents).
-- Clicking on a bar in the timeline will open a popup with more detailed information about the event:
+- Timelines that shows the historical OEE state and mode of the line, allowing users to see trends and patterns over time. Hover over the colored bars that make up the timeline to see the start time, end time, and duration of the event associated with the color (see [States](setup#states) for what state each color represents).
+- Clicking on a bar in the state timeline will open a popup with more detailed information about the event:
   
   ![Timeline event details popup showing duration and state information](./images/timeline-event-details.png)
   
@@ -73,15 +75,31 @@ description: "OEE Unit Dashboard Screen"
 **Description:**
 - The Downtime Reasons Pareto chart displays the most common reasons for downtime in the selected unit. Along with the cumulative frequency, This helps users identify recurring issues and prioritize improvements to reduce downtime. This chart defaults to showing the top level reason codes in the hierarchy, click on any bar to drill down.
 
-## Time Selection Sidebar
+## Performance Details Chart
 **Example:**
 
-![Time selection sidebar showing options to select time range for data display](./images/unit-dashboard-time-selection.png)
+![Performance chart showing actual vs target performance over time](./images/unit-dashboard-performance-chart.png)
 
 **Description:**
-- The Time Selection sidebar allows users to select the time range for which they want to view data on the Unit Dashboard. Users can choose from predefined ranges or specify a custom range to analyze performance metrics and downtime reasons for specific periods.
+- The Performance Chart displays the actual performance of the unit compared to the target performance over time.
 
-### Components
+## Quality Details Chart
+**Example:**
+
+![Quality chart showing actual vs target quality over time](./images/unit-dashboard-quality-chart.png)
+
+**Description:**
+- The Quality Chart displays the actual quality of the unit compared to the target quality over time.
+
+## Time and Location Selection Sidebar
+**Example:**
+
+![Time and Location selection sidebar showing options to select time range for data display](images/unit-dashboard-time-and-location-selection-sidebar.png)
+
+**Description:**
+- The Time and Location Selection sidebar allows users to select the time range for which they want to view data on the Unit Dashboard, as well as the location they want view data for. Users can choose from predefined ranges or specify a custom range to analyze performance metrics and downtime reasons for specific periods.
+
+### Components  
 
 - **Time Range Selection**: The user can select between realtime and historical data.
   - **Realtime**: The user can select a duration, time unit (hours, minutes, or seconds), and a refresh interval.
