@@ -41,7 +41,7 @@ Returns a JSON representation of the shift. Returns nothing if no shift is found
 | `name`                     | `String`        | The shift name.                                                                                     |
 | `description`              | `String`        | Description of the shift.                                                                           |
 | `shiftScheduleName`        | `String`        | The name of the schedule defining this shift's timings.                                             |
-| `shiftScheduleSource`      | `String`        | The source of the schedule (e.g., `IGNITION_SCHEDULE`, `IGNITION_EXPRESSION`, `MES_SCHEDULE`).      |
+| `shiftScheduleSource`      | `String`        | The source of the schedule (e.g., `IGNITION_SCHEDULE`, `IGNITION_EXPRESSION`).      |
 | `locationId`               | `String` (ULID) | The location where the shift runs.                                                                  |
 | `locationPath`             | `String`        | The path of the location (for display purposes).                                                    |
 | `currentRecordId`          | `String` (ULID) | The current shift record id, if any.                                                                |
