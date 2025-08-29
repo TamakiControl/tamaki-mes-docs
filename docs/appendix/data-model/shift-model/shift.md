@@ -31,7 +31,7 @@ The following table outlines the SQL columns for the `shifts` table, providing a
 | `name`                     | `String`          | Name identifier for the shift.                                                                                           | `Morning Shift`                |
 | `description`              | `String`          | Optional description of the shift.                                                                                       | `Morning shift M–F`            |
 | `shift_schedule_name`      | `String`          | Name of the schedule that defines this shift's timings (if using schedule-based timing).                                 | `Weekday Schedule`             |
-| `shift_schedule_source`    | `String` (Enum)   | Source of the schedule that defines this shift's timings. One of: `IGNITION_SCHEDULE`, `IGNITION_EXPRESSION`, `MES_SCHEDULE`.            | `IGNITION_SCHEDULE`            |
+| `shift_schedule_source`    | `String` (Enum)   | Source of the schedule that defines this shift's timings. One of: `IGNITION_SCHEDULE`, `IGNITION_EXPRESSION`| `IGNITION_SCHEDULE`            |
 | `running_conflict_strategy`| `String` (Enum)   | Strategy for handling conflicts when starting a shift while another is active. One of: `THROW_EXCEPTION`, `STOP_PREVIOUS`. | `STOP_PREVIOUS`                |
 | `start_trigger_expression` | `String`          | Expression used to determine when the shift should start (if using expressions).                                         | `0 0 6 * * 1-5`                |
 | `start_trigger_type`       | `String` (Enum)   | Trigger type used to start the shift (e.g., `RISING_EDGE`, `FALLING_EDGE`, `CHANGE`).                                     | `RISING_EDGE`                  |
