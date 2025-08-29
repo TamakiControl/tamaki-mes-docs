@@ -1,0 +1,9 @@
+{
+  "label": "system.mes.dashboard",
+  "position": 2,
+  "link": {
+    "type": "doc",
+    "id": "appendix/script-api/dashboard-script-api/intro"
+  }
+}
+
