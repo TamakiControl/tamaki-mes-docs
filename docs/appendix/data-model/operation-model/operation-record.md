@@ -36,7 +36,7 @@ with sample data where applicable.
 | `location_id`              | `String` (ULID) | References the location where the operation took place. See [locations](../location-model/location).                                    | `01JAP8RJBN-4VYZUKE1-LY2QHV8X`      |
 | `operation_id`             | `String` (ULID) | References the operation definition that this operation record is for. See [operations](../operation-model/operation).                  | `01JAP8R5RT-3FPXQABY-7KQZT6VF`      |
 | `production_order_id`      | `String` (ULID) | References the production order that this operation record is for. See [production_orders](../production-order-model/production-order). | `01JAP8RJBN-7KQZT6VF-Q5VUZYPW`      |
-| `schedule_shift_record_id` | `String` (ULID) | References the associated schedule shift record. See [schedule_shift_records](../shift-model/shift-record).           | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
+| `shift_record_id` | `String` (ULID) | References the associated schedule shift record. See [schedule_shift_records](../shift-model/shift-record).           | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
 
 ## Field Details
 
