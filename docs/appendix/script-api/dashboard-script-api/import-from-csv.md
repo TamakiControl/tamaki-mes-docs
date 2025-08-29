@@ -14,14 +14,14 @@ updates widgets and their metadata accordingly.
 ## Syntax
 
 ```python
-system.mes.dashboard.importFromCsv(importBytes)
+system.mes.dashboard.importFromCsv(bytes)
 ```
 
 ## Parameters
 
-| Parameter     | Type      | Nullable | Description                        |
-|---------------|-----------|----------|------------------------------------|
-| `importBytes` | `PyArray` | False    | The CSV file content as raw bytes. |
+| Parameter | Type     | Nullable | Description                        |
+|-----------|----------|----------|------------------------------------|
+| `bytes`   | `Byte[]` | False    | The CSV file content as raw bytes. |
 
 ## Returns
 

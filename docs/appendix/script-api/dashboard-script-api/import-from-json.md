@@ -14,14 +14,14 @@ updates widgets and their metadata accordingly.
 ## Syntax
 
 ```python
-system.mes.dashboard.importFromJson(importBytes)
+system.mes.dashboard.importFromJson(bytes)
 ```
 
 ## Parameters
 
-| Parameter     | Type      | Nullable | Description                         |
-|---------------|-----------|----------|-------------------------------------|
-| `importBytes` | `PyArray` | False    | The JSON file content as raw bytes. |
+| Parameter | Type     | Nullable | Description                         |
+|-----------|----------|----------|-------------------------------------|
+| `bytes`   | `Byte[]` | False    | The JSON file content as raw bytes. |
 
 ## Returns
 
