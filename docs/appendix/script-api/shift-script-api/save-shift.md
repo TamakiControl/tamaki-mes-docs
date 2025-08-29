@@ -25,7 +25,7 @@ system.mes.shift.saveShift(**shift_data)
 | `name`                    | `String`        | False    | The name of the shift.                                                                                |
 | `description`             | `String`        | True     | A detailed description of the shift.                                                                  |
 | `shiftScheduleName`       | `String`        | True     | The name of the schedule that defines this shift's timings (when using schedule-based timing).        |
-| `shiftScheduleSource`     | `String` (Enum) | False    | The source of timing (e.g., `IGNITION_SCHEDULE`, `IGNITION_EXPRESSION`, `MES_SCHEDULE`).              |
+| `shiftScheduleSource`     | `String` (Enum) | False    | The source of timing (e.g., `IGNITION_SCHEDULE`, `IGNITION_EXPRESSION`).              |
 | `currentRecordId`         | `String` (ULID) | True     | The current shift record id for the shift (if any).                                                   |
 | `runningConflictStrategy` | `String` (Enum) | False    | Strategy when a new shift starts while another is running (e.g., `STOP_PREVIOUS`, `THROW_EXCEPTION`). |
 | `startTriggerExpression`  | `String`        | True     | The expression used to determine when the shift should start.                                         |
