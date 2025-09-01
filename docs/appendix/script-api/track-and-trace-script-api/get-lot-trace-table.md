@@ -1,19 +1,19 @@
 ---
-title: "getLotTraceGraph"
-description: "Retrieves adjacent nodes and edges of the track and trace graph for the given inventory lot ID in the specified direction."
-sidebar_position: 0
+title: "getLotTraceTable"
+description: "Retrieves adjacent nodes and edges of the track and trace Table for the given inventory lot ID in the specified direction."
+sidebar_position: 1
 ---
 
-# system.mes.trackandtrace.getLotTraceGraph
+# system.mes.trackandtrace.getLotTraceTable
 
 ## Description
 
-Retrieves adjacent nodes and edges of the trace graph for the given 
+Retrieves adjacent nodes and edges of the trace Table for the given 
 [InventoryLot](../../data-model/inventory-model/inventory-lot.md) ID in the specified direction. Only a single level of 
 adjacency is returned, meaning that the function will return only the nodes and edges that are directly connected to the 
 root node.
 
-This function is used by the trace graph component to visualize the flow of materials. Nodes represent inventory lots, 
+This function is used by the trace Table component to visualize the flow of materials. Nodes represent inventory lots, 
 and edges represent the InventoryLotRecords that connect them.
 
 ## Permissions
@@ -22,8 +22,7 @@ This scripting function has no client permission restrictions.
 
 ## Syntax
 ```python
-system.mes.trackandtrace.getLotTraceGraph(rootNodeId, direction)
-system.mes.trackandtrace.getLotTraceGraph(rootNodeId, direction, depth) # Overload
+system.mes.trackandtrace.getLotTraceTable(rootNodeId, direction)
 ```
 
 ## Parameters
@@ -31,20 +30,20 @@ system.mes.trackandtrace.getLotTraceGraph(rootNodeId, direction, depth) # Overlo
 | Parameter    | Type          | Description                                                                                                     | Required  |
 |--------------|---------------|-----------------------------------------------------------------------------------------------------------------|-----------|
 | `rootNodeId` | `String` (ULID) | The ID of the root inventory lot                                                                              | Yes       |
-| `direction`   | `String`      | The direction of the trace graph to be retrieved. Can be either `INPUT` or `OUTPUT`                            | Yes       |
-| `depth `      | `Int`         | The desired maximum depth to which the graph will attempt to generate nodes in the given direction (maximum 5) | No        |
+| `direction`   | `String`      | The direction of the trace Table to be retrieved. Can be either `INPUT` or `OUTPUT`                            | Yes       |
+| `depth `      | `Int`         | The desired maximum depth to which the Table will attempt to generate nodes in the given direction (maximum 5) | No        |
 
 
 ## Returns
 
-A trace graph object with the following properties:
+A trace Table object with the following properties:
 
-### Trace Graph
+### Trace Table
 
 | Property     | Type            | Description                                                                                               |
 |--------------|-----------------|-----------------------------------------------------------------------------------------------------------|
-| `nodes`      | `List` of nodes | List of nodes in the track and trace graph that are adjacent to the root node in the requested direction. |
-| `edges`      | `List` of edges | List of edges in the track and trace graph that connect the nodes in the requested direction.             |
+| `nodes`      | `List` of nodes | List of nodes in the track and trace Table that are adjacent to the root node in the requested direction. |
+| `edges`      | `List` of edges | List of edges in the track and trace Table that connect the nodes in the requested direction.             |
 | `rootNodeId` | `String`        | The inventory lot ID that was given as an argument in the original request                                |
 | `direction`  | `String`        | The direction that was given as an argument in the original request                                       |
 
@@ -73,15 +72,15 @@ A trace graph object with the following properties:
 | `id`         | `String` (ULID) | Unique identifier of the [InventoryLotRecord](../../data-model/inventory-model/inventory-lot-record.md) for the edge. |
 | `source`     | `String` (ULID) | The source InventoryLot ID from which this edge originates.                                                           |
 | `target`     | `String` (ULID) | The target InventoryLot ID to which this edge points.                                                                 |
-| `animated`   | `Boolean`     | Whether the edge is animated in the track and trace graph.                                                            |
+| `animated`   | `Boolean`     | Whether the edge is animated in the track and trace Table.                                                            |
 
 
 ## Code Example
 
 ```python
 inventoryLotId = "01JZJZ1FSE-WAW6VBVG-4506XP0C"
-traceGraph = system.mes.trackandtrace.getLotTraceGraph(inventoryLotId, "OUTPUT")
-print(traceGraph)
+traceTable = system.mes.trackandtrace.getLotTraceTable(inventoryLotId, "OUTPUT")
+print(traceTable)
 ```
 
 ### Example Output
