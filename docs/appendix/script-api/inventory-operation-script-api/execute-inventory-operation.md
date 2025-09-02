@@ -19,16 +19,16 @@ system.mes.inventory.operation.executeInventoryOperation(inventoryOperationId, p
 
 ## Parameters
 
-| Parameter              | Type            | Description                                                             |
-| ---------------------- | --------------- | ----------------------------------------------------------------------- |
-| `inventoryOperationId` | `String` (ULID) | The ID of the inventory operation to start.                             |
-| `primaryLotIdOrName`   | `String`        | The ID or name of the primary lot to start.                             |
-| `quantity`             | `Double`        | The quantity that the inventory operation processed.                    |
-| `secondaryLotIdOrName` | `String`        | The ID or name of the secondary lot to start.                           |
-| `materialIdOrPath`     | `String`        | The ID or path of the material associated with the inventory operation. |
-| `inventoryName`        | `String`        | The name of the inventory associated with the inventory operation.      |
-| `startDate`            | `Instant`       | The start date of the inventory operation.                              |
-| `endDate`              | `Instant`       | The end date of the inventory operation.                                |
+| Parameter              | Type            | Nullable | Description                                                             |
+|------------------------|-----------------|----------|-------------------------------------------------------------------------|
+| `inventoryOperationId` | `String` (ULID) | False    | The ID of the inventory operation to start.                             |
+| `primaryLotIdOrName`   | `String`        | False    | The ID or name of the primary lot to start.                             |
+| `quantity`             | `Double`        | False    | The quantity that the inventory operation processed.                    |
+| `secondaryLotIdOrName` | `String`        | True     | The ID or name of the secondary lot to start.                           |
+| `materialIdOrPath`     | `String`        | True     | The ID or path of the material associated with the inventory operation. |
+| `inventoryName`        | `String`        | True     | The name of the inventory associated with the inventory operation.      |
+| `startDateMillis`      | `Long`          | True     | The start date of the inventory operation.                              |
+| `endDateMillis`        | `Long`          | True     | The end date of the inventory operation.                                |
 
 ## Returns
 

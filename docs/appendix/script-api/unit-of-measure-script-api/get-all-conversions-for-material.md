@@ -18,9 +18,9 @@ system.mes.unitOfMeasure.getAllConversionsForMaterial(id)
 
 ## Parameters
 
-| Parameter | Type            | Description                                                         |
-| --------- | --------------- | ------------------------------------------------------------------- |
-| `id`      | `String` (ULID) | The material ID to find all associated unit of measure conversions. |
+| Parameter | Type            | Nullable | Description                                                         |
+|-----------|-----------------|----------|---------------------------------------------------------------------|
+| `id`      | `String` (ULID) | False    | The material ID to find all associated unit of measure conversions. |
 
 ## Returns
 

@@ -18,9 +18,9 @@ system.mes.inventory.operation.getInventoryOperation(id)
 
 ## Parameters
 
-| Parameter | Type            | Description                                      |
-| --------- | --------------- | ------------------------------------------------ |
-| `id`      | `String` (ULID) | The unique identifier of the inventory operation. |
+| Parameter | Type            | Nullable | Description                                       |
+|-----------|-----------------|----------|---------------------------------------------------|
+| `id`      | `String` (ULID) | False    | The unique identifier of the inventory operation. |
 
 ## Returns
 

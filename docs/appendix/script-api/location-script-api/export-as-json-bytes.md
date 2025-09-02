@@ -20,7 +20,9 @@ system.mes.location.exportAsJsonBytes()
 
 ## Parameters
 
-No parameters.
+| Parameter | Type | Nullable | Description                                 |
+|-----------|------|----------|---------------------------------------------|
+| None      | -    | -        | This function does not take any parameters. |
 
 ## Returns
 

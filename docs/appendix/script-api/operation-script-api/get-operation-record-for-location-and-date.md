@@ -13,16 +13,16 @@ Retrieves a [Operation Records](../../data-model/operation-model/operation-recor
 ## Syntax
 
 ```python
-system.mes.operation.getOperationRecordForLocationAndDate(locationIdOrPath, startDate, endDate)
+system.mes.operation.getOperationRecordForLocationAndDate(locationIdOrPath, startDateMillis, endDateMillis)
 ```
 
 ## Parameters
 
-| Parameter          | Type     | Description                                                          |
-| ------------------ | -------- | -------------------------------------------------------------------- |
-| `locationIdOrPath` | `String` | The ID or path of the location associated with the operation record. |
-| `startDate`        | `String` | The start date of the operation.                                     |
-| `endDate`          | `String` | The end date of the operation.                                       |
+| Parameter          | Type     | Nullable | Description                                                          |
+|--------------------|----------|----------|----------------------------------------------------------------------|
+| `locationIdOrPath` | `String` | True     | The ID or path of the location associated with the operation record. |
+| `startDateMillis`  | `Long`   | True     | The start date of the operation in milliseconds since epoch.         |
+| `endDateMillis`    | `Long`   | True     | The end date of the operation in milliseconds since epoch.           |
 
 ## Returns
 
@@ -32,7 +32,7 @@ Returns a JSON representation of the operation record. Returns nothing if no ope
 
 ```python
 # Retrieve an operation record by location, start date and end date
-operation_record = system.mes.operation.getOperationRecordForLocationAndDate('01JD7M94CJ-HPEQEJ1F-QA8EQ6VE', '2025-01-01T00:00:00Z', '2026-01-01T00:00:00Z')
+operation_record = system.mes.operation.getOperationRecordForLocationAndDate('01JD7M94CJ-HPEQEJ1F-QA8EQ6VE', 1704067200000, 1735708800000)
 
 # Output the operation record
 print(operation_record)

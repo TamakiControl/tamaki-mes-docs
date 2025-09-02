@@ -147,10 +147,6 @@ Retrieves a flattened representation of all [Production Order Bill of Materials]
 
 Retrieves the [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) record associated with a production order ID or name and a material ID or path. Returns a JSON representation of the bill of materials associated with the given production order and material.
 
-### [`getBillOfMaterialsReferences`](./get-bill-of-materials-item-references)
-
-Retrieves a list of references to a [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) record by its ID. Returns a list of JSON objects.
-
 ### [`validateBillOfMaterialsItem`](./validate-bill-of-materials-item)
 
 Validates the specified parameters for a [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) record and returns any validation errors.

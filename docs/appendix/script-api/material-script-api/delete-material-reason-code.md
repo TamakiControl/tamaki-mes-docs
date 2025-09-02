@@ -1,5 +1,5 @@
 ---
-sidebar_position: 59
+sidebar_position: 60
 title: "deleteMaterialReasonCode"
 description: "Deletes the material reason code with the given ID."
 ---
@@ -19,9 +19,9 @@ system.mes.material.deleteMaterialReasonCode(id)
 
 ## Parameters
 
-| Parameter | Type            | Description                                   |
-| --------- | --------------- | --------------------------------------------- |
-| `id`      | `String` (ULID) | The ID of the material reason code to delete. |
+| Parameter | Type            | Nullable | Description                                   |
+|-----------|-----------------|----------|-----------------------------------------------|
+| `id`      | `String` (ULID) | False    | The ID of the material reason code to delete. |
 
 ## Returns
 
@@ -29,7 +29,7 @@ If successful, an ApiResponse Object is returned with the success bool set True.
 If the material reason code that's being deleted has a reference, an ApiResponse Object is returned with details about the encountered error.
 
 | Name      | Type      | Description                                                 |
-| --------- | --------- | ----------------------------------------------------------- |
+|-----------|-----------|-------------------------------------------------------------|
 | `success` | `Boolean` | Indicates if the delete was successful.                     |
 | `message` | `String`  | The reason why the deletion was successful or unsuccessful. |
 | `data`    | `String`  | The data associated with the deletion.                      |

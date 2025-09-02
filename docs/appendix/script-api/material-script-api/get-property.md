@@ -18,16 +18,16 @@ system.mes.material.getProperty(id)
 
 ## Parameters
 
-| Parameter | Type            | Description                                    |
-| --------- | --------------- | ---------------------------------------------- |
-| `id`      | `String` (ULID) | The ULID of the material property to retrieve. |
+| Parameter | Type            | Nullable | Description                                    |
+|-----------|-----------------|----------|------------------------------------------------|
+| `id`      | `String` (ULID) | False    | The ULID of the material property to retrieve. |
 
 ## Returns
 
 Returns a JSON representation of the material property. Returns nothing if no material property is found.
 
 | Name                  | Type            | Description                                                                                                          |
-| --------------------- | --------------- | -------------------------------------------------------------------------------------------------------------------- |
+|-----------------------|-----------------|----------------------------------------------------------------------------------------------------------------------|
 | `materialClassId`     | `String` (ULID) | The ULID of the material class associated with this material property.                                               |
 | `name`                | `String`        | The name of the material property.                                                                                   |
 | `description`         | `String`        | A description of the material property.                                                                              |

@@ -9,7 +9,7 @@ description: "Validates the specified parameters for a unit of measure."
 ## Description
 
 Validates the specified parameters for a [Units Of Measure](../../data-model/utility-models/unit-of-measure-model/unit-of-measure) record and returns any validation errors.
-This only checks if the unit of measure object can be saved based on the attributes given.
+This only checks if the unit of measure object can be saved based on the attributes given, without actually creating or modifying the unit of measure. Use this function to verify your parameters before executing a save unit of measure operation.
 
 ## Syntax
 
@@ -19,16 +19,16 @@ system.mes.unitOfMeasure.validateUnitOfMeasure(**uom_data)
 
 ## Parameters
 
-| Parameter | Type            | Description                                                                                |
-| --------- | --------------- | ------------------------------------------------------------------------------------------ |
-| `name`    | `String`        | The name of the unit of measure.                                                           |
-| `symbol`  | `String`        | The symbol of the unit of measure.                                                         |
-| `id`      | `String` (ULID) | The ULID of the unit of measure (optional, used for updating an existing unit of measure). |
-| `notes`   | `String`        | Notes related to the unit of measure.                                                      |
-| `enabled` | `Boolean`       | Indicates if the unit of measure is active and enabled.                                    |
-| `spare1`  | `String`        | Additional field for user-defined context.                                                 |
-| `spare2`  | `String`        | Additional field for user-defined context.                                                 |
-| `spare3`  | `String`        | Additional field for user-defined context.                                                 |
+| Parameter | Type            | Nullable | Description                                                                                |
+|-----------|-----------------|----------|--------------------------------------------------------------------------------------------|
+| `name`    | `String`        | False    | The name of the unit of measure.                                                           |
+| `symbol`  | `String`        | False    | The symbol of the unit of measure.                                                         |
+| `id`      | `String` (ULID) | True     | The ULID of the unit of measure (optional, used for updating an existing unit of measure). |
+| `notes`   | `String`        | True     | Notes related to the unit of measure.                                                      |
+| `enabled` | `Boolean`       | True     | Indicates if the unit of measure is active and enabled. Default value is `true`            |
+| `spare1`  | `String`        | True     | Additional field for user-defined context.                                                 |
+| `spare2`  | `String`        | True     | Additional field for user-defined context.                                                 |
+| `spare3`  | `String`        | True     | Additional field for user-defined context.                                                 |
 
 ## Returns
 

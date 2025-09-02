@@ -19,12 +19,22 @@ system.mes.unitOfMeasure.convert(amount, from, to, materialIdOrPath)
 
 ## Parameters
 
-| Parameter          | Type     | Description                                                      |
-| ------------------ | -------- | ---------------------------------------------------------------- |
-| `amount`           | `Double` | The amount to convert.                                           |
-| `from`             | `String` | The ULID or name of the from unit of measure to check.           |
-| `to`               | `String` | The ULID or name of the to unit of measure to check.             |
-| `materialIdOrPath` | `String` | The ULID or path of the material associated with the conversion. |
+### Method 1: Convert without material context
+
+| Parameter | Type     | Nullable | Description                                   |
+|-----------|----------|----------|-----------------------------------------------|
+| `amount`  | `Double` | False    | The amount to convert.                        |
+| `from`    | `String` | False    | The ULID or name of the from unit of measure. |
+| `to`      | `String` | False    | The ULID or name of the to unit of measure.   |
+
+### Method 2: Convert with material context
+
+| Parameter          | Type     | Nullable | Description                                                      |
+|--------------------|----------|----------|------------------------------------------------------------------|
+| `amount`           | `Double` | False    | The amount to convert.                                           |
+| `from`             | `String` | False    | The ULID or name of the from unit of measure.                    |
+| `to`               | `String` | False    | The ULID or name of the to unit of measure.                      |
+| `materialIdOrPath` | `String` | False    | The ULID or path of the material associated with the conversion. |
 
 ## Returns
 

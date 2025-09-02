@@ -18,10 +18,10 @@ system.mes.productionOrder.swapBillOfMaterialsPositions(item1Id, item2Id)
 
 ## Parameters
 
-| Parameter | Type            | Description                                                           |
-|-----------|-----------------|-----------------------------------------------------------------------|
-| `item1Id` | `String` (ULID) | The ULID of the first bill of materials item to swap positions with.  |
-| `item2Id` | `String` (ULID) | The ULID of the second bill of materials item to swap positions with. |
+| Parameter | Type            | Nullable | Description                                                           |
+|-----------|-----------------|----------|-----------------------------------------------------------------------|
+| `item1Id` | `String` (ULID) | False    | The ULID of the first bill of materials item to swap positions with.  |
+| `item2Id` | `String` (ULID) | False    | The ULID of the second bill of materials item to swap positions with. |
 
 ## Returns
 

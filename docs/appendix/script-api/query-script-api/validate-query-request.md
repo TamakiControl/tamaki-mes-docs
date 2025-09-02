@@ -9,7 +9,7 @@ sidebar_position: 5
 ## Description
 
 Validates the specified parameters for a [Query Request](./new-query-request) record and returns any validation errors.
-This only checks if the query request object can be saved based on the attributes given.
+This only checks if the query request can be performed based on the attributes given, without actually executing the query request. Use this function to verify your parameters before executing a query request operation.
 
 ## Syntax
 
@@ -19,13 +19,13 @@ system.mes.query.validateQueryRequest(**queryRequest)
 
 ## Parameters
 
-| Parameter        | Type                     | Description                                                                          |
-|------------------|--------------------------|--------------------------------------------------------------------------------------|
-| `pageSize`       | `Integer`                | Number of records to return per page. If null, pagination will not be applied.       |
-| `pageIndex`      | `Integer`                | Index of the page to return. If null, pagination will not be applied.                |
-| `sortFields`     | `List<String>`           | List of fields to sort by. These should be names as they appear in the entity class. |
-| `sortDirections` | `List<String>`           | Direction to sort the fields by. Default is ASC.                                     |
-| `filters`        | `List<FilterRequestDTO>` | List of filters to apply to the query.                                               |
+| Parameter        | Type                     | Nullable | Description                                                                          |
+|------------------|--------------------------|----------|--------------------------------------------------------------------------------------|
+| `pageSize`       | `Integer`                | True     | Number of records to return per page. If null, pagination will not be applied.       |
+| `pageIndex`      | `Integer`                | True     | Index of the page to return. If null, pagination will not be applied.                |
+| `sortFields`     | `List<String>`           | True     | List of fields to sort by. These should be names as they appear in the entity class. |
+| `sortDirections` | `List<String>`           | True     | Direction to sort the fields by. Default is ASC.                                     |
+| `filters`        | `List<FilterRequestDTO>` | True     | List of filters to apply to the query.                                               |
 
 ## Returns
 

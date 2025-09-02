@@ -18,9 +18,9 @@ system.mes.operation.getProductionOrderForOperation(operationId)
 
 ## Parameters
 
-| Parameter     | Type            | Description              |
-| ------------- | --------------- | ------------------------ |
-| `operationId` | `String` (ULID) | The ID of the operation. |
+| Parameter     | Type            | Nullable | Description              |
+|---------------|-----------------|----------|--------------------------|
+| `operationId` | `String` (ULID) | False    | The ID of the operation. |
 
 ## Returns
 

@@ -24,15 +24,15 @@ system.mes.inventory.operation.updateInventoryOperationStatesFromDatabase([inven
 
 **No Parameter:**
 
-| Parameter | Type | Description                               |
-| --------- | ---- | ----------------------------------------- |
-| None      | -    | This method does not take any parameters. |
+| Parameter | Type | Nullable | Description                               |
+|-----------|------|----------|-------------------------------------------|
+| None      | -    | -        | This method does not take any parameters. |
 
 **With a Parameter:**
 
-| Parameter               | Type                  | Description                              |
-| ----------------------- | --------------------- | ---------------------------------------- |
-| `inventoryOperationIds` | `List<String>` (ULID) | List of IDs of the inventory operations. |
+| Parameter               | Type                  | Nullable | Description                              |
+|-------------------------|-----------------------|----------|------------------------------------------|
+| `inventoryOperationIds` | `List<String>` (ULID) | True     | List of IDs of the inventory operations. |
 
 ## Returns
 

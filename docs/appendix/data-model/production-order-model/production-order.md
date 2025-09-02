@@ -41,7 +41,7 @@ with sample data where applicable.
 | `location_id`              | `String` (ULID) | References the location where the production is taking place. See [locations](../location-model/location).                                | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
 | `product_material_id`      | `String` (ULID) | References the material being produced. See [materials](../material-model/material).                                                      | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
 | `customer_id`              | `String` (ULID) | References the customer associated with the order. See [production_order_customers](../production-order-model/production-order-customer). | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
-| `schedule_shift_record_id` | `String` (ULID) | References the associated schedule shift record. See [schedule_shift_records](../schedule-shift-model/schedule-shift-record).             | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
+| `shift_record_id` | `String` (ULID) | References the associated shift record. See [shift_records](../shift-model/shift-record).                                                 | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
 | `unit_of_measure_id`       | `String` (ULID) | References the unit of measure for quantity. See [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure).              | `01JAP8R5RT-3FPXQABY-7KQZT6VF`      |
 
 ## Field Details
@@ -95,8 +95,8 @@ See [production_order_customers](../production-order-model/production-order-cust
 
 ### `schedule_shift_record_id`
 
-References the `ScheduleShiftRecord` entity that was active at the location the production order ran. This relationship connects the production order to its specific shift instance, allowing for better tracking of production orders within the context of scheduled shifts.
-See [schedule_shift_records](../schedule-shift-model/schedule-shift-record) for details.
+References the `ShiftRecord` entity that was active at the location the production order ran. This relationship connects the production order to its specific shift instance, allowing for better tracking of production orders within the context of scheduled shifts.
+See [shift_records](../shift-model/shift-record) for details.
 
 ### `unit_of_measure_id`
 

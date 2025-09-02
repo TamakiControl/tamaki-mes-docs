@@ -19,17 +19,17 @@ system.mes.inventory.getLotByIdOrNameAndMaterial(idOrName, materialIdOrPath)
 
 ## Parameters
 
-| Parameter          | Type     | Description                                                         |
-| ------------------ | -------- | ------------------------------------------------------------------- |
-| `idOrName`         | `String` | The ID or name of the inventory lot associated with the inventory.  |
-| `materialIdOrPath` | `String` | The ID or path of the material associated with the inventory's lot. |
+| Parameter          | Type     | Nullable | Description                                                         |
+|--------------------|----------|----------|---------------------------------------------------------------------|
+| `idOrName`         | `String` | False    | The ID or name of the inventory lot associated with the inventory.  |
+| `materialIdOrPath` | `String` | True     | The ID or path of the material associated with the inventory's lot. |
 
 ## Returns
 
 Returns a JSON representation of an inventory with the following properties:
 
 | Name              | Type            | Description                                                            |
-| ----------------- | --------------- | ---------------------------------------------------------------------- |
+|-------------------|-----------------|------------------------------------------------------------------------|
 | `name`            | `String`        | The name of the inventory lot.                                         |
 | `materialId`      | `String` (ULID) | The ULID of the material associated with this inventory lot.           |
 | `status`          | `String`        | The status of the inventory lot.                                       |

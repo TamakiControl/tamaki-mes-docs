@@ -19,7 +19,9 @@ system.mes.material.exportMaterialClassesAsCsv()
 
 ## Parameters
 
-No parameters.
+| Parameter | Type | Nullable | Description                               |
+|-----------|------|----------|-------------------------------------------|
+| None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
 

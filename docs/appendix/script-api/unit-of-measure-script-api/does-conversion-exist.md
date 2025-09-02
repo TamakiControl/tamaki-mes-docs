@@ -16,11 +16,11 @@ system.mes.unitOfMeasure.doesConversionExist(fromIdOrName, toIdOrName, materialI
 
 ## Parameters
 
-| Parameter      | Type            | Description                                              |
-| -------------- | --------------- | -------------------------------------------------------- |
-| `fromIdOrName` | `String`        | The ULID or name of the from unit of measure to check.   |
-| `toIdOrName`   | `String`        | The ULID or name of the to unit of measure to check.     |
-| `materialId`   | `String` (ULID) | The ULID of the material associated with the conversion. |
+| Parameter      | Type            | Nullable | Description                                              |
+|----------------|-----------------|----------|----------------------------------------------------------|
+| `fromIdOrName` | `String`        | False    | The ULID or name of the from unit of measure to check.   |
+| `toIdOrName`   | `String`        | False    | The ULID or name of the to unit of measure to check.     |
+| `materialId`   | `String` (ULID) | True     | The ULID of the material associated with the conversion. |
 
 ## Returns
 

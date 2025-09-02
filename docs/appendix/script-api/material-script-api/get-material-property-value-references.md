@@ -18,23 +18,23 @@ system.mes.material.getMaterialPropertyValueReferences(id)
 
 ## Parameters
 
-| Parameter | Type     | Description                                          |
-| --------- | -------- | ---------------------------------------------------- |
-| `id`      | `String` | The ULID of the material property value to retrieve. |
+| Parameter | Type     | Nullable | Description                                          |
+|-----------|----------|----------|------------------------------------------------------|
+| `id`      | `String` | False    | The ULID of the material property value to retrieve. |
 
 ## Returns
 
 Returns a list of JSON objects. Each JSON object has the following properties:
 
 | Name         | Type                | Description                                                                      |
-| ------------ | ------------------- | -------------------------------------------------------------------------------- |
+|--------------|---------------------|----------------------------------------------------------------------------------|
 | `tableName`  | `String`            | The name of the table that the reference is in.                                  |
 | `references` | `List<JSON Object>` | List of JSON objects corresponding to references to the material property value. |
 
 The JSON Objects in references has the following properties:
 
 | Name        | Type            | Description                                                             |
-| ----------- | --------------- | ----------------------------------------------------------------------- |
+|-------------|-----------------|-------------------------------------------------------------------------|
 | `fkColName` | `String`        | The name of the foreign key column.                                     |
 | `id`        | `String` (ULID) | The ULID of the object that is referencing the material property value. |
 

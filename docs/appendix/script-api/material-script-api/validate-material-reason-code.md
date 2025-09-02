@@ -1,5 +1,5 @@
 ---
-sidebar_position: 58
+sidebar_position: 59
 title: "validateMaterialReasonCode"
 description: "Validates the specified parameters for a material reason code."
 ---
@@ -9,7 +9,7 @@ description: "Validates the specified parameters for a material reason code."
 ## Description
 
 Validates the specified parameters for a [Material Reason Codes](../../data-model/material-model/material-reason-code) record and returns any validation errors.
-This only checks if the material reason code object can be saved based on the attributes given.
+This only checks if the material reason code object can be saved based on the attributes given, without actually creating or modifying the material reason code. Use this function to verify your parameters before executing a save material reason code operation.
 
 ## Syntax
 
@@ -19,18 +19,18 @@ system.mes.material.validateMaterialReasonCode(**material_reason_code_data)
 
 ## Parameters
 
-| Parameter         | Type            | Description                                                                                          |
-| ----------------- | --------------- | ---------------------------------------------------------------------------------------------------- |
-| `lotRecordType`   | `String`        | The action that was taken on a lot.                                                                  |
-| `reasonCode`      | `String`        | The unique code identifying the reason for material handling.                                        |
-| `description`     | `String`        | The detailed description of the reason for the material activity.                                    |
-| `requireComments` | `Boolean`       | Indicates whether additional comments are required when using this reason code.                      |
-| `id`              | `String` (ULID) | The ULID of the material reason code (optional, used for updating an existing material reason code). |
-| `notes`           | `String`        | Notes related to the material reason code.                                                           |
-| `enabled`         | `Boolean`       | Indicates if the material reason code is active and enabled.                                         |
-| `spare1`          | `String`        | Additional field for user-defined context.                                                           |
-| `spare2`          | `String`        | Additional field for user-defined context.                                                           |
-| `spare3`          | `String`        | Additional field for user-defined context.                                                           |
+| Parameter         | Type            | Nullable | Description                                                                                          |
+|-------------------|-----------------|----------|------------------------------------------------------------------------------------------------------|
+| `lotRecordType`   | `String`        | False    | The action that was taken on a lot.                                                                  |
+| `reasonCode`      | `String`        | False    | The unique code identifying the reason for material handling.                                        |
+| `description`     | `String`        | True     | The detailed description of the reason for the material activity.                                    |
+| `requireComments` | `Boolean`       | True     | Indicates whether additional comments are required when using this reason code.                      |
+| `id`              | `String` (ULID) | True     | The ULID of the material reason code (optional, used for updating an existing material reason code). |
+| `notes`           | `String`        | True     | Notes related to the material reason code.                                                           |
+| `enabled`         | `Boolean`       | True     | Indicates if the material reason code is active and enabled. Default value is `true`.                |
+| `spare1`          | `String`        | True     | Additional field for user-defined context.                                                           |
+| `spare2`          | `String`        | True     | Additional field for user-defined context.                                                           |
+| `spare3`          | `String`        | True     | Additional field for user-defined context.                                                           |
 
 ## Returns
 

@@ -21,18 +21,23 @@ system.mes.material.findMaterialClasses(**queryRequest)
 Using Python keyword arguments, a [Query Request](../query-script-api/new-query-request) can be passed to the `findMaterialClasses` function
 without specifying each parameter individually. Please refer to the [Query Request](../query-script-api/new-query-request) documentation for a list of parameters.
 
+| Parameter      | Type            | Nullable | Description                                                                                                                                                                                                                                                                                                     |
+|----------------|-----------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `queryRequest` | `Query Request` | False    | Using Python keyword arguments, a [Query Request](../query-script-api/new-query-request) can be passed to the `findMaterialClasses` function without specifying each parameter individually. Please refer to the [Query Request](../query-script-api/new-query-request) documentation for a list of parameters. |
+
+
 ## Returns
 
 Returns a Query Result object with the following properties:
 
 | Name            | Type                                                                           | Description                                                                                                      |
-| --------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
+|-----------------|--------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
 | `content`       | `List`&lt;[Material Class](../../data-model/material-model/material-class)&gt; | The list of all records found that meet the specified criteria                                                   |
 | `totalPages`    | `Integer`                                                                      | If pagination is used, this is the number of total pages of records in the database for the specified page size. |
 | `totalElements` | `Long`                                                                         | If pagination is used, this is the number of records in the database that meet the specified criteria.           |
 | `pageSize`      | `Integer`                                                                      | If pagination is used, this is the specified page size.                                                          |
 | `pageIndex`     | `Integer`                                                                      | If pagination is used, this is the specified page index.                                                         |
-| `hasContent`    | `Boolean`                                                                      | True if any records were found that meet the specified criteria.                                                  |
+| `hasContent`    | `Boolean`                                                                      | True if any records were found that meet the specified criteria.                                                 |
 | `isFirst`       | `Boolean`                                                                      | If pagination is used, this is true if the first page was returned.                                              |
 | `isLast`        | `Boolean`                                                                      | If pagination is used, this is true if the last page was returned.                                               |
 | `hasNext`       | `Boolean`                                                                      | If pagination is used, this is true if there is a page of content available after this one.                      |
