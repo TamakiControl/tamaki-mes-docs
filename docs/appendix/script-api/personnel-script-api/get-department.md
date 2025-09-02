@@ -18,9 +18,9 @@ system.mes.personnel.getDepartment(idOrPath)
 
 ## Parameters
 
-| Parameter   | Type   | Description                                         |
-| ----------- | ------ | --------------------------------------------------- |
-| `idOrPath`  | String | The ID or path of the department to retrieve.       |
+| Parameter   | Type   | Nullable | Description                                         |
+| ----------- | ------ | -------- | --------------------------------------------------- |
+| `idOrPath`  | String | False    | The ID or path of the department to retrieve.       |
 
 ## Returns
 

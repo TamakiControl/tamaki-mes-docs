@@ -18,18 +18,18 @@ system.mes.personnel.saveDepartment(**department_data)
 
 ## Parameters
 
-| Parameter     | Type            | Description                                                                              |
-| ------------- | --------------- | ---------------------------------------------------------------------------------------- |
-| `name`        | String          | The name of the department.                                                              |
-| `description` | String          | The description of the department.                                                       |
-| `path`        | String          | The path to the department.                                                              |
-| `parentId`    | String (ULID)   | The ULID of the parent department to this department.                                    |
-| `id`          | String (ULID)   | The ULID of the department (optional, used for updating an existing department).         |
-| `notes`       | String          | Notes related to the department.                                                         |
-| `enabled`     | Boolean         | Indicates if the department is active and enabled.                                       |
-| `spare1`      | String          | Additional field for user-defined context.                                               |
-| `spare2`      | String          | Additional field for user-defined context.                                               |
-| `spare3`      | String          | Additional field for user-defined context.                                               |
+| Parameter     | Type            | Nullable | Description                                                                              |
+| ------------- | --------------- |----------| ---------------------------------------------------------------------------------------- |
+| `name`        | String          | False    | The name of the department.                                                              |
+| `description` | String          | True     | The description of the department.                                                       |
+| `path`        | String          | True     | The path to the department.                                                              |
+| `parentId`    | String (ULID)   | True     | The ULID of the parent department to this department.                                    |
+| `id`          | String (ULID)   | True     | The ULID of the department (optional, used for updating an existing department).         |
+| `notes`       | String          | True     | Notes related to the department.                                                         |
+| `enabled`     | Boolean         | True     | Indicates if the department is active and enabled.                                       |
+| `spare1`      | String          | True     | Additional field for user-defined context.                                               |
+| `spare2`      | String          | True     | Additional field for user-defined context.                                               |
+| `spare3`      | String          | True     | Additional field for user-defined context.                                               |
 
 ## Returns
 

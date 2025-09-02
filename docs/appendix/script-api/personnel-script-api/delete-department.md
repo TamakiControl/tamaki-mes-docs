@@ -19,9 +19,9 @@ system.mes.personnel.deleteDepartment(idOrPath)
 
 ## Parameters
 
-| Parameter  | Type     | Description                                         |
-| ---------- | -------- | --------------------------------------------------- |
-| `idOrPath` | `String` | The ID or path of the department to delete.         |
+| Parameter  | Type     | Nullable | Description                                         |
+| ---------- | -------- | -------- | --------------------------------------------------- |
+| `idOrPath` | `String` | False    | The ID or path of the department to delete.         |
 
 ## Returns
 

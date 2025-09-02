@@ -16,9 +16,9 @@ system.mes.personnel.getPerson(idOrUsername)
 
 ## Parameters
 
-| Parameter | Type   | Description                                          |
-| --------- | ------ |------------------------------------------------------|
-| `id`      | String | The unique ID or username of the person to retrieve. |
+| Parameter | Type   | Nullable | Description                                          |
+| --------- | ------ | -------- |------------------------------------------------------|
+| `id`      | String | False    | The unique ID or username of the person to retrieve. |
 
 ## Returns
 
