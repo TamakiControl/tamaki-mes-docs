@@ -20,20 +20,20 @@ system.mes.personnel.savePerson(**person_data)
 
 | Parameter         | Type            | Nullable | Description                                                                |
 | ----------------- | --------------- |----------|----------------------------------------------------------------------------|
-| `departmentId`    | String (ULID)   | True     | The ULID of the department this person is assigned to.                     |
-| `departmentName`  | String          | True     | The name of the department.                                                |
-| `departmentPath`  | String          | True     | The path of the department.                                                |
-| `personStatus`    | String (Enum)   | False    | The status of the person (`ACTIVE` or `INACTIVE`). Default Value is `ACTIVE` |
-| `firstName`       | String          | False    | The first name of the person.                                              |
-| `lastName`        | String          | False    | The last name of the person.                                               |
-| `initials`        | String          | True     | The initials of the person.                                                |
-| `username`        | String          | False    | The username of the person.                                                |
-| `id`              | String (ULID)   | True     | The ULID of the person (optional, used for updating an existing person).   |
-| `notes`           | String          | True     | Notes related to the person.                                               |
-| `enabled`         | Boolean         | True     | Indicates if the person is active and enabled.                             |
-| `spare1`          | String          | True     | Additional field for user-defined context.                                 |
-| `spare2`          | String          | True     | Additional field for user-defined context.                                 |
-| `spare3`          | String          | True     | Additional field for user-defined context.                                 |
+| `departmentId`    | `String` (ULID)   | True     | The ULID of the department this person is assigned to.                     |
+| `departmentName`  | `String`          | True     | The name of the department.                                                |
+| `departmentPath`  | `String`          | True     | The path of the department.                                                |
+| `personStatus`    | `String` (Enum)   | False    | The status of the person (`ACTIVE` or `INACTIVE`). Default Value is `ACTIVE` |
+| `firstName`       | `String`          | False    | The first name of the person.                                              |
+| `lastName`        | `String`          | False    | The last name of the person.                                               |
+| `initials`        | `String`          | True     | The initials of the person.                                                |
+| `username`        | `String`          | False    | The username of the person.                                                |
+| `id`              | `String` (ULID)   | True     | The ULID of the person (optional, used for updating an existing person).   |
+| `notes`           | `String`          | True     | Notes related to the person.                                               |
+| `enabled`         | `Boolean`         | True     | Indicates if the person is active and enabled.                             |
+| `spare1`          | `String`          | True     | Additional field for user-defined context.                                 |
+| `spare2`          | `String`          | True     | Additional field for user-defined context.                                 |
+| `spare3`          | `String`          | True     | Additional field for user-defined context.                                 |
 
 ## Returns
 
