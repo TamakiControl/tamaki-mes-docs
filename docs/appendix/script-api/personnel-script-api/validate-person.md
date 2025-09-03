@@ -43,21 +43,10 @@ Returns a JSON object where keys are field names and values are lists of validat
 ## Code Examples
 
 ```
-# Generate the object structure for a new person object
-person_data = system.mes.personnel.newPerson()
-
-# Set basic attributes for the new person
-person_data['firstName'] = 'John'
-person_data['lastName'] = 'Doe'
-person_data['username'] = 'jdoe'
-person_data['departmentId'] = '01JAP8R5RT-3FPXQABY-7KQZT6VF'
-# (You can continue setting other properties as needed here)
-
-# Validate person parameters
-validation_errors = system.mes.personnel.validatePerson(**person_data)
-
-if len(validation_errors) > 0:
-    print('Validation errors found:', validation_errors)
-else:
-    print('Person parameters are valid.')
+person = system.mes.personnel.newPerson()
+person['firstName'] = 'John'
+person['lastName'] = 'Doe'
+person['username'] = 'jdoe'
+person['departmentId'] = '01JAP8R5RT-3FPXQABY-7KQZT6VF'
+violations = system.mes.personnel.validatePerson(**person)
 ```

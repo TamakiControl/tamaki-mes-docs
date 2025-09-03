@@ -43,29 +43,11 @@ Returns a JSON representation of the saved person.
 
 ```
 # Generate the object structure for a new person object, set the initial arguments and save it
-new_person = system.mes.personnel.newPerson()
-new_person['firstName'] = 'John'
-new_person['lastName'] = 'Doe'
-new_person['username'] = 'jdoe'
-new_person['departmentId'] = '01JAP8R5RT-3FPXQABY-7KQZT6VF'
-saved_person = system.mes.personnel.savePerson(**new_person)
+person = system.mes.personnel.newPerson()
+person['firstName'] = 'John'
+person['lastName'] = 'Doe'
+person['username'] = 'jdoe'
+person['departmentId'] = '01JAP8R5RT-3FPXQABY-7KQZT6VF'
+savedPerson = system.mes.personnel.savePerson(**person)
 
-# Output the JSON representation of the saved person
-print(saved_person)
-
-# Generate the object structure for another new person to update the previous person
-person_data = system.mes.personnel.newPerson()
-
-# Set basic attributes for the updated person
-person_data['id'] = saved_person.id
-person_data['firstName'] = 'John'
-person_data['lastName'] = 'Doe'
-person_data['personStatus'] = 'INACTIVE'
-# (You can continue setting other properties as needed here)
-
-# Save the person to update it in the system
-updated_person = system.mes.personnel.savePerson(**person_data)
-
-# Output the JSON representation of the updated person
-print(updated_person)
 ```

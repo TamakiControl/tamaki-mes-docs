@@ -39,25 +39,7 @@ Returns a JSON representation of the saved department.
 
 ```
 # Generate the object structure for a new department object, set the initial arguments and save it
-new_department = system.mes.personnel.newDepartment()
-new_department['name'] = 'Engineering'
-saved_department = system.mes.personnel.saveDepartment(**new_department)
-
-# Output the JSON representation of the saved department
-print(saved_department)
-
-# Generate the object structure for another new department to update the previous department
-department_data = system.mes.personnel.newDepartment()
-
-# Set basic attributes for the updated department
-department_data['id'] = saved_department.id
-department_data['name'] = 'Engineering'
-department_data['description'] = 'Handles engineering tasks'
-# (You can continue setting other properties as needed here)
-
-# Save the department to update it in the system
-updated_department = system.mes.personnel.saveDepartment(**department_data)
-
-# Output the JSON representation of the updated department
-print(updated_department)
+department = system.mes.personnel.newDepartment()
+department['name'] = 'Engineering'
+savedDepartment = system.mes.personnel.saveDepartment(**newDepartment)
 ```

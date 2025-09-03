@@ -39,18 +39,7 @@ Returns a JSON object where keys are field names and values are lists of validat
 ## Code Examples
 
 ```
-# Generate the object structure for a new department object
-department_data = system.mes.personnel.newDepartment()
-
-# Set basic attributes for the new department
-department_data['name'] = 'Engineering'
-# (You can continue setting other properties as needed here)
-
-# Validate department parameters
-validation_errors = system.mes.personnel.validateDepartment(**department_data)
-
-if len(validation_errors) > 0:
-    print('Validation errors found:', validation_errors)
-else:
-    print('Department parameters are valid.')
+department = system.mes.personnel.newDepartment()
+department['name'] = 'Engineering'
+violations = system.mes.personnel.validateDepartment(**department)
 ```

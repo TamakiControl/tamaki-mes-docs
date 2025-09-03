@@ -18,7 +18,7 @@ system.mes.personnel.getPerson(idOrUsername)
 
 | Parameter | Type   | Nullable | Description                                          |
 | --------- | ------ | -------- |------------------------------------------------------|
-| `id`      | String | False    | The unique ID or username of the person to retrieve. |
+| `id`      | `String` | False    | The unique ID or username of the person to retrieve. |
 
 ## Returns
 
@@ -26,20 +26,20 @@ Returns a JSON representation of the person object if found. The following is a 
 
 | Key            | Type    | Description                                 |
 | -------------- | ------- | ------------------------------------------- |
-| `departmentId` | String  | The department ID the person belongs to.    |
-| `departmentName` | String | The name of the department.                 |
-| `departmentPath` | String | The path of the department.                 |
-| `personStatus` | String  | The status of the person (e.g., `ACTIVE`).  |
-| `firstName`    | String  | The person's first name.                    |
-| `lastName`     | String  | The person's last name.                     |
-| `initials`     | String  | The person's initials.                      |
-| `username`     | String  | The person's username.                      |
-| `id`           | String  | The unique ID of the person.                |
-| `notes`        | String  | Notes about the person.                     |
-| `enabled`      | Boolean | Whether the person is enabled.              |
-| `spare1`       | String  | Spare field for additional context.         |
-| `spare2`       | String  | Spare field for additional context.         |
-| `spare3`       | String  | Spare field for additional context.         |
+| `departmentId` | `String`  | The department ID the person belongs to.    |
+| `departmentName` | `String` | The name of the department.                 |
+| `departmentPath` | `String` | The path of the department.                 |
+| `personStatus` | `String`  | The status of the person (e.g., `ACTIVE`).  |
+| `firstName`    | `String`  | The person's first name.                    |
+| `lastName`     | `String`  | The person's last name.                     |
+| `initials`     | `String`  | The person's initials.                      |
+| `username`     | `String`  | The person's username.                      |
+| `id`           | `String`  | The unique ID of the person.                |
+| `notes`        | `String`  | Notes about the person.                     |
+| `enabled`      | `Boolean` | Whether the person is enabled.              |
+| `spare1`       | `String`  | Spare field for additional context.         |
+| `spare2`       | `String`  | Spare field for additional context.         |
+| `spare3`       | `String`  | Spare field for additional context.         |
 
 ## Code Examples
 

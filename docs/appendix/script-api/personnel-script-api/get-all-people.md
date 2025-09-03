@@ -30,8 +30,8 @@ Returns a list of JSON objects representing all people.
 
 ```
 # Retrieve all people
-all_people = system.mes.personnel.getAllPeople()
+allPeople = system.mes.personnel.getAllPeople()
 
 # Output the list of people
-print(all_people)
+print(allPeople)
 ```
