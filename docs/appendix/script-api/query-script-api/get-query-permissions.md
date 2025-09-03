@@ -12,7 +12,7 @@ Retrieves a list of all role permission strings related to queries.
 ## Returns
 | Type         | Description                          |
 |--------------|--------------------------------------|
-| List<String> | List of all query role permissions.    |
+| `List<String>` | List of all query role permissions.    |
 
 ## Code Example
 ```python

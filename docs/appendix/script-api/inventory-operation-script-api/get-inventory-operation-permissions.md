@@ -12,7 +12,7 @@ Retrieves a list of all role permission strings related to inventory operations.
 ## Returns
 | Type         | Description                                 |
 |--------------|---------------------------------------------|
-| List<String> | List of all inventory operation role permissions. |
+| `List<String>` | List of all inventory operation role permissions. |
 
 ## Code Example
 ```python

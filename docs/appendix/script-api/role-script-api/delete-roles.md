@@ -9,9 +9,9 @@ description: "Deletes multiple roles by their IDs."
 Deletes multiple roles with the specified IDs and returns a JSON response indicating success or failure.
 
 ## Parameters
-| Parameter | Type         | Nullable | Description |
-|-----------|--------------|----------|-------------|
-| ids       | List[String] | False    | The list of unique identifiers of the roles to delete. |
+| Parameter | Type           | Nullable | Description |
+|-----------|----------------|----------|-------------|
+| `ids`       | `List<String>` | False    | The list of unique identifiers of the roles to delete. |
 
 ## Returns
 

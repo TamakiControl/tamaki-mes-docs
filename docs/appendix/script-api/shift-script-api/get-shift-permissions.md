@@ -12,7 +12,7 @@ Retrieves a list of all role permission strings related to shifts.
 ## Returns
 | Type         | Description                          |
 |--------------|--------------------------------------|
-| List<String> | List of all shift role permissions.    |
+| `List<String>` | List of all shift role permissions.    |
 
 ## Code Example
 ```python

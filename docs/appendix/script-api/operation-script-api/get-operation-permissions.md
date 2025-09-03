@@ -12,7 +12,7 @@ Retrieves a list of all role permission strings related to operations.
 ## Returns
 | Type         | Description                          |
 |--------------|--------------------------------------|
-| List<String> | List of all operation role permissions.    |
+| `List<String>` | List of all operation role permissions.    |
 
 ## Code Example
 ```python

@@ -12,7 +12,7 @@ Retrieves a list of all role permission strings related to track and trace.
 ## Returns
 | Type         | Description                          |
 |--------------|--------------------------------------|
-| List<String> | List of all track and trace role permissions.    |
+| `List<String>` | List of all track and trace role permissions.    |
 
 ## Code Example
 ```python

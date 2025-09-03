@@ -11,7 +11,7 @@ Deletes the role with the specified ID and returns a JSON response indicating su
 ## Parameters
 | Parameter | Type   | Nullable | Description |
 |-----------|--------|----------|-------------|
-| id        | String | False    | The unique identifier of the role to delete. |
+| `id`        | `String` | False    | The unique identifier of the role to delete. |
 
 ## Returns
 

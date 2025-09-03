@@ -14,17 +14,17 @@ system.mes.role.saveRole(**roleData)
 ```
 
 ## Parameters
-| Parameter              | Type           | Nullable | Description                                                                                                      |
-|------------------------|----------------|----------|------------------------------------------------------------------------------------------------------------------|
-| `id`                   | String (ULID)  | True     | The ULID of the role (optional, used for updating an existing role).                                             |
-| `enabled`              | Boolean        | True     | Indicates if the role is active and enabled.                                                                     |
-| `notes`                | String         | True     | Notes related to the role.                                                                                       |
-| `spare1`               | String         | True     | Additional field for user-defined context.                                                                       |
-| `spare2`               | String         | True     | Additional field for user-defined context.                                                                       |
-| `spare3`               | String         | True     | Additional field for user-defined context.                                                                       |
-| `securityLevels`       | List[String]   | False    | List of Ignition security levels required for this role.                                                         |
-| `permissions`          | List[String]   | False    | List of MES permissions granted by this role.                                                                    |
-| `roleRequirementType`  | Enum           | False    | Specifies if all or any security levels are required to grant permissions. See RoleRequirementType enum.         |
+| Parameter              | Type          | Nullable | Description                                                                                                      |
+|------------------------|---------------|----------|------------------------------------------------------------------------------------------------------------------|
+| `id`                   | `String (ULID)` | True     | The ULID of the role (optional, used for updating an existing role).                                             |
+| `enabled`              | `Boolean`       | True     | Indicates if the role is active and enabled.                                                                     |
+| `notes`                | `String`        | True     | Notes related to the role.                                                                                       |
+| `spare1`               | `String`        | True     | Additional field for user-defined context.                                                                       |
+| `spare2`               | `String`        | True     | Additional field for user-defined context.                                                                       |
+| `spare3`               | `String`        | True     | Additional field for user-defined context.                                                                       |
+| `securityLevels`       | `List<String>`  | False    | List of Ignition security levels required for this role.                                                         |
+| `permissions`          | `List<String>`  | False    | List of MES permissions granted by this role.                                                                    |
+| `roleRequirementType`  | `Enum`          | False    | Specifies if all or any security levels are required to grant permissions. See RoleRequirementType enum.         |
 
 ## Returns
 Returns a JSON representation of the saved role.

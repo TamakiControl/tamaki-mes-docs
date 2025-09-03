@@ -12,7 +12,7 @@ Retrieves a list of all role permission strings related to units of measure.
 ## Returns
 | Type         | Description                          |
 |--------------|--------------------------------------|
-| List<String> | List of all unit of measure role permissions.    |
+| `List<String>` | List of all unit of measure role permissions.    |
 
 ## Code Example
 ```python

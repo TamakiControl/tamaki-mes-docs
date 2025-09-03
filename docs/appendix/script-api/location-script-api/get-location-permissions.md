@@ -12,7 +12,7 @@ Retrieves a list of all role permission strings related to locations.
 ## Returns
 | Type         | Description                          |
 |--------------|--------------------------------------|
-| List<String> | List of all location role permissions.    |
+| `List<String>` | List of all location role permissions.    |
 
 ## Code Example
 ```python

@@ -12,7 +12,7 @@ Retrieves a list of all role permission strings related to schedules.
 ## Returns
 | Type         | Description                          |
 |--------------|--------------------------------------|
-| List<String> | List of all schedule role permissions.    |
+| `List<String>` | List of all schedule role permissions.    |
 
 ## Code Example
 ```python

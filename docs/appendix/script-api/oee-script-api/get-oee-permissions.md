@@ -12,7 +12,7 @@ Retrieves a list of all role permission strings related to OEE.
 ## Returns
 | Type         | Description                          |
 |--------------|--------------------------------------|
-| List<String> | List of all OEE role permissions.    |
+| `List<String>` | List of all OEE role permissions.    |
 
 ## Code Example
 ```python

@@ -12,7 +12,7 @@ Retrieves a list of all role permission strings related to production orders.
 ## Returns
 | Type         | Description                          |
 |--------------|--------------------------------------|
-| List<String> | List of all production order role permissions.    |
+| `List<String>` | List of all production order role permissions.    |
 
 ## Code Example
 ```python
