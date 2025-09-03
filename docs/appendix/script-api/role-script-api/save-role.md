@@ -16,7 +16,7 @@ system.mes.role.saveRole(**roleData)
 ## Parameters
 | Parameter              | Type          | Nullable | Description                                                                                                      |
 |------------------------|---------------|----------|------------------------------------------------------------------------------------------------------------------|
-| `id`                   | `String (ULID)` | True     | The ULID of the role (optional, used for updating an existing role).                                             |
+| `id`                   | `String` (ULID) | True     | The ULID of the role (optional, used for updating an existing role).                                             |
 | `enabled`              | `Boolean`       | True     | Indicates if the role is active and enabled.                                                                     |
 | `notes`                | `String`        | True     | Notes related to the role.                                                                                       |
 | `spare1`               | `String`        | True     | Additional field for user-defined context.                                                                       |
