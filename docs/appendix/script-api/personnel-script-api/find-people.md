@@ -1,38 +1,37 @@
 ---
-sidebar_position: 4
-title: "findLocations"
-description: "Retrieves locations based on the specified pagination, sort, and column constraint parameters."
+sidebar_position: 5
+title: "findPeople"
+description: "Retrieves people based on the specified pagination, sort, and column constraint parameters."
 ---
 
-# system.mes.location.findLocations
+# system.mes.personnel.findPeople
 
 ## Description
 
-Retrieves [Locations](../../data-model/location-model/location) records based on the specified pagination, sort, and column constraint parameters.
+Retrieves [Person](../../data-model/personnel-model/personnel) records based on the specified pagination, sort, and column constraint parameters.
 
 ## Syntax
 
-```python
-system.mes.location.findLocations(**queryRequest)
+```
+system.mes.personnel.findPeople(**queryRequest)
 ```
 
 ## Parameters
 
-Using Python keyword arguments, a [Query Request](../query-script-api/new-query-request) can be passed to the `findLocations` function
+Using Python keyword arguments, a [Query Request](../query-script-api/new-query-request) can be passed to the `findPeople` function
 without specifying each parameter individually. Please refer to the [Query Request](../query-script-api/new-query-request) documentation for a list of parameters.
 
 | Parameter      | Type            | Nullable | Description                                                                                                                                                                                                                                                                                               |
 |----------------|-----------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `queryRequest` | `Query Request` | False    | A [Query Request](../query-script-api/new-query-request) with the desired pagination, sorting, and filtering parameters.  |
-
+| `queryRequest` | Query Request   | False    | A [Query Request](../query-script-api/new-query-request) with the desired pagination, sorting, and filtering parameters.   |
 
 ## Returns
 
 Returns a Query Result object with the following properties:
 
 | Name            | Type                                                               | Description                                                                                                      |
-|-----------------|--------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| `content`       | `List`&lt;[Location](../../data-model/location-model/location)&gt; | The list of all records found that meet the specified criteria                                                   |
+| --------------- |--------------------------------------------------------------------| ---------------------------------------------------------------------------------------------------------------- |
+| `content`       | `List`&lt;[Person](../../data-model/personnel-model/personnel)&gt; | The list of all records found that meet the specified criteria                                                   |
 | `totalPages`    | `Integer`                                                          | If pagination is used, this is the number of total pages of records in the database for the specified page size. |
 | `totalElements` | `Long`                                                             | If pagination is used, this is the number of records in the database that meet the specified criteria.           |
 | `pageSize`      | `Integer`                                                          | If pagination is used, this is the specified page size.                                                          |
@@ -45,10 +44,7 @@ Returns a Query Result object with the following properties:
 
 ## Code Examples
 
-Here is an example of how to use a Query Request to retrieve the first ten locations created in 2025 sorted by their
-name.
-
-```python
+```
 # Generate the object structure for a new query request
 queryRequest = system.mes.query.newQueryRequest()
 
@@ -56,7 +52,7 @@ queryRequest = system.mes.query.newQueryRequest()
 queryRequest['pageSize'] = 10
 queryRequest['pageIndex'] = 0
 
-queryRequest['sortFields'] = ['name']
+queryRequest['sortFields'] = ['lastName']
 queryRequest['sortDirections'] = ['Ascending']
 
 # Generate the object structure for a filter for the query request
@@ -70,9 +66,9 @@ filters = [filterRequest]
 
 queryRequest['filters'] = filters
 
-# Retrieve the locations that match the filter
-result = system.mes.location.findLocations(**queryRequest)
+# Retrieve the people that match the filter
+result = system.mes.personnel.findPeople(**queryRequest)
 
-# Output the locations that match the filter.
+# Output the people that match the filter.
 print(result)
 ```
