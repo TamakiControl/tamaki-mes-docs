@@ -182,6 +182,18 @@ td:has(img) {
 	height: 65px;
 }
 
+.theme-doc-sidebar-container {
+	width: fit-content !important;
+}
+
+.sidebar_njMd {
+	width: fit-content !important;
+}
+
+.menu__list-item-collapsible {
+	flex-wrap: nowrap;
+}
+
 .navbar {
 	height: 100px;
 }
