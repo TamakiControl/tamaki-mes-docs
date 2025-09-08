@@ -1,6 +1,6 @@
 ---
 title: "getLotTraceTable"
-description: "Retrieves adjacent nodes and edges of the track and trace Table for the given inventory lot ID in the specified direction."
+description: "Retrieves detailed rows of data for the track and trace table for the given inventory lot record IDs."
 sidebar_position: 1
 ---
 
@@ -8,13 +8,9 @@ sidebar_position: 1
 
 ## Description
 
-Retrieves adjacent nodes and edges of the trace Table for the given 
-[InventoryLot](../../data-model/inventory-model/inventory-lot.md) ID in the specified direction. Only a single level of 
-adjacency is returned, meaning that the function will return only the nodes and edges that are directly connected to the 
-root node.
+Retrieves detailed data for the track and trace table for the given inventory lot record IDs. This function returns information about the connections between inventory lots, including source and target lots, locations, quantities, and timestamps.
 
-This function is used by the trace Table component to visualize the flow of materials. Nodes represent inventory lots, 
-and edges represent the InventoryLotRecords that connect them.
+While [`getLotTraceGraph`](./get-lot-trace-graph.md) provides a visual representation of material flows, `getLotTraceTable` provides more detailed tabular data about specific inventory lot records.
 
 ## Permissions
 
@@ -22,93 +18,76 @@ This scripting function has no client permission restrictions.
 
 ## Syntax
 ```python
-system.mes.trackandtrace.getLotTraceTable(rootNodeId, direction)
+system.mes.trackandtrace.getLotTraceTable(inventoryLotRecordIds)
 ```
 
 ## Parameters
 
-| Parameter    | Type          | Description                                                                                                     | Required  |
-|--------------|---------------|-----------------------------------------------------------------------------------------------------------------|-----------|
-| `rootNodeId` | `String` (ULID) | The ID of the root inventory lot                                                                              | Yes       |
-| `direction`   | `String`      | The direction of the trace Table to be retrieved. Can be either `INPUT` or `OUTPUT`                            | Yes       |
-| `depth `      | `Int`         | The desired maximum depth to which the Table will attempt to generate nodes in the given direction (maximum 5) | No        |
-
+| Parameter              | Type                    | Description                                | Required |
+|------------------------|-------------------------|--------------------------------------------|----------|
+| `inventoryLotRecordIds` | `List` of `String` (ULID) | List of inventory lot record IDs to retrieve | Yes      |
 
 ## Returns
 
-A trace Table object with the following properties:
+A list of trace table row objects with the following properties:
 
-### Trace Table
+### TraceTableRow
 
-| Property     | Type            | Description                                                                                               |
-|--------------|-----------------|-----------------------------------------------------------------------------------------------------------|
-| `nodes`      | `List` of nodes | List of nodes in the track and trace Table that are adjacent to the root node in the requested direction. |
-| `edges`      | `List` of edges | List of edges in the track and trace Table that connect the nodes in the requested direction.             |
-| `rootNodeId` | `String`        | The inventory lot ID that was given as an argument in the original request                                |
-| `direction`  | `String`        | The direction that was given as an argument in the original request                                       |
-
-### Node
-
-| Property | Type            | Description                                              |
-|----------|-----------------|----------------------------------------------------------|
-| `id`     | `String` (ULID) | The ID of the node, which is the inventory lot ID        |
-| `data`   | `Object`        | The data object contains several properties listed below |
-
-#### Node data
-| Property          | Type          | Description                                                                       |
-|-------------------|---------------|-----------------------------------------------------------------------------------|
-| `lotName` | `String`      | The name of the inventory lot                                                     |
-| `materialName` | `String`      | The name of the material associated with this inventory lot                       |
-| `materialClassName` | `String`      | The name of the material class of the material associated with this inventory lot |
-| `materialDescription` | `String`      | The description of the material associated with this inventory lot                |
-| `quantity` | `Double`      | The total quantity of inventory processed from the starting node to this one      |
-| `uom`      | `String`      | The unit of measure symbol for the quantity                                       |
-
-### Edge
-
-
-| Property     | Type          | Description                                                                                                           |
-|--------------|---------------|-----------------------------------------------------------------------------------------------------------------------|
-| `id`         | `String` (ULID) | Unique identifier of the [InventoryLotRecord](../../data-model/inventory-model/inventory-lot-record.md) for the edge. |
-| `source`     | `String` (ULID) | The source InventoryLot ID from which this edge originates.                                                           |
-| `target`     | `String` (ULID) | The target InventoryLot ID to which this edge points.                                                                 |
-| `animated`   | `Boolean`     | Whether the edge is animated in the track and trace Table.                                                            |
-
+| Property                 | Type           | Description                                                                            |
+|--------------------------|----------------|----------------------------------------------------------------------------------------|
+| `id`                     | `String` (ULID) | ID of the inventory lot record                                                         |
+| `lotRecordType`          | `String`       | Inventory lot record type (e.g. "Consume", "Produce", "Split", "Merge")                |
+| `sourceInventoryLotId`   | `String` (ULID) | ID of the source inventory lot                                                         |
+| `sourceInventoryLotName` | `String`       | Name of the source inventory lot                                                       |
+| `targetInventoryLotId`   | `String` (ULID) | ID of the target inventory lot                                                         |
+| `targetInventoryLotName` | `String`       | Name of the target inventory lot                                                       |
+| `sourceLocationId`       | `String` (ULID) | ID of the source location                                                              |
+| `sourceLocationPath`     | `String`       | Path of the source location                                                            |
+| `destinationLocationId`  | `String` (ULID) | ID of the destination location                                                         |
+| `destinationLocationPath`| `String`       | Path of the destination location                                                       |
+| `quantity`               | `Double`       | Quantity of the record                                                                 |
+| `unitOfMeasureId`        | `String` (ULID) | ID of the unit of measure for the quantity                                             |
+| `unitOfMeasureName`      | `String`       | Name of the unit of measure                                                            |
+| `unitOfMeasureSymbol`    | `String`       | Symbol of the unit of measure (e.g., "kg", "L")                                        |
+| `startDate`              | `Date`         | Record start date                                                                      |
+| `endDate`                | `Date`         | Record end date                                                                        |
+| `durationInMillis`       | `Long`         | Duration of the record in milliseconds (end date - start date)                         |
+| `sourceMaterialId`       | `String` (ULID) | ID of the material associated with the source lot                                      |
+| `sourceMaterialName`     | `String`       | Name of the material associated with the source lot                                    |
+| `targetMaterialId`       | `String` (ULID) | ID of the material associated with the target lot                                      |
+| `targetMaterialName`     | `String`       | Name of the material associated with the target lot                                    |
 
 ## Code Example
 
 ```python
+# First get the trace graph to obtain the edge IDs
 inventoryLotId = "01JZJZ1FSE-WAW6VBVG-4506XP0C"
-traceTable = system.mes.trackandtrace.getLotTraceTable(inventoryLotId, "OUTPUT")
-print(traceTable)
+traceGraph = system.mes.trackandtrace.getLotTraceGraph(inventoryLotId, "OUTPUT")
+
+# Extract the edge IDs from the trace graph
+edgeIds = [edge["id"] for edge in traceGraph["edges"]]
+
+# Use the edge IDs to get detailed trace table information
+traceTableRows = system.mes.trackandtrace.getLotTraceTable(edgeIds)
+
+# Print the table data
+for row in traceTableRows:
+    print(f"Record Type: {row['lotRecordType']}")
+    print(f"Source Lot: {row['sourceInventoryLotName']} (Material: {row['sourceMaterialName']})")
+    print(f"Target Lot: {row['targetInventoryLotName']} (Material: {row['targetMaterialName']})")
+    print(f"Quantity: {row['quantity']} {row['unitOfMeasureSymbol']}")
+    print(f"From: {row['sourceLocationPath']} → To: {row['destinationLocationPath']}")
+    print(f"Start: {row['startDate']}, End: {row['endDate']}, Duration: {row['durationInMillis']}ms")
+    print("---")
 ```
 
 ### Example Output
-```json
-{
-  "direction": "OUTPUT",
-  "rootNodeId": "01JZJZ1FSE-WAW6VBVG-4506XP0C",
-  "nodes": [
-    {
-      "id": "01JRGMQQQR-FNYB310E-QATAWA9X",
-      "data": {
-        "lotName": "Lot-01JZJZ",
-        "materialName": "cherry",
-        "materialClassName": "BLEND",
-        "materialDescription": null,
-        "quantity": 100.0,
-        "uom": "kg"
-      }
-    }
-  ],
-  "edges": [
-    {
-      "id": "01JZKBA80K-JYT9EC63-BZRVNE6H",
-      "source": "01JZJZ1FSE-WAW6VBVG-4506XP0C",
-      "target": "01JRGMQQQR-FNYB310E-QATAWA9X",
-      "animated": true
-    }
-  ]
-}
 ```
-
+Record Type: Produce
+Source Lot: Lot-01JZJZ (Material: apple)
+Target Lot: Lot-01JRGM (Material: cherry)
+Quantity: 100.0 kg
+From: /Facility/Line1 → To: /Facility/Warehouse
+Start: 2023-06-15T14:30:00Z, End: 2023-06-15T14:45:00Z, Duration: 900000ms
+---
+```
