@@ -8,10 +8,10 @@ sidebar_position: 0
 
 ## Description
 
-Retrieves adjacent nodes and edges of the trace graph for the given 
+Retrieves adjacent and root nodes and edges of the trace graph for the given 
 [InventoryLot](../../data-model/inventory-model/inventory-lot.md) ID in the specified direction. Only a single level of 
-adjacency is returned, meaning that the function will return only the nodes and edges that are directly connected to the 
-root node.
+adjacency is returned if depth is 1 or not provided, meaning that the function will return only the nodes and edges that are directly connected to the 
+root node. Otherwise it will fetch ancestors or offspring up to the specified depth.
 
 This function is used by the trace graph component to visualize the flow of materials. Nodes represent inventory lots, 
 and edges represent the InventoryLotRecords that connect them.

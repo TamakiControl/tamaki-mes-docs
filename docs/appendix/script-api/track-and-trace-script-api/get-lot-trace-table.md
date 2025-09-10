@@ -25,7 +25,7 @@ system.mes.trackandtrace.getLotTraceTable(inventoryLotRecordIds)
 
 | Parameter              | Type                    | Description                                | Required |
 |------------------------|-------------------------|--------------------------------------------|----------|
-| `inventoryLotRecordIds` | `List` of `String` (ULID) | List of inventory lot record IDs to retrieve | Yes      |
+| `inventoryLotRecordIds` | `List<String>` (ULID) | List of inventory lot record IDs to retrieve | Yes      |
 
 ## Returns
 
