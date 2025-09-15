@@ -1,17 +1,16 @@
 ---
 sidebar_position: 1
 title: "Import/Export Guide"
-description: "How to import and export data via scripting"
+description: "Import/Export User Guide"
 ---
 
-# Import/Export Guide
+# Import/Export User Guide
 
-## API-Based Import/Export
+## Table of Contents
 - [Materials](materials)
-- [Material Classes](material-classes)
 - [Locations](locations)
 - [Operations](operations)
 - [Inventory Operations](inventory-operations)
-- [OEE (Configs, Modes, States, Downtime)](oee)
-- [Dashboards (Widgets)](dashboards)
+- [OEE](oee)
+- [Dashboards](dashboards)
 - [Units of Measure](units-of-measure)
