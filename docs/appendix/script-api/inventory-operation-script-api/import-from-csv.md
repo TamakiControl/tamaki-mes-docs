@@ -39,6 +39,5 @@ for more information on the `onFileReceived` event handler.
 ```python
 def runAction(self, event):
 	csvBytes = event.file.getBytes()
-	response = system.mes.inventory.operation.importFromCsv(csvBytes)
-	# response["data"] contains the number imported
+	system.mes.inventory.operation.importFromCsv(csvBytes)
 ```

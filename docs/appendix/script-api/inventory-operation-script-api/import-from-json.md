@@ -39,6 +39,5 @@ for more information on the `onFileReceived` event handler.
 ```python
 def runAction(self, event):
 	jsonBytes = event.file.getBytes()
-	response = system.mes.inventory.operation.importFromJson(jsonBytes)
-	# response["data"] contains the number imported
+	system.mes.inventory.operation.importFromJson(jsonBytes)
 ```
