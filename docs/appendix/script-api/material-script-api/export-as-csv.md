@@ -10,13 +10,13 @@ description: "Exports materials as raw CSV bytes (UTF-8 encoded)"
 
 **No Parameter:**
 
-Exports all [Materials](../../data-model/material-model/material) and 
+Exports all [Materials](../../data-model/material-model/material) and
 [Material Classes](../../data-model/material-model/material-class) as raw CSV bytes (UTF-8 encoded).
 Streams material data from the database and formats it as CSV, including a header row.
 
 **With a Parameter:**
 
-Exports selected [Materials](../../data-model/material-model/material) and 
+Exports selected [Materials](../../data-model/material-model/material) and
 [Material Classes](../../data-model/material-model/material-class) by ids or paths as raw CSV bytes (UTF-8 encoded).
 Streams material data from the database and formats it as CSV, including a header row.
 
@@ -32,14 +32,14 @@ system.mes.material.exportAsCsv(idsOrPaths)
 **No Parameter:**
 
 | Parameter | Type | Nullable | Description                               |
-|-----------|------|----------|-------------------------------------------|
+| --------- | ---- | -------- | ----------------------------------------- |
 | None      | -    | -        | This method does not take any parameters. |
 
 **With a Parameter:**
 
-| Parameter   | Type        | Nullable | Description                                               |
-|-------------|-------------|----------|-----------------------------------------------------------|
-| `idsOrPaths`| `PyList`    | True     | Optional list of material ids or paths to export only.    |
+| Parameter    | Type     | Nullable | Description                                   |
+| ------------ | -------- | -------- | --------------------------------------------- |
+| `idsOrPaths` | `PyList` | True     | List of material ids or paths to export only. |
 
 ## Returns
 
@@ -48,12 +48,14 @@ A Byte array (Byte[]) containing the raw byte data of the CSV export.
 ## Code Examples
 
 ### Perspective
+
 ```python
 csvBytes = system.mes.material.exportAsCsv()
 system.perspective.download("materials.csv", csvBytes)
 ```
 
 ### Script Console
+
 ```python
 csvBytes = system.mes.material.exportAsCsv()
 path = system.file.saveFile("materials.csv")
