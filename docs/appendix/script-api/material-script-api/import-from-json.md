@@ -22,8 +22,6 @@ system.mes.material.importFromJson(importBytes)
 
 ## Parameters
 
-A bytes array representing the JSON content.
-
 | Parameter      | Type      | Nullable | Description                    |
 |----------------|-----------|----------|--------------------------------|
 | `importBytes`  | `PyArray` | False    | The JSON content as raw bytes. |

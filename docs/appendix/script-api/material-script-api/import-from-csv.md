@@ -22,8 +22,6 @@ system.mes.material.importFromCsv(importBytes)
 
 ## Parameters
 
-A bytes array representing the CSV content.
-
 | Parameter      | Type      | Nullable | Description                   |
 |----------------|-----------|----------|-------------------------------|
 | `importBytes`  | `PyArray` | False    | The CSV content as raw bytes. |
