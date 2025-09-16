@@ -1,5 +1,5 @@
 ---
-sidebar_position: 23
+sidebar_position: 26
 title: "importFromCsv"
 description: "Imports materials from a CSV file provided as raw bytes"
 ---
@@ -39,6 +39,5 @@ for more information on the `onFileReceived` event handler.
 ```python
 def runAction(self, event):
 	csvBytes = event.file.getBytes()
-	response = system.mes.material.importFromCsv(csvBytes)
-	# response["data"] contains the number imported
+	system.mes.material.importFromCsv(csvBytes)
 ```

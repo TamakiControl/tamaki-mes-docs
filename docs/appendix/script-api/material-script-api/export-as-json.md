@@ -1,5 +1,5 @@
 ---
-sidebar_position: 26
+sidebar_position: 25
 title: "exportAsJson"
 description: "Exports materials as raw JSON bytes (UTF-8 encoded)"
 ---

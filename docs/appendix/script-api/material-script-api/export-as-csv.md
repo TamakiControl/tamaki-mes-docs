@@ -1,5 +1,5 @@
 ---
-sidebar_position: 25
+sidebar_position: 24
 title: "exportAsCsv"
 description: "Exports materials as raw CSV bytes (UTF-8 encoded)"
 ---

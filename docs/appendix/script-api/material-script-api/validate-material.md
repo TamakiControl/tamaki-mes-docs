@@ -1,5 +1,5 @@
 ---
-sidebar_position: 23
+sidebar_position: 21
 title: "validateMaterial"
 description: "Validates the specified parameters for a material."
 ---

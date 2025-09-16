@@ -1,5 +1,5 @@
 ---
-sidebar_position: 24
+sidebar_position: 27
 title: "importFromJson"
 description: "Imports materials from a JSON file provided as raw bytes"
 ---
@@ -39,6 +39,5 @@ for more information on the `onFileReceived` event handler.
 ```python
 def runAction(self, event):
 	jsonBytes = event.file.getBytes()
-	response = system.mes.material.importFromJson(jsonBytes)
-	# response["data"] contains the number imported
+	system.mes.material.importFromJson(jsonBytes)
 ```
