@@ -1,5 +1,5 @@
 ---
-sidebar_position: 13
+sidebar_position: 12
 title: "deleteMaterialClasses"
 description: "Deletes all material classes with the given IDs or paths."
 ---

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 26
+sidebar_position: 23
 title: "deleteMaterials"
 description: "Deletes all materials with the given IDs or paths."
 ---

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 22
+sidebar_position: 20
 title: "getMaterialReferences"
 description: "Retrieves a list of references to a material with the given ID or path."
 ---

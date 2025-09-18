@@ -1,5 +1,5 @@
 ---
-sidebar_position: 19
+sidebar_position: 17
 title: "getMaterial"
 description: "Retrieves the material with the given ID or path."
 ---

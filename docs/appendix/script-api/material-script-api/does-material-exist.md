@@ -1,5 +1,5 @@
 ---
-sidebar_position: 17
+sidebar_position: 15
 title: "doesMaterialExist"
 description: "Checks if a material with the given ID or path exists."
 ---
