@@ -43,6 +43,15 @@ certifications.
 
 See [person_personnel_certifications](person-personnel-certification) for more details.
 
+### 5. roles
+
+Represents a set of permissions and required security levels that define what actions a person assigned to a role can
+perform. Roles are used to manage access control and operational responsibilities. Each role specifies a list of
+Ignition security levels, MES permissions, and a requirement type (ALL_OF or ANY_OF) that determines how security levels
+are evaluated for permission grants.
+
+See [roles](role.md) for more details.
+
 ---
 
 ## Entity Relationships
