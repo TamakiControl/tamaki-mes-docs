@@ -21,7 +21,7 @@ system.mes.personnel.deletePerson(idOrUsername)
 
 | Parameter      | Type   | Nullable | Description                                 |
 |----------------| ------ |----------|---------------------------------------------|
-| `idOrUsername` | String | False    | The ID or username of the person to delete. |
+| `idOrUsername` | `String` | False    | The ID or username of the person to delete. |
 
 ## Returns
 

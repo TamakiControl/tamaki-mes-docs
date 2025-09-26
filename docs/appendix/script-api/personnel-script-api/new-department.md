@@ -41,10 +41,10 @@ Returns a JSON representation of the newly created department object. The follow
 
 ```
 # Generate the object structure for a new department object with no initial arguments
-new_department = system.mes.personnel.newDepartment()
+department = system.mes.personnel.newDepartment()
 
 # Set basic attributes for the new department
-new_department['name'] = 'Engineering'
+department['name'] = 'Engineering'
 # (You can continue setting other properties as needed here)
 
 # Save the new department to the system

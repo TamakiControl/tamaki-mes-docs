@@ -45,19 +45,19 @@ Returns a JSON representation of the newly created person object. The following 
 
 ```
 # Generate the object structure for a new person object with no initial arguments
-newPerson = system.mes.personnel.newPerson()
+person = system.mes.personnel.newPerson()
 
 # Set basic attributes for the new person
-newPerson['firstName'] = ''
-newPerson['lastName'] = ''
-newPerson['initials'] = ''
-newPerson['username'] = ''
-newPerson['departmentId'] = ''
-newPerson['personStatus'] = 'ACTIVE'
+person['firstName'] = ''
+person['lastName'] = ''
+person['initials'] = ''
+person['username'] = ''
+person['departmentId'] = ''
+person['personStatus'] = 'ACTIVE'
 # (You can continue setting other properties as needed here)
 
 # Save the new person to the system
-savedPerson = system.mes.personnel.savePerson(**newPerson)
+savedPerson = system.mes.personnel.savePerson(**person)
 
 # Output the JSON representation of the saved person
 print(savedPerson)

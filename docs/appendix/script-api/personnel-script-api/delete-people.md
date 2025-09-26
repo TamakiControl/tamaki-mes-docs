@@ -21,7 +21,7 @@ system.mes.personnel.deletePeople(ids)
 
 | Parameter        | Type                 | Nullable | Description                                       |
 |------------------|----------------------|----------|---------------------------------------------------|
-| `idsOrUsernames` | `List<String>`  | False    | List of IDs or usernames of the people to delete. |
+| `idsOrUsernames` | `List<String>` | False    | List of IDs or usernames of the people to delete. |
 
 ## Returns
 

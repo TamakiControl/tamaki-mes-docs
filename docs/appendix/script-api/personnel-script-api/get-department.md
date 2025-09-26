@@ -20,7 +20,7 @@ system.mes.personnel.getDepartment(idOrPath)
 
 | Parameter   | Type   | Nullable | Description                                         |
 | ----------- | ------ | -------- | --------------------------------------------------- |
-| `idOrPath`  | String | False    | The ID or path of the department to retrieve.       |
+| `idOrPath`  | `String` | False    | The ID or path of the department to retrieve.       |
 
 ## Returns
 
@@ -32,7 +32,7 @@ Returns a JSON object representing the department if found, or `null` if no depa
 # Retrieve a department by ID or path
 department = system.mes.personnel.getDepartment('01JAP8RJBN-8ZTPXSGY-J9GSDPE1')
 # or
-department = system.mes.personnel.getDepartment('/Corporate/Engineering')
+department = system.mes.personnel.getDepartment('Corporate/Engineering')
 
 # Output the department
 print(department)

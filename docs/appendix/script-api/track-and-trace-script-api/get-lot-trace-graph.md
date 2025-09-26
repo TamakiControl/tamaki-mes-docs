@@ -8,10 +8,10 @@ sidebar_position: 0
 
 ## Description
 
-Retrieves adjacent nodes and edges of the trace graph for the given 
+Retrieves adjacent and root nodes and edges of the trace graph for the given 
 [InventoryLot](../../data-model/inventory-model/inventory-lot.md) ID in the specified direction. Only a single level of 
-adjacency is returned, meaning that the function will return only the nodes and edges that are directly connected to the 
-root node.
+adjacency is returned if depth is 1 or not provided, meaning that the function will return only the nodes and edges that are directly connected to the 
+root node. Otherwise it will fetch ancestors or offspring up to the specified depth.
 
 This function is used by the trace graph component to visualize the flow of materials. Nodes represent inventory lots, 
 and edges represent the InventoryLotRecords that connect them.
@@ -23,14 +23,16 @@ This scripting function has no client permission restrictions.
 ## Syntax
 ```python
 system.mes.trackandtrace.getLotTraceGraph(rootNodeId, direction)
+system.mes.trackandtrace.getLotTraceGraph(rootNodeId, direction, depth) # Overload
 ```
 
 ## Parameters
 
-| Parameter    | Type          | Description                                                                        |
-|--------------|---------------|------------------------------------------------------------------------------------|
-| `rootNodeId` | `String` (ULID) | The ID of the root inventory lot                                                   |
-| `direction`   | `String`      | The direction of the trace graph to be retrieved. Can be either `INPUT` or `OUTPUT` |
+| Parameter    | Type          | Description                                                                                                     | Required  |
+|--------------|---------------|-----------------------------------------------------------------------------------------------------------------|-----------|
+| `rootNodeId` | `String` (ULID) | The ID of the root inventory lot                                                                              | Yes       |
+| `direction`   | `String`      | The direction of the trace graph to be retrieved. Can be either `INPUT` or `OUTPUT`                            | Yes       |
+| `depth `      | `Int`         | The desired maximum depth to which the graph will attempt to generate nodes in the given direction (maximum 5) | No        |
 
 
 ## Returns
@@ -43,15 +45,15 @@ A trace graph object with the following properties:
 |--------------|-----------------|-----------------------------------------------------------------------------------------------------------|
 | `nodes`      | `List` of nodes | List of nodes in the track and trace graph that are adjacent to the root node in the requested direction. |
 | `edges`      | `List` of edges | List of edges in the track and trace graph that connect the nodes in the requested direction.             |
-| `rootNodeId` | `String`          | The inventory lot ID that was given as an argument in the original request                                |
-| `direction`     | `String`         | The direction that was given as an argument in the original request                                        |
+| `rootNodeId` | `String`        | The inventory lot ID that was given as an argument in the original request                                |
+| `direction`  | `String`        | The direction that was given as an argument in the original request                                       |
 
 ### Node
 
 | Property | Type            | Description                                              |
 |----------|-----------------|----------------------------------------------------------|
 | `id`     | `String` (ULID) | The ID of the node, which is the inventory lot ID        |
-| `data`    | `Object`         | The data object contains several properties listed below |
+| `data`   | `Object`        | The data object contains several properties listed below |
 
 #### Node data
 | Property          | Type          | Description                                                                       |

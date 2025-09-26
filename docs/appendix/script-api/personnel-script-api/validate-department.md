@@ -21,16 +21,16 @@ system.mes.personnel.validateDepartment(**department_data)
 
 | Parameter     | Type            | Nullable | Description                                                                              |
 | ------------- | --------------- |----------| ---------------------------------------------------------------------------------------- |
-| `name`        | String          | False    | The name of the department.                                                              |
-| `description` | String          | True     | The description of the department.                                                       |
-| `path`        | String          | True     | The path to the department.                                                              |
-| `parentId`    | String (ULID)   | True     | The ULID of the parent department to this department.                                    |
-| `id`          | String (ULID)   | True     | The ULID of the department (optional, used for updating an existing department).         |
-| `notes`       | String          | True     | Notes related to the department.                                                         |
-| `enabled`     | Boolean         | True     | Indicates if the department is active and enabled.                                       |
-| `spare1`      | String          | True     | Additional field for user-defined context.                                               |
-| `spare2`      | String          | True     | Additional field for user-defined context.                                               |
-| `spare3`      | String          | True     | Additional field for user-defined context.                                               |
+| `name`        | `String`          | False    | The name of the department.                                                              |
+| `description` | `String`          | True     | The description of the department.                                                       |
+| `path`        | `String`          | True     | The path to the department.                                                              |
+| `parentId`    | `String` (ULID)   | True     | The ULID of the parent department to this department.                                    |
+| `id`          | `String` (ULID)   | True     | The ULID of the department (optional, used for updating an existing department).         |
+| `notes`       | `String`          | True     | Notes related to the department.                                                         |
+| `enabled`     | `Boolean`         | True     | Indicates if the department is active and enabled.                                       |
+| `spare1`      | `String`          | True     | Additional field for user-defined context.                                               |
+| `spare2`      | `String`          | True     | Additional field for user-defined context.                                               |
+| `spare3`      | `String`          | True     | Additional field for user-defined context.                                               |
 
 ## Returns
 
@@ -39,18 +39,7 @@ Returns a JSON object where keys are field names and values are lists of validat
 ## Code Examples
 
 ```
-# Generate the object structure for a new department object
-department_data = system.mes.personnel.newDepartment()
-
-# Set basic attributes for the new department
-department_data['name'] = 'Engineering'
-# (You can continue setting other properties as needed here)
-
-# Validate department parameters
-validation_errors = system.mes.personnel.validateDepartment(**department_data)
-
-if len(validation_errors) > 0:
-    print('Validation errors found:', validation_errors)
-else:
-    print('Department parameters are valid.')
+department = system.mes.personnel.newDepartment()
+department['name'] = 'Engineering'
+violations = system.mes.personnel.validateDepartment(**department)
 ```

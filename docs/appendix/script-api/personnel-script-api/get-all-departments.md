@@ -30,8 +30,8 @@ Returns a list of JSON objects representing all departments.
 
 ```
 # Retrieve all departments
-all_departments = system.mes.personnel.getAllDepartments()
+allDepartments = system.mes.personnel.getAllDepartments()
 
 # Output the list of departments
-print(all_departments)
+print(allDepartments)
 ```
