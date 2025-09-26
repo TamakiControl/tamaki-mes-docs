@@ -43,14 +43,16 @@ Effective delay sequence is `backoff_delay_ms * multiplier^(attempt-1)` until ma
 
 ## OEE
 
-| **Property**                                  | **Default**   | **Description**                                                                                                                                                                                                                              |
-| --------------------------------------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `oee.data_collection.execution_interval_ms`   | `250`         | Interval between OEE data collection executions (milliseconds).                                                                                                                                                                              |
-| `oee.data_collection.flush_check_interval_ms` | `10000`       | Frequency to check whether buffered OEE data should be flushed to the database (milliseconds).                                                                                                                                               |
-| `oee.data_collection.prune_records_cron`      | `0 0 0 * * ?` | Cron expression for pruning old OEE records. Uses [Spring Cron Format](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/scheduling/support/CronExpression.html). The default value is Daily at Midnight. |
-| `oee.alarms.alarm_flush_interval_ms`          | `10000`       | Interval between OEE alarm flush operations (milliseconds).                                                                                                                                                                                  |
-| `oee.pruning.batch_size`                      | `1000`        | Number of OEE records deleted per pruning batch.                                                                                                                                                                                             |
-| `oee.pruning.batch_delay_ms`                  | `500`         | Delay between pruning batches to reduce DB load (milliseconds).                                                                                                                                                                              |
+| **Property**                                    | **Default**   | **Description**                                                                                                                                                                                                                              |
+|-------------------------------------------------|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `oee.data_collection.execution_interval_ms`     | `250`         | Interval between OEE data collection executions (milliseconds).                                                                                                                                                                              |
+| `oee.data_collection.flush_check_interval_ms`   | `10000`       | Frequency to check whether buffered OEE data should be flushed to the database (milliseconds).                                                                                                                                               |
+| `oee.data_collection.prune_records_cron`        | `0 0 0 * * ?` | Cron expression for pruning old OEE records. Uses [Spring Cron Format](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/scheduling/support/CronExpression.html). The default value is Daily at Midnight. |
+| `oee.data_collection.logs.throttling.threshold` | `10`          | The maximum number of errors to show within the throttling window before suppressing them.                                                                                                                                                   |
+| `oee.data_collection.logs.throttling.window_ms` | `5000`        | The logs throttling window (milliseconds). Duplicate logs inside this window will be suppressed.                                                                                                                                             |
+| `oee.alarms.alarm_flush_interval_ms`            | `10000`       | Interval between OEE alarm flush operations (milliseconds).                                                                                                                                                                                  |
+| `oee.pruning.batch_size`                        | `1000`        | Number of OEE records deleted per pruning batch.                                                                                                                                                                                             |
+| `oee.pruning.batch_delay_ms`                    | `500`         | Delay between pruning batches to reduce DB load (milliseconds).                                                                                                                                                                              |
 
 ### Notes
 
@@ -83,10 +85,12 @@ Effective delay sequence is `backoff_delay_ms * multiplier^(attempt-1)` until ma
 ## Expression
 
 | **Property**                                  | **Default** | **Description**                                                 |
-| --------------------------------------------- | ----------- | --------------------------------------------------------------- |
+|-----------------------------------------------| ----------- | --------------------------------------------------------------- |
 | `expression.health_check.min_batch_size`      | `5`         | Minimum number of expressions evaluated per health check cycle. |
 | `expression.health_check.scan_interval_ms`    | `3000`      | Interval between expression health check scans (milliseconds).  |
 | `expression.health_check.max_log_expressions` | `10`        | Max number of expressions logged when anomalies are detected.   |
+| `expression.logs.throttling.window_ms`        | `5000`      | The logs throttling window (milliseconds). Duplicate logs inside this window will be suppressed.                                                                                                                                             |
+
 
 ## Tracegraph
 
@@ -94,3 +98,10 @@ Effective delay sequence is `backoff_delay_ms * multiplier^(attempt-1)` until ma
 | ---------------------- | ----------- | ---------------------------------------------------------------------------- |
 | `tracegraph.max_nodes` | `1000`      | Maximum number of nodes visited during a trace to prevent runaway traversal. |
 | `tracegraph.max_depth` | `5`         | Maximum traversal depth for trace graph operations.                          |
+
+
+## Additional Logging
+
+| **Property**         | **Default** | **Description**                                         |
+|----------------------|-------------|---------------------------------------------------------|
+| `logs.diagnostics`   | `true`      | Whether or not to enable additional diagnostic logging. |
