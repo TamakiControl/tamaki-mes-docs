@@ -1,21 +1,36 @@
----
+sidebar_position: 21
 title: "getInventoryOperationPermissions"
-description: "Gets all inventory operation role permissions."
-sidebar_position: 1
+description: "Retrieves a list of all inventory operation permissions."
 ---
 
-# system.mes.inventoryOperation.getInventoryOperationPermissions
+# system.mes.inventory.operation.getInventoryOperationPermissions
 
 ## Description
-Retrieves a list of all role permission strings related to inventory operations.
 
-## Returns
-| Type         | Description                                 |
-|--------------|---------------------------------------------|
-| `List<String>` | List of all inventory operation role permissions. |
+Retrieves all the [Inventory Operations](../../data-model/inventory-model/inventory-operation) permissions.
 
-## Code Example
+## Syntax
+
 ```python
-permissions = system.mes.inventoryOperation.getInventoryOperationPermissions()
+system.mes.inventory.operation.getInventoryOperationPermissions()
 ```
 
+## Parameters
+
+| Parameter | Type | Nullable | Description                               |
+| --------- | ---- | -------- | ----------------------------------------- |
+| None      | -    | -        | This method does not take any parameters. |
+
+## Returns
+
+Returns a list of strings for each of the inventory operation permissions.
+
+## Example Usage
+
+```python
+# Retrieve all inventory operation permissions
+inventory_operation_permissions = system.mes.inventory.operation.getInventoryOperationPermissions()
+
+# Output the list of inventory operation permissions
+print(inventory_operation_permissions)
+```
