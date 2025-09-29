@@ -82,7 +82,7 @@ jobs:
             -e "CONFIG=/config.json" \
             -e "BATCH_SIZE=20" \
             -v "$(pwd)/gh-action-scraper-config.json:/config.json:ro" \
-            --memory="4g"
+            --memory="4g" \
             typesense/docsearch-scraper:0.11.0
 
       - name: Deploy to GitHub Pages
