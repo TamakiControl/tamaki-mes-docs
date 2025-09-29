@@ -6,7 +6,6 @@
   "js_render": false,
   "sitemap_alternate_links": true,
   "strip_chars": " .,;:#",
-  "record_ids": true,
   "selectors": {
     "default": {
       "lvl0": {
