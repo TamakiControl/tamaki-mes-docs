@@ -1,4 +1,3 @@
----
 sidebar_position: 21
 title: "getInventoryOperationPermissions"
 description: "Retrieves a list of all inventory operation permissions."

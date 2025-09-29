@@ -21,9 +21,9 @@ system.mes.unitOfMeasure.findUnitOfMeasureConversions(**queryRequest)
 Using Python keyword arguments, a [Query Request](../query-script-api/new-query-request) can be passed to the `findUnitOfMeasureConversions` function
 without specifying each parameter individually. Please refer to the [Query Request](../query-script-api/new-query-request) documentation for a list of parameters.
 
-| Parameter      | Type            | Nullable | Description                                                                                                                                                                                                                                                                                                              |
-|----------------|-----------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `queryRequest` | `Query Request` | False    | Using Python keyword arguments, a [Query Request](../query-script-api/new-query-request) can be passed to the `findUnitOfMeasureConversions` function without specifying each parameter individually. Please refer to the [Query Request](../query-script-api/new-query-request) documentation for a list of parameters. |
+| Parameter      | Type            | Nullable | Description                                                                                                                                                                                                                                                                                                             |
+|----------------|-----------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `queryRequest` | `Query Request` | False    | A [Query Request](../query-script-api/new-query-request) with the desired pagination, sorting, and filtering parameters. |
 
 ## Returns
 

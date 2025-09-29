@@ -80,6 +80,12 @@ key entities involved in manufacturing operations, supporting functions like **O
 
    The performance data helps in evaluating and improving the efficiency of operations and scheduling.
 
+10. **Dashboard**  
+   Defines configurable user dashboards and widget templates used for displaying KPIs and production context:
+   - **Dashboards**: Saved layouts, grid settings, and serialized instances for the UI.
+   - **Widgets**: Reusable templates that render Perspective views with sizing constraints.
+   - **Widget Parameters/Types**: Parameter metadata, default values, and editor configuration views.
+
 ---
 
 Each module plays a specific role in the overall MES framework, enabling **TamakiMES** to provide comprehensive,
