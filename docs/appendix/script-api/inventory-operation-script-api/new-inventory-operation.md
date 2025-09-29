@@ -6,7 +6,7 @@ description: "Generates an empty non-persisted inventory operation object to pro
 
 # system.mes.inventory.operation.newInventoryOperation
 
-Generates an empty non-persisted [Inventory Operations](../../data-model/inventory-model/inventory-operation) object to provide the structure required by the API
+Generates an empty non-persisted [Inventory Operations](../../data-model/inventory-operation-model/inventory-operation) object to provide the structure required by the API
 to save a new record into the database. This method must be combined with the [saveInventoryOperation](./save-inventory-operation) method in order to persist the record.
 
 ## Syntax
@@ -46,12 +46,14 @@ Returns a JSON representation of the newly created Inventory Operation object. T
 | `materialId`                      | `null`          |
 | `materialPath`                    | `null`          |
 | `materialExpression`              | `null`          |
+| `secondaryMaterialId`             | `null`          |
+| `secondaryMaterialPath`           | `null`          |
 | `primaryLotResolutionStrategy`    | `AUTO_GENERATE` |
 | `secondaryLotResolutionStrategy`  | `AUTO_GENERATE` |
 | `primaryLotCodeExpression`        | `null`          |
 | `secondaryLotCodeExpression`      | `null`          |
 | `createLotIfNotFound`             | `false`         |
-| `inventoryNameResolutionStrategy` | `MANUAL`        |
+| `inventoryNameResolutionStrategy` | `STATIC`        |
 | `inventoryName`                   | `null`          |
 | `inventoryNameExpression`         | `null`          |
 | `quantitySource`                  | `EXPRESSION`    |
@@ -64,7 +66,6 @@ Returns a JSON representation of the newly created Inventory Operation object. T
 | `reasonCodeId`                    | `null`          |
 | `reasonCodeName`                  | `null`          |
 | `incrementProductionOrderCount`   | `false`         |
-| `flushIntervalMillis`             | `0`             |
 | `id`                              | `null`          |
 | `notes`                           | `null`          |
 | `enabled`                         | `true`          |
