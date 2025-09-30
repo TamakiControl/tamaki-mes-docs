@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 4
 title: "Terms and Definitions"
 description: "Track and Trace Terms and Definitions"
 ---
