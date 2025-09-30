@@ -32,8 +32,13 @@ docker pull typesense/docsearch-scraper:latest
 docker run -it --env-file=./.env -e "CONFIG=$(cat typesense-config.json | jq -r tostring)" typesense/docsearch-scraper
 ```
 
+### Memory Error For docsearch-scraper (Errno 442)
 
+If you run the DocSearch scraper and see an error like:
+```
+typesense.exceptions.ObjectUnprocessable: [Errno 422] Rejecting write: running out of resource type: OUT_OF_MEMORY
+```
+This happens when your Typesense cluster does not have enough memory to handle the indexing workload.
 
-
-
-Test
+To fix it, increase the memory allocation in Typesense Cloud.
+After increasing the memory, the scraper should complete without errors.
