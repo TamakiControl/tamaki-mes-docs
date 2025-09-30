@@ -8,10 +8,10 @@ description: "Imports inventory operations from a JSON file provided as raw byte
 
 ## Description
 
-Imports[Inventory Operations](../../data-model/inventory-operation-model/inventory-operation) from a JSON file provided as raw bytes.
+Imports [Inventory Operations](../../data-model/inventory-operation-model/inventory-operation) from a JSON file provided as raw bytes.
 The service layer parses the JSON content and creates or updates inventory operation entities.
 
-Recommended to export at least one pre-existing material to JSON using the [Export Inventory Operations](export-as-json.md)
+Recommended to export at least one pre-existing inventory operation to JSON using the [exportAsJson](export-as-json.md)
 functionality to ensure the correct format of the JSON file.
 
 ## Syntax

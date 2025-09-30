@@ -8,7 +8,7 @@ description: "Creates or updates an inventory lot record with specified paramete
 
 ## Description
 
-Creates or updates an [Inventory Lot Records](../../data-model/inventory-model/inventory-lot-record) object in the system based on the provided parameters.
+Creates or updates an [Inventory Lot Records](../../data-model/inventory-operation-model/inventory-lot-record) object in the system based on the provided parameters.
 
 ## Syntax
 

@@ -11,7 +11,7 @@ description: "Imports inventory operations from a CSV file provided as raw bytes
 Imports [Inventory Operations](../../data-model/inventory-operation-model/inventory-operation) from a CSV file provided as raw bytes.
 The service layer will parse the CSV content and create or update inventory operation entities.
 
-Recommended to export at least one pre-existing material to CSV using the [Export Inventory Operations](export-as-csv.md)
+Recommended to export at least one pre-existing inventory operation to CSV using the [exportAsCsv](export-as-csv.md)
 functionality to ensure the correct format of the CSV file.
 
 ## Syntax

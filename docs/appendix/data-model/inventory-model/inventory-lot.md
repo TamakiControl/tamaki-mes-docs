@@ -12,6 +12,8 @@ The `InventoryLot` entity represents a specific batch or lot of a material. Each
 material, has a defined status, and includes details like total quantity, expiration date, and unit of measure. This
 entity supports tracking and management of materials in discrete quantities for production, inventory, and compliance.
 
+> Uniqueness: A database unique constraint enforces that each (`material_id`, `name`) pair may only appear once.
+
 ## Table Structure
 
 The following table outlines the SQL columns for the `inventory_lots` table, providing a brief description of each, along
@@ -29,13 +31,13 @@ with sample data where applicable.
 | `spare1`             | `String`        | The first spare column that can be used for additional context on the entity.                                                        | `some extra context 1`              |
 | `spare2`             | `String`        | The second spare column that can be used for additional context on the entity.                                                       | `some extra context 2`              |
 | `spare3`             | `String`        | The third spare column that can be used for additional context on the entity.                                                        | `some extra context 3`              |
-| `name`               | `String`        | Name of the lot, unique within the context of its parent material.                                                                   | `Batch #1001`                       |
-| `material_id`        | `String` (ULID) | References the material associated with this lot. See [materials](../material-model/material).                                       | `01JAP8R5RT-3FPXQABY-7KQZT6VF`      |
-| `status`             | `String` (Enum) | Current status of the inventory lot, as defined by the **LotStatus** enum.                                                           | `OPEN`                              |
-| `total_quantity`     | `Double`        | Total quantity of material contained in the lot.                                                                                     | `1500.0`                            |
-| `expiration_date`    | `DateTime`      | Optional field indicating the expected expiration date of the lot.                                                                   | `2024-12-31T23:59:59Z`              |
-| `closed_date`        | `DateTime`      | Optional field indicating the date the lot was closed.                                                                               | `2024-01-15T12:00:00Z`              |
-| `unit_of_measure_id` | `String` (ULID) | References the unit of measure for the lot quantity. See [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure). | `01JAP8RJBN-4VYZUKE1-LY2QHV8X`      |
+| `name`               | `String`        | (Required) Name of the lot, unique within the context of its parent material.                                                      | `Batch #1001`                       |
+| `material_id`        | `String` (ULID) | (Required) References the material associated with this lot. See [materials](../material-model/material).                          | `01JAP8R5RT-3FPXQABY-7KQZT6VF`      |
+| `status`             | `String` (Enum) | (Required) Current status of the inventory lot, as defined by the **LotStatus** enum (defaults to `OPEN`).                         | `OPEN`                              |
+| `total_quantity`     | `Double`        | (Required) Total cumulative quantity ever added to the lot (defaults to `0.0`).                                                    | `1500.0`                            |
+| `expiration_date`    | `DateTime`      | (Optional) Expected expiration date of the lot.                                                                                    | `2024-12-31T23:59:59Z`              |
+| `closed_date`        | `DateTime`      | (Optional) Date the lot was closed.                                                                                                | `2024-01-15T12:00:00Z`              |
+| `unit_of_measure_id` | `String` (ULID) | (Required) References the unit of measure for the lot quantity. See [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure). | `01JAP8RJBN-4VYZUKE1-LY2QHV8X`      |
 
 ## Field Details
 
@@ -47,7 +49,7 @@ See [materials](../material-model/material) for details.
 
 ### `status`
 
-Indicates the current state of the lot, using the **LotStatus** enum, with possible values:
+Indicates the current state of the lot, using the **LotStatus** enum (default `OPEN`), with possible values:
 
 - **OPEN**: Lot is in the system but not available for use.
 - **AVAILABLE**: Lot is available for use.
@@ -58,8 +60,10 @@ Indicates the current state of the lot, using the **LotStatus** enum, with possi
 
 ### `total_quantity`
 
-Specifies the total quantity of the material that has ever existed for this lot. This value must be zero or greater
-and goes up when inventory is added but does not go back down when inventory is removed.
+Specifies the cumulative quantity of material ever added to this lot. This value:
+- Defaults to `0.0`.
+- Must be greater than or equal to zero.
+- Increases when inventory is added, but does not decrease when inventory is consumed or removed.
 
 ### `expiration_date`
 
@@ -72,5 +76,9 @@ Optional field for the date on which the lot was closed, useful for tracking lif
 
 ### `unit_of_measure_id`
 
-References the `UnitOfMeasure` entity associated with the inventory lot, enabling consistent measurement standards.
+References the `UnitOfMeasure` entity associated with the inventory lot (required). Enables consistent measurement standards.
 See [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure) for details.
+
+### Uniqueness
+
+The pair (`material_id`, `name`) must be unique. Attempts to create a duplicate combination will result in a constraint violation.
