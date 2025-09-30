@@ -8,18 +8,18 @@ description: "Documentation for the inventory_operations table, outlining its co
 
 ## Overview
 
-The `Inventory Operation` entity represents a specific action that can be performed on the lots and inventory. 
-Each inventory operation is defined with key attributes to determine the lots, locations, materials, quantities, and 
+The `Inventory Operation` entity represents a specific action that can be performed on the lots and inventory.
+Each inventory operation is defined with key attributes to determine the lots, locations, materials, quantities, and
 triggers for starting and stopping.
 These fields collectively enable precise planning, execution, and tracking of inventory operations.
 
 ## Table Structure
 
-The following table outlines the SQL columns for the `inventory_operations` table, providing a brief description of 
+The following table outlines the SQL columns for the `inventory_operations` table, providing a brief description of
 each, along with sample data where applicable.
 
 | Column                                | Type            | Description                                                                                                      | Example                             |
-|---------------------------------------|-----------------|------------------------------------------------------------------------------------------------------------------|-------------------------------------|
+| ------------------------------------- | --------------- | ---------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
 | `id`                                  | `String` (ULID) | Unique identifier for the entity.                                                                                | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
 | `enabled`                             | `Boolean`       | If the entity is enabled or not.                                                                                 | `true`                              |
 | `created_date`                        | `DateTime`      | Date the entity was created.                                                                                     | `2024-12-31T19:48:44Z`              |
@@ -44,6 +44,7 @@ each, along with sample data where applicable.
 | `destination_location_id`             | `String` (ULID) | References the destination location for the inventory transaction.                                               | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
 | `material_source`                     | `String` (Enum) | Strategy for resolving the material source (e.g., STATIC, EXPRESSION).                                           | `STATIC`                            |
 | `material_id`                         | `String` (ULID) | References the material associated with the operation.                                                           | `01JAP8RJBN-7KQZT6VF-Q5VUZYPW`      |
+| `secondary_material_id`               | `String` (ULID) | References the secondary material associated with the operation.                                                 | `01JAP8RJBN-7KQZT6VF-Q5VUZYPW`      |
 | `material_expression`                 | `String`        | Expression to resolve the material if the source is EXPRESSION.                                                  | `{[default]Material/Expression}`    |
 | `primary_lot_resolution_strategy`     | `String` (Enum) | Strategy for resolving the primary lot code (e.g., AUTO_GENERATE).                                               | `AUTO_GENERATE`                     |
 | `secondary_lot_resolution_strategy`   | `String` (Enum) | Strategy for resolving the secondary lot code (e.g., AUTO_GENERATE).                                             | `AUTO_GENERATE`                     |
@@ -61,7 +62,6 @@ each, along with sample data where applicable.
 | `unit_of_measure_resolution_strategy` | `String` (Enum) | Strategy for resolving the unit of measure (e.g., STATIC).                                                       | `STATIC`                            |
 | `reason_code_id`                      | `String` (ULID) | References the material reason code for the operation.                                                           | `01JAP8RJBN-7KQZT6VF-Q5VUZYPW`      |
 | `increment_production_order_count`    | `Boolean`       | Whether to increment the production order count.                                                                 | `false`                             |
-| `flush_interval_millis`               | `Integer`       | Interval in milliseconds for flushing data.                                                                      | `1000`                              |
 
 ## Field Details
 
@@ -83,7 +83,7 @@ Represents the current status of the inventory operation, as defined by the **St
 
 ### `current_record_id`
 
-References the current [InventoryLotRecord](../inventory-operation-model/inventory-lot-record) associated with the 
+References the current [InventoryLotRecord](../inventory-operation-model/inventory-lot-record) associated with the
 inventory operation. Used in the case of a gateway restart.
 
 ### `operation_type`
@@ -107,7 +107,7 @@ Specifies the type of inventory operation, as defined by the **InventoryOperatio
 
 ### `trigger_source`
 
-Defines which strategy to determine the start and stop triggers. Options are defined by the **TriggerSource** enum, with 
+Defines which strategy to determine the start and stop triggers. Options are defined by the **TriggerSource** enum, with
 possible values:
 
 - **MANUAL**: The inventory operation is manually triggered, typically through a user interface or script.
@@ -116,7 +116,7 @@ possible values:
 
 ### `start_trigger_expression`
 
-An expression that triggers the inventory operation to start. Used only if 'trigger_source' is set to `EXPRESSION`. 
+An expression that triggers the inventory operation to start. Used only if 'trigger_source' is set to `EXPRESSION`.
 The expression must evaluate to a boolean value.
 
 ### `start_trigger_type`
@@ -131,7 +131,7 @@ Possible values are defined by the **TriggerType** enum, with options:
 ### `stop_trigger_expression`
 
 An expression that triggers the inventory operation to stop. Used only if 'trigger_source' is set to `EXPRESSION`.
-The expression must evaluate to a boolean value. 
+The expression must evaluate to a boolean value.
 
 ### `stop_trigger_type`
 
@@ -152,7 +152,7 @@ References the destination [Location](../location-model/location) for the invent
 
 ### `material_source`
 
-Defines the strategy for resolving the [Material](../material-model/material.md), as defined by the **MaterialSource** 
+Defines the strategy for resolving the [Material](../material-model/material.md), as defined by the **MaterialSource**
 enum, with possible values:
 
 - **STATIC**: The material is statically defined and does not change.
@@ -161,17 +161,22 @@ enum, with possible values:
 
 ### `material_id`
 
-References the [Material](../material-model/material.md) associated with the inventory operation. This is used when the 
+References the [Material](../material-model/material.md) associated with the inventory operation. This is used when the
+`material_source` is set to `STATIC`.
+
+### `secondary_material_id`
+
+References the secondary [Material](../material-model/material.md) associated with the inventory operation. This is used when the
 `material_source` is set to `STATIC`.
 
 ### `material_expression`
 
-An expression to resolve the [Material](../material-model/material.md) if the `material_source` is set to `EXPRESSION`. 
+An expression to resolve the [Material](../material-model/material.md) if the `material_source` is set to `EXPRESSION`.
 Must evaluate to a valid Material ID or path.
 
 ### `primary_lot_resolution_strategy`
 
-Specifies the strategy for resolving the primary [InventoryLot](../inventory-model/inventory-lot.md). Options are 
+Specifies the strategy for resolving the primary [InventoryLot](../inventory-model/inventory-lot.md). Options are
 defined by the **LotResolutionStrategy** enum, with possible values:
 
 - **EXPRESSION**: The primary InventoryLot is determined by evaluating an expression at runtime.
@@ -180,7 +185,7 @@ defined by the **LotResolutionStrategy** enum, with possible values:
 
 ### `secondary_lot_resolution_strategy`
 
-Specifies the strategy for resolving the secondary [InventoryLot](../inventory-model/inventory-lot.md). Options are 
+Specifies the strategy for resolving the secondary [InventoryLot](../inventory-model/inventory-lot.md). Options are
 defined by the **LotResolutionStrategy** enum, with possible values:
 
 - **EXPRESSION**: The secondary InventoryLot is determined by evaluating an expression at runtime.
@@ -189,14 +194,14 @@ defined by the **LotResolutionStrategy** enum, with possible values:
 
 ### `primary_lot_code_expression`
 
-An expression to resolve the primary [InventoryLot](../inventory-model/inventory-lot.md). Used only if 
-`primary_lot_resolution_strategy` is set to `EXPRESSION`. The expression must evaluate to a valid InventoryLot code 
+An expression to resolve the primary [InventoryLot](../inventory-model/inventory-lot.md). Used only if
+`primary_lot_resolution_strategy` is set to `EXPRESSION`. The expression must evaluate to a valid InventoryLot code
 or ID.
 
 ### `secondary_lot_code_expression`
 
-An expression to resolve the secondary [InventoryLot](../inventory-model/inventory-lot.md). Used only if 
-`secondary_lot_resolution_strategy` is set to `EXPRESSION`. The expression must evaluate to a valid InventoryLot code 
+An expression to resolve the secondary [InventoryLot](../inventory-model/inventory-lot.md). Used only if
+`secondary_lot_resolution_strategy` is set to `EXPRESSION`. The expression must evaluate to a valid InventoryLot code
 or ID.
 
 ### `create_lot_if_not_found`
@@ -205,7 +210,7 @@ Indicates whether to create a [InventoryLot](../inventory-model/inventory-lot.md
 
 ### `inventory_name_resolution_strategy`
 
-Specifies the strategy for resolving the [Inventory](../inventory-model/inventory.md) name. Options are defined by the 
+Specifies the strategy for resolving the [Inventory](../inventory-model/inventory.md) name. Options are defined by the
 **InventoryNameResolutionStrategy** enum, with possible values:
 
 - **EXPRESSION**: The Inventory name is determined by evaluating an expression at runtime.
@@ -215,12 +220,12 @@ Specifies the strategy for resolving the [Inventory](../inventory-model/inventor
 
 ### `inventory_name`
 
-The name of the [Inventory](../inventory-model/inventory.md). Used only if `inventory_name_resolution_strategy` is set 
+The name of the [Inventory](../inventory-model/inventory.md). Used only if `inventory_name_resolution_strategy` is set
 to `STATIC`.
 
 ### `inventory_name_expression`
 
-An expression to resolve the [Inventory](../inventory-model/inventory.md) name. Used only if 
+An expression to resolve the [Inventory](../inventory-model/inventory.md) name. Used only if
 `inventory_name_resolution_strategy` is set to `EXPRESSION`. The expression must evaluate to a valid string.
 
 ### `quantity_source`
@@ -232,7 +237,7 @@ Specifies the strategy for resolving the quantity, as defined by the **QuantityS
 
 ### `quantity_expression`
 
-An expression to resolve the quantity. Used only if `quantity_source` is set to `EXPRESSION`. The expression must 
+An expression to resolve the quantity. Used only if `quantity_source` is set to `EXPRESSION`. The expression must
 evaluate to a number.
 
 ### `quantity_calc_type`
@@ -256,7 +261,7 @@ with possible values:
 
 ### `unit_of_measure_id`
 
-References the [UnitOfMeasure](../utility-models/unit-of-measure-model/unit-of-measure.md) entity for the inventory 
+References the [UnitOfMeasure](../utility-models/unit-of-measure-model/unit-of-measure.md) entity for the inventory
 operation. Used when `unit_of_measure_resolution_strategy` is set to `STATIC`.
 
 ### `reason_code_id`
@@ -265,9 +270,5 @@ References the [MaterialReasonCode](../material-model/material-reason-code.md) a
 
 ### `increment_production_order_count`
 
-Indicates whether to increment the [ProductionOrder](../production-order-model/production-order.md) count when shipping 
+Indicates whether to increment the [ProductionOrder](../production-order-model/production-order.md) count when shipping
 or producing material.
-
-### `flush_interval_millis`
-
-Specifies the interval, in milliseconds, for flushing data.
