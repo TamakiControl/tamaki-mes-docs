@@ -1,5 +1,5 @@
 ---
-sidebar_position: 24
+sidebar_position: 22
 title: "deleteMaterial"
 description: "Deletes the material with the given ID or path."
 ---
