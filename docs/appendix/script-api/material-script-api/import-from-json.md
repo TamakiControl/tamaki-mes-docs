@@ -11,7 +11,7 @@ description: "Imports materials from a JSON file provided as raw bytes"
 Imports [Materials](../../data-model/material-model/material) from a JSON file provided as raw bytes.
 The service layer parses the JSON content and creates or updates material entities.
 
-Recommended to export at least one pre-existing material to JSON using the [Export Materials](export-materials-as-json.md)
+Recommended to export at least one pre-existing material to JSON using the [Export Materials](export-as-json.md)
 functionality to ensure the correct format of the JSON file.
 
 ## Syntax

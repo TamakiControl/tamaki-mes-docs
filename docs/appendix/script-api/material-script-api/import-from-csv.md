@@ -11,7 +11,7 @@ description: "Imports materials from a CSV file provided as raw bytes"
 Imports [Materials](../../data-model/material-model/material) from a CSV file provided as raw bytes.
 The service layer parses the CSV content and creates or updates material entities.
 
-Recommended to export at least one pre-existing material to CSV using the [Export Materials](export-materials-as-csv.md)
+Recommended to export at least one pre-existing material to CSV using the [Export Materials](export-as-csv.md)
 functionality to ensure the correct format of the CSV file.
 
 ## Syntax
