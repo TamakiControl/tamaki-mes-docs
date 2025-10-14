@@ -7,6 +7,7 @@ description: "Import/Export User Guide"
 # Import/Export User Guide
 
 ## Table of Contents
+- [Prerequisites](prerequisites)
 - [Locations](locations)
 - [Materials](materials)
 - [Units of Measure](units-of-measure)

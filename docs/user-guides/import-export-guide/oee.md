@@ -6,42 +6,9 @@ description: "How to import and export OEE (Overall Equipment Effectiveness)"
 
 # OEE (Overall Equipment Effectiveness) Import/Export
 
-## OEE Configuration
+It is recommended to import Modes and States before importing OEE configurations. Alternatively, you can import OEE configurations with `enabled = false` and enable them once the OEE Modes and OEE States have been successfully imported.
 
-**Navigation:**
-
-![Navigation menu showing the OEE selection in the OEE module](./images/oee-navigation.png)
-
-### Importing OEE Configuration
-
-![OEE Configuration Page with the import button highlighted on the default page](./images/import-oee-configuration-button-1.png)
-
-![OEE Configuration Page with the import button highlighted when editing an OEE configuration](./images/import-oee-configuration-button-2.png)
-
-![OEE Configuration Page with an import menu popup](./images/import-oee-configuration-popup.png)
-
-**How to use:**
-
-- To import OEE configurations, press the import button and add a CSV or JSON file to the file upload field. Then press the confirm button.
-
-- It is recommended to export at least one pre-existing OEE configuration to CSV to ensure the correct format of the CSV file.
-
-**Import Behavior:**
-
-- When importing, the system checks whether an OEE configuration already exists by location. If a match is found, the existing OEE configuration is modified, otherwise a new OEE configuration is created.
-
-### Exporting OEE Configuration
-
-![OEE Configuration Page with the export button highlighted on the default page](./images/export-oee-configuration-button-1.png)
-
-![OEE Configuration Page with the export button highlighted when editing an OEE configuration](./images/export-oee-configuration-button-2.png)
-
-![OEE Configuration Page with an export menu popup](./images/export-oee-configuration-popup.png)
-
-**How to use:**
-
-- To export OEE configurations, press the export button and select if you'd like to include the configuration, modes and states. Select the locations associated with the OEE configuration you'd wish to export. Then press the export selected button. 
-
+Importing enabled OEE configurations before the required OEE Modes and OEE States exist can lead to issues with the data collection service. This may result in inconsistent or unexpected behavior, and in some cases, a service restart may be required before data collection will function properly even after the OEE Modes and OEE States have been imported.
 
 ## OEE States
 
@@ -113,6 +80,43 @@ Then press the confirm button.
 **How to use:**
 
 - To export OEE modes, press the export button and select if you'd like to include the configuration, modes and states. Select the locations associated with the OEE modes you'd wish to export. Then press the export selected button. 
+
+
+## OEE Configuration
+
+**Navigation:**
+
+![Navigation menu showing the OEE selection in the OEE module](./images/oee-navigation.png)
+
+### Importing OEE Configuration
+
+![OEE Configuration Page with the import button highlighted on the default page](./images/import-oee-configuration-button-1.png)
+
+![OEE Configuration Page with the import button highlighted when editing an OEE configuration](./images/import-oee-configuration-button-2.png)
+
+![OEE Configuration Page with an import menu popup](./images/import-oee-configuration-popup.png)
+
+**How to use:**
+
+- To import OEE configurations, press the import button and add a CSV or JSON file to the file upload field. Then press the confirm button.
+
+- It is recommended to export at least one pre-existing OEE configuration to CSV to ensure the correct format of the CSV file.
+
+**Import Behavior:**
+
+- When importing, the system checks whether an OEE configuration already exists by location. If a match is found, the existing OEE configuration is modified, otherwise a new OEE configuration is created.
+
+### Exporting OEE Configuration
+
+![OEE Configuration Page with the export button highlighted on the default page](./images/export-oee-configuration-button-1.png)
+
+![OEE Configuration Page with the export button highlighted when editing an OEE configuration](./images/export-oee-configuration-button-2.png)
+
+![OEE Configuration Page with an export menu popup](./images/export-oee-configuration-popup.png)
+
+**How to use:**
+
+- To export OEE configurations, press the export button and select if you'd like to include the configuration, modes and states. Select the locations associated with the OEE configuration you'd wish to export. Then press the export selected button. 
 
 
 ## OEE Downtime Reasons
