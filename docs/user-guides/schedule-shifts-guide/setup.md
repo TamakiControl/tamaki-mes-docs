@@ -10,7 +10,7 @@ import setupGateway from './images/setup-gateway.webm';
 
 **Navigation:**
 
-<video controls style={{ width: '60vw', borderRadius: '0.5rem' }}>
+<video controls style={{ width: '50vw', borderRadius: '0.5rem' }}>
   <source src={setupNavigation}/>
 </video>
 
@@ -26,7 +26,7 @@ import setupGateway from './images/setup-gateway.webm';
 
 **Setting up schedules in the Ignition Gateway:**
 
-<video controls style={{ width: '60vw', borderRadius: '0.5rem' }}>
+<video controls style={{ width: '50vw', borderRadius: '0.5rem' }}>
   <source src={setupGateway}/>
 </video>
 
