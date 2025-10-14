@@ -8,12 +8,12 @@ description: "Starts an inventory operation."
 
 ## Description
 
-Starts an [Inventory Operation](../../data-model/inventory-model/inventory-operation). This function initiates the inventory operation and creates an inventory lot record with a specified start time but a null end time, indicating that the operation is currently in progress. The operation remains active until explicitly ended.
+Starts an [Inventory Operation](../../data-model/inventory-operation-model/inventory-operation). This function initiates the inventory operation and creates an inventory lot record with a specified start time but a null end time, indicating that the operation is currently in progress. The operation remains active until explicitly ended.
 
 ## Syntax
 
 ```python
-system.mes.inventory.operation.startInventoryOperation(inventoryOperationId, primaryLotIdOrName, secondaryLotIdOrName, materialIdOrPath, inventoryName, startDate)
+system.mes.inventory.operation.startInventoryOperation(inventoryOperationId, primaryLotIdOrName, secondaryLotIdOrName, materialIdOrPath, inventoryName, startDateMillis)
 ```
 
 ## Parameters
@@ -25,7 +25,7 @@ system.mes.inventory.operation.startInventoryOperation(inventoryOperationId, pri
 | `secondaryLotIdOrName` | `String`        | True     | The ID or name of the secondary lot to start.                           |
 | `materialIdOrPath`     | `String`        | True     | The ID or path of the material associated with the inventory operation. |
 | `inventoryName`        | `String`        | True     | The name of the inventory associated with the inventory operation.      |
-| `startDateMillis`      | `Long`          | True     | The start date of the inventory operation.                              |
+| `startDateMillis`      | `Long`          | True     | The start date of the inventory operation (milliseconds since epoch).   |
 
 ## Returns
 

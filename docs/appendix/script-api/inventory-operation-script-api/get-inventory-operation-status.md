@@ -8,7 +8,7 @@ description: "Retrieves the status of the inventory operation with the given ID.
 
 ## Description
 
-Retrieves the status of an [Inventory Operations](../../data-model/inventory-model/inventory-operation) object by its ID.
+Retrieves the status of an [Inventory Operations](../../data-model/inventory-operation-model/inventory-operation) object by its ID.
 
 ## Syntax
 
