@@ -7,10 +7,13 @@ description: "Import/Export User Guide"
 # Import/Export User Guide
 
 ## Table of Contents
-- [Materials](materials)
 - [Locations](locations)
+- [Materials](materials)
+- [Units of Measure](units-of-measure)
+- [Shifts](shifts)
+- [Widgets](widgets)
+<!-- - [Personnel](personnel) -->
+- [Roles](roles)
 - [Operations](operations)
 - [Inventory Operations](inventory-operations)
 - [OEE](oee)
-- [Dashboards](dashboards)
-- [Units of Measure](units-of-measure)
