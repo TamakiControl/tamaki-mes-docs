@@ -11,7 +11,7 @@ the value `true` will be written to the configured tag. When toggled off, the va
 utilizes the 
 [Perspective Toggle Switch component](https://www.docs.inductiveautomation.com/docs/8.1/appendix/components/perspective-components/perspective-input-palette/perspective-toggle-switch)
 
-![toggle_switch_widget.png](/static/img/docs/user-guides/dashboard-guide/preconfigured-widgets/toggle_switch_widget.png)
+![toggle_switch_widget.png](../../../../static/img/docs/user-guides/dashboard-guide/preconfigured-widgets/toggle_switch_widget.png)
 
 ### Parameters
 - **Name**: The name of the widget instance.

@@ -8,7 +8,7 @@ description: "Overview of the numeric display widget"
 
 The numeric display widget shows the value of a numeric tag.
 
-![numeric_display_widget.png](/static/img/docs/user-guides/dashboard-guide/preconfigured-widgets/numeric_display_widget.png)
+![numeric_display_widget.png](../../../../static/img/docs/user-guides/dashboard-guide/preconfigured-widgets/numeric_display_widget.png)
 
 ## Parameters
 

@@ -9,7 +9,7 @@ description: "Overview of the OEE state timeline widget"
 The OEE state timeline widget displays a timeline of the different states that have occurred recently for a specified
 location.
 
-![oee_state_timeline_widget.png](/static/img/docs/user-guides/dashboard-guide/preconfigured-widgets/oee_state_timeline_widget.png)
+![oee_state_timeline_widget.png](../../../../static/img/docs/user-guides/dashboard-guide/preconfigured-widgets/oee_state_timeline_widget.png)
 
 ## Parameters
 - **Name**: The name of the widget instance.

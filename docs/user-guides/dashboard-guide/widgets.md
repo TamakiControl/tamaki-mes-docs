@@ -46,7 +46,7 @@ path and the parameters of the view, as you will need this information when crea
 To navigate to the widget configuration screen, go to the MES Perspective project and select `Core` → `Widgets` from
 the navigation menu at the top of the screen. 
 
-![widget_screen.png](/static/img/docs/user-guides/dashboard-guide/widget_screen.png)
+![widget_screen.png](../../../static/img/docs/user-guides/dashboard-guide/widget_screen.png)
 
 When no widget is selected the main view of the widget configuration screen has buttons to create, import, and export 
 widgets. On the left side of the screen is a sidebar that contains a list of all existing widgets. The search bar
@@ -55,7 +55,7 @@ can be used to quickly locate a specific widget by name.
 To create a new widget, click the `Create` button if no widget is selected or right click in the sidebar and select 
 `Add Widget`. The main view will change to the Create New Widget form. Here is a breakdown of the fields in the form:
 
-![widget_create.png](/static/img/docs/user-guides/dashboard-guide/widget_create.png)
+![widget_create.png](../../../static/img/docs/user-guides/dashboard-guide/widget_create.png)
 
 - **Name**: The name of the widget. This is a required field and must be unique.
 - **Category**: The category that the widget belongs to, such as Charts, Controls, Display, or OEE.

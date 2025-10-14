@@ -8,7 +8,7 @@ description: "Overview of the led widget"
 The LED widget is a numeric display that looks like a traditional 14-segment or 7-segment LED display. It utilizes the 
 [Perspective LED Display component](https://docs.inductiveautomation.com/docs/8.1/appendix/components/perspective-components/perspective-display-palette/perspective-led-display).
 
-![led_widget.png](/static/img/docs/user-guides/dashboard-guide/preconfigured-widgets/led_widget.png)
+![led_widget.png](../../../../static/img/docs/user-guides/dashboard-guide/preconfigured-widgets/led_widget.png)
 
 ## Parameters
 - **Name**: The name of the widget instance.

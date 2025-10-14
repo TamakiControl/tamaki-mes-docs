@@ -8,7 +8,7 @@ description: "Overview of the OEE performance table widget"
 
 The OEE quality table widget displays the good count and total count for a specified location over a recent time period. 
 
-![oee_quality_table_widget.png](/static/img/docs/user-guides/dashboard-guide/preconfigured-widgets/oee_quality_table_widget.png)
+![oee_quality_table_widget.png](../../../../static/img/docs/user-guides/dashboard-guide/preconfigured-widgets/oee_quality_table_widget.png)
 
 ## Parameters
 - **Name**: The name of the widget instance.

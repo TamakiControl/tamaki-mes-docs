@@ -9,7 +9,7 @@ description: "Overview of the OEE performance table widget"
 The OEE performance table widget displays several performance metrics for a specified location over a recent time 
 period. These metrics include loss percentage, total out, true rate, average rate, and max rate.
 
-![oee_performance_table_widget.png](/static/img/docs/user-guides/dashboard-guide/preconfigured-widgets/oee_performance_table_widget.png)
+![oee_performance_table_widget.png](../../../../static/img/docs/user-guides/dashboard-guide/preconfigured-widgets/oee_performance_table_widget.png)
 
 ## Parameters
 - **Name**: The name of the widget instance.

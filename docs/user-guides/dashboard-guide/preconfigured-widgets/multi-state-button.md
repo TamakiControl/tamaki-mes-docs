@@ -11,7 +11,7 @@ integer-valued state. When one of the buttons is pressed, its corresponding valu
 tag. Only one button can be active at a time. This widget utilizes the 
 [Perspective Multi-State Button component](https://www.docs.inductiveautomation.com/docs/8.1/appendix/components/perspective-components/perspective-input-palette/perspective-multistate-button).
 
-![multi_state_button_widget.png](/static/img/docs/user-guides/dashboard-guide/preconfigured-widgets/multi_state_button_widget.png)
+![multi_state_button_widget.png](../../../../static/img/docs/user-guides/dashboard-guide/preconfigured-widgets/multi_state_button_widget.png)
 
 ## Parameters
 - **Name**: The name of the widget instance.

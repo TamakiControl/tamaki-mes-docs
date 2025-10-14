@@ -22,7 +22,7 @@ lists dashboards that are visible to all users. To edit or delete a dashboard, f
 icon next to its name, and choose `Edit` or `Delete`. To create a new dashboard, click the plus icon located in the 
 bottom left of the screen.
 
-![dashboard_screen.png](/static/img/docs/user-guides/dashboard-guide/dashboard_screen.png)
+![dashboard_screen.png](../../../static/img/docs/user-guides/dashboard-guide/dashboard_screen.png)
 
 The dashboard configuration screen has two tabs. The `Configuration` tab is where general settings for the dashboard are 
 set, and the `Widgets` tab is where widgets are added and arranged on the dashboard.
@@ -32,7 +32,7 @@ set, and the `Widgets` tab is where widgets are added and arranged on the dashbo
 This section is for setting the general information about the dashboard. Once the fields are filled out, click the 
 `Confirm` button at the bottom of the view.
 
-![dashboard_create_screen.png](/static/img/docs/user-guides/dashboard-guide/dashboard_create_screen.png)
+![dashboard_create_screen.png](../../../static/img/docs/user-guides/dashboard-guide/dashboard_create_screen.png)
 
 - **Name**: The name of the dashboard. This is a required field.
 - **URL**: The URL slug for that identifies the dashboard page. This can be used to navigate directly to the dashboard. 
@@ -57,14 +57,14 @@ so the first step is to add widgets. Click one of the empty cells on the grid to
 widget from the list, such as `Numeric Display`, and click the `Confirm` button. The widget will then be added to the 
 dashboard. 
 
-![dashboard_widget_numeric_display.png](/static/img/docs/user-guides/dashboard-guide/dashboard_widget_numeric_display.png)
+![dashboard_widget_numeric_display.png](../../../static/img/docs/user-guides/dashboard-guide/dashboard_widget_numeric_display.png)
 
 A selected widget can be moved by clicking and dragging it to a new cell and resized by clicking and dragging the 
 handles on its edge. To remove the widget, click the `X` icon in the top right corner of the 
 widget. To configure the widget, click the settings icon in the top right corner of the widget, which will open the 
 configuration dialog. Once the widget is configured, click the `Confirm` button at the bottom of the popup.
 
-![widget_parameter_config.png](/static/img/docs/user-guides/dashboard-guide/widget_parameter_config.png)
+![widget_parameter_config.png](../../../static/img/docs/user-guides/dashboard-guide/widget_parameter_config.png)
 
 The name is the only consistent field across all widgets. The rest of the fields are parameters that are specific to the
 widget type. See the [Widgets](widgets) guide for more information on configuring specific widget types.

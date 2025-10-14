@@ -10,7 +10,7 @@ The gauge widget displays a numeric value on a circular gauge. It is commonly us
 temperature, or pressure. This widget utilizes the 
 [Perspective Gauge component](https://www.docs.inductiveautomation.com/docs/8.1/appendix/components/perspective-components/perspective-chart-palette/perspective-gauge).
 
-![gauge_widget.png](/static/img/docs/user-guides/dashboard-guide/preconfigured-widgets/gauge_widget.png)
+![gauge_widget.png](../../../../static/img/docs/user-guides/dashboard-guide/preconfigured-widgets/gauge_widget.png)
 
 ## Parameters
 - **Name**: The name of the widget instance.

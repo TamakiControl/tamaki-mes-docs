@@ -9,7 +9,7 @@ description: "Overview of the OEE mode pie chart widget"
 The OEE mode pie chart widget displays a pie chart of the different modes that have occurred recently for a specified
 location.
 
-![oee_mode_pie_chart_widget.png](/static/img/docs/user-guides/dashboard-guide/preconfigured-widgets/oee_mode_pie_chart_widget.png)
+![oee_mode_pie_chart_widget.png](../../../../static/img/docs/user-guides/dashboard-guide/preconfigured-widgets/oee_mode_pie_chart_widget.png)
 <!-- TODO replace with better screenshot showing more than just Production mode-->
 
 ## Parameters

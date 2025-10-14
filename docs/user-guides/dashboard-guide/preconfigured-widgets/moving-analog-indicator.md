@@ -13,7 +13,7 @@ It utilizes the
 and the 
 [Perspective Sparkline component](https://www.docs.inductiveautomation.com/docs/8.1/appendix/components/perspective-components/perspective-display-palette/perspective-sparkline).
 
-![moving_analog_indicator_widget.png](/static/img/docs/user-guides/dashboard-guide/preconfigured-widgets/moving_analog_indicator_widget.png)
+![moving_analog_indicator_widget.png](../../../../static/img/docs/user-guides/dashboard-guide/preconfigured-widgets/moving_analog_indicator_widget.png)
 
 ## Parameters
 - **Name**: The name of the widget instance.    

@@ -9,7 +9,7 @@ description: "Overview of the OEE gauges widget"
 The OEE gauges widget displays circular gauges for recent Overall Equipment Effectiveness (OEE) and its three 
 components, Availability, Performance, and Quality, for a specified location.
 
-![oee_gauges_widget.png](/static/img/docs/user-guides/dashboard-guide/preconfigured-widgets/oee_gauges_widget.png)
+![oee_gauges_widget.png](../../../../static/img/docs/user-guides/dashboard-guide/preconfigured-widgets/oee_gauges_widget.png)
 <!-- TODO get better picture of the OEE gauges widget after the formatting is fixed-->
 
 ## Parameters
