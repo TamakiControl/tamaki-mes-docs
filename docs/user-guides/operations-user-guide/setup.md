@@ -1,10 +1,10 @@
 ---
 sidebar_position: 2
-title: "Operation User Guide"
-description: "Introductory guide for creating and using operations"
+title: "Setup"
+description: "Operations Setup Guide"
 ---
 
-# Operation User Guide
+# Setup
 
 An operation is an action that can be performed in the MES system to achieve a particular manufacturing step.
 
