@@ -11,6 +11,11 @@ description: "Deletes the inventory lot with the given ID."
 Deletes an [Inventory Lots](../../data-model/inventory-model/inventory-lot) record by its ID.
 This cannot delete a inventory lot with references to it.
 
+
+## Permissions
+
+This method requires the `INVENTORY.WRITE.DELETE` permission.
+
 ## Syntax
 
 ```python

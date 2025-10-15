@@ -10,6 +10,11 @@ description: "Retrieves the material with the given ID or path."
 
 Retrieves a [Materials](../../data-model/material-model/material) record by its ID or path.
 
+
+## Permissions
+
+This method requires the `MATERIAL.READ.GET` permission.
+
 ## Syntax
 
 ```python

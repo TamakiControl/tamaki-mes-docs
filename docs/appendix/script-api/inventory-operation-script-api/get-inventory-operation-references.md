@@ -10,6 +10,11 @@ description: "Retrieves a list of references to an inventory operation with the 
 
 Retrieves a list of references to an [Inventory Operations](../../data-model/inventory-model/inventory-operation) object by its ID.
 
+
+## Permissions
+
+This method requires the `INVENTORY_OPERATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

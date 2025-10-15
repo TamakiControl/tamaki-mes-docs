@@ -11,6 +11,11 @@ description: "Exports all locations as a CSV string (UTF-8 encoded)"
 Exports all [Locations](../../data-model/location-model/location) as a CSV string (UTF-8 encoded).
 Streams location data from the database and formats it as a CSV string, including a header row.
 
+
+## Permissions
+
+This method requires the `LOCATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

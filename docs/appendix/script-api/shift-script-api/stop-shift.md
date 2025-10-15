@@ -10,6 +10,11 @@ description: "Stops a shift by ID or by location and name; returns the updated s
 
 Stops a [Shifts](../../data-model/shift-model/shift). This updates the current [Shift Records](../../data-model/shift-model/shift-record) entry with the given end time (optional; defaults to now).
 
+
+## Permissions
+
+This method requires the `SHIFT.EXECUTE` permission.
+
 ## Syntax
 
 ```python

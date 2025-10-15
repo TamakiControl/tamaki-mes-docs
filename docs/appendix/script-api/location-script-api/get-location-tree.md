@@ -13,6 +13,11 @@ description: "Retrieves locations as a tree."
 **With a Filter:** Retrieves all [Locations](../../data-model/location-model/location) records whose names contain a substring that matches the filter.
 Returns the parent locations even if they don't contain the filter.
 
+
+## Permissions
+
+This method requires the `LOCATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

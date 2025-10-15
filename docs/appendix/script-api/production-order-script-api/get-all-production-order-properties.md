@@ -10,6 +10,11 @@ description: "Retrieves all production order properties."
 
 Retrieves a list of all [Production Order Properties](../../data-model/production-order-model/production-order-property) records in the system.
 
+
+## Permissions
+
+This method requires the `PRODUCTION_ORDER.READ.GET` permission.
+
 ## Syntax
 
 ```python

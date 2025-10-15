@@ -11,6 +11,11 @@ description: "Validates a dashboard widget parameter type and returns any valida
 Validates the specified parameters for a Dashboard Widget Parameter Type and returns any validation errors. This does
 not save the object.
 
+
+## Permissions
+
+This method requires the `DASHBOARD.READ.VALIDATE` permission.
+
 ## Syntax
 
 ```python

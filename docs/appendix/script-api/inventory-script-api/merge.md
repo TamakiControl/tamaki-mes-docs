@@ -8,6 +8,11 @@ description: "Merges inventory from the MES based on the provided parameters."
 
 Merges inventory from the MES based on the provided parameters.
 
+
+## Permissions
+
+This method requires the `INVENTORY.WRITE.MERGE` permission.
+
 ## Syntax
 
 ```python

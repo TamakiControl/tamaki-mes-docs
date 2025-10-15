@@ -10,6 +10,11 @@ description: "Retrieves people based on the specified pagination, sort, and colu
 
 Retrieves [Person](../../data-model/personnel-model/personnel) records based on the specified pagination, sort, and column constraint parameters.
 
+
+## Permissions
+
+This method requires the `PERSONNEL.READ.GET` permission.
+
 ## Syntax
 
 ```

@@ -10,6 +10,11 @@ description: "Retrieves all inventories."
 
 Retrieves all the [Inventories](../../data-model/inventory-model/inventory) records.
 
+
+## Permissions
+
+This method requires the `INVENTORY.READ.GET` permission.
+
 ## Syntax
 
 ```python

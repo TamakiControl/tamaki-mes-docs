@@ -1,6 +1,6 @@
 ---
-title: "validateQueryRequest"
-description: "Validates a query request."
+title: 'validateQueryRequest'
+description: 'Validates a query request.'
 sidebar_position: 5
 ---
 
@@ -11,6 +11,10 @@ sidebar_position: 5
 Validates the specified parameters for a [Query Request](./new-query-request) record and returns any validation errors.
 This only checks if the query request can be performed based on the attributes given, without actually executing the query request. Use this function to verify your parameters before executing a query request operation.
 
+## Permissions
+
+This method requires the `QUERY.READ.VALIDATE` permission.
+
 ## Syntax
 
 ```python
@@ -20,7 +24,7 @@ system.mes.query.validateQueryRequest(**queryRequest)
 ## Parameters
 
 | Parameter        | Type                     | Nullable | Description                                                                          |
-|------------------|--------------------------|----------|--------------------------------------------------------------------------------------|
+| ---------------- | ------------------------ | -------- | ------------------------------------------------------------------------------------ |
 | `pageSize`       | `Integer`                | True     | Number of records to return per page. If null, pagination will not be applied.       |
 | `pageIndex`      | `Integer`                | True     | Index of the page to return. If null, pagination will not be applied.                |
 | `sortFields`     | `List<String>`           | True     | List of fields to sort by. These should be names as they appear in the entity class. |

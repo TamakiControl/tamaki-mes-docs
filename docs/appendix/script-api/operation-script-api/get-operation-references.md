@@ -10,6 +10,11 @@ description: "Retrieves a list of references to an operation with the given ID."
 
 Retrieves a list of references to an [Operations](../../data-model/operation-model/operation) object by its ID.
 
+
+## Permissions
+
+This method requires the `OPERATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

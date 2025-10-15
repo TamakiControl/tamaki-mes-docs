@@ -11,6 +11,11 @@ description: "Deletes multiple departments with the given IDs or paths."
 Deletes multiple [Personnel Department](../../data-model/personnel-model/personnel-department) records by their IDs or paths.
 This cannot delete any departments that have references to them.
 
+
+## Permissions
+
+This method requires the `PERSONNEL.WRITE.DELETE` permission.
+
 ## Syntax
 
 ```

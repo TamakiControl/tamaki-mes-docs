@@ -8,6 +8,11 @@ description: "Changes the status of the inventory lot from the MES based on the 
 
 Changes the status of the inventory lot from the MES based on the provided parameters.
 
+
+## Permissions
+
+This method requires the `INVENTORY.WRITE.CHANGE_STATUS` permission.
+
 ## Syntax
 
 ```python

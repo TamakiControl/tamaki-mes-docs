@@ -10,6 +10,11 @@ description: "Retrieves the inventory based on the inventory lot and location."
 
 Retrieves the [Inventories](../../data-model/inventory-model/inventory) record based on the inventory lot and location.
 
+
+## Permissions
+
+This method requires the `INVENTORY.READ.GET` permission.
+
 ## Syntax
 
 ```python

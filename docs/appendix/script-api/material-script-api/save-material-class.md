@@ -10,6 +10,11 @@ description: "Creates or updates a material class with specified parameters."
 
 Creates or updates a [Material Classes](../../data-model/material-model/material-class) record in the system based on the provided parameters.
 
+
+## Permissions
+
+This method requires the `MATERIAL.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python

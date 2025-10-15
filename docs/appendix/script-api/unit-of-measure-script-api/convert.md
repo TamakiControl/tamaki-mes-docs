@@ -1,7 +1,7 @@
 ---
 sidebar_position: 27
-title: "convert"
-description: "Converts the specified amount from one unit of measure to the other."
+title: 'convert'
+description: 'Converts the specified amount from one unit of measure to the other.'
 ---
 
 # system.mes.unitOfMeasure.convert
@@ -9,6 +9,10 @@ description: "Converts the specified amount from one unit of measure to the othe
 ## Description
 
 Converts the specified amount from one unit of measure to the other.
+
+## Permissions
+
+This method requires the `UNIT_OF_MEASURE.READ.GET` permission.
 
 ## Syntax
 
@@ -22,7 +26,7 @@ system.mes.unitOfMeasure.convert(amount, from, to, materialIdOrPath)
 ### Method 1: Convert without material context
 
 | Parameter | Type     | Nullable | Description                                   |
-|-----------|----------|----------|-----------------------------------------------|
+| --------- | -------- | -------- | --------------------------------------------- |
 | `amount`  | `Double` | False    | The amount to convert.                        |
 | `from`    | `String` | False    | The ULID or name of the from unit of measure. |
 | `to`      | `String` | False    | The ULID or name of the to unit of measure.   |
@@ -30,7 +34,7 @@ system.mes.unitOfMeasure.convert(amount, from, to, materialIdOrPath)
 ### Method 2: Convert with material context
 
 | Parameter          | Type     | Nullable | Description                                                      |
-|--------------------|----------|----------|------------------------------------------------------------------|
+| ------------------ | -------- | -------- | ---------------------------------------------------------------- |
 | `amount`           | `Double` | False    | The amount to convert.                                           |
 | `from`             | `String` | False    | The ULID or name of the from unit of measure.                    |
 | `to`               | `String` | False    | The ULID or name of the to unit of measure.                      |

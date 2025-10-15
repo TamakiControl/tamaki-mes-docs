@@ -10,6 +10,11 @@ description: "Retrieves the bill of materials with the given ID."
 
 Retrieves a [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) record by its ID.
 
+
+## Permissions
+
+This method requires the `PRODUCTION_ORDER.READ.GET` permission.
+
 ## Syntax
 
 ```python

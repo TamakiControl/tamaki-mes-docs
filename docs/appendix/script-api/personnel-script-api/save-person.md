@@ -10,6 +10,11 @@ description: "Creates or updates a person with specified parameters."
 
 Creates or updates a [Person](../../data-model/personnel-model/personnel) record in the system based on the provided parameters.
 
+
+## Permissions
+
+This method requires the `PERSONNEL.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```

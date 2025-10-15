@@ -11,6 +11,11 @@ description: "Executes an inventory operation and creates a new inventory lot re
 Executes an [Inventory Operations](../../data-model/inventory-model/inventory-operation) and creates a new inventory lot record without having to start and then stop the operation.
 If [Inventory Operations](../../data-model/inventory-model/inventory-operation) is already started, this will act as a [stopInventoryOperation](./stop-inventory-operation).
 
+
+## Permissions
+
+This method requires the `INVENTORY_OPERATION.EXECUTE` permission.
+
 ## Syntax
 
 ```python

@@ -1,13 +1,17 @@
 ---
 sidebar_position: 36
-title: "newShipRequest"
-description: "Generates an empty non-persisted ship request to provide the structure to save a new record into the database."
+title: 'newShipRequest'
+description: 'Generates an empty non-persisted ship request to provide the structure to save a new record into the database.'
 ---
 
 # system.mes.inventory.newShipRequest
 
 Generates an empty non-persisted Ship Request to provide the structure required by the API to save a new record into the database.
 This method must be combined with the [ship](./ship) method in order to persist the record.
+
+## Permissions
+
+This method does not require any permissions.
 
 ## Syntax
 
@@ -18,7 +22,7 @@ system.mes.inventory.newShipRequest()
 ## Parameters
 
 | Parameter | Type | Nullable | Description                               |
-|-----------|------|----------|-------------------------------------------|
+| --------- | ---- | -------- | ----------------------------------------- |
 | None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
@@ -26,7 +30,7 @@ system.mes.inventory.newShipRequest()
 Returns a JSON representation of the newly created Ship Request object. The following is a list of keys and default values:
 
 | Key                       | Default Value |
-|---------------------------|---------------|
+| ------------------------- | ------------- |
 | `type`                    | `SHIP`        |
 | `quantity`                | `null`        |
 | `unitOfMeasureSymbol`     | `null`        |

@@ -1,6 +1,7 @@
 sidebar_position: 21
 title: "getInventoryOperationPermissions"
 description: "Retrieves a list of all inventory operation permissions."
+
 ---
 
 # system.mes.inventory.operation.getInventoryOperationPermissions
@@ -8,6 +9,10 @@ description: "Retrieves a list of all inventory operation permissions."
 ## Description
 
 Retrieves all the [Inventory Operations](../../data-model/inventory-model/inventory-operation) permissions.
+
+## Permissions
+
+This method does not require any permissions.
 
 ## Syntax
 

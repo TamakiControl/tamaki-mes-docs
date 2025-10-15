@@ -1,6 +1,6 @@
 ---
-title: "newQueryRequest"
-description: "Generates an empty non-persisted query request object."
+title: 'newQueryRequest'
+description: 'Generates an empty non-persisted query request object.'
 sidebar_position: 3
 ---
 
@@ -8,6 +8,10 @@ sidebar_position: 3
 
 Generates an empty non-persisted [Query Request](./new-query-request) object to provide the structure required by the API
 to define pagination, sorting, and filtering parameters when calling `find` methods. This method must be combined with find methods in order to query records.
+
+## Permissions
+
+This method does not require any permissions.
 
 ## Syntax
 
@@ -18,7 +22,7 @@ system.mes.query.newQueryRequest()
 ## Parameters
 
 | Parameter | Type | Nullable | Description                               |
-|-----------|------|----------|-------------------------------------------|
+| --------- | ---- | -------- | ----------------------------------------- |
 | None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
@@ -26,7 +30,7 @@ system.mes.query.newQueryRequest()
 Returns a JSON representation of the newly created query request object. The following is a list of keys and default values:
 
 | Key              | Default Value |
-|------------------|---------------|
+| ---------------- | ------------- |
 | `pageSize`       | `null`        |
 | `pageIndex`      | `null`        |
 | `sortFields`     | `null`        |

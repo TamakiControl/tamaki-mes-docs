@@ -14,6 +14,11 @@ The service layer will parse the CSV content and create or update inventory oper
 Recommended to export at least one pre-existing material to CSV using the [Export Inventory Operations](export-as-csv.md)
 functionality to ensure the correct format of the CSV file.
 
+
+## Permissions
+
+This method requires the `INVENTORY_OPERATION.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python

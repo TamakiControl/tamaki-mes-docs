@@ -1,10 +1,10 @@
 ---
 sidebar_position: 24
-title: "importMaterialsFromJson"
-description: "Imports materials from a JSON file provided as a string or as raw bytes"
+title: 'importFromJson'
+description: 'Imports materials from a JSON file provided as a string or as raw bytes'
 ---
 
-# system.mes.material.importMaterialsFromJson
+# system.mes.material.importFromJson
 
 ## Description
 
@@ -15,21 +15,24 @@ columns.
 Recommended to export at least one pre-existing material to JSON using the [Export Materials](export-materials-as-json.md)
 functionality to ensure the correct format of the JSON file.
 
+## Permissions
+
+This method requires the `MATERIAL.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python
-system.mes.material.importMaterialsFromJson(importString)
-system.mes.material.importMaterialsFromJson(importBytes)
+system.mes.material.importFromJson(importString)
+system.mes.material.importFromJson(importBytes)
 ```
 
 ## Parameters
 
-Either a string or bytes array representing the JSON content.
+A bytes array representing the JSON content.
 
-| Parameter      | Type      | Nullable | Description                    |
-|----------------|-----------|----------|--------------------------------|
-| `importString` | `String`  | False    | The JSON content as a string.  |
-| `importBytes`  | `PyArray` | False    | The JSON content as raw bytes. |
+| Parameter     | Type      | Nullable | Description                    |
+| ------------- | --------- | -------- | ------------------------------ |
+| `importBytes` | `PyArray` | False    | The JSON content as raw bytes. |
 
 ## Returns
 
@@ -42,6 +45,7 @@ Here is an example of how to use the `importMaterialsFromJson` method in the con
 for more information on the `onFileReceived` event handler.
 
 ### Bytes
+
 ```python
 def runAction(self, event):
 	jsonBytes = event.file.getBytes()
@@ -49,6 +53,7 @@ def runAction(self, event):
 ```
 
 ### String
+
 ```python
 def runAction(self, event):
 	jsonString = event.file.getString()

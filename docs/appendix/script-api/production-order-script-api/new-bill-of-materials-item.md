@@ -1,13 +1,17 @@
 ---
 sidebar_position: 32
-title: "newBillOfMaterialsItem"
-description: "Generates an empty non-persisted bill of materials object to provide the structure to retrieve records from the database."
+title: 'newBillOfMaterialsItem'
+description: 'Generates an empty non-persisted bill of materials object to provide the structure to retrieve records from the database.'
 ---
 
 # system.mes.productionOrder.newBillOfMaterialsItem
 
 Generates an empty non-persisted [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) object to provide the structure required by the API
 to save a new record into the database. This method must be combined with the [saveBillOfMaterials](./save-bill-of-materials-item) method in order to persist the record.
+
+## Permissions
+
+This method does not require any permissions.
 
 ## Syntax
 
@@ -18,7 +22,7 @@ system.mes.productionOrder.newBillOfMaterialsItem()
 ## Parameters
 
 | Parameter | Type | Nullable | Description                               |
-|-----------|------|----------|-------------------------------------------|
+| --------- | ---- | -------- | ----------------------------------------- |
 | None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
@@ -26,7 +30,7 @@ system.mes.productionOrder.newBillOfMaterialsItem()
 Returns a JSON representation of the newly created bill of materials object. The following is a list of keys and default values:
 
 | Key                       | Default Value |
-|---------------------------|---------------|
+| ------------------------- | ------------- |
 | `productId`               | `null`        |
 | `productionOrderId`       | `null`        |
 | `materialName`            | `null`        |

@@ -10,6 +10,11 @@ description: "Creates or updates a bill of materials with specified parameters."
 
 Creates or updates a [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) record in the system based on the provided parameters.
 
+
+## Permissions
+
+This method requires the `PRODUCTION_ORDER.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python

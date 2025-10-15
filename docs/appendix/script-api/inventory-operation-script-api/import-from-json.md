@@ -14,6 +14,11 @@ The service layer parses the JSON content and creates or updates inventory opera
 Recommended to export at least one pre-existing material to JSON using the [Export Inventory Operations](export-as-json.md)
 functionality to ensure the correct format of the JSON file.
 
+
+## Permissions
+
+This method requires the `INVENTORY_OPERATION.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python

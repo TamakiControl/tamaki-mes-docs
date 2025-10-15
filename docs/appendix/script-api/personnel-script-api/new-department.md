@@ -1,12 +1,16 @@
 ---
 sidebar_position: 1
-title: "newDepartment"
-description: "Generates an empty non-persisted department object to provide the structure to retrieve records from the database."
+title: 'newDepartment'
+description: 'Generates an empty non-persisted department object to provide the structure to retrieve records from the database.'
 ---
 
 # system.mes.personnel.newDepartment
 
 Generates an empty non-persisted [Personnel Department](../../data-model/personnel-model/personnel-department) object to provide the structure required by the API to save a new record into the database. This method must be combined with the [saveDepartment](./save-department) method in order to persist the record.
+
+## Permissions
+
+This method does not require any permissions.
 
 ## Syntax
 

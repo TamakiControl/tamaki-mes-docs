@@ -11,6 +11,11 @@ description: "Validates the specified parameters for a location and returns any 
 Validates the specified parameters for a [Locations](../../data-model/location-model/location) record and returns any validation errors.
 This only checks if the location object can be saved based on the attributes given, without actually creating or modifying the location. Use this function to verify your parameters before executing operations that create or modify locations.
 
+
+## Permissions
+
+This method requires the `LOCATION.READ.VALIDATE` permission.
+
 ## Syntax
 
 ```python

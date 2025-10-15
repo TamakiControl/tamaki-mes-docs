@@ -1,13 +1,17 @@
 ---
 sidebar_position: 15
-title: "newMaterial"
-description: "Generates an empty non-persisted material object to provide the structure to retrieve records from the database."
+title: 'newMaterial'
+description: 'Generates an empty non-persisted material object to provide the structure to retrieve records from the database.'
 ---
 
 # system.mes.material.newMaterial
 
 Generates an empty non-persisted [Materials](../../data-model/material-model/material) object to provide the structure required by the API
 to save a new record into the database. This method must be combined with the [saveMaterial](./save-material) method in order to persist the record.
+
+## Permissions
+
+This method does not require any permissions.
 
 ## Syntax
 
@@ -18,7 +22,7 @@ system.mes.material.newMaterial()
 ## Parameters
 
 | Parameter | Type | Nullable | Description                               |
-|-----------|------|----------|-------------------------------------------|
+| --------- | ---- | -------- | ----------------------------------------- |
 | None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
@@ -26,7 +30,7 @@ system.mes.material.newMaterial()
 Returns a JSON representation of the newly created material object. The following is a list of keys and default values:
 
 | Key               | Default Value |
-|-------------------|---------------|
+| ----------------- | ------------- |
 | `name`            | `null`        |
 | `description`     | `null`        |
 | `path`            | `null`        |

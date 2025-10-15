@@ -10,6 +10,11 @@ description: "Retrieves all inventory lots."
 
 Retrieves a list of all [Inventory Lots](../../data-model/inventory-model/inventory-lot) records in the system.
 
+
+## Permissions
+
+This method requires the `INVENTORY.READ.GET` permission.
+
 ## Syntax
 
 ```python

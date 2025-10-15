@@ -8,6 +8,11 @@ description: "Validates the specified parameters for a move request and returns 
 
 Validates the specified parameters for a move request and returns any validation errors. This only checks if the move request can be processed based on the attributes given, without actually performing the inventory move. Use this function to verify your parameters before executing the actual move operation.
 
+
+## Permissions
+
+This method requires the `INVENTORY.READ.VALIDATE` permission.
+
 ## Syntax
 
 ```python

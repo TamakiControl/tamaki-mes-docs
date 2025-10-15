@@ -8,6 +8,11 @@ description: "Validates the specified parameters for a produce request and retur
 
 Validates the specified parameters for a produce request and returns any validation errors. This only checks if the produce request can be processed based on the attributes given, without actually performing the production. Use this function to verify your parameters before executing the actual produce operation.
 
+
+## Permissions
+
+This method requires the `INVENTORY.READ.VALIDATE` permission.
+
 ## Syntax
 
 ```python

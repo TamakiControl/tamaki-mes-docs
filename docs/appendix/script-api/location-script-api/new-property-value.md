@@ -1,7 +1,7 @@
 ---
 sidebar_position: 24
-title: "newPropertyValue"
-description: "Generates an empty non-persisted property values object to provide the structure to save a new record into the database."
+title: 'newPropertyValue'
+description: 'Generates an empty non-persisted property values object to provide the structure to save a new record into the database.'
 ---
 
 # system.mes.location.newPropertyValue
@@ -10,6 +10,10 @@ description: "Generates an empty non-persisted property values object to provide
 
 Generates an empty non-persisted [Location Property Values](../../data-model/location-model/location-property-value) object to provide the structure required by the API
 to save a new record into the database. This method must be combined with the [savePropertyValue](./save-property-value) method in order to persist the record.
+
+## Permissions
+
+This method does not require any permissions.
 
 ## Syntax
 
@@ -20,7 +24,7 @@ system.mes.location.newPropertyValue()
 ## Parameters
 
 | Parameter | Type | Nullable | Description                               |
-|-----------|------|----------|-------------------------------------------|
+| --------- | ---- | -------- | ----------------------------------------- |
 | None      | -    | -        | This method does not take any parameters. |
 
 ## Returns

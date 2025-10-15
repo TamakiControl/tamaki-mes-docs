@@ -11,6 +11,11 @@ description: "Validates the specified parameters for a bill of materials."
 Validates the specified parameters for a [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) record and returns any validation errors.
 This only checks if the bill of materials object can be saved based on the attributes given, without actually creating or modifying the bill of materials. Use this function to verify your parameters before executing a save bill of materials operation.
 
+
+## Permissions
+
+This method requires the `PRODUCTION_ORDER.READ.VALIDATE` permission.
+
 ## Syntax
 
 ```python

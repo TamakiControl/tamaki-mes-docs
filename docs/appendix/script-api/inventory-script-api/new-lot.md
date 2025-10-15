@@ -1,13 +1,17 @@
 ---
 sidebar_position: 47
-title: "newLot"
-description: "Generates an empty non-persisted inventory lot object to provide the structure to retrieve records from the database."
+title: 'newLot'
+description: 'Generates an empty non-persisted inventory lot object to provide the structure to retrieve records from the database.'
 ---
 
 # system.mes.inventory.newLot
 
 Generates an empty non-persisted [Inventory Lots](../../data-model/inventory-model/inventory-lot) object to provide the structure required by the API
 to save a new record into the database. This method must be combined with the [saveLot](./save-lot) method in order to persist the record.
+
+## Permissions
+
+This method does not require any permissions.
 
 ## Syntax
 
@@ -18,7 +22,7 @@ system.mes.inventory.newLot()
 ## Parameters
 
 | Parameter | Type | Nullable | Description                               |
-|-----------|------|----------|-------------------------------------------|
+| --------- | ---- | -------- | ----------------------------------------- |
 | None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
@@ -26,7 +30,7 @@ system.mes.inventory.newLot()
 Returns a JSON representation of the newly created Inventory Lot object. The following is a list of keys and default values:
 
 | Key               | Default Value |
-|-------------------|---------------|
+| ----------------- | ------------- |
 | `name`            | `null`        |
 | `materialId`      | `null`        |
 | `status`          | `OPEN`        |

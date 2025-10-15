@@ -11,6 +11,11 @@ description: "Deletes the bill of materials with the given ID."
 Deletes a [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) record by its ID.
 This cannot delete a bill of materials with references to it.
 
+
+## Permissions
+
+This method requires the `PRODUCTION_ORDER.WRITE.DELETE` permission.
+
 ## Syntax
 
 ```python

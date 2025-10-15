@@ -10,6 +10,11 @@ description: "Retrieves all inventory operations for a given operation."
 
 Retrieves all the [Inventory Operations](../../data-model/inventory-model/inventory-operation) records for a given operation.
 
+
+## Permissions
+
+This method requires the `INVENTORY_OPERATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

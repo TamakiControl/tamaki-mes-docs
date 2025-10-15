@@ -1,14 +1,18 @@
 ---
 sidebar_position: 16
-title: "setProductionOrderForOperation"
-description: "Sets the production order for an operation."
+title: 'setProductionOrderForOperation'
+description: 'Sets the production order for an operation.'
 ---
 
-# system.mes.inventory.setInventoryMetadata
+# system.mes.inventory.setProductionOrderForOperation
 
 ## Description
 
 Sets the production order for a given [Operations](../../data-model/operation-model/operation) record.
+
+## Permissions
+
+This method requires the `OPERATION.WRITE.SAVE` permission.
 
 ## Syntax
 
@@ -22,14 +26,14 @@ system.mes.operation.setProductionOrderForOperation(operationId, productionOrder
 ### Method 1: Set by Operation ID
 
 | Parameter                 | Type            | Nullable | Description                                                             |
-|---------------------------|-----------------|----------|-------------------------------------------------------------------------|
+| ------------------------- | --------------- | -------- | ----------------------------------------------------------------------- |
 | `operationId`             | `String` (ULID) | False    | The ID of the operation.                                                |
 | `productionOrderIdOrName` | `String`        | False    | The ID or Name of the production order to associate with the operation. |
 
 ### Method 2: Set by Location and Operation Name
 
 | Parameter                 | Type            | Nullable | Description                                                             |
-|---------------------------|-----------------|----------|-------------------------------------------------------------------------|
+| ------------------------- | --------------- | -------- | ----------------------------------------------------------------------- |
 | `locationId`              | `String` (ULID) | False    | The ID of the location associated with the operation.                   |
 | `operationName`           | `String`        | False    | The name of the operation.                                              |
 | `productionOrderIdOrName` | `String`        | False    | The ID or Name of the production order to associate with the operation. |

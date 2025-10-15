@@ -1,35 +1,38 @@
 ---
 sidebar_position: 23
-title: "importMaterialsFromCsv"
-description: "Imports materials from a CSV file provided as a string or as raw bytes"
+title: 'importFromCsv'
+description: 'Imports materials from a CSV file provided as a string or as raw bytes'
 ---
 
-# system.mes.material.importMaterialsFromCsv
+# system.mes.material.importFromCsv
 
 ## Description
 
-Imports [Materials](../../data-model/material-model/material) from a CSV file provided as a string or as raw bytes. 
-The service layer will parse the CSV content and create or update material entities based on the 'name' and 'location' 
+Imports [Materials](../../data-model/material-model/material) from a CSV file provided as a string or as raw bytes.
+The service layer will parse the CSV content and create or update material entities based on the 'name' and 'location'
 columns.
 
 Recommended to export at least one pre-existing material to CSV using the [Export Materials](export-materials-as-csv.md)
 functionality to ensure the correct format of the CSV file.
 
+## Permissions
+
+This method requires the `MATERIAL.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python
-system.mes.material.importMaterialsFromCsv(importString)
-system.mes.material.importMaterialsFromCsv(importBytes)
+system.mes.material.importFromCsv(importString)
+system.mes.material.importFromCsv(importBytes)
 ```
 
 ## Parameters
 
-Either a string or bytes array representing the CSV content. 
+A byte array representing the CSV content.
 
-| Parameter      | Type      | Nullable | Description                   |
-|----------------|-----------|----------|-------------------------------|
-| `importString` | `String`  | False    | The CSV content as a string.  |
-| `importBytes`  | `PyArray` | False    | The CSV content as raw bytes. |
+| Parameter     | Type      | Nullable | Description                   |
+| ------------- | --------- | -------- | ----------------------------- |
+| `importBytes` | `PyArray` | False    | The CSV content as raw bytes. |
 
 ## Returns
 
@@ -42,6 +45,7 @@ Here is an example of how to use the `importMaterialsFromCsv` method in the cont
 for more information on the `onFileReceived` event handler.
 
 ### Bytes
+
 ```python
 def runAction(self, event):
 	csvBytes = event.file.getBytes()
@@ -49,6 +53,7 @@ def runAction(self, event):
 ```
 
 ### String
+
 ```python
 def runAction(self, event):
 	csvString = event.file.getString()

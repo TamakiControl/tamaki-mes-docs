@@ -11,6 +11,11 @@ description: "Deletes the material reason code with the given ID."
 Deletes a [Material Reason Codes](../../data-model/material-model/material-reason-code) record by its ID.
 This cannot delete a material reason code with references to it.
 
+
+## Permissions
+
+This method requires the `MATERIAL.WRITE.DELETE` permission.
+
 ## Syntax
 
 ```python

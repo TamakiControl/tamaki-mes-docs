@@ -8,6 +8,11 @@ description: "Creates material classes for each name in the specified path if th
 
 Creates [Material Classes](../../data-model/material-model/material-class) objects for each name in the specified path if they do not already exist, setting their respective parents.
 
+
+## Permissions
+
+This method requires the `MATERIAL.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python

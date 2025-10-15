@@ -11,6 +11,11 @@ description: "Exports all locations as a JSON string (UTF-8 encoded)"
 Exports all [Locations](../../data-model/location-model/location) as a JSON string (UTF-8 encoded).
 Streams location data from the database and formats it as a JSON string, including a header row.
 
+
+## Permissions
+
+This method requires the `LOCATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

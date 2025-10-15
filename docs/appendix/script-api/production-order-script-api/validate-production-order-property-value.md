@@ -11,6 +11,11 @@ description: "Validates a production order property value based on provided para
 Validates the specified parameters for a [Production Order Property Values](../../data-model/production-order-model/production-order-property-value) record and returns any validation errors.
 This only checks if the production order property value object can be saved based on the attributes given, without actually creating or modifying the property value. Use this function to verify your parameters before executing a save production order property value operation.
 
+
+## Permissions
+
+This method requires the `PRODUCTION_ORDER.READ.VALIDATE` permission.
+
 ## Syntax
 
 ```python

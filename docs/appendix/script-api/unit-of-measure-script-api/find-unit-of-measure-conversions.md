@@ -1,7 +1,7 @@
 ---
 sidebar_position: 16
-title: "findUnitOfMeasureConversions"
-description: "Retrieves unit of measure conversions based on the specified pagination, sort, and column constraint parameters."
+title: 'findUnitOfMeasureConversions'
+description: 'Retrieves unit of measure conversions based on the specified pagination, sort, and column constraint parameters.'
 ---
 
 # system.mes.unitOfMeasure.findUnitOfMeasureConversions
@@ -9,6 +9,10 @@ description: "Retrieves unit of measure conversions based on the specified pagin
 ## Description
 
 Retrieves [Unit Of Measure Conversions](../../data-model/utility-models/unit-of-measure-model/unit-of-measure-conversion) records based on the specified pagination, sort, and column constraint parameters.
+
+## Permissions
+
+This method requires the `UNIT_OF_MEASURE.READ.GET` permission.
 
 ## Syntax
 
@@ -21,8 +25,8 @@ system.mes.unitOfMeasure.findUnitOfMeasureConversions(**queryRequest)
 Using Python keyword arguments, a [Query Request](../query-script-api/new-query-request) can be passed to the `findUnitOfMeasureConversions` function
 without specifying each parameter individually. Please refer to the [Query Request](../query-script-api/new-query-request) documentation for a list of parameters.
 
-| Parameter      | Type            | Nullable | Description                                                                                                                                                                                                                                                                                                             |
-|----------------|-----------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Parameter      | Type            | Nullable | Description                                                                                                              |
+| -------------- | --------------- | -------- | ------------------------------------------------------------------------------------------------------------------------ |
 | `queryRequest` | `Query Request` | False    | A [Query Request](../query-script-api/new-query-request) with the desired pagination, sorting, and filtering parameters. |
 
 ## Returns
@@ -30,7 +34,7 @@ without specifying each parameter individually. Please refer to the [Query Reque
 Returns a Query Result object with the following properties:
 
 | Name            | Type                                                                                                                          | Description                                                                                                      |
-|-----------------|-------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | `content`       | `List`&lt;[Unit Of Measure Conversions](../../data-model/utility-models/unit-of-measure-model/unit-of-measure-conversion)&gt; | The list of all records found that meet the specified criteria                                                   |
 | `totalPages`    | `Integer`                                                                                                                     | If pagination is used, this is the number of total pages of records in the database for the specified page size. |
 | `totalElements` | `Long`                                                                                                                        | If pagination is used, this is the number of records in the database that meet the specified criteria.           |

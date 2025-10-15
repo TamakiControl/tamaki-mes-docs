@@ -11,6 +11,11 @@ description: "Imports dashboard widgets from a JSON file provided as raw bytes."
 Imports Dashboard Widgets from a JSON file provided as raw bytes. The service parses the JSON content and creates or
 updates widgets and their metadata accordingly.
 
+
+## Permissions
+
+This method requires the `DASHBOARD.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python

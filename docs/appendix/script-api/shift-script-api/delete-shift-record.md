@@ -10,6 +10,11 @@ description: "Deletes the shift record with the given ID."
 
 Deletes a [Shift Records](../../data-model/shift-model/shift-record) record by its ID. This cannot delete a record with references to it.
 
+
+## Permissions
+
+This method requires the `SHIFT.WRITE.DELETE` permission.
+
 ## Syntax
 
 ```python

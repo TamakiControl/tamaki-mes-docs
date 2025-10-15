@@ -10,6 +10,11 @@ description: "Creates or updates an operation with specified parameters."
 
 Creates or updates a [Operations](../../data-model/operation-model/operation) record in the system based on the provided parameters.
 
+
+## Permissions
+
+This method requires the `OPERATION.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python

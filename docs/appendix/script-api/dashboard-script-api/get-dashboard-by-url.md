@@ -11,6 +11,11 @@ description: "Retrieves a dashboard by URL for the current authenticated user (o
 Retrieves a Dashboard by its URL for the current authenticated user. Public dashboards (no owner) are also considered.
 If the user isn’t authenticated or the dashboard isn’t found for that user, this call throws an error.
 
+
+## Permissions
+
+This method requires the `DASHBOARD.READ.GET` permission.
+
 ## Syntax
 
 ```python

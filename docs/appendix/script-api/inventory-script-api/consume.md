@@ -8,6 +8,11 @@ description: "Consumes inventory from the MES based on the provided parameters."
 
 Consumes inventory from the MES based on the provided parameters.
 
+
+## Permissions
+
+This method requires the `INVENTORY.WRITE.CONSUME` permission.
+
 ## Syntax
 
 ```python

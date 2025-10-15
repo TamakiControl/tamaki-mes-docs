@@ -11,6 +11,11 @@ description: "Deletes the material class with the given ID or path."
 Deletes a [Material Classes](../../data-model/material-model/material-class) record by its ID or path.
 This cannot delete a material class with references to it.
 
+
+## Permissions
+
+This method requires the `MATERIAL.WRITE.DELETE` permission.
+
 ## Syntax
 
 ```python

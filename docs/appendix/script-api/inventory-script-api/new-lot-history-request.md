@@ -1,13 +1,17 @@
 ---
 sidebar_position: 62
-title: "newLotHistoryRequest"
-description: "Generates an empty non-persisted lot history request to provide the structure to retrieve records from the database."
+title: 'newLotHistoryRequest'
+description: 'Generates an empty non-persisted lot history request to provide the structure to retrieve records from the database.'
 ---
 
 # system.mes.inventory.newLotHistoryRequest
 
 Generates an empty non-persisted Lot History Request to provide the structure required by the API to retrieve records from the database.
 This method must be combined with the [getLotHistory](./get-lot-history) method to retrieve the records.
+
+## Permissions
+
+This method does not require any permissions.
 
 ## Syntax
 
@@ -18,7 +22,7 @@ system.mes.inventory.newLotHistoryRequest()
 ## Parameters
 
 | Parameter | Type | Nullable | Description                               |
-|-----------|------|----------|-------------------------------------------|
+| --------- | ---- | -------- | ----------------------------------------- |
 | None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
@@ -26,7 +30,7 @@ system.mes.inventory.newLotHistoryRequest()
 Returns a JSON representation of the newly created Lot History Request object. The following is a list of keys and default values:
 
 | Key                       | Default Value |
-|---------------------------|---------------|
+| ------------------------- | ------------- |
 | `lotId`                   | `null`        |
 | `lotRecordType`           | `null`        |
 | `operationId`             | `null`        |
