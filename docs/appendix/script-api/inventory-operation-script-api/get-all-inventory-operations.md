@@ -8,7 +8,7 @@ description: "Retrieves all inventory operations in the system."
 
 ## Description
 
-Retrieves all [Inventory Operations](../../data-model/inventory-model/inventory-operation) records configured in the system. This function provides a complete list of all inventory operations regardless of their status or configuration.
+Retrieves all [Inventory Operations](../../data-model/inventory-operation-model/inventory-operation) records configured in the system. This function provides a complete list of all inventory operations regardless of their status or configuration.
 
 
 ## Permissions

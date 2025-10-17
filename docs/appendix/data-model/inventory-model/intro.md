@@ -17,17 +17,6 @@ Identifies a batch or specific quantity of a material, tracking attributes such 
 expiration date, and the unit of measure. This entity supports lot-based tracking essential for quality control,
 traceability, and inventory management.
 
-### 3. InventoryLotRecord
-
-Keeps a historical record of changes to inventory lots, such as consumption, production, or scrapping. Each record
-provides details on quantity changes, associated operation records, and linked production orders, enabling a
-comprehensive audit trail for inventory movements.
-
-### 4. InventoryOperation
-
-Represents the interaction between operations and inventories, including actions on inventory lots, inventory handling,
-and quantity management. It ensures accurate tracking and alignment of materials with operational processes.
-
 ---
 
 Each entity in this model supports stock tracking, lot management, and inventory movement, enhancing the overall accuracy

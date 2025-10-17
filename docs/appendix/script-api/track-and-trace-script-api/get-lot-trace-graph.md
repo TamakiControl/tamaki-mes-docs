@@ -68,12 +68,12 @@ A trace graph object with the following properties:
 
 ### Edge
 
-| Property   | Type            | Description                                                                                                           |
-| ---------- | --------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `id`       | `String` (ULID) | Unique identifier of the [InventoryLotRecord](../../data-model/inventory-model/inventory-lot-record.md) for the edge. |
-| `source`   | `String` (ULID) | The source InventoryLot ID from which this edge originates.                                                           |
-| `target`   | `String` (ULID) | The target InventoryLot ID to which this edge points.                                                                 |
-| `animated` | `Boolean`       | Whether the edge is animated in the track and trace graph.                                                            |
+| Property   | Type            | Description                                                                                                                     |
+| ---------- | --------------- |---------------------------------------------------------------------------------------------------------------------------------|
+| `id`       | `String` (ULID) | Unique identifier of the [InventoryLotRecord](../../data-model/inventory-operation-model/inventory-lot-record.md) for the edge. |
+| `source`   | `String` (ULID) | The source InventoryLot ID from which this edge originates.                                                                     |
+| `target`   | `String` (ULID) | The target InventoryLot ID to which this edge points.                                                                           |
+| `animated` | `Boolean`       | Whether the edge is animated in the track and trace graph.                                                                      |
 
 ## Code Example
 

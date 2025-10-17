@@ -8,7 +8,7 @@ description: "Retrieves a list of references to an inventory operation with the 
 
 ## Description
 
-Retrieves a list of references to an [Inventory Operations](../../data-model/inventory-model/inventory-operation) object by its ID.
+Retrieves a list of references to an [Inventory Operations](../../data-model/inventory-operation-model/inventory-operation) object by its ID.
 
 
 ## Permissions

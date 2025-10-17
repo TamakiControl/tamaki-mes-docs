@@ -1,5 +1,5 @@
 ---
-sidebar_position: 15
+sidebar_position: 13
 title: 'newMaterial'
 description: 'Generates an empty non-persisted material object to provide the structure to retrieve records from the database.'
 ---

@@ -8,7 +8,7 @@ description: 'Deletes the inventory operation with the given ID.'
 
 ## Description
 
-Deletes an [Inventory Operations](../../data-model/inventory-model/inventory-operation) record by its ID.
+Deletes an [Inventory Operations](../../data-model/inventory-operation-model/inventory-operation) record by its ID.
 This cannot delete an inventory operation with references to it.
 
 ## Permissions
