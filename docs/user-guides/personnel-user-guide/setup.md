@@ -1,10 +1,10 @@
 ---
 sidebar_position: 3
-title: "Personnel User Guide"
-description: "Introductory guide for creating and using personnel and departments"
+title: "Setup"
+description: "Personnel Setup Configuration"
 ---
 
-# Personnel User Guide
+# Setup
 
 In the MES, a [Person](../../appendix/data-model/personnel-model/personnel.md) represents an individual user who
 interacts with the system. This entity includes personal details such as name, username, and initials, as well as
