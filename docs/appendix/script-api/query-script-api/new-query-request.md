@@ -6,8 +6,11 @@ sidebar_position: 3
 
 # system.mes.query.newQueryRequest
 
-Generates an empty non-persisted [Query Request](./new-query-request) object to provide the structure required by the API
-to define pagination, sorting, and filtering parameters when calling `find` methods. This method must be combined with find methods in order to query records.
+Generates an empty [Query Request](./new-query-request) object to provide the structure required by the API to define 
+pagination, sorting, and filtering parameters when calling `find` methods.
+
+See the [Query Request Guide](../../../user-guides/query-request-guide/query-request-guide.md) for more information on 
+how to use Query Requests.
 
 ## Syntax
 

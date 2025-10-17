@@ -6,9 +6,12 @@ sidebar_position: 2
 
 # system.mes.query.newFilterRequest
 
-Generates an empty non-persisted [Filter Request](./new-filter-request) object to provide the structure required by the API
+Generates an empty [Filter Request](./new-filter-request) object to provide the structure required by the API
 to filter query data. A Filter Request is used as a part of a [Query Request](./new-query-request) to filter records retrieved when calling a 
 `find` method. It is analogous to the `WHERE` clause in an SQL query.
+
+See the [Filter Request Guide](../../../user-guides/query-request-guide/filter-request-guide.md) for more information on 
+how to use Filter Requests.
 
 ## Syntax
 
