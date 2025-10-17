@@ -1,17 +1,23 @@
 ---
-title: "deleteRole"
-description: "Deletes a role by its ID."
+title: 'deleteRole'
+description: 'Deletes a role by its ID.'
 ---
 
 # deleteRole
 
 ## Overview
+
 Deletes the role with the specified ID and returns a JSON response indicating success or failure.
 
+## Permissions
+
+This method requires the `SYSTEM.ADMIN` permission.
+
 ## Parameters
-| Parameter | Type   | Nullable | Description |
-|-----------|--------|----------|-------------|
-| `id`        | `String` | False    | The unique identifier of the role to delete. |
+
+| Parameter | Type     | Nullable | Description                                  |
+| --------- | -------- | -------- | -------------------------------------------- |
+| `id`      | `String` | False    | The unique identifier of the role to delete. |
 
 ## Returns
 
@@ -20,13 +26,14 @@ IllegalArgumentException or ConstraintViolationException is thrown. If the shift
 ApiResponse object is returned with details about the error.
 
 | Name      | Type      | Description                                                 |
-|-----------|-----------|-------------------------------------------------------------|
+| --------- | --------- | ----------------------------------------------------------- |
 | `success` | `Boolean` | Indicates if the delete was successful.                     |
 | `message` | `String`  | The reason why the deletion was successful or unsuccessful. |
 | `data`    | `String`  | The data associated with the deletion.                      |
 | `error`   | `String`  | The errors associated with the deletion.                    |
 
 ## Example
+
 ```python
 response = system.mes.role.deleteRole("01JAP8RJBN-8ZTPXSGY-J9GSDPE1")
 ```
