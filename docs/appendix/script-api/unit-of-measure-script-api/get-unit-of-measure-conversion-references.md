@@ -1,7 +1,7 @@
 ---
 sidebar_position: 20
-title: "getUnitOfMeasureConversionReferences"
-description: "Retrieves a list of references to a unit of measure conversion with the given ID."
+title: 'getUnitOfMeasureConversionReferences'
+description: 'Retrieves a list of references to a unit of measure conversion with the given ID.'
 ---
 
 # system.mes.unitOfMeasure.getUnitOfMeasureConversionReferences
@@ -9,6 +9,10 @@ description: "Retrieves a list of references to a unit of measure conversion wit
 ## Description
 
 Retrieves a list of references to a [Unit Of Measure Conversions](../../data-model/utility-models/unit-of-measure-model/unit-of-measure-conversion) record by its ID.
+
+## Permissions
+
+This method requires the `UNIT_OF_MEASURE.READ.GET` permission.
 
 ## Syntax
 
@@ -19,7 +23,7 @@ system.mes.unitOfMeasure.getUnitOfMeasureConversionReferences(id)
 ## Parameters
 
 | Parameter | Type            | Nullable | Description                                           |
-|-----------|-----------------|----------|-------------------------------------------------------|
+| --------- | --------------- | -------- | ----------------------------------------------------- |
 | `id`      | `String` (ULID) | False    | The ID of the unit of measure conversion to retrieve. |
 
 ## Returns
@@ -27,14 +31,14 @@ system.mes.unitOfMeasure.getUnitOfMeasureConversionReferences(id)
 Returns a list of JSON objects. Each JSON object has the following properties:
 
 | Name         | Type                | Description                                                                         |
-|--------------|---------------------|-------------------------------------------------------------------------------------|
+| ------------ | ------------------- | ----------------------------------------------------------------------------------- |
 | `tableName`  | `String`            | The name of the table that the reference is in.                                     |
 | `references` | `List<JSON Object>` | List of JSON objects corresponding to references to the unit of measure conversion. |
 
 The JSON Objects in references has the following properties:
 
 | Name        | Type            | Description                                                                |
-|-------------|-----------------|----------------------------------------------------------------------------|
+| ----------- | --------------- | -------------------------------------------------------------------------- |
 | `fkColName` | `String`        | The name of the foreign key column.                                        |
 | `id`        | `String` (ULID) | The ULID of the object that is referencing the unit of measure conversion. |
 

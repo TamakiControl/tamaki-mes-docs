@@ -10,6 +10,11 @@ description: "Retrieves a list of references to a material class with the given 
 
 Retrieves a list of references to a [Material Classes](../../data-model/material-model/material-class) record by its ID or path.
 
+
+## Permissions
+
+This method requires the `MATERIAL.READ.GET` permission.
+
 ## Syntax
 
 ```python

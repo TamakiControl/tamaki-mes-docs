@@ -11,6 +11,11 @@ description: "Updates the metadata for a given inventory by its ID. This include
 Updates the metadata for a given [Inventories](../../data-model/inventory-model/inventory) record by its ID.
 This includes the notes and spare fields.
 
+
+## Permissions
+
+This method requires the `INVENTORY.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python

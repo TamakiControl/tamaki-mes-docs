@@ -15,6 +15,11 @@ columns.
 Recommended to export at least one pre-existing location to JSON using the [Export Locations](export-as-json.md)
 functionality to ensure the correct format of the JSON file.
 
+
+## Permissions
+
+This method requires the `LOCATION.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python

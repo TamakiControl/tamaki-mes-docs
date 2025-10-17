@@ -11,6 +11,11 @@ description: "Validates the specified parameters for a location property value a
 Validates the specified parameters for a [Location Property Values](../../data-model/location-model/location-property-value) record and returns any validation errors.
 This only checks if the location property value object can be saved based on the attributes given, without actually creating or modifying the property value. Use this function to verify your parameters before executing a save location property values operation.
 
+
+## Permissions
+
+This method requires the `LOCATION.READ.VALIDATE` permission.
+
 ## Syntax
 
 ```python

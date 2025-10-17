@@ -1,7 +1,7 @@
 ---
 sidebar_position: 18
-title: "getAllConversions"
-description: "Retrieves all unit of measure conversions."
+title: 'getAllConversions'
+description: 'Retrieves all unit of measure conversions.'
 ---
 
 # system.mes.unitOfMeasure.getAllConversions
@@ -9,6 +9,10 @@ description: "Retrieves all unit of measure conversions."
 ## Description
 
 Retrieves a list of all [Unit Of Measure Conversions](../../data-model/utility-models/unit-of-measure-model/unit-of-measure-conversion) records in the system.
+
+## Permissions
+
+This method requires the `UNIT_OF_MEASURE.READ.GET` permission.
 
 ## Syntax
 
@@ -19,7 +23,7 @@ system.mes.unitOfMeasure.getAllConversions()
 ## Parameters
 
 | Parameter | Type | Nullable | Description                               |
-|-----------|------|----------|-------------------------------------------|
+| --------- | ---- | -------- | ----------------------------------------- |
 | None      | -    | -        | This method does not take any parameters. |
 
 ## Returns

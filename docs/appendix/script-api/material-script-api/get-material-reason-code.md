@@ -10,6 +10,11 @@ description: "Retrieves the material reason code with the given ID or reason cod
 
 Retrieves a [Material Reason Codes](../../data-model/material-model/material-reason-code) record by its ID or reason code.
 
+
+## Permissions
+
+This method requires the `MATERIAL.READ.GET` permission.
+
 ## Syntax
 
 ```python

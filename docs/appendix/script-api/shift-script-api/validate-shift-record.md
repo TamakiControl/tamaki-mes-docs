@@ -10,6 +10,11 @@ description: "Validates a shift record object and returns any validation errors.
 
 Validates the specified parameters for a [Shift Records](../../data-model/shift-model/shift-record) record and returns any validation errors. This only checks if the object can be saved based on the attributes given.
 
+
+## Permissions
+
+This method requires the `SHIFT.READ.VALIDATE` permission.
+
 ## Syntax
 
 ```python

@@ -10,6 +10,11 @@ description: "Retrieves the production order with the given ID or name."
 
 Retrieves a [Production Orders](../../data-model/production-order-model/production-order) record by its ID or name.
 
+
+## Permissions
+
+This method requires the `PRODUCTION_ORDER.READ.GET` permission.
+
 ## Syntax
 
 ```python

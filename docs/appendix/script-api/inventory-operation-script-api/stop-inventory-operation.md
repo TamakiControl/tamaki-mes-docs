@@ -10,6 +10,11 @@ description: "Stops an inventory operation and records its end state."
 
 Stops the [Inventory Operation](../../data-model/inventory-operation-model/inventory-operation) with the provided id. This action finds the currently running inventory lot record, records the specified quantity and end state into it, sets its end time to the specified date (or current time if not specified), and updates its status to completed. This effectively concludes the active operation and finalizes the lot record.
 
+
+## Permissions
+
+This method requires the `INVENTORY_OPERATION.EXECUTE` permission.
+
 ## Syntax
 
 ```python

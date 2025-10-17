@@ -11,6 +11,11 @@ description: "Deletes multiple people with the given IDs or usernames."
 Deletes multiple [Person](../../data-model/personnel-model/personnel) records by their IDs or usernames.
 This cannot delete any people that have references to them.
 
+
+## Permissions
+
+This method requires the `PERSONNEL.WRITE.DELETE` permission.
+
 ## Syntax
 
 ```

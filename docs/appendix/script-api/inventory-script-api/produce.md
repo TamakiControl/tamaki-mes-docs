@@ -8,6 +8,11 @@ description: "Produces inventory from the MES based on the provided parameters."
 
 Produces inventory from the MES based on the provided parameters.
 
+
+## Permissions
+
+This method requires the `INVENTORY.WRITE.PRODUCE` permission.
+
 ## Syntax
 
 ```python

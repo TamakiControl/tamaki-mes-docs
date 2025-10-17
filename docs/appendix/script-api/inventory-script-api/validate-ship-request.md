@@ -8,6 +8,11 @@ description: "Validates the specified parameters for a ship request and returns 
 
 Validates the specified parameters for a ship request and returns any validation errors. This only checks if the ship request can be processed based on the attributes given, without actually performing the inventory shipping. Use this function to verify your parameters before executing the actual ship operation.
 
+
+## Permissions
+
+This method requires the `INVENTORY.READ.VALIDATE` permission.
+
 ## Syntax
 
 ```python

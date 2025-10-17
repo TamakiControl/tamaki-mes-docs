@@ -10,6 +10,11 @@ description: "Retrieves all active operation records."
 
 Retrieves all active [Operation Records](../../data-model/operation-model/operation-record).
 
+
+## Permissions
+
+This method requires the `OPERATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

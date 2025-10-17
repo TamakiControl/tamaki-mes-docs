@@ -10,6 +10,11 @@ description: "Retrieves a list of references to an operation record with the giv
 
 Retrieves a list of references to an [Operation Records](../../data-model/operation-model/operation-record) object by its ID.
 
+
+## Permissions
+
+This method requires the `OPERATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

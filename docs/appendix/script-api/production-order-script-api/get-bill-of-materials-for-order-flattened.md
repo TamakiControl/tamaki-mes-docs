@@ -10,6 +10,11 @@ description: "Retrieves a flattened representation of all bill of materials reco
 
 Retrieves a flattened representation of all [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) records associated with the given production order ID or name. This method flattens the bill of materials to a single level, no substitutions.
 
+
+## Permissions
+
+This method requires the `PRODUCTION_ORDER.READ.GET` permission.
+
 ## Syntax
 
 ```python

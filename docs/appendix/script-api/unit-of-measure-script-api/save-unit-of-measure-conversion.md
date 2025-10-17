@@ -1,7 +1,7 @@
 ---
 sidebar_position: 14
-title: "saveUnitOfMeasureConversion"
-description: "Creates or updates a unit of measure conversion with specified parameters."
+title: 'saveUnitOfMeasureConversion'
+description: 'Creates or updates a unit of measure conversion with specified parameters.'
 ---
 
 # system.mes.unitOfMeasure.saveUnitOfMeasureConversion
@@ -9,6 +9,10 @@ description: "Creates or updates a unit of measure conversion with specified par
 ## Description
 
 Creates or updates a [Unit Of Measure Conversions](../../data-model/utility-models/unit-of-measure-model/unit-of-measure-conversion) record in the system based on the provided parameters.
+
+## Permissions
+
+This method requires the `UNIT_OF_MEASURE.WRITE.SAVE` permission.
 
 ## Syntax
 
@@ -19,7 +23,7 @@ system.mes.unitOfMeasure.saveUnitOfMeasureConversion(**uomc_data)
 ## Parameters
 
 | Parameter          | Type            | Nullable | Description                                                                                                      |
-|--------------------|-----------------|----------|------------------------------------------------------------------------------------------------------------------|
+| ------------------ | --------------- | -------- | ---------------------------------------------------------------------------------------------------------------- |
 | `fromId`           | `String` (ULID) | False    | The unit of measure the conversion is converting from.                                                           |
 | `toId`             | `String` (ULID) | False    | The unit of measure the conversion is converting to.                                                             |
 | `conversionFactor` | `Double`        | False    | The number used to change the unit of measure from one set to the other.                                         |

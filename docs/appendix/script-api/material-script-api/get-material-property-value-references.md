@@ -10,6 +10,11 @@ description: "Retrieves a list of references to a material property value with t
 
 Retrieves a list of references to a [Material Property Values](../../data-model/material-model/material-property-value) by its ID.
 
+
+## Permissions
+
+This method requires the `MATERIAL.READ.GET` permission.
+
 ## Syntax
 
 ```python

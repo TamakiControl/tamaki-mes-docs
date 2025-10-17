@@ -10,6 +10,11 @@ description: "Retrieves the location with the given ID or path."
 
 Retrieves a [Locations](../../data-model/location-model/location) record by its ID or path.
 
+
+## Permissions
+
+This method requires the `LOCATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

@@ -11,6 +11,11 @@ description: "Validates the specified parameters for a material."
 Validates the specified parameters for a [Materials](../../data-model/material-model/material) record and returns any validation errors.
 This only checks if the material object can be saved based on the attributes given, without actually creating or modifying the material. Use this function to verify your parameters before executing a save material operation.
 
+
+## Permissions
+
+This method requires the `MATERIAL.READ.VALIDATE` permission.
+
 ## Syntax
 
 ```python

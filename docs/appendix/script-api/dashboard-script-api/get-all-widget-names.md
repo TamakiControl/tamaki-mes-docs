@@ -10,6 +10,11 @@ description: "Retrieves the names of all dashboard widgets."
 
 Retrieves the names of all registered Dashboard Widgets.
 
+
+## Permissions
+
+This method requires the `DASHBOARD.READ.GET` permission.
+
 ## Syntax
 
 ```python

@@ -8,6 +8,11 @@ description: "Edit inventory quantity from the MES based on the provided paramet
 
 Edit inventory quantity from the MES based on the provided parameters.
 
+
+## Permissions
+
+This method requires the `INVENTORY.WRITE.EDIT` permission.
+
 ## Syntax
 
 ```python

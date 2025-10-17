@@ -10,6 +10,11 @@ description: "Retrieves a list of all location properties."
 
 Retrieves a list of all [Location Properties](../../data-model/location-model/location-property) records in the system.
 
+
+## Permissions
+
+This method requires the `LOCATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

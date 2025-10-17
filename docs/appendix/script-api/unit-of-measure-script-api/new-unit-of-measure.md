@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
-title: "newUnitOfMeasure"
-description: "Generates an empty non-persisted unit of measure object to provide the structure to save a new record into the database."
+title: 'newUnitOfMeasure'
+description: 'Generates an empty non-persisted unit of measure object to provide the structure to save a new record into the database.'
 ---
 
 # system.mes.unitOfMeasure.newUnitOfMeasure
@@ -10,6 +10,10 @@ description: "Generates an empty non-persisted unit of measure object to provide
 
 Generates an empty non-persisted [Units Of Measure](../../data-model/utility-models/unit-of-measure-model/unit-of-measure) object to provide the structure required by the API
 to save a new record into the database. This method must be combined with the [saveUnitOfMeasure](./save-unit-of-measure) method in order to persist the record.
+
+## Permissions
+
+This method does not require any permissions.
 
 ## Syntax
 
@@ -20,7 +24,7 @@ system.mes.unitOfMeasure.newUnitOfMeasure()
 ## Parameters
 
 | Parameter | Type | Nullable | Description                               |
-|-----------|------|----------|-------------------------------------------|
+| --------- | ---- | -------- | ----------------------------------------- |
 | None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
@@ -28,7 +32,7 @@ system.mes.unitOfMeasure.newUnitOfMeasure()
 Returns a JSON representation of the newly created unit of measure object. The following is a list of keys and default values:
 
 | Key       | Default Value |
-|-----------|---------------|
+| --------- | ------------- |
 | `name`    | `null`        |
 | `symbol`  | `null`        |
 | `id`      | `null`        |

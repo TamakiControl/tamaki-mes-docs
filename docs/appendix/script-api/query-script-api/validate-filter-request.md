@@ -1,6 +1,6 @@
 ---
-title: "validateFilterRequest"
-description: "Validates a filter request."
+title: 'validateFilterRequest'
+description: 'Validates a filter request.'
 sidebar_position: 4
 ---
 
@@ -11,6 +11,10 @@ sidebar_position: 4
 Validates the specified parameters for a [Filter Request](./new-filter-request) record and returns any validation errors.
 This only checks if the filter request can be performed based on the attributes given, without actually executing the filter request. Use this function to verify your parameters before executing a filter request operation.
 
+## Permissions
+
+This method requires the `QUERY.READ.VALIDATE` permission.
+
 ## Syntax
 
 ```python
@@ -20,7 +24,7 @@ system.mes.query.validateFilterRequest(**filterRequest)
 ## Parameters
 
 | Parameter         | Type            | Nullable | Description                                                                                           |
-|-------------------|-----------------|----------|-------------------------------------------------------------------------------------------------------|
+| ----------------- | --------------- | -------- | ----------------------------------------------------------------------------------------------------- |
 | `field`           | `String`        | False    | Name of the field to filter by. This should be the name as it appears in the entity class (required). |
 | `type`            | `String`        | True     | Type of the field being filtered by. If not provided, the type will be inferred from the value.       |
 | `condition`       | `String`        | False    | Condition used to compare the field against the value (required).                                     |
@@ -46,7 +50,7 @@ Returns a JSON object where keys are field names and values are lists of validat
 filter_request_data = system.mes.query.newFilterRequest()
 
 # Set basic attributes for the new filter request
-filter_request_data["field"] = "createdDate"     
+filter_request_data["field"] = "createdDate"
 filter_request_data["dateValue"] = "2024-01-01T00:00:00Z"
 # Since the condition field is not set, this is not valid
 # (You can continue setting other properties as needed here)

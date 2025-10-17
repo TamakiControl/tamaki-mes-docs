@@ -11,6 +11,11 @@ description: "Checks whether a dashboard URL is unique for a given user, with op
 Checks if a URL is unique and available for use by a specific user. A URL is unavailable if it already exists for either
 the same username or any public dashboard (username is null).
 
+
+## Permissions
+
+This method requires the `DASHBOARD.READ.VALIDATE` permission.
+
 ## Syntax
 
 ```python

@@ -8,6 +8,11 @@ description: "Retrieves a person object by its ID or username."
 
 Retrieves a [Person](../../data-model/personnel-model/personnel) object from the database by its unique ID or username.
 
+
+## Permissions
+
+This method requires the `PERSONNEL.READ.GET` permission.
+
 ## Syntax
 
 ```

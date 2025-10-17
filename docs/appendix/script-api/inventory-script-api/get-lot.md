@@ -10,6 +10,11 @@ description: "Retrieves the inventory lots with the given ID."
 
 Retrieves an [Inventory Lots](../../data-model/inventory-model/inventory-lot) record by its ID.
 
+
+## Permissions
+
+This method requires the `INVENTORY.READ.GET` permission.
+
 ## Syntax
 
 ```python

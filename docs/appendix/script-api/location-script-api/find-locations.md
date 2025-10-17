@@ -10,6 +10,11 @@ description: "Retrieves locations based on the specified pagination, sort, and c
 
 Retrieves [Locations](../../data-model/location-model/location) records based on the specified pagination, sort, and column constraint parameters.
 
+
+## Permissions
+
+This method requires the `LOCATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

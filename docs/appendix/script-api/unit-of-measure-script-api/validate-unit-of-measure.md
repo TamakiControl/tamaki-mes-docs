@@ -1,7 +1,7 @@
 ---
 sidebar_position: 10
-title: "validateUnitOfMeasure"
-description: "Validates the specified parameters for a unit of measure."
+title: 'validateUnitOfMeasure'
+description: 'Validates the specified parameters for a unit of measure.'
 ---
 
 # system.mes.unitOfMeasure.validateUnitOfMeasure
@@ -10,6 +10,10 @@ description: "Validates the specified parameters for a unit of measure."
 
 Validates the specified parameters for a [Units Of Measure](../../data-model/utility-models/unit-of-measure-model/unit-of-measure) record and returns any validation errors.
 This only checks if the unit of measure object can be saved based on the attributes given, without actually creating or modifying the unit of measure. Use this function to verify your parameters before executing a save unit of measure operation.
+
+## Permissions
+
+This method requires the `UNIT_OF_MEASURE.READ.VALIDATE` permission.
 
 ## Syntax
 
@@ -20,7 +24,7 @@ system.mes.unitOfMeasure.validateUnitOfMeasure(**uom_data)
 ## Parameters
 
 | Parameter | Type            | Nullable | Description                                                                                |
-|-----------|-----------------|----------|--------------------------------------------------------------------------------------------|
+| --------- | --------------- | -------- | ------------------------------------------------------------------------------------------ |
 | `name`    | `String`        | False    | The name of the unit of measure.                                                           |
 | `symbol`  | `String`        | False    | The symbol of the unit of measure.                                                         |
 | `id`      | `String` (ULID) | True     | The ULID of the unit of measure (optional, used for updating an existing unit of measure). |

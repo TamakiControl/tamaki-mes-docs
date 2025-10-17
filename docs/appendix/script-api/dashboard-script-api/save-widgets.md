@@ -10,6 +10,11 @@ description: "Saves a list of dashboard widgets in bulk."
 
 Saves a list of Dashboard Widgets in bulk. Recommended for registering all widgets at gateway startup.
 
+
+## Permissions
+
+This method requires the `DASHBOARD.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python

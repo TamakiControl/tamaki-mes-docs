@@ -15,6 +15,11 @@ columns.
 Recommended to export at least one pre-existing operation to CSV using the [Export Operations](export-as-csv.md)
 functionality to ensure the correct format of the CSV file.
 
+
+## Permissions
+
+This method requires the `OPERATION.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python

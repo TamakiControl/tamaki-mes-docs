@@ -1,14 +1,18 @@
 ---
-title: "newFilterRequest"
-description: "Generates an empty non-persisted filter request object."
+title: 'newFilterRequest'
+description: 'Generates an empty non-persisted filter request object.'
 sidebar_position: 2
 ---
 
 # system.mes.query.newFilterRequest
 
 Generates an empty non-persisted [Filter Request](./new-filter-request) object to provide the structure required by the API
-to filter query data. A Filter Request is used as a part of a [Query Request](./new-query-request) to filter records retrieved when calling a 
+to filter query data. A Filter Request is used as a part of a [Query Request](./new-query-request) to filter records retrieved when calling a
 `find` method. It is analogous to the `WHERE` clause in an SQL query.
+
+## Permissions
+
+This method does not require any permissions.
 
 ## Syntax
 
@@ -19,7 +23,7 @@ system.mes.query.newFilterRequest()
 ## Parameters
 
 | Parameter | Type | Nullable | Description                               |
-|-----------|------|----------|-------------------------------------------|
+| --------- | ---- | -------- | ----------------------------------------- |
 | None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
@@ -27,7 +31,7 @@ system.mes.query.newFilterRequest()
 Returns a JSON representation of the newly created filter request object. The following is a list of keys and default values:
 
 | Key               | Default Value |
-|-------------------|---------------|
+| ----------------- | ------------- |
 | `field`           | `null`        |
 | `type`            | `null`        |
 | `condition`       | `null`        |

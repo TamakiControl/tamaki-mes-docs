@@ -11,6 +11,11 @@ description: "Saves a widget and its parameters in one call, removing parameters
 Saves or updates a Dashboard Widget and its associated parameters in a single call. Parameters provided are
 saved/updated; parameters not included are removed from the widget.
 
+
+## Permissions
+
+This method requires the `DASHBOARD.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python

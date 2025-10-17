@@ -10,6 +10,11 @@ description: "Retrieves a dashboard widget by ID."
 
 Retrieves a Dashboard Widget by its ID.
 
+
+## Permissions
+
+This method requires the `DASHBOARD.READ.GET` permission.
+
 ## Syntax
 
 ```python

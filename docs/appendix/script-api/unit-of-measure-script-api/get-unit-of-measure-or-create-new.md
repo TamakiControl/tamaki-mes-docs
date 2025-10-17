@@ -1,7 +1,7 @@
 ---
 sidebar_position: 6
-title: "getUnitOfMeasureOrCreateNew"
-description: "Retrieves or creates a unit of measure by its name and symbol depending on if it exists."
+title: 'getUnitOfMeasureOrCreateNew'
+description: 'Retrieves or creates a unit of measure by its name and symbol depending on if it exists.'
 ---
 
 # system.mes.unitOfMeasure.getUnitOfMeasureOrCreateNew
@@ -10,6 +10,10 @@ description: "Retrieves or creates a unit of measure by its name and symbol depe
 
 Retrieves a [Units Of Measure](../../data-model/utility-models/unit-of-measure-model/unit-of-measure) record if an existing unit of measure exists with the specified name and symbol.
 Otherwise, creates a new [Units Of Measure](../../data-model/utility-models/unit-of-measure-model/unit-of-measure) record with the specified name and symbol.
+
+## Permissions
+
+This method requires the `UNIT_OF_MEASURE.WRITE.SAVE` permission.
 
 ## Syntax
 
@@ -20,7 +24,7 @@ system.mes.unitOfMeasure.getUnitOfMeasureOrCreateNew(name, symbol)
 ## Parameters
 
 | Parameter | Type     | Nullable | Description                        |
-|-----------|----------|----------|------------------------------------|
+| --------- | -------- | -------- | ---------------------------------- |
 | `name`    | `String` | False    | The name of the unit of measure.   |
 | `symbol`  | `String` | False    | The symbol of the unit of measure. |
 

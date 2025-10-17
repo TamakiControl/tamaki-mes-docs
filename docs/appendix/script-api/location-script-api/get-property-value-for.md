@@ -10,6 +10,11 @@ description: "Retrieves a property value for a specified location and property."
 
 Retrieves a [Location Property Values](../../data-model/location-model/location-property-value) record by its location ID or path and by its property ID or name.
 
+
+## Permissions
+
+This method requires the `LOCATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

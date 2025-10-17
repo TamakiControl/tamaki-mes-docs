@@ -10,6 +10,11 @@ description: "Retrieves dashboards for the current user and all public dashboard
 
 Retrieves all dashboards owned by the current authenticated user, plus all public dashboards.
 
+
+## Permissions
+
+This method requires the `DASHBOARD.READ.GET` permission.
+
 ## Syntax
 
 ```python

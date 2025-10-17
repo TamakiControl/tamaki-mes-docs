@@ -10,6 +10,11 @@ description: "Gets the current shift for a location, optionally at a specified t
 
 Gets the current [Shifts](../../data-model/shift-model/shift) at the given location. Optionally, you can specify a timestamp (milliseconds since epoch) to get the shift active at that moment.
 
+
+## Permissions
+
+This method requires the `SHIFT.READ.GET` permission.
+
 ## Syntax
 
 ```python

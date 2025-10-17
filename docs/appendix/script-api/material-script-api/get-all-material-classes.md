@@ -10,6 +10,11 @@ description: "Retrieves all material classes."
 
 Retrieves a list of all [Material Classes](../../data-model/material-model/material-class) records in the system.
 
+
+## Permissions
+
+This method requires the `MATERIAL.READ.GET` permission.
+
 ## Syntax
 
 ```python

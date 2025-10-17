@@ -8,6 +8,11 @@ description: "Validates the specified parameters for a receive request and retur
 
 Validates the specified parameters for a receive request and returns any validation errors. This only checks if the receive request can be processed based on the attributes given, without actually performing the inventory receipt. Use this function to verify your parameters before executing the actual receive operation.
 
+
+## Permissions
+
+This method requires the `INVENTORY.READ.VALIDATE` permission.
+
 ## Syntax
 
 ```python

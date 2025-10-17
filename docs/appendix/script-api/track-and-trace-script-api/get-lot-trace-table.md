@@ -1,6 +1,6 @@
 ---
-title: "getLotTraceTable"
-description: "Retrieves detailed rows of data for the track and trace table for the given inventory lot record IDs."
+title: 'getLotTraceTable'
+description: 'Retrieves detailed rows of data for the track and trace table for the given inventory lot record IDs.'
 sidebar_position: 1
 ---
 
@@ -14,17 +14,18 @@ While [`getLotTraceGraph`](./get-lot-trace-graph.md) provides a visual represent
 
 ## Permissions
 
-This scripting function has no client permission restrictions.
+This method requires the `TRACK_AND_TRACE.READ.GET` permission.
 
 ## Syntax
+
 ```python
 system.mes.trackandtrace.getLotTraceTable(inventoryLotRecordIds)
 ```
 
 ## Parameters
 
-| Parameter              | Type                    | Description                                | Required |
-|------------------------|-------------------------|--------------------------------------------|----------|
+| Parameter               | Type                  | Description                                  | Required |
+| ----------------------- | --------------------- | -------------------------------------------- | -------- |
 | `inventoryLotRecordIds` | `List<String>` (ULID) | List of inventory lot record IDs to retrieve | Yes      |
 
 ## Returns
@@ -33,29 +34,29 @@ A list of trace table row objects with the following properties:
 
 ### TraceTableRow
 
-| Property                 | Type           | Description                                                                            |
-|--------------------------|----------------|----------------------------------------------------------------------------------------|
-| `id`                     | `String` (ULID) | ID of the inventory lot record                                                         |
-| `lotRecordType`          | `String`       | Inventory lot record type (e.g. "Consume", "Produce", "Split", "Merge")                |
-| `sourceInventoryLotId`   | `String` (ULID) | ID of the source inventory lot                                                         |
-| `sourceInventoryLotName` | `String`       | Name of the source inventory lot                                                       |
-| `targetInventoryLotId`   | `String` (ULID) | ID of the target inventory lot                                                         |
-| `targetInventoryLotName` | `String`       | Name of the target inventory lot                                                       |
-| `sourceLocationId`       | `String` (ULID) | ID of the source location                                                              |
-| `sourceLocationPath`     | `String`       | Path of the source location                                                            |
-| `destinationLocationId`  | `String` (ULID) | ID of the destination location                                                         |
-| `destinationLocationPath`| `String`       | Path of the destination location                                                       |
-| `quantity`               | `Double`       | Quantity of the record                                                                 |
-| `unitOfMeasureId`        | `String` (ULID) | ID of the unit of measure for the quantity                                             |
-| `unitOfMeasureName`      | `String`       | Name of the unit of measure                                                            |
-| `unitOfMeasureSymbol`    | `String`       | Symbol of the unit of measure (e.g., "kg", "L")                                        |
-| `startDate`              | `Date`         | Record start date                                                                      |
-| `endDate`                | `Date`         | Record end date                                                                        |
-| `durationInMillis`       | `Long`         | Duration of the record in milliseconds (end date - start date)                         |
-| `sourceMaterialId`       | `String` (ULID) | ID of the material associated with the source lot                                      |
-| `sourceMaterialName`     | `String`       | Name of the material associated with the source lot                                    |
-| `targetMaterialId`       | `String` (ULID) | ID of the material associated with the target lot                                      |
-| `targetMaterialName`     | `String`       | Name of the material associated with the target lot                                    |
+| Property                  | Type            | Description                                                             |
+| ------------------------- | --------------- | ----------------------------------------------------------------------- |
+| `id`                      | `String` (ULID) | ID of the inventory lot record                                          |
+| `lotRecordType`           | `String`        | Inventory lot record type (e.g. "Consume", "Produce", "Split", "Merge") |
+| `sourceInventoryLotId`    | `String` (ULID) | ID of the source inventory lot                                          |
+| `sourceInventoryLotName`  | `String`        | Name of the source inventory lot                                        |
+| `targetInventoryLotId`    | `String` (ULID) | ID of the target inventory lot                                          |
+| `targetInventoryLotName`  | `String`        | Name of the target inventory lot                                        |
+| `sourceLocationId`        | `String` (ULID) | ID of the source location                                               |
+| `sourceLocationPath`      | `String`        | Path of the source location                                             |
+| `destinationLocationId`   | `String` (ULID) | ID of the destination location                                          |
+| `destinationLocationPath` | `String`        | Path of the destination location                                        |
+| `quantity`                | `Double`        | Quantity of the record                                                  |
+| `unitOfMeasureId`         | `String` (ULID) | ID of the unit of measure for the quantity                              |
+| `unitOfMeasureName`       | `String`        | Name of the unit of measure                                             |
+| `unitOfMeasureSymbol`     | `String`        | Symbol of the unit of measure (e.g., "kg", "L")                         |
+| `startDate`               | `Date`          | Record start date                                                       |
+| `endDate`                 | `Date`          | Record end date                                                         |
+| `durationInMillis`        | `Long`          | Duration of the record in milliseconds (end date - start date)          |
+| `sourceMaterialId`        | `String` (ULID) | ID of the material associated with the source lot                       |
+| `sourceMaterialName`      | `String`        | Name of the material associated with the source lot                     |
+| `targetMaterialId`        | `String` (ULID) | ID of the material associated with the target lot                       |
+| `targetMaterialName`      | `String`        | Name of the material associated with the target lot                     |
 
 ## Code Example
 
@@ -82,6 +83,7 @@ for row in traceTableRows:
 ```
 
 ### Example Output
+
 ```
 Record Type: Produce
 Source Lot: Lot-01JZJZ (Material: apple)

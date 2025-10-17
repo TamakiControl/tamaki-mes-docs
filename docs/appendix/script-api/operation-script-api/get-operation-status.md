@@ -10,6 +10,11 @@ description: "Retrieves the status of the operation with the given ID."
 
 Retrieves the status of an [Operations](../../data-model/operation-model/operation) object by its ID.
 
+
+## Permissions
+
+This method requires the `OPERATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

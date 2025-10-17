@@ -11,6 +11,11 @@ description: "Executes a list of inventory actions in a single transaction. That
 Executes a list of inventory actions in a single transaction. That means that if any of the actions fail,
 none of them will be executed, and any changes made to the database will be rolled back.
 
+
+## Permissions
+
+This method requires the `INVENTORY.WRITE` permission.
+
 ## Syntax
 
 ```python

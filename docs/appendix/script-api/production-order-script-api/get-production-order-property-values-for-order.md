@@ -10,6 +10,11 @@ description: "Retrieves a list of production order property values given a produ
 
 Retrieves a list of [Production Order Property Values](../../data-model/production-order-model/production-order-property-value) records associated with a production order ID or Name.
 
+
+## Permissions
+
+This method requires the `PRODUCTION_ORDER.READ.GET` permission.
+
 ## Syntax
 
 ```python

@@ -10,6 +10,11 @@ description: "Retrieves material classes based on the specified pagination, sort
 
 Retrieves [Material Classes](../../data-model/material-model/material-class) records based on the specified pagination, sort, and column constraint parameters.
 
+
+## Permissions
+
+This method requires the `MATERIAL.READ.GET` permission.
+
 ## Syntax
 
 ```python

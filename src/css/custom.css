@@ -186,7 +186,7 @@ td:has(img) {
 	width: fit-content !important;
 }
 
-.sidebar_njMd {
+div[class^='sidebar_'] {
 	width: fit-content !important;
 }
 

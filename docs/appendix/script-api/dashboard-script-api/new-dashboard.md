@@ -1,7 +1,7 @@
 ---
 sidebar_position: 25
-title: "newDashboard"
-description: "Generates an empty Dashboard object to use with saveDashboard."
+title: 'newDashboard'
+description: 'Generates an empty Dashboard object to use with saveDashboard.'
 ---
 
 # system.mes.dashboard.newDashboard
@@ -10,6 +10,10 @@ description: "Generates an empty Dashboard object to use with saveDashboard."
 
 Generates an empty non-persisted Dashboard object to provide the structure required by the API to save a new record into
 the database. Use with [saveDashboard](./save-dashboard).
+
+## Permissions
+
+This method does not require any permissions.
 
 ## Syntax
 
@@ -20,7 +24,7 @@ system.mes.dashboard.newDashboard()
 ## Parameters
 
 | Parameter | Type | Nullable | Description                               |
-|-----------|------|----------|-------------------------------------------|
+| --------- | ---- | -------- | ----------------------------------------- |
 | None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
@@ -28,7 +32,7 @@ system.mes.dashboard.newDashboard()
 Returns a JSON representation of the newly created dashboard object. Keys and default values:
 
 | Key                | Default Value          |
-|--------------------|------------------------|
+| ------------------ | ---------------------- |
 | `name`             | `null`                 |
 | `url`              | `null`                 |
 | `isPublic`         | `false`                |

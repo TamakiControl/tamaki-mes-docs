@@ -10,6 +10,11 @@ description: "Retrieves a list of references to a production order property with
 
 Retrieves a list of references to a [Production Order Properties](../../data-model/production-order-model/production-order-property) record by its ID.
 
+
+## Permissions
+
+This method requires the `PRODUCTION_ORDER.READ.GET` permission.
+
 ## Syntax
 
 ```python

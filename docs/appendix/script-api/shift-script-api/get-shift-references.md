@@ -11,6 +11,11 @@ description: "Retrieves a list of references to a shift with the given ID."
 Retrieves a list of references to a [Shifts](../../data-model/shift-model/shift) record by
 its ID.
 
+
+## Permissions
+
+This method requires the `SHIFT.READ.GET` permission.
+
 ## Syntax
 
 ```python

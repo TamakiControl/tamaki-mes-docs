@@ -8,6 +8,11 @@ description: "Ships inventory from the MES based on the provided parameters."
 
 Ships inventory from the MES based on the provided parameters.
 
+
+## Permissions
+
+This method requires the `INVENTORY.WRITE.SHIP` permission.
+
 ## Syntax
 
 ```python

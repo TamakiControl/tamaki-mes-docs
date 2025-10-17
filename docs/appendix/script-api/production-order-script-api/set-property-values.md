@@ -11,6 +11,11 @@ description: "Updates the values of all production order property values given a
 Updates the values of all [Production Order Property Values](../../data-model/production-order-model/production-order-property-value) records given
 a production order ID or name.
 
+
+## Permissions
+
+This method requires the `PRODUCTION_ORDER.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python

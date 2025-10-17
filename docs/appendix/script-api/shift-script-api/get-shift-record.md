@@ -10,6 +10,11 @@ description: "Retrieves a shift record by ID."
 
 Retrieves a [Shift Records](../../data-model/shift-model/shift-record) record by its ID.
 
+
+## Permissions
+
+This method requires the `SHIFT.READ.GET` permission.
+
 ## Syntax
 
 ```python

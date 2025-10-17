@@ -10,6 +10,11 @@ description: "Retrieves all locations with a specific property value."
 
 Retrieves all [Locations](../../data-model/location-model/location) records that have a property value that matches the provided value.
 
+
+## Permissions
+
+This method requires the `LOCATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

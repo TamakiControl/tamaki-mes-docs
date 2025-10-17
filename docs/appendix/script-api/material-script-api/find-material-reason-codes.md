@@ -10,6 +10,11 @@ description: "Retrieves material reason codes based on the specified pagination,
 
 Retrieves [Material Reason Codes](../../data-model/material-model/material-reason-code) records based on the specified pagination, sort, and column constraint parameters.
 
+
+## Permissions
+
+This method requires the `MATERIAL.READ.GET` permission.
+
 ## Syntax
 
 ```python

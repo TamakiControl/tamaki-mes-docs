@@ -1,7 +1,7 @@
 ---
 sidebar_position: 5
-title: "findUnitsOfMeasure"
-description: "Retrieves units of measure based on the specified pagination, sort, and column constraint parameters."
+title: 'findUnitsOfMeasure'
+description: 'Retrieves units of measure based on the specified pagination, sort, and column constraint parameters.'
 ---
 
 # system.mes.unitOfMeasure.findUnitsOfMeasure
@@ -9,6 +9,10 @@ description: "Retrieves units of measure based on the specified pagination, sort
 ## Description
 
 Retrieves [Units Of Measure](../../data-model/utility-models/unit-of-measure-model/unit-of-measure) records based on the specified pagination, sort, and column constraint parameters.
+
+## Permissions
+
+This method requires the `UNIT_OF_MEASURE.READ.GET` permission.
 
 ## Syntax
 
@@ -21,16 +25,16 @@ system.mes.unitOfMeasure.findUnitsOfMeasure(**queryRequest)
 Using Python keyword arguments, a [Query Request](../query-script-api/new-query-request) can be passed to the `findUnitsOfMeasure` function
 without specifying each parameter individually. Please refer to the [Query Request](../query-script-api/new-query-request) documentation for a list of parameters.
 
-| Parameter      | Type            | Nullable | Description                                                                                                                                                                                                                                                                                                    |
-|----------------|-----------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `queryRequest` | `Query Request` | False    | A [Query Request](../query-script-api/new-query-request.md) with the desired pagination, sorting, and filtering parameters.|
+| Parameter      | Type            | Nullable | Description                                                                                                                 |
+| -------------- | --------------- | -------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `queryRequest` | `Query Request` | False    | A [Query Request](../query-script-api/new-query-request.md) with the desired pagination, sorting, and filtering parameters. |
 
 ## Returns
 
 Returns a Query Result object with the following properties:
 
 | Name            | Type                                                                                                    | Description                                                                                                      |
-|-----------------|---------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| --------------- | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | `content`       | `List`&lt;[Units Of Measure](../../data-model/utility-models/unit-of-measure-model/unit-of-measure)&gt; | The list of all records found that meet the specified criteria                                                   |
 | `totalPages`    | `Integer`                                                                                               | If pagination is used, this is the number of total pages of records in the database for the specified page size. |
 | `totalElements` | `Long`                                                                                                  | If pagination is used, this is the number of records in the database that meet the specified criteria.           |

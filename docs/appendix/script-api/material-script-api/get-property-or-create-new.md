@@ -11,6 +11,11 @@ description: "Retrieves or creates a material property by its ID or name dependi
 Retrieves a [Material Properties](../../data-model/material-model/material-property) record if an existing material property exists with the specified ID or name.
 Otherwise, creates a new [Material Properties](../../data-model/material-model/material-property) record with the specified name and attributes.
 
+
+## Permissions
+
+This method requires the `MATERIAL.READ.GET` permission.
+
 ## Syntax
 
 ```python

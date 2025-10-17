@@ -10,6 +10,11 @@ description: "Creates or updates an inventory lot with specified parameters."
 
 Creates or updates an [Inventory Lots](../../data-model/inventory-model/inventory-lot) record in the system based on the provided parameters.
 
+
+## Permissions
+
+This method requires the `INVENTORY.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python

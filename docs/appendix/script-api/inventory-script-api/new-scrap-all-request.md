@@ -1,13 +1,17 @@
 ---
 sidebar_position: 25
-title: "newScrapAllRequest"
-description: "Generates an empty non-persisted scrap all request to provide the structure to save a new record into the database."
+title: 'newScrapAllRequest'
+description: 'Generates an empty non-persisted scrap all request to provide the structure to save a new record into the database.'
 ---
 
 # system.mes.inventory.newScrapAllRequest
 
 Generates an empty non-persisted Scrap All Request to provide the structure required by the API to save a new record into the database.
 This method must be combined with the [scrapAll](./scrap-all) method in order to persist the record.
+
+## Permissions
+
+This method does not require any permissions.
 
 ## Syntax
 
@@ -18,7 +22,7 @@ system.mes.inventory.newScrapAllRequest()
 ## Parameters
 
 | Parameter | Type | Description                               |
-|-----------|------|-------------------------------------------|
+| --------- | ---- | ----------------------------------------- |
 | None      | -    | This method does not take any parameters. |
 
 ## Returns
@@ -26,7 +30,7 @@ system.mes.inventory.newScrapAllRequest()
 Returns a JSON representation of the newly created Scrap All Request object. The following is a list of keys and default values:
 
 | Key                       | Default Value |
-|---------------------------|---------------|
+| ------------------------- | ------------- |
 | `type`                    | `SCRAP`       |
 | `sourceLocationIdOrPath`  | `null`        |
 | `materialIdOrPath`        | `null`        |

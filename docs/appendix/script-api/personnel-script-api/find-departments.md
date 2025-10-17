@@ -10,6 +10,11 @@ description: "Retrieves departments based on the specified pagination, sort, and
 
 Retrieves [Personnel Department](../../data-model/personnel-model/personnel-department) records based on the specified pagination, sort, and column constraint parameters.
 
+
+## Permissions
+
+This method requires the `PERSONNEL.READ.GET` permission.
+
 ## Syntax
 
 ```

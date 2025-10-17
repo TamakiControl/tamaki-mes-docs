@@ -10,6 +10,11 @@ description: "Retrieves a list of references to a location property value with t
 
 Retrieves a list of references to a [Location Property Values](../../data-model/location-model/location-property-value) by its ID.
 
+
+## Permissions
+
+This method requires the `LOCATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

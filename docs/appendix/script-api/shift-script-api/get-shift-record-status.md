@@ -10,6 +10,11 @@ description: "Retrieves the status of a shift record."
 
 Retrieves the status of a [Shift Records](../../data-model/shift-model/shift-record).
 
+
+## Permissions
+
+This method requires the `SHIFT.READ.GET` permission.
+
 ## Syntax
 
 ```python

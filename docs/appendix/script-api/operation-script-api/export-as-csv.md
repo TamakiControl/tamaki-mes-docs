@@ -1,15 +1,20 @@
 ---
 sidebar_position: 25
-title: "exportAsCsv"
-description: "Exports all operations as a CSV string (UTF-8 encoded)"
+title: 'exportAsCsv'
+description: 'Exports all operations as raw bytes in CSV format (UTF-8 encoded)'
 ---
 
 # system.mes.operation.exportAsCsv
 
 ## Description
 
-Exports all [Operations](../../data-model/operation-model/operation) as a CSV string (UTF-8 encoded). 
-Streams operation data from the database and formats it as a CSV string, including a header row.
+Exports all [Operations](../../data-model/operation-model/operation) as raw bytes in CSV format
+(UTF-8 encoded). Streams operation data from the database and formats it as CSV, including a
+header row.
+
+## Permissions
+
+This method requires the `OPERATION.READ.GET` permission.
 
 ## Syntax
 
@@ -23,13 +28,13 @@ system.mes.operation.exportAsCsv(locationIdOrPaths)
 ### Method 1: Export all operations
 
 | Parameter | Type | Nullable | Description                               |
-|-----------|------|----------|-------------------------------------------|
+| --------- | ---- | -------- | ----------------------------------------- |
 | None      | -    | -        | This method does not take any parameters. |
 
 ### Method 2: Export operations for specific locations
 
 | Parameter           | Type       | Nullable | Description                                                 |
-|---------------------|------------|----------|-------------------------------------------------------------|
+| ------------------- | ---------- | -------- | ----------------------------------------------------------- |
 | `locationIdOrPaths` | `String[]` | False    | The IDs or paths of the locations to export operations for. |
 
 ## Returns
@@ -39,14 +44,16 @@ All operations as a CSV string (UTF-8 encoded).
 ## Code Examples
 
 ### Perspective
+
 ```python
-csvString = system.mes.operation.exportAsCsv()
-system.perspective.download("operations.csv", csvBytes)
+csvBytes = system.mes.operation.exportAsCsv()
+system.perspective.download("operations.csv", jsonBytes)
 ```
 
 ### Script Console
+
 ```python
-csvString = system.mes.operation.exportAsCsv()
+csvBytes = system.mes.operation.exportAsCsv()
 path = system.file.saveFile("operations.csv")
 if path is not None:
 	system.file.writeFile(path, csvString)

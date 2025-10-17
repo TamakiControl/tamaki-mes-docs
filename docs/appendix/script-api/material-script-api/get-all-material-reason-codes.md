@@ -10,6 +10,11 @@ description: "Retrieves all material reason codes."
 
 Retrieves a list of all [Material Reason Codes](../../data-model/material-model/material-reason-code) records in the system.
 
+
+## Permissions
+
+This method requires the `MATERIAL.READ.GET` permission.
+
 ## Syntax
 
 ```python

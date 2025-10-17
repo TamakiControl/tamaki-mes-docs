@@ -10,6 +10,11 @@ description: "Retrieves a property value given its ID."
 
 Retrieves a [Material Property Values](../../data-model/material-model/material-property-value) record given its ID.
 
+
+## Permissions
+
+This method requires the `MATERIAL.READ.GET` permission.
+
 ## Syntax
 
 ```python

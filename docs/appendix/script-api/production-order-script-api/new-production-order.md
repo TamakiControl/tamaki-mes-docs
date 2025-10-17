@@ -1,13 +1,17 @@
 ---
 sidebar_position: 2
-title: "newProductionOrder"
-description: "Generates an empty non-persisted production orders object to provide the structure to retrieve records from the database."
+title: 'newProductionOrder'
+description: 'Generates an empty non-persisted production orders object to provide the structure to retrieve records from the database.'
 ---
 
 # system.mes.productionOrder.newProductionOrder
 
 Generates an empty non-persisted [Production Orders](../../data-model/production-order-model/production-order) object to provide the structure required by the API
 to save a new record into the database. This method must be combined with the [saveProductionOrder](./save-production-order) method in order to persist the record.
+
+## Permissions
+
+This method does not require any permissions.
 
 ## Syntax
 
@@ -18,7 +22,7 @@ system.mes.productionOrder.newProductionOrder()
 ## Parameters
 
 | Parameter | Type | Nullable | Description                               |
-|-----------|------|----------|-------------------------------------------|
+| --------- | ---- | -------- | ----------------------------------------- |
 | None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
@@ -26,7 +30,7 @@ system.mes.productionOrder.newProductionOrder()
 Returns a JSON representation of the newly created production order object. The following is a list of keys and default values:
 
 | Key                 | Default Value |
-|---------------------|---------------|
+| ------------------- | ------------- |
 | `name`              | `null`        |
 | `productId`         | `null`        |
 | `customerId`        | `null`        |

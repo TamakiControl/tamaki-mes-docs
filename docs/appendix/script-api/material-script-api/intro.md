@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
-title: "Introduction to Material API"
-description: "Overview of functions available in the Material API."
+title: 'Introduction to Material API'
+description: 'Overview of functions available in the Material API.'
 ---
 
 # Material API
@@ -121,10 +121,6 @@ Otherwise, creates a new [Material Properties](../../data-model/material-model/m
 ### [`getProperty`](./get-property)
 
 Retrieves a [Material Properties](../../data-model/material-model/material-property) record by its specified ID. Returns a JSON representation of the material property.
-
-### [`getPropertiesForMaterialClass`](./get-properties-for-material-class)
-
-Retrieves all [Material Properties](../../data-model/material-model/material-property) records for a given material class. Returns a list of JSON objects representing all material properties for a given material class.
 
 ### [`getMaterialPropertyReferences`](./get-material-property-references)
 

@@ -10,6 +10,11 @@ description: "Retrieves production orders based on the specified pagination, sor
 
 Retrieves [Production Orders](../../data-model/production-order-model/production-order) records based on the specified pagination, sort, and column constraint parameters.
 
+
+## Permissions
+
+This method requires the `PRODUCTION_ORDER.READ.GET` permission.
+
 ## Syntax
 
 ```python

@@ -9,6 +9,10 @@ sidebar_position: 1
 ## Description
 Retrieves a list of all role permission strings related to materials.
 
+## Permissions
+
+This method does not require any permissions.
+
 ## Returns
 | Type         | Description                          |
 |--------------|--------------------------------------|

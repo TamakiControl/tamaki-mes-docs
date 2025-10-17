@@ -11,6 +11,11 @@ description: "Retrieves or creates a location property by its ID or name dependi
 Retrieves a [Location Properties](../../data-model/location-model/location-property) record if an existing location property exists with the specified ID or name.
 Otherwise, creates a new [Location Properties](../../data-model/location-model/location-property) record with the specified name and attributes.
 
+
+## Permissions
+
+This method requires the `LOCATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

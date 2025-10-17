@@ -10,6 +10,11 @@ description: "Retrieves the status of the inventory operation with the given ID.
 
 Retrieves the status of an [Inventory Operations](../../data-model/inventory-operation-model/inventory-operation) object by its ID.
 
+
+## Permissions
+
+This method requires the `INVENTORY_OPERATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

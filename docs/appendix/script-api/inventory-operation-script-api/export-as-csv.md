@@ -18,6 +18,11 @@ Streams inventory operation data from the database and formats it as CSV, includ
 Exports selected [Inventory Operations](../../data-model/inventory-operation-model/inventory-operation) associated with the specified location ids or paths as raw CSV bytes (UTF-8 encoded).
 Streams inventory operation data from the database and formats it as CSV, including a header row.
 
+
+## Permissions
+
+This method requires the `INVENTORY_OPERATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

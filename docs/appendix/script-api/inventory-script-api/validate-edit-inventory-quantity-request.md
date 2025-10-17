@@ -8,6 +8,11 @@ description: "Validates the specified parameters for an edit inventory quantity 
 
 Validates the specified parameters for an edit inventory quantity request and returns any validation errors. This only checks if the quantity edit request can be processed based on the attributes given, without actually modifying the inventory quantity. Use this function to verify your parameters before executing the actual edit operation.
 
+
+## Permissions
+
+This method requires the `INVENTORY.READ.VALIDATE` permission.
+
 ## Syntax
 
 ```python

@@ -10,6 +10,11 @@ description: "Retrieves all locations."
 
 Retrieves a list of all [Locations](../../data-model/location-model/location) records in the system.
 
+
+## Permissions
+
+This method requires the `LOCATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

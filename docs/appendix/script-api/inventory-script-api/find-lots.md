@@ -10,6 +10,11 @@ description: "Retrieves inventory lots based on the specified pagination, sort, 
 
 Retrieves [Inventory Lots](../../data-model/inventory-model/inventory-lot) records based on the specified pagination, sort, and column constraint parameters.
 
+
+## Permissions
+
+This method requires the `INVENTORY.READ.GET` permission.
+
 ## Syntax
 
 ```python

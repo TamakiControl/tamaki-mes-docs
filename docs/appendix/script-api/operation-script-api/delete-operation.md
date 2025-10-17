@@ -11,6 +11,11 @@ description: "Deletes the operation with the given ID."
 Deletes an [Operations](../../data-model/operation-model/operation) record by its ID.
 This cannot delete an operation with references to it.
 
+
+## Permissions
+
+This method requires the `OPERATION.WRITE.DELETE` permission.
+
 ## Syntax
 
 ```python

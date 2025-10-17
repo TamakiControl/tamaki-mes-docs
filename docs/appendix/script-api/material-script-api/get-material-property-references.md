@@ -10,6 +10,11 @@ description: "Retrieves a list of references to a material property with the giv
 
 Retrieves a list of references to a [Material Properties](../../data-model/material-model/material-property) by its ID.
 
+
+## Permissions
+
+This method requires the `MATERIAL.READ.GET` permission.
+
 ## Syntax
 
 ```python

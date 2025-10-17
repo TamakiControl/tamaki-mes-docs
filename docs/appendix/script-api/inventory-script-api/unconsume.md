@@ -8,6 +8,11 @@ description: "Unconsumes inventory from the MES based on the provided parameters
 
 Unconsumes inventory from the MES based on the provided parameters.
 
+
+## Permissions
+
+This method requires the `INVENTORY.WRITE.UNCONSUME` permission.
+
 ## Syntax
 
 ```python

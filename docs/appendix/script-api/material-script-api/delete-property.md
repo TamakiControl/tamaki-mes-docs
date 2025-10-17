@@ -11,6 +11,11 @@ description: "Deletes a specified material property by its ID."
 Deletes a [Material Properties](../../data-model/material-model/material-property) record by its ID.
 This cannot delete a material property with references to it.
 
+
+## Permissions
+
+This method requires the `MATERIAL.WRITE.DELETE` permission.
+
 ## Syntax
 
 ```python

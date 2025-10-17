@@ -10,6 +10,11 @@ description: "Retrieves all locations that have paths that contain the provided 
 
 Retrieves all [Locations](../../data-model/location-model/location) records with paths that contain the specified partial path.
 
+
+## Permissions
+
+This method requires the `LOCATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

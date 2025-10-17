@@ -10,6 +10,11 @@ description: "Retrieves an inventory operation by its ID."
 
 Retrieves an [Inventory Operations](../../data-model/inventory-operation-model/inventory-operation) object by its ID. This function allows you to get the complete details of a specific inventory operation configured in the system.
 
+
+## Permissions
+
+This method requires the `INVENTORY_OPERATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

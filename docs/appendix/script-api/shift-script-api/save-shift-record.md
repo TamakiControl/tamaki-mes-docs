@@ -11,6 +11,11 @@ description: "Creates or updates a shift record with specified parameters."
 Creates or updates a [Shift Records](../../data-model/shift-model/shift-record) in the system
 based on the provided parameters.
 
+
+## Permissions
+
+This method requires the `SHIFT.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python

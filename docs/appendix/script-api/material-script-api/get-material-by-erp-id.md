@@ -10,6 +10,11 @@ description: "Retrieves the material with the given erp ID."
 
 Retrieves a [Materials](../../data-model/material-model/material) record given an erp ID.
 
+
+## Permissions
+
+This method requires the `MATERIAL.READ.GET` permission.
+
 ## Syntax
 
 ```python

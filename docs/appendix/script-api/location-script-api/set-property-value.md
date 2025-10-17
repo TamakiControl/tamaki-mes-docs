@@ -11,6 +11,11 @@ description: "Updates the value of a location property value given a location ob
 Updates the value of a [Location Property Values](../../data-model/location-model/location-property-value) record given
 a location ID or path and a property ID or name.
 
+
+## Permissions
+
+This method requires the `LOCATION.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python

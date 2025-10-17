@@ -1,7 +1,7 @@
 ---
 sidebar_position: 37
-title: "newPropertyValue"
-description: "Generates an empty non-persisted property values object to provide the structure to save a new record into the database."
+title: 'newPropertyValue'
+description: 'Generates an empty non-persisted property values object to provide the structure to save a new record into the database.'
 ---
 
 # system.mes.material.newPropertyValue
@@ -10,6 +10,10 @@ description: "Generates an empty non-persisted property values object to provide
 
 Generates an empty non-persisted [Material Property Values](../../data-model/material-model/material-property-value) object to provide the structure required by the API
 to save a new record into the database. This method must be combined with the [savePropertyValue](./save-property-value) method in order to persist the record.
+
+## Permissions
+
+This method does not require any permissions.
 
 ## Syntax
 
@@ -20,7 +24,7 @@ system.mes.material.newPropertyValue()
 ## Parameters
 
 | Parameter | Type | Nullable | Description                               |
-|-----------|------|----------|-------------------------------------------|
+| --------- | ---- | -------- | ----------------------------------------- |
 | None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
@@ -28,7 +32,7 @@ system.mes.material.newPropertyValue()
 Returns a JSON representation of the newly created material property value object. The following is a list of keys and default values:
 
 | Key                  | Default Value |
-|----------------------|---------------|
+| -------------------- | ------------- |
 | `materialId`         | `null`        |
 | `materialPropertyId` | `null`        |
 | `dataType`           | `String`      |

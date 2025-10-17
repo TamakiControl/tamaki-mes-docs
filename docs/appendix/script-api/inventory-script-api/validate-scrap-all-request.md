@@ -9,6 +9,11 @@ description: "Validates a scrap all request based on the provided parameters."
 Validates a scrap all request based on the provided parameters, checking if the request meets all the requirements to be executed successfully.
 This only checks if the request can be performed based on the attributes given.
 
+
+## Permissions
+
+This method requires the `INVENTORY.READ.VALIDATE` permission.
+
 ## Syntax
 
 ```python

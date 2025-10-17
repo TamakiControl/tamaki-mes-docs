@@ -10,6 +10,11 @@ description: "Retrieves operation records based on the specified pagination, sor
 
 Retrieves [Operation Records](../../data-model/operation-model/operation-record) records based on the specified pagination, sort, and column constraint parameters.
 
+
+## Permissions
+
+This method requires the `OPERATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

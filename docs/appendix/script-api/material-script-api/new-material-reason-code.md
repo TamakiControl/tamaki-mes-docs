@@ -1,13 +1,17 @@
 ---
 sidebar_position: 54
-title: "newMaterialReasonCode"
-description: "Generates an empty non-persisted material reason code object to provide the structure to retrieve records from the database."
+title: 'newMaterialReasonCode'
+description: 'Generates an empty non-persisted material reason code object to provide the structure to retrieve records from the database.'
 ---
 
 # system.mes.material.newMaterialReasonCode
 
 Generates an empty non-persisted [Material Reason Codes](../../data-model/material-model/material-reason-code) object to provide the structure required by the API
 to save a new record into the database. This method must be combined with the [saveMaterialReasonCode](./save-material-reason-code) method in order to persist the record.
+
+## Permissions
+
+This method does not require any permissions.
 
 ## Syntax
 
@@ -18,7 +22,7 @@ system.mes.material.newMaterialReasonCode()
 ## Parameters
 
 | Parameter | Type | Nullable | Description                               |
-|-----------|------|----------|-------------------------------------------|
+| --------- | ---- | -------- | ----------------------------------------- |
 | None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
@@ -26,7 +30,7 @@ system.mes.material.newMaterialReasonCode()
 Returns a JSON representation of the newly created material reason code object. The following is a list of keys and default values:
 
 | Key               | Default Value |
-|-------------------|---------------|
+| ----------------- | ------------- |
 | `lotRecordType`   | `null`        |
 | `reasonCode`      | `null`        |
 | `description`     | `null`        |

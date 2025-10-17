@@ -11,6 +11,11 @@ description: "Gets the current shift record for a location, optionally at a spec
 Gets the current [Shift Records](../../data-model/shift-model/shift-record) at the given
 location. Optionally, you can specify a timestamp (milliseconds since epoch) to get the record active at that moment.
 
+
+## Permissions
+
+This method requires the `SHIFT.READ.GET` permission.
+
 ## Syntax
 
 ```python

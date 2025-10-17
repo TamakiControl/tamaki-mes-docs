@@ -11,6 +11,11 @@ description: "Exports dashboard widgets as raw bytes in JSON format (UTF-8 encod
 Exports dashboard widgets as raw bytes in JSON format (UTF-8 encoded). Use the no-argument form to export all widgets,
 or pass a list of widget IDs or names to export only those selected widgets.
 
+
+## Permissions
+
+This method requires the `DASHBOARD.READ.GET` permission.
+
 ## Syntax
 
 ```python

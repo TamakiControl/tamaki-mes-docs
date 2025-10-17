@@ -10,6 +10,11 @@ description: "Creates or updates a material property value based on specified pa
 
 Creates or updates a [Material Property Values](../../data-model/material-model/material-property-value) record in the system based on the provided parameters.
 
+
+## Permissions
+
+This method requires the `MATERIAL.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python

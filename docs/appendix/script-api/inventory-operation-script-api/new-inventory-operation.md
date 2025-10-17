@@ -1,13 +1,19 @@
 ---
 sidebar_position: 2
-title: "newInventoryOperation"
-description: "Generates an empty non-persisted inventory operation object to provide the structure to retrieve records from the database."
+title: 'newInventoryOperation'
+description: 'Generates an empty non-persisted inventory operation object to provide the structure to retrieve records from the database.'
 ---
 
 # system.mes.inventory.operation.newInventoryOperation
 
+## Description
+
 Generates an empty non-persisted [Inventory Operations](../../data-model/inventory-operation-model/inventory-operation) object to provide the structure required by the API
 to save a new record into the database. This method must be combined with the [saveInventoryOperation](./save-inventory-operation) method in order to persist the record.
+
+## Permissions
+
+This method does not require any permissions.
 
 ## Syntax
 
@@ -26,7 +32,7 @@ system.mes.inventory.operation.newInventoryOperation()
 Returns a JSON representation of the newly created Inventory Operation object. The following is a list of keys and default values:
 
 | Key                               | Default Value   |
-|-----------------------------------|-----------------|
+| --------------------------------- | --------------- |
 | `operationId`                     | `null`          |
 | `operationName`                   | `null`          |
 | `name`                            | `null`          |

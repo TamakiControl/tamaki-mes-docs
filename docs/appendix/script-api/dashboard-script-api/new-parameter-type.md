@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
-title: "newParameterType"
-description: "Generates an empty Dashboard Widget Parameter Type object to use with saveParameterType."
+title: 'newParameterType'
+description: 'Generates an empty Dashboard Widget Parameter Type object to use with saveParameterType.'
 ---
 
 # system.mes.dashboard.newParameterType
@@ -10,6 +10,10 @@ description: "Generates an empty Dashboard Widget Parameter Type object to use w
 
 Generates an empty non-persisted parameter type object to provide the structure required by the API to save a new record
 into the database. Use with [saveParameterType](./save-parameter-type).
+
+## Permissions
+
+This method does not require any permissions.
 
 ## Syntax
 
@@ -20,7 +24,7 @@ system.mes.dashboard.newParameterType()
 ## Parameters
 
 | Parameter | Type | Nullable | Description                               |
-|-----------|------|----------|-------------------------------------------|
+| --------- | ---- | -------- | ----------------------------------------- |
 | None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
@@ -28,7 +32,7 @@ system.mes.dashboard.newParameterType()
 Returns a JSON representation of the newly created parameter type object. Keys and default values:
 
 | Key        | Default Value |
-|------------|---------------|
+| ---------- | ------------- |
 | `name`     | `null`        |
 | `viewPath` | `null`        |
 | `id`       | `null`        |

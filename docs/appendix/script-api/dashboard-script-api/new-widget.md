@@ -1,7 +1,7 @@
 ---
 sidebar_position: 9
-title: "newWidget"
-description: "Generates an empty Dashboard Widget object to use with saveWidget."
+title: 'newWidget'
+description: 'Generates an empty Dashboard Widget object to use with saveWidget.'
 ---
 
 # system.mes.dashboard.newWidget
@@ -10,6 +10,10 @@ description: "Generates an empty Dashboard Widget object to use with saveWidget.
 
 Generates an empty non-persisted widget object to provide the structure required by the API to save a new record into
 the database. Use with [saveWidget](./save-widget).
+
+## Permissions
+
+This method does not require any permissions.
 
 ## Syntax
 
@@ -20,7 +24,7 @@ system.mes.dashboard.newWidget()
 ## Parameters
 
 | Parameter | Type | Nullable | Description                               |
-|-----------|------|----------|-------------------------------------------|
+| --------- | ---- | -------- | ----------------------------------------- |
 | None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
@@ -28,7 +32,7 @@ system.mes.dashboard.newWidget()
 Returns a JSON representation of the newly created widget object. Keys and default values:
 
 | Key             | Default Value |
-|-----------------|---------------|
+| --------------- | ------------- |
 | `name`          | `null`        |
 | `description`   | `null`        |
 | `viewPath`      | `null`        |

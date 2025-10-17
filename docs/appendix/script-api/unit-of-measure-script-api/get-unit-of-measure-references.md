@@ -1,7 +1,7 @@
 ---
 sidebar_position: 9
-title: "getUnitOfMeasureReferences"
-description: "Retrieves a list of references to a unit of measure with the given ID."
+title: 'getUnitOfMeasureReferences'
+description: 'Retrieves a list of references to a unit of measure with the given ID.'
 ---
 
 # system.mes.unitOfMeasure.getUnitOfMeasureReferences
@@ -9,6 +9,10 @@ description: "Retrieves a list of references to a unit of measure with the given
 ## Description
 
 Retrieves a list of references to a [Units Of Measure](../../data-model/utility-models/unit-of-measure-model/unit-of-measure) record by its ID.
+
+## Permissions
+
+This method requires the `UNIT_OF_MEASURE.READ.GET` permission.
 
 ## Syntax
 
@@ -19,7 +23,7 @@ system.mes.unitOfMeasure.getUnitOfMeasureReferences(id)
 ## Parameters
 
 | Parameter | Type            | Nullable | Description                                |
-|-----------|-----------------|----------|--------------------------------------------|
+| --------- | --------------- | -------- | ------------------------------------------ |
 | `id`      | `String` (ULID) | False    | The ID of the unit of measure to retrieve. |
 
 ## Returns
@@ -27,14 +31,14 @@ system.mes.unitOfMeasure.getUnitOfMeasureReferences(id)
 Returns a list of JSON objects. Each JSON object has the following properties:
 
 | Name         | Type                | Description                                                              |
-|--------------|---------------------|--------------------------------------------------------------------------|
+| ------------ | ------------------- | ------------------------------------------------------------------------ |
 | `tableName`  | `String`            | The name of the table that the reference is in.                          |
 | `references` | `List<JSON Object>` | List of JSON objects corresponding to references to the unit of measure. |
 
 The JSON Objects in references has the following properties:
 
 | Name        | Type            | Description                                                     |
-|-------------|-----------------|-----------------------------------------------------------------|
+| ----------- | --------------- | --------------------------------------------------------------- |
 | `fkColName` | `String`        | The name of the foreign key column.                             |
 | `id`        | `String` (ULID) | The ULID of the object that is referencing the unit of measure. |
 

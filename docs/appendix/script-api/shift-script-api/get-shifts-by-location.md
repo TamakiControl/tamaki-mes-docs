@@ -10,6 +10,11 @@ description: "Retrieves shifts for a specific location."
 
 Retrieves [Shifts](../../data-model/shift-model/shift) records for the specified location.
 
+
+## Permissions
+
+This method requires the `SHIFT.READ.GET` permission.
+
 ## Syntax
 
 ```python

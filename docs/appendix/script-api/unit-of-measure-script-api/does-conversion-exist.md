@@ -1,12 +1,16 @@
 ---
 sidebar_position: 15
-title: "doesConversionExist"
-description: "Checks if a unit of measure conversion with the given to and from unit of measures and the material ID exists."
+title: 'doesConversionExist'
+description: 'Checks if a unit of measure conversion with the given to and from unit of measures and the material ID exists.'
 ---
 
 # system.mes.unitOfMeasure.doesConversionExist
 
 Checks if a [Unit Of Measure Conversions](../../data-model/utility-models/unit-of-measure-model/unit-of-measure-conversion) object with the given parameters exists.
+
+## Permissions
+
+This method requires the `UNIT_OF_MEASURE.READ.GET` permission.
 
 ## Syntax
 
@@ -17,7 +21,7 @@ system.mes.unitOfMeasure.doesConversionExist(fromIdOrName, toIdOrName, materialI
 ## Parameters
 
 | Parameter      | Type            | Nullable | Description                                              |
-|----------------|-----------------|----------|----------------------------------------------------------|
+| -------------- | --------------- | -------- | -------------------------------------------------------- |
 | `fromIdOrName` | `String`        | False    | The ULID or name of the from unit of measure to check.   |
 | `toIdOrName`   | `String`        | False    | The ULID or name of the to unit of measure to check.     |
 | `materialId`   | `String` (ULID) | True     | The ULID of the material associated with the conversion. |

@@ -10,6 +10,11 @@ description: "Creates or updates a location property value based on specified pa
 
 Creates or updates a [Location Property Values](../../data-model/location-model/location-property-value) record in the system based on the provided parameters.
 
+
+## Permissions
+
+This method requires the `LOCATION.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python

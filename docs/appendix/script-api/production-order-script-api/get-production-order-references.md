@@ -10,6 +10,11 @@ description: "Retrieves a list of references to a production order with the give
 
 Retrieves a list of references to a [Production Orders](../../data-model/production-order-model/production-order) record by its ID or Name.
 
+
+## Permissions
+
+This method requires the `PRODUCTION_ORDER.READ.GET` permission.
+
 ## Syntax
 
 ```python

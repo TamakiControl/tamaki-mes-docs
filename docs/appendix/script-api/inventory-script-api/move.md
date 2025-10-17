@@ -8,6 +8,11 @@ description: "Moves inventory from the MES based on the provided parameters."
 
 Moves inventory from the MES based on the provided parameters.
 
+
+## Permissions
+
+This method requires the `INVENTORY.WRITE.MOVE` permission.
+
 ## Syntax
 
 ```python

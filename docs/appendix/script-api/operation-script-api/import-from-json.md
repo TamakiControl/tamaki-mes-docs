@@ -15,6 +15,11 @@ columns.
 Recommended to export at least one pre-existing operation to JSON using the [Export Operations](export-as-json.md)
 functionality to ensure the correct format of the JSON file.
 
+
+## Permissions
+
+This method requires the `OPERATION.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python

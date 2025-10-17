@@ -10,6 +10,11 @@ description: "Retrieves a department by its ID or path."
 
 Retrieves a [Personnel Department](../../data-model/personnel-model/personnel-department) record by its ID or path.
 
+
+## Permissions
+
+This method requires the `PERSONNEL.READ.GET` permission.
+
 ## Syntax
 
 ```

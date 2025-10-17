@@ -8,6 +8,11 @@ description: "Splits inventory from the MES based on the provided parameters."
 
 Splits inventory from the MES based on the provided parameters.
 
+
+## Permissions
+
+This method requires the `INVENTORY.WRITE.SPLIT` permission.
+
 ## Syntax
 
 ```python

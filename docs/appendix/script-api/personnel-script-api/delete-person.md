@@ -11,6 +11,11 @@ description: "Deletes the person with the given ID or username."
 Deletes a [Person](../../data-model/personnel-model/personnel) by their ID or username.
 This cannot delete a person with references to them.
 
+
+## Permissions
+
+This method requires the `PERSONNEL.WRITE.DELETE` permission.
+
 ## Syntax
 
 ```

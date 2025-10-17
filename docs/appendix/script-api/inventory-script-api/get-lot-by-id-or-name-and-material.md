@@ -11,6 +11,11 @@ description: "Retrieves an inventory lots record by its ID or name and by the ma
 Retrieves an [Inventory Lots](../../data-model/inventory-model/inventory-lot) record by its ID or name and by the material ID or path.
 If no material ID or path is provided, retrieves an [Inventory Lots](../../data-model/inventory-model/inventory-lot) record by its ID or name.
 
+
+## Permissions
+
+This method requires the `INVENTORY.READ.GET` permission.
+
 ## Syntax
 
 ```python

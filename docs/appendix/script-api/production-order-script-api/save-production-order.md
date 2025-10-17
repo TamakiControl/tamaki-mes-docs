@@ -10,6 +10,11 @@ description: "Creates or updates a production order with specified parameters."
 
 Creates or updates a [Production Orders](../../data-model/production-order-model/production-order) record in the system based on the provided parameters.
 
+
+## Permissions
+
+This method requires the `PRODUCTION_ORDER.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python

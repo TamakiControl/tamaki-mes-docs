@@ -1,13 +1,17 @@
 ---
 sidebar_position: 6
-title: "newUnconsumeRequest"
-description: "Generates an empty non-persisted unconsume request to provide the structure to save a new record into the database."
+title: 'newUnconsumeRequest'
+description: 'Generates an empty non-persisted unconsume request to provide the structure to save a new record into the database.'
 ---
 
 # system.mes.inventory.newConsumeRequest
 
 Generates an empty non-persisted Unconsume Request to provide the structure required by the API to save a new record into the database.
 This method must be combined with the [unconsume](./unconsume) method in order to persist the record.
+
+## Permissions
+
+This method does not require any permissions.
 
 ## Syntax
 
@@ -18,7 +22,7 @@ system.mes.inventory.newUnconsumeRequest()
 ## Parameters
 
 | Parameter | Type | Nullable | Description                               |
-|-----------|------|----------|-------------------------------------------|
+| --------- | ---- | -------- | ----------------------------------------- |
 | None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
@@ -26,7 +30,7 @@ system.mes.inventory.newUnconsumeRequest()
 Returns a JSON representation of the newly created Unconsume Request object. The following is a list of keys and default values:
 
 | Key                           | Default Value |
-|-------------------------------|---------------|
+| ----------------------------- | ------------- |
 | `type`                        | `UNCONSUME`   |
 | `quantity`                    | `null`        |
 | `unitOfMeasureSymbol`         | `null`        |

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
-title: "newOperation"
-description: "Generates an empty non-persisted operations object to provide the structure to save a new record into the database."
+title: 'newOperation'
+description: 'Generates an empty non-persisted operations object to provide the structure to save a new record into the database.'
 ---
 
 # system.mes.operation.newOperation
@@ -10,6 +10,10 @@ description: "Generates an empty non-persisted operations object to provide the 
 
 Generates an empty non-persisted [Operations](../../data-model/operation-model/operation) object to provide the structure required by the API
 to save a new record into the database. This method must be combined with the [saveOperation](./save-operation) method in order to persist the record.
+
+## Permissions
+
+This method does not require any permissions.
 
 ## Syntax
 
@@ -20,7 +24,7 @@ system.mes.operation.newOperation()
 ## Parameters
 
 | Parameter | Type | Nullable | Description                               |
-|-----------|------|----------|-------------------------------------------|
+| --------- | ---- | -------- | ----------------------------------------- |
 | None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
@@ -28,7 +32,7 @@ system.mes.operation.newOperation()
 Returns a JSON representation of the newly created operation object. The following is a list of keys and default values:
 
 | Key                                   | Default Value           |
-|---------------------------------------|-------------------------|
+| ------------------------------------- | ----------------------- |
 | `locationId`                          | `null`                  |
 | `locationPath`                        | `null`                  |
 | `name`                                | `null`                  |

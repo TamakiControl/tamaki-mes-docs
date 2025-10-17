@@ -10,6 +10,11 @@ description: "Retrieves all inventories at a given location and its children."
 
 Retrieves all the [Inventories](../../data-model/inventory-model/inventory) records at a given location and its children.
 
+
+## Permissions
+
+This method requires the `INVENTORY.READ.GET` permission.
+
 ## Syntax
 
 ```python

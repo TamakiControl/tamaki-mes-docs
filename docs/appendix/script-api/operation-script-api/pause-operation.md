@@ -10,6 +10,11 @@ description: "Pauses an operation."
 
 Pauses an [Operations](../../data-model/operation-model/operation) object.
 
+
+## Permissions
+
+This method requires the `OPERATION.EXECUTE` permission.
+
 ## Syntax
 
 ```python

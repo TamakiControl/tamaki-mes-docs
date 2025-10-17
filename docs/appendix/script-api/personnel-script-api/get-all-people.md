@@ -10,6 +10,11 @@ description: "Retrieves all people."
 
 Retrieves a list of all [Person](../../data-model/personnel-model/personnel) records in the system.
 
+
+## Permissions
+
+This method requires the `PERSONNEL.READ.GET` permission.
+
 ## Syntax
 
 ```

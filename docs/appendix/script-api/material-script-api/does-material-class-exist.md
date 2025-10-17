@@ -8,6 +8,11 @@ description: "Checks if a material class with the given ID or path exists."
 
 Checks if a [Material Classes](../../data-model/material-model/material-class) object with the given ID or path exists.
 
+
+## Permissions
+
+This method requires the `MATERIAL.READ.GET` permission.
+
 ## Syntax
 
 ```python

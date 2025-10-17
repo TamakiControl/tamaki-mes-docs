@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
-title: "checkLocationHasCapacity"
-description: "Checks if a location can store the given quantity of inventory."
+title: 'checkLocationHasCapacity'
+description: 'Checks if a location can store the given quantity of inventory.'
 ---
 
 # system.mes.inventory.checkLocationHasCapacity
@@ -13,6 +13,10 @@ Checks if the [Locations](../../data-model/location-model/location) record can s
 **NOTE:** If an inventory lot ID is provided, the material ID parameter becomes optional (cannot be None or left as null).
 This can be left as an empty string.
 
+## Permissions
+
+This method does not require any permissions.
+
 ## Syntax
 
 ```python
@@ -22,7 +26,7 @@ system.mes.inventory.checkLocationHasCapacity(locationIdOrPath, lotIdOrName, mat
 ## Parameters
 
 | Parameter          | Type     | Nullable | Description                                                         |
-|--------------------|----------|----------|---------------------------------------------------------------------|
+| ------------------ | -------- | -------- | ------------------------------------------------------------------- |
 | `locationIdOrPath` | `String` | False    | The ID or path of the location associated with the inventory.       |
 | `lotIdOrName`      | `String` | False    | The ID or name of the inventory lot associated with the inventory.  |
 | `materialIdOrPath` | `String` | False    | The ID or path of the material associated with the inventory's lot. |

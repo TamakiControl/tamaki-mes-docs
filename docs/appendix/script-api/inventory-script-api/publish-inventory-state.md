@@ -13,6 +13,11 @@ description: "Publishes the current inventory state to the tag system."
 **With a Parameter:** Publishes only the specified [Inventories](../../data-model/inventory-model/inventory) to the tag system given
 the ID or path of the location associated with the inventory.
 
+
+## Permissions
+
+This method requires the `INVENTORY.READ.GET` permission.
+
 ## Syntax
 
 ```python
