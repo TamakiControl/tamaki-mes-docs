@@ -78,10 +78,10 @@ Any additional notes or comments about the inventory operation. These notes will
 #### Trigger Source
 - Manual
   - The inventory operation is triggered by an API call. See [Start Inventory Operation](../../appendix/script-api/inventory-operation-script-api/start-inventory-operation.md) and [Stop Inventory Operation](../../appendix/script-api/inventory-operation-script-api/stop-inventory-operation.md) for more information.
-  - Expression 
-    - The inventory operation is triggered by start and stop expressions, which are evaluated at regular intervals. When an expression evaluates to its trigger value, the inventory operation will start or stop accordingly.
-  - Parent (**_Only allowed if Operation is set_**)
-    - The inventory operation is triggered to start and stop based on the start and stop of a parent [Operation](..%2F..%2Fappendix%2Fdata-model%2Foperation-model%2Foperation.md). When the parent operation starts, this inventory operation will start. When the parent operation stops, this inventory operation will stop.
+- Expression 
+  - The inventory operation is triggered by start and stop expressions, which are evaluated at regular intervals. When an expression evaluates to its trigger value, the inventory operation will start or stop accordingly.
+- Parent (**_Only allowed if Operation is set_**)
+  - The inventory operation is triggered to start and stop based on the start and stop of a parent [Operation](..%2F..%2Fappendix%2Fdata-model%2Foperation-model%2Foperation.md). When the parent operation starts, this inventory operation will start. When the parent operation stops, this inventory operation will stop.
 
 #### Start Trigger Expression
 If the Trigger Source is set to `Expression`, this is the expression that triggers the inventory operation to start. This field is required if the trigger source is set to `Expression`. The expression must evaluate to a boolean or numeric value. Numeric values are interpreted as false if they are 0 and true if they are any other number.
