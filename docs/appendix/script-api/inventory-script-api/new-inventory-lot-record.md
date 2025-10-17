@@ -8,7 +8,7 @@ description: 'Generates an empty non-persisted inventory lot record object to pr
 
 ## Description
 
-Generates an empty non-persisted [Inventory Lot Records](../../data-model/inventory-model/inventory-lot-record) object to provide the structure required by the API
+Generates an empty non-persisted [Inventory Lot Records](../../data-model/inventory-operation-model/inventory-lot-record) object to provide the structure required by the API
 to save a new record into the database. This method must be combined with the [saveInventoryLotRecord](./save-inventory-lot-record) method in order to persist the record.
 
 ## Permissions

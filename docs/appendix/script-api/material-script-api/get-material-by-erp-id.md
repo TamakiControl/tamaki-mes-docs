@@ -1,5 +1,5 @@
 ---
-sidebar_position: 20
+sidebar_position: 18
 title: "getMaterialByErpId"
 description: "Retrieves the material with the given erp ID."
 ---

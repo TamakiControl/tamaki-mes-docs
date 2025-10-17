@@ -8,7 +8,7 @@ description: "Retrieves all inventory operations at a given location."
 
 ## Description
 
-Retrieves all the [Inventory Operations](../../data-model/inventory-model/inventory-operation) records at a given location.
+Retrieves all the [Inventory Operations](../../data-model/inventory-operation-model/inventory-operation) records at a given location.
 
 
 ## Permissions

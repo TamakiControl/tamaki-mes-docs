@@ -1,3 +1,4 @@
+---
 sidebar_position: 21
 title: "getInventoryOperationPermissions"
 description: "Retrieves a list of all inventory operation permissions."
@@ -8,7 +9,7 @@ description: "Retrieves a list of all inventory operation permissions."
 
 ## Description
 
-Retrieves all the [Inventory Operations](../../data-model/inventory-model/inventory-operation) permissions.
+Retrieves all the [Inventory Operations](../../data-model/inventory-operation-model/inventory-operation) permissions.
 
 ## Permissions
 

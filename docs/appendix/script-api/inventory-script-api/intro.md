@@ -239,19 +239,19 @@ Deletes an [Inventory Lots](../../data-model/inventory-model/inventory-lot) reco
 
 ### [`newInventoryLotRecord`](./new-inventory-lot-record)
 
-Generates an empty non-persisted [Inventory Lot Records](../../data-model/inventory-model/inventory-lot-record) object to provide the structure required by the API to save a new record into the database. This method must be combined with the [saveInventoryLotRecord](./save-inventory-lot-record) method in order to persist the record. Returns a JSON representation of the newly created Inventory Lot Record object.
+Generates an empty non-persisted [Inventory Lot Records](../../data-model/inventory-operation-model/inventory-lot-record) object to provide the structure required by the API to save a new record into the database. This method must be combined with the [saveInventoryLotRecord](./save-inventory-lot-record) method in order to persist the record. Returns a JSON representation of the newly created Inventory Lot Record object.
 
 ### [`saveInventoryLotRecord`](./save-inventory-lot-record)
 
-Creates or updates an [Inventory Lot Records](../../data-model/inventory-model/inventory-lot-record) object in the system based on the provided parameters. Returns a JSON representation of the saved inventory lot record.
+Creates or updates an [Inventory Lot Records](../../data-model/inventory-operation-model/inventory-lot-record) object in the system based on the provided parameters. Returns a JSON representation of the saved inventory lot record.
 
 ### [`getInventoryLotRecordReferences`](./get-inventory-lot-record-references)
 
-Retrieves a list of references to an [Inventory Lot Records](../../data-model/inventory-model/inventory-lot-record) object by its ID. Returns a list of JSON objects.
+Retrieves a list of references to an [Inventory Lot Records](../../data-model/inventory-operation-model/inventory-lot-record) object by its ID. Returns a list of JSON objects.
 
 ### [`validateInventoryLotRecord`](./validate-inventory-lot-record)
 
-Validates the specified parameters for an [Inventory Lot Records](../../data-model/inventory-model/inventory-lot-record) object and returns any validation errors. This only checks if the inventory lot object can be saved based on the attributes given. Returns a JSON object where keys are field names and values are lists of validation violation messages.
+Validates the specified parameters for an [Inventory Lot Records](../../data-model/inventory-operation-model/inventory-lot-record) object and returns any validation errors. This only checks if the inventory lot object can be saved based on the attributes given. Returns a JSON object where keys are field names and values are lists of validation violation messages.
 
 ### [`newLotHistoryRequest`](./new-lot-history-request)
 
@@ -259,7 +259,7 @@ Generates an empty non-persisted Lot History Request to provide the structure re
 
 ### [`getLotHistory`](./get-lot-history)
 
-Retrieves all [Inventory Lot Records](../../data-model/inventory-model/inventory-lot-record) given the inventory lot and other parameters. Returns a list of JSON objects representing all inventory lot records for an inventory lot and other parameters.
+Retrieves all [Inventory Lot Records](../../data-model/inventory-operation-model/inventory-lot-record) given the inventory lot and other parameters. Returns a list of JSON objects representing all inventory lot records for an inventory lot and other parameters.
 
 ---
 

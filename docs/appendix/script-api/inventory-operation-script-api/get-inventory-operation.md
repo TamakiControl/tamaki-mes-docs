@@ -8,7 +8,7 @@ description: "Retrieves an inventory operation by its ID."
 
 ## Description
 
-Retrieves an [Inventory Operations](../../data-model/inventory-model/inventory-operation) object by its ID. This function allows you to get the complete details of a specific inventory operation configured in the system.
+Retrieves an [Inventory Operations](../../data-model/inventory-operation-model/inventory-operation) object by its ID. This function allows you to get the complete details of a specific inventory operation configured in the system.
 
 
 ## Permissions
