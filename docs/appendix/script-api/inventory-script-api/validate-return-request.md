@@ -8,6 +8,11 @@ description: "Validates the specified parameters for a return request and return
 
 Validates the specified parameters for a return request and returns any validation errors. This only checks if the return request can be processed based on the attributes given, without actually performing the inventory return. Use this function to verify your parameters before executing the actual return operation.
 
+
+## Permissions
+
+This method requires the `INVENTORY.READ.VALIDATE` permission.
+
 ## Syntax
 
 ```python

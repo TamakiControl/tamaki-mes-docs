@@ -8,6 +8,11 @@ description: "Scraps inventory from the MES based on the provided parameters."
 
 Scraps inventory from the MES based on the provided parameters.
 
+
+## Permissions
+
+This method requires the `INVENTORY.WRITE.SCRAP` permission.
+
 ## Syntax
 
 ```python

@@ -8,6 +8,11 @@ description: "Validates the specified parameters for a merge request and returns
 
 Validates the specified parameters for a merge request and returns any validation errors. This only checks if the merge request can be processed based on the attributes given, without actually performing the merge. Use this function to verify your parameters before executing the actual merge operation.
 
+
+## Permissions
+
+This method requires the `INVENTORY.READ.VALIDATE` permission.
+
 ## Syntax
 
 ```python

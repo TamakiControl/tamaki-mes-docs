@@ -10,6 +10,11 @@ description: "Retrieves all shifts."
 
 Retrieves a list of all [Shifts](../../data-model/shift-model/shift) records in the system.
 
+
+## Permissions
+
+This method requires the `SHIFT.READ.GET` permission.
+
 ## Syntax
 
 ```python

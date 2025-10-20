@@ -1,7 +1,7 @@
 ---
 sidebar_position: 25
-title: "getConversionFor"
-description: "Retrieves the unit of measure conversion with the given to and from unit of measure and material ID."
+title: 'getConversionFor'
+description: 'Retrieves the unit of measure conversion with the given to and from unit of measure and material ID.'
 ---
 
 # system.mes.unitOfMeasure.getConversionFor
@@ -9,6 +9,10 @@ description: "Retrieves the unit of measure conversion with the given to and fro
 ## Description
 
 Retrieves a [Unit Of Measure Conversions](../../data-model/utility-models/unit-of-measure-model/unit-of-measure-conversion) record by the given to and from unit of measure and material ID.
+
+## Permissions
+
+This method requires the `UNIT_OF_MEASURE.READ.GET` permission.
 
 ## Syntax
 
@@ -19,7 +23,7 @@ system.mes.unitOfMeasure.getConversionFor(fromIdOrName, toIdOrName, materialId)
 ## Parameters
 
 | Parameter      | Type            | Nullable | Description                                              |
-|----------------|-----------------|----------|----------------------------------------------------------|
+| -------------- | --------------- | -------- | -------------------------------------------------------- |
 | `fromIdOrName` | `String`        | False    | The ULID or name of the from unit of measure to check.   |
 | `toIdOrName`   | `String`        | False    | The ULID or name of the to unit of measure to check.     |
 | `materialId`   | `String` (ULID) | True     | The ULID of the material associated with the conversion. |

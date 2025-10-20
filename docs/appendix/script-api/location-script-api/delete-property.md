@@ -11,6 +11,11 @@ description: "Deletes a specified location property by its ID or name."
 Deletes a [Location Properties](../../data-model/location-model/location-property) record by its ID or name.
 This cannot delete a location property with references to it.
 
+
+## Permissions
+
+This method requires the `LOCATION.WRITE.DELETE` permission.
+
 ## Syntax
 
 ```python

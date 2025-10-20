@@ -1,7 +1,7 @@
 ---
 sidebar_position: 20
-title: "newWidgetParameter"
-description: "Generates an empty Dashboard Widget Parameter object to use with saveWidgetParameter."
+title: 'newWidgetParameter'
+description: 'Generates an empty Dashboard Widget Parameter object to use with saveWidgetParameter.'
 ---
 
 # system.mes.dashboard.newWidgetParameter
@@ -10,6 +10,10 @@ description: "Generates an empty Dashboard Widget Parameter object to use with s
 
 Generates an empty non-persisted widget parameter object to provide the structure required by the API to save a new
 record into the database. Use with [saveWidgetParameter](./save-widget-parameter).
+
+## Permissions
+
+This method does not require any permissions.
 
 ## Syntax
 
@@ -20,7 +24,7 @@ system.mes.dashboard.newWidgetParameter()
 ## Parameters
 
 | Parameter | Type | Nullable | Description                               |
-|-----------|------|----------|-------------------------------------------|
+| --------- | ---- | -------- | ----------------------------------------- |
 | None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
@@ -28,7 +32,7 @@ system.mes.dashboard.newWidgetParameter()
 Returns a JSON representation of the newly created widget parameter object. Keys and default values:
 
 | Key               | Default Value |
-|-------------------|---------------|
+| ----------------- | ------------- |
 | `widgetId`        | `null`        |
 | `parameterTypeId` | `null`        |
 | `name`            | `null`        |

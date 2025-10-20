@@ -1,7 +1,7 @@
 ---
 sidebar_position: 19
-title: "getAllConversionsForMaterial"
-description: "Retrieves all unit of measure conversions for a material."
+title: 'getAllConversionsForMaterial'
+description: 'Retrieves all unit of measure conversions for a material.'
 ---
 
 # system.mes.unitOfMeasure.getAllConversionsForMaterial
@@ -9,6 +9,10 @@ description: "Retrieves all unit of measure conversions for a material."
 ## Description
 
 Retrieves a list of all [Unit Of Measure Conversions](../../data-model/utility-models/unit-of-measure-model/unit-of-measure-conversion) records in the system for a material.
+
+## Permissions
+
+This method requires the `UNIT_OF_MEASURE.READ.GET` permission.
 
 ## Syntax
 
@@ -19,7 +23,7 @@ system.mes.unitOfMeasure.getAllConversionsForMaterial(id)
 ## Parameters
 
 | Parameter | Type            | Nullable | Description                                                         |
-|-----------|-----------------|----------|---------------------------------------------------------------------|
+| --------- | --------------- | -------- | ------------------------------------------------------------------- |
 | `id`      | `String` (ULID) | False    | The material ID to find all associated unit of measure conversions. |
 
 ## Returns

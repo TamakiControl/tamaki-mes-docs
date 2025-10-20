@@ -10,6 +10,11 @@ description: "Retrieves the operation record given the location ID or path, the 
 
 Retrieves a [Operation Records](../../data-model/operation-model/operation-record) record by the location ID or path, the start date and the end date.
 
+
+## Permissions
+
+This method requires the `OPERATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

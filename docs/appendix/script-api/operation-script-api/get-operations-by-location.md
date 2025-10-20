@@ -10,6 +10,11 @@ description: "Retrieves all operations at a given location."
 
 Retrieves all the [Operations](../../data-model/operation-model/operation) records at a given location.
 
+
+## Permissions
+
+This method requires the `OPERATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

@@ -10,6 +10,11 @@ description: "Creates or updates a department with specified parameters."
 
 Creates or updates a [Personnel Department](../../data-model/personnel-model/personnel-department) record in the system based on the provided parameters.
 
+
+## Permissions
+
+This method requires the `PERSONNEL.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```

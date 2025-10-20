@@ -1,7 +1,7 @@
 ---
 sidebar_position: 8
-title: "getAllUnitsOfMeasure"
-description: "Retrieves all units of measure."
+title: 'getAllUnitsOfMeasure'
+description: 'Retrieves all units of measure.'
 ---
 
 # system.mes.unitOfMeasure.getAllUnitsOfMeasure
@@ -9,6 +9,10 @@ description: "Retrieves all units of measure."
 ## Description
 
 Retrieves a list of all [Units Of Measure](../../data-model/utility-models/unit-of-measure-model/unit-of-measure) records in the system.
+
+## Permissions
+
+This method requires the `UNIT_OF_MEASURE.READ.GET` permission.
 
 ## Syntax
 
@@ -19,7 +23,7 @@ system.mes.unitOfMeasure.getAllUnitsOfMeasure()
 ## Parameters
 
 | Parameter | Type | Nullable | Description                               |
-|-----------|------|----------|-------------------------------------------|
+| --------- | ---- | -------- | ----------------------------------------- |
 | None      | -    | -        | This method does not take any parameters. |
 
 ## Returns

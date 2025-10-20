@@ -11,6 +11,11 @@ description: "Deletes all materials with the given IDs or paths."
 Deletes all [Materials](../../data-model/material-model/material) records by the given IDs or paths.
 This cannot delete any materials with references to it.
 
+
+## Permissions
+
+This method requires the `MATERIAL.WRITE.DELETE` permission.
+
 ## Syntax
 
 ```python

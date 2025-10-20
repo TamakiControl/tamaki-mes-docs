@@ -10,6 +10,11 @@ description: "Retrieves all inventory for a specific material."
 
 Retrieves the [Inventories](../../data-model/inventory-model/inventory) records for a specific material.
 
+
+## Permissions
+
+This method requires the `INVENTORY.READ.GET` permission.
+
 ## Syntax
 
 ```python

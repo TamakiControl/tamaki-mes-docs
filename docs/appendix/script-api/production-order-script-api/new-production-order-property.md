@@ -1,7 +1,7 @@
 ---
 sidebar_position: 12
-title: "newProductionOrderProperty"
-description: "Generates an empty non-persisted production order properties object to provide the structure to save a new record into the database."
+title: 'newProductionOrderProperty'
+description: 'Generates an empty non-persisted production order properties object to provide the structure to save a new record into the database.'
 ---
 
 # system.mes.productionOrder.newProductionOrderProperty
@@ -10,6 +10,10 @@ description: "Generates an empty non-persisted production order properties objec
 
 Generates an empty non-persisted [Production Order Properties](../../data-model/production-order-model/production-order-property) object to provide the structure required by the API
 to save a new record into the database. This method must be combined with the [saveProductionOrderProperty](./save-production-order-property) method in order to persist the record.
+
+## Permissions
+
+This method does not require any permissions.
 
 ## Syntax
 
@@ -20,7 +24,7 @@ system.mes.productionOrder.newProductionOrderProperty()
 ## Parameters
 
 | Parameter | Type | Nullable | Description                               |
-|-----------|------|----------|-------------------------------------------|
+| --------- | ---- | -------- | ----------------------------------------- |
 | None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
@@ -28,7 +32,7 @@ system.mes.productionOrder.newProductionOrderProperty()
 Returns a JSON representation of the newly created production order property object. The following is a list of keys and default values:
 
 | Key                   | Default Value |
-|-----------------------|---------------|
+| --------------------- | ------------- |
 | `name`                | `null`        |
 | `description`         | `null`        |
 | `dataType`            | `String`      |

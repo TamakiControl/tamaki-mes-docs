@@ -10,6 +10,11 @@ description: "Retrieves the operation with the given ID."
 
 Retrieves a [Operations](../../data-model/operation-model/operation) record by its ID.
 
+
+## Permissions
+
+This method requires the `OPERATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

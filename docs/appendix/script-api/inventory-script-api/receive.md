@@ -8,6 +8,11 @@ description: "Receives inventory from the MES based on the provided parameters."
 
 Receives inventory into the MES based on the provided parameters.
 
+
+## Permissions
+
+This method requires the `INVENTORY.WRITE.RECEIVE` permission.
+
 ## Syntax
 
 ```python

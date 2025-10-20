@@ -1,21 +1,27 @@
 ---
-title: "getLocationPermissions"
-description: "Gets all location role permissions."
+title: 'getLocationPermissions'
+description: 'Gets all location role permissions.'
 sidebar_position: 1
 ---
 
 # system.mes.location.getLocationPermissions
 
 ## Description
+
 Retrieves a list of all role permission strings related to locations.
 
+## Permissions
+
+This method does not require any permissions.
+
 ## Returns
-| Type         | Description                          |
-|--------------|--------------------------------------|
-| `List<String>` | List of all location role permissions.    |
+
+| Type           | Description                            |
+| -------------- | -------------------------------------- |
+| `List<String>` | List of all location role permissions. |
 
 ## Code Example
+
 ```python
 permissions = system.mes.location.getLocationPermissions()
 ```
-

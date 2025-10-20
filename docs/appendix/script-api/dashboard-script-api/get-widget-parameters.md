@@ -10,6 +10,11 @@ description: "Retrieves all parameters for a specific dashboard widget."
 
 Retrieves all parameters for the specified Dashboard Widget.
 
+
+## Permissions
+
+This method requires the `DASHBOARD.READ.GET` permission.
+
 ## Syntax
 
 ```python

@@ -13,6 +13,11 @@ description: "Updates the current inventory operation state from the database."
 **With a Parameter:** Updates the states of only the specified [Inventory Operations](../../data-model/inventory-operation-model/inventory-operation) from the database given
 the ID of the inventory operations.
 
+
+## Permissions
+
+This method requires the `INVENTORY_OPERATION.EXECUTE` permission.
+
 ## Syntax
 
 ```python

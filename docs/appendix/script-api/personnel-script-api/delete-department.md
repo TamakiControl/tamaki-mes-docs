@@ -11,6 +11,11 @@ description: "Deletes the department with the given ID or path."
 Deletes a [Personnel Department](../../data-model/personnel-model/personnel-department) record by its ID or path.
 This cannot delete a department with references to it.
 
+
+## Permissions
+
+This method requires the `PERSONNEL.WRITE.DELETE` permission.
+
 ## Syntax
 
 ```

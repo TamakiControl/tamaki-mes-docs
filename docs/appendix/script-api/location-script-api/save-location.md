@@ -10,6 +10,11 @@ description: "Creates or updates a location with specified parameters."
 
 Creates or updates a [Locations](../../data-model/location-model/location) record in the system based on the provided parameters.
 
+
+## Permissions
+
+This method requires the `LOCATION.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python

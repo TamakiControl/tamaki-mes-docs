@@ -10,6 +10,11 @@ description: "Starts an inventory operation."
 
 Starts an [Inventory Operation](../../data-model/inventory-operation-model/inventory-operation). This function initiates the inventory operation and creates an inventory lot record with a specified start time but a null end time, indicating that the operation is currently in progress. The operation remains active until explicitly ended.
 
+
+## Permissions
+
+This method requires the `INVENTORY_OPERATION.EXECUTE` permission.
+
 ## Syntax
 
 ```python

@@ -10,6 +10,11 @@ description: "Creates or updates a dashboard widget parameter with specified par
 
 Creates or updates a Dashboard Widget Parameter in the system based on the provided parameters.
 
+
+## Permissions
+
+This method requires the `DASHBOARD.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python

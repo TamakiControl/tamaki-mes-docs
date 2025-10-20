@@ -10,6 +10,11 @@ description: "Retrieves material based on the specified pagination, sort, and co
 
 Retrieves [Materials](../../data-model/material-model/material) records based on the specified pagination, sort, and column constraint parameters.
 
+
+## Permissions
+
+This method requires the `MATERIAL.READ.GET` permission.
+
 ## Syntax
 
 ```python

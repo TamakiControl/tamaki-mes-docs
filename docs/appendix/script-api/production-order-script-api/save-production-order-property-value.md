@@ -10,6 +10,11 @@ description: "Creates or updates a production order property value based on spec
 
 Creates or updates a [Production Order Property Values](../../data-model/production-order-model/production-order-property-value) record in the system based on the provided parameters.
 
+
+## Permissions
+
+This method requires the `PRODUCTION_ORDER.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python

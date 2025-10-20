@@ -10,6 +10,11 @@ description: "Retrieves the material class with the given ID or path."
 
 Retrieves a [Material Classes](../../data-model/material-model/material-class) record by its ID or path.
 
+
+## Permissions
+
+This method requires the `MATERIAL.READ.GET` permission.
+
 ## Syntax
 
 ```python

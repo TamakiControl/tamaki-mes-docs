@@ -11,6 +11,11 @@ description: "Validates the specified parameters for a department."
 Validates the specified parameters for a [Personnel Department](../../data-model/personnel-model/personnel-department) record and returns any validation errors.
 This only checks if the department object can be saved based on the attributes given.
 
+
+## Permissions
+
+This method requires the `PERSONNEL.READ.VALIDATE` permission.
+
 ## Syntax
 
 ```

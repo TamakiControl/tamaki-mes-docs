@@ -8,6 +8,11 @@ description: "Scraps all inventory of a specific material at a location from the
 
 Scraps all inventory of a specific material at a location from the MES based on the provided parameters. If no material is specified, it will scrap all inventory at the location.
 
+
+## Permissions
+
+This method requires the `INVENTORY.WRITE.SCRAP` permission.
+
 ## Syntax
 
 ```python

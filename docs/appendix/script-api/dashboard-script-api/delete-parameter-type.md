@@ -10,6 +10,11 @@ description: "Deletes a dashboard widget parameter type by ID."
 
 Deletes a Dashboard Widget Parameter Type by its ID.
 
+
+## Permissions
+
+This method requires the `DASHBOARD.WRITE.DELETE` permission.
+
 ## Syntax
 
 ```python

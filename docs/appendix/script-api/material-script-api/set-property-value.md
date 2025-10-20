@@ -11,6 +11,11 @@ description: "Updates the value of a material property value given a material ob
 Updates the value of a [Material Property Values](../../data-model/material-model/material-property-value) record given
 a material ID or path and a property ID or name.
 
+
+## Permissions
+
+This method requires the `MATERIAL.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python

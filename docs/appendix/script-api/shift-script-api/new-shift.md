@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
-title: "newShift"
-description: "Generates an empty Shift object (DTO) to use with saveShift."
+title: 'newShift'
+description: 'Generates an empty Shift object (DTO) to use with saveShift.'
 ---
 
 # system.mes.shift.newShift
@@ -10,6 +10,10 @@ description: "Generates an empty Shift object (DTO) to use with saveShift."
 
 Generates an empty non-persisted [Shifts](../../data-model/shift-model/shift) object to
 provide the structure required by the API to save a new record into the database. Use with [saveShift](./save-shift).
+
+## Permissions
+
+This method does not require any permissions.
 
 ## Syntax
 
@@ -20,7 +24,7 @@ system.mes.shift.newShift()
 ## Parameters
 
 | Parameter | Type | Nullable | Description                               |
-|-----------|------|----------|-------------------------------------------|
+| --------- | ---- | -------- | ----------------------------------------- |
 | None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
@@ -29,7 +33,7 @@ Returns a JSON representation of the newly created shift object. The following i
 values:
 
 | Key                       | Default Value       |
-|---------------------------|---------------------|
+| ------------------------- | ------------------- |
 | `name`                    | `null`              |
 | `description`             | `null`              |
 | `shiftScheduleName`       | `null`              |

@@ -15,6 +15,11 @@ columns.
 Recommended to export at least one pre-existing location to CSV using the [Export Locations](export-as-csv.md)
 functionality to ensure the correct format of the CSV file.
 
+
+## Permissions
+
+This method requires the `LOCATION.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python

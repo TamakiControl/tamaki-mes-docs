@@ -11,6 +11,11 @@ description: "Validates the specified parameters for a production order."
 Validates the specified parameters for a [Production Orders](../../data-model/production-order-model/production-order) record and returns any validation errors.
 This only checks if the production order object can be saved based on the attributes given, without actually creating or modifying the production order. Use this function to verify your parameters before executing a save production order operation.
 
+
+## Permissions
+
+This method requires the `PRODUCTION_ORDER.READ.VALIDATE` permission.
+
 ## Syntax
 
 ```python

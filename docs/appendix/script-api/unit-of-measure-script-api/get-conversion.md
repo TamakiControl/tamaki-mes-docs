@@ -1,7 +1,7 @@
 ---
 sidebar_position: 26
-title: "getConversion"
-description: "Retrieves the unit of measure conversion with the given ID."
+title: 'getConversion'
+description: 'Retrieves the unit of measure conversion with the given ID.'
 ---
 
 # system.mes.unitOfMeasure.getConversion
@@ -9,6 +9,10 @@ description: "Retrieves the unit of measure conversion with the given ID."
 ## Description
 
 Retrieves a [Unit Of Measure Conversions](../../data-model/utility-models/unit-of-measure-model/unit-of-measure-conversion) record by its ID.
+
+## Permissions
+
+This method requires the `UNIT_OF_MEASURE.READ.GET` permission.
 
 ## Syntax
 
@@ -19,7 +23,7 @@ system.mes.unitOfMeasure.getConversion(id)
 ## Parameters
 
 | Parameter | Type            | Nullable | Description                                           |
-|-----------|-----------------|----------|-------------------------------------------------------|
+| --------- | --------------- | -------- | ----------------------------------------------------- |
 | `id`      | `String` (ULID) | False    | The ID of the unit of measure conversion to retrieve. |
 
 ## Returns
@@ -27,7 +31,7 @@ system.mes.unitOfMeasure.getConversion(id)
 Returns a JSON representation of the unit of measure conversion. Returns nothing if no unit of measure conversion is found.
 
 | Name               | Type            | Description                                                              |
-|--------------------|-----------------|--------------------------------------------------------------------------|
+| ------------------ | --------------- | ------------------------------------------------------------------------ |
 | `fromId`           | `String` (ULID) | The unit of measure the conversion is converting from.                   |
 | `toId`             | `String` (ULID) | The unit of measure the conversion is converting to.                     |
 | `conversionFactor` | `Double`        | The number used to change the unit of measure from one set to the other. |

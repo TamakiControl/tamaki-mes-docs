@@ -8,6 +8,11 @@ description: "Validates the specified parameters for a new inventory lot record 
 
 Validates the specified parameters for an inventory lot record and returns any validation errors. This only checks if the inventory lot record can be saved based on the attributes given, without actually creating or modifying any inventory lot records. Use this function to verify your parameters before executing a save inventory lot records request.
 
+
+## Permissions
+
+This method requires the `INVENTORY.READ.VALIDATE` permission.
+
 ## Syntax
 
 ```python

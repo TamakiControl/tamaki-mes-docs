@@ -1,13 +1,19 @@
 ---
 sidebar_position: 30
-title: "newEditInventoryQuantityRequest"
-description: "Generates an empty non-persisted edit inventory quantity request to provide the structure to save a new record into the database."
+title: 'newEditInventoryQuantityRequest'
+description: 'Generates an empty non-persisted edit inventory quantity request to provide the structure to save a new record into the database.'
 ---
 
 # system.mes.inventory.newEditInventoryQuantityRequest
 
+## Description
+
 Generates an empty non-persisted Edit Inventory Quantity Request to provide the structure required by the API to save a new record into the database.
 This method must be combined with the [editInventoryQuantity](./edit-inventory-quantity) method in order to persist the record.
+
+## Permissions
+
+This method does not require any permissions.
 
 ## Syntax
 
@@ -18,7 +24,7 @@ system.mes.inventory.newEditInventoryQuantityRequest()
 ## Parameters
 
 | Parameter | Type | Nullable | Description                               |
-|-----------|------|----------|-------------------------------------------|
+| --------- | ---- | -------- | ----------------------------------------- |
 | None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
@@ -26,7 +32,7 @@ system.mes.inventory.newEditInventoryQuantityRequest()
 Returns a JSON representation of the newly created Edit Inventory Quantity Request object. The following is a list of keys and default values:
 
 | Key                      | Default Value |
-|--------------------------|---------------|
+| ------------------------ | ------------- |
 | `type`                   | `EDIT`        |
 | `newQuantity`            | `null`        |
 | `unitOfMeasureSymbol`    | `null`        |

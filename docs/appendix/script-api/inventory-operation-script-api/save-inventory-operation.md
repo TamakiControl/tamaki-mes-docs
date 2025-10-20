@@ -10,6 +10,11 @@ description: "Creates or updates an inventory operation with specified parameter
 
 Creates or updates an [Inventory Operations](../../data-model/inventory-operation-model/inventory-operation) record in the system based on the provided parameters.
 
+
+## Permissions
+
+This method requires the `INVENTORY_OPERATION.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python

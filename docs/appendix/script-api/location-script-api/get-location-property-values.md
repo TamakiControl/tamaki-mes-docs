@@ -10,6 +10,11 @@ description: "Retrieves all property values for a specific location."
 
 Retrieves a list of all [Location Property Values](../../data-model/location-model/location-property-value) records for a given location.
 
+
+## Permissions
+
+This method requires the `LOCATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

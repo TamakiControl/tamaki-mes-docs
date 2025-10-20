@@ -1,6 +1,6 @@
 ---
-title: "findRoles"
-description: "Finds roles based on query parameters."
+title: 'findRoles'
+description: 'Finds roles based on query parameters.'
 ---
 
 # system.mes.role.findRoles
@@ -9,7 +9,12 @@ description: "Finds roles based on query parameters."
 
 Retrieves [Role](../../data-model/personnel-model/role) records based on the specified pagination, sort, and column constraint parameters.
 
+## Permissions
+
+This method requires the `SYSTEM.ADMIN` permission.
+
 ## Syntax
+
 ```python
 system.mes.role.findRoles(**queryRequest)
 ```
@@ -18,26 +23,26 @@ system.mes.role.findRoles(**queryRequest)
 
 Using Python keyword arguments, a [Query Request](../query-script-api/new-query-request) can be passed to the `findRoles` function without specifying each parameter individually. Please refer to the [Query Request](../query-script-api/new-query-request) documentation for a list of parameters.
 
-| Parameter      | Type            | Nullable | Description                                                                 |
-|----------------|-----------------|----------|----------------------------------------------------------------------------|
+| Parameter      | Type            | Nullable | Description                                                                                                              |
+| -------------- | --------------- | -------- | ------------------------------------------------------------------------------------------------------------------------ |
 | `queryRequest` | `Query Request` | False    | A [Query Request](../query-script-api/new-query-request) with the desired pagination, sorting, and filtering parameters. |
 
 ## Returns
 
 Returns a Query Result object with the following properties:
 
-| Name            | Type                                                      | Description                                                                                                      |
-|-----------------|-----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| `content`       | `List<Role>`       | The list of all records found that meet the specified criteria                                                   |
-| `totalPages`    | `Integer`                                                   | If pagination is used, this is the number of total pages of records in the database for the specified page size. |
-| `totalElements` | `Long`                                                      | If pagination is used, this is the number of records in the database that meet the specified criteria.           |
-| `pageSize`      | `Integer`                                                   | If pagination is used, this is the specified page size.                                                          |
-| `pageIndex`     | `Integer`                                                   | If pagination is used, this is the specified page index.                                                         |
-| `hasContent`    | `Boolean`                                                   | True if any records were found that meet the specified criteria.                                                 |
-| `isFirst`       | `Boolean`                                                   | If pagination is used, this is true if the first page was returned.                                              |
-| `isLast`        | `Boolean`                                                   | If pagination is used, this is true if the last page was returned.                                               |
-| `hasNext`       | `Boolean`                                                   | If pagination is used, this is true if there is a page of content available after this one.                      |
-| `hasPrevious`   | `Boolean`                                                   | If pagination is used, this is true if there is a page of content available before this one.                     |
+| Name            | Type         | Description                                                                                                      |
+| --------------- | ------------ | ---------------------------------------------------------------------------------------------------------------- |
+| `content`       | `List<Role>` | The list of all records found that meet the specified criteria                                                   |
+| `totalPages`    | `Integer`    | If pagination is used, this is the number of total pages of records in the database for the specified page size. |
+| `totalElements` | `Long`       | If pagination is used, this is the number of records in the database that meet the specified criteria.           |
+| `pageSize`      | `Integer`    | If pagination is used, this is the specified page size.                                                          |
+| `pageIndex`     | `Integer`    | If pagination is used, this is the specified page index.                                                         |
+| `hasContent`    | `Boolean`    | True if any records were found that meet the specified criteria.                                                 |
+| `isFirst`       | `Boolean`    | If pagination is used, this is true if the first page was returned.                                              |
+| `isLast`        | `Boolean`    | If pagination is used, this is true if the last page was returned.                                               |
+| `hasNext`       | `Boolean`    | If pagination is used, this is true if there is a page of content available after this one.                      |
+| `hasPrevious`   | `Boolean`    | If pagination is used, this is true if there is a page of content available before this one.                     |
 
 ## Code Examples
 

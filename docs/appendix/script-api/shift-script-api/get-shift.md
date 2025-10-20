@@ -10,6 +10,11 @@ description: "Retrieves a Shift by ID, or by location and name."
 
 Retrieves a [Shifts](../../data-model/shift-model/shift) record either by its ID, or by `locationIdOrPath` and `name`.
 
+
+## Permissions
+
+This method requires the `SHIFT.READ.GET` permission.
+
 ## Syntax
 
 ```python

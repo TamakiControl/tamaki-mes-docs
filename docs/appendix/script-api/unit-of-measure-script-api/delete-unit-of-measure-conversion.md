@@ -1,7 +1,7 @@
 ---
 sidebar_position: 22
-title: "deleteUnitOfMeasureConversion"
-description: "Deletes the unit of measure conversion with the given ID."
+title: 'deleteUnitOfMeasureConversion'
+description: 'Deletes the unit of measure conversion with the given ID.'
 ---
 
 # system.mes.unitOfMeasure.deleteUnitOfMeasureConversion
@@ -10,6 +10,10 @@ description: "Deletes the unit of measure conversion with the given ID."
 
 Deletes a [Unit Of Measure Conversions](../../data-model/utility-models/unit-of-measure-model/unit-of-measure-conversion) record by its ID.
 This cannot delete a unit of measure conversion with references to it.
+
+## Permissions
+
+This method requires the `UNIT_OF_MEASURE.WRITE.DELETE` permission.
 
 ## Syntax
 
@@ -20,7 +24,7 @@ system.mes.unitOfMeasure.deleteUnitOfMeasureConversion(id)
 ## Parameters
 
 | Parameter | Type            | Nullable | Description                                         |
-|-----------|-----------------|----------|-----------------------------------------------------|
+| --------- | --------------- | -------- | --------------------------------------------------- |
 | `id`      | `String` (ULID) | False    | The ID of the unit of measure conversion to delete. |
 
 ## Returns
@@ -29,7 +33,7 @@ If successful, an ApiResponse Object is returned with the success bool set True.
 If the unit of measure conversion that's being deleted has a reference, an ApiResponse Object is returned with details about the encountered error.
 
 | Name      | Type      | Description                                                 |
-|-----------|-----------|-------------------------------------------------------------|
+| --------- | --------- | ----------------------------------------------------------- |
 | `success` | `Boolean` | Indicates if the delete was successful.                     |
 | `message` | `String`  | The reason why the deletion was successful or unsuccessful. |
 | `data`    | `String`  | The data associated with the deletion.                      |

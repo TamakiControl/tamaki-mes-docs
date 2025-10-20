@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
-title: "saveUnitOfMeasure"
-description: "Creates or updates a unit of measure with specified parameters."
+title: 'saveUnitOfMeasure'
+description: 'Creates or updates a unit of measure with specified parameters.'
 ---
 
 # system.mes.unitOfMeasure.saveUnitOfMeasure
@@ -9,6 +9,10 @@ description: "Creates or updates a unit of measure with specified parameters."
 ## Description
 
 Creates or updates a [Units Of Measure](../../data-model/utility-models/unit-of-measure-model/unit-of-measure) record in the system based on the provided parameters.
+
+## Permissions
+
+This method requires the `UNIT_OF_MEASURE.WRITE.SAVE` permission.
 
 ## Syntax
 
@@ -19,7 +23,7 @@ system.mes.unitOfMeasure.saveUnitOfMeasure(**uom_data)
 ## Parameters
 
 | Parameter | Type            | Nullable | Description                                                                                |
-|-----------|-----------------|----------|--------------------------------------------------------------------------------------------|
+| --------- | --------------- | -------- | ------------------------------------------------------------------------------------------ |
 | `name`    | `String`        | False    | The name of the unit of measure.                                                           |
 | `symbol`  | `String`        | False    | The symbol of the unit of measure.                                                         |
 | `id`      | `String` (ULID) | True     | The ULID of the unit of measure (optional, used for updating an existing unit of measure). |

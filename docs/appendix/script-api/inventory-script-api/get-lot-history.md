@@ -8,6 +8,11 @@ description: "Retrieves all inventory lot records given the inventory lot and ot
 
 Retrieves all [Inventory Lot Records](../../data-model/inventory-operation-model/inventory-lot-record) given the inventory lot and other parameters.
 
+
+## Permissions
+
+This method requires the `INVENTORY.READ.GET` permission.
+
 ## Syntax
 
 ```python

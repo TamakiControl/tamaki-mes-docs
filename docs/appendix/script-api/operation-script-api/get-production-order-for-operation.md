@@ -10,6 +10,11 @@ description: "Retrieves the production order for an operation."
 
 Retrieves the production order for a given [Operations](../../data-model/operation-model/operation) record.
 
+
+## Permissions
+
+This method requires the `OPERATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

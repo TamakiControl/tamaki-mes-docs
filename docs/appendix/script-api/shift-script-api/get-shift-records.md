@@ -11,6 +11,11 @@ description: "Retrieves all shift records for a location within a time range."
 Retrieves all [Shift Records](../../data-model/shift-model/shift-record) for the given
 location within the specified time range.
 
+
+## Permissions
+
+This method requires the `SHIFT.READ.GET` permission.
+
 ## Syntax
 
 ```python

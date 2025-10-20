@@ -11,6 +11,11 @@ description: "Retrieves or creates a production order property by its ID or name
 Retrieves a [Production Order Properties](../../data-model/production-order-model/production-order-property) record if an existing production order property exists with the specified ID or name.
 Otherwise, creates a new [Production Order Properties](../../data-model/production-order-model/production-order-property) record with the specified name and attributes.
 
+
+## Permissions
+
+This method requires the `PRODUCTION_ORDER.READ.GET` permission.
+
 ## Syntax
 
 ```python

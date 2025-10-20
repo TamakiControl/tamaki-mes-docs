@@ -11,6 +11,11 @@ description: "Deletes all bill of materials given a production order object."
 Deletes all [Production Order Bill of Materials](../../data-model/production-order-model/production-order-bill-of-material) records associated with a production order ID or name.
 This cannot delete any bill of materials with references to it.
 
+
+## Permissions
+
+This method requires the `PRODUCTION_ORDER.WRITE.DELETE` permission.
+
 ## Syntax
 
 ```python

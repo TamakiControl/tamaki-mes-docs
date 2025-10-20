@@ -10,6 +10,11 @@ description: "Retrieves a list of references to a location property with the giv
 
 Retrieves a list of references to a [Location Properties](../../data-model/location-model/location-property) by its ID or name.
 
+
+## Permissions
+
+This method requires the `LOCATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

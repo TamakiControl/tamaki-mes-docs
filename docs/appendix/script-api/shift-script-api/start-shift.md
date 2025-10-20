@@ -10,6 +10,11 @@ description: "Starts a shift by ID or by location and name; returns the created 
 
 Starts a [Shifts](../../data-model/shift-model/shift). This creates a new [Shift Records](../../data-model/shift-model/shift-record) entry with the given start time (optional; defaults to now).
 
+
+## Permissions
+
+This method requires the `SHIFT.EXECUTE` permission.
+
 ## Syntax
 
 ```python

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 21
-title: "validateUnitOfMeasureConversion"
-description: "Validates the specified parameters for a unit of measure conversion."
+title: 'validateUnitOfMeasureConversion'
+description: 'Validates the specified parameters for a unit of measure conversion.'
 ---
 
 # system.mes.unitOfMeasure.validateUnitOfMeasureConversion
@@ -10,6 +10,10 @@ description: "Validates the specified parameters for a unit of measure conversio
 
 Validates the specified parameters for a [Unit Of Measure Conversions](../../data-model/utility-models/unit-of-measure-model/unit-of-measure-conversion) record and returns any validation errors.
 This only checks if the unit of measure conversion object can be saved based on the attributes given, without actually creating or modifying the unit of measure conversion. Use this function to verify your parameters before executing a save unit of measure conversion operation.
+
+## Permissions
+
+This method requires the `UNIT_OF_MEASURE.READ.VALIDATE` permission.
 
 ## Syntax
 
@@ -20,7 +24,7 @@ system.mes.unitOfMeasure.validateUnitOfMeasureConversion(**uomc_data)
 ## Parameters
 
 | Parameter          | Type            | Nullable | Description                                                                                                      |
-|--------------------|-----------------|----------|------------------------------------------------------------------------------------------------------------------|
+| ------------------ | --------------- | -------- | ---------------------------------------------------------------------------------------------------------------- |
 | `fromId`           | `String` (ULID) | False    | The unit of measure the conversion is converting from.                                                           |
 | `toId`             | `String` (ULID) | False    | The unit of measure the conversion is converting to.                                                             |
 | `conversionFactor` | `Double`        | False    | The number used to change the unit of measure from one set to the other.                                         |

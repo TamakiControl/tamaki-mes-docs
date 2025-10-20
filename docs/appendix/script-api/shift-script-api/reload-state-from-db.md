@@ -11,6 +11,11 @@ description: "Reloads the Shift state from the database (re-reads trigger expres
 Reloads the Shift state from the database. Use this after making manual database updates to ensure in-memory
 trigger expressions and related cached state are refreshed.
 
+
+## Permissions
+
+This method requires the `SHIFT.READ.GET` permission.
+
 ## Syntax
 
 ```python

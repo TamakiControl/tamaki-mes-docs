@@ -10,6 +10,11 @@ description: "Creates or updates a material with specified parameters."
 
 Creates or updates a [Materials](../../data-model/material-model/material) record in the system based on the provided parameters.
 
+
+## Permissions
+
+This method requires the `MATERIAL.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python

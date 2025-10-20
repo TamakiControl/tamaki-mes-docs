@@ -10,6 +10,11 @@ description: "Deletes a dashboard widget by ID."
 
 Deletes a Dashboard Widget by its ID.
 
+
+## Permissions
+
+This method requires the `DASHBOARD.WRITE.DELETE` permission.
+
 ## Syntax
 
 ```python

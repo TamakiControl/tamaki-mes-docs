@@ -11,6 +11,11 @@ description: "Deletes a specified material property value with the given materia
 Deletes a [Material Property Values](../../data-model/material-model/material-property-value) record given the material path and property name.
 This cannot delete a material property value with references to it.
 
+
+## Permissions
+
+This method requires the `MATERIAL.WRITE.DELETE` permission.
+
 ## Syntax
 
 ```python

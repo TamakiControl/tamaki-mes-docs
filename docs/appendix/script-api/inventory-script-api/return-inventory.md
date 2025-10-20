@@ -1,12 +1,16 @@
 ---
 sidebar_position: 25
-title: "returnInventory"
-description: "Returns inventory from the MES based on the provided parameters."
+title: 'returnInventory'
+description: 'Returns inventory from the MES based on the provided parameters.'
 ---
 
-# system.mes.inventory.return
+# system.mes.inventory.returnInventory
 
 Returns inventory from the MES based on the provided parameters.
+
+## Permissions
+
+This method requires the `INVENTORY.WRITE.RETURN` permission.
 
 ## Syntax
 
@@ -17,7 +21,7 @@ system.mes.inventory.returnInventory(**return_request)
 ## Parameters
 
 | Parameter                 | Type            | Nullable | Description                                                                                                                               |
-|---------------------------|-----------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| ------------------------- | --------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`                    | `String`        | True     | The type of request defined by the LotRecordType Enum. It is internally set and must not be modified, as changes may break functionality. |
 | `quantity`                | `Double`        | False    | The quantity to return from the location.                                                                                                 |
 | `unitOfMeasureSymbol`     | `String`        | True     | The symbol of the unit of measure for the quantity.                                                                                       |

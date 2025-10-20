@@ -11,6 +11,11 @@ description: "Deletes a specified production order property by its ID."
 Deletes a [Production Order Properties](../../data-model/production-order-model/production-order-property) record by its ID.
 This cannot delete a production order property with references to it.
 
+
+## Permissions
+
+This method requires the `PRODUCTION_ORDER.WRITE.DELETE` permission.
+
 ## Syntax
 
 ```python

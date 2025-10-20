@@ -1,7 +1,7 @@
 ---
 sidebar_position: 13
-title: "newUnitOfMeasureConversion"
-description: "Generates an empty non-persisted unit of measure conversion object to provide the structure to save a new record into the database."
+title: 'newUnitOfMeasureConversion'
+description: 'Generates an empty non-persisted unit of measure conversion object to provide the structure to save a new record into the database.'
 ---
 
 # system.mes.unitOfMeasure.newUnitOfMeasureConversion
@@ -10,6 +10,10 @@ description: "Generates an empty non-persisted unit of measure conversion object
 
 Generates an empty non-persisted [Unit Of Measure Conversions](../../data-model/utility-models/unit-of-measure-model/unit-of-measure-conversion) object to provide the structure required by the API
 to save a new record into the database. This method must be combined with the [saveUnitOfMeasureConversion](./save-unit-of-measure-conversion) method in order to persist the record.
+
+## Permissions
+
+This method does not require any permissions.
 
 ## Syntax
 
@@ -20,7 +24,7 @@ system.mes.unitOfMeasure.newUnitOfMeasureConversion()
 ## Parameters
 
 | Parameter | Type | Nullable | Description                               |
-|-----------|------|----------|-------------------------------------------|
+| --------- | ---- | -------- | ----------------------------------------- |
 | None      | -    | -        | This method does not take any parameters. |
 
 ## Returns
@@ -28,7 +32,7 @@ system.mes.unitOfMeasure.newUnitOfMeasureConversion()
 Returns a JSON representation of the newly created unit of measure conversion object. The following is a list of keys and default values:
 
 | Key                | Default Value |
-|--------------------|---------------|
+| ------------------ | ------------- |
 | `fromId`           | `null`        |
 | `toId`             | `null`        |
 | `conversionFactor` | `null`        |

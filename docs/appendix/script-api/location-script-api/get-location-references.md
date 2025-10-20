@@ -10,6 +10,11 @@ description: "Retrieves a list of references to a location with the given ID or 
 
 Retrieves a list of references to a [Locations](../../data-model/location-model/location) record by its ID or path.
 
+
+## Permissions
+
+This method requires the `LOCATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

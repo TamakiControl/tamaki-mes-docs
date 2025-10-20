@@ -10,6 +10,11 @@ description: "Retrieves a list of references to a inventory lot record with the 
 
 Retrieves a list of references to an [Inventory Lot Records](../../data-model/inventory-operation-model/inventory-lot-record) object by its ID.
 
+
+## Permissions
+
+This method requires the `INVENTORY.READ.GET` permission.
+
 ## Syntax
 
 ```python

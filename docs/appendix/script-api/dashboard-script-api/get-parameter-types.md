@@ -10,6 +10,11 @@ description: "Retrieves all dashboard widget parameter types."
 
 Retrieves a list of all Dashboard Widget Parameter Types.
 
+
+## Permissions
+
+This method requires the `DASHBOARD.READ.GET` permission.
+
 ## Syntax
 
 ```python

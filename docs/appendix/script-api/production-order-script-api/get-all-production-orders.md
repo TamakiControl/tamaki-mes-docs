@@ -10,6 +10,11 @@ description: "Retrieves all production orders."
 
 Retrieves a list of all [Production Orders](../../data-model/production-order-model/production-order) records in the system.
 
+
+## Permissions
+
+This method requires the `PRODUCTION_ORDER.READ.GET` permission.
+
 ## Syntax
 
 ```python

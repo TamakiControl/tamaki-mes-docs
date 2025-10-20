@@ -1,7 +1,7 @@
 ---
 sidebar_position: 7
-title: "getUnitOfMeasure"
-description: "Retrieves the unit of measure with the given ID or name."
+title: 'getUnitOfMeasure'
+description: 'Retrieves the unit of measure with the given ID or name.'
 ---
 
 # system.mes.unitOfMeasure.getUnitOfMeasure
@@ -9,6 +9,10 @@ description: "Retrieves the unit of measure with the given ID or name."
 ## Description
 
 Retrieves a [Units Of Measure](../../data-model/utility-models/unit-of-measure-model/unit-of-measure) record by its ID or name.
+
+## Permissions
+
+This method requires the `UNIT_OF_MEASURE.READ.GET` permission.
 
 ## Syntax
 
@@ -19,7 +23,7 @@ system.mes.unitOfMeasure.getUnitOfMeasure(idOrName)
 ## Parameters
 
 | Parameter  | Type     | Nullable | Description                                        |
-|------------|----------|----------|----------------------------------------------------|
+| ---------- | -------- | -------- | -------------------------------------------------- |
 | `idOrName` | `String` | False    | The ID or name of the unit of measure to retrieve. |
 
 ## Returns
@@ -27,7 +31,7 @@ system.mes.unitOfMeasure.getUnitOfMeasure(idOrName)
 Returns a JSON representation of the unit of measure. Returns nothing if no unit of measure is found.
 
 | Name      | Type            | Description                                             |
-|-----------|-----------------|---------------------------------------------------------|
+| --------- | --------------- | ------------------------------------------------------- |
 | `name`    | `String`        | The name of the unit of measure.                        |
 | `symbol`  | `String`        | The symbol of the unit of measure.                      |
 | `id`      | `String` (ULID) | The ULID of the unit of measure.                        |

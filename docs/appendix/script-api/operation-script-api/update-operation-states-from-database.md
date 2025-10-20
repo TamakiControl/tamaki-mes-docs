@@ -13,6 +13,11 @@ description: "Updates the current operation state from the database."
 **With a Parameter:** Updates the states of only the specified [Operations](../../data-model/operation-model/operation) from the database given
 the ID of the operations.
 
+
+## Permissions
+
+This method requires the `OPERATION.READ.GET` permission.
+
 ## Syntax
 
 ```python

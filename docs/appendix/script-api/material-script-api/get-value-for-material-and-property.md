@@ -10,6 +10,11 @@ description: "Retrieves a property value for a specified material and property."
 
 Retrieves a [Material Property Values](../../data-model/material-model/material-property-value) record by its material ID or path and by its property ID or name.
 
+
+## Permissions
+
+This method requires the `MATERIAL.READ.GET` permission.
+
 ## Syntax
 
 ```python

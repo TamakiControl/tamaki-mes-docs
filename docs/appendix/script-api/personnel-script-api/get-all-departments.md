@@ -10,6 +10,11 @@ description: "Retrieves all departments."
 
 Retrieves a list of all [Personnel Department](../../data-model/personnel-model/personnel-department) records in the system.
 
+
+## Permissions
+
+This method requires the `PERSONNEL.READ.GET` permission.
+
 ## Syntax
 
 ```
