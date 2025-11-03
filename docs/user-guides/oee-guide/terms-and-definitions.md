@@ -139,7 +139,7 @@ This document provides definitions and explanations of key terms related to Over
   - **Example workflows:**
     - **Binding the PLC mode tag of a location to track its OEE:**
       1. Navigate to the [OEE Setup](setup) screen.
-      2. Select the location from the location tree on the left side of the screen to modify. (if the location does not have an OEE configuration, you will need to create one first by clicking `Create Config` ![Create Config button](./images/button-create-config.png)).
+      2. Select the location from the location tree on the left side of the screen to modify. (if the location does not have an OEE configuration, you will need to create one first by clicking `Create Config`). ![Create Config button](./images/button-create-config.png)
       
       3. Locate the `Mode Expression` field in the OEE Configuration tab.
       4. Select the tag selector button on the right side of the `Mode Expression` field: ![Tag selector button icon](./images/button-tag-selector.png#icon)
