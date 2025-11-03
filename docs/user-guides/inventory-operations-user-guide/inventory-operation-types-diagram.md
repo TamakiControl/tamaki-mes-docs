@@ -13,6 +13,6 @@ This diagram illustrates the logical flow of each Inventory Operation Type betwe
 
 ![Consume, Receive_And_Consume, Receive, and Unconsume](./images/diagram-1.png)
 
-![Consume, Receive_And_Consume, Receive and Unconsume](./images/diagram-2.png)
+![Consume, Receive_And_Consume, Receive, and Unconsume](./images/diagram-2.png)
 
 ![Scrap and Scrap_All](./images/diagram-3.png)
