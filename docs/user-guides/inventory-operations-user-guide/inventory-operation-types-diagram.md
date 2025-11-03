@@ -11,7 +11,7 @@ This diagram illustrates the logical flow of each Inventory Operation Type betwe
 - Dashed circles represent optional relationships. These are not needed if you only require basic inventory operation execution.
 - However, if your system is configured for full Track & Trace functionality, the secondary lot/material/location relationships (shown as dashed) become required for complete traceability.
 
-![Consume, Receive_And_Consume, Receive and Unconsume](./images/diagram-1.png)
+![Consume, Receive_And_Consume, Receive, and Unconsume](./images/diagram-1.png)
 
 ![Consume, Receive_And_Consume, Receive and Unconsume](./images/diagram-2.png)
 
