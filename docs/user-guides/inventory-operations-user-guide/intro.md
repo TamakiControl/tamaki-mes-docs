@@ -9,3 +9,4 @@ description: "Inventory Operation User Guide"
 
 ## Table of Contents
 - [Setup](setup)
+- [Inventory Operation Types Diagram](inventory-operation-types-diagram)

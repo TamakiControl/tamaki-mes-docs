@@ -42,6 +42,8 @@ Toggles whether the inventory operation is active. When enabled, the inventory o
 The name of the inventory operation. This should be a descriptive name that clearly indicates the purpose of the inventory operation (e.g., "Move Raw Materials", "Bay1 Receives into Raw Silo 1").
 
 #### Inventory Operation Type
+For a visual reference, see the [Inventory Operation Types Diagram](inventory-operation-types-diagram).
+
 - CONSUME
   - Consumes a primary lot for the primary material at the source location. Consumes into the secondary lot for the secondary material at the destination location if configured. This will be tracked as an CONSUME [Inventory Lot Record](..%2F..%2Fappendix%2Fdata-model%2Finventory-operation-model%2Finventory-lot-record.md).
 - PRODUCE
