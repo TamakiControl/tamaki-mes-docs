@@ -10,7 +10,6 @@ The OEE gauges widget displays circular gauges for recent Overall Equipment Effe
 components, Availability, Performance, and Quality, for a specified location.
 
 ![oee_gauges_widget.png](../../../../static/img/docs/user-guides/dashboard-guide/preconfigured-widgets/oee_gauges_widget.png)
-<!-- TODO get better picture of the OEE gauges widget after the formatting is fixed-->
 
 ## Parameters
 - **Name**: The name of the widget instance.

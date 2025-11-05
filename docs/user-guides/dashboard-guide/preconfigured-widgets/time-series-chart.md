@@ -9,7 +9,7 @@ description: "Overview of the time series chart widget"
 The time series chart widget displays recent historical tag data on a graph. It utilizes the 
 [Perspective Time Series Chart component](https://www.docs.inductiveautomation.com/docs/8.1/appendix/components/perspective-components/perspective-chart-palette/perspective-time-series-chart).
 
-<!-- TODO picture of the time series chart widget -->
+![time_series_chart_widget.png](../../../../static/img/docs/user-guides/dashboard-guide/preconfigured-widgets/time_series_chart_widget.png)
 
 ### Parameters
 - **Name**: The name of the widget instance.

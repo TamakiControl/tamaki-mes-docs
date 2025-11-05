@@ -48,14 +48,15 @@ icon picker dialog.
 - **Column Gutter Size**: The number of pixels between each column in the dashboard grid.
 - **Public**: If toggled on, the dashboard will be visible to all users. If toggled off, the dashboard will only be 
 visible to the user who created it.
-- **Auto-Size**: <!-- TODO figure out what pack does-->
+- **Auto-Size**: During widget configuration, if this is enabled, widgets will automatically move to fill in any gaps 
+in the dashboard.
 
 ### Widgets Tab
 
 This section is for adding, arranging, and configuring widgets on the dashboard. Initially the dashboard will be empty,
 so the first step is to add widgets. Click one of the empty cells on the grid to open the Add Widget dialog. Select a
 widget from the list, such as `Numeric Display`, and click the `Confirm` button. The widget will then be added to the 
-dashboard. 
+dashboard. When initially added, a widget will often display an error until configured.
 
 ![dashboard_widget_numeric_display.png](../../../static/img/docs/user-guides/dashboard-guide/dashboard_widget_numeric_display.png)
 

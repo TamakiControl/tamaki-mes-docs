@@ -8,7 +8,7 @@ description: "Overview of the OEE downtime table widget"
 
 The OEE downtime table widget displays a table of recent downtime events for a specified location and downtime reason.
 
-<!-- TODO picture of the OEE downtime table widget -->
+![downtime_table_widget.png](../../../../static/img/docs/user-guides/dashboard-guide/preconfigured-widgets/downtime_table_widget.png)
 
 ## Parameters
 - **Name**: The name of the widget instance.

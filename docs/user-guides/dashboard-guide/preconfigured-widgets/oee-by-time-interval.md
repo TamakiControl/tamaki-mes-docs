@@ -9,7 +9,8 @@ description: "Overview of the OEE by time interval widget"
 The OEE by time widget displays a bar graph of the recent Overall Equipment Effectiveness (OEE) for a specified location
 averaged over specified time intervals.
 
-<!-- TODO picture of the OEE by time widget -->
+![oee_by_time_interval_widget.png](../../../../static/img/docs/user-guides/dashboard-guide/preconfigured-widgets/oee_by_time_interval_widget.png)
+<!-- Image info if new pictures is needed: data on perspective-dev, location 01JVWS3YA6-TM7K2FAD-5SQVKJ05, 2025-5-30 to 2025-5-29 -->
 
 ## Parameters
 - **Name**: The name of the widget instance.
