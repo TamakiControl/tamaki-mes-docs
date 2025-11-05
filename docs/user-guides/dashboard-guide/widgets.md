@@ -83,3 +83,33 @@ defined in the view exactly.
 - **Description**: A brief description of the parameter and its purpose.
 - **Configuration**: A JSON string for configuring the editor (e.g., dropdown options, min/max values)
 - **sortOrder**: The order in which the parameter appears in the widget configuration dialog when added to a dashboard.
+
+## Creating Parameter Types
+
+Out of the box, Tamaki MES includes several parameter types:
+- Integer
+- Number
+- String
+- Boolean
+- Date
+- Tag Realtime
+- Tag History
+- Dropdown
+- JSON
+- Color
+- Icon
+- Location
+- Downtime Reason
+- Duration
+- Refresh Interval
+
+![parameter_type_screen.png](../../../static/img/docs/user-guides/dashboard-guide/parameter_type_screen.png)
+
+If you need a custom parameter type that is not included, you can create your own. Navigate to the `Parameter Types` tab
+of the Widget screen and click the `Create New` button. You will be presented with the Parameter Type Create form.
+
+![parameter_type_create.png](../../../static/img/docs/user-guides/dashboard-guide/parameter_type_create.png)
+
+- **Name**: The name of the parameter type. This is a required field and must be unique.
+- **View Path**: The path to the perspective view that will be used to edit the parameter. This is a required field.
+- **Notes**: Any additional notes or comments about the parameter type.

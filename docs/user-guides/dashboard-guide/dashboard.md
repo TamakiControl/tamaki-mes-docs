@@ -15,7 +15,7 @@ The custom dashboard feature utilizes [Ignition's Dashboard component](https://w
 
 ## Configuring Dashboards
 
-To navigate to the dashboard configuration screen, go to the MES Perspective project and select `Analysis` →
+To navigate to the dashboard configuration screen, go to the MES Perspective project and select `Core` →
 `Custom Dashboards` from the navigation menu at the top of the screen. On the left side of the screen is a sidebar that 
 contains two lists of dashboards. The top lists dashboards that you have set to be only visible to you, while the bottom 
 lists dashboards that are visible to all users. To edit or delete a dashboard, find it in one of the lists, select the
