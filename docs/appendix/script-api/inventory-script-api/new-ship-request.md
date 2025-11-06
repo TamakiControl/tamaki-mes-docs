@@ -1,12 +1,12 @@
 ---
 sidebar_position: 36
 title: "newShipRequest"
-description: "Generates an empty non-persisted ship request to provide the structure to save a new record into the database."
+description: "Generates an empty ship request to provide the structure to save a new record into the database."
 ---
 
 # system.mes.inventory.newShipRequest
 
-Generates an empty non-persisted Ship Request to provide the structure required by the API to save a new record into the database.
+Generates an empty Ship Request to provide the structure required by the API to save a new record into the database.
 This method must be combined with the [ship](./ship) method in order to persist the record.
 
 ## Syntax

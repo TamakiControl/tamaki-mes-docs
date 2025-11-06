@@ -1,6 +1,6 @@
 ---
 title: "newQueryRequest"
-description: "Generates an empty non-persisted query request object."
+description: "Generates an empty query request object."
 sidebar_position: 3
 ---
 
