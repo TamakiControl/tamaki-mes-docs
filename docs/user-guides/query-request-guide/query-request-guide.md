@@ -24,7 +24,6 @@ Query requests can be used with the following methods
 - [system.mes.operation.findOperations](../../appendix/script-api/operation-script-api/find-operations.md)
 - [system.mes.operation.findOperationRecords](../../appendix/script-api/operation-script-api/find-operation-records.md)
 - [system.mes.productionOrder.findProductionOrders](../../appendix/script-api/production-order-script-api/find-production-orders.md)
-- [system.mes.customer.findCustomers](../../appendix/script-api/customer-script-api/find-customers.md)
 - [system.mes.schedule.findSchedules](../../appendix/script-api/schedule-script-api/find-schedules.md)
 - [system.mes.unitOfMeasure.findUnitOfMeasureConversions](../../appendix/script-api/unit-of-measure-script-api/find-unit-of-measure-conversions.md)
 
