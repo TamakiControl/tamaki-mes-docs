@@ -49,8 +49,8 @@ Returns a JSON representation of an inventory with the following properties:
 
 ```python
 # Retrieve inventory lot by name and material
-lot_by_name_and_material = system.mes.inventory.getLotByIdOrNameAndMaterial('21220', 'Bottle/Milk')
+lotByNameAndMaterial = system.mes.inventory.getLotByIdOrNameAndMaterial('21220', 'Bottle/Milk')
 
 # Output the inventory lot
-print(lot_by_name_and_material)
+print(lotByNameAndMaterial)
 ```

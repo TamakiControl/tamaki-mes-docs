@@ -11,7 +11,7 @@ Produces inventory from the MES based on the provided parameters.
 ## Syntax
 
 ```python
-system.mes.inventory.produce(**produce_request)
+system.mes.inventory.produce(**produceRequest)
 ```
 
 ## Parameters
@@ -49,17 +49,17 @@ Returns a JSON representation of an inventory lot record for a Produce Request.
 
 ```python
 # Generate the object structure for a new produce request object with no initial arguments
-new_request = system.mes.inventory.newProduceRequest()
+newRequest = system.mes.inventory.newProduceRequest()
 
 # Set basic attributes for the new produce request
-new_request['materialIdOrPath'] = 'Bottle/Milk'
-new_request['destinationLocationIdOrPath'] = 'DairyCo'
-new_request['quantity'] = 610
+newRequest['materialIdOrPath'] = 'Bottle/Milk'
+newRequest['destinationLocationIdOrPath'] = 'DairyCo'
+newRequest['quantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Produce the request
-produced_request = system.mes.inventory.produce(**new_request)
+producedRequest = system.mes.inventory.produce(**newRequest)
 
 # Output the JSON representation of the produced request
-print(produced_request)
+print(producedRequest)
 ```

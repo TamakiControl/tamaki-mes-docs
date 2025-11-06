@@ -11,7 +11,7 @@ Unconsumes inventory from the MES based on the provided parameters.
 ## Syntax
 
 ```python
-system.mes.inventory.unconsume(**unconsume_request)
+system.mes.inventory.unconsume(**unconsumeRequest)
 ```
 
 ## Parameters
@@ -46,17 +46,17 @@ Returns a JSON representation of an inventory lot record for an Unconsume Reques
 
 ```python
 # Generate the object structure for a new unconsume request object with no initial arguments
-new_request = system.mes.inventory.newUnconsumeRequest()
+newRequest = system.mes.inventory.newUnconsumeRequest()
 
 # Set basic attributes for the new unconsume request
-new_request['materialIdOrPath'] = 'Bottle/Milk'
-new_request['destinationLocationIdOrPath'] = 'DairyCo'
-new_request['quantity'] = 610
+newRequest['materialIdOrPath'] = 'Bottle/Milk'
+newRequest['destinationLocationIdOrPath'] = 'DairyCo'
+newRequest['quantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Unconsume the request
-unconsumed_request = system.mes.inventory.unconsume(**new_request)
+unconsumedRequest = system.mes.inventory.unconsume(**newRequest)
 
 # Output the JSON representation of the unconsumed request
-print(unconsumed_request)
+print(unconsumedRequest)
 ```

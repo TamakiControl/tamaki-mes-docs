@@ -41,15 +41,15 @@ Returns a JSON representation of the newly created Lot History Request object. T
 
 ```python
 # Generate the object structure for a new lot history request object with no initial arguments
-new_lot_history_request = system.mes.inventory.newLotHistoryRequest()
+newLotHistoryRequest = system.mes.inventory.newLotHistoryRequest()
 
 # Set basic attributes for the new lot history request
-new_lot_history_request['lotId'] = '01JJCPQWYG-T9CW4G6Z-96XBWYQB'
+newLotHistoryRequest['lotId'] = '01JJCPQWYG-T9CW4G6Z-96XBWYQB'
 # (You can continue setting other properties as needed here)
 
 # Retrieve the lot history
-lot_history = system.mes.inventory.getLotHistory(**new_lot_history_request)
+lotHistory = system.mes.inventory.getLotHistory(**newLotHistoryRequest)
 
 # Output the list of lot history records
-print(lot_history)
+print(lotHistory)
 ```

@@ -11,7 +11,7 @@ Moves inventory from the MES based on the provided parameters.
 ## Syntax
 
 ```python
-system.mes.inventory.move(**move_request)
+system.mes.inventory.move(**moveRequest)
 ```
 
 ## Parameters
@@ -46,18 +46,18 @@ Returns a JSON representation of an inventory lot record for a Move Request.
 
 ```python
 # Generate the object structure for a new move request object with no initial arguments
-new_request = system.mes.inventory.newMoveRequest()
+newRequest = system.mes.inventory.newMoveRequest()
 
 # Set basic attributes for the new move request
-new_request['materialIdOrPath'] = 'Bottle/Milk'
-new_request['sourceLocationIdOrPath'] = 'DairyFarm'
-new_request['destinationLocationIdOrPath'] = 'DairyCo'
-new_request['quantity'] = 610
+newRequest['materialIdOrPath'] = 'Bottle/Milk'
+newRequest['sourceLocationIdOrPath'] = 'DairyFarm'
+newRequest['destinationLocationIdOrPath'] = 'DairyCo'
+newRequest['quantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Move the request
-moved_request = system.mes.inventory.move(**new_request)
+movedRequest = system.mes.inventory.move(**newRequest)
 
 # Output the JSON representation of the moved request
-print(moved_request)
+print(movedRequest)
 ```

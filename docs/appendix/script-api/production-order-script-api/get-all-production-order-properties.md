@@ -30,8 +30,8 @@ Returns a list of JSON objects representing all production order properties.
 
 ```python
 # Retrieve all production order properties
-all_production_order_properties = system.mes.productionOrder.getAllProductionOrderProperties()
+allProductionOrderProperties = system.mes.productionOrder.getAllProductionOrderProperties()
 
 # Output the list of production order properties
-print(all_production_order_properties)
+print(allProductionOrderProperties)
 ```

@@ -13,7 +13,7 @@ Creates or updates a [Production Orders](../../data-model/production-order-model
 ## Syntax
 
 ```python
-system.mes.productionOrder.saveProductionOrder(**production_order_data)
+system.mes.productionOrder.saveProductionOrder(**productionOrderData)
 ```
 
 ## Parameters
@@ -49,29 +49,29 @@ Returns a JSON representation of the saved production order.
 
 ```python
 # Generate the object structure for a new production order object, set the initial arguments and save it
-new_production_order = system.mes.productionOrder.newProductionOrder()
-new_production_order['productId'] = '01JCH3ENGW-82KJDZDR-JHGYCXQN'
-new_production_order['name'] = 'Order002'
-new_production_order['unitOfMeasureId'] = '01JCH3EPVP-1MNNDJTS-37Z75NGB'
-saved_production_order = system.mes.productionOrder.saveProductionOrder(**new_production_order)
+newProductionOrder = system.mes.productionOrder.newProductionOrder()
+newProductionOrder['productId'] = '01JCH3ENGW-82KJDZDR-JHGYCXQN'
+newProductionOrder['name'] = 'Order002'
+newProductionOrder['unitOfMeasureId'] = '01JCH3EPVP-1MNNDJTS-37Z75NGB'
+savedProductionOrder = system.mes.productionOrder.saveProductionOrder(**newProductionOrder)
 
 # Output the JSON representation of the saved production order
-print(saved_production_order)
+print(savedProductionOrder)
 
 # Generate the object structure for another new production order to update the previous production order
-production_order_data = system.mes.productionOrder.newProductionOrder()
+productionOrderData = system.mes.productionOrder.newProductionOrder()
 
 # Set basic attributes for the updated production order
-production_order_data['id'] = saved_production_order.id
-production_order_data['productId'] = '01JCH3ENGW-82KJDZDR-JHGYCXQN'
-production_order_data['name'] = 'Order002'
-production_order_data['unitOfMeasureId'] = '01JCH3EPVP-1MNNDJTS-37Z75NGB'
-production_order_data['quantity'] = '100'
+productionOrderData['id'] = savedProductionOrder.id
+productionOrderData['productId'] = '01JCH3ENGW-82KJDZDR-JHGYCXQN'
+productionOrderData['name'] = 'Order002'
+productionOrderData['unitOfMeasureId'] = '01JCH3EPVP-1MNNDJTS-37Z75NGB'
+productionOrderData['quantity'] = '100'
 # (You can continue setting other properties as needed here)
 
 # Save the production order to update it in the system
-updated_production_order = system.mes.productionOrder.saveProductionOrder(**production_order_data)
+updatedProductionOrder = system.mes.productionOrder.saveProductionOrder(**productionOrderData)
 
 # Output the JSON representation of the updated production order
-print(updated_production_order)
+print(updatedProductionOrder)
 ```

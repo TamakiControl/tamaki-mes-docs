@@ -14,7 +14,7 @@ This only checks if the material property object can be saved based on the attri
 ## Syntax
 
 ```python
-system.mes.material.validateProperty(**property_data)
+system.mes.material.validateProperty(**propertyData)
 ```
 
 ## Parameters
@@ -49,18 +49,18 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new property object
-new_property = system.mes.material.newProperty()
+newProperty = system.mes.material.newProperty()
 
 # Define property attributes
-new_property['materialClassId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
-new_property['name'] = 'Density'
+newProperty['materialClassId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
+newProperty['name'] = 'Density'
 # (You can continue setting other properties as needed here)
 
 # Validate material property parameters
-validation_errors = system.mes.material.validateProperty(**new_property)
+validationErrors = system.mes.material.validateProperty(**newProperty)
 
-if len(validation_errors) > 0:
-    print('Validation errors found:', validation_errors)
+if len(validationErrors) > 0:
+    print('Validation errors found:', validationErrors)
 else:
     print('Material property parameters are valid.')
 ```

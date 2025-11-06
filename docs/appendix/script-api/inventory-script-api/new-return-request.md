@@ -50,17 +50,17 @@ Returns a JSON representation of the newly created Return Request object. The fo
 
 ```python
 # Generate the object structure for a new return request object with no initial arguments
-new_request = system.mes.inventory.newReturnRequest()
+newRequest = system.mes.inventory.newReturnRequest()
 
 # Set basic attributes for the new return request
-new_request['materialIdOrPath'] = 'Bottle/Milk'
-new_request['sourceLocationIdOrPath'] = 'DairyCo'
-new_request['quantity'] = 610
+newRequest['materialIdOrPath'] = 'Bottle/Milk'
+newRequest['sourceLocationIdOrPath'] = 'DairyCo'
+newRequest['quantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Return the request
-returned_request = system.mes.inventory.returnInventory(**new_request)
+returnedRequest = system.mes.inventory.returnInventory(**newRequest)
 
 # Output the JSON representation of the returned request
-print(returned_request)
+print(returnedRequest)
 ```
