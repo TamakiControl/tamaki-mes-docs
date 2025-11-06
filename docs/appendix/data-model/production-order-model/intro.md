@@ -17,17 +17,12 @@ entity for managing production activities from initiation to completion.
 Defines the materials required for producing a unit within a production order. The BOM specifies quantities,
 unit of measure, and material types, enabling precise planning and material allocation for production.
 
-### 3. ProductionOrderCustomer
-
-Stores information about customers associated with production orders. This includes customer contact details,
-addresses, and other relevant data, enabling effective communication and customer order management.
-
-### 4. ProductionOrderProperty
+### 3. ProductionOrderProperty
 
 Allows for the definition of custom properties on production orders, enabling tailored
 configurations that can address unique production requirements or classifications.
 
-### 5. ProductionOrderPropertyValue
+### 4. ProductionOrderPropertyValue
 
 Stores specific values for each custom property on a production order, allowing for unique configurations at
 the individual order level. This ensures flexibility in handling various production scenarios.

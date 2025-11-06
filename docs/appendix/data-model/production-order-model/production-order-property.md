@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 title: "production_order_properties"
 description: "Documentation for the production_order_properties table, detailing columns and constraints in the database schema."
 ---
