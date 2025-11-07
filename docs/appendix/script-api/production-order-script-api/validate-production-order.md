@@ -14,7 +14,7 @@ This only checks if the production order object can be saved based on the attrib
 ## Syntax
 
 ```python
-system.mes.productionOrder.validateProductionOrder(**production_order_data)
+system.mes.productionOrder.validateProductionOrder(**productionOrderData)
 ```
 
 ## Parameters
@@ -50,19 +50,19 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new production order object
-production_order_data = system.mes.productionOrder.newProductionOrder()
+productionOrderData = system.mes.productionOrder.newProductionOrder()
 
 # Set basic attributes for the new production order
-production_order_data['productId'] = '01JCH3ENGW-82KJDZDR-JHGYCXQN'
-production_order_data['name'] = 'Order001'
-production_order_data['unitOfMeasureId'] = '01JCH3EPVP-1MNNDJTS-37Z75NGB'
+productionOrderData['productId'] = '01JCH3ENGW-82KJDZDR-JHGYCXQN'
+productionOrderData['name'] = 'Order001'
+productionOrderData['unitOfMeasureId'] = '01JCH3EPVP-1MNNDJTS-37Z75NGB'
 # (You can continue setting other properties as needed here)
 
 # Validate production order parameters
-validation_errors = system.mes.productionOrder.validateProductionOrder(**production_order_data)
+validationErrors = system.mes.productionOrder.validateProductionOrder(**productionOrderData)
 
-if len(validation_errors) > 0:
-    print('Validation errors found:', validation_errors)
+if len(validationErrors) > 0:
+    print('Validation errors found:', validationErrors)
 else:
     print('Production order parameters are valid.')
 ```

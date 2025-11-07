@@ -14,7 +14,7 @@ This only checks if the location property object can be saved based on the attri
 ## Syntax
 
 ```python
-system.mes.location.validateProperty(**property_data)
+system.mes.location.validateProperty(**propertyData)
 ```
 
 ## Parameters
@@ -48,23 +48,23 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new property object
-new_property = system.mes.location.newProperty()
+newProperty = system.mes.location.newProperty()
 
 # Define property attributes
-new_property['name'] = 'Temperature'
-new_property['dataType'] = 'Float'
-new_property['lowLimit'] = -20
-new_property['highLimit'] = 50
-new_property['unitOfMeasureId'] = '01JAP8RJBN-4VYZUKE1-LY2QHV8X'
-new_property['nullable'] = False
-new_property['defaultValue'] = 20.0
+newProperty['name'] = 'Temperature'
+newProperty['dataType'] = 'Float'
+newProperty['lowLimit'] = -20
+newProperty['highLimit'] = 50
+newProperty['unitOfMeasureId'] = '01JAP8RJBN-4VYZUKE1-LY2QHV8X'
+newProperty['nullable'] = False
+newProperty['defaultValue'] = 20.0
 # (You can continue setting other properties as needed here)
 
 # Validate location property parameters
-validation_errors = system.mes.location.validateProperty(**new_property)
+validationErrors = system.mes.location.validateProperty(**newProperty)
 
-if len(validation_errors) > 0:
-    print('Validation errors found:', validation_errors)
+if len(validationErrors) > 0:
+    print('Validation errors found:', validationErrors)
 else:
     print('Location property parameters are valid.')
 ```

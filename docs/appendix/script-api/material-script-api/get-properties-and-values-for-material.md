@@ -55,8 +55,8 @@ Returns a list of JSON objects representing all material properties and property
 
 ```python
 # Retrieve all material properties and property values by material ID or path
-properties_and_values = system.mes.material.getPropertiesAndValuesForMaterial('IRB/5391537510212')
+propertiesAndValues = system.mes.material.getPropertiesAndValuesForMaterial('IRB/5391537510212')
 
 # Output the material properties and property values
-print(properties_and_values)
+print(propertiesAndValues)
 ```

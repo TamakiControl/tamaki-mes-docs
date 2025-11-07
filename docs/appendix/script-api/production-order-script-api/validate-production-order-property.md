@@ -14,7 +14,7 @@ This only checks if the production order property object can be saved based on t
 ## Syntax
 
 ```python
-system.mes.productionOrder.validateProductionOrderProperty(**property_data)
+system.mes.productionOrder.validateProductionOrderProperty(**propertyData)
 ```
 
 ## Parameters
@@ -48,18 +48,18 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new production order property object
-production_order_property = system.mes.productionOrder.newProductionOrderProperty()
+productionOrderProperty = system.mes.productionOrder.newProductionOrderProperty()
 
 # Define production order property details
-production_order_property['name'] = 'Batch Size'
-production_order_property['description'] = 'Batch size property'
+productionOrderProperty['name'] = 'Batch Size'
+productionOrderProperty['description'] = 'Batch size property'
 # (You can continue setting other properties as needed here)
 
 # Validate production order property parameters
-validation_errors = system.mes.productionOrder.validateProductionOrderProperty(**production_order_property)
+validationErrors = system.mes.productionOrder.validateProductionOrderProperty(**productionOrderProperty)
 
-if len(validation_errors) > 0:
-    print('Validation errors found:', validation_errors)
+if len(validationErrors) > 0:
+    print('Validation errors found:', validationErrors)
 else:
     print('Production order property parameters are valid.')
 ```

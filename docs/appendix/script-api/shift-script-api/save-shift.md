@@ -13,7 +13,7 @@ Creates or updates a [Shifts](../../data-model/shift-model/shift) record in the 
 ## Syntax
 
 ```python
-system.mes.shift.saveShift(**shift_data)
+system.mes.shift.saveShift(**shiftData)
 ```
 
 ## Parameters

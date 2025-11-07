@@ -13,7 +13,7 @@ Validates the specified parameters for a [Shift Records](../../data-model/shift-
 ## Syntax
 
 ```python
-system.mes.shift.validateShiftRecord(**record_data)
+system.mes.shift.validateShiftRecord(**recordData)
 ```
 
 ## Parameters

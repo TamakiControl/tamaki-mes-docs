@@ -11,7 +11,7 @@ Validates the specified parameters for a ship request and returns any validation
 ## Syntax
 
 ```python
-system.mes.inventory.validateShipRequest(**ship_request)
+system.mes.inventory.validateShipRequest(**shipRequest)
 ```
 
 ## Parameters
@@ -45,19 +45,19 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new ship request object with no initial arguments
-ship_request = system.mes.inventory.newShipRequest()
+shipRequest = system.mes.inventory.newShipRequest()
 
 # Set basic attributes for the new ship request
-ship_request['materialIdOrPath'] = 'Bottle/Milk'
-ship_request['sourceLocationIdOrPath'] = 'DairyCo'
-ship_request['quantity'] = 610
+shipRequest['materialIdOrPath'] = 'Bottle/Milk'
+shipRequest['sourceLocationIdOrPath'] = 'DairyCo'
+shipRequest['quantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Validate ship request parameters
-validation_errors = system.mes.inventory.validateShipRequest(**ship_request)
+validationErrors = system.mes.inventory.validateShipRequest(**shipRequest)
 
-if len(validation_errors) > 0:
-    print('Validation errors found:', validation_errors)
+if len(validationErrors) > 0:
+    print('Validation errors found:', validationErrors)
 else:
     print('Ship request parameters are valid.')
 ```

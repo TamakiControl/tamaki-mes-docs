@@ -52,16 +52,16 @@ Returns a JSON representation of the newly created location object. The followin
 
 ```python
 # Generate the object structure for a new location object with no initial arguments
-new_location = system.mes.location.newLocation()
+newLocation = system.mes.location.newLocation()
 
 # Set basic attributes for the new location
-new_location['name'] = 'NewLocation'
-new_location['description'] = 'A new location created via script.'
+newLocation['name'] = 'NewLocation'
+newLocation['description'] = 'A new location created via script.'
 # (You can continue setting other properties as needed here)
 
 # Save the new location to the system
-saved_location = system.mes.location.saveLocation(**new_location)
+savedLocation = system.mes.location.saveLocation(**newLocation)
 
 # Output the JSON representation of the saved location
-print(saved_location)
+print(savedLocation)
 ```

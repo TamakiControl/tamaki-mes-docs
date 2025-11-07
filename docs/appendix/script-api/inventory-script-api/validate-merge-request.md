@@ -11,7 +11,7 @@ Validates the specified parameters for a merge request and returns any validatio
 ## Syntax
 
 ```python
-system.mes.inventory.validateMergeRequest(**merge_request)
+system.mes.inventory.validateMergeRequest(**mergeRequest)
 ```
 
 ## Parameters
@@ -39,18 +39,18 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new merge request object with no initial arguments
-merge_request = system.mes.inventory.newMergeRequest()
+mergeRequest = system.mes.inventory.newMergeRequest()
 
 # Set basic attributes for the new merge request
-merge_request['sourceLotId'] = '01JJD0ST06-APPRGRCY-25ZQ49FR'
-merge_request['destinationLotId'] = '01JJCPQWYG-T9CW4G6Z-96XBWYQB'
+mergeRequest['sourceLotId'] = '01JJD0ST06-APPRGRCY-25ZQ49FR'
+mergeRequest['destinationLotId'] = '01JJCPQWYG-T9CW4G6Z-96XBWYQB'
 # (You can continue setting other properties as needed here)
 
 # Validate merge request parameters
-validation_errors = system.mes.inventory.validateMergeRequest(**merge_request)
+validationErrors = system.mes.inventory.validateMergeRequest(**mergeRequest)
 
-if len(validation_errors) > 0:
-    print('Validation errors found:', validation_errors)
+if len(validationErrors) > 0:
+    print('Validation errors found:', validationErrors)
 else:
     print('Merge request parameters are valid.')
 ```

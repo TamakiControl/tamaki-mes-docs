@@ -42,15 +42,15 @@ Returns a JSON representation of the newly created material class object. The fo
 
 ```python
 # Generate the object structure for a new material class object with no initial arguments
-new_material_class = system.mes.material.newMaterialClass()
+newMaterialClass = system.mes.material.newMaterialClass()
 
 # Set basic attributes for the new material class
-new_material_class['name'] = 'RAW'
+newMaterialClass['name'] = 'RAW'
 # (You can continue setting other properties as needed here)
 
 # Save the new material class to the system
-saved_material_class = system.mes.material.saveMaterialClass(**new_material_class)
+savedMaterialClass = system.mes.material.saveMaterialClass(**newMaterialClass)
 
 # Output the JSON representation of the saved material class
-print(saved_material_class)
+print(savedMaterialClass)
 ```

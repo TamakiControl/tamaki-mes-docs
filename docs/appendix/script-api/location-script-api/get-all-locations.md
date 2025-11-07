@@ -30,8 +30,8 @@ Returns a list of JSON objects representing all locations.
 
 ```python
 # Retrieve all locations
-all_locations = system.mes.location.getAllLocations()
+allLocations = system.mes.location.getAllLocations()
 
 # Output the list of locations
-print(all_locations)
+print(allLocations)
 ```

@@ -38,7 +38,7 @@ Returns a JSON object of the inventory lot record for the executed inventory ope
 
 ```python
 # Execute a full inventory operation in a single call
-executed_lot_record = system.mes.inventory.operation.executeInventoryOperation(
+executedLotRecord = system.mes.inventory.operation.executeInventoryOperation(
     '01JPAND53P-BZ61RZHZ-V7C6EEHG',  # inventoryOperationId
     '01JPBC4H3V-J4X3FYKS-NRNVEKMM',  # primaryLotIdOrName
     100.0,                           # quantity
@@ -49,5 +49,5 @@ executed_lot_record = system.mes.inventory.operation.executeInventoryOperation(
     None                             # endDateMillis
 )
 
-print(executed_lot_record)
+print(executedLotRecord)
 ```

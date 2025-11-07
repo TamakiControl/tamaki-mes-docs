@@ -14,7 +14,7 @@ This only checks if the inventory lot can be saved based on the attributes given
 ## Syntax
 
 ```python
-system.mes.inventory.validateLot(**lot_data)
+system.mes.inventory.validateLot(**lotData)
 ```
 
 ## Parameters
@@ -44,19 +44,19 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new inventory lot object
-lot_data = system.mes.inventory.newLot()
+lotData = system.mes.inventory.newLot()
 
 # Set basic attributes for the new inventory lot
-lot_data['name'] = 'L2824L9CO'
-lot_data['materialId'] = '01JCH3GRA3-5ZYFZV5V-RW3FKFJX'
-lot_data['unitOfMeasureId'] = '01JCH3T85P-KVCB8ZR5-0B83A3SX'
+lotData['name'] = 'L2824L9CO'
+lotData['materialId'] = '01JCH3GRA3-5ZYFZV5V-RW3FKFJX'
+lotData['unitOfMeasureId'] = '01JCH3T85P-KVCB8ZR5-0B83A3SX'
 # (You can continue setting other properties as needed here)
 
 # Validate inventory lot parameters
-validation_errors = system.mes.inventory.validateLot(**lot_data)
+validationErrors = system.mes.inventory.validateLot(**lotData)
 
-if len(validation_errors) > 0:
-    print('Validation errors found:', validation_errors)
+if len(validationErrors) > 0:
+    print('Validation errors found:', validationErrors)
 else:
     print('Lot parameters are valid.')
 ```

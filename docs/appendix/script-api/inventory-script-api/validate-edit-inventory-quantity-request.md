@@ -11,7 +11,7 @@ Validates the specified parameters for an edit inventory quantity request and re
 ## Syntax
 
 ```python
-system.mes.inventory.validateEditInventoryQuantityRequest(**edit_inventory_quantity_request)
+system.mes.inventory.validateEditInventoryQuantityRequest(**editInventoryQuantityRequest)
 ```
 
 ## Parameters
@@ -39,19 +39,19 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new edit inventory quantity request object with no initial arguments
-edit_inventory_quantity_request = system.mes.inventory.newEditInventoryQuantityRequest()
+editInventoryQuantityRequest = system.mes.inventory.newEditInventoryQuantityRequest()
 
 # Set basic attributes for the new edit inventory quantity request
-edit_inventory_quantity_request['materialIdOrPath'] = 'Bottle/Milk'
-edit_inventory_quantity_request['sourceLocationIdOrPath'] = 'DairyCo'
-edit_inventory_quantity_request['newQuantity'] = 610
+editInventoryQuantityRequest['materialIdOrPath'] = 'Bottle/Milk'
+editInventoryQuantityRequest['sourceLocationIdOrPath'] = 'DairyCo'
+editInventoryQuantityRequest['newQuantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Validate edit inventory quantity request parameters
-validation_errors = system.mes.inventory.validateEditInventoryQuantityRequest(**edit_inventory_quantity_request)
+validationErrors = system.mes.inventory.validateEditInventoryQuantityRequest(**editInventoryQuantityRequest)
 
-if len(validation_errors) > 0:
-    print('Validation errors found:', validation_errors)
+if len(validationErrors) > 0:
+    print('Validation errors found:', validationErrors)
 else:
     print('Edit inventory quantity request parameters are valid.')
 ```

@@ -13,7 +13,7 @@ Creates or updates a [Location Properties](../../data-model/location-model/locat
 ## Syntax
 
 ```python
-system.mes.location.saveProperty(**property_data)
+system.mes.location.saveProperty(**propertyData)
 ```
 
 ## Parameters
@@ -47,30 +47,30 @@ Returns a JSON representation of the saved location property.
 
 ```python
 # Generate the object structure for a new property object, set the name and save it
-new_property = system.mes.location.newProperty()
-new_property['name'] = 'Temperature'
-saved_property = system.mes.location.saveProperty(**new_property)
+newProperty = system.mes.location.newProperty()
+newProperty['name'] = 'Temperature'
+savedProperty = system.mes.location.saveProperty(**newProperty)
 
 # Output the JSON representation of the saved property
-print(saved_property)
+print(savedProperty)
 
 # Generate the object structure for another new property object to update the previous property
-property_data = system.mes.location.newProperty()
+propertyData = system.mes.location.newProperty()
 
 # Define property attributes
-property_data['id'] = saved_property.id
-property_data['name'] = 'Temperature'
-property_data['dataType'] = 'Float'
-property_data['lowLimit'] = -20
-property_data['highLimit'] = 50
-property_data['unitOfMeasureId'] = '01JAP8RJBN-4VYZUKE1-LY2QHV8X'
-property_data['nullable'] = False
-property_data['defaultValue'] = 20.0
+propertyData['id'] = savedProperty.id
+propertyData['name'] = 'Temperature'
+propertyData['dataType'] = 'Float'
+propertyData['lowLimit'] = -20
+propertyData['highLimit'] = 50
+propertyData['unitOfMeasureId'] = '01JAP8RJBN-4VYZUKE1-LY2QHV8X'
+propertyData['nullable'] = False
+propertyData['defaultValue'] = 20.0
 # (You can continue setting other properties as needed here)
 
 # Save the location property to update it in the system
-updated_property = system.mes.location.saveProperty(**property_data)
+updatedProperty = system.mes.location.saveProperty(**propertyData)
 
 # Output the JSON representation of the updated location property
-print(updated_property)
+print(updatedProperty)
 ```

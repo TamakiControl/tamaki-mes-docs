@@ -44,8 +44,8 @@ Returns a JSON representation of the location property value. Returns nothing if
 
 ```python
 # Retrieve a location property value by location ID or path and property ID or name
-property_value = system.mes.location.getPropertyValueFor('DairyCo', 'Cows')
+propertyValue = system.mes.location.getPropertyValueFor('DairyCo', 'Cows')
 
 # Output the location property value
-print(property_value)
+print(propertyValue)
 ```

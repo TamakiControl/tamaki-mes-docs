@@ -42,8 +42,8 @@ The JSON Objects in references has the following properties:
 
 ```python
 # Retrieve the references for the material specified
-material_references = system.mes.material.getMaterialReferences('IRB/5391537510212')
+materialReferences = system.mes.material.getMaterialReferences('IRB/5391537510212')
 
 # Output the material references
-print(material_references)
+print(materialReferences)
 ```

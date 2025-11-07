@@ -35,30 +35,30 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new query request object
-query_request_data = system.mes.query.newQueryRequest()
+queryRequestData = system.mes.query.newQueryRequest()
 
-filter_request = system.mes.query.newFilterRequest()
+filterRequest = system.mes.query.newFilterRequest()
 
 # Set basic attributes for the new filter request
-filter_request["field"] = "createdDate"
-filter_request["condition"] = "between" # comment and uncomment this to make the validation fail.
-filter_request["minDateValue"] = "2025-01-01T00:00:00Z"
-filter_request["maxDateValue"] = "2026-01-01T00:00:00Z"
+filterRequest["field"] = "createdDate"
+filterRequest["condition"] = "between" # comment and uncomment this to make the validation fail.
+filterRequest["minDateValue"] = "2025-01-01T00:00:00Z"
+filterRequest["maxDateValue"] = "2026-01-01T00:00:00Z"
 
 # Set basic attributes for the new query request
-query_request_data["pageSize"] = 10
-query_request_data["pageIndex"] = 0
-query_request_data["sortFields"] = ["name"]
-query_request_data["sortDirections"] = ["ASC"]
-query_request_data["filters"] = [filter_request]
+queryRequestData["pageSize"] = 10
+queryRequestData["pageIndex"] = 0
+queryRequestData["sortFields"] = ["name"]
+queryRequestData["sortDirections"] = ["ASC"]
+queryRequestData["filters"] = [filterRequest]
 
 # (You can continue setting other properties as needed here)
 
 # Validate query request parameters
-validation_errors = system.mes.query.validateQueryRequest(**query_request_data)
+validationErrors = system.mes.query.validateQueryRequest(**queryRequestData)
 
-if len(validation_errors) > 0:
-    print('Validation errors found:', validation_errors)
+if len(validationErrors) > 0:
+    print('Validation errors found:', validationErrors)
 else:
     print('Query request parameters are valid.')
 ```

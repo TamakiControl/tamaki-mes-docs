@@ -43,8 +43,8 @@ Returns a JSON representation of the material class. Returns nothing if no mater
 
 ```python
 # Retrieve a material class by ID or path
-material_class = system.mes.material.getMaterialClass('RAW')
+materialClass = system.mes.material.getMaterialClass('RAW')
 
 # Output the material class
-print(material_class)
+print(materialClass)
 ```

@@ -30,8 +30,8 @@ Returns a list of JSON objects representing all materials.
 
 ```python
 # Retrieve all materials
-all_materials = system.mes.material.getAllMaterials()
+allMaterials = system.mes.material.getAllMaterials()
 
 # Output the list of materials
-print(all_materials)
+print(allMaterials)
 ```

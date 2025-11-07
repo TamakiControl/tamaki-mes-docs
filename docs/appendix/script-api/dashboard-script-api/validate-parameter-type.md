@@ -14,7 +14,7 @@ not save the object.
 ## Syntax
 
 ```python
-system.mes.dashboard.validateParameterType(**parameter_type)
+system.mes.dashboard.validateParameterType(**parameterType)
 ```
 
 ## Parameters

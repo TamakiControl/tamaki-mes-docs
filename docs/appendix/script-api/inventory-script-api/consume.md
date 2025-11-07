@@ -11,7 +11,7 @@ Consumes inventory from the MES based on the provided parameters.
 ## Syntax
 
 ```python
-system.mes.inventory.consume(**consume_request)
+system.mes.inventory.consume(**consumeRequest)
 ```
 
 ## Parameters
@@ -74,18 +74,18 @@ Returns a JSON representation of an inventory lot record for a Consume Request w
 
 ```python
 # Generate the object structure for a new consume request object with no initial arguments
-new_request = system.mes.inventory.newConsumeRequest()
+newRequest = system.mes.inventory.newConsumeRequest()
 
 # Set basic attributes for the new consume request
-new_request['materialIdOrPath'] = 'Bottle/Milk'
-new_request['sourceLocationIdOrPath'] = 'DairyCo'
-new_request['quantity'] = 610
-new_request['createIfNotExists'] = True
+newRequest['materialIdOrPath'] = 'Bottle/Milk'
+newRequest['sourceLocationIdOrPath'] = 'DairyCo'
+newRequest['quantity'] = 610
+newRequest['createIfNotExists'] = True
 # (You can continue setting other properties as needed here)
 
 # Consume the request
-consumed_request = system.mes.inventory.consume(**new_request)
+consumedRequest = system.mes.inventory.consume(**newRequest)
 
 # Output the JSON representation of the consumed request
-print(str(consumed_request))
+print(str(consumedRequest))
 ```

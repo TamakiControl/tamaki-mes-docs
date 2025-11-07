@@ -33,8 +33,8 @@ Returns a JSON representation of the added unit of measure conversion object.
 
 ```python
 # Add a unit of measure conversion using the parameters
-add_uomc = system.mes.unitOfMeasure.addConversion('Pound', 'Kg', 0.33, '01JCH3TP3Y-4B080WHN-MSR8RVP5')
+addUomc = system.mes.unitOfMeasure.addConversion('Pound', 'Kg', 0.33, '01JCH3TP3Y-4B080WHN-MSR8RVP5')
 
 # Output the JSON representation of the added unit of measure conversion
-print(add_uomc)
+print(addUomc)
 ```

@@ -49,19 +49,19 @@ Returns a JSON representation of the newly created bill of materials object. The
 
 ```python
 # Generate the object structure for a new bill of materials object with no initial arguments
-new_bill_of_materials = system.mes.productionOrder.newBillOfMaterialsItem()
+newBillOfMaterials = system.mes.productionOrder.newBillOfMaterialsItem()
 
 # Set basic attributes for the new bill of materials
-new_bill_of_materials['quantityOrder'] = 1000.0
-new_bill_of_materials['materialGroup'] = 'CAN'
-new_bill_of_materials['unitOfMeasureId'] = '01JCH3EPVP-1MNNDJTS-37Z75NGB'
-new_bill_of_materials['materialId'] = '01JCH3ENGW-82KJDZDR-JHGYCXQN'
-new_bill_of_materials['quantityPerProducedUnit'] = 10.0
+newBillOfMaterials['quantityOrder'] = 1000.0
+newBillOfMaterials['materialGroup'] = 'CAN'
+newBillOfMaterials['unitOfMeasureId'] = '01JCH3EPVP-1MNNDJTS-37Z75NGB'
+newBillOfMaterials['materialId'] = '01JCH3ENGW-82KJDZDR-JHGYCXQN'
+newBillOfMaterials['quantityPerProducedUnit'] = 10.0
 # (You can continue setting other properties as needed here)
 
 # Save the new bill of materials to the system
-saved_bill_of_materials = system.mes.productionOrder.saveBillOfMaterialsItem(**new_bill_of_materials)
+savedBillOfMaterials = system.mes.productionOrder.saveBillOfMaterialsItem(**newBillOfMaterials)
 
 # Output the JSON representation of the saved bill of materials
-print(saved_bill_of_materials)
+print(savedBillOfMaterials)
 ```

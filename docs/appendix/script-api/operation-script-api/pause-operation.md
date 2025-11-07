@@ -40,8 +40,8 @@ Returns a JSON object of the operation execution result for the suspension of th
 
 ```python
 # Pause the operation
-paused_operation_result = system.mes.operation.pauseOperation('01JPBCPKSR-972W3V0Y-H00NNSKQ')
+pausedOperationResult = system.mes.operation.pauseOperation('01JPBCPKSR-972W3V0Y-H00NNSKQ')
 
 # Output the operation execution result of the paused operation
-print(paused_operation_result)
+print(pausedOperationResult)
 ```

@@ -13,7 +13,7 @@ Creates or updates a [Units Of Measure](../../data-model/utility-models/unit-of-
 ## Syntax
 
 ```python
-system.mes.unitOfMeasure.saveUnitOfMeasure(**uom_data)
+system.mes.unitOfMeasure.saveUnitOfMeasure(**uomData)
 ```
 
 ## Parameters
@@ -37,27 +37,27 @@ Returns a JSON representation of the saved unit of measure.
 
 ```python
 # Generate the object structure for a new unit of measure object, set the parameters and save it
-new_uom = system.mes.unitOfMeasure.newUnitOfMeasure()
-new_uom['name'] = 'Pound'
-new_uom['symbol'] = 'lb'
-saved_uom = system.mes.unitOfMeasure.saveUnitOfMeasure(**new_uom)
+newUom = system.mes.unitOfMeasure.newUnitOfMeasure()
+newUom['name'] = 'Pound'
+newUom['symbol'] = 'lb'
+savedUom = system.mes.unitOfMeasure.saveUnitOfMeasure(**newUom)
 
 # Output the JSON representation of the saved unit of measure
-print(saved_uom)
+print(savedUom)
 
 # Generate the object structure for another new unit of measure object to update the previous unit of measure
-uom_data = system.mes.unitOfMeasure.newUnitOfMeasure()
+uomData = system.mes.unitOfMeasure.newUnitOfMeasure()
 
 # Set basic attributes for the updated unit of measure
-uom_data['id'] = saved_uom.id
-uom_data['name'] = 'Pound'
-uom_data['symbol'] = 'lb'
-uom_data['notes'] = 'The weight'
+uomData['id'] = savedUom.id
+uomData['name'] = 'Pound'
+uomData['symbol'] = 'lb'
+uomData['notes'] = 'The weight'
 # (You can continue setting other properties as needed here)
 
 # Save the unit of measure to update it in the system
-updated_uom = system.mes.unitOfMeasure.saveUnitOfMeasure(**uom_data)
+updatedUom = system.mes.unitOfMeasure.saveUnitOfMeasure(**uomData)
 
 # Output the JSON representation of the updated unit of measure
-print(updated_uom)
+print(updatedUom)
 ```

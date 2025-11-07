@@ -44,16 +44,16 @@ Returns a JSON representation of the newly created Merge Request object. The fol
 
 ```python
 # Generate the object structure for a new merge request object with no initial arguments
-new_request = system.mes.inventory.newMergeRequest()
+newRequest = system.mes.inventory.newMergeRequest()
 
 # Set basic attributes for the new merge request
-new_request['sourceLotId'] = '01JJD0ST06-APPRGRCY-25ZQ49FR'
-new_request['destinationLotId'] = '01JJCPQWYG-T9CW4G6Z-96XBWYQB'
+newRequest['sourceLotId'] = '01JJD0ST06-APPRGRCY-25ZQ49FR'
+newRequest['destinationLotId'] = '01JJCPQWYG-T9CW4G6Z-96XBWYQB'
 # (You can continue setting other properties as needed here)
 
 # Merge the request
-merged_request = system.mes.inventory.merge(**new_request)
+mergedRequest = system.mes.inventory.merge(**newRequest)
 
 # Output the JSON representation of the merged request
-print(merged_request)
+print(mergedRequest)
 ```
