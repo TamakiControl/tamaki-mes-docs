@@ -11,7 +11,7 @@ Validates the specified parameters for a produce request and returns any validat
 ## Syntax
 
 ```python
-system.mes.inventory.validateProduceRequest(**produceRequest)
+system.mes.inventory.validateProduceRequest(**produce_request)
 ```
 
 ## Parameters
@@ -49,19 +49,19 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new produce request object with no initial arguments
-produceRequest = system.mes.inventory.newProduceRequest()
+produce_request = system.mes.inventory.newProduceRequest()
 
 # Set basic attributes for the new produce request
-produceRequest['materialIdOrPath'] = 'Bottle/Milk'
-produceRequest['destinationLocationIdOrPath'] = 'DairyCo'
-produceRequest['quantity'] = 610
+produce_request['materialIdOrPath'] = 'Bottle/Milk'
+produce_request['destinationLocationIdOrPath'] = 'DairyCo'
+produce_request['quantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Validate produce request parameters
-validationErrors = system.mes.inventory.validateProduceRequest(**produceRequest)
+validation_errors = system.mes.inventory.validateProduceRequest(**produce_request)
 
-if len(validationErrors) > 0:
-    print('Validation errors found:', validationErrors)
+if len(validation_errors) > 0:
+    print('Validation errors found:', validation_errors)
 else:
     print('Produce request parameters are valid.')
 ```

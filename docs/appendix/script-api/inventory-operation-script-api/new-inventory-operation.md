@@ -77,16 +77,16 @@ Returns a JSON representation of the newly created Inventory Operation object. T
 
 ```python
 # Generate the object structure for a new inventory operation object with no initial arguments
-newInventoryOperation = system.mes.inventory.operation.newInventoryOperation()
+new_inventory_operation = system.mes.inventory.operation.newInventoryOperation()
 
 # Set basic attributes for the new inventory operation
-newInventoryOperation['name'] = 'Lids'
-newInventoryOperation['sourceLocationId'] = '01JD7M94CJ-HPEQEJ1F-QA8EQ6VE'
+new_inventory_operation['name'] = 'Lids'
+new_inventory_operation['sourceLocationId'] = '01JD7M94CJ-HPEQEJ1F-QA8EQ6VE'
 # (You can continue setting other properties as needed here)
 
 # Save the new inventory operation to the system
-savedInventoryOperation = system.mes.inventory.operation.saveInventoryOperation(**newInventoryOperation)
+saved_inventory_operation = system.mes.inventory.operation.saveInventoryOperation(**new_inventory_operation)
 
 # Output the JSON representation of the saved inventory operation
-print(savedInventoryOperation)
+print(saved_inventory_operation)
 ```

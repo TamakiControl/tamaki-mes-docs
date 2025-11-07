@@ -11,7 +11,7 @@ Validates the specified parameters for a receive request and returns any validat
 ## Syntax
 
 ```python
-system.mes.inventory.validateReceiveRequest(**receiveRequest)
+system.mes.inventory.validateReceiveRequest(**receive_request)
 ```
 
 ## Parameters
@@ -46,19 +46,19 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new receive request object with no initial arguments
-receiveRequest = system.mes.inventory.newReceiveRequest()
+receive_request = system.mes.inventory.newReceiveRequest()
 
 # Set basic attributes for the new receive request
-receiveRequest['materialIdOrPath'] = 'Bottle/Milk'
-receiveRequest['destinationLocationIdOrPath'] = 'DairyCo'
-receiveRequest['quantity'] = 610
+receive_request['materialIdOrPath'] = 'Bottle/Milk'
+receive_request['destinationLocationIdOrPath'] = 'DairyCo'
+receive_request['quantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Validate receive request parameters
-validationErrors = system.mes.inventory.validateReceiveRequest(**receiveRequest)
+validation_errors = system.mes.inventory.validateReceiveRequest(**receive_request)
 
-if len(validationErrors) > 0:
-    print('Validation errors found:', validationErrors)
+if len(validation_errors) > 0:
+    print('Validation errors found:', validation_errors)
 else:
     print('Receive request parameters are valid.')
 ```

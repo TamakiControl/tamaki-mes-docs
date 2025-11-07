@@ -52,16 +52,16 @@ Returns a JSON representation of the newly created production order property obj
 
 ```python
 # Generate the object structure for a new production order property object with no initial arguments
-productionOrderProperty = system.mes.productionOrder.newProductionOrderProperty()
+production_order_property = system.mes.productionOrder.newProductionOrderProperty()
 
 # Define production order property details
-productionOrderProperty['name'] = 'Batch Size'
-productionOrderProperty['description'] = 'Batch size property'
+production_order_property['name'] = 'Batch Size'
+production_order_property['description'] = 'Batch size property'
 # (You can continue setting other properties as needed here)
 
 # Save the production order property
-savedProperty = system.mes.productionOrder.saveProductionOrderProperty(**productionOrderProperty)
+saved_property = system.mes.productionOrder.saveProductionOrderProperty(**production_order_property)
 
 # Output the JSON representation of the saved production order property
-print(savedProperty)
+print(saved_property)
 ```

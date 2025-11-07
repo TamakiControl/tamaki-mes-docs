@@ -13,7 +13,7 @@ Creates or updates an [Inventory Operations](../../data-model/inventory-operatio
 ## Syntax
 
 ```python
-system.mes.inventory.operation.saveInventoryOperation(**inventoryOperationData)
+system.mes.inventory.operation.saveInventoryOperation(**inventory_operation_data)
 ```
 
 ## Parameters
@@ -74,21 +74,21 @@ Returns a JSON representation of the saved inventory operation.
 
 ```python
 # Generate the object structure for a new inventory operation object, set the initial arguments and save it
-newInventoryOperation = system.mes.inventory.operation.newInventoryOperation()
-newInventoryOperation['name'] = 'Lids'
-newInventoryOperation['sourceLocationId'] = '01JD7M94CJ-HPEQEJ1F-QA8EQ6VE'
-savedInventoryOperation = system.mes.inventory.operation.saveInventoryOperation(**newInventoryOperation)
+new_inventory_operation = system.mes.inventory.operation.newInventoryOperation()
+new_inventory_operation['name'] = 'Lids'
+new_inventory_operation['sourceLocationId'] = '01JD7M94CJ-HPEQEJ1F-QA8EQ6VE'
+saved_inventory_operation = system.mes.inventory.operation.saveInventoryOperation(**new_inventory_operation)
 
-print(savedInventoryOperation)
+print(saved_inventory_operation)
 
 # Update existing inventory operation
-inventoryOperationData = system.mes.inventory.operation.newInventoryOperation()
-inventoryOperationData['id'] = savedInventoryOperation.id
-inventoryOperationData['name'] = 'Lids'
-inventoryOperationData['sourceLocationId'] = '01JD7M94CJ-HPEQEJ1F-QA8EQ6VE'
-inventoryOperationData['materialId'] = '01JCH3GRA3-5ZYFZV5V-RW3FKFJX'
-inventoryOperationData['unitOfMeasureId'] = '01JCH3T85P-KVCB8ZR5-0B83A3SX'
-updatedInventoryOperation = system.mes.inventory.operation.saveInventoryOperation(**inventoryOperationData)
+inventory_operation_data = system.mes.inventory.operation.newInventoryOperation()
+inventory_operation_data['id'] = saved_inventory_operation.id
+inventory_operation_data['name'] = 'Lids'
+inventory_operation_data['sourceLocationId'] = '01JD7M94CJ-HPEQEJ1F-QA8EQ6VE'
+inventory_operation_data['materialId'] = '01JCH3GRA3-5ZYFZV5V-RW3FKFJX'
+inventory_operation_data['unitOfMeasureId'] = '01JCH3T85P-KVCB8ZR5-0B83A3SX'
+updated_inventory_operation = system.mes.inventory.operation.saveInventoryOperation(**inventory_operation_data)
 
-print(updatedInventoryOperation)
+print(updated_inventory_operation)
 ```

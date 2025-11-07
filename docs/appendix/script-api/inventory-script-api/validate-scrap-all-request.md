@@ -12,7 +12,7 @@ This only checks if the request can be performed based on the attributes given.
 ## Syntax
 
 ```python
-system.mes.inventory.validateScrapAllRequest(**scrapAllRequest)
+system.mes.inventory.validateScrapAllRequest(**scrap_all_request)
 ```
 
 ## Parameters
@@ -41,18 +41,18 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new scrap all request
-newRequest = system.mes.inventory.newScrapAllRequest()
+new_request = system.mes.inventory.newScrapAllRequest()
 
 # Set basic attributes for the new scrap all request
-newRequest['materialIdOrPath'] = 'Bottle/Milk'
-newRequest['sourceLocationIdOrPath'] = 'DairyCo'
+new_request['materialIdOrPath'] = 'Bottle/Milk'
+new_request['sourceLocationIdOrPath'] = 'DairyCo'
 
 # Validate the request before execution
-validationResult = system.mes.inventory.validateScrapAllRequest(**newRequest)
+validation_result = system.mes.inventory.validateScrapAllRequest(**new_request)
 
 # Check if there are any validation errors
-if len(validationResult) > 0:
-    print('Validation errors found:', validationResult)
+if len(validation_result) > 0:
+    print('Validation errors found:', validation_result)
 else:
     print("Request is valid, proceeding with scrap all operation")
 ```

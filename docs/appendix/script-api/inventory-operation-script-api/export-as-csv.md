@@ -47,14 +47,14 @@ A byte array (byte[]) containing the raw CSV export data.
 
 ```python
 csvBytes = system.mes.inventory.operation.exportAsCsv()
-system.perspective.download("inventoryOperations.csv", csvBytes)
+system.perspective.download("inventory_operations.csv", csvBytes)
 ```
 
 ### Script Console
 
 ```python
 csvBytes = system.mes.inventory.operation.exportAsCsv()
-path = system.file.saveFile("inventoryOperations.csv")
+path = system.file.saveFile("inventory_operations.csv")
 if path is not None:
 	system.file.writeFile(path, csvBytes)
 ```

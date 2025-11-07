@@ -51,18 +51,18 @@ Returns a JSON representation of the newly created Move Request object. The foll
 
 ```python
 # Generate the object structure for a new move request object with no initial arguments
-newRequest = system.mes.inventory.newMoveRequest()
+new_request = system.mes.inventory.newMoveRequest()
 
 # Set basic attributes for the new move request
-newRequest['materialIdOrPath'] = 'Bottle/Milk'
-newRequest['sourceLocationIdOrPath'] = 'DairyFarm'
-newRequest['destinationLocationIdOrPath'] = 'DairyCo'
-newRequest['quantity'] = 610
+new_request['materialIdOrPath'] = 'Bottle/Milk'
+new_request['sourceLocationIdOrPath'] = 'DairyFarm'
+new_request['destinationLocationIdOrPath'] = 'DairyCo'
+new_request['quantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Move the request
-movedRequest = system.mes.inventory.move(**newRequest)
+moved_request = system.mes.inventory.move(**new_request)
 
 # Output the JSON representation of the moved request
-print(movedRequest)
+print(moved_request)
 ```

@@ -11,7 +11,7 @@ Scraps inventory from the MES based on the provided parameters.
 ## Syntax
 
 ```python
-system.mes.inventory.scrap(**scrapRequest)
+system.mes.inventory.scrap(**scrap_request)
 ```
 
 ## Parameters
@@ -45,17 +45,17 @@ Returns a JSON representation of an inventory lot record for a Scrap Request.
 
 ```python
 # Generate the object structure for a new scrap request object with no initial arguments
-newRequest = system.mes.inventory.newScrapRequest()
+new_request = system.mes.inventory.newScrapRequest()
 
 # Set basic attributes for the new scrap request
-newRequest['materialIdOrPath'] = 'Bottle/Milk'
-newRequest['sourceLocationIdOrPath'] = 'DairyCo'
-newRequest['quantity'] = 610
+new_request['materialIdOrPath'] = 'Bottle/Milk'
+new_request['sourceLocationIdOrPath'] = 'DairyCo'
+new_request['quantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Scrap the request
-scrappedRequest = system.mes.inventory.scrap(**newRequest)
+scrapped_request = system.mes.inventory.scrap(**new_request)
 
 # Output the JSON representation of the scrapped request
-print(scrappedRequest)
+print(scrapped_request)
 ```

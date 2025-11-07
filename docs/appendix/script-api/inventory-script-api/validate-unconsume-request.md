@@ -11,7 +11,7 @@ Validates the specified parameters for an unconsume request and returns any vali
 ## Syntax
 
 ```python
-system.mes.inventory.validateUnconsumeRequest(**unconsumeRequest)
+system.mes.inventory.validateUnconsumeRequest(**unconsume_request)
 ```
 
 ## Parameters
@@ -46,19 +46,19 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new unconsume request object with no initial arguments
-unconsumeRequest = system.mes.inventory.newUnconsumeRequest()
+unconsume_request = system.mes.inventory.newUnconsumeRequest()
 
 # Set basic attributes for the new unconsume request
-unconsumeRequest['materialIdOrPath'] = 'Bottle/Milk'
-unconsumeRequest['destinationLocationIdOrPath'] = 'DairyCo'
-unconsumeRequest['quantity'] = 610
+unconsume_request['materialIdOrPath'] = 'Bottle/Milk'
+unconsume_request['destinationLocationIdOrPath'] = 'DairyCo'
+unconsume_request['quantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Validate unconsume request parameters
-validationErrors = system.mes.inventory.validateUnconsumeRequest(**unconsumeRequest)
+validation_errors = system.mes.inventory.validateUnconsumeRequest(**unconsume_request)
 
-if len(validationErrors) > 0:
-    print('Validation errors found:', validationErrors)
+if len(validation_errors) > 0:
+    print('Validation errors found:', validation_errors)
 else:
     print('Unconsume request parameters are valid.')
 ```

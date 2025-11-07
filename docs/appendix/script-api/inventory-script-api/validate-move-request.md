@@ -11,7 +11,7 @@ Validates the specified parameters for a move request and returns any validation
 ## Syntax
 
 ```python
-system.mes.inventory.validateMoveRequest(**moveRequest)
+system.mes.inventory.validateMoveRequest(**move_request)
 ```
 
 ## Parameters
@@ -46,20 +46,20 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new move request object with no initial arguments
-moveRequest = system.mes.inventory.newMoveRequest()
+move_request = system.mes.inventory.newMoveRequest()
 
 # Set basic attributes for the new move request
-moveRequest['materialIdOrPath'] = 'Bottle/Milk'
-moveRequest['sourceLocationIdOrPath'] = 'DairyFarm'
-moveRequest['destinationLocationIdOrPath'] = 'DairyCo'
-moveRequest['quantity'] = 610
+move_request['materialIdOrPath'] = 'Bottle/Milk'
+move_request['sourceLocationIdOrPath'] = 'DairyFarm'
+move_request['destinationLocationIdOrPath'] = 'DairyCo'
+move_request['quantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Validate move request parameters
-validationErrors = system.mes.inventory.validateMoveRequest(**moveRequest)
+validation_errors = system.mes.inventory.validateMoveRequest(**move_request)
 
-if len(validationErrors) > 0:
-    print('Validation errors found:', validationErrors)
+if len(validation_errors) > 0:
+    print('Validation errors found:', validation_errors)
 else:
     print('Move request parameters are valid.')
 ```

@@ -33,8 +33,8 @@ Returns a JSON representation of the updated material property value.
 
 ```python
 # Update the value of a material property value
-updatedPropertyValue = system.mes.material.setPropertyValue('IRB/5391537510212', 'Density', 200)
+updated_property_value = system.mes.material.setPropertyValue('IRB/5391537510212', 'Density', 200)
 
 # Output the JSON representation of the updated material property value
-print(updatedPropertyValue)
+print(updated_property_value)
 ```

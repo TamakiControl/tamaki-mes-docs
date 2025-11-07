@@ -30,8 +30,8 @@ Returns a list of JSON objects representing all unit of measure conversions.
 
 ```python
 # Retrieve all unit of measure conversions
-allUomcs = system.mes.unitOfMeasure.getAllConversions()
+all_uomcs = system.mes.unitOfMeasure.getAllConversions()
 
 # Output the list of unit of measure conversions
-print(allUomcs)
+print(all_uomcs)
 ```

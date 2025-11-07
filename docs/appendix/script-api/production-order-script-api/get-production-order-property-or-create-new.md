@@ -14,7 +14,7 @@ Otherwise, creates a new [Production Order Properties](../../data-model/producti
 ## Syntax
 
 ```python
-system.mes.productionOrder.getProductionOrderPropertyOrCreateNew(**propertyData)
+system.mes.productionOrder.getProductionOrderPropertyOrCreateNew(**property_data)
 ```
 
 ## Parameters
@@ -48,15 +48,15 @@ Returns a JSON representation of the production order property.
 
 ```python
 # Generate the object structure for a new production order property object
-productionOrderProperty = system.mes.productionOrder.newProductionOrderProperty()
+production_order_property = system.mes.productionOrder.newProductionOrderProperty()
 
 # Define property details
-productionOrderProperty['name'] = 'Batch Size'
-productionOrderProperty['description'] = 'Batch size property'
+production_order_property['name'] = 'Batch Size'
+production_order_property['description'] = 'Batch size property'
 # (You can continue setting other properties as needed here)
 
 # Get the property if it exists, otherwise creates it with the given attributes
-property = system.mes.productionOrder.getProductionOrderPropertyOrCreateNew(**productionOrderProperty)
+property = system.mes.productionOrder.getProductionOrderPropertyOrCreateNew(**production_order_property)
 
 # Output the JSON representation of the property
 print(property)

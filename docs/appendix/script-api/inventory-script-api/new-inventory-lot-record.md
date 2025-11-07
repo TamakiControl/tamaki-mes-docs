@@ -54,17 +54,17 @@ Returns a JSON representation of the newly created Inventory Lot Record object. 
 
 ```python
 # Generate the object structure for a new inventory lot record object with no initial arguments
-newLotRecord = system.mes.inventory.newInventoryLotRecord()
+new_lot_record = system.mes.inventory.newInventoryLotRecord()
 
 # Set basic attributes for the new inventory lot record
-newLotRecord['lotRecordType'] = 'CONSUME'
-newLotRecord['inventoryLotId'] = '01JE6F0CE9-T94PZD8R-TH9J01TJ'
-newLotRecord['status'] = 'COMPLETED'
+new_lot_record['lotRecordType'] = 'CONSUME'
+new_lot_record['inventoryLotId'] = '01JE6F0CE9-T94PZD8R-TH9J01TJ'
+new_lot_record['status'] = 'COMPLETED'
 # (You can continue setting other properties as needed here)
 
 # Save the new inventory lot record to the system
-savedLotRecord = system.mes.inventory.saveInventoryLotRecord(**newLotRecord)
+saved_lot_record = system.mes.inventory.saveInventoryLotRecord(**new_lot_record)
 
 # Output the JSON representation of the saved inventory lot record
-print(savedLotRecord)
+print(saved_lot_record)
 ```

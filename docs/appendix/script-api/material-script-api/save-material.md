@@ -13,7 +13,7 @@ Creates or updates a [Materials](../../data-model/material-model/material) recor
 ## Syntax
 
 ```python
-system.mes.material.saveMaterial(**materialData)
+system.mes.material.saveMaterial(**material_data)
 ```
 
 ## Parameters
@@ -42,29 +42,29 @@ Returns a JSON representation of the saved material.
 
 ```python
 # Generate the object structure for a new material object, set the initial arguments and save it
-newMaterial = system.mes.material.newMaterial()
-newMaterial['materialClassId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
-newMaterial['name'] = '5391537510212'
-newMaterial['unitOfMeasureId'] = '01JCH3ENDJ-351WQQPX-WRBNTY4C'
-savedMaterial = system.mes.material.saveMaterial(**newMaterial)
+new_material = system.mes.material.newMaterial()
+new_material['materialClassId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
+new_material['name'] = '5391537510212'
+new_material['unitOfMeasureId'] = '01JCH3ENDJ-351WQQPX-WRBNTY4C'
+saved_material = system.mes.material.saveMaterial(**new_material)
 
 # Output the JSON representation of the saved material
-print(savedMaterial)
+print(saved_material)
 
 # Generate the object structure for another new material to update the previous material
-materialData = system.mes.material.newMaterial()
+material_data = system.mes.material.newMaterial()
 
 # Set basic attributes for the updated material
-materialData['id'] = savedMaterial.id
-materialData['materialClassId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
-materialData['name'] = '5391537510212'
-materialData['unitOfMeasureId'] = '01JCH3ENDJ-351WQQPX-WRBNTY4C'
-materialData['shelfLifeDays'] = 15
+material_data['id'] = saved_material.id
+material_data['materialClassId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
+material_data['name'] = '5391537510212'
+material_data['unitOfMeasureId'] = '01JCH3ENDJ-351WQQPX-WRBNTY4C'
+material_data['shelfLifeDays'] = 15
 # (You can continue setting other properties as needed here)
 
 # Save the material to update it in the system
-updatedMaterial = system.mes.material.saveMaterial(**materialData)
+updated_material = system.mes.material.saveMaterial(**material_data)
 
 # Output the JSON representation of the updated material
-print(updatedMaterial)
+print(updated_material)
 ```

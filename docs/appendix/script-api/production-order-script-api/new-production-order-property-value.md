@@ -44,29 +44,29 @@ Returns a JSON representation of the newly created production order property val
 
 ```python
 # Generate the object structure for a new production order object with no initial arguments
-newProductionOrder = system.mes.productionOrder.newProductionOrder()
-newProductionOrder['productId'] = '01JCH3ENGW-82KJDZDR-JHGYCXQN'
-newProductionOrder['name'] = 'Order001'
-newProductionOrder['unitOfMeasureId'] = '01JCH3EPVP-1MNNDJTS-37Z75NGB'
-savedProductionOrder = system.mes.productionOrder.saveProductionOrder(**newProductionOrder)
+new_production_order = system.mes.productionOrder.newProductionOrder()
+new_production_order['productId'] = '01JCH3ENGW-82KJDZDR-JHGYCXQN'
+new_production_order['name'] = 'Order001'
+new_production_order['unitOfMeasureId'] = '01JCH3EPVP-1MNNDJTS-37Z75NGB'
+saved_production_order = system.mes.productionOrder.saveProductionOrder(**new_production_order)
 
 # Generate the object structure for a new production order property object with no initial arguments
-productionOrderProperty = system.mes.productionOrder.newProductionOrderProperty()
-productionOrderProperty['name'] = 'Batch Size'
-productionOrderProperty['description'] = 'Batch size property'
-savedProperty = system.mes.productionOrder.saveProductionOrderProperty(**productionOrderProperty)
+production_order_property = system.mes.productionOrder.newProductionOrderProperty()
+production_order_property['name'] = 'Batch Size'
+production_order_property['description'] = 'Batch size property'
+saved_property = system.mes.productionOrder.saveProductionOrderProperty(**production_order_property)
 
 # Generate the object structure for a new property value object with no initial arguments
-newPropertyValue = system.mes.productionOrder.newProductionOrderPropertyValue()
+new_property_value = system.mes.productionOrder.newProductionOrderPropertyValue()
 
 # Define property value details
-newPropertyValue['productionOrderId'] = savedProductionOrder.id
-newPropertyValue['propertyId'] = savedProperty.id
+new_property_value['productionOrderId'] = saved_production_order.id
+new_property_value['propertyId'] = saved_property.id
 # (You can continue setting other properties as needed here)
 
 # Save the property value
-savedPropertyValue = system.mes.productionOrder.saveProductionOrderPropertyValue(**newPropertyValue)
+saved_property_value = system.mes.productionOrder.saveProductionOrderPropertyValue(**new_property_value)
 
 # Output the JSON representation of the saved production order property value
-print(savedPropertyValue)
+print(saved_property_value)
 ```

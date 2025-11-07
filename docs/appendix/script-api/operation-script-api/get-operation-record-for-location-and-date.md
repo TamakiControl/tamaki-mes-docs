@@ -32,8 +32,8 @@ Returns a JSON representation of the operation record. Returns nothing if no ope
 
 ```python
 # Retrieve an operation record by location, start date and end date
-operationRecord = system.mes.operation.getOperationRecordForLocationAndDate('01JD7M94CJ-HPEQEJ1F-QA8EQ6VE', 1704067200000, 1735708800000)
+operation_record = system.mes.operation.getOperationRecordForLocationAndDate('01JD7M94CJ-HPEQEJ1F-QA8EQ6VE', 1704067200000, 1735708800000)
 
 # Output the operation record
-print(operationRecord)
+print(operation_record)
 ```

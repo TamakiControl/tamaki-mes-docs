@@ -33,8 +33,8 @@ Returns a JSON representation of the updated production order property value.
 
 ```python
 # Update the value of a production order property value
-updatedPropertyValue = system.mes.productionOrder.setPropertyValue('01JPMTA7K3-E8EHA4MD-7C304P4Z', 'Batch Size', 200)
+updated_property_value = system.mes.productionOrder.setPropertyValue('01JPMTA7K3-E8EHA4MD-7C304P4Z', 'Batch Size', 200)
 
 # Output the JSON representation of the updated production order property value
-print(updatedPropertyValue)
+print(updated_property_value)
 ```

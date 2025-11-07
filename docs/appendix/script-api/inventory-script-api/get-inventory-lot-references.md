@@ -42,8 +42,8 @@ The JSON Objects in references has the following properties:
 
 ```python
 # Retrieve the references for the inventory lot specified
-lotReferences = system.mes.inventory.getInventoryLotReferences('01JE6F0CE9-T94PZD8R-TH9J01TJ')
+lot_references = system.mes.inventory.getInventoryLotReferences('01JE6F0CE9-T94PZD8R-TH9J01TJ')
 
 # Output the inventory lot references
-print(lotReferences)
+print(lot_references)
 ```

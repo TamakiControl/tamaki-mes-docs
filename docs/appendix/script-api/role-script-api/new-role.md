@@ -19,7 +19,7 @@ JSON representation of a new RoleDTO object.
 ## Example
 ```python
 role = system.mes.role.newRole()
-role["securityLevels"] = ["Authenticated/Roles/Administrator"]
+role["security_levels"] = ["Authenticated/Roles/Administrator"]
 role["permissions"] = ["MATERIALS.WRITE" , "INVENTORY.READ"]
-role["roleRequirementType"] = "ALL_OF"
+role["role_requirement_type"] = "ALL_OF"
 ```

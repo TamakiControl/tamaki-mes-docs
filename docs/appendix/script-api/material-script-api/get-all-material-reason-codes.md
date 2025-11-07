@@ -30,8 +30,8 @@ Returns a list of JSON objects representing all material reason codes.
 
 ```python
 # Retrieve all materials
-allMaterialReasonCodes = system.mes.material.getAllMaterialReasonCodes()
+all_material_reason_codes = system.mes.material.getAllMaterialReasonCodes()
 
 # Output the list of materials
-print(allMaterialReasonCodes)
+print(all_material_reason_codes)
 ```

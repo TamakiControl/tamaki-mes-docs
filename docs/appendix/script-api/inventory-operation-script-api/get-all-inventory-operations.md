@@ -30,12 +30,12 @@ Returns a list of JSON representations of inventory operation objects. Each obje
 
 ```python
 # Retrieve all inventory operations
-allInventoryOperations = system.mes.inventory.operation.getAllInventoryOperations()
+all_inventory_operations = system.mes.inventory.operation.getAllInventoryOperations()
 
 # Print the number of inventory operations
-print("Number of inventory operations: {0}".format(len(allInventoryOperations)))
+print("Number of inventory operations: {0}".format(len(all_inventory_operations)))
 
 # Iterate through each inventory operation and print basic information
-for operation in allInventoryOperations:
+for operation in all_inventory_operations:
     print("ID: {0}, Name: {1}, Type: {2}".format(operation['id'], operation['name'], operation['operationType']))
 ```

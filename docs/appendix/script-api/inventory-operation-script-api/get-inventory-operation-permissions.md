@@ -30,8 +30,8 @@ Returns a list of strings for each of the inventory operation permissions.
 
 ```python
 # Retrieve all inventory operation permissions
-inventoryOperationPermissions = system.mes.inventory.operation.getInventoryOperationPermissions()
+inventory_operation_permissions = system.mes.inventory.operation.getInventoryOperationPermissions()
 
 # Output the list of inventory operation permissions
-print(inventoryOperationPermissions)
+print(inventory_operation_permissions)
 ```

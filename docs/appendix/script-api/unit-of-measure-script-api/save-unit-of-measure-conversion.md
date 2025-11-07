@@ -13,7 +13,7 @@ Creates or updates a [Unit Of Measure Conversions](../../data-model/utility-mode
 ## Syntax
 
 ```python
-system.mes.unitOfMeasure.saveUnitOfMeasureConversion(**uomcData)
+system.mes.unitOfMeasure.saveUnitOfMeasureConversion(**uomc_data)
 ```
 
 ## Parameters
@@ -39,28 +39,28 @@ Returns a JSON representation of the saved unit of measure conversion.
 
 ```python
 # Generate the object structure for a new unit of measure conversion object, set the parameters and save it
-newUomc = system.mes.unitOfMeasure.newUnitOfMeasureConversion()
-newUomc['toId'] = '01JCH3T85P-KVCB8ZR5-0B83A3SX'
-newUomc['conversionFactor'] = 0.33
-newUomc['fromId'] = '01JCH4NB3J-BTERAZ27-QEQQN4ME'
-savedUomc = system.mes.unitOfMeasure.saveUnitOfMeasureConversion(**newUomc)
+new_uomc = system.mes.unitOfMeasure.newUnitOfMeasureConversion()
+new_uomc['toId'] = '01JCH3T85P-KVCB8ZR5-0B83A3SX'
+new_uomc['conversionFactor'] = 0.33
+new_uomc['fromId'] = '01JCH4NB3J-BTERAZ27-QEQQN4ME'
+saved_uomc = system.mes.unitOfMeasure.saveUnitOfMeasureConversion(**new_uomc)
 
 # Output the JSON representation of the saved unit of measure conversion
-print(savedUomc)
+print(saved_uomc)
 
 # Generate the object structure for another new unit of measure conversion object to update the previous unit of measure conversion
-uomcData = system.mes.unitOfMeasure.newUnitOfMeasureConversion()
+uomc_data = system.mes.unitOfMeasure.newUnitOfMeasureConversion()
 
 # Set basic attributes for the updated unit of measure conversion
-uomcData['toId'] = '01JCH3T85P-KVCB8ZR5-0B83A3SX'
-uomcData['conversionFactor'] = 0.33
-uomcData['fromId'] = '01JCH4NB3J-BTERAZ27-QEQQN4ME'
-uomcData['notes'] = 'Conversion from L to BT'
+uomc_data['toId'] = '01JCH3T85P-KVCB8ZR5-0B83A3SX'
+uomc_data['conversionFactor'] = 0.33
+uomc_data['fromId'] = '01JCH4NB3J-BTERAZ27-QEQQN4ME'
+uomc_data['notes'] = 'Conversion from L to BT'
 # (You can continue setting other properties as needed here)
 
 # Save the unit of measure conversion to update it in the system
-updatedUomc = system.mes.unitOfMeasure.saveUnitOfMeasureConversion(**uomcData)
+updated_uomc = system.mes.unitOfMeasure.saveUnitOfMeasureConversion(**uomc_data)
 
 # Output the JSON representation of the updated unit of measure conversion
-print(updatedUomc)
+print(updated_uomc)
 ```

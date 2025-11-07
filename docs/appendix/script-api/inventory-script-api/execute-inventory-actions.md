@@ -31,28 +31,28 @@ Returns a list of JSON representation of inventory lot records for the inventory
 
 ```python
 # Generate the object structure for a new receive request object with no initial arguments
-receiveRequest = system.mes.inventory.newReceiveRequest()
+receive_request = system.mes.inventory.newReceiveRequest()
 
 # Set basic attributes for the new receive request
-receiveRequest['materialIdOrPath'] = 'Bottle/Milk'
-receiveRequest['destinationLocationIdOrPath'] = 'DairyCo'
-receiveRequest['quantity'] = 610
+receive_request['materialIdOrPath'] = 'Bottle/Milk'
+receive_request['destinationLocationIdOrPath'] = 'DairyCo'
+receive_request['quantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Generate the object structure for a new consume request object with no initial arguments
-consumeRequest = system.mes.inventory.newConsumeRequest()
+consume_request = system.mes.inventory.newConsumeRequest()
 
 # Set basic attributes for the new consume request
-consumeRequest['materialIdOrPath'] = 'Bottle/Milk'
-consumeRequest['sourceLocationIdOrPath'] = 'DairyCo'
-consumeRequest['quantity'] = 610
+consume_request['materialIdOrPath'] = 'Bottle/Milk'
+consume_request['sourceLocationIdOrPath'] = 'DairyCo'
+consume_request['quantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Build the request as a dictionary
-inventoryActionsRequest = {
-    'requests' : [receiveRequest, consumeRequest]
+inventory_actions_request = {
+    'requests' : [receive_request, consume_request]
 }
 
 # Execute the inventory actions
-system.mes.inventory.executeInventoryActions(**inventoryActionsRequest)
+system.mes.inventory.executeInventoryActions(**inventory_actions_request)
 ```

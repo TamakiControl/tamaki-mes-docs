@@ -43,8 +43,8 @@ Returns a JSON representation of the production order property value. Returns no
 
 ```python
 # Retrieve a production order property value by ID
-propertyValue = system.mes.productionOrder.getProductionOrderPropertyValue('01JQ2AN7CQ-MWR6A9M0-FQSEAHTJ')
+property_value = system.mes.productionOrder.getProductionOrderPropertyValue('01JQ2AN7CQ-MWR6A9M0-FQSEAHTJ')
 
 # Output the production order property value
-print(propertyValue)
+print(property_value)
 ```

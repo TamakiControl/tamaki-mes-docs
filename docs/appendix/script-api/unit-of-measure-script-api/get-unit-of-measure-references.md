@@ -42,8 +42,8 @@ The JSON Objects in references has the following properties:
 
 ```python
 # Retrieve the references for the unit of measure specified
-uomReferences = system.mes.unitOfMeasure.getUnitOfMeasureReferences('01JS27F59C-BRW0RCQ0-VBC38S4K')
+uom_references = system.mes.unitOfMeasure.getUnitOfMeasureReferences('01JS27F59C-BRW0RCQ0-VBC38S4K')
 
 # Output the unit of measure references
-print(uomReferences)
+print(uom_references)
 ```

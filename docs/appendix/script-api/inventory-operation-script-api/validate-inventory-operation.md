@@ -14,7 +14,7 @@ This only checks if the inventory operation object can be saved based on the att
 ## Syntax
 
 ```python
-system.mes.inventory.operation.validateInventoryOperation(**inventoryOperationData)
+system.mes.inventory.operation.validateInventoryOperation(**inventory_operation_data)
 ```
 
 ## Parameters
@@ -75,18 +75,18 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new inventory operation object
-inventoryOperationData = system.mes.inventory.operation.newInventoryOperation()
+inventory_operation_data = system.mes.inventory.operation.newInventoryOperation()
 
 # Set basic attributes for the new inventory operation
-inventoryOperationData['name'] = 'Lids'
-inventoryOperationData['sourceLocationId'] = '01JD7M94CJ-HPEQEJ1F-QA8EQ6VE'
+inventory_operation_data['name'] = 'Lids'
+inventory_operation_data['sourceLocationId'] = '01JD7M94CJ-HPEQEJ1F-QA8EQ6VE'
 # (You can continue setting other properties as needed here)
 
 # Validate inventory operation parameters
-validationErrors = system.mes.inventory.operation.validateInventoryOperation(**inventoryOperationData)
+validation_errors = system.mes.inventory.operation.validateInventoryOperation(**inventory_operation_data)
 
-if len(validationErrors) > 0:
-    print('Validation errors found:', validationErrors)
+if len(validation_errors) > 0:
+    print('Validation errors found:', validation_errors)
 else:
     print('Inventory operation parameters are valid.')
 ```

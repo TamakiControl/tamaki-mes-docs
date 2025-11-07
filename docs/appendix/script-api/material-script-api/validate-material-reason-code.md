@@ -14,7 +14,7 @@ This only checks if the material reason code object can be saved based on the at
 ## Syntax
 
 ```python
-system.mes.material.validateMaterialReasonCode(**materialReasonCodeData)
+system.mes.material.validateMaterialReasonCode(**material_reason_code_data)
 ```
 
 ## Parameters
@@ -40,18 +40,18 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new material reason code object
-materialReasonCodeData = system.mes.material.newMaterialReasonCode()
+material_reason_code_data = system.mes.material.newMaterialReasonCode()
 
 # Set basic attributes for the new material reason code
-materialReasonCodeData['lotRecordType'] = 'CONSUME'
-materialReasonCodeData['reasonCode'] = 'SCRP001'
+material_reason_code_data['lotRecordType'] = 'CONSUME'
+material_reason_code_data['reasonCode'] = 'SCRP001'
 # (You can continue setting other properties as needed here)
 
 # Validate material reason code parameters
-validationErrors = system.mes.material.validateMaterialReasonCode(**materialReasonCodeData)
+validation_errors = system.mes.material.validateMaterialReasonCode(**material_reason_code_data)
 
-if len(validationErrors) > 0:
-    print('Validation errors found:', validationErrors)
+if len(validation_errors) > 0:
+    print('Validation errors found:', validation_errors)
 else:
     print('Material reason code parameters are valid.')
 ```

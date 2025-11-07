@@ -14,7 +14,7 @@ This only checks if the production order property value object can be saved base
 ## Syntax
 
 ```python
-system.mes.productionOrder.validateProductionOrderPropertyValue(**propertyData)
+system.mes.productionOrder.validateProductionOrderPropertyValue(**property_data)
 ```
 
 ## Parameters
@@ -40,19 +40,19 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new property value object
-propertyValueData = system.mes.productionOrder.newProductionOrderPropertyValue()
+property_value_data = system.mes.productionOrder.newProductionOrderPropertyValue()
 
 # Define property value details
-propertyValueData['productionOrderId'] = system.mes.productionOrder.getProductionOrder('Order001')['id']
-propertyValueData['propertyId'] = system.mes.productionOrder.getProductionOrderProperty('Batch Size')['id']
-propertyValueData['dataType'] = 'Int' # Must be the same data type as the property
-propertyValueData['value'] = 100
+property_value_data['productionOrderId'] = system.mes.productionOrder.getProductionOrder('Order001')['id']
+property_value_data['propertyId'] = system.mes.productionOrder.getProductionOrderProperty('Batch Size')['id']
+property_value_data['dataType'] = 'Int' # Must be the same data type as the property
+property_value_data['value'] = 100
 
 # Validate production order property value parameters
-validationErrors = system.mes.productionOrder.validateProductionOrderPropertyValue(**propertyValueData)
+validation_errors = system.mes.productionOrder.validateProductionOrderPropertyValue(**property_value_data)
 
-if len(validationErrors) > 0:
-    print('Validation errors found:', validationErrors)
+if len(validation_errors) > 0:
+    print('Validation errors found:', validation_errors)
 else:
     print('Production order property value parameters are valid.')
 ```

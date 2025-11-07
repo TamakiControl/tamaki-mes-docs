@@ -13,7 +13,7 @@ Creates or updates an [Inventory Lot Records](../../data-model/inventory-operati
 ## Syntax
 
 ```python
-system.mes.inventory.saveInventoryLotRecord(**lotRecordData)
+system.mes.inventory.saveInventoryLotRecord(**lot_record_data)
 ```
 
 ## Parameters
@@ -51,29 +51,29 @@ Returns a JSON representation of the saved inventory lot record.
 
 ```python
 # Generate the object structure for a new inventory lot record object, set the initial arguments and save it
-newLotRecord = system.mes.inventory.newInventoryLotRecord()
-newLotRecord['lotRecordType'] = 'CONSUME'
-newLotRecord['inventoryLotId'] = '01JE6F0CE9-T94PZD8R-TH9J01TJ'
-newLotRecord['status'] = 'COMPLETED'
-savedLotRecord = system.mes.inventory.saveInventoryLotRecord(**newLotRecord)
+new_lot_record = system.mes.inventory.newInventoryLotRecord()
+new_lot_record['lotRecordType'] = 'CONSUME'
+new_lot_record['inventoryLotId'] = '01JE6F0CE9-T94PZD8R-TH9J01TJ'
+new_lot_record['status'] = 'COMPLETED'
+saved_lot_record = system.mes.inventory.saveInventoryLotRecord(**new_lot_record)
 
 # Output the JSON representation of the saved inventory lot record
-print(savedLotRecord)
+print(saved_lot_record)
 
 # Generate the object structure for another new inventory lot record object to update the previous inventory lot
-lotRecordData = system.mes.inventory.newInventoryLotRecord()
+lot_record_data = system.mes.inventory.newInventoryLotRecord()
 
 # Set basic attributes for the updated inventory lot record
-lotRecordData['id'] = savedLotRecord.id
-lotRecordData['lotRecordType'] = 'CONSUME'
-lotRecordData['inventoryLotId'] = '01JE6F0CE9-T94PZD8R-TH9J01TJ'
-lotRecordData['status'] = 'COMPLETED'
-lotRecordData['lotStatus'] = 'OPEN'
+lot_record_data['id'] = saved_lot_record.id
+lot_record_data['lotRecordType'] = 'CONSUME'
+lot_record_data['inventoryLotId'] = '01JE6F0CE9-T94PZD8R-TH9J01TJ'
+lot_record_data['status'] = 'COMPLETED'
+lot_record_data['lotStatus'] = 'OPEN'
 # (You can continue setting other properties as needed here)
 
 # Save the inventory lot record to update it in the system
-updatedLotRecord = system.mes.inventory.saveInventoryLotRecord(**lotRecordData)
+updated_lot_record = system.mes.inventory.saveInventoryLotRecord(**lot_record_data)
 
 # Output the JSON representation of the updated inventory lot
-print(updatedLotRecord)
+print(updated_lot_record)
 ```

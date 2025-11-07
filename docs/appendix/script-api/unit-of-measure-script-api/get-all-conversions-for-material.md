@@ -30,8 +30,8 @@ Returns a list of JSON objects representing all unit of measure conversions for 
 
 ```python
 # Retrieve all unit of measure for a material
-allUomcs = system.mes.unitOfMeasure.getAllConversionsForMaterial('01JCH3W58Y-5HJ7PDE9-V5MG3987')
+all_uomcs = system.mes.unitOfMeasure.getAllConversionsForMaterial('01JCH3W58Y-5HJ7PDE9-V5MG3987')
 
 # Output the list of unit of measure conversions
-print(allUomcs)
+print(all_uomcs)
 ```

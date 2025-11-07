@@ -47,14 +47,14 @@ A byte array (byte[]) containing the raw JSON export data.
 
 ```python
 jsonBytes = system.mes.inventory.operation.exportAsJson()
-system.perspective.download("inventoryOperations.json", jsonBytes)
+system.perspective.download("inventory_operations.json", jsonBytes)
 ```
 
 ### Script Console
 
 ```python
 jsonBytes = system.mes.inventory.operation.exportAsJson()
-path = system.file.saveFile("inventoryOperations.json")
+path = system.file.saveFile("inventory_operations.json")
 if path is not None:
 	system.file.writeFile(path, jsonBytes)
 ```

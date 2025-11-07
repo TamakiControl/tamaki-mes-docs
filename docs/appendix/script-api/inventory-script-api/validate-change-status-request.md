@@ -11,7 +11,7 @@ Validates the specified parameters for a change status request and returns any v
 ## Syntax
 
 ```python
-system.mes.inventory.validateChangeStatusRequest(**changeStatusRequest)
+system.mes.inventory.validateChangeStatusRequest(**change_status_request)
 ```
 
 ## Parameters
@@ -36,18 +36,18 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new change status request object with no initial arguments
-changeStatusRequest = system.mes.inventory.newChangeStatusRequest()
+change_status_request = system.mes.inventory.newChangeStatusRequest()
 
 # Set basic attributes for the new change status request
-changeStatusRequest['newStatus'] = 'AVAILABLE'
-changeStatusRequest['lotId'] = '01JJCQEJYG-E31FHVTF-JB6WEJTC'
+change_status_request['newStatus'] = 'AVAILABLE'
+change_status_request['lotId'] = '01JJCQEJYG-E31FHVTF-JB6WEJTC'
 # (You can continue setting other properties as needed here)
 
 # Validate change status request parameters
-validationErrors = system.mes.inventory.validateChangeStatusRequest(**changeStatusRequest)
+validation_errors = system.mes.inventory.validateChangeStatusRequest(**change_status_request)
 
-if len(validationErrors) > 0:
-    print('Validation errors found:', validationErrors)
+if len(validation_errors) > 0:
+    print('Validation errors found:', validation_errors)
 else:
     print('Change status request parameters are valid.')
 ```

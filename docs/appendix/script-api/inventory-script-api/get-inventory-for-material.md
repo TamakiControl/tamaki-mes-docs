@@ -57,8 +57,8 @@ Each JSON object has the following properties:
 
 ```python
 # Retrieve inventory for a material
-inventoryForMaterial = system.mes.inventory.getInventoryForMaterial('Bottle/Milk')
+inventory_for_material = system.mes.inventory.getInventoryForMaterial('Bottle/Milk')
 
 # Output the list of inventories
-print(inventoryForMaterial)
+print(inventory_for_material)
 ```

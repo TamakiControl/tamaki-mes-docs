@@ -14,7 +14,7 @@ This only checks if the unit of measure conversion object can be saved based on 
 ## Syntax
 
 ```python
-system.mes.unitOfMeasure.validateUnitOfMeasureConversion(**uomcData)
+system.mes.unitOfMeasure.validateUnitOfMeasureConversion(**uomc_data)
 ```
 
 ## Parameters
@@ -40,19 +40,19 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new unit of measure conversion object
-uomcData = system.mes.unitOfMeasure.newUnitOfMeasureConversion()
+uomc_data = system.mes.unitOfMeasure.newUnitOfMeasureConversion()
 
 # Set basic attributes for the new unit of measure conversion
-uomcData['toId'] = '01JCH3T85P-KVCB8ZR5-0B83A3SX'
-uomcData['conversionFactor'] = '0.33'
-uomcData['fromId'] = '01JCH4NB3J-BTERAZ27-QEQQN4ME'
+uomc_data['toId'] = '01JCH3T85P-KVCB8ZR5-0B83A3SX'
+uomc_data['conversionFactor'] = '0.33'
+uomc_data['fromId'] = '01JCH4NB3J-BTERAZ27-QEQQN4ME'
 # (You can continue setting other properties as needed here)
 
 # Validate unit of measure conversion parameters
-validationErrors = system.mes.unitOfMeasure.validateUnitOfMeasureConversion(**uomcData)
+validation_errors = system.mes.unitOfMeasure.validateUnitOfMeasureConversion(**uomc_data)
 
-if len(validationErrors) > 0:
-    print('Validation errors found:', validationErrors)
+if len(validation_errors) > 0:
+    print('Validation errors found:', validation_errors)
 else:
     print('Unit of measure conversion parameters are valid.')
 ```

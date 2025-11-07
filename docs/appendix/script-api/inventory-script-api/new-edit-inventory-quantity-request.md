@@ -44,17 +44,17 @@ Returns a JSON representation of the newly created Edit Inventory Quantity Reque
 
 ```python
 # Generate the object structure for a new edit inventory quantity request object with no initial arguments
-newRequest = system.mes.inventory.newEditInventoryQuantityRequest()
+new_request = system.mes.inventory.newEditInventoryQuantityRequest()
 
 # Set basic attributes for the new edit inventory quantity request
-newRequest['materialIdOrPath'] = 'Bottle/Milk'
-newRequest['sourceLocationIdOrPath'] = 'DairyCo'
-newRequest['newQuantity'] = 610
+new_request['materialIdOrPath'] = 'Bottle/Milk'
+new_request['sourceLocationIdOrPath'] = 'DairyCo'
+new_request['newQuantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Edit the quantity of the inventory
-editedInventoryQuantityRequest = system.mes.inventory.editInventoryQuantity(**newRequest)
+edited_inventory_quantity_request = system.mes.inventory.editInventoryQuantity(**new_request)
 
 # Output the JSON representation of the edit inventory quantity request
-print(editedInventoryQuantityRequest)
+print(edited_inventory_quantity_request)
 ```

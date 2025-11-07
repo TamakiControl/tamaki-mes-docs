@@ -59,8 +59,8 @@ Returns a list of flattened JSON objects representing the bill of materials asso
 
 ```python
 # Retrieve the flattened bill of materials for a given production order
-flattenedBillOfMaterials = system.mes.productionOrder.getBillOfMaterialsForOrderFlattened('01JPMTA7K3-E8EHA4MD-7C304P4Z')
+flattened_bill_of_materials = system.mes.productionOrder.getBillOfMaterialsForOrderFlattened('01JPMTA7K3-E8EHA4MD-7C304P4Z')
 
 # Output the flattened bill of materials
-print(flattenedBillOfMaterials)
+print(flattened_bill_of_materials)
 ```

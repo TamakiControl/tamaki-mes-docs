@@ -35,8 +35,8 @@ Returns a JSON object of the inventory lot record of the inventory operation. Th
 
 ```python
 # Start the inventory operation
-startedLotRecord = system.mes.inventory.operation.startInventoryOperation('01JPAND53P-BZ61RZHZ-V7C6EEHG', '01JPBC4H3V-J4X3FYKS-NRNVEKMM', None, None, None, None)
+started_lot_record = system.mes.inventory.operation.startInventoryOperation('01JPAND53P-BZ61RZHZ-V7C6EEHG', '01JPBC4H3V-J4X3FYKS-NRNVEKMM', None, None, None, None)
 
 # Output the inventory lot record of the started inventory operation
-print(startedLotRecord)
+print(started_lot_record)
 ```

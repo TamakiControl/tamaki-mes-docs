@@ -52,8 +52,8 @@ Returns a list of JSON objects representing all inventory lots.
 
 ```python
 # Retrieve all inventory lots
-allLots = system.mes.inventory.getAllLots()
+all_lots = system.mes.inventory.getAllLots()
 
 # Output the list of inventory lots
-print(allLots)
+print(all_lots)
 ```

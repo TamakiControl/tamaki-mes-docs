@@ -30,8 +30,8 @@ Returns a JSON objects representing a production order associated with the opera
 
 ```python
 # Retrieve the production order associated with the operation
-productionOrder = system.mes.operation.getProductionOrderForOperation('01JPBCPKSR-972W3V0Y-H00NNSKQ')
+production_order = system.mes.operation.getProductionOrderForOperation('01JPBCPKSR-972W3V0Y-H00NNSKQ')
 
 # Output the production order
-print(productionOrder)
+print(production_order)
 ```

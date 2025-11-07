@@ -54,17 +54,17 @@ Returns a JSON representation of the newly created Produce Request object. The f
 
 ```python
 # Generate the object structure for a new produce request object with no initial arguments
-newRequest = system.mes.inventory.newProduceRequest()
+new_request = system.mes.inventory.newProduceRequest()
 
 # Set basic attributes for the new produce request
-newRequest['materialIdOrPath'] = 'Bottle/Milk'
-newRequest['destinationLocationIdOrPath'] = 'DairyCo'
-newRequest['quantity'] = 610
+new_request['materialIdOrPath'] = 'Bottle/Milk'
+new_request['destinationLocationIdOrPath'] = 'DairyCo'
+new_request['quantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Produce the request
-producedRequest = system.mes.inventory.produce(**newRequest)
+produced_request = system.mes.inventory.produce(**new_request)
 
 # Output the JSON representation of the produced request
-print(producedRequest)
+print(produced_request)
 ```

@@ -13,7 +13,7 @@ Creates or updates a [Production Order Property Values](../../data-model/product
 ## Syntax
 
 ```python
-system.mes.productionOrder.saveProductionOrderPropertyValue(**propertyValueData)
+system.mes.productionOrder.saveProductionOrderPropertyValue(**property_value_data)
 ```
 
 ## Parameters
@@ -39,37 +39,37 @@ Returns a JSON representation of the saved production order property value.
 
 ```python
 # Generate the object structure for a new production order object
-newProductionOrder = system.mes.productionOrder.newProductionOrder()
-newProductionOrder['productId'] = '01JCH3ENGW-82KJDZDR-JHGYCXQN'
-newProductionOrder['name'] = 'Order001'
-newProductionOrder['unitOfMeasureId'] = '01JCH3EPVP-1MNNDJTS-37Z75NGB'
-savedProductionOrder = system.mes.productionOrder.saveProductionOrder(**newProductionOrder)
+new_production_order = system.mes.productionOrder.newProductionOrder()
+new_production_order['productId'] = '01JCH3ENGW-82KJDZDR-JHGYCXQN'
+new_production_order['name'] = 'Order001'
+new_production_order['unitOfMeasureId'] = '01JCH3EPVP-1MNNDJTS-37Z75NGB'
+saved_production_order = system.mes.productionOrder.saveProductionOrder(**new_production_order)
 
 # Generate the object structure for a new production order property object
-productionOrderProperty = system.mes.productionOrder.newProductionOrderProperty()
-productionOrderProperty['name'] = 'Batch Size'
-productionOrderProperty['description'] = 'Batch size property'
-productionOrderProperty['dataType'] = 'Int'
-savedProperty = system.mes.productionOrder.saveProductionOrderProperty(**productionOrderProperty)
+production_order_property = system.mes.productionOrder.newProductionOrderProperty()
+production_order_property['name'] = 'Batch Size'
+production_order_property['description'] = 'Batch size property'
+production_order_property['dataType'] = 'Int'
+saved_property = system.mes.productionOrder.saveProductionOrderProperty(**production_order_property)
 
 # Generate the object structure for a new property value object with no initial arguments, set the production order ID and property ID and save it
-newPropertyValue = system.mes.productionOrder.newProductionOrderPropertyValue()
-newPropertyValue['productionOrderId'] = savedProductionOrder.id
-newPropertyValue['propertyId'] = savedProperty.id
-savedPropertyValue = system.mes.productionOrder.saveProductionOrderPropertyValue(**newPropertyValue)
+new_property_value = system.mes.productionOrder.newProductionOrderPropertyValue()
+new_property_value['productionOrderId'] = saved_production_order.id
+new_property_value['propertyId'] = saved_property.id
+saved_property_value = system.mes.productionOrder.saveProductionOrderPropertyValue(**new_property_value)
 
 # Output the JSON representation of the saved production order property value
-print(savedPropertyValue)
+print(saved_property_value)
 
 # Generate the object structure for another new property value object to update the previous production order property value
-propertyValueData = system.mes.productionOrder.newProductionOrderPropertyValue()
-propertyValueData['id'] = savedPropertyValue.id
-propertyValueData['dataType'] = 'Int' # Must be the same data type as the property
-propertyValueData['value'] = 100
+property_value_data = system.mes.productionOrder.newProductionOrderPropertyValue()
+property_value_data['id'] = saved_property_value.id
+property_value_data['dataType'] = 'Int' # Must be the same data type as the property
+property_value_data['value'] = 100
 
 # Save the production order property value to update it in the system
-updatedPropertyValue = system.mes.productionOrder.saveProductionOrderPropertyValue(**propertyValueData)
+updated_property_value = system.mes.productionOrder.saveProductionOrderPropertyValue(**property_value_data)
 
 # Output the JSON representation of the updated production order property value
-print(updatedPropertyValue)
+print(updated_property_value)
 ```

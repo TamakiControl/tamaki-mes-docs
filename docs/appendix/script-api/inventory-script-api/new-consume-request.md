@@ -53,18 +53,18 @@ Returns a JSON representation of the newly created Consume Request object. The f
 
 ```python
 # Generate the object structure for a new consume request object with no initial arguments
-newRequest = system.mes.inventory.newConsumeRequest()
+new_request = system.mes.inventory.newConsumeRequest()
 
 # Set basic attributes for the new consume request
-newRequest['materialIdOrPath'] = 'Bottle/Milk'
-newRequest['sourceLocationIdOrPath'] = 'DairyCo'
-newRequest['quantity'] = 610
-newRequest['createIfNotExists'] = True
+new_request['materialIdOrPath'] = 'Bottle/Milk'
+new_request['sourceLocationIdOrPath'] = 'DairyCo'
+new_request['quantity'] = 610
+new_request['createIfNotExists'] = True
 # (You can continue setting other properties as needed here)
 
 # Consume the request
-consumedRequest = system.mes.inventory.consume(**newRequest)
+consumed_request = system.mes.inventory.consume(**new_request)
 
 # Output the JSON representation of the consumed request
-print(consumedRequest)
+print(consumed_request)
 ```

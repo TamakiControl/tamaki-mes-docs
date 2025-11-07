@@ -37,8 +37,8 @@ Returns a JSON representation of an inventory.
 
 ```python
 # Update the inventory metadata by inventory ID
-updatedMetadata = system.mes.inventory.setInventoryMetadata('DDFBVX9Z-01JDTF12WX-8277CPVM', None, '1732833681021216', None, None, None, None)
+updated_metadata = system.mes.inventory.setInventoryMetadata('DDFBVX9Z-01JDTF12WX-8277CPVM', None, '1732833681021216', None, None, None, None)
 
 # Output the updated inventory
-print(updatedMetadata)
+print(updated_metadata)
 ```

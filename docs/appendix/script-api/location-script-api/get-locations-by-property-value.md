@@ -31,27 +31,27 @@ Returns a JSON list of all locations that have the specified property value.
 
 ```python
 # Generate the object structure for a new location object
-newLocation = system.mes.location.newLocation()
-newLocation['name'] = 'DairyCo'
-savedLocation = system.mes.location.saveLocation(**newLocation)
+new_location = system.mes.location.newLocation()
+new_location['name'] = 'DairyCo'
+saved_location = system.mes.location.saveLocation(**new_location)
 
 # Generate the object structure for a new property object
-newProperty = system.mes.location.newProperty()
-newProperty['name'] = 'Cows'
-newProperty['dataType'] = 'Int'
-savedProperty = system.mes.location.saveProperty(**newProperty)
+new_property = system.mes.location.newProperty()
+new_property['name'] = 'Cows'
+new_property['dataType'] = 'Int'
+saved_property = system.mes.location.saveProperty(**new_property)
 
 # Generate the object structure for a new property value object
-newPropertyValue = system.mes.location.newPropertyValue()
-newPropertyValue['locationId'] = savedLocation.id
-newPropertyValue['propertyId'] = savedProperty.id
-newPropertyValue['dataType'] = 'Int' # Must be the same data type as the property
-newPropertyValue['value'] = 100
-system.mes.location.savePropertyValue(**newPropertyValue)
+new_property_value = system.mes.location.newPropertyValue()
+new_property_value['locationId'] = saved_location.id
+new_property_value['propertyId'] = saved_property.id
+new_property_value['dataType'] = 'Int' # Must be the same data type as the property
+new_property_value['value'] = 100
+system.mes.location.savePropertyValue(**new_property_value)
 
 # Retrieve locations by property value
-matchingLocations = system.mes.location.getLocationsByPropertyValue('Cows', '100')
+matching_locations = system.mes.location.getLocationsByPropertyValue('Cows', '100')
 
 # Output the list of matching locations
-print(matchingLocations)
+print(matching_locations)
 ```

@@ -13,7 +13,7 @@ Creates or updates a [Material Reason Codes](../../data-model/material-model/mat
 ## Syntax
 
 ```python
-system.mes.material.saveMaterialReasonCode(**materialReasonCodeData)
+system.mes.material.saveMaterialReasonCode(**material_reason_code_data)
 ```
 
 ## Parameters
@@ -39,29 +39,29 @@ Returns a JSON representation of the saved material reason code.
 
 ```python
 # Generate the object structure for a new material reason code object, set the initial arguments and save it
-newMaterialReasonCode = system.mes.material.newMaterialReasonCode()
-newMaterialReasonCode['lotRecordType'] = 'CONSUME'
-newMaterialReasonCode['reasonCode'] = 'SCRP001'
-materialReasonCodeData['requireComments'] = True
-savedMaterialReasonCode = system.mes.material.saveMaterialReasonCode(**newMaterialReasonCode)
+new_material_reason_code = system.mes.material.newMaterialReasonCode()
+new_material_reason_code['lotRecordType'] = 'CONSUME'
+new_material_reason_code['reasonCode'] = 'SCRP001'
+material_reason_code_data['requireComments'] = True
+saved_material_reason_code = system.mes.material.saveMaterialReasonCode(**new_material_reason_code)
 
 # Output the JSON representation of the saved material reason code
-print(savedMaterialReasonCode)
+print(saved_material_reason_code)
 
 # Generate the object structure for another new material reason code to update the previous material reason code
-materialReasonCodeData = system.mes.material.newMaterialReasonCode()
+material_reason_code_data = system.mes.material.newMaterialReasonCode()
 
 # Set basic attributes for the updated material reason code
-materialReasonCodeData['id'] = savedMaterialReasonCode.id
-materialReasonCodeData['lotRecordType'] = 'CONSUME'
-materialReasonCodeData['reasonCode'] = 'SCRP001'
-materialReasonCodeData['description'] = 'Material scrapped due to contamination'
-materialReasonCodeData['requireComments'] = True
+material_reason_code_data['id'] = saved_material_reason_code.id
+material_reason_code_data['lotRecordType'] = 'CONSUME'
+material_reason_code_data['reasonCode'] = 'SCRP001'
+material_reason_code_data['description'] = 'Material scrapped due to contamination'
+material_reason_code_data['requireComments'] = True
 # (You can continue setting other properties as needed here)
 
 # Save the material reason code to update it in the system
-updatedMaterialReasonCode = system.mes.material.saveMaterialReasonCode(**materialReasonCodeData)
+updated_material_reason_code = system.mes.material.saveMaterialReasonCode(**material_reason_code_data)
 
 # Output the JSON representation of the updated material reason code
-print(updatedMaterialReasonCode)
+print(updated_material_reason_code)
 ```

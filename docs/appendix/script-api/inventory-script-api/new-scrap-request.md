@@ -50,17 +50,17 @@ Returns a JSON representation of the newly created Scrap Request object. The fol
 
 ```python
 # Generate the object structure for a new scrap request object with no initial arguments
-newRequest = system.mes.inventory.newScrapRequest()
+new_request = system.mes.inventory.newScrapRequest()
 
 # Set basic attributes for the new scrap request
-newRequest['materialIdOrPath'] = 'Bottle/Milk'
-newRequest['sourceLocationIdOrPath'] = 'DairyCo'
-newRequest['quantity'] = 610
+new_request['materialIdOrPath'] = 'Bottle/Milk'
+new_request['sourceLocationIdOrPath'] = 'DairyCo'
+new_request['quantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Scrap the request
-scrappedRequest = system.mes.inventory.scrap(**newRequest)
+scrapped_request = system.mes.inventory.scrap(**new_request)
 
 # Output the JSON representation of the scrapped request
-print(scrappedRequest)
+print(scrapped_request)
 ```

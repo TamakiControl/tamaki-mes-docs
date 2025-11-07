@@ -30,8 +30,8 @@ Returns a JSON representation of the bill of materials associated with the given
 
 ```python
 # Retrieves the bill of materials for a given production order
-billOfMaterials = system.mes.productionOrder.getBillOfMaterialsForOrder('01JPMTA7K3-E8EHA4MD-7C304P4Z')
+bill_of_materials = system.mes.productionOrder.getBillOfMaterialsForOrder('01JPMTA7K3-E8EHA4MD-7C304P4Z')
 
 # Output the bill of materials
-print(billOfMaterials)
+print(bill_of_materials)
 ```

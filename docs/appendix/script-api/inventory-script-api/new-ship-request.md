@@ -50,17 +50,17 @@ Returns a JSON representation of the newly created Ship Request object. The foll
 
 ```python
 # Generate the object structure for a new ship request object with no initial arguments
-newRequest = system.mes.inventory.newShipRequest()
+new_request = system.mes.inventory.newShipRequest()
 
 # Set basic attributes for the new ship request
-newRequest['materialIdOrPath'] = 'Bottle/Milk'
-newRequest['sourceLocationIdOrPath'] = 'DairyCo'
-newRequest['quantity'] = 610
+new_request['materialIdOrPath'] = 'Bottle/Milk'
+new_request['sourceLocationIdOrPath'] = 'DairyCo'
+new_request['quantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Ship the request
-shippedRequest = system.mes.inventory.ship(**newRequest)
+shipped_request = system.mes.inventory.ship(**new_request)
 
 # Output the JSON representation of the shipped request
-print(shippedRequest)
+print(shipped_request)
 ```

@@ -57,8 +57,8 @@ Returns a JSON representation of the production order. Returns nothing if no pro
 
 ```python
 # Retrieve a production order by ID or name
-productionOrder = system.mes.productionOrder.getProductionOrder('Order001')
+production_order = system.mes.productionOrder.getProductionOrder('Order001')
 
 # Output the production order
-print(productionOrder)
+print(production_order)
 ```

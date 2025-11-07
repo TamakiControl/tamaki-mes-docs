@@ -13,7 +13,7 @@ Creates or updates a [Locations](../../data-model/location-model/location) recor
 ## Syntax
 
 ```python
-system.mes.location.saveLocation(**locationData)
+system.mes.location.saveLocation(**location_data)
 ```
 
 ## Parameters
@@ -47,28 +47,28 @@ Returns a JSON representation of the saved location.
 
 ```python
 # Generate the object structure for a new location object, set the name and save it
-newLocation = system.mes.location.newLocation()
-newLocation['name'] = 'Warehouse'
-savedLocation = system.mes.location.saveLocation(**newLocation)
+new_location = system.mes.location.newLocation()
+new_location['name'] = 'Warehouse'
+saved_location = system.mes.location.saveLocation(**new_location)
 
 # Output the JSON representation of the saved location
-print(savedLocation)
+print(saved_location)
 
 # Generate the object structure for another new location object to update the previous location
-locationData = system.mes.location.newLocation()
+location_data = system.mes.location.newLocation()
 
 # Set basic attributes for the updated location
-locationData['id'] = savedLocation.id
-locationData['name'] = 'Warehouse'
-locationData['description'] = 'Main storage location for raw materials.'
-locationData['type'] = 'AREA'
-locationData['processType'] = 'STORAGE'
-locationData['sortOrder'] = 1
+location_data['id'] = saved_location.id
+location_data['name'] = 'Warehouse'
+location_data['description'] = 'Main storage location for raw materials.'
+location_data['type'] = 'AREA'
+location_data['processType'] = 'STORAGE'
+location_data['sortOrder'] = 1
 # (You can continue setting other properties as needed here)
 
 # Save the location to update it in the system
-updatedLocation = system.mes.location.saveLocation(**locationData)
+updated_location = system.mes.location.saveLocation(**location_data)
 
 # Output the JSON representation of the updated location
-print(updatedLocation)
+print(updated_location)
 ```

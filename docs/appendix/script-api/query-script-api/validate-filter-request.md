@@ -43,19 +43,19 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new filter request object
-filterRequestData = system.mes.query.newFilterRequest()
+filter_request_data = system.mes.query.newFilterRequest()
 
 # Set basic attributes for the new filter request
-filterRequestData["field"] = "createdDate"     
-filterRequestData["dateValue"] = "2024-01-01T00:00:00Z"
+filter_request_data["field"] = "createdDate"     
+filter_request_data["dateValue"] = "2024-01-01T00:00:00Z"
 # Since the condition field is not set, this is not valid
 # (You can continue setting other properties as needed here)
 
 # Validate filter request parameters
-validationErrors = system.mes.query.validateFilterRequest(**filterRequestData)
+validation_errors = system.mes.query.validateFilterRequest(**filter_request_data)
 
-if len(validationErrors) > 0:
-    print('Validation errors found:', validationErrors)
+if len(validation_errors) > 0:
+    print('Validation errors found:', validation_errors)
 else:
     print('Filter request parameters are valid.')
 ```

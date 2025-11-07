@@ -13,7 +13,7 @@ Creates or updates a [Material Classes](../../data-model/material-model/material
 ## Syntax
 
 ```python
-system.mes.material.saveMaterialClass(**materialClassData)
+system.mes.material.saveMaterialClass(**material_class_data)
 ```
 
 ## Parameters
@@ -39,25 +39,25 @@ Returns a JSON representation of the saved material class.
 
 ```python
 # Generate the object structure for a new material class object, set the initial arguments and save it
-newMaterialClass = system.mes.material.newMaterialClass()
-newMaterialClass['name'] = 'RAW'
-savedMaterialClass = system.mes.material.saveMaterialClass(**newMaterialClass)
+new_material_class = system.mes.material.newMaterialClass()
+new_material_class['name'] = 'RAW'
+saved_material_class = system.mes.material.saveMaterialClass(**new_material_class)
 
 # Output the JSON representation of the saved material class
-print(savedMaterialClass)
+print(saved_material_class)
 
 # Generate the object structure for another new material class to update the previous material class
-materialClassData = system.mes.material.newMaterialClass()
+material_class_data = system.mes.material.newMaterialClass()
 
 # Set basic attributes for the updated material class
-materialClassData['id'] = savedMaterialClass.id
-materialClassData['name'] = 'RAW'
-materialClassData['description'] = 'Material Class for Raw Materials'
+material_class_data['id'] = saved_material_class.id
+material_class_data['name'] = 'RAW'
+material_class_data['description'] = 'Material Class for Raw Materials'
 # (You can continue setting other properties as needed here)
 
 # Save the material class to update it in the system
-updatedMaterialClass = system.mes.material.saveMaterialClass(**materialClassData)
+updated_material_class = system.mes.material.saveMaterialClass(**material_class_data)
 
 # Output the JSON representation of the updated material class
-print(updatedMaterialClass)
+print(updated_material_class)
 ```

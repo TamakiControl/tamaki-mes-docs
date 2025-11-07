@@ -30,8 +30,8 @@ Returns the status of the inventory operation.
 
 ```python
 # Retrieve the status for the inventory operation specified
-inventoryOperationsStatus = system.mes.inventory.operation.getInventoryOperationStatus('01JPAND53P-BZ61RZHZ-V7C6EEHG')
+inventory_operations_status = system.mes.inventory.operation.getInventoryOperationStatus('01JPAND53P-BZ61RZHZ-V7C6EEHG')
 
 # Output the inventory operation status
-print(inventoryOperationsStatus)
+print(inventory_operations_status)
 ```

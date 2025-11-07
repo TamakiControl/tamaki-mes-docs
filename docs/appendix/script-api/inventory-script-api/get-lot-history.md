@@ -62,15 +62,15 @@ Each JSON object has the following properties:
 
 ```python
 # Generate the object structure for a new lot history request object with no initial arguments
-newLotHistoryRequest = system.mes.inventory.newLotHistoryRequest()
+new_lot_history_request = system.mes.inventory.newLotHistoryRequest()
 
 # Set basic attributes for the new lot history request
-newLotHistoryRequest['lotId'] = '01JE6F0CE9-T94PZD8R-TH9J01TJ'
+new_lot_history_request['lotId'] = '01JE6F0CE9-T94PZD8R-TH9J01TJ'
 # (You can continue setting other properties as needed here)
 
 # Retrieve the lot history
-lotHistory = system.mes.inventory.getLotHistory(**newLotHistoryRequest)
+lot_history = system.mes.inventory.getLotHistory(**new_lot_history_request)
 
 # Output the list of lot history records
-print(lotHistory)
+print(lot_history)
 ```

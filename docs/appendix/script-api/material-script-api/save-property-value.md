@@ -13,7 +13,7 @@ Creates or updates a [Material Property Values](../../data-model/material-model/
 ## Syntax
 
 ```python
-system.mes.material.savePropertyValue(**propertyValueData)
+system.mes.material.savePropertyValue(**property_value_data)
 ```
 
 ## Parameters
@@ -39,34 +39,34 @@ Returns a JSON representation of the saved material property value.
 
 ```python
 # Generate the object structure for a new material object
-newMaterial = system.mes.material.newMaterial()
-newMaterial['materialClassId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
-newMaterial['name'] = '5391537510212'
-newMaterial['unitOfMeasureId'] = '01JCH3ENDJ-351WQQPX-WRBNTY4C'
-savedMaterial = system.mes.material.saveMaterial(**newMaterial)
+new_material = system.mes.material.newMaterial()
+new_material['materialClassId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
+new_material['name'] = '5391537510212'
+new_material['unitOfMeasureId'] = '01JCH3ENDJ-351WQQPX-WRBNTY4C'
+saved_material = system.mes.material.saveMaterial(**new_material)
 
 # Generate the object structure for a new property object
-newProperty = system.mes.material.newProperty()
-newProperty['materialClassId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
-newProperty['name'] = 'Density'
-newProperty['dataType'] = 'Float'
-savedProperty = system.mes.material.saveProperty(**newProperty)
+new_property = system.mes.material.newProperty()
+new_property['materialClassId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
+new_property['name'] = 'Density'
+new_property['dataType'] = 'Float'
+saved_property = system.mes.material.saveProperty(**new_property)
 
 # Generate the object structure for a new property value object with no initial arguments, set the material ID and property ID and save it
-newPropertyValue = system.mes.material.newPropertyValue()
-newPropertyValue['materialId'] = savedMaterial.id
-newPropertyValue['materialPropertyId'] = savedProperty.id
-savedPropertyValue = system.mes.material.savePropertyValue(**newPropertyValue)
+new_property_value = system.mes.material.newPropertyValue()
+new_property_value['materialId'] = saved_material.id
+new_property_value['materialPropertyId'] = saved_property.id
+saved_property_value = system.mes.material.savePropertyValue(**new_property_value)
 
 # Generate the object structure for another new property value object to update the previous material property value
-propertyValueData = system.mes.material.newPropertyValue()
-propertyValueData['id'] = savedPropertyValue.id
-propertyValueData['dataType'] = 'Float' # Must be the same data type as the property
-propertyValueData['value'] = 100
+property_value_data = system.mes.material.newPropertyValue()
+property_value_data['id'] = saved_property_value.id
+property_value_data['dataType'] = 'Float' # Must be the same data type as the property
+property_value_data['value'] = 100
 
 # Save the material property value to update it in the system
-updatedPropertyValue = system.mes.material.savePropertyValue(**propertyValueData)
+updated_property_value = system.mes.material.savePropertyValue(**property_value_data)
 
 # Output the JSON representation of the updated material property value
-print(updatedPropertyValue)
+print(updated_property_value)
 ```

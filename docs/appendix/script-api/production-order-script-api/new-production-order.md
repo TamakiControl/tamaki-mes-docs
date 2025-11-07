@@ -52,17 +52,17 @@ Returns a JSON representation of the newly created production order object. The 
 
 ```python
 # Generate the object structure for a new production order object with no initial arguments
-newProductionOrder = system.mes.productionOrder.newProductionOrder()
+new_production_order = system.mes.productionOrder.newProductionOrder()
 
 # Set basic attributes for the new production order
-newProductionOrder['productId'] = '01JCH3ENGW-82KJDZDR-JHGYCXQN'
-newProductionOrder['name'] = 'Order001'
-newProductionOrder['unitOfMeasureId'] = '01JCH3EPVP-1MNNDJTS-37Z75NGB'
+new_production_order['productId'] = '01JCH3ENGW-82KJDZDR-JHGYCXQN'
+new_production_order['name'] = 'Order001'
+new_production_order['unitOfMeasureId'] = '01JCH3EPVP-1MNNDJTS-37Z75NGB'
 # (You can continue setting other properties as needed here)
 
 # Save the new production order to the system
-savedProductionOrder = system.mes.productionOrder.saveProductionOrder(**newProductionOrder)
+saved_production_order = system.mes.productionOrder.saveProductionOrder(**new_production_order)
 
 # Output the JSON representation of the saved production order
-print(savedProductionOrder)
+print(saved_production_order)
 ```

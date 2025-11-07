@@ -52,20 +52,20 @@ Returns a JSON representation of the newly created location property object. The
 
 ```python
 # Generate the object structure for a new property object with no initial arguments
-newProperty = system.mes.location.newProperty()
+new_property = system.mes.location.newProperty()
 
 # Define property details
-newProperty['name'] = 'Temperature'
-newProperty['dataType'] = 'Float'
-newProperty['unitOfMeasureId'] = '01JAP8RJBN-4VYZUKE1-LY2QHV8X'
-newProperty['nullable'] = False
-newProperty['lowLimit'] = -20
-newProperty['highLimit'] = 50
+new_property['name'] = 'Temperature'
+new_property['dataType'] = 'Float'
+new_property['unitOfMeasureId'] = '01JAP8RJBN-4VYZUKE1-LY2QHV8X'
+new_property['nullable'] = False
+new_property['lowLimit'] = -20
+new_property['highLimit'] = 50
 # (You can continue setting other properties as needed here)
 
 # Save the property
-savedProperty = system.mes.location.saveProperty(**newProperty)
+saved_property = system.mes.location.saveProperty(**new_property)
 
 # Output the JSON representation of the saved property
-print(savedProperty)
+print(saved_property)
 ```

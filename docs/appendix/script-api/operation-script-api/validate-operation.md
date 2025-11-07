@@ -14,7 +14,7 @@ This only checks if the operation object can be saved based on the attributes gi
 ## Syntax
 
 ```python
-system.mes.operation.validateOperation(**operationData)
+system.mes.operation.validateOperation(**operation_data)
 ```
 
 ## Parameters
@@ -60,18 +60,18 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new operation object
-operationData = system.mes.operation.newOperation()
+operation_data = system.mes.operation.newOperation()
 
 # Set basic attributes for the new operation
-operationData['locationId'] = '01JD7M94CJ-HPEQEJ1F-QA8EQ6VE'
-operationData['name'] = 'Packaging'
+operation_data['locationId'] = '01JD7M94CJ-HPEQEJ1F-QA8EQ6VE'
+operation_data['name'] = 'Packaging'
 # (You can continue setting other properties as needed here)
 
 # Validate operation parameters
-validationErrors = system.mes.operation.validateOperation(**operationData)
+validation_errors = system.mes.operation.validateOperation(**operation_data)
 
-if len(validationErrors) > 0:
-    print('Validation errors found:', validationErrors)
+if len(validation_errors) > 0:
+    print('Validation errors found:', validation_errors)
 else:
     print('Operation parameters are valid.')
 ```

@@ -30,8 +30,8 @@ Returns a boolean indicating whether the unit of measure conversion exists.
 
 ```python
 # Check whether the unit of measure conversion exists
-uomcExists = system.mes.unitOfMeasure.doesConversionExist('Pound', 'Kilogram', '01JCH3TP3Y-4B080WHN-MSR8RVP5')
+uomc_exists = system.mes.unitOfMeasure.doesConversionExist('Pound', 'Kilogram', '01JCH3TP3Y-4B080WHN-MSR8RVP5')
 
 # Output the boolean result
-print(uomcExists)
+print(uomc_exists)
 ```

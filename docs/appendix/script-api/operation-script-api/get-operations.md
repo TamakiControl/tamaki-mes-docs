@@ -30,8 +30,8 @@ Returns a list of JSON objects representing all operations.
 
 ```python
 # Retrieve all operations
-allOperations = system.mes.operation.getOperations()
+all_operations = system.mes.operation.getOperations()
 
 # Output the list of operations
-print(allOperations)
+print(all_operations)
 ```

@@ -11,7 +11,7 @@ Receives inventory into the MES based on the provided parameters.
 ## Syntax
 
 ```python
-system.mes.inventory.receive(**receiveRequest)
+system.mes.inventory.receive(**receive_request)
 ```
 
 ## Parameters
@@ -46,18 +46,18 @@ Returns a JSON representation of an inventory lot record for a Receive Request.
 
 ```python
 # Generate the object structure for a new receive request object with no initial arguments
-newRequest = system.mes.inventory.newReceiveRequest()
+new_request = system.mes.inventory.newReceiveRequest()
 
 # Set basic attributes for the new receive request
-newRequest['materialIdOrPath'] = 'Bottle/Milk'
-newRequest['destinationLocationIdOrPath'] = 'DairyCo'
-newRequest['quantity'] = 610
-newRequest['createIfNotExists'] = True
+new_request['materialIdOrPath'] = 'Bottle/Milk'
+new_request['destinationLocationIdOrPath'] = 'DairyCo'
+new_request['quantity'] = 610
+new_request['createIfNotExists'] = True
 # (You can continue setting other properties as needed here)
 
 # Receive the request
-receivedRequest = system.mes.inventory.receive(**newRequest)
+received_request = system.mes.inventory.receive(**new_request)
 
 # Output the JSON representation of the received request
-print(receivedRequest)
+print(received_request)
 ```

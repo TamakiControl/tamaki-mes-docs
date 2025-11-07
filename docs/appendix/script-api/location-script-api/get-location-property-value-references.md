@@ -42,8 +42,8 @@ The JSON Objects in references has the following properties:
 
 ```python
 # Retrieve the references for the location property value specified
-propertyValueReferences = system.mes.location.getLocationPropertyValueReferences('01JJ7AFN0V-ZZS5XSAR-05CGEXBW')
+property_value_references = system.mes.location.getLocationPropertyValueReferences('01JJ7AFN0V-ZZS5XSAR-05CGEXBW')
 
 # Output the location property value references
-print(propertyValueReferences)
+print(property_value_references)
 ```

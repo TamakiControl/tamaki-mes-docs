@@ -42,8 +42,8 @@ The JSON Objects in references has the following properties:
 
 ```python
 # Retrieve the references for the material class specified
-materialClassReferences = system.mes.material.getMaterialClassReferences('RAW')
+material_class_references = system.mes.material.getMaterialClassReferences('RAW')
 
 # Output the material class references
-print(materialClassReferences)
+print(material_class_references)
 ```

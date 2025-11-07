@@ -11,7 +11,7 @@ Validates the specified parameters for an inventory lot record and returns any v
 ## Syntax
 
 ```python
-system.mes.inventory.validateInventoryLotRecord(**lotRecordData)
+system.mes.inventory.validateInventoryLotRecord(**lot_record_data)
 ```
 
 ## Parameters
@@ -49,19 +49,19 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new inventory lot record object
-newLotRecord = system.mes.inventory.newInventoryLotRecord()
+new_lot_record = system.mes.inventory.newInventoryLotRecord()
 
 # Set basic attributes for the new inventory lot record
-newLotRecord['lotRecordType'] = 'CONSUME'
-newLotRecord['inventoryLotId'] = '01JE6F0CE9-T94PZD8R-TH9J01TJ'
-newLotRecord['status'] = 'COMPLETED'
+new_lot_record['lotRecordType'] = 'CONSUME'
+new_lot_record['inventoryLotId'] = '01JE6F0CE9-T94PZD8R-TH9J01TJ'
+new_lot_record['status'] = 'COMPLETED'
 # (You can continue setting other properties as needed here)
 
 # Validate inventory lot parameters
-validationErrors = system.mes.inventory.validateInventoryLotRecord(**newLotRecord)
+validation_errors = system.mes.inventory.validateInventoryLotRecord(**new_lot_record)
 
-if len(validationErrors) > 0:
-    print('Validation errors found:', validationErrors)
+if len(validation_errors) > 0:
+    print('Validation errors found:', validation_errors)
 else:
     print('Lot parameters are valid.')
 ```

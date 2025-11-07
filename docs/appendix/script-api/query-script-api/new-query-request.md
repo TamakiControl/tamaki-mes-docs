@@ -40,17 +40,17 @@ Returns a JSON representation of the newly created query request object. The fol
 
 ```python
 # Generate the object structure for a new query request object with no initial arguments
-newQueryRequest = system.mes.query.newQueryRequest()
+new_query_request = system.mes.query.newQueryRequest()
 
 # Set basic attributes for the new query request
-newQueryRequest["pageSize"] = 10
-newQueryRequest["pageIndex"] = 0
-newQueryRequest["sortFields"] = ["name"]
-newQueryRequest["sortDirections"] = ["Ascending"]
+new_query_request["pageSize"] = 10
+new_query_request["pageIndex"] = 0
+new_query_request["sortFields"] = ["name"]
+new_query_request["sortDirections"] = ["Ascending"]
 # (You can continue setting other properties as needed here)
 
 # Use the query request to find materials
-result = system.mes.material.findMaterials(**newQueryRequest)
+result = system.mes.material.findMaterials(**new_query_request)
 
 # Output the JSON representation of the result
 print(result)

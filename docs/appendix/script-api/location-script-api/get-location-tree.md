@@ -64,8 +64,8 @@ Returns a list of JSON objects. Each JSON object has the following properties:
 
 ```python
 # Retrieve all locations with the substring 'Plant' in their name and their parents
-locationTree = system.mes.location.getLocationTree('Plant')
+location_tree = system.mes.location.getLocationTree('Plant')
 
 # Output the location tree
-print(locationTree)
+print(location_tree)
 ```

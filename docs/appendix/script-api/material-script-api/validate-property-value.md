@@ -14,7 +14,7 @@ This only checks if the material property value object can be saved based on the
 ## Syntax
 
 ```python
-system.mes.material.validatePropertyValue(**propertyData)
+system.mes.material.validatePropertyValue(**property_data)
 ```
 
 ## Parameters
@@ -40,26 +40,26 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new property object
-newProperty = system.mes.material.newProperty()
-newProperty['materialClassId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
-newProperty['name'] = 'Density'
-newProperty['dataType'] = 'Float'
-savedProperty = system.mes.material.saveProperty(**newProperty)
+new_property = system.mes.material.newProperty()
+new_property['materialClassId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
+new_property['name'] = 'Density'
+new_property['dataType'] = 'Float'
+saved_property = system.mes.material.saveProperty(**new_property)
 
 # Generate the object structure for a new property value object
-propertyValueData = system.mes.material.newPropertyValue()
+property_value_data = system.mes.material.newPropertyValue()
 
 # Define property value details
-propertyValueData['materialId'] = system.mes.material.getMaterial('IRB/5391537510212')['id']
-propertyValueData['materialPropertyId'] = savedProperty.id
-propertyValueData['dataType'] = 'Float' # Must be the same data type as the property
-propertyValueData['value'] = 100
+property_value_data['materialId'] = system.mes.material.getMaterial('IRB/5391537510212')['id']
+property_value_data['materialPropertyId'] = saved_property.id
+property_value_data['dataType'] = 'Float' # Must be the same data type as the property
+property_value_data['value'] = 100
 
 # Validate material property value parameters
 
-validationErrors = system.mes.material.validatePropertyValue(**propertyValueData)
-if len(validationErrors) > 0:
-    print('Validation errors found:', validationErrors)
+validation_errors = system.mes.material.validatePropertyValue(**property_value_data)
+if len(validation_errors) > 0:
+    print('Validation errors found:', validation_errors)
 else:
     print('Material property value parameters are valid.')
 ```

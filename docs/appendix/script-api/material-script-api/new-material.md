@@ -45,17 +45,17 @@ Returns a JSON representation of the newly created material object. The followin
 
 ```python
 # Generate the object structure for a new material object with no initial arguments
-newMaterial = system.mes.material.newMaterial()
+new_material = system.mes.material.newMaterial()
 
 # Set basic attributes for the new material
-newMaterial['materialClassId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
-newMaterial['name'] = '5391537510212'
-newMaterial['unitOfMeasureId'] = '01JCH3ENDJ-351WQQPX-WRBNTY4C'
+new_material['materialClassId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
+new_material['name'] = '5391537510212'
+new_material['unitOfMeasureId'] = '01JCH3ENDJ-351WQQPX-WRBNTY4C'
 # (You can continue setting other properties as needed here)
 
 # Save the new material to the system
-savedMaterial = system.mes.material.saveMaterial(**newMaterial)
+saved_material = system.mes.material.saveMaterial(**new_material)
 
 # Output the JSON representation of the saved material
-print(savedMaterial)
+print(saved_material)
 ```

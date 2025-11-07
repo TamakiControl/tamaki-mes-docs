@@ -43,6 +43,6 @@ shifts = system.mes.shift.getAllShifts()
 print(shifts)
 
 # Retrieve all shifts, including disabled
-allShifts = system.mes.shift.getAllShifts(True)
-print(allShifts)
+all_shifts = system.mes.shift.getAllShifts(True)
+print(all_shifts)
 ```

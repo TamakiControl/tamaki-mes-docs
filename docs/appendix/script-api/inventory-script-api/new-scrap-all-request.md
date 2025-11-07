@@ -41,15 +41,15 @@ Returns a JSON representation of the newly created Scrap All Request object. The
 
 ```python
 # Generate the object structure for a new scrap all request object
-newRequest = system.mes.inventory.newScrapAllRequest()
+new_request = system.mes.inventory.newScrapAllRequest()
 
 # Set basic attributes for the new scrap all request
-newRequest['materialIdOrPath'] = 'Bottle/Milk'
-newRequest['sourceLocationIdOrPath'] = 'DairyCo'
+new_request['materialIdOrPath'] = 'Bottle/Milk'
+new_request['sourceLocationIdOrPath'] = 'DairyCo'
 
 # Scrap all inventory at the specified location that matches the material (if specified)
-scrappedRecords = system.mes.inventory.scrapAll(**newRequest)
+scrapped_records = system.mes.inventory.scrapAll(**new_request)
 
 # Output the JSON representation of the scrapped records
-print(scrappedRecords)
+print(scrapped_records)
 ```

@@ -28,8 +28,8 @@ Returns a boolean indicating whether the material class exists.
 
 ```python
 # Check whether the material class exists
-materialClassExists = system.mes.material.doesMaterialClassExist('RAW/FLAV')
+material_class_exists = system.mes.material.doesMaterialClassExist('RAW/FLAV')
 
 # Output the boolean result
-print(materialClassExists)
+print(material_class_exists)
 ```

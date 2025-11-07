@@ -50,8 +50,8 @@ Returns a JSON representation of the bill of materials. Returns nothing if no bi
 
 ```python
 # Retrieve a bill of materials by ID
-billOfMaterials = system.mes.productionOrder.getBillOfMaterialsItem('01JQ31CZMB-E7QA782B-5B521H4M')
+bill_of_materials = system.mes.productionOrder.getBillOfMaterialsItem('01JQ31CZMB-E7QA782B-5B521H4M')
 
 # Output the bill of materials
-print(billOfMaterials)
+print(bill_of_materials)
 ```

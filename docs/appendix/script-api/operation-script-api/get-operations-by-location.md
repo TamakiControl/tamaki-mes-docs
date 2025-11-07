@@ -30,8 +30,8 @@ Returns a list of JSON objects representing all operations at the given location
 
 ```python
 # Retrieve all operations at a given location
-allOperations = system.mes.operation.getOperationsByLocation('DairyCo')
+all_operations = system.mes.operation.getOperationsByLocation('DairyCo')
 
 # Output the list of operations
-print(allOperations)
+print(all_operations)
 ```

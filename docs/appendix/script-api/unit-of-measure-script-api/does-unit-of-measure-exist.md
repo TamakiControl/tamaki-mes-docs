@@ -28,8 +28,8 @@ Returns a boolean indicating whether the unit of measure exists.
 
 ```python
 # Check whether the unit of measure exists
-uomExists = system.mes.unitOfMeasure.doesUnitOfMeasureExist('Pound')
+uom_exists = system.mes.unitOfMeasure.doesUnitOfMeasureExist('Pound')
 
 # Output the boolean result
-print(uomExists)
+print(uom_exists)
 ```

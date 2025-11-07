@@ -33,8 +33,8 @@ Returns a JSON object of the updated inventory lot record with the completed ope
 
 ```python
 # Stop the inventory operation
-stoppedLotRecord = system.mes.inventory.operation.stopInventoryOperation('01JPAND53P-BZ61RZHZ-V7C6EEHG', 100, None, None)
+stopped_lot_record = system.mes.inventory.operation.stopInventoryOperation('01JPAND53P-BZ61RZHZ-V7C6EEHG', 100, None, None)
 
 # Output the inventory lot record of the stopped inventory operation
-print(stoppedLotRecord)
+print(stopped_lot_record)
 ```

@@ -13,7 +13,7 @@ Creates or updates an [Inventory Lots](../../data-model/inventory-model/inventor
 ## Syntax
 
 ```python
-system.mes.inventory.saveLot(**lotData)
+system.mes.inventory.saveLot(**lot_data)
 ```
 
 ## Parameters
@@ -43,29 +43,29 @@ Returns a JSON representation of the saved inventory lot.
 
 ```python
 # Generate the object structure for a new inventory lot object, set the initial arguments and save it
-newLot = system.mes.inventory.newLot()
-newLot['name'] = 'L2824L9CO'
-newLot['materialId'] = '01JCH3GRA3-5ZYFZV5V-RW3FKFJX'
-newLot['unitOfMeasureId'] = '01JCH3T85P-KVCB8ZR5-0B83A3SX'
-savedLot = system.mes.inventory.saveLot(**newLot)
+new_lot = system.mes.inventory.newLot()
+new_lot['name'] = 'L2824L9CO'
+new_lot['materialId'] = '01JCH3GRA3-5ZYFZV5V-RW3FKFJX'
+new_lot['unitOfMeasureId'] = '01JCH3T85P-KVCB8ZR5-0B83A3SX'
+saved_lot = system.mes.inventory.saveLot(**new_lot)
 
 # Output the JSON representation of the saved inventory lot
-print(savedLot)
+print(saved_lot)
 
 # Generate the object structure for another new inventory lot object to update the previous inventory lot
-lotData = system.mes.inventory.newLot()
+lot_data = system.mes.inventory.newLot()
 
 # Set basic attributes for the updated inventory lot
-lotData['id'] = savedLot.id
-lotData['name'] = 'L2824L9CO'
-lotData['materialId'] = '01JCH3GRA3-5ZYFZV5V-RW3FKFJX'
-lotData['unitOfMeasureId'] = '01JCH3T85P-KVCB8ZR5-0B83A3SX'
-lotData['totalQuantity'] = 100
+lot_data['id'] = saved_lot.id
+lot_data['name'] = 'L2824L9CO'
+lot_data['materialId'] = '01JCH3GRA3-5ZYFZV5V-RW3FKFJX'
+lot_data['unitOfMeasureId'] = '01JCH3T85P-KVCB8ZR5-0B83A3SX'
+lot_data['totalQuantity'] = 100
 # (You can continue setting other properties as needed here)
 
 # Save the inventory lot to update it in the system
-updatedLot = system.mes.inventory.saveLot(**lotData)
+updated_lot = system.mes.inventory.saveLot(**lot_data)
 
 # Output the JSON representation of the updated inventory lot
-print(updatedLot)
+print(updated_lot)
 ```

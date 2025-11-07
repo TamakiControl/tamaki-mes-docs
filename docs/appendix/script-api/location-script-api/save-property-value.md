@@ -13,7 +13,7 @@ Creates or updates a [Location Property Values](../../data-model/location-model/
 ## Syntax
 
 ```python
-system.mes.location.savePropertyValue(**propertyValueData)
+system.mes.location.savePropertyValue(**property_value_data)
 ```
 
 ## Parameters
@@ -39,34 +39,34 @@ Returns a JSON representation of the saved location property value.
 
 ```python
 # Generate the object structure for a new location object
-newLocation = system.mes.location.newLocation()
-newLocation['name'] = 'DairyCo'
-savedLocation = system.mes.location.saveLocation(**newLocation)
+new_location = system.mes.location.newLocation()
+new_location['name'] = 'DairyCo'
+saved_location = system.mes.location.saveLocation(**new_location)
 
 # Generate the object structure for a new property object
-newProperty = system.mes.location.newProperty()
-newProperty['name'] = 'Cows'
-newProperty['dataType'] = 'Int'
-savedProperty = system.mes.location.saveProperty(**newProperty)
+new_property = system.mes.location.newProperty()
+new_property['name'] = 'Cows'
+new_property['dataType'] = 'Int'
+saved_property = system.mes.location.saveProperty(**new_property)
 
 # Generate the object structure for a new property value object with no initial arguments, set the location ID and property ID and save it
-newPropertyValue = system.mes.location.newPropertyValue()
-newPropertyValue['locationId'] = savedLocation.id
-newPropertyValue['propertyId'] = savedProperty.id
-savedPropertyValue = system.mes.location.savePropertyValue(**newPropertyValue)
+new_property_value = system.mes.location.newPropertyValue()
+new_property_value['locationId'] = saved_location.id
+new_property_value['propertyId'] = saved_property.id
+saved_property_value = system.mes.location.savePropertyValue(**new_property_value)
 
 # Output the JSON representation of the saved location property value
-print(savedPropertyValue)
+print(saved_property_value)
 
 # Generate the object structure for another new property value object to update the previous location property value
-propertyValueData = system.mes.location.newPropertyValue()
-propertyValueData['id'] = savedPropertyValue.id
-propertyValueData['dataType'] = 'Int' # Must be the same data type as the property
-propertyValueData['value'] = 100
+property_value_data = system.mes.location.newPropertyValue()
+property_value_data['id'] = saved_property_value.id
+property_value_data['dataType'] = 'Int' # Must be the same data type as the property
+property_value_data['value'] = 100
 
 # Save the location property value to update it in the system
-updatedPropertyValue = system.mes.location.savePropertyValue(**propertyValueData)
+updated_property_value = system.mes.location.savePropertyValue(**property_value_data)
 
 # Output the JSON representation of the updated location property value
-print(updatedPropertyValue)
+print(updated_property_value)
 ```

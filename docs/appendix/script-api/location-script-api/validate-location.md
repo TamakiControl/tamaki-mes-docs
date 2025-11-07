@@ -14,7 +14,7 @@ This only checks if the location object can be saved based on the attributes giv
 ## Syntax
 
 ```python
-system.mes.location.validateLocation(**locationData)
+system.mes.location.validateLocation(**location_data)
 ```
 
 ## Parameters
@@ -48,21 +48,21 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new location object
-locationData = system.mes.location.newLocation()
+location_data = system.mes.location.newLocation()
 
 # Set basic attributes for the new location
-locationData['name'] = 'Warehouse'
-locationData['description'] = 'Main storage location for raw materials.'
-locationData['type'] = 'AREA'
-locationData['processType'] = 'STORAGE'
-locationData['sortOrder'] = 1
+location_data['name'] = 'Warehouse'
+location_data['description'] = 'Main storage location for raw materials.'
+location_data['type'] = 'AREA'
+location_data['processType'] = 'STORAGE'
+location_data['sortOrder'] = 1
 # (You can continue setting other properties as needed here)
 
 # Validate location parameters
-validationErrors = system.mes.location.validateLocation(**locationData)
+validation_errors = system.mes.location.validateLocation(**location_data)
 
-if len(validationErrors) > 0:
-    print('Validation errors found:', validationErrors)
+if len(validation_errors) > 0:
+    print('Validation errors found:', validation_errors)
 else:
     print('Location parameters are valid.')
 ```

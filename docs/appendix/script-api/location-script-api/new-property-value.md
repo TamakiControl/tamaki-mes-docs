@@ -44,29 +44,29 @@ Returns a JSON representation of the newly created location property value objec
 
 ```python
 # Generate the object structure for a new location object
-newLocation = system.mes.location.newLocation()
-newLocation['name'] = 'DairyCo'
-savedLocation = system.mes.location.saveLocation(**newLocation)
+new_location = system.mes.location.newLocation()
+new_location['name'] = 'DairyCo'
+saved_location = system.mes.location.saveLocation(**new_location)
 
 # Generate the object structure for a new property object
-newProperty = system.mes.location.newProperty()
-newProperty['name'] = 'Cows'
-newProperty['dataType'] = 'Int'
-savedProperty = system.mes.location.saveProperty(**newProperty)
+new_property = system.mes.location.newProperty()
+new_property['name'] = 'Cows'
+new_property['dataType'] = 'Int'
+saved_property = system.mes.location.saveProperty(**new_property)
 
 # Generate the object structure for a new property value object with no initial arguments
-newPropertyValue = system.mes.location.newPropertyValue()
+new_property_value = system.mes.location.newPropertyValue()
 
 # Define property value details
-newPropertyValue['locationId'] = savedLocation.id
-newPropertyValue['propertyId'] = savedProperty.id
-newPropertyValue['dataType'] = 'Int' # Must be the same data type as the property
-newPropertyValue['value'] = 100
+new_property_value['locationId'] = saved_location.id
+new_property_value['propertyId'] = saved_property.id
+new_property_value['dataType'] = 'Int' # Must be the same data type as the property
+new_property_value['value'] = 100
 # (You can continue setting other properties as needed here)
 
 # Save the property value
-savedPropertyValue = system.mes.location.savePropertyValue(**newPropertyValue)
+saved_property_value = system.mes.location.savePropertyValue(**new_property_value)
 
 # Output the JSON representation of the saved location property value
-print(savedPropertyValue)
+print(saved_property_value)
 ```

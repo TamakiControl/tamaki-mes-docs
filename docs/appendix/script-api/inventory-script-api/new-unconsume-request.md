@@ -50,17 +50,17 @@ Returns a JSON representation of the newly created Unconsume Request object. The
 
 ```python
 # Generate the object structure for a new unconsume request object with no initial arguments
-newRequest = system.mes.inventory.newUnconsumeRequest()
+new_request = system.mes.inventory.newUnconsumeRequest()
 
 # Set basic attributes for the new unconsume request
-newRequest['materialIdOrPath'] = 'Bottle/Milk'
-newRequest['destinationLocationIdOrPath'] = 'DairyCo'
-newRequest['quantity'] = 610
+new_request['materialIdOrPath'] = 'Bottle/Milk'
+new_request['destinationLocationIdOrPath'] = 'DairyCo'
+new_request['quantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Unconsume the request
-unconsumedRequest = system.mes.inventory.unconsume(**newRequest)
+unconsumed_request = system.mes.inventory.unconsume(**new_request)
 
 # Output the JSON representation of the unconsumed request
-print(unconsumedRequest)
+print(unconsumed_request)
 ```

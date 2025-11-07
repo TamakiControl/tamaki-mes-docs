@@ -14,7 +14,7 @@ This only checks if the bill of materials object can be saved based on the attri
 ## Syntax
 
 ```python
-system.mes.productionOrder.validateBillOfMaterialsItem(**billOfMaterialsData)
+system.mes.productionOrder.validateBillOfMaterialsItem(**bill_of_materials_data)
 ```
 
 ## Parameters
@@ -47,21 +47,21 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new bill of materials object
-billOfMaterialsData = system.mes.productionOrder.newBillOfMaterialsItem()
+bill_of_materials_data = system.mes.productionOrder.newBillOfMaterialsItem()
 
 # Set basic attributes for the new bill of materials
-billOfMaterialsData['quantityOrder'] = 1000.0
-billOfMaterialsData['materialGroup'] = 'CAN'
-billOfMaterialsData['unitOfMeasureId'] = '01JCH3EPVP-1MNNDJTS-37Z75NGB'
-billOfMaterialsData['materialId'] = '01JCH3ENGW-82KJDZDR-JHGYCXQN'
-billOfMaterialsData['quantityPerProducedUnit'] = 10.0
+bill_of_materials_data['quantityOrder'] = 1000.0
+bill_of_materials_data['materialGroup'] = 'CAN'
+bill_of_materials_data['unitOfMeasureId'] = '01JCH3EPVP-1MNNDJTS-37Z75NGB'
+bill_of_materials_data['materialId'] = '01JCH3ENGW-82KJDZDR-JHGYCXQN'
+bill_of_materials_data['quantityPerProducedUnit'] = 10.0
 # (You can continue setting other properties as needed here)
 
 # Validate bill of materials parameters
-validationErrors = system.mes.productionOrder.validateBillOfMaterialsItem(**billOfMaterialsData)
+validation_errors = system.mes.productionOrder.validateBillOfMaterialsItem(**bill_of_materials_data)
 
-if len(validationErrors) > 0:
-    print('Validation errors found:', validationErrors)
+if len(validation_errors) > 0:
+    print('Validation errors found:', validation_errors)
 else:
     print('Bill of materials parameters are valid.')
 ```

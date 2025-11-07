@@ -14,7 +14,7 @@ based on the provided parameters.
 ## Syntax
 
 ```python
-system.mes.shift.saveShiftRecord(**recordData)
+system.mes.shift.saveShiftRecord(**record_data)
 ```
 
 ## Parameters

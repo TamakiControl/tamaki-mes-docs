@@ -64,16 +64,16 @@ Returns a JSON representation of the newly created operation object. The followi
 
 ```python
 # Generate the object structure for a new operation object with no initial arguments
-newOperation = system.mes.operation.newOperation()
+new_operation = system.mes.operation.newOperation()
 
 # Set basic attributes for the new operation
-newOperation['locationId'] = '01JD7M94CJ-HPEQEJ1F-QA8EQ6VE'
-newOperation['name'] = 'Packaging'
+new_operation['locationId'] = '01JD7M94CJ-HPEQEJ1F-QA8EQ6VE'
+new_operation['name'] = 'Packaging'
 # (You can continue setting other properties as needed here)
 
 # Save the new operation to the system
-savedOperation = system.mes.operation.saveOperation(**newOperation)
+saved_operation = system.mes.operation.saveOperation(**new_operation)
 
 # Output the JSON representation of the saved operation
-print(savedOperation)
+print(saved_operation)
 ```

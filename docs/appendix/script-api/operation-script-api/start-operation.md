@@ -58,8 +58,8 @@ Returns a JSON object of the operation execution result for the start of the ope
 
 ```python
 # Start the operation
-startedOperationResult = system.mes.operation.startOperation('01JPBCPKSR-972W3V0Y-H00NNSKQ')
+started_operation_result = system.mes.operation.startOperation('01JPBCPKSR-972W3V0Y-H00NNSKQ')
 
 # Output the operation execution result of the started operation
-print(startedOperationResult)
+print(started_operation_result)
 ```

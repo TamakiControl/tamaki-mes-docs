@@ -42,8 +42,8 @@ The JSON Objects in references has the following properties:
 
 ```python
 # Retrieve the references for the operation record specified
-operationRecordReferences = system.mes.operation.getOperationRecordReferences('01JS20DCWR-PBFZR1MX-2SA37XFC')
+operation_record_references = system.mes.operation.getOperationRecordReferences('01JS20DCWR-PBFZR1MX-2SA37XFC')
 
 # Output the operation record references
-print(operationRecordReferences)
+print(operation_record_references)
 ```

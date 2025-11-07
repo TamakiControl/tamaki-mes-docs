@@ -11,7 +11,7 @@ Changes the status of the inventory lot from the MES based on the provided param
 ## Syntax
 
 ```python
-system.mes.inventory.changeStatus(**changeStatusRequest)
+system.mes.inventory.changeStatus(**change_status_request)
 ```
 
 ## Parameters
@@ -36,16 +36,16 @@ Returns a JSON representation of an inventory lot record for a Change Status Req
 
 ```python
 # Generate the object structure for a new change status request object with no initial arguments
-newRequest = system.mes.inventory.newChangeStatusRequest()
+new_request = system.mes.inventory.newChangeStatusRequest()
 
 # Set basic attributes for the new change status requestOPOE
-newRequest['newStatus'] = 'AVAILABLE'
-newRequest['lotId'] = '01JJCQEJYG-E31FHVTF-JB6WEJTC'
+new_request['newStatus'] = 'AVAILABLE'
+new_request['lotId'] = '01JJCQEJYG-E31FHVTF-JB6WEJTC'
 # (You can continue setting other properties as needed here)
 
 # Change the status of the lot
-changedStatusRequest = system.mes.inventory.changeStatus(**newRequest)
+changed_status_request = system.mes.inventory.changeStatus(**new_request)
 
 # Output the JSON representation of the changed status request
-print(changedStatusRequest)
+print(changed_status_request)
 ```

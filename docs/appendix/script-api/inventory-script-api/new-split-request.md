@@ -47,18 +47,18 @@ Returns a JSON representation of the newly created Split Request object. The fol
 
 ```python
 # Generate the object structure for a new split request object with no initial arguments
-newRequest = system.mes.inventory.newSplitRequest()
+new_request = system.mes.inventory.newSplitRequest()
 
 # Set basic attributes for the new split request
-newRequest['sourceLocationIdOrPath'] = 'DairyCo'
-newRequest['sourceLotId'] = '01JJCQEJYG-E31FHVTF-JB6WEJTC'
-newRequest['destinationLotName'] = '5db685a7-2096-449a-b96c-effb3739e021'
-newRequest['quantity'] = 610
+new_request['sourceLocationIdOrPath'] = 'DairyCo'
+new_request['sourceLotId'] = '01JJCQEJYG-E31FHVTF-JB6WEJTC'
+new_request['destinationLotName'] = '5db685a7-2096-449a-b96c-effb3739e021'
+new_request['quantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Split the request
-splitRequest = system.mes.inventory.split(**newRequest)
+split_request = system.mes.inventory.split(**new_request)
 
 # Output the JSON representation of the split request
-print(splitRequest)
+print(split_request)
 ```

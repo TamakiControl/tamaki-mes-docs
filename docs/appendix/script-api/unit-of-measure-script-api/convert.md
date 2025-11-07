@@ -44,8 +44,8 @@ Returns the amount converted.
 
 ```python
 # Convert the specified amount from one unit of measure to the other.
-convertedAmount = system.mes.unitOfMeasure.convert(100, 'Pound', 'Kg')
+converted_amount = system.mes.unitOfMeasure.convert(100, 'Pound', 'Kg')
 
 # Output the amount converted to new unit of measure
-print(convertedAmount)
+print(converted_amount)
 ```

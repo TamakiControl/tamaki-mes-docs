@@ -13,7 +13,7 @@ Creates or updates a Dashboard Widget Parameter Type in the system based on the 
 ## Syntax
 
 ```python
-system.mes.dashboard.saveParameterType(**parameterType)
+system.mes.dashboard.saveParameterType(**parameter_type)
 ```
 
 ## Parameters
