@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 4
 title: "Downtime Entry"
 description: "OEE Downtime Entry Screen"
 ---
@@ -66,7 +66,7 @@ description: "OEE Downtime Entry Screen"
 
 ##### View Event Details
 
-- The `View Event Details` button, ![View Event Details Button](images/downtime-entry-button-view-event-details.png#icon), opens the Downtime Event Details popup:
+- The `View Event Details` button, ![View Event Details Button](images/downtime-entry-button-view-event-details.png), opens the Downtime Event Details popup:
 
 ![Downtime Event Details popup showing detailed information about the selected downtime event](images/downtime-entry-downtime-event-details-popup.png)
 
@@ -88,7 +88,7 @@ description: "OEE Downtime Entry Screen"
 
 ##### Acknowledge Event
 
-- The `Acknowledge Downtime Event` button, ![Acknowledge Downtime Event Button](images/downtime-entry-button-acknowledge-event.png#icon), opens the Acknowledge Downtime Event popup:
+- The `Acknowledge Downtime Event` button, ![Acknowledge Downtime Event Button](images/downtime-entry-button-acknowledge-event.png), opens the Acknowledge Downtime Event popup:
 
 ![Acknowledge Downtime Event popup with acknowledgment confirmation and notes field](images/downtime-entry-acknowledge-downtime-event-popup.png)
 
@@ -97,7 +97,7 @@ description: "OEE Downtime Entry Screen"
 
 ##### Set Reason Code
  
-- The `Set Downtime Reason` button, ![Set Downtime Reason Button](./images/button-set-reason.png#icon), opens the downtime reason selection popup:
+- The `Set Downtime Reason` button, ![Set Downtime Reason Button](./images/button-set-reason.png), opens the downtime reason selection popup:
 
 ![Downtime reason selection popup with hierarchical tree of reasons and notes field](./images/downtime-reason-popup.png)
 
@@ -107,10 +107,23 @@ description: "OEE Downtime Entry Screen"
   - **Notes Field:** A text field for users to add additional notes or comments related to the downtime event.
 
 ##### Split Downtime Event
-- The `Split Downtime Event` button, ![Split Downtime Event Button](./images/button-split-event.png#icon), opens the Split Downtime Event popup:
+- The `Split Downtime Event` button, ![Split Downtime Event Button](./images/button-split-event.png), opens the Split Downtime Event popup:
 
 ![Split Downtime Event popup with slider to select the split point between two events](./images/split-event-popup.png)
 
 - **Sections:**
   - **Slider:** Select and drag the middle slider to choose the split point for the downtime event.
   - **Confirm:** Click `Confirm` to split the selected downtime event into two separate events at the chosen point.
+
+##### Export
+- The `Export` button, ![Export Button](./images/button-export.png), exports all downtime events in the table as a CSV.
+
+##### Show/Hide Columns
+- The `Show/Hide Columns` button, ![Show/Hide Columns](./images/button-show-hide-columns.png), opens the Show Columns popup:
+
+![Show Columns popup with a checklist of columns with checkboxes to toggle each one on or off in the downtime event table](./images/downtime-entry-show-columns-popup.png)
+
+- **Sections:**
+  - **Deselect All:** Quickly unchecks all columns, allowing you to start fresh when customizing your view.
+  - **Column List:** Displays all available columns that can be shown or hidden in the downtime events table.
+  - **Confirm:** Click `Confirm` to apply the selected column visibility settings to the downtime events table.

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 11
 title: "Inventory Operations Import/Export"
 description: "How to import and export Inventory Operations"
 ---

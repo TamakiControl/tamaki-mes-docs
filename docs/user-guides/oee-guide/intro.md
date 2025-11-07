@@ -10,5 +10,5 @@ description: "OEE (Overall Equipment Effectiveness) User Guide"
 - [Terms and Definitions](terms-and-definitions)
 - Screens
   - [Setup](setup)
-  - [Unit Dashboard](unit-dashboard)
   - [Downtime Entry](downtime-entry)
+  - [Unit Dashboard](unit-dashboard)
