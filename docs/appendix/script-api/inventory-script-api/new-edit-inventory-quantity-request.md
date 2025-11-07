@@ -1,12 +1,12 @@
 ---
 sidebar_position: 30
 title: "newEditInventoryQuantityRequest"
-description: "Generates an empty non-persisted edit inventory quantity request to provide the structure to save a new record into the database."
+description: "Generates an empty edit inventory quantity request to provide the structure to save a new record into the database."
 ---
 
 # system.mes.inventory.newEditInventoryQuantityRequest
 
-Generates an empty non-persisted Edit Inventory Quantity Request to provide the structure required by the API to save a new record into the database.
+Generates an empty Edit Inventory Quantity Request to provide the structure required by the API to save a new record into the database.
 This method must be combined with the [editInventoryQuantity](./edit-inventory-quantity) method in order to persist the record.
 
 ## Syntax

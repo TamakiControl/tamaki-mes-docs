@@ -1,12 +1,12 @@
 ---
 sidebar_position: 12
 title: "newMoveRequest"
-description: "Generates an empty non-persisted move request to provide the structure to save a new record into the database."
+description: "Generates an empty move request to provide the structure to save a new record into the database."
 ---
 
 # system.mes.inventory.newMoveRequest
 
-Generates an empty non-persisted Move Request to provide the structure required by the API to save a new record into the database.
+Generates an empty Move Request to provide the structure required by the API to save a new record into the database.
 This method must be combined with the [move](./move) method in order to persist the record.
 
 ## Syntax

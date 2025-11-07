@@ -1,12 +1,12 @@
 ---
 sidebar_position: 27
 title: "newChangeStatusRequest"
-description: "Generates an empty non-persisted change status request to provide the structure to save a new record into the database."
+description: "Generates an empty change status request to provide the structure to save a new record into the database."
 ---
 
 # system.mes.inventory.newChangeStatusRequest
 
-Generates an empty non-persisted Change Status Request to provide the structure required by the API to save a new record into the database.
+Generates an empty Change Status Request to provide the structure required by the API to save a new record into the database.
 This method must be combined with the [changeStatus](./change-status) method in order to persist the record.
 
 ## Syntax

@@ -1,12 +1,12 @@
 ---
 sidebar_position: 6
 title: "newUnconsumeRequest"
-description: "Generates an empty non-persisted unconsume request to provide the structure to save a new record into the database."
+description: "Generates an empty unconsume request to provide the structure to save a new record into the database."
 ---
 
 # system.mes.inventory.newConsumeRequest
 
-Generates an empty non-persisted Unconsume Request to provide the structure required by the API to save a new record into the database.
+Generates an empty Unconsume Request to provide the structure required by the API to save a new record into the database.
 This method must be combined with the [unconsume](./unconsume) method in order to persist the record.
 
 ## Syntax

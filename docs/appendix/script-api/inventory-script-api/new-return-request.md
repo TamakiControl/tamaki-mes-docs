@@ -1,12 +1,12 @@
 ---
 sidebar_position: 24
 title: "newReturnRequest"
-description: "Generates an empty non-persisted return request to provide the structure to save a new record into the database."
+description: "Generates an empty return request to provide the structure to save a new record into the database."
 ---
 
 # system.mes.inventory.newReturnRequest
 
-Generates an empty non-persisted Return Request to provide the structure required by the API to save a new record into the database.
+Generates an empty Return Request to provide the structure required by the API to save a new record into the database.
 This method must be combined with the [returnInventory](./return-inventory) method in order to persist the record.
 
 ## Syntax

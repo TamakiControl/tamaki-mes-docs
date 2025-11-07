@@ -26,24 +26,29 @@ system.mes.inventory.getLotByIdOrNameAndMaterial(idOrName, materialIdOrPath)
 
 ## Returns
 
-Returns a JSON representation of an inventory with the following properties:
+Returns a JSON representation of an inventory lot with the following properties:
 
-| Name              | Type            | Description                                                            |
-|-------------------|-----------------|------------------------------------------------------------------------|
-| `name`            | `String`        | The name of the inventory lot.                                         |
-| `materialId`      | `String` (ULID) | The ULID of the material associated with this inventory lot.           |
-| `status`          | `String`        | The status of the inventory lot.                                       |
-| `totalQuantity`   | `Double`        | The total quantity of material in the inventory lot.                   |
-| `unitOfMeasureId` | `String` (ULID) | The ULID of the unit of measure for the quantity of the inventory lot. |
-| `expirationDate`  | `Instant`       | The expected expiration date of the inventory lot.                     |
-| `closedDate`      | `Instant`       | The date that the inventory lot was closed.                            |
-| `supplierId`      | `String` (ULID) | The ULID of the supplier for the inventory lot.                        |
-| `id`              | `String` (ULID) | The ULID of the inventory lot.                                         |
-| `notes`           | `String`        | Notes related to the inventory lot.                                    |
-| `enabled`         | `Boolean`       | Indicates if the inventory lot is active and enabled.                  |
-| `spare1`          | `String`        | Additional field for user-defined context.                             |
-| `spare2`          | `String`        | Additional field for user-defined context.                             |
-| `spare3`          | `String`        | Additional field for user-defined context.                             |
+| Name                    | Type            | Description                                                                                   |
+|-------------------------|-----------------|-----------------------------------------------------------------------------------------------|
+| `id`                    | String (ULID)   | Unique identifier for the inventory lot.                                                      |
+| `notes`                 | String          | Notes associated with the inventory lot.                                                      |
+| `enabled`               | Boolean         | Indicates whether the inventory lot is enabled (default: true).                               |
+| `spare1`                | String          | Extra field 1 for additional context.                                                         |
+| `spare2`                | String          | Extra field 2 for additional context.                                                         |
+| `spare3`                | String          | Extra field 3 for additional context.                                                         |
+| `name`                  | String          | The name of the inventory lot.                                                                |
+| `materialId`            | String (ULID)   | The id of the material in the inventory lot.                                                  |
+| `materialPath`          | String          | The path of the material in the inventory lot.                                                |
+| `materialName`          | String          | The name of the material in the inventory lot.                                                |
+| `materialQuantityFormat`| String          | The quantity format of the material in the inventory lot.                                     |
+| `status`                | LotStatus       | The status of the inventory lot (default: OPEN).                                              |
+| `totalQuantity`         | Double          | The total quantity of material added to the inventory lot (default: 0.0).                     |
+| `unitOfMeasureId`       | String (ULID)   | The id of the unit of measure of the material in the inventory lot.                           |
+| `unitOfMeasureName`     | String          | The name of the unit of measure of the material in the inventory lot.                         |
+| `unitOfMeasureSymbol`   | String          | The symbol of the unit of measure of the material in the inventory lot.                       |
+| `expirationDate`        | Instant         | The expected expiration date of the inventory lot.                                            |
+| `closedDate`            | Instant         | The date that this inventory lot was closed.                                                  |
+| `createdDate`           | Instant         | The date that this inventory lot was created.                                                 |
 
 ## Example Usage
 

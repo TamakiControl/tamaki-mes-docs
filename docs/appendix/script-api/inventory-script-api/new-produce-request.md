@@ -1,12 +1,12 @@
 ---
 sidebar_position: 9
 title: "newProduceRequest"
-description: "Generates an empty non-persisted consume request to provide the structure to save a new record into the database."
+description: "Generates an empty consume request to provide the structure to save a new record into the database."
 ---
 
 # system.mes.inventory.newProduceRequest
 
-Generates an empty non-persisted Produce Request to provide the structure required by the API to save a new record into the database.
+Generates an empty Produce Request to provide the structure required by the API to save a new record into the database.
 This method must be combined with the [produce](./produce) method in order to persist the record.
 
 ## Syntax

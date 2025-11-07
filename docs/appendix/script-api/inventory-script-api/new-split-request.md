@@ -1,12 +1,12 @@
 ---
 sidebar_position: 15
 title: "newSplitRequest"
-description: "Generates an empty non-persisted split request to provide the structure to save a new record into the database."
+description: "Generates an empty split request to provide the structure to save a new record into the database."
 ---
 
 # system.mes.inventory.newSplitRequest
 
-Generates an empty non-persisted Split Request to provide the structure required by the API to save a new record into the database.
+Generates an empty Split Request to provide the structure required by the API to save a new record into the database.
 This method must be combined with the [split](./split) method in order to persist the record.
 
 ## Syntax

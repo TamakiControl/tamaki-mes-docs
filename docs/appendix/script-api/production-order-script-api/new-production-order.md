@@ -40,8 +40,7 @@ Returns a JSON representation of the newly created production order object. The 
 | `endDate`           | `null`        |
 | `dueDate`           | `null`        |
 | `unitOfMeasureId`   | `null`        |
-| `scheduleShiftId`   | `null`        |
-| `scheduleShiftName` | `null`        |
+| `shiftRecordId`     | `null`        |
 | `id`                | `null`        |
 | `notes`             | `null`        |
 | `enabled`           | `true`        |
