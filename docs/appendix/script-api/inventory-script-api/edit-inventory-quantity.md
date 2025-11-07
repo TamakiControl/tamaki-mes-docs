@@ -11,7 +11,7 @@ Edit inventory quantity from the MES based on the provided parameters.
 ## Syntax
 
 ```python
-system.mes.inventory.editInventoryQuantity(**edit_inventory_quantity_request)
+system.mes.inventory.editInventoryQuantity(**editInventoryQuantityRequest)
 ```
 
 ## Parameters
@@ -39,17 +39,17 @@ Returns a JSON representation of an inventory lot record for an Edit Inventory Q
 
 ```python
 # Generate the object structure for a new edit inventory quantity request object with no initial arguments
-new_request = system.mes.inventory.newEditInventoryQuantityRequest()
+newRequest = system.mes.inventory.newEditInventoryQuantityRequest()
 
 # Set basic attributes for the new edit inventory quantity request
-new_request['materialIdOrPath'] = 'Bottle/Milk'
-new_request['sourceLocationIdOrPath'] = 'DairyCo'
-new_request['newQuantity'] = 610
+newRequest['materialIdOrPath'] = 'Bottle/Milk'
+newRequest['sourceLocationIdOrPath'] = 'DairyCo'
+newRequest['newQuantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Edit the quantity of the inventory
-edited_inventory_quantity_request = system.mes.inventory.editInventoryQuantity(**new_request)
+editedInventoryQuantityRequest = system.mes.inventory.editInventoryQuantity(**newRequest)
 
 # Output the JSON representation of the edit inventory quantity request
-print(edited_inventory_quantity_request)
+print(editedInventoryQuantityRequest)
 ```

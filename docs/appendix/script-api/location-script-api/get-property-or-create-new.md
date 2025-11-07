@@ -14,7 +14,7 @@ Otherwise, creates a new [Location Properties](../../data-model/location-model/l
 ## Syntax
 
 ```python
-system.mes.location.getPropertyOrCreateNew(**property_data)
+system.mes.location.getPropertyOrCreateNew(**propertyData)
 ```
 
 ## Parameters
@@ -48,19 +48,19 @@ Returns a JSON representation of the location property.
 
 ```python
 # Generate the object structure for a new property object for temperature
-new_property = system.mes.location.newProperty()
+newProperty = system.mes.location.newProperty()
 
 # Define property details
-new_property['name'] = 'Temperature'
-new_property['dataType'] = 'Float'
-new_property['unitOfMeasureId'] = '01JAP8RJBN-4VYZUKE1-LY2QHV8X'
-new_property['nullable'] = False
-new_property['lowLimit'] = -20
-new_property['highLimit'] = 50
+newProperty['name'] = 'Temperature'
+newProperty['dataType'] = 'Float'
+newProperty['unitOfMeasureId'] = '01JAP8RJBN-4VYZUKE1-LY2QHV8X'
+newProperty['nullable'] = False
+newProperty['lowLimit'] = -20
+newProperty['highLimit'] = 50
 # (You can continue setting other properties as needed here)
 
 # Get the property if it exists, otherwise creates it with the given attributes
-property = system.mes.location.getPropertyOrCreateNew(**new_property)
+property = system.mes.location.getPropertyOrCreateNew(**newProperty)
 
 # Output the JSON representation of the property
 print(property)

@@ -30,8 +30,8 @@ Returns a list of JSON objects representing the active operation records.
 
 ```python
 # Retrieve all active operation records
-active_operation_records = system.mes.operation.getActiveOperationRecords()
+activeOperationRecords = system.mes.operation.getActiveOperationRecords()
 
 # Output the list of operation records
-print(active_operation_records)
+print(activeOperationRecords)
 ```

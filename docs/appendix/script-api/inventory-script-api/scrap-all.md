@@ -11,7 +11,7 @@ Scraps all inventory of a specific material at a location from the MES based on 
 ## Syntax
 
 ```python
-system.mes.inventory.scrapAll(**scrap_all_request)
+system.mes.inventory.scrapAll(**scrapAllRequest)
 ```
 
 ## Parameters
@@ -66,15 +66,15 @@ Returns a list of JSON representation of each inventory lot records created for 
 
 ```python
 # Generate the object structure for a new scrap all request
-new_request = system.mes.inventory.newScrapAllRequest()
+newRequest = system.mes.inventory.newScrapAllRequest()
 
 # Set basic attributes for the new scrap all request
-new_request['materialIdOrPath'] = 'Bottle/Milk'
-new_request['sourceLocationIdOrPath'] = 'DairyCo'
+newRequest['materialIdOrPath'] = 'Bottle/Milk'
+newRequest['sourceLocationIdOrPath'] = 'DairyCo'
 
 # Scrap all inventory at the specified location that matches the material (if specified)
-scrapped_records = system.mes.inventory.scrapAll(**new_request)
+scrappedRecords = system.mes.inventory.scrapAll(**newRequest)
 
 # Output the JSON representation of the scrapped records
-print(scrapped_records)
+print(scrappedRecords)
 ```
