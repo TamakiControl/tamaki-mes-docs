@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 title: "Unit Dashboard"
 description: "OEE Unit Dashboard Screen"
 ---
@@ -19,10 +19,13 @@ description: "OEE Unit Dashboard Screen"
 
 **Components:**
 - [Top Bar](#top-bar)
-- [Pie Chart](#pie-chart)
+- [Charts](#charts)
 - [OEE State Timeline](#oee-state-timeline)
+- [OEE Mode Timeline](#oee-mode-timeline)
 - [OEE Metrics by Hour](#oee-metrics-by-hour)
 - [Downtime Reasons Pareto Chart](#downtime-reasons-pareto-chart)
+- [Performance Details](#performance-details)
+- [Quality Details](#quality-details)
 - [Time Selection Sidebar](#time-selection-sidebar)
 
 ## Top Bar
@@ -38,13 +41,19 @@ description: "OEE Unit Dashboard Screen"
   - **Quality**: Refer to [Quality](terms-and-definitions#quality) for details on how quality is calculated.
 
 
-## Pie Chart
+## Charts
 **Example:**
 
 ![Pie chart showing distribution of different operational states for the selected unit](./images/unit-dashboard-pie-chart.png)
 
 **Description:**
-- The pie chart provides a visual representation of the different states of the unit, allowing users to quickly assess the distribution of time spent in each state. The chart is color-coded to match the states defined in the [States](setup#states) section.
+- **States Bar Chart**: Displays the total duration of each [state](setup#states) using vertical bars.
+
+- **Modes Bar Chart**: Shows the time spent in different [modes](setup#modes) using vertical bars
+
+- **Combined Bar Chart**: Merges both state and mode information into a single bar chart.
+
+- **Combined Pie Chart**: Provides a visual representation of the time distribution among various states and modes. The chart is color-coded to match the modes defined in the [Modes](setup#modes) section and the states defined in the [States](setup#states) section.
 
 ## OEE State Timeline
 **Example:**
@@ -52,11 +61,19 @@ description: "OEE Unit Dashboard Screen"
 ![OEE state timeline showing color-coded periods of different operational states for the unit](./images/unit-dashboard-state-timeline.png)
 
 **Description:**
-- A timeline that shows the historical OEE state of the line, allowing users to see trends and patterns over time. Hover over the colored bars that make up the timeline to see the start time, end time, and duration of the event associated with the color (see [States](setup#states) for what state each color represents).
+- A timeline that shows the historical OEE state of the line, allowing users to see trends and patterns over time. Hover over the colored bars that make up the timeline to see the [State](setup#states) and duration of the event as well as either the source location and reason depending on the state.
 - Clicking on a bar in the timeline will open a popup with more detailed information about the event:
   
-  ![Timeline event details popup showing duration and state information](./images/timeline-event-details.png)
+  ![Timeline event details popup showing duration and state information](./images/state-timeline-event-details.png)
   
+## OEE Mode Timeline
+**Example:**
+
+![OEE mode timeline showing color-coded periods of different modes for the unit](./images/unit-dashboard-mode-timeline.png)
+
+**Description:**
+- A timeline that shows the historical OEE mode of the line, allowing users to see trends and patterns over time. Hover over the colored bars that make up the timeline to see the [Mode](setup#modes) and duration of the event.
+
 ## OEE Metrics by Hour
 **Example:**
 
@@ -72,6 +89,22 @@ description: "OEE Unit Dashboard Screen"
 
 **Description:**
 - The Downtime Reasons Pareto chart displays the most common reasons for downtime in the selected unit. Along with the cumulative frequency, This helps users identify recurring issues and prioritize improvements to reduce downtime. This chart defaults to showing the top level reason codes in the hierarchy, click on any bar to drill down.
+
+## Performance Details  
+**Example:**  
+
+![Table displaying performance metrics such as Loss %, Total Out, True Rate, Avg Rate, and Max Rate](./images/unit-dashboard-performance-details.png)  
+
+**Description:**  
+- The Performance Details summarizes key production performance metrics for the selected period. It includes values such as Loss %, Total Out, True Rate, Average Rate, and Maximum Rate, all measured in pieces per hour.  These metrics help users evaluate how efficiently the equipment is performing compared to its expected rate and highlight areas where performance losses may be occurring.  
+
+## Quality Details  
+**Example:**  
+
+![Table displaying quality metrics such as Good Count and Total Count in pieces](./images/unit-dashboard-quality-details.png)  
+
+**Description:**  
+- The Quality Details section provides a breakdown of production quality metrics, including Good Count and Total Count in pieces. This view helps users assess the quality efficiency of the process by comparing the number of acceptable (good) products against total production. Monitoring these values helps identify quality-related losses and supports continuous improvement efforts.
 
 ## Time Selection Sidebar
 **Example:**
@@ -91,6 +124,10 @@ description: "OEE Unit Dashboard Screen"
   - **Historical**: The user can select a start and end date to view historical data.
 
 ![Historical date range selector showing calendar interface for start and end date selection](images/unit-dashboard-historical-date-selector.png)
+
+  - **Shift**: The user can define a time range in weeks and select a specific shift from the available options within that range.
+
+![Shift dashboard configuration panel with shift range and shift options](images/unit-dashboard-shift-config-panel.png)
 
 - **Location Selection Tree**: 
   - The user can select a specific location to filter the data displayed on the dashboard. The tree structure allows for easy navigation through the hierarchy of locations.
