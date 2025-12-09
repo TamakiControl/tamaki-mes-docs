@@ -6,7 +6,7 @@ description: "Clears the unit of measure cache"
 
 # system.mes.unitOfMeasure.clearUnitOfMeasureCache
 
-Clears the [Unit of Measure](../../data-model/unit-of-measure-model/unit-of-measure) cache
+Clears the [Unit of Measure](../../data-model/utility-models/unit-of-measure-model/unit-of-measure) cache
 
 ## Syntax
 

@@ -6,7 +6,7 @@ description: "Cancels the current UnitOfMeasure import queue."
 
 # system.mes.unitOfMeasure.cancelUnitOfMeasureImportQueue
 
-Cancels the current [UnitOfMeasure](../../data-model/unit-of-measure-model/unit-of-measure) import queue.
+Cancels the current [UnitOfMeasure](../../data-model/utility-models/unit-of-measure-model/unit-of-measure) import queue.
 
 ## Syntax
 

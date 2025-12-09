@@ -6,7 +6,7 @@ description: "Gets the current size of the OeeAlarm import queue."
 
 # system.mes.oee.getOeeAlarmImportQueueSize
 
-Gets the current size of the [OeeAlarm](../../data-model/oee-model/oee-alarm-record.md) import queue.
+Gets the current size of the [OeeAlarm](../../data-model/oee-model/oee-alarm.md) import queue.
 
 ## Syntax
 

@@ -6,7 +6,7 @@ description: "Cancels the current OeeState import queue."
 
 # system.mes.oeeState.cancelOeeStateImportQueue
 
-Cancels the current [OeeState](../../data-model/oee-state-model/oee-state) import queue.
+Cancels the current [OeeState](../../data-model/oee-model/oee-state) import queue.
 
 ## Syntax
 

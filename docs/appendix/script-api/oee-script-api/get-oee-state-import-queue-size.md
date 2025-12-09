@@ -6,7 +6,7 @@ description: "Gets the current size of the OeeState import queue."
 
 # system.mes.oeeState.getOeeStateImportQueueSize
 
-Gets the current size of the [OeeState](../../data-model/oee-state-model/oee-state) import queue.
+Gets the current size of the [OeeState](../../data-model/oee-model/oee-state) import queue.
 
 ## Syntax
 

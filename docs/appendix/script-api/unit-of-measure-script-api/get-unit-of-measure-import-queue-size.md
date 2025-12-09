@@ -6,7 +6,7 @@ description: "Gets the current size of the UnitOfMeasure import queue."
 
 # system.mes.unitOfMeasure.getUnitOfMeasureImportQueueSize
 
-Gets the current size of the [UnitOfMeasure](../../data-model/unit-of-measure-model/unit-of-measure) import queue.
+Gets the current size of the [UnitOfMeasure](../../data-model/utility-models/unit-of-measure-model/unit-of-measure) import queue.
 
 ## Syntax
 
