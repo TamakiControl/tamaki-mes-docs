@@ -1,6 +1,7 @@
 ---
 title: "findRoles"
 description: "Finds roles based on query parameters."
+sidebar_position: 4
 ---
 
 # system.mes.role.findRoles

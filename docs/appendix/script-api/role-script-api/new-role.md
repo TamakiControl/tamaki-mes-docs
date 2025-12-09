@@ -1,6 +1,7 @@
 ---
 title: "newRole"
 description: "Creates a new role object."
+sidebar_position: 1
 ---
 
 # newRole
