@@ -10,6 +10,8 @@ description: "Updates the mode of an existing OEE Mode Record."
 
 Updates the mode of an existing [OEE Mode Record](../../data-model/oee-model/oee-mode-record.md).
 
+Copies the code, name, calculation type, color, from the OEE Mode to the OEE Mode Record.
+
 ## Syntax
 
 ```python
