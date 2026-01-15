@@ -15,7 +15,7 @@ The table below lists common entities and their dependencies. A dependency indic
 | Entity                      | Dependencies                                   |
 | --------------------------- | ---------------------------------------------- |
 | **UnitOfMeasure**           | None                                           |
-| **Location**                | None                                           |
+| **Location**                | UnitOfMeasure                                  |
 | **Material**                | UnitOfMeasure, Location                        |
 | **UnitOfMeasureConversion** | UnitOfMeasure, Material                        |
 | **Shift**                   | Location                                       |

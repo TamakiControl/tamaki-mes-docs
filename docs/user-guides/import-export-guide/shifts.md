@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 title: "Shifts Import/Export"
 description: "How to import and export Shifts"
 ---
