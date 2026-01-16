@@ -40,8 +40,7 @@ Returns a JSON representation of the newly created production order object. The 
 | `endDate`           | `null`        |
 | `dueDate`           | `null`        |
 | `unitOfMeasureId`   | `null`        |
-| `scheduleShiftId`   | `null`        |
-| `scheduleShiftName` | `null`        |
+| `shiftRecordId`     | `null`        |
 | `id`                | `null`        |
 | `notes`             | `null`        |
 | `enabled`           | `true`        |
@@ -53,17 +52,17 @@ Returns a JSON representation of the newly created production order object. The 
 
 ```python
 # Generate the object structure for a new production order object with no initial arguments
-new_production_order = system.mes.productionOrder.newProductionOrder()
+newProductionOrder = system.mes.productionOrder.newProductionOrder()
 
 # Set basic attributes for the new production order
-new_production_order['productId'] = '01JCH3ENGW-82KJDZDR-JHGYCXQN'
-new_production_order['name'] = 'Order001'
-new_production_order['unitOfMeasureId'] = '01JCH3EPVP-1MNNDJTS-37Z75NGB'
+newProductionOrder['productId'] = '01JCH3ENGW-82KJDZDR-JHGYCXQN'
+newProductionOrder['name'] = 'Order001'
+newProductionOrder['unitOfMeasureId'] = '01JCH3EPVP-1MNNDJTS-37Z75NGB'
 # (You can continue setting other properties as needed here)
 
 # Save the new production order to the system
-saved_production_order = system.mes.productionOrder.saveProductionOrder(**new_production_order)
+savedProductionOrder = system.mes.productionOrder.saveProductionOrder(**newProductionOrder)
 
 # Output the JSON representation of the saved production order
-print(saved_production_order)
+print(savedProductionOrder)
 ```

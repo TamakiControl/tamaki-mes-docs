@@ -1,6 +1,6 @@
 ---
 title: "newFilterRequest"
-description: "Generates an empty non-persisted filter request object."
+description: "Generates an empty filter request object."
 sidebar_position: 2
 ---
 
@@ -49,18 +49,18 @@ Returns a JSON representation of the newly created filter request object. The fo
 
 ```python
 # Generate the object structure for a new filter request object with no initial arguments
-new_filter_request = system.mes.query.newFilterRequest()
+newFilterRequest = system.mes.query.newFilterRequest()
 
 # Set basic attributes for the new filter request
-new_filter_request["field"] = "createdDate"
-new_filter_request["condition"] = "between"
-new_filter_request["minDateValue"] = "2025-01-01T00:00:00Z"
-new_filter_request["maxDateValue"] = "2026-01-01T00:00:00Z"
+newFilterRequest["field"] = "createdDate"
+newFilterRequest["condition"] = "between"
+newFilterRequest["minDateValue"] = "2025-01-01T00:00:00Z"
+newFilterRequest["maxDateValue"] = "2026-01-01T00:00:00Z"
 # (You can continue setting other properties as needed here)
 
 # Use the filter request in a query
 queryRequest = system.mes.query.newQueryRequest()
-queryRequest["filters"] = [new_filter_request]
+queryRequest["filters"] = [newFilterRequest]
 result = system.mes.material.findMaterials(**queryRequest)
 
 # Output the JSON representation of the result

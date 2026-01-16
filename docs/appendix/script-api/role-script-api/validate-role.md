@@ -1,6 +1,7 @@
 ---
 title: "validateRole"
 description: "Validates a role object."
+sidebar_position: 6
 ---
 
 # system.mes.role.validateRole

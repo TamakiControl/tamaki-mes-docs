@@ -1,12 +1,12 @@
 ---
 sidebar_position: 27
 title: "newChangeStatusRequest"
-description: "Generates an empty non-persisted change status request to provide the structure to save a new record into the database."
+description: "Generates an empty change status request to provide the structure to save a new record into the database."
 ---
 
 # system.mes.inventory.newChangeStatusRequest
 
-Generates an empty non-persisted Change Status Request to provide the structure required by the API to save a new record into the database.
+Generates an empty Change Status Request to provide the structure required by the API to save a new record into the database.
 This method must be combined with the [changeStatus](./change-status) method in order to persist the record.
 
 ## Syntax
@@ -41,16 +41,16 @@ Returns a JSON representation of the newly created Change Status Request object.
 
 ```python
 # Generate the object structure for a new change status request object with no initial arguments
-new_request = system.mes.inventory.newChangeStatusRequest()
+newRequest = system.mes.inventory.newChangeStatusRequest()
 
 # Set basic attributes for the new change status requestOPOE
-new_request['newStatus'] = 'AVAILABLE'
-new_request['lotId'] = '01JJCQEJYG-E31FHVTF-JB6WEJTC'
+newRequest['newStatus'] = 'AVAILABLE'
+newRequest['lotId'] = '01JJCQEJYG-E31FHVTF-JB6WEJTC'
 # (You can continue setting other properties as needed here)
 
 # Change the status of the lot
-changed_status_request = system.mes.inventory.changeStatus(**new_request)
+changedStatusRequest = system.mes.inventory.changeStatus(**newRequest)
 
 # Output the JSON representation of the changed status request
-print(changed_status_request)
+print(changedStatusRequest)
 ```

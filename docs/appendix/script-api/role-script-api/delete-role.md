@@ -1,6 +1,7 @@
 ---
 title: "deleteRole"
 description: "Deletes a role by its ID."
+sidebar_position: 7
 ---
 
 # deleteRole

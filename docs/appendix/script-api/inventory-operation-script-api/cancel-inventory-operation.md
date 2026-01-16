@@ -30,8 +30,8 @@ Returns a JSON object of the updated inventory lot record with the cancelled ope
 
 ```python
 # Cancel the inventory operation
-cancelled_lot_record = system.mes.inventory.operation.cancelInventoryOperation('01JPAND53P-BZ61RZHZ-V7C6EEHG')
+cancelledLotRecord = system.mes.inventory.operation.cancelInventoryOperation('01JPAND53P-BZ61RZHZ-V7C6EEHG')
 
 # Output the inventory lot record of the cancelled inventory operation
-print(cancelled_lot_record)
+print(cancelledLotRecord)
 ```

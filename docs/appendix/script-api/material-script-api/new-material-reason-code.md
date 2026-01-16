@@ -42,17 +42,17 @@ Returns a JSON representation of the newly created material reason code object. 
 
 ```python
 # Generate the object structure for a new material reason code object with no initial arguments
-new_material_reason_code = system.mes.material.newMaterialReasonCode()
+newMaterialReasonCode = system.mes.material.newMaterialReasonCode()
 
 # Set basic attributes for the new material reason code
-new_material_reason_code['lotRecordType'] = 'CONSUME'
-new_material_reason_code['reasonCode'] = 'SCRP001'
-new_material_reason_code['requiredComments'] = True
+newMaterialReasonCode['lotRecordType'] = 'CONSUME'
+newMaterialReasonCode['reasonCode'] = 'SCRP001'
+newMaterialReasonCode['requiredComments'] = True
 # (You can continue setting other properties as needed here)
 
 # Save the new material reason code to the system
-saved_material_reason_code = system.mes.material.saveMaterialReasonCode(**new_material_reason_code)
+savedMaterialReasonCode = system.mes.material.saveMaterialReasonCode(**newMaterialReasonCode)
 
 # Output the JSON representation of the saved material reason code
-print(saved_material_reason_code)
+print(savedMaterialReasonCode)
 ```

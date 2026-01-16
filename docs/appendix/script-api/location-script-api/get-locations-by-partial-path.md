@@ -30,8 +30,8 @@ Returns a list of JSON objects representing all locations with paths that includ
 
 ```python
 # Retrieve locations by partial path
-matching_locations = system.mes.location.getLocationsByPartialPath('DairyCo')
+matchingLocations = system.mes.location.getLocationsByPartialPath('DairyCo')
 
 # Output the list of matching locations
-print(matching_locations)
+print(matchingLocations)
 ```

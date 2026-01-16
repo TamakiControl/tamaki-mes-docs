@@ -14,7 +14,7 @@ This only checks if the unit of measure object can be saved based on the attribu
 ## Syntax
 
 ```python
-system.mes.unitOfMeasure.validateUnitOfMeasure(**uom_data)
+system.mes.unitOfMeasure.validateUnitOfMeasure(**uomData)
 ```
 
 ## Parameters
@@ -38,18 +38,18 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new unit of measure object
-uom_data = system.mes.unitOfMeasure.newUnitOfMeasure()
+uomData = system.mes.unitOfMeasure.newUnitOfMeasure()
 
 # Set basic attributes for the new unit of measure
-uom_data['name'] = 'Pound'
-uom_data['symbol'] = 'lb'
+uomData['name'] = 'Pound'
+uomData['symbol'] = 'lb'
 # (You can continue setting other properties as needed here)
 
 # Validate unit of measure parameters
-validation_errors = system.mes.unitOfMeasure.validateUnitOfMeasure(**uom_data)
+validationErrors = system.mes.unitOfMeasure.validateUnitOfMeasure(**uomData)
 
-if len(validation_errors) > 0:
-    print('Validation errors found:', validation_errors)
+if len(validationErrors) > 0:
+    print('Validation errors found:', validationErrors)
 else:
     print('Unit of measure parameters are valid.')
 ```

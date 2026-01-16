@@ -14,7 +14,7 @@ and returns any validation errors. This only checks if the object can be saved b
 ## Syntax
 
 ```python
-system.mes.shift.validateShift(**shift_data)
+system.mes.shift.validateShift(**shiftData)
 ```
 
 ## Parameters
