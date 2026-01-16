@@ -1,12 +1,12 @@
 ---
 sidebar_position: 33
 title: "newReceiveRequest"
-description: "Generates an empty non-persisted receive request to provide the structure to save a new record into the database."
+description: "Generates an empty receive request to provide the structure to save a new record into the database."
 ---
 
 # system.mes.inventory.newReceiveRequest
 
-Generates an empty non-persisted Receive Request to provide the structure required by the API to save a new record into the database.
+Generates an empty Receive Request to provide the structure required by the API to save a new record into the database.
 This method must be combined with the [receive](./receive) method in order to persist the record.
 
 ## Syntax

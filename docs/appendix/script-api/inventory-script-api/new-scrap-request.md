@@ -1,12 +1,12 @@
 ---
 sidebar_position: 21
 title: "newScrapRequest"
-description: "Generates an empty non-persisted scrap request to provide the structure to save a new record into the database."
+description: "Generates an empty scrap request to provide the structure to save a new record into the database."
 ---
 
 # system.mes.inventory.newScrapRequest
 
-Generates an empty non-persisted Scrap Request to provide the structure required by the API to save a new record into the database.
+Generates an empty Scrap Request to provide the structure required by the API to save a new record into the database.
 This method must be combined with the [scrap](./scrap) method in order to persist the record.
 
 ## Syntax

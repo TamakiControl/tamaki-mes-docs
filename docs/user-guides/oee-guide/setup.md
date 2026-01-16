@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 title: "Setup"
 description: "OEE Setup Configuration"
 ---
@@ -36,6 +36,7 @@ description: "OEE Setup Configuration"
    - [Enable Availability](#enable-availability).
    - Fill out the [State Expression](#state-expression).
    - Configure the [Downtime Reason Source](#downtime-reason-source) and [Downtime Reason Expression](#downtime-reason-expression).
+   - Fill out the [Alarm Path](#alarm-path).
 6. Configure the [Performance](#performance) settings:
    - [Enable Performance](#enable-performance).
    - Fill out the [Production Count Unit of Measure](#production-count-unit-of-measure).
@@ -45,16 +46,20 @@ description: "OEE Setup Configuration"
    - Configure the [Standard Rate Source](#standard-rate-source) and set the [Standard Rate](#standard-rate-uomtime-unit).
 7. Configure the [Quality](#quality) settings:
     - [Enable Quality](#enable-quality).
-    - Fill out the [Waste Count Expression](#waste-count-expression).
-    - Set the [Waste Count Overflow Value](#waste-count-overflow-value).
+    - Configure the [Quality Strategy](#quality-strategy) and [Quality Count Expression](#quality-count-expression).
+    - Set the [Quality Count Overflow Value](#waste-count-overflow-value).
 8. Configure the [Production Order Source](#production-order-source).
 9. Save the configuration by clicking the `Confirm` button at the bottom of the screen.
 
 ### OEE Configuration Fields
 
+#### Import
+
+Imports the OEE configurations from a CSV or JSON file. The imported file should match the expected format exported from Tamaki MES to ensure data integrity.
+
 #### Export
 
-Exports the OEE configuration for the selected location to an Excel file. This can be useful for backup purposes or for transferring configurations between different instances of Tamaki MES.
+Exports the OEE configurations for the selected location to a CSV or JSON file. This can be useful for backup purposes or for transferring configurations between different instances of Tamaki MES.
 
 #### Delete
 
@@ -111,6 +116,10 @@ Opens a dropdown with the following options:
 
 This is where the Downtime Reason's fault code is specified for this location [Downtime Reason](terms-and-definitions#downtime-reason). This can be a static value but will most likely be a tag binding to reflect the PLC's value for the fault code of the machine [Expression Field](terms-and-definitions#expression-field).
 
+##### Alarm Path
+
+This defines the tag path where alarms related to this location are configured. Any alarms triggered under this path will be captured and associated with the corresponding equipment.
+
 #### Performance
 
 ##### Enable Performance
@@ -154,11 +163,17 @@ This is where the value for the [Standard Rate](terms-and-definitions#standard-r
 
 Enables quality tracking for the OEE Records. This allows the system to track the waste count and rate of the location.
 
-##### Waste Count Expression
+##### Quality Strategy
 
-The [Expression Field](terms-and-definitions#expression-field) where the PLC tag for the [Waste Count](terms-and-definitions#waste-count) of the location is bound to the OEE model.
+Opens a dropdown with the following options:
+- **Good Count:** The [Quality Count Expression](#quality-count-expression) field is evaluated based on the count of good units produced.
+- **Waste Count:** The [Quality Count Expression](#quality-count-expression) field is evaluated based on the count of waste units produced.
 
-##### Waste Count Overflow Value
+##### Quality Count Expression
+
+The [Expression Field](terms-and-definitions#expression-field) where the PLC tag for the [Good Count](terms-and-definitions#good-count) or [Waste Count](terms-and-definitions#waste-count) of the location is bound to the OEE model.
+
+##### Quality Count Overflow Value
 
 The tag capturing waste count will roll over to 0 when it reaches this value. This is used to calculate the waste count.
 
@@ -188,12 +203,20 @@ This is where the name or id of the [Production Order](terms-and-definitions#pro
 3. Click the `Confirm` button to save the new state.
 
 #### Edit State
-1. Select a state from the list on the left side of the screen.
+1. Select a state from the list on the right side of the screen.
 2. Click on the `Edit` button to open the edit popup.
 3. Modify the fields in the popup as needed (see [Edit or Create New State Popup Fields](#edit-or-create-new-state-popup-fields) for details).
 4. Click the `Confirm` button to save the changes.
 
 ### State Fields
+
+#### Import
+
+Imports the OEE states from a CSV or JSON file. The imported file should match the expected format exported from Tamaki MES to ensure data integrity.
+
+#### Export
+
+Exports the OEE states for the selected location to a CSV or JSON file. This can be useful for backup purposes or for transferring configurations between different instances of Tamaki MES.
 
 #### Delete
 
@@ -225,6 +248,15 @@ Toggles the state on or off.
 
 The name of the state. This should be a descriptive name that clearly indicates the purpose of the state (e.g., "Running", "Downtime", "Setup").
 
+##### State Calculation Type
+
+This is a dropdown that allows the user to select how the OEE record of the state will be handled. The options are:
+- **Idle:** This is the default state for the OEE record, indicating that the location is not currently running or producing anything.
+- **Running:** This is the state for the OEE record when the location is actively producing items. This state is counted towards the OEE calculation as running time.
+- **Downtime:** This is the state for the OEE record when the location is not producing items due to a planned or unplanned downtime event. 
+- **Starved:** This is the state for the OEE record when the location is not producing items because it is waiting for input from a previous location in the production line.
+- **Blocked:** This is the state for the OEE record when the location is not producing items because it is waiting for output to be accepted by a subsequent location in the production line.
+
 ##### Interruption Location
 
 This is a dropdown that allows the user to select an interruption location.
@@ -243,18 +275,17 @@ Here are a few examples of states and their corresponding interruption locations
 
 This is the integer code for the state, matching the PLC tag that indicates the state of the location. This code is used to identify the state in the PLC and should be unique for each state.
 
-##### State Calculation Type
+##### State Code
 
-This is a dropdown that allows the user to select how the OEE record of the state will be handled. The options are:
-- **Idle:** This is the default state for the OEE record, indicating that the location is not currently running or producing anything.
-- **Running:** This is the state for the OEE record when the location is actively producing items. This state is counted towards the OEE calculation as running time.
-- **Downtime:** This is the state for the OEE record when the location is not producing items due to a planned or unplanned downtime event. 
-- **Starved:** This is the state for the OEE record when the location is not producing items because it is waiting for input from a previous location in the production line.
-- **Blocked:** This is the state for the OEE record when the location is not producing items because it is waiting for output to be accepted by a subsequent location in the production line.
+This is the integer code for the state, matching the PLC tag that indicates the state of the location. This code is used to identify the state in the PLC and should be unique for each state.
 
 ##### Color
 
 The color associated with the state, used for visual representation in the [OEE timeline](unit-dashboard#oee-state-timeline).
+
+##### Notes
+
+The optional comments or explanation about the state.
 
 ## Modes
 
@@ -270,12 +301,20 @@ The color associated with the state, used for visual representation in the [OEE 
 3. Click the `Confirm` button to save the new mode.
 
 #### Edit Mode
-1. Select a mode from the list on the left side of the screen.
+1. Select a mode from the list on the right side of the screen.
 2. Click on the `Edit` button to open the edit popup.
 3. Modify the fields in the popup as needed (see [Edit or Create New Mode Popup Fields](#edit-or-create-new-mode-popup-fields) for details).
 4. Click the `Confirm` button to save the changes.
 
 ### Mode Fields
+
+#### Import
+
+Imports the OEE modes from a CSV or JSON file. The imported file should match the expected format exported from Tamaki MES to ensure data integrity.
+
+#### Export
+
+Exports the OEE modes for the selected location to a CSV or JSON file. This can be useful for backup purposes or for transferring configurations between different instances of Tamaki MES.
 
 #### Delete
 
@@ -298,6 +337,10 @@ Opens the following popup to create a new mode:
 Refer to [Edit or Create New Mode Popup Fields](#edit-or-create-new-mode-popup-fields) for details on the popup.
 
 ### Edit or Create New Mode Popup Fields
+
+##### Enabled
+
+Toggles the mode on or off.
 
 #### Name
 
@@ -332,19 +375,25 @@ The [Expression Field](terms-and-definitions#expression-field) where the PLC tag
 
 The fixed value for the expected duration of the mode, defined in seconds. This is used to set a baseline for how long the mode is expected to last, which can be useful for planning and scheduling purposes.
 
+##### Notes
+
+The optional comments or explanation about the mode. This will be automatically copied into any mode records as template notes.
+
 ## Downtime Reasons
 
 **Example:**
 
-![Downtime reasons configuration tab showing hierarchical tree of downtime reason categories](./images/setup-downtime-reasons.png)
+![Downtime reasons configuration tab showing hierarchical tree of downtime reason categories](./images/setup-downtime-reasons-1.png)
 
-### Downtime Reasons Model [oee downtime reason](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Foee-downtime-reason.md)
+![Downtime reasons configuration tab showing hierarchical tree of downtime reason categories](./images/setup-downtime-reasons-2.png)
+
+### Downtime Reasons Model [oee downtime reason](../../appendix/data-model/oee-model/oee-downtime-reason)
 
 ### Downtime Reasons Workflow
 
 ##### Create New Downtime Reason
-1. Right-click either on empty space in the tree, or on the downtime reason which you want to use as the parent reason.
-2. Click `Add Downtime Reason` in the context menu that appears from right-clicking. This will populate the right side of the screen with empty values, and set the [Parent Downtime Reason](#parent-downtime-reason) to what was right-clicked (see [Edit or Create New Downtime Reason Fields](#edit-or-create-new-downtime-reason-fields)).
+1. Click the downtime reason you want to set as the parent reason, or leave it unselected if no parent reason is required.
+2. Click `Create` on the default downtime reason page. This will populate the right side of the screen with empty values, and set the [Parent Downtime Reason](#parent-downtime-reason) to what was clicked (see [Edit or Create New Downtime Reason Fields](#edit-or-create-new-downtime-reason-fields)).
 3. Fill out the fields on the right side of the screen (see [Edit or Create New Downtime Reason Fields](#edit-or-create-new-downtime-reason-fields) for details).
 4. Click the `Confirm` button to save the new downtime reason.
 
@@ -361,9 +410,19 @@ The downtime reason tree displays the hierarchy of downtime reasons. It allows u
 
 To edit a downtime reason, select it from the tree to populate the right side of the screen. See [Edit or Create New Downtime Reason Fields](#edit-or-create-new-downtime-reason-fields) for details on the fields.
 
-To create a new downtime reason, 
-
 ### Edit or Create New Downtime Reason Fields
+
+#### Import
+
+Imports the OEE downtime reasons from a CSV or JSON file. The imported file should match the expected format exported from Tamaki MES to ensure data integrity.
+
+#### Export
+
+Exports the OEE downtime reasons to a CSV or JSON file. This can be useful for backup purposes or for transferring configurations between different instances of Tamaki MES.
+
+##### Enabled
+
+Toggles the downtime reason on or off.
 
 #### Name
 
@@ -376,6 +435,10 @@ A concise, detailed description of the downtime reason, providing additional con
 #### Code
 
 The integer code for the downtime reason, matching the PLC tag that indicates the downtime reason or fault code of the location. This code is used to identify the downtime reason in the PLC and should be unique for each downtime reason.
+
+#### Location
+
+The location where this downtime reason applies. This determines which specific machine, line, or area the reason is associated with when downtime is recorded.
 
 #### Parent Downtime Reason
 
