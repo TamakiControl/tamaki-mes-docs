@@ -1,12 +1,12 @@
 ---
 sidebar_position: 18
 title: "newMergeRequest"
-description: "Generates an empty non-persisted merge request to provide the structure to save a new record into the database."
+description: "Generates an empty merge request to provide the structure to save a new record into the database."
 ---
 
 # system.mes.inventory.newMergeRequest
 
-Generates an empty non-persisted Merge Request to provide the structure required by the API to save a new record into the database.
+Generates an empty Merge Request to provide the structure required by the API to save a new record into the database.
 This method must be combined with the [merge](./merge) method in order to persist the record.
 
 ## Syntax

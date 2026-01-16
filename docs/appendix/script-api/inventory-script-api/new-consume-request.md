@@ -1,12 +1,12 @@
 ---
 sidebar_position: 3
 title: "newConsumeRequest"
-description: "Generates an empty non-persisted consume request to provide the structure to save a new record into the database."
+description: "Generates an empty consume request to provide the structure to save a new record into the database."
 ---
 
 # system.mes.inventory.newConsumeRequest
 
-Generates an empty non-persisted Consume Request to provide the structure required by the API to save a new record into the database.
+Generates an empty Consume Request to provide the structure required by the API to save a new record into the database.
 This method must be combined with the [consume](./consume) method in order to persist the record.
 
 ## Syntax

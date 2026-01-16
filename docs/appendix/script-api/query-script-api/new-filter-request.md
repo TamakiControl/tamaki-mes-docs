@@ -1,6 +1,6 @@
 ---
 title: "newFilterRequest"
-description: "Generates an empty non-persisted filter request object."
+description: "Generates an empty filter request object."
 sidebar_position: 2
 ---
 
