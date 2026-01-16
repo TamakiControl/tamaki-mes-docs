@@ -1,21 +1,45 @@
 ---
+sidebar_position: 20
 title: "getOeePermissions"
 description: "Gets all OEE role permissions."
-sidebar_position: 1
 ---
 
 # system.mes.oee.getOeePermissions
 
 ## Description
-Retrieves a list of all role permission strings related to OEE.
 
-## Returns
-| Type         | Description                          |
-|--------------|--------------------------------------|
-| `List<String>` | List of all OEE role permissions.    |
+Retrieves a list of all role permission strings related to OEE. This can be used to check what permissions are available for OEE operations.
 
-## Code Example
+## Syntax
+
 ```python
-permissions = system.mes.oee.getOeePermissions()
+system.mes.oee.getOeePermissions()
 ```
 
+## Parameters
+
+| Parameter | Type | Nullable | Description                               |
+|-----------|------|----------|-------------------------------------------|
+| None      | -    | -        | This method does not take any parameters. |
+
+## Returns
+
+Returns a list of strings representing all OEE role permissions.
+
+| Name            | Type           | Description                       |
+|-----------------|----------------|-----------------------------------|
+| `permissions`   | `List<String>` | List of all OEE role permissions. |
+
+## Code Examples
+
+```python
+# Retrieve all OEE permissions
+permissions = system.mes.oee.getOeePermissions()
+
+# Output the list of permissions
+print(permissions)
+
+# Check if a specific permission exists
+if 'OEE_READ' in permissions:
+    print("Read permission is available")
+```
