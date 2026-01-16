@@ -11,7 +11,7 @@ Scraps all inventory of a specific material at a location from the MES based on 
 ## Syntax
 
 ```python
-system.mes.inventory.scrapAll(**scrap_all_request)
+system.mes.inventory.scrapAll(**scrapAllRequest)
 ```
 
 ## Parameters

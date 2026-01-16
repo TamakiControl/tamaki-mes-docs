@@ -11,7 +11,7 @@ Returns inventory from the MES based on the provided parameters.
 ## Syntax
 
 ```python
-system.mes.inventory.returnInventory(**return_request)
+system.mes.inventory.returnInventory(**returnRequest)
 ```
 
 ## Parameters

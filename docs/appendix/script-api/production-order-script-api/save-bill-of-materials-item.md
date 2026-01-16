@@ -13,7 +13,7 @@ Creates or updates a [Production Order Bill of Materials](../../data-model/produ
 ## Syntax
 
 ```python
-system.mes.productionOrder.saveBillOfMaterialsItem(**bill_of_materials_data)
+system.mes.productionOrder.saveBillOfMaterialsItem(**billOfMaterialsData)
 ```
 
 ## Parameters
@@ -46,33 +46,33 @@ Returns a JSON representation of the saved bill of materials.
 
 ```python
 # Generate the object structure for a new bill of materials object, set the initial arguments and save it
-new_bill_of_materials = system.mes.productionOrder.newBillOfMaterialsItem()
-new_bill_of_materials['quantityOrder'] = 1000.0
-new_bill_of_materials['materialGroup'] = 'CAN'
-new_bill_of_materials['unitOfMeasureId'] = '01JCH3EPVP-1MNNDJTS-37Z75NGB'
-new_bill_of_materials['materialId'] = '01JCH3ENGW-82KJDZDR-JHGYCXQN'
-new_bill_of_materials['quantityPerProducedUnit'] = 10.0
-saved_bill_of_materials = system.mes.productionOrder.saveBillOfMaterialsItem(**new_bill_of_materials)
+newBillOfMaterials = system.mes.productionOrder.newBillOfMaterialsItem()
+newBillOfMaterials['quantityOrder'] = 1000.0
+newBillOfMaterials['materialGroup'] = 'CAN'
+newBillOfMaterials['unitOfMeasureId'] = '01JCH3EPVP-1MNNDJTS-37Z75NGB'
+newBillOfMaterials['materialId'] = '01JCH3ENGW-82KJDZDR-JHGYCXQN'
+newBillOfMaterials['quantityPerProducedUnit'] = 10.0
+savedBillOfMaterials = system.mes.productionOrder.saveBillOfMaterialsItem(**newBillOfMaterials)
 
 # Output the JSON representation of the saved bill of materials
-print(saved_bill_of_materials)
+print(savedBillOfMaterials)
 
 # Generate the object structure for another new bill of materials to update the previous bill of materials
-bill_of_materials_data = system.mes.productionOrder.newBillOfMaterialsItem()
+billOfMaterialsData = system.mes.productionOrder.newBillOfMaterialsItem()
 
 # Set basic attributes for the updated bill of materials
-bill_of_materials_data['id'] = saved_bill_of_materials.id
-bill_of_materials_data['quantityOrder'] = 1000.0
-bill_of_materials_data['materialGroup'] = 'CAN'
-bill_of_materials_data['unitOfMeasureId'] = '01JCH3EPVP-1MNNDJTS-37Z75NGB'
-bill_of_materials_data['materialId'] = '01JCH3ENGW-82KJDZDR-JHGYCXQN'
-bill_of_materials_data['quantityPerProducedUnit'] = 10.0
-bill_of_materials_data['position'] = 1
+billOfMaterialsData['id'] = savedBillOfMaterials.id
+billOfMaterialsData['quantityOrder'] = 1000.0
+billOfMaterialsData['materialGroup'] = 'CAN'
+billOfMaterialsData['unitOfMeasureId'] = '01JCH3EPVP-1MNNDJTS-37Z75NGB'
+billOfMaterialsData['materialId'] = '01JCH3ENGW-82KJDZDR-JHGYCXQN'
+billOfMaterialsData['quantityPerProducedUnit'] = 10.0
+billOfMaterialsData['position'] = 1
 # (You can continue setting other properties as needed here)
 
 # Save the bill of materials to update it in the system
-updated_bill_of_materials = system.mes.productionOrder.saveBillOfMaterialsItem(**bill_of_materials_data)
+updatedBillOfMaterials = system.mes.productionOrder.saveBillOfMaterialsItem(**billOfMaterialsData)
 
 # Output the JSON representation of the updated bill of materials
-print(updated_bill_of_materials)
+print(updatedBillOfMaterials)
 ```

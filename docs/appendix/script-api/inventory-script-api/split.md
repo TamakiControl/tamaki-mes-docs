@@ -11,7 +11,7 @@ Splits inventory from the MES based on the provided parameters.
 ## Syntax
 
 ```python
-system.mes.inventory.split(**split_request)
+system.mes.inventory.split(**splitRequest)
 ```
 
 ## Parameters

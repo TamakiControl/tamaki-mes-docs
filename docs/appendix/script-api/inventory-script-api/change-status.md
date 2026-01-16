@@ -81,8 +81,8 @@ newRequest['lotId'] = '01JJCQEJYG-E31FHVTF-JB6WEJTC'
 # (You can continue setting other properties as needed here)
 
 # Change the status of the lot
-changeStatusLotRecord = system.mes.inventory.changeStatus(**newRequest)
+changedStatusLotRecord = system.mes.inventory.changeStatus(**newRequest)
 
 # Output the JSON representation of the lot record of the change status action
-print(changeStatusLotRecord)
+print(changedStatusLotRecord)
 ```

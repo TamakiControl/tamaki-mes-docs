@@ -11,7 +11,7 @@ Scraps inventory from the MES based on the provided parameters.
 ## Syntax
 
 ```python
-system.mes.inventory.scrap(**scrap_request)
+system.mes.inventory.scrap(**scrapRequest)
 ```
 
 ## Parameters

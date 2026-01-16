@@ -48,8 +48,8 @@ Returns a JSON object of the operation execution result for the end of the opera
 
 ```python
 # Stop the operation
-stopped_operation_result = system.mes.operation.stopOperation('01JPBCPKSR-972W3V0Y-H00NNSKQ')
+stoppedOperationResult = system.mes.operation.stopOperation('01JPBCPKSR-972W3V0Y-H00NNSKQ')
 
 # Output the operation execution result of the stopped operation
-print(stopped_operation_result)
+print(stoppedOperationResult)
 ```

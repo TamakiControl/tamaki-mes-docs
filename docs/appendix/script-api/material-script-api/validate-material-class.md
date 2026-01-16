@@ -14,7 +14,7 @@ This only checks if the material class object can be saved based on the attribut
 ## Syntax
 
 ```python
-system.mes.material.validateMaterialClass(**material_class_data)
+system.mes.material.validateMaterialClass(**materialClassData)
 ```
 
 ## Parameters
@@ -40,17 +40,17 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new material class object
-material_class_data = system.mes.material.newMaterialClass()
+materialClassData = system.mes.material.newMaterialClass()
 
 # Set basic attributes for the new material class
-material_class_data['name'] = 'RAW'
+materialClassData['name'] = 'RAW'
 # (You can continue setting other properties as needed here)
 
 # Validate material class parameters
-validation_errors = system.mes.material.validateMaterialClass(**material_class_data)
+validationErrors = system.mes.material.validateMaterialClass(**materialClassData)
 
-if len(validation_errors) > 0:
-    print('Validation errors found:', validation_errors)
+if len(validationErrors) > 0:
+    print('Validation errors found:', validationErrors)
 else:
     print('Material class parameters are valid.')
 ```

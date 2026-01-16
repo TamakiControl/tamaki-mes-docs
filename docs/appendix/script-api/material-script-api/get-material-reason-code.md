@@ -47,8 +47,8 @@ Returns a JSON representation of the material reason code. Returns nothing if no
 
 ```python
 # Retrieve a material reason code by ID or reason code
-material_reason_code = system.mes.material.getMaterialReasonCode('SCRP001')
+materialReasonCode = system.mes.material.getMaterialReasonCode('SCRP001')
 
 # Output the material reason code
-print(material_reason_code)
+print(materialReasonCode)
 ```

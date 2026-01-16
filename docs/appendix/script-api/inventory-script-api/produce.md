@@ -11,7 +11,7 @@ Produces inventory from the MES based on the provided parameters.
 ## Syntax
 
 ```python
-system.mes.inventory.produce(**produce_request)
+system.mes.inventory.produce(**produceRequest)
 ```
 
 ## Parameters

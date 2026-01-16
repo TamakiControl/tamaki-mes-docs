@@ -11,7 +11,7 @@ Unconsumes inventory from the MES based on the provided parameters.
 ## Syntax
 
 ```python
-system.mes.inventory.unconsume(**unconsume_request)
+system.mes.inventory.unconsume(**unconsumeRequest)
 ```
 
 ## Parameters

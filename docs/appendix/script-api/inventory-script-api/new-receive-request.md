@@ -51,18 +51,18 @@ Returns a JSON representation of the newly created Receive Request object. The f
 
 ```python
 # Generate the object structure for a new receive request object with no initial arguments
-new_request = system.mes.inventory.newReceiveRequest()
+newRequest = system.mes.inventory.newReceiveRequest()
 
 # Set basic attributes for the new receive request
-new_request['materialIdOrPath'] = 'Bottle/Milk'
-new_request['destinationLocationIdOrPath'] = 'DairyCo'
-new_request['quantity'] = 610
-new_request['createIfNotExists'] = True
+newRequest['materialIdOrPath'] = 'Bottle/Milk'
+newRequest['destinationLocationIdOrPath'] = 'DairyCo'
+newRequest['quantity'] = 610
+newRequest['createIfNotExists'] = True
 # (You can continue setting other properties as needed here)
 
 # Receive the request
-received_request = system.mes.inventory.receive(**new_request)
+receivedRequest = system.mes.inventory.receive(**newRequest)
 
 # Output the JSON representation of the received request
-print(received_request)
+print(receivedRequest)
 ```

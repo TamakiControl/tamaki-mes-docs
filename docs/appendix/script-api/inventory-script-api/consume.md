@@ -11,7 +11,7 @@ Consumes inventory from the MES based on the provided parameters.
 ## Syntax
 
 ```python
-system.mes.inventory.consume(**consume_request)
+system.mes.inventory.consume(**consumeRequest)
 ```
 
 ## Parameters

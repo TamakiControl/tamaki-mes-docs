@@ -52,8 +52,8 @@ Returns a list of JSON objects representing all production orders.
 
 ```python
 # Retrieve all production orders
-all_production_orders = system.mes.productionOrder.getAllProductionOrders()
+allProductionOrders = system.mes.productionOrder.getAllProductionOrders()
 
 # Output the list of production orders
-print(all_production_orders)
+print(allProductionOrders)
 ```

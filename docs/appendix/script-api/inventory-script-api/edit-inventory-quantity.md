@@ -11,7 +11,7 @@ Edit inventory quantity from the MES based on the provided parameters.
 ## Syntax
 
 ```python
-system.mes.inventory.editInventoryQuantity(**edit_inventory_quantity_request)
+system.mes.inventory.editInventoryQuantity(**editInventoryQuantityRequest)
 ```
 
 ## Parameters

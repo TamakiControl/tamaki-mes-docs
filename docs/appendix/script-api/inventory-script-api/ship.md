@@ -11,7 +11,7 @@ Ships inventory from the MES based on the provided parameters.
 ## Syntax
 
 ```python
-system.mes.inventory.ship(**ship_request)
+system.mes.inventory.ship(**shipRequest)
 ```
 
 ## Parameters

@@ -11,7 +11,7 @@ Moves inventory from the MES based on the provided parameters.
 ## Syntax
 
 ```python
-system.mes.inventory.move(**move_request)
+system.mes.inventory.move(**moveRequest)
 ```
 
 ## Parameters

@@ -44,6 +44,6 @@ shifts = system.mes.shift.getShiftsByLocation('DairyCo/Plant1/Line1')
 print(shifts)
 
 # Retrieve shifts for a location including disabled
-all_shifts = system.mes.shift.getShiftsByLocation('DairyCo/Plant1/Line1', True)
-print(all_shifts)
+allShifts = system.mes.shift.getShiftsByLocation('DairyCo/Plant1/Line1', True)
+print(allShifts)
 ```

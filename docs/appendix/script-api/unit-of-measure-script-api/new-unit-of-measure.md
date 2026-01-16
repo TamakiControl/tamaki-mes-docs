@@ -42,16 +42,16 @@ Returns a JSON representation of the newly created unit of measure object. The f
 
 ```python
 # Generate the object structure for a new unit of measure object with no initial arguments
-new_uom = system.mes.unitOfMeasure.newUnitOfMeasure()
+newUom = system.mes.unitOfMeasure.newUnitOfMeasure()
 
 # Set basic attributes for the new unit of measure
-new_uom['name'] = 'Pound'
-new_uom['symbol'] = 'lb'
+newUom['name'] = 'Pound'
+newUom['symbol'] = 'lb'
 # (You can continue setting other properties as needed here)
 
 # Save the new unit of measure to the system
-saved_uom = system.mes.unitOfMeasure.saveUnitOfMeasure(**new_uom)
+savedUom = system.mes.unitOfMeasure.saveUnitOfMeasure(**newUom)
 
 # Output the JSON representation of the saved unit of measure
-print(saved_uom)
+print(savedUom)
 ```

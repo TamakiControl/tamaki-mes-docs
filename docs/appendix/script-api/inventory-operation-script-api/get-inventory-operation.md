@@ -30,13 +30,13 @@ Returns a JSON object representing the inventory operation. Returns null if no i
 
 ```python
 # Retrieve an inventory operation by its ID
-inventory_operation = system.mes.inventory.operation.getInventoryOperation("01JPAND53P-BZ61RZHZ-V7C6EEHG")
+inventoryOperation = system.mes.inventory.operation.getInventoryOperation("01JPAND53P-BZ61RZHZ-V7C6EEHG")
 
 # Print the inventory operation details
-if inventory_operation:
-    print("Inventory Operation Name:", inventory_operation["name"])
-    print("Inventory Operation Type:", inventory_operation["operationType"])
-    print("Source Location:", inventory_operation["sourceLocationPath"])
+if inventoryOperation:
+    print("Inventory Operation Name:", inventoryOperation["name"])
+    print("Inventory Operation Type:", inventoryOperation["operationType"])
+    print("Source Location:", inventoryOperation["sourceLocationPath"])
 else:
     print("Inventory operation not found")
 ```

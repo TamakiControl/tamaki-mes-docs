@@ -52,8 +52,8 @@ Returns a list of JSON objects representing all inventory lots for a specified m
 
 ```python
 # Retrieve inventory lots for a material
-lots_for_material = system.mes.inventory.getLotsForMaterial('Bottle/Milk')
+lotsForMaterial = system.mes.inventory.getLotsForMaterial('Bottle/Milk')
 
 # Output the inventory lots
-print(lots_for_material)
+print(lotsForMaterial)
 ```

@@ -30,8 +30,8 @@ Returns a list of JSON objects representing all inventory operations at the give
 
 ```python
 # Retrieve all inventory operations at a given location
-all_inventory_operations = system.mes.inventory.operation.getInventoryOperationsByLocation('DairyCo')
+allInventoryOperations = system.mes.inventory.operation.getInventoryOperationsByLocation('DairyCo')
 
 # Output the list of inventory operations
-print(all_inventory_operations)
+print(allInventoryOperations)
 ```

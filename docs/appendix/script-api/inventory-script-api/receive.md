@@ -11,7 +11,7 @@ Receives inventory into the MES based on the provided parameters.
 ## Syntax
 
 ```python
-system.mes.inventory.receive(**receive_request)
+system.mes.inventory.receive(**receiveRequest)
 ```
 
 ## Parameters

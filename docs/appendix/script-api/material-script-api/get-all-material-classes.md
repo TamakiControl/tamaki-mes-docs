@@ -30,8 +30,8 @@ Returns a list of JSON objects representing all material classes.
 
 ```python
 # Retrieve all material classes
-all_material_classes = system.mes.material.getAllMaterialClasses()
+allMaterialClasses = system.mes.material.getAllMaterialClasses()
 
 # Output the list of material classes
-print(all_material_classes)
+print(allMaterialClasses)
 ```

@@ -11,7 +11,7 @@ Merges inventory from the MES based on the provided parameters.
 ## Syntax
 
 ```python
-system.mes.inventory.merge(**merge_request)
+system.mes.inventory.merge(**mergeRequest)
 ```
 
 ## Parameters
