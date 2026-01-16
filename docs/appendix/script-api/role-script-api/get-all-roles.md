@@ -1,6 +1,7 @@
 ---
 title: "getAllRoles"
 description: "Retrieves all roles."
+sidebar_position: 3
 ---
 
 # getAllRoles

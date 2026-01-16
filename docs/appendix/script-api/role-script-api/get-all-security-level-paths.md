@@ -1,6 +1,7 @@
 ---
 title: "getAllSecurityLevelPaths"
 description: "Retrieves all configured Ignition security level paths."
+sidebar_position: 11
 ---
 
 # getAllSecurityLevelPaths
@@ -20,4 +21,3 @@ Retrieves a list of paths of all configured Ignition security level leaves
 ```python
 paths = system.mes.role.getAllSecurityLevelPaths()
 ```
-

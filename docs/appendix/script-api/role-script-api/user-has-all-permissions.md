@@ -1,6 +1,7 @@
 ---
 title: "userHasAllPermissions"
 description: "Checks if the current user has all of the specified permissions."
+sidebar_position: 13
 ---
 
 # system.mes.role.userHasAllPermissions
@@ -34,4 +35,3 @@ if hasAllPermissions:
 else:
     print("User does not have all specified permissions.")
 ```
-
