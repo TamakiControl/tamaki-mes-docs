@@ -1,12 +1,12 @@
 ---
 sidebar_position: 9
 title: "newProduceRequest"
-description: "Generates an empty non-persisted consume request to provide the structure to save a new record into the database."
+description: "Generates an empty consume request to provide the structure to save a new record into the database."
 ---
 
 # system.mes.inventory.newProduceRequest
 
-Generates an empty non-persisted Produce Request to provide the structure required by the API to save a new record into the database.
+Generates an empty Produce Request to provide the structure required by the API to save a new record into the database.
 This method must be combined with the [produce](./produce) method in order to persist the record.
 
 ## Syntax
@@ -54,17 +54,17 @@ Returns a JSON representation of the newly created Produce Request object. The f
 
 ```python
 # Generate the object structure for a new produce request object with no initial arguments
-new_request = system.mes.inventory.newProduceRequest()
+newRequest = system.mes.inventory.newProduceRequest()
 
 # Set basic attributes for the new produce request
-new_request['materialIdOrPath'] = 'Bottle/Milk'
-new_request['destinationLocationIdOrPath'] = 'DairyCo'
-new_request['quantity'] = 610
+newRequest['materialIdOrPath'] = 'Bottle/Milk'
+newRequest['destinationLocationIdOrPath'] = 'DairyCo'
+newRequest['quantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Produce the request
-produced_request = system.mes.inventory.produce(**new_request)
+producedRequest = system.mes.inventory.produce(**newRequest)
 
 # Output the JSON representation of the produced request
-print(produced_request)
+print(producedRequest)
 ```

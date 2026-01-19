@@ -36,8 +36,8 @@ Returns a boolean indicating whether the location can accommodate the given quan
 
 ```python
 # Check whether the location can store the given quantity of inventory
-has_capacity = system.mes.inventory.checkLocationHasCapacity('DairyCo', '425e29ed-2780-430a-95cf-79431ec0e3e5', 'Bottle/Milk', 1454)
+hasCapacity = system.mes.inventory.checkLocationHasCapacity('DairyCo', '425e29ed-2780-430a-95cf-79431ec0e3e5', 'Bottle/Milk', 1454)
 
 # Output the boolean result
-print(has_capacity)
+print(hasCapacity)
 ```

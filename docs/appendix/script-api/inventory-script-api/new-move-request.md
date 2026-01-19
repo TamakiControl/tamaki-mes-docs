@@ -1,12 +1,12 @@
 ---
 sidebar_position: 12
 title: "newMoveRequest"
-description: "Generates an empty non-persisted move request to provide the structure to save a new record into the database."
+description: "Generates an empty move request to provide the structure to save a new record into the database."
 ---
 
 # system.mes.inventory.newMoveRequest
 
-Generates an empty non-persisted Move Request to provide the structure required by the API to save a new record into the database.
+Generates an empty Move Request to provide the structure required by the API to save a new record into the database.
 This method must be combined with the [move](./move) method in order to persist the record.
 
 ## Syntax
@@ -51,18 +51,18 @@ Returns a JSON representation of the newly created Move Request object. The foll
 
 ```python
 # Generate the object structure for a new move request object with no initial arguments
-new_request = system.mes.inventory.newMoveRequest()
+newRequest = system.mes.inventory.newMoveRequest()
 
 # Set basic attributes for the new move request
-new_request['materialIdOrPath'] = 'Bottle/Milk'
-new_request['sourceLocationIdOrPath'] = 'DairyFarm'
-new_request['destinationLocationIdOrPath'] = 'DairyCo'
-new_request['quantity'] = 610
+newRequest['materialIdOrPath'] = 'Bottle/Milk'
+newRequest['sourceLocationIdOrPath'] = 'DairyFarm'
+newRequest['destinationLocationIdOrPath'] = 'DairyCo'
+newRequest['quantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Move the request
-moved_request = system.mes.inventory.move(**new_request)
+movedRequest = system.mes.inventory.move(**newRequest)
 
 # Output the JSON representation of the moved request
-print(moved_request)
+print(movedRequest)
 ```

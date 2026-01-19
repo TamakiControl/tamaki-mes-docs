@@ -1,13 +1,16 @@
 ---
 title: "newQueryRequest"
-description: "Generates an empty non-persisted query request object."
+description: "Generates an empty query request object."
 sidebar_position: 3
 ---
 
 # system.mes.query.newQueryRequest
 
-Generates an empty non-persisted [Query Request](./new-query-request) object to provide the structure required by the API
-to define pagination, sorting, and filtering parameters when calling `find` methods. This method must be combined with find methods in order to query records.
+Generates an empty [Query Request](./new-query-request) object to provide the structure required by the API to define 
+pagination, sorting, and filtering parameters when calling `find` methods.
+
+See the [Query Request Guide](../../../user-guides/query-request-guide/query-request-guide.md) for more information on 
+how to use Query Requests.
 
 ## Syntax
 
@@ -37,17 +40,17 @@ Returns a JSON representation of the newly created query request object. The fol
 
 ```python
 # Generate the object structure for a new query request object with no initial arguments
-new_query_request = system.mes.query.newQueryRequest()
+newQueryRequest = system.mes.query.newQueryRequest()
 
 # Set basic attributes for the new query request
-new_query_request["pageSize"] = 10
-new_query_request["pageIndex"] = 0
-new_query_request["sortFields"] = ["name"]
-new_query_request["sortDirections"] = ["Ascending"]
+newQueryRequest["pageSize"] = 10
+newQueryRequest["pageIndex"] = 0
+newQueryRequest["sortFields"] = ["name"]
+newQueryRequest["sortDirections"] = ["Ascending"]
 # (You can continue setting other properties as needed here)
 
 # Use the query request to find materials
-result = system.mes.material.findMaterials(**new_query_request)
+result = system.mes.material.findMaterials(**newQueryRequest)
 
 # Output the JSON representation of the result
 print(result)

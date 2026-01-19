@@ -40,7 +40,6 @@ with sample data where applicable.
 | `status`                   | `String` (Enum) | Running status of the production order, as defined by the **ProductionOrderStatus** enum.                                                 | `IDLE`                              |
 | `location_id`              | `String` (ULID) | References the location where the production is taking place. See [locations](../location-model/location).                                | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
 | `product_material_id`      | `String` (ULID) | References the material being produced. See [materials](../material-model/material).                                                      | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
-| `customer_id`              | `String` (ULID) | References the customer associated with the order. See [production_order_customers](../production-order-model/production-order-customer). | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
 | `shift_record_id` | `String` (ULID) | References the associated shift record. See [shift_records](../shift-model/shift-record).                                                 | `01JAP8RJBN-8ZTPXSGY-J9GSDPE1`      |
 | `unit_of_measure_id`       | `String` (ULID) | References the unit of measure for quantity. See [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure).              | `01JAP8R5RT-3FPXQABY-7KQZT6VF`      |
 
@@ -87,11 +86,6 @@ See [locations](../location-model/location) for details.
 References the `Material` entity associated with the production order, providing context about the material's characteristics and
 properties.
 See [materials](../material-model/material) for details.
-
-### `customer_id`
-
-References the `ProductionOrderCustomer` entity associated with the production order, providing us information on the customer.
-See [production_order_customers](../production-order-model/production-order-customer) for details.
 
 ### `schedule_shift_record_id`
 

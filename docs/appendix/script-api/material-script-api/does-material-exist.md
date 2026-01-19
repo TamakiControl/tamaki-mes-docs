@@ -1,5 +1,5 @@
 ---
-sidebar_position: 17
+sidebar_position: 15
 title: "doesMaterialExist"
 description: "Checks if a material with the given ID or path exists."
 ---
@@ -28,8 +28,8 @@ Returns a boolean indicating whether the material exists.
 
 ```python
 # Check whether the material exists
-material_exists = system.mes.material.doesMaterialExist('IRB/5391537510212')
+materialExists = system.mes.material.doesMaterialExist('IRB/5391537510212')
 
 # Output the boolean result
-print(material_exists)
+print(materialExists)
 ```

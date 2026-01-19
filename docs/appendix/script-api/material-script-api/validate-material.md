@@ -1,5 +1,5 @@
 ---
-sidebar_position: 23
+sidebar_position: 21
 title: "validateMaterial"
 description: "Validates the specified parameters for a material."
 ---
@@ -14,7 +14,7 @@ This only checks if the material object can be saved based on the attributes giv
 ## Syntax
 
 ```python
-system.mes.material.validateMaterial(**material_data)
+system.mes.material.validateMaterial(**materialData)
 ```
 
 ## Parameters
@@ -43,19 +43,19 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new material object
-material_data = system.mes.material.newMaterial()
+materialData = system.mes.material.newMaterial()
 
 # Set basic attributes for the new material
-material_data['materialClassId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
-material_data['name'] = '5391537510212'
-material_data['unitOfMeasureId'] = '01JCH3ENDJ-351WQQPX-WRBNTY4C'
+materialData['materialClassId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
+materialData['name'] = '5391537510212'
+materialData['unitOfMeasureId'] = '01JCH3ENDJ-351WQQPX-WRBNTY4C'
 # (You can continue setting other properties as needed here)
 
 # Validate material parameters
-validation_errors = system.mes.material.validateMaterial(**material_data)
+validationErrors = system.mes.material.validateMaterial(**materialData)
 
-if len(validation_errors) > 0:
-    print('Validation errors found:', validation_errors)
+if len(validationErrors) > 0:
+    print('Validation errors found:', validationErrors)
 else:
     print('Material parameters are valid.')
 ```

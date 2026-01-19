@@ -8,7 +8,7 @@ description: "Retrieves the status of the inventory operation with the given ID.
 
 ## Description
 
-Retrieves the status of an [Inventory Operations](../../data-model/inventory-model/inventory-operation) object by its ID.
+Retrieves the status of an [Inventory Operations](../../data-model/inventory-operation-model/inventory-operation) object by its ID.
 
 ## Syntax
 
@@ -30,8 +30,8 @@ Returns the status of the inventory operation.
 
 ```python
 # Retrieve the status for the inventory operation specified
-inventory_operations_status = system.mes.inventory.operation.getInventoryOperationStatus('01JPAND53P-BZ61RZHZ-V7C6EEHG')
+inventoryOperationsStatus = system.mes.inventory.operation.getInventoryOperationStatus('01JPAND53P-BZ61RZHZ-V7C6EEHG')
 
 # Output the inventory operation status
-print(inventory_operations_status)
+print(inventoryOperationsStatus)
 ```

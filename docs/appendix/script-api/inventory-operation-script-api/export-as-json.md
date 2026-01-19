@@ -11,12 +11,12 @@ description: "Exports inventory operations as raw JSON bytes (UTF-8 encoded)"
 **No Parameter:**
 
 Exports all [Inventory Operations](../../data-model/inventory-operation-model/inventory-operation) as raw JSON bytes (UTF-8 encoded).
-Streams inventory operation data from the database and formats it as JSON, including a header row.
+Streams inventory operation data from the database and formats it as JSON.
 
 **With a Parameter:**
 
 Exports selected [Inventory Operations](../../data-model/inventory-operation-model/inventory-operation) associated with the specified location ids or paths as raw JSON bytes (UTF-8 encoded).
-Streams material data from the database and formats it as JSON, including a header row.
+Streams inventory operation data from the database and formats it as JSON.
 
 ## Syntax
 
@@ -39,7 +39,7 @@ system.mes.inventory.operation.exportAsJson(locationIdOrPaths)
 
 ## Returns
 
-A Byte array (Byte[]) containing the raw byte data of the JSON export.
+A byte array (byte[]) containing the raw JSON export data.
 
 ## Code Examples
 
@@ -47,14 +47,14 @@ A Byte array (Byte[]) containing the raw byte data of the JSON export.
 
 ```python
 jsonBytes = system.mes.inventory.operation.exportAsJson()
-system.perspective.download("inventory_operations.json", jsonBytes)
+system.perspective.download("inventoryOperations.json", jsonBytes)
 ```
 
 ### Script Console
 
 ```python
 jsonBytes = system.mes.inventory.operation.exportAsJson()
-path = system.file.saveFile("inventory_operations.json")
+path = system.file.saveFile("inventoryOperations.json")
 if path is not None:
 	system.file.writeFile(path, jsonBytes)
 ```

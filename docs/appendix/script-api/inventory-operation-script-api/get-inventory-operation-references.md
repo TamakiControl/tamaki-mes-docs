@@ -8,7 +8,7 @@ description: "Retrieves a list of references to an inventory operation with the 
 
 ## Description
 
-Retrieves a list of references to an [Inventory Operations](../../data-model/inventory-model/inventory-operation) object by its ID.
+Retrieves a list of references to an [Inventory Operations](../../data-model/inventory-operation-model/inventory-operation) object by its ID.
 
 ## Syntax
 
@@ -42,8 +42,8 @@ The JSON Objects in references has the following properties:
 
 ```python
 # Retrieve the references for the inventory operation specified
-inventory_operation_references = system.mes.inventory.operation.getInventoryOperationReferences('01JPAND53P-BZ61RZHZ-V7C6EEHG')
+inventoryOperationReferences = system.mes.inventory.operation.getInventoryOperationReferences('01JPAND53P-BZ61RZHZ-V7C6EEHG')
 
 # Output the inventory operation references
-print(inventory_operation_references)
+print(inventoryOperationReferences)
 ```

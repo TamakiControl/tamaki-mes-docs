@@ -95,9 +95,9 @@ Effective delay sequence is `backoff_delay_ms * multiplier^(attempt-1)` until ma
 ## Tracegraph
 
 | **Property**           | **Default** | **Description**                                                              |
-| ---------------------- | ----------- | ---------------------------------------------------------------------------- |
-| `tracegraph.max_nodes` | `1000`      | Maximum number of nodes visited during a trace to prevent runaway traversal. |
-| `tracegraph.max_depth` | `5`         | Maximum traversal depth for trace graph operations.                          |
+| ---------------------- |-------------| ---------------------------------------------------------------------------- |
+| `tracegraph.max_nodes` | `10000`     | Maximum number of nodes visited during a trace to prevent runaway traversal. |
+| `tracegraph.max_depth` | `100`       | Maximum traversal depth for trace graph operations.                          |
 
 
 ## Additional Logging

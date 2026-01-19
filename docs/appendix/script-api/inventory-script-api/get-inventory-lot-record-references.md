@@ -8,7 +8,7 @@ description: "Retrieves a list of references to a inventory lot record with the 
 
 ## Description
 
-Retrieves a list of references to an [Inventory Lot Records](../../data-model/inventory-model/inventory-lot-record) object by its ID.
+Retrieves a list of references to an [Inventory Lot Records](../../data-model/inventory-operation-model/inventory-lot-record) object by its ID.
 
 ## Syntax
 
@@ -42,8 +42,8 @@ The JSON Objects in references has the following properties:
 
 ```python
 # Retrieve the references for the inventory lot record specified
-lot_record_references = system.mes.inventory.getInventoryLotRecordReferences('VQNX3P98-01JE6QXQX0-993FMEHT')
+lotRecordReferences = system.mes.inventory.getInventoryLotRecordReferences('VQNX3P98-01JE6QXQX0-993FMEHT')
 
 # Output the inventory lot record references
-print(lot_record_references)
+print(lotRecordReferences)
 ```

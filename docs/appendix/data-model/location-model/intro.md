@@ -10,8 +10,8 @@ capacities.
 ### 1. locations
 
 The **Location** entity represents physical or logical locations within the facility. Locations are hierarchical and can
-be of various types, such as `ENTERPRISE`, `SITE`, `AREA`, or `UNIT`, allowing flexible representation from high-level
-company structures down to specific production units.
+be of various types, such as `ENTERPRISE`, `COMPANY`, `SITE`, `AREA`, `LINE`, `CELL_GROUP`, `CELL`, and `UNIT`, allowing
+flexible representation from high-level company structures down to specific production units.
 
 ### 2. location_properties
 

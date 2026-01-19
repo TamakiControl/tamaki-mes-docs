@@ -42,8 +42,8 @@ The JSON Objects in references has the following properties:
 
 ```python
 # Retrieve the references for the production order property specified
-property_references = system.mes.productionOrder.getProductionOrderPropertyReferences('01JPQKDYTM-1G81VA08-3QS948DK')
+propertyReferences = system.mes.productionOrder.getProductionOrderPropertyReferences('01JPQKDYTM-1G81VA08-3QS948DK')
 
 # Output the production order property references
-print(property_references)
+print(propertyReferences)
 ```

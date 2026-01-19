@@ -1,5 +1,5 @@
 ---
-sidebar_position: 18
+sidebar_position: 16
 title: "findMaterials"
 description: "Retrieves material based on the specified pagination, sort, and column constraint parameters."
 ---

@@ -1,12 +1,12 @@
 ---
 sidebar_position: 30
 title: "newEditInventoryQuantityRequest"
-description: "Generates an empty non-persisted edit inventory quantity request to provide the structure to save a new record into the database."
+description: "Generates an empty edit inventory quantity request to provide the structure to save a new record into the database."
 ---
 
 # system.mes.inventory.newEditInventoryQuantityRequest
 
-Generates an empty non-persisted Edit Inventory Quantity Request to provide the structure required by the API to save a new record into the database.
+Generates an empty Edit Inventory Quantity Request to provide the structure required by the API to save a new record into the database.
 This method must be combined with the [editInventoryQuantity](./edit-inventory-quantity) method in order to persist the record.
 
 ## Syntax
@@ -44,17 +44,17 @@ Returns a JSON representation of the newly created Edit Inventory Quantity Reque
 
 ```python
 # Generate the object structure for a new edit inventory quantity request object with no initial arguments
-new_request = system.mes.inventory.newEditInventoryQuantityRequest()
+newRequest = system.mes.inventory.newEditInventoryQuantityRequest()
 
 # Set basic attributes for the new edit inventory quantity request
-new_request['materialIdOrPath'] = 'Bottle/Milk'
-new_request['sourceLocationIdOrPath'] = 'DairyCo'
-new_request['newQuantity'] = 610
+newRequest['materialIdOrPath'] = 'Bottle/Milk'
+newRequest['sourceLocationIdOrPath'] = 'DairyCo'
+newRequest['newQuantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Edit the quantity of the inventory
-edited_inventory_quantity_request = system.mes.inventory.editInventoryQuantity(**new_request)
+editedInventoryQuantityRequest = system.mes.inventory.editInventoryQuantity(**newRequest)
 
 # Output the JSON representation of the edit inventory quantity request
-print(edited_inventory_quantity_request)
+print(editedInventoryQuantityRequest)
 ```

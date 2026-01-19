@@ -1,12 +1,12 @@
 ---
 sidebar_position: 21
 title: "newScrapRequest"
-description: "Generates an empty non-persisted scrap request to provide the structure to save a new record into the database."
+description: "Generates an empty scrap request to provide the structure to save a new record into the database."
 ---
 
 # system.mes.inventory.newScrapRequest
 
-Generates an empty non-persisted Scrap Request to provide the structure required by the API to save a new record into the database.
+Generates an empty Scrap Request to provide the structure required by the API to save a new record into the database.
 This method must be combined with the [scrap](./scrap) method in order to persist the record.
 
 ## Syntax
@@ -50,17 +50,17 @@ Returns a JSON representation of the newly created Scrap Request object. The fol
 
 ```python
 # Generate the object structure for a new scrap request object with no initial arguments
-new_request = system.mes.inventory.newScrapRequest()
+newRequest = system.mes.inventory.newScrapRequest()
 
 # Set basic attributes for the new scrap request
-new_request['materialIdOrPath'] = 'Bottle/Milk'
-new_request['sourceLocationIdOrPath'] = 'DairyCo'
-new_request['quantity'] = 610
+newRequest['materialIdOrPath'] = 'Bottle/Milk'
+newRequest['sourceLocationIdOrPath'] = 'DairyCo'
+newRequest['quantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Scrap the request
-scrapped_request = system.mes.inventory.scrap(**new_request)
+scrappedRequest = system.mes.inventory.scrap(**newRequest)
 
 # Output the JSON representation of the scrapped request
-print(scrapped_request)
+print(scrappedRequest)
 ```

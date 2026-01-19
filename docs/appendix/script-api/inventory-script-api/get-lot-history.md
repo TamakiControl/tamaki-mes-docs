@@ -6,7 +6,7 @@ description: "Retrieves all inventory lot records given the inventory lot and ot
 
 # system.mes.inventory.getLotHistory
 
-Retrieves all [Inventory Lot Records](../../data-model/inventory-model/inventory-lot-record) given the inventory lot and other parameters.
+Retrieves all [Inventory Lot Records](../../data-model/inventory-operation-model/inventory-lot-record) given the inventory lot and other parameters.
 
 ## Syntax
 
@@ -62,15 +62,15 @@ Each JSON object has the following properties:
 
 ```python
 # Generate the object structure for a new lot history request object with no initial arguments
-new_lot_history_request = system.mes.inventory.newLotHistoryRequest()
+newLotHistoryRequest = system.mes.inventory.newLotHistoryRequest()
 
 # Set basic attributes for the new lot history request
-new_lot_history_request['lotId'] = '01JE6F0CE9-T94PZD8R-TH9J01TJ'
+newLotHistoryRequest['lotId'] = '01JE6F0CE9-T94PZD8R-TH9J01TJ'
 # (You can continue setting other properties as needed here)
 
 # Retrieve the lot history
-lot_history = system.mes.inventory.getLotHistory(**new_lot_history_request)
+lotHistory = system.mes.inventory.getLotHistory(**newLotHistoryRequest)
 
 # Output the list of lot history records
-print(lot_history)
+print(lotHistory)
 ```

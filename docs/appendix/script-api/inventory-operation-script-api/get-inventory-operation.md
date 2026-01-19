@@ -8,7 +8,7 @@ description: "Retrieves an inventory operation by its ID."
 
 ## Description
 
-Retrieves an [Inventory Operations](../../data-model/inventory-model/inventory-operation) object by its ID. This function allows you to get the complete details of a specific inventory operation configured in the system.
+Retrieves an [Inventory Operations](../../data-model/inventory-operation-model/inventory-operation) object by its ID. This function allows you to get the complete details of a specific inventory operation configured in the system.
 
 ## Syntax
 
@@ -30,13 +30,13 @@ Returns a JSON object representing the inventory operation. Returns null if no i
 
 ```python
 # Retrieve an inventory operation by its ID
-inventory_operation = system.mes.inventory.operation.getInventoryOperation("01JPAND53P-BZ61RZHZ-V7C6EEHG")
+inventoryOperation = system.mes.inventory.operation.getInventoryOperation("01JPAND53P-BZ61RZHZ-V7C6EEHG")
 
 # Print the inventory operation details
-if inventory_operation:
-    print("Inventory Operation Name:", inventory_operation["name"])
-    print("Inventory Operation Type:", inventory_operation["operationType"])
-    print("Source Location:", inventory_operation["sourceLocationPath"])
+if inventoryOperation:
+    print("Inventory Operation Name:", inventoryOperation["name"])
+    print("Inventory Operation Type:", inventoryOperation["operationType"])
+    print("Source Location:", inventoryOperation["sourceLocationPath"])
 else:
     print("Inventory operation not found")
 ```

@@ -16,7 +16,7 @@ Streams inventory operation data from the database and formats it as CSV, includ
 **With a Parameter:**
 
 Exports selected [Inventory Operations](../../data-model/inventory-operation-model/inventory-operation) associated with the specified location ids or paths as raw CSV bytes (UTF-8 encoded).
-Streams material data from the database and formats it as CSV, including a header row.
+Streams inventory operation data from the database and formats it as CSV, including a header row.
 
 ## Syntax
 
@@ -39,7 +39,7 @@ system.mes.inventory.operation.exportAsCsv(locationIdOrPaths)
 
 ## Returns
 
-A Byte array (Byte[]) containing the raw byte data of the CSV export.
+A byte array (byte[]) containing the raw CSV export data.
 
 ## Code Examples
 
@@ -47,14 +47,14 @@ A Byte array (Byte[]) containing the raw byte data of the CSV export.
 
 ```python
 csvBytes = system.mes.inventory.operation.exportAsCsv()
-system.perspective.download("inventory_operations.csv", csvBytes)
+system.perspective.download("inventoryOperations.csv", csvBytes)
 ```
 
 ### Script Console
 
 ```python
 csvBytes = system.mes.inventory.operation.exportAsCsv()
-path = system.file.saveFile("inventory_operations.csv")
+path = system.file.saveFile("inventoryOperations.csv")
 if path is not None:
 	system.file.writeFile(path, csvBytes)
 ```

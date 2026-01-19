@@ -1,12 +1,12 @@
 ---
 sidebar_position: 33
 title: "newReceiveRequest"
-description: "Generates an empty non-persisted receive request to provide the structure to save a new record into the database."
+description: "Generates an empty receive request to provide the structure to save a new record into the database."
 ---
 
 # system.mes.inventory.newReceiveRequest
 
-Generates an empty non-persisted Receive Request to provide the structure required by the API to save a new record into the database.
+Generates an empty Receive Request to provide the structure required by the API to save a new record into the database.
 This method must be combined with the [receive](./receive) method in order to persist the record.
 
 ## Syntax
@@ -51,18 +51,18 @@ Returns a JSON representation of the newly created Receive Request object. The f
 
 ```python
 # Generate the object structure for a new receive request object with no initial arguments
-new_request = system.mes.inventory.newReceiveRequest()
+newRequest = system.mes.inventory.newReceiveRequest()
 
 # Set basic attributes for the new receive request
-new_request['materialIdOrPath'] = 'Bottle/Milk'
-new_request['destinationLocationIdOrPath'] = 'DairyCo'
-new_request['quantity'] = 610
-new_request['createIfNotExists'] = True
+newRequest['materialIdOrPath'] = 'Bottle/Milk'
+newRequest['destinationLocationIdOrPath'] = 'DairyCo'
+newRequest['quantity'] = 610
+newRequest['createIfNotExists'] = True
 # (You can continue setting other properties as needed here)
 
 # Receive the request
-received_request = system.mes.inventory.receive(**new_request)
+receivedRequest = system.mes.inventory.receive(**newRequest)
 
 # Output the JSON representation of the received request
-print(received_request)
+print(receivedRequest)
 ```

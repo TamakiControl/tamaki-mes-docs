@@ -26,37 +26,37 @@ system.mes.inventory.newLot()
 Returns a JSON representation of the newly created Inventory Lot object. The following is a list of keys and default values:
 
 | Key               | Default Value |
-|-------------------|---------------|
-| `name`            | `null`        |
-| `materialId`      | `null`        |
-| `status`          | `OPEN`        |
-| `totalQuantity`   | `0.0`         |
-| `unitOfMeasureId` | `null`        |
-| `expirationDate`  | `null`        |
-| `closedDate`      | `null`        |
-| `supplierId`      | `null`        |
-| `id`              | `null`        |
-| `notes`           | `null`        |
-| `enabled`         | `true`        |
-| `spare1`          | `null`        |
-| `spare2`          | `null`        |
-| `spare3`          | `null`        |
+|-------------------|--------------|
+| `name`            | `null`       |
+| `materialId`      | `null`       |
+| `status`          | `OPEN`       |
+| `totalQuantity`   | `0.0`        |
+| `unitOfMeasureId` | `null`       |
+| `expirationDate`  | `null`       |
+| `closedDate`      | `null`       |
+| `supplierId`      | `null`       |
+| `id`              | `null`       |
+| `notes`           | `null`       |
+| `enabled`         | `true`       |
+| `spare1`          | `null`       |
+| `spare2`          | `null`       |
+| `spare3`          | `null`       |
 
 ## Code Examples
 
 ```python
 # Generate the object structure for a new inventory lot object with no initial arguments
-new_lot = system.mes.inventory.newLot()
+newLot = system.mes.inventory.newLot()
 
 # Set basic attributes for the new inventory lot
-new_lot['name'] = 'L2824L9CO'
-new_lot['materialId'] = '01JCH3GRA3-5ZYFZV5V-RW3FKFJX'
-new_lot['unitOfMeasureId'] = '01JCH3T85P-KVCB8ZR5-0B83A3SX'
+newLot['name'] = 'L2824L9CO'
+newLot['materialId'] = '01JCH3GRA3-5ZYFZV5V-RW3FKFJX'
+newLot['unitOfMeasureId'] = '01JCH3T85P-KVCB8ZR5-0B83A3SX'
 # (You can continue setting other properties as needed here)
 
 # Save the new inventory lot to the system
-saved_lot = system.mes.inventory.saveLot(**new_lot)
+savedLot = system.mes.inventory.saveLot(**newLot)
 
 # Output the JSON representation of the saved inventory lot
-print(saved_lot)
+print(savedLot)
 ```

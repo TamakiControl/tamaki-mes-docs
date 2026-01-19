@@ -13,7 +13,7 @@ Creates or updates a [Operations](../../data-model/operation-model/operation) re
 ## Syntax
 
 ```python
-system.mes.operation.saveOperation(**operation_data)
+system.mes.operation.saveOperation(**operationData)
 ```
 
 ## Parameters
@@ -59,27 +59,27 @@ Returns a JSON representation of the saved operation.
 
 ```python
 # Generate the object structure for a new operation object, set the name and save it
-new_operation = system.mes.operation.newOperation()
-new_operation['locationId'] = '01JD7M94CJ-HPEQEJ1F-QA8EQ6VE'
-new_operation['name'] = 'Packaging'
-saved_operation = system.mes.operation.saveOperation(**new_operation)
+newOperation = system.mes.operation.newOperation()
+newOperation['locationId'] = '01JD7M94CJ-HPEQEJ1F-QA8EQ6VE'
+newOperation['name'] = 'Packaging'
+savedOperation = system.mes.operation.saveOperation(**newOperation)
 
 # Output the JSON representation of the saved operation
-print(saved_operation)
+print(savedOperation)
 
 # Generate the object structure for another new operation object to update the previous operation
-operation_data = system.mes.operation.newOperation()
+operationData = system.mes.operation.newOperation()
 
 # Set basic attributes for the updated operation
-operation_data['id'] = saved_operation.id
-operation_data['locationId'] = '01JD7M94CJ-HPEQEJ1F-QA8EQ6VE'
-operation_data['name'] = 'Packaging'
-operation_data['flushIntervalMillis'] = 1000
+operationData['id'] = savedOperation.id
+operationData['locationId'] = '01JD7M94CJ-HPEQEJ1F-QA8EQ6VE'
+operationData['name'] = 'Packaging'
+operationData['flushIntervalMillis'] = 1000
 # (You can continue setting other properties as needed here)
 
 # Save the operation to update it in the system
-updated_operation = system.mes.operation.saveOperation(**operation_data)
+updatedOperation = system.mes.operation.saveOperation(**operationData)
 
 # Output the JSON representation of the updated operation
-print(updated_operation)
+print(updatedOperation)
 ```

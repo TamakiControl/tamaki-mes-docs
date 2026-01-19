@@ -30,8 +30,8 @@ Returns a list of JSON objects representing all inventories.
 
 ```python
 # Retrieve all inventories
-all_inventories = system.mes.inventory.getAllInventory()
+allInventories = system.mes.inventory.getAllInventory()
 
 # Output the list of inventories
-print(all_inventories)
+print(allInventories)
 ```

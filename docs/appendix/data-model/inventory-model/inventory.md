@@ -13,6 +13,8 @@ record links an inventory lot to a storage location, allowing for tracking of ma
 locations in the facility. This structure enables effective inventory management by specifying where and how much of
 each inventory lot is stored.
 
+> Uniqueness: A unique constraint enforces one row per (`location_id`, `inventory_lot_id`) pair.
+
 ## Table Structure
 
 The following table outlines the SQL columns for the `inventory` table, providing a brief description of each,
@@ -30,22 +32,22 @@ along with sample data where applicable.
 | `spare1`              | `String`        | The first spare column that can be used for additional context on the entity.                                    | `some extra context 1`              |
 | `spare2`              | `String`        | The second spare column that can be used for additional context on the entity.                                   | `some extra context 2`              |
 | `spare3`              | `String`        | The third spare column that can be used for additional context on the entity.                                    | `some extra context 3`              |
-| `name`                | `String`        | Name of the inventory at that location at that time.                                                             | `165456432135659`                   |
-| `quantity`            | `Double`        | Current quantity of material in this inventory record.                                                           | `250.0`                             |
-| `location_id`         | `String` (ULID) | References the location where the inventory is stored. See [locations](../location-model/location).              | `01JAP8R5RT-3FPXQABY-7KQZT6VF`      |
-| `inventory_lot_id`    | `String` (ULID) | References the inventory lot stored in this location. See [inventory_lots](../inventory-model/inventory-lot).    | `01JAP8RJBN-4VYZUKE1-LY2QHV8X`      |
-| `production_order_id` | `String` (ULID) | References the associated production order. See [production_orders](../production-order-model/production-order). | `01JAP8RJBN-7KQZT6VF-Q5VUZYPW`      |
+| `name`                | `String`        | Name of the inventory at that location at that time (optional).                                               | `165456432135659`                   |
+| `quantity`            | `Double`        | Current quantity of material in this inventory record (defaults to `0.0`).                                    | `250.0`                             |
+| `location_id`         | `String` (ULID) | References the location where the inventory is stored. See [locations](../location-model/location).           | `01JAP8R5RT-3FPXQABY-7KQZT6VF`      |
+| `inventory_lot_id`    | `String` (ULID) | References the inventory lot stored in this location. See [inventory_lots](../inventory-model/inventory-lot). | `01JAP8RJBN-4VYZUKE1-LY2QHV8X`      |
+| `production_order_id` | `String` (ULID) | (Optional) References the associated production order. See [production_orders](../production-order-model/production-order). | `01JAP8RJBN-7KQZT6VF-Q5VUZYPW`      |
 
 ## Field Details
 
 ### `name`
 
-The `name` field provides a descriptive identifier of the inventory at that location at that time, such as a License Plate Number for a pallet.
+The `name` field provides a descriptive identifier of the inventory at that location at that time (e.g. an LPN / pallet code). This field is optional.
 
 ### `quantity`
 
-Represents the current quantity of material in this specific inventory record. This field allows for accurate management
-of material stock levels and tracking across multiple locations.
+Represents the current quantity of material in this specific inventory record. Defaults to `0.0` when the row is created.
+This field allows for accurate management of material stock levels and tracking across multiple locations.
 
 ### `location_id`
 
@@ -61,6 +63,10 @@ See [inventory_lots](../inventory-model/inventory-lot) for details.
 
 ### `production_order_id`
 
-Indicates the associated `ProductionOrder`, linking the inventory record to a specific production order. This enables tracking
+Indicates the associated `ProductionOrder`, linking the inventory record to a specific production order (optional). This enables tracking
 of inventory for a production order.
 See [production_orders](../production-order-model/production-order) for details.
+
+### Uniqueness
+
+The pair (`location_id`, `inventory_lot_id`) must be unique. Attempting to insert a duplicate combination will result in a constraint violation.

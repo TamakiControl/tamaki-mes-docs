@@ -6,7 +6,7 @@ description: "Generates an empty non-persisted inventory operation object to pro
 
 # system.mes.inventory.operation.newInventoryOperation
 
-Generates an empty non-persisted [Inventory Operations](../../data-model/inventory-model/inventory-operation) object to provide the structure required by the API
+Generates an empty non-persisted [Inventory Operations](../../data-model/inventory-operation-model/inventory-operation) object to provide the structure required by the API
 to save a new record into the database. This method must be combined with the [saveInventoryOperation](./save-inventory-operation) method in order to persist the record.
 
 ## Syntax
@@ -46,12 +46,14 @@ Returns a JSON representation of the newly created Inventory Operation object. T
 | `materialId`                      | `null`          |
 | `materialPath`                    | `null`          |
 | `materialExpression`              | `null`          |
+| `secondaryMaterialId`             | `null`          |
+| `secondaryMaterialPath`           | `null`          |
 | `primaryLotResolutionStrategy`    | `AUTO_GENERATE` |
 | `secondaryLotResolutionStrategy`  | `AUTO_GENERATE` |
 | `primaryLotCodeExpression`        | `null`          |
 | `secondaryLotCodeExpression`      | `null`          |
 | `createLotIfNotFound`             | `false`         |
-| `inventoryNameResolutionStrategy` | `MANUAL`        |
+| `inventoryNameResolutionStrategy` | `STATIC`        |
 | `inventoryName`                   | `null`          |
 | `inventoryNameExpression`         | `null`          |
 | `quantitySource`                  | `EXPRESSION`    |
@@ -64,7 +66,6 @@ Returns a JSON representation of the newly created Inventory Operation object. T
 | `reasonCodeId`                    | `null`          |
 | `reasonCodeName`                  | `null`          |
 | `incrementProductionOrderCount`   | `false`         |
-| `flushIntervalMillis`             | `0`             |
 | `id`                              | `null`          |
 | `notes`                           | `null`          |
 | `enabled`                         | `true`          |
@@ -76,16 +77,16 @@ Returns a JSON representation of the newly created Inventory Operation object. T
 
 ```python
 # Generate the object structure for a new inventory operation object with no initial arguments
-new_inventory_operation = system.mes.inventory.operation.newInventoryOperation()
+newInventoryOperation = system.mes.inventory.operation.newInventoryOperation()
 
 # Set basic attributes for the new inventory operation
-new_inventory_operation['name'] = 'Lids'
-new_inventory_operation['sourceLocationId'] = '01JD7M94CJ-HPEQEJ1F-QA8EQ6VE'
+newInventoryOperation['name'] = 'Lids'
+newInventoryOperation['sourceLocationId'] = '01JD7M94CJ-HPEQEJ1F-QA8EQ6VE'
 # (You can continue setting other properties as needed here)
 
 # Save the new inventory operation to the system
-saved_inventory_operation = system.mes.inventory.operation.saveInventoryOperation(**new_inventory_operation)
+savedInventoryOperation = system.mes.inventory.operation.saveInventoryOperation(**newInventoryOperation)
 
 # Output the JSON representation of the saved inventory operation
-print(saved_inventory_operation)
+print(savedInventoryOperation)
 ```

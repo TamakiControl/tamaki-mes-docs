@@ -1,5 +1,5 @@
 ---
-sidebar_position: 15
+sidebar_position: 13
 title: "newMaterial"
 description: "Generates an empty non-persisted material object to provide the structure to retrieve records from the database."
 ---
@@ -45,17 +45,17 @@ Returns a JSON representation of the newly created material object. The followin
 
 ```python
 # Generate the object structure for a new material object with no initial arguments
-new_material = system.mes.material.newMaterial()
+newMaterial = system.mes.material.newMaterial()
 
 # Set basic attributes for the new material
-new_material['materialClassId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
-new_material['name'] = '5391537510212'
-new_material['unitOfMeasureId'] = '01JCH3ENDJ-351WQQPX-WRBNTY4C'
+newMaterial['materialClassId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
+newMaterial['name'] = '5391537510212'
+newMaterial['unitOfMeasureId'] = '01JCH3ENDJ-351WQQPX-WRBNTY4C'
 # (You can continue setting other properties as needed here)
 
 # Save the new material to the system
-saved_material = system.mes.material.saveMaterial(**new_material)
+savedMaterial = system.mes.material.saveMaterial(**newMaterial)
 
 # Output the JSON representation of the saved material
-print(saved_material)
+print(savedMaterial)
 ```
