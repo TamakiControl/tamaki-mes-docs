@@ -1,7 +1,7 @@
 ---
-sidebar_position: 3
-title: 'Table View'
-description: 'Table View Navigation for Track and Trace'
+sidebar_position: 4
+title: 'Terminal Nodes View'
+description: 'Terminal Nodes View Navigation for Track and Trace'
 ---
 
 import terminalNodes from './videos/terminal-nodes.webm';
