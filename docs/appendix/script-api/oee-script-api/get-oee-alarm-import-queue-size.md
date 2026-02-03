@@ -6,7 +6,13 @@ description: "Gets the current size of the OeeAlarm import queue."
 
 # system.mes.oee.getOeeAlarmImportQueueSize
 
+## Description
+
 Gets the current size of the [OeeAlarm](../../data-model/oee-model/oee-alarm.md) import queue.
+
+## Permissions
+
+This method requires the `OEE.READ.GET` permission.
 
 ## Syntax
 
@@ -16,13 +22,11 @@ system.mes.oee.getOeeAlarmImportQueueSize()
 
 ## Parameters
 
-| Parameter | Type | Nullable | Description                               |
-| --------- | ---- | -------- | ----------------------------------------- |
-| None      | -    | -        | This method does not take any parameters. |
+This method does not take any parameters.
 
 ## Returns
 
-the number of items in the OeeAlarm import queue
+Returns an Integer representing the number of items in the OeeAlarm import queue
 
 ## Code Examples
 

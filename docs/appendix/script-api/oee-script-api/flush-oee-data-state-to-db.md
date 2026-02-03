@@ -22,11 +22,11 @@ system.mes.oee.flushOeeDataStateToDB()
 
 ## Parameters
 
-This function does not take any parameters.
+This method does not take any parameters.
 
 ## Returns
 
-This function does not return anything.
+This method does not return anything.
 
 ## Code Examples
 

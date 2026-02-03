@@ -6,7 +6,13 @@ description: "Gets the current size of the OeeState import queue."
 
 # system.mes.oeeState.getOeeStateImportQueueSize
 
+## Description
+
 Gets the current size of the [OeeState](../../data-model/oee-model/oee-state) import queue.
+
+## Permissions
+
+This method requires the `OEE.READ.GET` permission.
 
 ## Syntax
 
@@ -16,18 +22,16 @@ system.mes.oeeState.getOeeStateImportQueueSize()
 
 ## Parameters
 
-| Parameter | Type | Nullable | Description                               |
-| --------- | ---- | -------- | ----------------------------------------- |
-| None      | -    | -        | This method does not take any parameters. |
+This method does not take any parameters.
 
 ## Returns
 
-the number of items in the OeeState import queue
+Returns an Integer representing the number of items in the OeeState import queue.
 
 ## Code Examples
 
 ```python
-queueSize = system.mes.oeeState.getOeeStateImportQueueSize()
+queueSize = system.mes.oee.getOeeStateImportQueueSize()
 print(queueSize)
 ```
 

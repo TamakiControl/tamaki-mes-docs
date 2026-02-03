@@ -6,6 +6,8 @@ description: 'Splits a downtime event at a specified date and time.'
 
 # system.mes.oee.splitDowntimeEvent
 
+## Description
+
 Splits an existing downtime event (an OEE state record) at a specified time. This action modifies the original record, shortening its duration, and creates a new record for the remaining time. This is useful for categorizing a single downtime period with multiple causes.
 
 ## Permissions

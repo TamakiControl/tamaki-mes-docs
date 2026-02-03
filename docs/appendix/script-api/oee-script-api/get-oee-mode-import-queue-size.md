@@ -8,6 +8,10 @@ description: "Gets the current size of the OeeMode import queue."
 
 Gets the current size of the [OeeMode](../../data-model/oee-model/oee-mode.md) import queue.
 
+## Permissions
+
+This method requires the `OEE.READ.GET` permission.
+
 ## Syntax
 
 ```python
@@ -16,13 +20,11 @@ system.mes.oee.getOeeModeImportQueueSize()
 
 ## Parameters
 
-| Parameter | Type | Nullable | Description                               |
-| --------- | ---- | -------- | ----------------------------------------- |
-| None      | -    | -        | This method does not take any parameters. |
+This method does not take any parameters.
 
 ## Returns
 
-the number of items in the OeeMode import queue
+Returns an Integer representing the number of items in the OeeMode import queue.
 
 ## Code Examples
 
