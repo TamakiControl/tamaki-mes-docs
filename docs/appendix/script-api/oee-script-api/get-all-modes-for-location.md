@@ -26,7 +26,9 @@ system.mes.oee.getAllModesForLocation(locationIdOrPath)
 
 ## Returns
 
-A list of OEE Mode objects for the specified location. Each object contains the fields from the `OeeModeDTO`. Returns an empty list if no modes are found.
+A list of JSON objects representing `OeeModeDTO` objects for the specified location. Returns an empty list if no modes are found.
+
+Each object has the following properties:
 
 | Name                         | Type                            | Nullable | Description                                                                               | Default Value          |
 | ---------------------------- | ------------------------------- | -------- | ----------------------------------------------------------------------------------------- | ---------------------- |
@@ -54,5 +56,5 @@ location_path = "Enterprise/Site/Area/Line1"
 modes = system.mes.oee.getAllModesForLocation(location_path)
 
 for mode in modes:
-    print mode.name, mode.code
+    print mode['name'], mode['code']
 ```

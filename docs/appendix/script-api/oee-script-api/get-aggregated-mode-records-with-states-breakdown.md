@@ -30,16 +30,17 @@ system.mes.oee.getAggregatedModeRecordsWithStatesBreakdown(locationIdOrPath, sta
 
 ## Returns
 
-A list of `OeeChartSegmentDTO` objects, each representing a segment of time with mode and state information.
+A list of JSON representations of `OeeChartSegmentDTO` objects, each representing a segment of time with mode and state information.
 
 | Name              | Type      | Nullable | Description                                                                  | Default Value |
-| ----------------- | --------- | -------- | ---------------------------------------------------------------------------- | ------------- |
+|-------------------|-----------|----------|------------------------------------------------------------------------------|---------------|
 | `name`            | `String`  | `True`   | The name of the chart segment (e.g., "Unscheduled Downtime" or "Running")    | `null`        |
 | `code`            | `Integer` | `True`   | The integer code associated with the Mode or State                           | `null`        |
 | `color`           | `String`  | `True`   | The color code for displaying this segment                                   | `null`        |
 | `duration`        | `Double`  | `True`   | The total aggregated duration of this segment in seconds                     | `null`        |
 | `durationPercent` | `Double`  | `True`   | The percentage (0.0 to 1.0) of the total duration that this segment occupies | `null`        |
 | `type`            | `String`  | `True`   | The type of the original record, either "Mode" or "State"                    | `null`        |
+| `count`           | `Long`    | `True`   | The number of occurrences of this segment                                    | `null`        |
 
 ## Code Examples
 
@@ -54,16 +55,16 @@ start_date = Date(end_date.getTime() - 8 * 3600 * 1000)
 
 # Retrieve the aggregated data
 aggregated_data = system.mes.oee.getAggregatedModeRecordsWithStatesBreakdown(
-    locationIdOrPath=location,
-    startDate=start_date,
-    endDate=end_date
+    location,
+    start_date,
+    end_date
 )
 
 # Print the results
 for segment in aggregated_data:
-    mode_name = segment.mode.name if segment.mode else "No Mode"
-    state_name = segment.state.name if segment.state else "No State"
-    duration_seconds = segment.duration / 1000
+    type_name = segment['type']
+    name = segment['name']
+    duration_seconds = segment['duration'] / 1000
 
-    print "Mode: %s, State: %s, Duration: %.2f seconds" % (mode_name, state_name, duration_seconds)
+    print "Type: %s, Name: %s, Duration: %.2f seconds" % (type_name, name, duration_seconds)
 ```

@@ -24,7 +24,7 @@ This method does not take any parameters.
 
 ## Returns
 
-An `OeeDowntimeReasonDTO` object with default values, ready to be populated and saved.
+A JSON representation of an `OeeDowntimeReasonDTO` object with default values, ready to be populated and saved.
 
 | Name           | Type      | Nullable | Description                                                                | Default Value |
 | -------------- | --------- | -------- | -------------------------------------------------------------------------- | ------------- |

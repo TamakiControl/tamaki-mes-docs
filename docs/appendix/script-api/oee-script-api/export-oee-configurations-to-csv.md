@@ -26,9 +26,9 @@ system.mes.oee.exportOeeConfigurationsToCsv(locationIdOrPaths)
 
 ## Parameters
 
-| Parameter           | Type       | Nullable | Description                                                                                          |
-| ------------------- | ---------- | -------- | ---------------------------------------------------------------------------------------------------- |
-| `locationIdOrPaths` | `String[]` | True     | (Optional) Array of location IDs or paths to export. If omitted or null, exports all configurations. |
+| Parameter           | Type       | Nullable | Description                                                                                  |
+| ------------------- | ---------- |----------|----------------------------------------------------------------------------------------------|
+| `locationIdOrPaths` | `String[]` | False    | (Optional) Array of location IDs or paths to export. If omitted, exports all configurations. |
 
 ## Returns
 

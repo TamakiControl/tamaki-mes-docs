@@ -22,13 +22,15 @@ system.mes.oee.getAllDowntimeReasonCodesByLocation(locationIdOrPath)
 
 ## Parameters
 
-| Parameter          | Type     | Nullable | Description                                                                    |
-| ------------------ | -------- | -------- | ------------------------------------------------------------------------------ |
-| `locationIdOrPath` | `String` | True     | The ID or path of the location. If omitted, returns reasons for all locations. |
+| Parameter          | Type     | Nullable | Description                                                                 |
+| ------------------ | -------- | -------- |-----------------------------------------------------------------------------|
+| `locationIdOrPath` | `String` | True     | The ID or path of the location. If null, returns reasons for all locations. |
 
 ## Returns
 
-A list of `OeeDowntimeReasonDTO` objects.
+A list of JSON objects representing `OeeDowntimeReasonDTO` objects. 
+
+Each object has the following properties:
 
 | Name           | Type      | Nullable | Description                                                                | Default Value |
 | -------------- | --------- | -------- | -------------------------------------------------------------------------- | ------------- |
@@ -51,8 +53,8 @@ A list of `OeeDowntimeReasonDTO` objects.
 ```python
 # Get all downtime reason codes for a specific location
 location = "Site/Area/Line 1"
-reasons = system.mes.oee.getAllDowntimeReasonCodesByLocation(locationIdOrPath=location)
+reasons = system.mes.oee.getAllDowntimeReasonCodesByLocation(location)
 
 for reason in reasons:
-    print "Code: %d, Name: %s, Path: %s" % (reason.code, reason.name, reason.path)
+    print "Code: %d, Name: %s, Path: %s" % (reason['code'], reason['name'], reason['path'])
 ```

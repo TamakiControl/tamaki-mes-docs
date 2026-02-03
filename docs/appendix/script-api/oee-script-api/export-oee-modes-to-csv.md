@@ -17,14 +17,14 @@ This method requires the `OEE.READ.GET` permission.
 ## Syntax
 
 ```python
-system.mes.oee.exportOeeModesToCsv([locationIdOrPaths])
+system.mes.oee.exportOeeModesToCsv(locationIdOrPaths)
 ```
 
 ## Parameters
 
-| Parameter           | Type       | Nullable | Description                                                                                        |
-| ------------------- | ---------- | -------- | -------------------------------------------------------------------------------------------------- |
-| `locationIdOrPaths` | `String[]` | True     | (Optional) Array of location IDs or paths to export. If omitted or null, exports all mode configs. |
+| Parameter           | Type       | Nullable | Description                                                                                |
+| ------------------- | ---------- |----------| ------------------------------------------------------------------------------------------ |
+| `locationIdOrPaths` | `String[]` | False    | (Optional) Array of location IDs or paths to export. If omitted, exports all mode configs. |
 
 ## Returns
 

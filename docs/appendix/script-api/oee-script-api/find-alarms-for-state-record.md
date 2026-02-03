@@ -28,7 +28,9 @@ system.mes.oee.findAlarmsForStateRecord(oeeStateRecordId)
 
 ## Returns
 
-A list of OEE Alarm Record objects, where each object is a JSON representation of an `OeeAlarmRecordDTO`.
+A list of JSON objects where each object represents an `OeeAlarmRecordDTO`. 
+
+Each object has the following properties.
 
 | Name                 | Type                   | Nullable | Description                                                     | Default Value |
 | -------------------- | ---------------------- | -------- | --------------------------------------------------------------- | ------------- |
@@ -61,8 +63,8 @@ A list of OEE Alarm Record objects, where each object is a JSON representation o
 ```python
 # Find alarms for a specific state record
 state_record_id = "some-state-record-id"
-alarms = system.mes.oee.findAlarmsForStateRecord(oeeStateRecordId=state_record_id)
+alarms = system.mes.oee.findAlarmsForStateRecord(state_record_id)
 
 for alarm in alarms:
-    print alarm.name, alarm.timestamp, alarm.priority
+    print alarm['name'], alarm['timestamp'], alarm['priority']
 ```

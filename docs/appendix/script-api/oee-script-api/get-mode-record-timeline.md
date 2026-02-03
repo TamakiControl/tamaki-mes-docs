@@ -28,16 +28,31 @@ system.mes.oee.getModeRecordTimeline(locationIdOrPath, startDate, endDate)
 
 ## Returns
 
-A list of `OeeChartSegmentDTO` objects, each representing a segment in the mode timeline.
+A list of JSON representations of `OeeModeRecordDTO` objects, each representing a recorded instance of an OEE mode.
 
-| Name              | Type      | Nullable | Description                                                                  | Default Value |
-| ----------------- | --------- | -------- | ---------------------------------------------------------------------------- | ------------- |
-| `name`            | `String`  | `True`   | The name of the chart segment (e.g., "Unscheduled Downtime" or "Running")    | `null`        |
-| `code`            | `Integer` | `True`   | The integer code associated with the Mode or State                           | `null`        |
-| `color`           | `String`  | `True`   | The color code for displaying this segment                                   | `null`        |
-| `duration`        | `Double`  | `True`   | The total aggregated duration of this segment in seconds                     | `null`        |
-| `durationPercent` | `Double`  | `True`   | The percentage (0.0 to 1.0) of the total duration that this segment occupies | `null`        |
-| `type`            | `String`  | `True`   | The type of the original record, either "Mode" or "State"                    | `null`        |
+Each object has the following properties:
+
+| Name                         | Type                            | Nullable | Description                                                              | Default Value          |
+| ---------------------------- | ------------------------------- | -------- | ------------------------------------------------------------------------ | ---------------------- |
+| `id`                         | `String`                        | `True`   | The id of the OEE Mode Record                                            | `null`                 |
+| `locationId`                 | `String`                        | `False`  | Identifier of the associated location where this mode was recorded       | `null`                 |
+| `locationName`               | `String`                        | `True`   | Name of the associated location                                          | `null`                 |
+| `locationPath`               | `String`                        | `True`   | Path of the associated location where this mode was recorded             | `null`                 |
+| `code`                       | `Integer`                       | `False`  | Integer mode number                                                      | `null`                 |
+| `status`                     | `Status`                        | `False`  | Status of the OEE record (running, faulted, cancelled, complete etc.)    | `UNKNOWN`              |
+| `startDate`                  | `Instant`                       | `False`  | Start date and time of the mode record                                   | `Instant.now()`        |
+| `endDate`                    | `Instant`                       | `True`   | End date and time of the mode record                                     | `null`                 |
+| `duration`                   | `Double`                        | `False`  | Total duration of the mode record in seconds                             | `0.0`                  |
+| `overrunDurationSec`         | `Double`                        | `False`  | Duration in seconds that the machine has overrun its scheduled downtime  | `0.0`                  |
+| `name`                       | `String`                        | `False`  | Name of the mode                                                         | `null`                 |
+| `calculationType`            | `OeeModeCalculationType`        | `False`  | Specifies how this mode should be factored into OEE calculations         | `SCHEDULED_PRODUCTION` |
+| `color`                      | `String`                        | `False`  | Hex color code representing the mode visually                            | `"#000000"`            |
+| `expectedDuration`           | `Double`                        | `True`   | Expected duration of the mode in seconds                                 | `0.0`                  |
+| `notes`                      | `String`                        | `True`   | Notes associated with the OEE Mode Record                                | `null`                 |
+| `enabled`                    | `boolean`                       | `True`   | Indicates whether the OEE Mode Record is enabled                         | `true`                 |
+| `spare1`                     | `String`                        | `True`   | Extra field 1                                                            | `null`                 |
+| `spare2`                     | `String`                        | `True`   | Extra field 2                                                            | `null`                 |
+| `spare3`                     | `String`                        | `True`   | Extra field 3                                                            | `null`                 |
 
 ## Code Examples
 
@@ -53,5 +68,5 @@ start_time = Date(end_time.getTime() - TimeUnit.HOURS.toMillis(8))
 timeline_segments = system.mes.oee.getModeRecordTimeline(location, start_time, end_time)
 
 for segment in timeline_segments:
-    print "Mode:", segment.name, "Duration (sec):", segment.duration
+    print "Mode:", segment['name'], "Duration (sec):", segment['duration']
 ```

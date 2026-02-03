@@ -15,7 +15,7 @@ This method requires the `OEE.READ.GET` permission.
 ## Syntax
 
 ```python
-system.mes.oee.getDowntimeByReason(locationPath, startDate, endDate=None, downtimeReasonPath=None)
+system.mes.oee.getDowntimeByReason(locationPath, startDate, endDate, downtimeReasonPath)
 ```
 
 ## Parameters
@@ -29,7 +29,9 @@ system.mes.oee.getDowntimeByReason(locationPath, startDate, endDate=None, downti
 
 ## Returns
 
-A list of `OeeDowntimeByReasonDTO` objects, each containing the downtime analysis for a specific reason.
+A list JSON objects representing `OeeDowntimeByReasonDTO` objects, each containing the downtime analysis for a specific reason.
+
+Each object has the following properties:
 
 | Name                 | Type     | Nullable | Description                                  | Default Value |
 | -------------------- | -------- | -------- | -------------------------------------------- | ------------- |
@@ -53,5 +55,5 @@ start_date = Date(end_date.getTime() - TimeUnit.HOURS.toMillis(24))
 downtime_by_reason = system.mes.oee.getDowntimeByReason(location_path, start_date, end_date)
 
 for reason_data in downtime_by_reason:
-    print reason_data.downtimeReasonPath, reason_data.duration
+    print reason_data['downtimeReasonPath'], reason_data['duration']
 ```

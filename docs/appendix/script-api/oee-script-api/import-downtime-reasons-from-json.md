@@ -20,9 +20,9 @@ system.mes.oee.importDowntimeReasonsFromJson(bytes)
 
 ## Parameters
 
-| Parameter | Type     | Nullable | Description                             |
-| --------- | -------- | -------- | --------------------------------------- |
-| `bytes`   | `byte[]` | False    | The CSV data as a byte array to import. |
+| Parameter | Type     | Nullable | Description                              |
+| --------- | -------- | -------- |------------------------------------------|
+| `bytes`   | `byte[]` | False    | The JSON data as a byte array to import. |
 
 ## Returns
 
@@ -33,15 +33,15 @@ An `ApiResponse` object indicating success or failure. On success, the `data` at
 ```python
 import system.file
 
-# Path to the CSV file
-file_path = "C:/path/to/downtime_reasons.csv"
+# Path to the JSON file
+file_path = "C:/path/to/downtime_reasons.json"
 
 try:
     # Read the file content as bytes
-    csv_bytes = system.file.readFileAsBytes(file_path)
+    json_bytes = system.file.readFileAsBytes(file_path)
 
     # Import the downtime reasons
-    result = system.mes.oee.importDowntimeReasonsFromCsv(csv_bytes)
+    result = system.mes.oee.importDowntimeReasonsFromJson(json_bytes)
 
     if result.get('success'):
         print "Successfully imported {} downtime reasons.".format(result.get('data'))

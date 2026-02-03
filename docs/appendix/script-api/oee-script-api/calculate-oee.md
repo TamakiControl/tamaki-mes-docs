@@ -35,28 +35,43 @@ system.mes.oee.calculateOee(locationIdOrPath=location, startDate=start, endDate=
 
 Returns a JSON object containing calculated OEE metrics.
 
-| Name                                 | Type      | Nullable | Description                                                                         | Default Value   |
-| ------------------------------------ | --------- | -------- | ----------------------------------------------------------------------------------- | --------------- |
-| `locationId`                         | `String`  | `False`  | Identifier of the associated location where this OEE record was captured            | `null`          |
-| `locationPath`                       | `String`  | `True`   | Path of the location where this OEE record was captured                             | `null`          |
-| `startDate`                          | `Instant` | `False`  | Start date and time of the OEE record                                               | `Instant.now()` |
-| `endDate`                            | `Instant` | `True`   | End date and time of the OEE record                                                 | `null`          |
-| `totalDurationSec`                   | `Double`  | `False`  | Total duration of the OEE record in seconds                                         | `0.0`           |
-| `scheduledDurationSec`               | `Double`  | `False`  | Duration in seconds that the machine was scheduled to run during this record period | `0.0`           |
-| `runningDurationSec`                 | `Double`  | `False`  | Duration in seconds that the machine was actively running during this record period | `0.0`           |
-| `productionCount`                    | `Double`  | `False`  | Total number of units produced during this record period                            | `0.0`           |
-| `expectedProductionCount`            | `Double`  | `False`  | Expected number of units to be produced during this record period                   | `0.0`           |
-| `averageStandardRate`                | `Double`  | `False`  | Average Standard Rate for the time period. Calculated as per minute                 | `0.0`           |
-| `maximumStandardRate`                | `Double`  | `False`  | Maximum Standard Rate for the time period. Calculated as per minute                 | `0.0`           |
-| `wasteCount`                         | `Double`  | `False`  | Total number of waste units recorded during this period                             | `0.0`           |
-| `goodCount`                          | `Double`  | `False`  | Total number of good units recorded during this period                              | `0.0`           |
-| `productionCountUnitOfMeasureId`     | `String`  | `True`   | Identifier of the unit of measure for the production count                          | `null`          |
-| `productionCountUnitOfMeasureName`   | `String`  | `True`   | Name of the unit of measure for the production count                                | `null`          |
-| `productionCountUnitOfMeasureSymbol` | `String`  | `True`   | Symbol of the unit of measure for the production count                              | `null`          |
-| `availability`                       | `Double`  | `True`   | Availability metric (0.0 to 1.0)                                                    | `1.0`           |
-| `performance`                        | `Double`  | `True`   | Performance metric (0.0 to 1.0)                                                     | `1.0`           |
-| `quality`                            | `Double`  | `True`   | Quality metric (0.0 to 1.0)                                                         | `1.0`           |
-| `oee`                                | `Double`  | `True`   | Overall Equipment Effectiveness (OEE) metric (0.0 to 1.0)                           | `1.0`           |
+| Name                                 | Type      | Nullable | Description                                                                                    | Default Value   |
+|--------------------------------------|-----------|----------|------------------------------------------------------------------------------------------------|-----------------|
+| `locationId`                         | `String`  | `False`  | Identifier of the associated location where this OEE record was captured                       | `null`          |
+| `locationPath`                       | `String`  | `True`   | Path of the location where this OEE record was captured                                        | `null`          |
+| `startDate`                          | `Instant` | `False`  | Start date and time of the OEE record                                                          | `Instant.now()` |
+| `endDate`                            | `Instant` | `True`   | End date and time of the OEE record                                                            | `null`          |
+| `totalDurationSec`                   | `Double`  | `False`  | Total duration of the OEE record in seconds                                                    | `0.0`           |
+| `scheduledDurationSec`               | `Double`  | `False`  | Duration in seconds that the machine was scheduled to run during this record period            | `0.0`           |
+| `scheduledProductionModeEventCount`  | `Integer` | `False`  | Total number of scheduled production mode events during this record period                     | `0`             |
+| `scheduledDowntimeDurationSec`       | `Double`  | `False`  | Duration in seconds that the machine was scheduled to be in downtime during this record period | `0.0`           |
+| `scheduledDowntimeModeEventCount`    | `Integer` | `False`  | Total number of scheduled downtime mode events during this record period                       | `0`             |
+| `unscheduledDowntimeDurationSec`     | `Double`  | `False`  | Duration in seconds that the machine was in unscheduled downtime during this record period     | `0.0`           |
+| `unscheduledDowntimeEventCount`      | `Integer` | `False`  | Total number of unscheduled downtime mode events during this record period                     | `0`             |
+| `runningDurationSec`                 | `Double`  | `False`  | Duration in seconds that the machine was actively running during this record period            | `0.0`           |
+| `runningStateEventCount`             | `Integer` | `False`  | Total number of running state events during this record period                                 | `0`             |
+| `blockedDurationSec`                 | `Double`  | `False`  | Duration in seconds that the machine was in BLOCKED state during this record period            | `0.0`           |
+| `blockedStateEventCount`             | `Integer` | `False`  | Total number of blocked state events during this record period                                 | `0`             |
+| `starvedDurationSec`                 | `Double`  | `False`  | Duration in seconds that the machine was in STARVED state during this record period            | `0.0`           |
+| `starvedStateEventCount`             | `Integer` | `False`  | Total number of starved state events during this record period                                 | `0`             |
+| `idleDurationSec`                    | `Double`  | `False`  | Duration in seconds that the machine was in IDLE state during this record period               | `0.0`           |
+| `idleStateEventCount`                | `Integer` | `False`  | Total number of idle state events during this record period                                    | `0`             |
+| `downtimeDurationSec`                | `Double`  | `False`  | Duration in seconds that the machine was in DOWNTIME state during this record period           | `0.0`           |
+| `downtimeStateEventCount`            | `Integer` | `False`  | Total number of downtime state events during this record period                                | `0`             |
+| `productionCount`                    | `Double`  | `False`  | Total number of units produced during this record period                                       | `0.0`           |
+| `expectedProductionCount`            | `Double`  | `False`  | Expected number of units to be produced during this record period                              | `0.0`           |
+| `averageStandardRate`                | `Double`  | `False`  | Average Standard Rate for the time period. Calculated as per minute                            | `0.0`           |
+| `maximumStandardRate`                | `Double`  | `False`  | Maximum Standard Rate for the time period. Calculated as per minute                            | `0.0`           |
+| `wasteCount`                         | `Double`  | `False`  | Total number of waste units recorded during this period                                        | `0.0`           |
+| `goodCount`                          | `Double`  | `False`  | Total number of good units recorded during this period                                         | `0.0`           |
+| `productionCountUnitOfMeasureId`     | `String`  | `True`   | Identifier of the unit of measure for the production count                                     | `null`          |
+| `productionCountUnitOfMeasureName`   | `String`  | `True`   | Name of the unit of measure for the production count                                           | `null`          |
+| `productionCountUnitOfMeasureSymbol` | `String`  | `True`   | Symbol of the unit of measure for the production count                                         | `null`          |
+| `availability`                       | `Double`  | `True`   | Availability metric (0.0 to 1.0)                                                               | `1.0`           |
+| `teep`                               | `Double`  | `True`   | Total Effective Equipment Performance (TEEP) metric (0.0 to 1.0)                               | `1.0`           |
+| `performance`                        | `Double`  | `True`   | Performance metric (0.0 to 1.0)                                                                | `1.0`           |
+| `quality`                            | `Double`  | `True`   | Quality metric (0.0 to 1.0)                                                                    | `1.0`           |
+| `oee`                                | `Double`  | `True`   | Overall Equipment Effectiveness (OEE) metric (0.0 to 1.0)                                      | `1.0`           |
 
 ## Code Examples
 

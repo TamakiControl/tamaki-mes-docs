@@ -54,8 +54,8 @@ mode_id = "01JCH3ENEB-SV2X8B3W-NFY8WZNK"
 
 try:
     mode = system.mes.oee.getMode(mode_id)
-    print "Mode Name:", mode.name
-    print "Calculation Type:", mode.calculationType
+    print "Mode Name:", mode['name']
+    print "Calculation Type:", mode['calculationType']
 except Exception as e:
     print "Error retrieving mode:", str(e)
 ```

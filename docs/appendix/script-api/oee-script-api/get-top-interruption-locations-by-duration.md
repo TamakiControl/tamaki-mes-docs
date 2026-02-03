@@ -29,7 +29,9 @@ system.mes.oee.getTopInterruptionLocationsByDuration(locationIdOrPath, startDate
 
 ## Returns
 
-A list of `DowntimeByInterruptionLocationDTO` objects, each representing an interruption location and its aggregated data.
+A list of JSON representations of `DowntimeByInterruptionLocationDTO` objects, each representing an interruption location and its aggregated data.
+
+Each object has the following properties:
 
 | Name                       | Type     | Nullable | Description                                                       | Default Value |
 | -------------------------- | -------- | -------- | ----------------------------------------------------------------- | ------------- |
@@ -52,17 +54,17 @@ end_time = Date()
 start_time = Date(end_time.getTime() - TimeUnit.DAYS.toMillis(7))
 
 top_locations = system.mes.oee.getTopInterruptionLocationsByDuration(
-    locationIdOrPath=line_location,
-    startDate=start_time,
-    endDate=end_time,
-    count=3
+    line_location,
+    start_time,
+    end_time,
+    3
 )
 
 print "Top 3 Interruption Locations by Duration:"
 for location in top_locations:
     print "  - {}: {:.2f} hours, {} interruptions".format(
-        location.interruptionLocationName,
-        location.duration / 3600.0,
-        location.count
+        location['interruptionLocationName'],
+        location['duration'] / 3600.0,
+        location['count']
     )
 ```

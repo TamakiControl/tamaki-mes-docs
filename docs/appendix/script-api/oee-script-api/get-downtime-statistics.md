@@ -15,7 +15,7 @@ This method requires the `OEE.READ.GET` permission.
 ## Syntax
 
 ```python
-system.mes.oee.getDowntimeStatistics(locationIdOrPath, startDate, endDate=None)
+system.mes.oee.getDowntimeStatistics(locationIdOrPath, startDate, endDate)
 ```
 
 ## Parameters
@@ -28,7 +28,7 @@ system.mes.oee.getDowntimeStatistics(locationIdOrPath, startDate, endDate=None)
 
 ## Returns
 
-An `OeeDowntimeStatisticsDTO` object containing comprehensive downtime statistics.
+A JSON representation of an `OeeDowntimeStatisticsDTO` object containing comprehensive downtime statistics.
 
 | Name                              | Type      | Nullable | Description                                                                  | Default Value   |
 | --------------------------------- | --------- | -------- | ---------------------------------------------------------------------------- | --------------- |
@@ -65,7 +65,7 @@ start_date = Date(end_date.getTime() - TimeUnit.HOURS.toMillis(24))
 
 downtime_stats = system.mes.oee.getDowntimeStatistics(location_path, start_date, end_date)
 
-print "Downtime Events:", downtime_stats.downtimeEventCount
-print "MTBF (sec):", downtime_stats.meanTimeBetweenFailuresSec
-print "MTTR (sec):", downtime_stats.meanTimeToRepairSec
+print "Downtime Events:", downtime_stats['downtimeEventCount']
+print "MTBF (sec):", downtime_stats['meanTimeBetweenFailuresSec']
+print "MTTR (sec):", downtime_stats['meanTimeToRepairSec']
 ```

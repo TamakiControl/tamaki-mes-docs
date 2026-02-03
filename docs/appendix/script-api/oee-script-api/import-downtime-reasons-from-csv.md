@@ -21,8 +21,8 @@ system.mes.oee.importDowntimeReasonsFromCsv(bytes)
 ## Parameters
 
 | Parameter | Type     | Nullable | Description                             |
-| --------- | -------- | -------- | --------------------------------------- |
-| `bytes`   | `byte[]` | False    | The CSV data as a byte array to import. |
+| --------- | -------- |----------| --------------------------------------- |
+| `bytes`   | `byte[]` | True     | The CSV data as a byte array to import. |
 
 ## Returns
 

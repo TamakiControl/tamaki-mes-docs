@@ -15,15 +15,20 @@ This method requires the `OEE.WRITE.DELETE` permission.
 ## Syntax
 
 ```python
+# Run method with prune date as Date object
 system.mes.oee.pruneOeeRecords(locationIdsOrPaths, pruneBeforeDate)
+
+# Run method with prune date in milliseconds as Long object
+system.mes.oee.pruneOeeRecords(locationIdsOrPaths, pruneBeforeDateMillis) 
 ```
 
 ## Parameters
 
-| Parameter            | Type          | Nullable | Description                                                                       |
-| -------------------- | ------------- | -------- | --------------------------------------------------------------------------------- |
-| `locationIdsOrPaths` | `Set<String>` | True     | A set of location IDs or paths to prune. If `None`, all locations are considered. |
-| `pruneBeforeDate`    | `Date`        | False    | All records created before this date will be deleted.                             |
+| Parameter               | Type          | Nullable | Description                                                                            |
+|-------------------------|---------------|----------|----------------------------------------------------------------------------------------|
+| `locationIdsOrPaths`    | `Set<String>` | True     | A set of location IDs or paths to prune. If empty, all locations are considered.       |
+| `pruneBeforeDate`       | `Date`        | False    | All records created before this date will be deleted.                                  |
+| `pruneBeforeDateMillis` | `Long`        | False    | All records created before the date defined by `Instant.ofEpochMilli` will be deleted. |
 
 ## Returns
 
@@ -50,5 +55,5 @@ except Exception as e:
     print "Error during pruning:", str(e)
 
 # Prune records for all locations
-# system.mes.oee.pruneOeeRecords(None, cutoff_date)
+# system.mes.oee.pruneOeeRecords(set(), cutoff_date)
 ```

@@ -21,8 +21,8 @@ system.mes.oee.importOeeConfigurationsFromJson(bytes)
 ## Parameters
 
 | Parameter | Type     | Nullable | Description                              |
-| --------- | -------- | -------- | ---------------------------------------- |
-| `bytes`   | `byte[]` | False    | The JSON data as a byte array to import. |
+| --------- | -------- |----------| ---------------------------------------- |
+| `bytes`   | `byte[]` | True     | The JSON data as a byte array to import. |
 
 ## Returns
 

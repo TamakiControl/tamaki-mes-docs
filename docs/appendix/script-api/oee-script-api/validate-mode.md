@@ -20,29 +20,29 @@ system.mes.oee.validateMode(**mode_data)
 
 ## Parameters
 
-An unpacked dictionary of `OeeStateDTO` fields.
+An unpacked dictionary of `OeeModeDTO` fields.
 
-| Parameter                  | Type                      | Nullable | Description                                                              | Default Value |
-| -------------------------- | ------------------------- | -------- | ------------------------------------------------------------------------ | ------------- |
-| `id`                       | `String`                  | `True`   | The id of the OEE State                                                  | `null`        |
-| `locationId`               | `String`                  | `False`  | Identifier of the associated location                                    | `null`        |
-| `locationPath`             | `String`                  | `True`   | Path of the associated location                                          | `null`        |
-| `code`                     | `Integer`                 | `False`  | Integer state number, which must be unique for a given location          | `null`        |
-| `name`                     | `String`                  | `False`  | Name of the state                                                        | `null`        |
-| `calculationType`          | `OeeStateCalculationType` | `False`  | Specifies how this state contributes to OEE calculations                 | `DOWNTIME`    |
-| `color`                    | `String`                  | `False`  | Hex color code representing the state visually                           | `"#000000"`   |
-| `autoAcknowledge`          | `Boolean`                 | `False`  | Whether to automatically acknowledge the state record when it is created | `false`       |
-| `interruptionLocationId`   | `String`                  | `True`   | Immediate interruption location that caused a blocked/starved state      | `null`        |
-| `interruptionLocationPath` | `String`                  | `True`   | Path to the location that caused a blocked/starved state                 | `null`        |
-| `notes`                    | `String`                  | `True`   | Notes associated with the OEE State                                      | `null`        |
-| `enabled`                  | `boolean`                 | `True`   | Indicates whether the OEE State is enabled                               | `true`        |
-| `spare1`                   | `String`                  | `True`   | Extra field 1                                                            | `null`        |
-| `spare2`                   | `String`                  | `True`   | Extra field 2                                                            | `null`        |
-| `spare3`                   | `String`                  | `True`   | Extra field 3                                                            | `null`        |
+| Parameter                    | Type                            | Nullable | Description                                                                               | Default Value          |
+|------------------------------| ------------------------------- | -------- | ----------------------------------------------------------------------------------------- | ---------------------- |
+| `id`                         | `String`                        | `True`   | The id of the OEE Mode                                                                    | `null`                 |
+| `locationId`                 | `String`                        | `False`  | Identifier of the associated location                                                     | `null`                 |
+| `locationPath`               | `String`                        | `True`   | Path to the associated location                                                           | `null`                 |
+| `code`                       | `Integer`                       | `False`  | Integer value representing the mode                                                       | `null`                 |
+| `name`                       | `String`                        | `False`  | Name of the mode                                                                          | `null`                 |
+| `calculationType`            | `OeeModeCalculationType`        | `False`  | Specifies how this mode should be factored into OEE calculations                          | `SCHEDULED_PRODUCTION` |
+| `expectedDurationSource`     | `OeeModeExpectedDurationSource` | `False`  | Defines the source used to determine the expected duration of a scheduled downtime event  | `STATIC`               |
+| `expectedDurationExpression` | `String`                        | `True`   | Ignition expression to dynamically calculate the expected duration of the mode in seconds | `null`                 |
+| `expectedDuration`           | `Double`                        | `True`   | Expected duration of the mode in seconds                                                  | `0.0`                  |
+| `color`                      | `String`                        | `False`  | Hex color code representing the mode visually                                             | `"#000000"`            |
+| `notes`                      | `String`                        | `True`   | Notes associated with the OEE Mode                                                        | `null`                 |
+| `enabled`                    | `boolean`                       | `True`   | Indicates whether the OEE Mode is enabled                                                 | `true`                 |
+| `spare1`                     | `String`                        | `True`   | Extra field 1                                                                             | `null`                 |
+| `spare2`                     | `String`                        | `True`   | Extra field 2                                                                             | `null`                 |
+| `spare3`                     | `String`                        | `True`   | Extra field 3                                                                             | `null`                 |
 
 ## Returns
 
-A PyObject containing validation results. If the object is empty, validation passed. If it contains entries, the keys are the field names and the values are lists of validation error messages.
+A JSON object containing validation results. If the object is empty, validation passed. If it contains entries, the keys are the field names and the values are lists of validation error messages.
 
 ## Code Examples
 

@@ -17,14 +17,14 @@ This method requires the `OEE.READ.GET` permission.
 ## Syntax
 
 ```python
-system.mes.oee.exportOeeStatesToJson([locationIdOrPaths])
+system.mes.oee.exportOeeStatesToJson(locationIdOrPaths)
 ```
 
 ## Parameters
 
-| Parameter           | Type       | Nullable | Description                                                                                         |
-| ------------------- | ---------- | -------- | --------------------------------------------------------------------------------------------------- |
-| `locationIdOrPaths` | `String[]` | True     | (Optional) Array of location IDs or paths to export. If omitted or null, exports all state configs. |
+| Parameter           | Type       | Nullable | Description                                                                                 |
+| ------------------- | ---------- |----------| ------------------------------------------------------------------------------------------- |
+| `locationIdOrPaths` | `String[]` | False    | (Optional) Array of location IDs or paths to export. If omitted, exports all state configs. |
 
 ## Returns
 

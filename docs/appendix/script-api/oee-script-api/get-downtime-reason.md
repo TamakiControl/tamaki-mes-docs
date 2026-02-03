@@ -26,7 +26,7 @@ system.mes.oee.getDowntimeReason(id)
 
 ## Returns
 
-An `OeeDowntimeReasonDTO` object if found, or `None` if the downtime reason doesn't exist.
+Returns a JSON representation of an `OeeDowntimeReasonDTO` object if found, or `None` if the downtime reason doesn't exist.
 
 | Name           | Type      | Nullable | Description                                                                | Default Value |
 | -------------- | --------- | -------- | -------------------------------------------------------------------------- | ------------- |
@@ -52,7 +52,7 @@ reason_id = "01JCH3ENEB-SV2X8B3W-NFY8WZNK"
 reason = system.mes.oee.getDowntimeReason(reason_id)
 
 if reason:
-    print reason.name, reason.code
+    print reason['name'], reason['code']
 else:
     print "Downtime reason not found"
 ```

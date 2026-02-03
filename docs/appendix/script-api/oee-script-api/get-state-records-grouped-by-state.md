@@ -28,7 +28,9 @@ system.mes.oee.getStateRecordsGroupedByState(locationIdOrPath, startDate, endDat
 
 ## Returns
 
-A list of `OeeStateRecordsGroupedByStateDTO` objects, each representing the aggregated data for a specific OEE state.
+A list of JSON representations of `OeeStateRecordsGroupedByStateDTO` objects, each representing the aggregated data for a specific OEE state.
+
+Each object has the following properties:
 
 | Name         | Type      | Nullable | Description                                                | Default Value |
 | ------------ | --------- | -------- | ---------------------------------------------------------- | ------------- |
@@ -57,7 +59,7 @@ grouped_states = system.mes.oee.getStateRecordsGroupedByState(
 )
 
 for state_group in grouped_states:
-    print "State:", state_group.name
-    print "  Total Duration (hours):", state_group.duration / 3600.0
-    print "  Occurrence Count:", state_group.count
+    print "State:", state_group['name']
+    print "  Total Duration (hours):", state_group['duration'] / 3600.0
+    print "  Occurrence Count:", state_group['count']
 ```

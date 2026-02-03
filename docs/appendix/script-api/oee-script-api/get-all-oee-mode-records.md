@@ -28,7 +28,9 @@ system.mes.oee.getAllOeeModeRecords(locationIdOrPath, startDate, endDate)
 
 ## Returns
 
-A list of `OeeModeRecordDTO` objects, each representing a recorded instance of an OEE mode.
+A list of JSON representations of `OeeModeRecordDTO` objects, each representing a recorded instance of an OEE mode.
+
+Each object has the following properties:
 
 | Name                         | Type                            | Nullable | Description                                                              | Default Value          |
 | ---------------------------- | ------------------------------- | -------- | ------------------------------------------------------------------------ | ---------------------- |
@@ -45,8 +47,6 @@ A list of `OeeModeRecordDTO` objects, each representing a recorded instance of a
 | `name`                       | `String`                        | `False`  | Name of the mode                                                         | `null`                 |
 | `calculationType`            | `OeeModeCalculationType`        | `False`  | Specifies how this mode should be factored into OEE calculations         | `SCHEDULED_PRODUCTION` |
 | `color`                      | `String`                        | `False`  | Hex color code representing the mode visually                            | `"#000000"`            |
-| `expectedDurationSource`     | `OeeModeExpectedDurationSource` | `False`  | Source to calculate the expected duration of an scheduled downtime event | `STATIC`               |
-| `expectedDurationExpression` | `String`                        | `True`   | Expression to calculate the expected duration of the mode in seconds     | `null`                 |
 | `expectedDuration`           | `Double`                        | `True`   | Expected duration of the mode in seconds                                 | `0.0`                  |
 | `notes`                      | `String`                        | `True`   | Notes associated with the OEE Mode Record                                | `null`                 |
 | `enabled`                    | `boolean`                       | `True`   | Indicates whether the OEE Mode Record is enabled                         | `true`                 |
@@ -69,5 +69,5 @@ location = "Enterprise/Site/Area/Line1"
 mode_records = system.mes.oee.getAllOeeModeRecords(location, start_time, end_time)
 
 for record in mode_records:
-    print record.name, record.duration
+    print record['name'], record['duration']
 ```

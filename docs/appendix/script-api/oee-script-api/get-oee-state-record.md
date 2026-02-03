@@ -26,10 +26,10 @@ system.mes.oee.getOeeStateRecord(id)
 
 ## Returns
 
-An `OeeStateRecordDTO` object containing the details of the specified state record.
+A JSON representation of an `OeeStateRecordDTO` object containing the details of the specified state record.
 
 | Name                       | Type                      | Nullable | Description                                                                | Default Value   |
-| -------------------------- | ------------------------- | -------- | -------------------------------------------------------------------------- | --------------- |
+|----------------------------|---------------------------|----------|----------------------------------------------------------------------------|-----------------|
 | `id`                       | `String`                  | `True`   | The id of the OEE State Record                                             | `null`          |
 | `code`                     | `Integer`                 | `False`  | Integer state number                                                       | `null`          |
 | `locationId`               | `String`                  | `False`  | Identifier of the associated location where this state record was recorded | `null`          |
@@ -51,6 +51,12 @@ An `OeeStateRecordDTO` object containing the details of the specified state reco
 | `acknowledged`             | `Boolean`                 | `False`  | Boolean indicating whether the state record has been acknowledged          | `false`         |
 | `acknowledgedBy`           | `String`                  | `True`   | Acknowledged By. This is the user who acknowledged the state record        | `null`          |
 | `acknowledgedDate`         | `Instant`                 | `True`   | Acknowledged Date. This is the date when the state record was acknowledged | `null`          |
+| `modeRecordId`             | `String`                  | `True`   | Identifier of the associated mode record                                   | `null`          |
+| `rootCauseStateRecordId`   | `String`                  | `True`   | Identifier of the root cause state record, if applicable                   | `null`          |
+| `primaryAlarmRecordId`     | `String`                  | `True`   | Identifier of the associated OEE Alarm Record, if applicable               | `null`          |
+| `primaryAlarmName`         | `String`                  | `True`   | Primary alarm name, if applicable                                          | `null`          |
+| `primaryAlarmDisplayPath`  | `String`                  | `True`   | Primary alarm display path, if applicable                                  | `null`          |
+| `primaryAlarmLabel`        | `String`                  | `True`   | Primary alarm display name, if applicable                                  | `null`          |
 | `notes`                    | `String`                  | `True`   | Notes associated with the OEE State Record                                 | `null`          |
 | `enabled`                  | `boolean`                 | `True`   | Indicates whether the OEE State Record is enabled                          | `true`          |
 | `spare1`                   | `String`                  | `True`   | Extra field 1                                                              | `null`          |
@@ -65,8 +71,8 @@ state_record_id = "01JCH3STATE-REC-001"
 state_record = system.mes.oee.getOeeStateRecord(state_record_id)
 
 if state_record:
-    print "State Name:", state_record.name
-    print "Duration (sec):", state_record.duration
-    if state_record.downtimeReason:
-        print "Downtime Reason:", state_record.downtimeReason
+    print "State Name:", state_record['name']
+    print "Duration (sec):", state_record['duration']
+    if state_record['downtimeReason']:
+        print "Downtime Reason:", state_record['downtimeReason']
 ```

@@ -22,13 +22,13 @@ system.mes.oee.getAllDowntimeReasonCodesByLocationHierarchical(locationIdOrPath)
 
 ## Parameters
 
-| Parameter          | Type     | Nullable | Description                                                                    |
-| ------------------ | -------- | -------- | ------------------------------------------------------------------------------ |
-| `locationIdOrPath` | `String` | True     | The ID or path of the location. If omitted, returns reasons for all locations. |
+| Parameter          | Type     | Nullable | Description                                                                 |
+| ------------------ | -------- | -------- |-----------------------------------------------------------------------------|
+| `locationIdOrPath` | `String` | True     | The ID or path of the location. If null, returns reasons for all locations. |
 
 ## Returns
 
-A list of root-level `OeeDowntimeReasonHierarchicalDTO` objects, each containing nested children.
+A list of JSON objects representing root-level `OeeDowntimeReasonHierarchicalDTO` objects, each containing nested children.
 
 | Name           | Type                                     | Nullable | Description                                                                                  | Default Value |
 | -------------- | ---------------------------------------- | -------- | -------------------------------------------------------------------------------------------- | ------------- |
@@ -52,13 +52,13 @@ A list of root-level `OeeDowntimeReasonHierarchicalDTO` objects, each containing
 ```python
 # Get hierarchical downtime reasons for a specific location
 location = "Site/Area/Line 1"
-hierarchy = system.mes.oee.getAllDowntimeReasonCodesByLocationHierarchical(locationIdOrPath=location)
+hierarchy = system.mes.oee.getAllDowntimeReasonCodesByLocationHierarchical(location)
 
 def print_hierarchy(reasons, indent=0):
     for reason in reasons:
-        print "  " * indent + reason.name
-        if reason.children:
-            print_hierarchy(reason.children, indent + 1)
+        print "  " * indent + reason['name']
+        if reason['children']:
+            print_hierarchy(reason['children'], indent + 1)
 
 print_hierarchy(hierarchy)
 ```

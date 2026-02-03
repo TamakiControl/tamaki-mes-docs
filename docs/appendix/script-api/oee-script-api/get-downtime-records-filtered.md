@@ -31,10 +31,12 @@ system.mes.oee.getDowntimeRecordsFiltered(locationPath, startDate, endDate, down
 
 ## Returns
 
-A list of `OeeStateRecordDTO` objects, each representing a recorded downtime event that matches the filter criteria.
+A list of JSON representations of `OeeStateRecordDTO` objects, each representing a recorded downtime event that matches the filter criteria.
+
+Each object has the following properties:
 
 | Name                       | Type                      | Nullable | Description                                                                | Default Value   |
-| -------------------------- | ------------------------- | -------- | -------------------------------------------------------------------------- | --------------- |
+|----------------------------|---------------------------|----------|----------------------------------------------------------------------------|-----------------|
 | `id`                       | `String`                  | `True`   | The id of the OEE State Record                                             | `null`          |
 | `code`                     | `Integer`                 | `False`  | Integer state number                                                       | `null`          |
 | `locationId`               | `String`                  | `False`  | Identifier of the associated location where this state record was recorded | `null`          |
@@ -56,6 +58,12 @@ A list of `OeeStateRecordDTO` objects, each representing a recorded downtime eve
 | `acknowledged`             | `Boolean`                 | `False`  | Boolean indicating whether the state record has been acknowledged          | `false`         |
 | `acknowledgedBy`           | `String`                  | `True`   | Acknowledged By. This is the user who acknowledged the state record        | `null`          |
 | `acknowledgedDate`         | `Instant`                 | `True`   | Acknowledged Date. This is the date when the state record was acknowledged | `null`          |
+| `modeRecordId`             | `String`                  | `True`   | Identifier of the associated mode record                                   | `null`          |
+| `rootCauseStateRecordId`   | `String`                  | `True`   | Identifier of the root cause state record, if applicable                   | `null`          |
+| `primaryAlarmRecordId`     | `String`                  | `True`   | Identifier of the associated OEE Alarm Record, if applicable               | `null`          |
+| `primaryAlarmName`         | `String`                  | `True`   | Primary alarm name, if applicable                                          | `null`          |
+| `primaryAlarmDisplayPath`  | `String`                  | `True`   | Primary alarm display path, if applicable                                  | `null`          |
+| `primaryAlarmLabel`        | `String`                  | `True`   | Primary alarm display name, if applicable                                  | `null`          |
 | `notes`                    | `String`                  | `True`   | Notes associated with the OEE State Record                                 | `null`          |
 | `enabled`                  | `boolean`                 | `True`   | Indicates whether the OEE State Record is enabled                          | `true`          |
 | `spare1`                   | `String`                  | `True`   | Extra field 1                                                              | `null`          |
@@ -82,5 +90,5 @@ downtime_records = system.mes.oee.getDowntimeRecordsFiltered(
 )
 
 for record in downtime_records:
-    print record.name, record.duration
+    print record['name'], record['duration']
 ```

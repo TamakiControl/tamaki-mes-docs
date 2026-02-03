@@ -22,9 +22,9 @@ system.mes.oee.getAllDowntimeReasonPathsByLocation(locationIdOrPath)
 
 ## Parameters
 
-| Parameter          | Type     | Nullable | Description                                                                  |
-| ------------------ | -------- | -------- | ---------------------------------------------------------------------------- |
-| `locationIdOrPath` | `String` | True     | The ID or path of the location. If omitted, returns paths for all locations. |
+| Parameter          | Type     | Nullable | Description                                                               |
+| ------------------ | -------- | -------- |---------------------------------------------------------------------------|
+| `locationIdOrPath` | `String` | True     | The ID or path of the location. If null, returns paths for all locations. |
 
 ## Returns
 
@@ -35,7 +35,7 @@ A list of strings, where each string is the full hierarchical path of a downtime
 ```python
 # Get all downtime reason paths for a specific location
 location = "Site/Area/Line 1"
-reason_paths = system.mes.oee.getAllDowntimeReasonPathsByLocation(locationIdOrPath=location)
+reason_paths = system.mes.oee.getAllDowntimeReasonPathsByLocation(location)
 
 for path in reason_paths:
     print path

@@ -40,7 +40,7 @@ An unpacked dictionary of `OeeDowntimeReasonDTO` fields.
 
 ## Returns
 
-A PyObject containing validation results. If the object is empty, validation passed. If it contains entries, the keys are the field names and the values are lists of validation error messages.
+A JSON object containing validation results. If the object is empty, validation passed. If it contains entries, the keys are the field names and the values are lists of validation error messages.
 
 ## Code Examples
 

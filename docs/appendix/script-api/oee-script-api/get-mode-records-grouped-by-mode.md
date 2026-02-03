@@ -28,12 +28,14 @@ system.mes.oee.getModeRecordsGroupedByMode(locationIdOrPath, startDate, endDate)
 
 ## Returns
 
-A list of `OeeModeRecordsGroupedByModeDTO` objects, each representing the aggregated data for a specific mode.
+A list of JSON representations of `OeeModeRecordsGroupedByModeDTO` objects, each representing the aggregated data for a specific mode.
+
+Each object has the following properties:
 
 | Name         | Type      | Nullable | Description                                                            | Default Value |
-| ------------ | --------- | -------- | ---------------------------------------------------------------------- | ------------- |
+| ------------ | --------- | -------- |------------------------------------------------------------------------| ------------- |
 | `locationId` | `String`  | `True`   | Identifier of the associated location where this mode was recorded     | `null`        |
-| `code`       | `Integer` | `True`   | The integer code associated with the Mode                              | `null`        |
+| `code`       | `Integer` | `True`   | The integer code associated with the mode                              | `null`        |
 | `name`       | `String`  | `True`   | The name of the mode, such as "Production", "Scheduled Downtime", etc. | `null`        |
 | `color`      | `String`  | `True`   | The color code for displaying this mode                                | `null`        |
 | `duration`   | `Double`  | `True`   | The total aggregated duration of this mode in seconds                  | `null`        |
@@ -53,5 +55,5 @@ start_time = Date(end_time.getTime() - TimeUnit.DAYS.toMillis(1))
 grouped_records = system.mes.oee.getModeRecordsGroupedByMode(location, start_time, end_time)
 
 for group in grouped_records:
-    print "Mode:", group.name, "Total Duration (sec):", group.duration, "Count:", group.count
+    print "Mode:", group['name'], "Total Duration (sec):", group['duration'], "Count:", group['count']
 ```

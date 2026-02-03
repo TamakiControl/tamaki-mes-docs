@@ -15,30 +15,50 @@ This method requires the `OEE.READ.GET` permission.
 ## Syntax
 
 ```python
-system.mes.oee.exportDowntimeReasonsAsJson([idsOrPaths])
+# Export all downtime reasons
+system.mes.oee.exportDowntimeReasonsAsJson()
+
+# Export specific downtime reasons
+system.mes.oee.exportDowntimeReasonsAsJson(idsOrPaths)
 ```
 
 ## Parameters
 
-| Parameter    | Type           | Nullable | Description                                                                                                             |
-| ------------ | -------------- | -------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `idsOrPaths` | `List<String>` | True     | (Optional) A list of IDs or paths of the OEE Downtime Reasons to export. If omitted, all downtime reasons are exported. |
+| Parameter    | Type       | Nullable | Description                                                                                                             |
+| ------------ |------------|----------| ----------------------------------------------------------------------------------------------------------------------- |
+| `idsOrPaths` | `String[]` | False    | (Optional) A list of IDs or paths of the OEE Downtime Reasons to export. If omitted, all downtime reasons are exported. |
 
 ## Returns
-
-| Type      | Description                            |
-| --------- | -------------------------------------- |
-| `bytes[]` | The JSON file content as a byte array. |
+Returns a byte array containing the JSON data of the exported downtime reasons. If `idsOrPaths` is provided, only reasons for those ids or paths are included.
 
 ## Code Examples
 
+### Perspective
+
 ```python
 # Export all downtime reasons
-json_bytes = system.mes.oee.exportDowntimeReasonsAsJson()
-system.file.writeFile("downtime_reasons.json", json_bytes)
+jsonBytes = system.mes.oee.exportDowntimeReasonsAsJson()
+system.perspective.download("downtime_reasons.json", jsonBytes)
 
 # Export specific downtime reasons
-ids = ["a1b2c3d4-e5f6-7890-1234-567890abcdef", "b2c3d4e5-f6a7-8901-2345-67890abcdef1"]
-json_bytes_specific = system.mes.oee.exportDowntimeReasonsAsJson(ids)
-system.file.writeFile("specific_downtime_reasons.json", json_bytes_specific)
+reasonPaths = ["Electrical/Sensors", "Electrical/Wiring"]
+jsonBytesFiltered = system.mes.oee.exportDowntimeReasonsAsJson(reasonPaths)
+system.perspective.download("downtime_reasons_filtered.json", jsonBytesFiltered)
+```
+
+### Script Console
+
+```python
+# Export all downtime reasons
+jsonBytes = system.mes.oee.exportDowntimeReasonsAsJson()
+path = system.file.saveFile("downtime_reasons.json")
+if path is not None:
+    system.file.writeFile(path, jsonBytes)
+
+# Export specific downtime reasons
+reasonPaths = ["Electrical/Sensors", "Electrical/Wiring"]
+jsonBytesFiltered = system.mes.oee.exportDowntimeReasonsAsJson(reasonPaths)
+pathFiltered = system.file.saveFile("downtime_reasons_filtered.json")
+if pathFiltered is not None:
+    system.file.writeFile(pathFiltered, jsonBytesFiltered)
 ```

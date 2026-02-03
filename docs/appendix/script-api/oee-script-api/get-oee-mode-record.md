@@ -26,7 +26,7 @@ system.mes.oee.getOeeModeRecord(id)
 
 ## Returns
 
-An `OeeModeRecordDTO` object containing the details of the specified mode record.
+A JSON representation of an `OeeModeRecordDTO` object containing the details of the specified mode record.
 
 | Name                         | Type                            | Nullable | Description                                                              | Default Value          |
 | ---------------------------- | ------------------------------- | -------- | ------------------------------------------------------------------------ | ---------------------- |
@@ -43,8 +43,6 @@ An `OeeModeRecordDTO` object containing the details of the specified mode record
 | `name`                       | `String`                        | `False`  | Name of the mode                                                         | `null`                 |
 | `calculationType`            | `OeeModeCalculationType`        | `False`  | Specifies how this mode should be factored into OEE calculations         | `SCHEDULED_PRODUCTION` |
 | `color`                      | `String`                        | `False`  | Hex color code representing the mode visually                            | `"#000000"`            |
-| `expectedDurationSource`     | `OeeModeExpectedDurationSource` | `False`  | Source to calculate the expected duration of an scheduled downtime event | `STATIC`               |
-| `expectedDurationExpression` | `String`                        | `True`   | Expression to calculate the expected duration of the mode in seconds     | `null`                 |
 | `expectedDuration`           | `Double`                        | `True`   | Expected duration of the mode in seconds                                 | `0.0`                  |
 | `notes`                      | `String`                        | `True`   | Notes associated with the OEE Mode Record                                | `null`                 |
 | `enabled`                    | `boolean`                       | `True`   | Indicates whether the OEE Mode Record is enabled                         | `true`                 |
@@ -60,6 +58,6 @@ record_id = "01JDBQ7Y2B-QZ8XJ9XJ-V2QZJ9XJ"
 mode_record = system.mes.oee.getOeeModeRecord(record_id)
 
 if mode_record:
-    print "Mode Name:", mode_record.name
-    print "Duration (sec):", mode_record.duration
+    print "Mode Name:", mode_record['name']
+    print "Duration (sec):", mode_record['duration']
 ```

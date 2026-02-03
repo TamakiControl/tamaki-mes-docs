@@ -29,7 +29,9 @@ system.mes.oee.getTopDowntimeByCount(locationIdOrPath, startDate, endDate, count
 
 ## Returns
 
-A list of `OeeDowntimeByReasonDTO` objects, each representing a downtime reason and its aggregated data.
+A list of JSON representations of `OeeDowntimeByReasonDTO` objects, each representing a downtime reason and its aggregated data.
+
+Each object has the following properties:
 
 | Name                 | Type     | Nullable | Description                                  | Default Value |
 | -------------------- | -------- | -------- | -------------------------------------------- | ------------- |
@@ -51,17 +53,17 @@ end_time = Date()
 start_time = Date(end_time.getTime() - TimeUnit.DAYS.toMillis(7))
 
 top_reasons = system.mes.oee.getTopDowntimeByCount(
-    locationIdOrPath=location,
-    startDate=start_time,
-    endDate=end_time,
-    count=5
+    location,
+    start_time,
+    end_time,
+    5
 )
 
 print "Top 5 Downtime Reasons by Count:"
 for reason in top_reasons:
     print "  - {}: {} occurrences, Total Duration: {:.2f} min".format(
-        reason.downtimeReasonName,
-        reason.eventCount,
-        reason.duration / 60.0
+        reason['downtimeReasonName'],
+        reason['count'],
+        reason['duration'] / 60.0
     )
 ```
