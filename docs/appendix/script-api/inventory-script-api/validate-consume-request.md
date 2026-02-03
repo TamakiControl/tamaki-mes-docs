@@ -11,7 +11,7 @@ Validates the specified parameters for a consume request and returns any validat
 ## Syntax
 
 ```python
-system.mes.inventory.validateConsumeRequest(**consume_request)
+system.mes.inventory.validateConsumeRequest(**consumeRequest)
 ```
 
 ## Parameters
@@ -48,20 +48,20 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new consume request object with no initial arguments
-consume_request = system.mes.inventory.newConsumeRequest()
+consumeRequest = system.mes.inventory.newConsumeRequest()
 
 # Set basic attributes for the new consume request
-consume_request['materialIdOrPath'] = 'Bottle/Milk'
-consume_request['sourceLocationIdOrPath'] = 'DairyCo'
-consume_request['quantity'] = 610
-consume_request['createIfNotExists'] = True
+consumeRequest['materialIdOrPath'] = 'Bottle/Milk'
+consumeRequest['sourceLocationIdOrPath'] = 'DairyCo'
+consumeRequest['quantity'] = 610
+consumeRequest['createIfNotExists'] = True
 # (You can continue setting other properties as needed here)
 
 # Validate consume request parameters
-validation_errors = system.mes.inventory.validateConsumeRequest(**consume_request)
+validationErrors = system.mes.inventory.validateConsumeRequest(**consumeRequest)
 
-if len(validation_errors) > 0:
-    print('Validation errors found:', validation_errors)
+if len(validationErrors) > 0:
+    print('Validation errors found:', validationErrors)
 else:
     print('Consume request parameters are valid.')
 ```

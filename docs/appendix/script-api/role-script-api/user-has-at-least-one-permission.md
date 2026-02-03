@@ -1,6 +1,7 @@
 ---
 title: "userHasAtLeastOnePermission"
 description: "Checks if the current user has at least one of the specified permissions."
+sidebar_position: 12
 ---
 
 # system.mes.role.userHasAtLeastOnePermission
@@ -34,4 +35,3 @@ if hasAnyPermission:
 else:
     print("User does not have any of the specified permissions.")
 ```
-

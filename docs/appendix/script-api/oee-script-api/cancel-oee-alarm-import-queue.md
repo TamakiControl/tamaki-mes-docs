@@ -1,14 +1,18 @@
 ---
-sidebar_position: 17
+sidebar_position: 11
 title: "cancelOeeAlarmImportQueue"
-description: "Cancels pending alarm imports."
+description: "Cancels the current OeeAlarm import queue."
 ---
 
 # system.mes.oee.cancelOeeAlarmImportQueue
 
 ## Description
 
-Cancels all pending OEE alarm imports in the import queue. This stops the processing of any queued import items. Items that have already been processed will not be affected.
+Cancels the current [OeeAlarm](../../data-model/oee-model/oee-alarm.md) import queue.
+
+## Permissions
+
+This method requires the `OEE.WRITE.SAVE` permission.
 
 ## Syntax
 
@@ -22,12 +26,11 @@ This method does not take any parameters.
 
 ## Returns
 
-Returns an integer representing the number of cancelled oee alarms.
+Returns an Integer representing the number of cancelled items in the queue.
 
 ## Code Examples
 
 ```python
-# Cancel pending imports
-result = system.mes.oee.cancelOeeAlarmImportQueue()
-print("Import queue cancelled")
+cancelledItemCount = system.mes.oee.cancelOeeAlarmImportQueue()
+print(cancelledItemCount)
 ```

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 title: "Terms and Definitions"
 description: "OEE Terms and Definitions"
 ---
@@ -87,6 +87,12 @@ This document provides definitions and explanations of key terms related to Over
 - **Purpose:**
   - To track production output and measure the efficiency of the manufacturing process.
 
+## Good Count
+- **Definition:** 
+  - The total number of units that were produced and met quality standards.
+- **Purpose:**
+  - To quanity the amount of goods generated in the production process, helping to identify areas for quality improvement.
+
 ## Waste Count
 - **Definition:** 
   - The total number of units that were produced but did not meet quality standards, resulting in waste.
@@ -139,8 +145,7 @@ This document provides definitions and explanations of key terms related to Over
   - **Example workflows:**
     - **Binding the PLC mode tag of a location to track its OEE:**
       1. Navigate to the [OEE Setup](setup) screen.
-      2. Select the location from the location tree on the left side of the screen to modify. (if the location does not have an OEE configuration, you will need to create one first by clicking `Create Config`). ![Create Config button](./images/button-create-config.png)
-      
+      2. Select the location from the location tree on the left side of the screen to modify.
       3. Locate the `Mode Expression` field in the OEE Configuration tab.
       4. Select the tag selector button on the right side of the `Mode Expression` field: ![Tag selector button icon](./images/button-tag-selector.png#icon)
       
@@ -152,3 +157,25 @@ This document provides definitions and explanations of key terms related to Over
       7. The tag will now be bound to the OEE model, allowing it to track the mode of the location in real-time:
          
          ![Completed mode expression binding](./images/completed-mode-binding.png)
+
+## OEE Data Collection Services
+
+- The OEE data collection service operates on a **subscribe → queue → evaluate** pattern to process real-time manufacturing data.
+
+- **Subscription Phase**: The service subscribes to various expression-based data sources (tags, calculations, etc.) for each OEE configuration. These subscriptions monitor critical metrics such as:
+  - Machine state (running, downtime, etc.)
+  - Production mode
+  - Production counts
+  - Quality counts
+  - Standard rates
+  - Downtime reasons
+  - Production orders
+
+- **Queue Phase**: When any subscribed expression value changes, an `ExpressionUpdateEvent` is fired. The event handler marks the corresponding OEE state as "dirty" (requiring evaluation), effectively queuing it for processing. This ensures that only states with new data are evaluated, avoiding unnecessary computation.
+
+- **Evaluation Phase**: A scheduled task runs periodically (default: every 250ms but modifiable in [Tamaki MES Properties](../tamaki-mes-properties-guide/tamaki-mes-properties.md#oee)) to identify all dirty states. These states are then submitted to a thread pool executor for asynchronous evaluation. During evaluation, the service:
+  - Processes state and mode changes
+  - Calculates OEE metrics (availability, performance, quality)
+  - Creates or updates OEE records
+  - Handles record lifecycle transitions (start/stop records based on state changes)
+  - Publishes results to tags for visualization

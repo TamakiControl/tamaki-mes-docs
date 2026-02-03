@@ -1,12 +1,12 @@
 ---
 sidebar_position: 3
 title: "newConsumeRequest"
-description: "Generates an empty non-persisted consume request to provide the structure to save a new record into the database."
+description: "Generates an empty consume request to provide the structure to save a new record into the database."
 ---
 
 # system.mes.inventory.newConsumeRequest
 
-Generates an empty non-persisted Consume Request to provide the structure required by the API to save a new record into the database.
+Generates an empty Consume Request to provide the structure required by the API to save a new record into the database.
 This method must be combined with the [consume](./consume) method in order to persist the record.
 
 ## Syntax
@@ -53,18 +53,18 @@ Returns a JSON representation of the newly created Consume Request object. The f
 
 ```python
 # Generate the object structure for a new consume request object with no initial arguments
-new_request = system.mes.inventory.newConsumeRequest()
+newRequest = system.mes.inventory.newConsumeRequest()
 
 # Set basic attributes for the new consume request
-new_request['materialIdOrPath'] = 'Bottle/Milk'
-new_request['sourceLocationIdOrPath'] = 'DairyCo'
-new_request['quantity'] = 610
-new_request['createIfNotExists'] = True
+newRequest['materialIdOrPath'] = 'Bottle/Milk'
+newRequest['sourceLocationIdOrPath'] = 'DairyCo'
+newRequest['quantity'] = 610
+newRequest['createIfNotExists'] = True
 # (You can continue setting other properties as needed here)
 
 # Consume the request
-consumed_request = system.mes.inventory.consume(**new_request)
+consumedRequest = system.mes.inventory.consume(**newRequest)
 
 # Output the JSON representation of the consumed request
-print(consumed_request)
+print(consumedRequest)
 ```

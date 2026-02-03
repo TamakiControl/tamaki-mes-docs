@@ -33,8 +33,8 @@ Returns a JSON representation of the updated location property value.
 
 ```python
 # Update the value of a location property value
-updated_property_value = system.mes.location.setPropertyValue('DairyCo', 'Cows', 200)
+updatedPropertyValue = system.mes.location.setPropertyValue('DairyCo', 'Cows', 200)
 
 # Output the JSON representation of the updated location property value
-print(updated_property_value)
+print(updatedPropertyValue)
 ```

@@ -11,7 +11,7 @@ Validates the specified parameters for a split request and returns any validatio
 ## Syntax
 
 ```python
-system.mes.inventory.validateSplitRequest(**split_request)
+system.mes.inventory.validateSplitRequest(**splitRequest)
 ```
 
 ## Parameters
@@ -42,20 +42,20 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new split request object with no initial arguments
-split_request = system.mes.inventory.newSplitRequest()
+splitRequest = system.mes.inventory.newSplitRequest()
 
 # Set basic attributes for the new split request
-split_request['sourceLocationIdOrPath'] = 'DairyCo'
-split_request['sourceLotId'] = '01JJCQEJYG-E31FHVTF-JB6WEJTC'
-split_request['destinationLotName'] = '5db685a7-2096-449a-b96c-effb3739e021'
-split_request['quantity'] = 610
+splitRequest['sourceLocationIdOrPath'] = 'DairyCo'
+splitRequest['sourceLotId'] = '01JJCQEJYG-E31FHVTF-JB6WEJTC'
+splitRequest['destinationLotName'] = '5db685a7-2096-449a-b96c-effb3739e021'
+splitRequest['quantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Validate split request parameters
-validation_errors = system.mes.inventory.validateSplitRequest(**split_request)
+validationErrors = system.mes.inventory.validateSplitRequest(**splitRequest)
 
-if len(validation_errors) > 0:
-    print('Validation errors found:', validation_errors)
+if len(validationErrors) > 0:
+    print('Validation errors found:', validationErrors)
 else:
     print('Split request parameters are valid.')
 ```

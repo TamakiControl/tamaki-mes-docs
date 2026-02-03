@@ -1,5 +1,5 @@
 ---
-sidebar_position: 11
+sidebar_position: 12
 title: "OEE Import/Export"
 description: "How to import and export OEE (Overall Equipment Effectiveness)"
 ---

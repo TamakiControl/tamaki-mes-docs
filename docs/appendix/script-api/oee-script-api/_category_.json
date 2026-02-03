@@ -1,9 +1,8 @@
 {
-  "label": "system.mes.oee",
-  "position": 2,
-  "link": {
-    "type": "doc",
-    "id": "appendix/script-api/oee-script-api/intro"
-  }
+	"label": "system.mes.oee",
+	"position": 2,
+	"link": {
+		"type": "doc",
+		"id": "appendix/script-api/oee-script-api/intro"
+	}
 }
-

@@ -30,8 +30,8 @@ Returns the status of the operation.
 
 ```python
 # Retrieve the status for the operation specified
-operations_status = system.mes.operation.getOperationStatus('01JPBCPKSR-972W3V0Y-H00NNSKQ')
+operationsStatus = system.mes.operation.getOperationStatus('01JPBCPKSR-972W3V0Y-H00NNSKQ')
 
 # Output the operation status
-print(operations_status)
+print(operationsStatus)
 ```

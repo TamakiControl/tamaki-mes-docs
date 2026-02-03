@@ -1,6 +1,7 @@
 ---
 title: "getRole"
 description: "Retrieves a role by its ID."
+sidebar_position: 2
 ---
 
 # getRole
