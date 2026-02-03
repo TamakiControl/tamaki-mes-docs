@@ -13,7 +13,7 @@ Creates or updates a [Material Properties](../../data-model/material-model/mater
 ## Syntax
 
 ```python
-system.mes.material.saveProperty(**property_data)
+system.mes.material.saveProperty(**propertyData)
 ```
 
 ## Parameters
@@ -48,30 +48,30 @@ Returns a JSON representation of the saved material property.
 
 ```python
 # Generate the object structure for a new property object, set the name and save it
-new_property = system.mes.material.newProperty()
-new_property['materialClassId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
-new_property['name'] = 'Density'
-saved_property = system.mes.material.saveProperty(**new_property)
+newProperty = system.mes.material.newProperty()
+newProperty['materialClassId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
+newProperty['name'] = 'Density'
+savedProperty = system.mes.material.saveProperty(**newProperty)
 
 # Output the JSON representation of the saved property
-print(saved_property)
+print(savedProperty)
 
 # Generate the object structure for another new property object to update the previous property
-property_data = system.mes.material.newProperty()
+propertyData = system.mes.material.newProperty()
 
 # Define property attributes
-property_data['id'] = saved_property.id
-property_data['materialClassId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
-property_data['name'] = 'Density'
-property_data['dataType'] = 'Float'
-property_data['lowLimit'] = 0.1
-property_data['highLimit'] = 10.0
-property_data['unitOfMeasureId'] = '01JCH3ENDJ-351WQQPX-WRBNTY4C'
+propertyData['id'] = savedProperty.id
+propertyData['materialClassId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
+propertyData['name'] = 'Density'
+propertyData['dataType'] = 'Float'
+propertyData['lowLimit'] = 0.1
+propertyData['highLimit'] = 10.0
+propertyData['unitOfMeasureId'] = '01JCH3ENDJ-351WQQPX-WRBNTY4C'
 # (You can continue setting other properties as needed here)
 
 # Save the material property to update it in the system
-updated_property = system.mes.material.saveProperty(**property_data)
+updatedProperty = system.mes.material.saveProperty(**propertyData)
 
 # Output the JSON representation of the updated material property
-print(updated_property)
+print(updatedProperty)
 ```

@@ -13,7 +13,7 @@ Creates or updates a [Production Order Properties](../../data-model/production-o
 ## Syntax
 
 ```python
-system.mes.productionOrder.saveProductionOrderProperty(**property_data)
+system.mes.productionOrder.saveProductionOrderProperty(**propertyData)
 ```
 
 ## Parameters
@@ -47,25 +47,25 @@ Returns a JSON representation of the saved production order property.
 
 ```python
 # Generate the object structure for a new production order property object, set the name and save it
-new_property = system.mes.productionOrder.newProductionOrderProperty()
-new_property['name'] = 'Batch Size'
-saved_property = system.mes.productionOrder.saveProductionOrderProperty(**new_property)
+newProperty = system.mes.productionOrder.newProductionOrderProperty()
+newProperty['name'] = 'Batch Size'
+savedProperty = system.mes.productionOrder.saveProductionOrderProperty(**newProperty)
 
 # Output the JSON representation of the saved production order property
-print(saved_property)
+print(savedProperty)
 
 # Generate the object structure for another new property object to update the previous property
-production_order_property = system.mes.productionOrder.newProductionOrderProperty()
+productionOrderProperty = system.mes.productionOrder.newProductionOrderProperty()
 
 # Define property attributes
-production_order_property['id'] = saved_property.id
-production_order_property['name'] = 'Batch Size'
-production_order_property['description'] = 'Batch size property'
+productionOrderProperty['id'] = savedProperty.id
+productionOrderProperty['name'] = 'Batch Size'
+productionOrderProperty['description'] = 'Batch size property'
 # (You can continue setting other properties as needed here)
 
 # Save the production order property to update it in the system
-updated_property = system.mes.productionOrder.saveProductionOrderProperty(**production_order_property)
+updatedProperty = system.mes.productionOrder.saveProductionOrderProperty(**productionOrderProperty)
 
 # Output the JSON representation of the updated production order property
-print(updated_property)
+print(updatedProperty)
 ```

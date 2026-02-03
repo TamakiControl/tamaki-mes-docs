@@ -1,12 +1,12 @@
 ---
 sidebar_position: 6
 title: "newUnconsumeRequest"
-description: "Generates an empty non-persisted unconsume request to provide the structure to save a new record into the database."
+description: "Generates an empty unconsume request to provide the structure to save a new record into the database."
 ---
 
 # system.mes.inventory.newConsumeRequest
 
-Generates an empty non-persisted Unconsume Request to provide the structure required by the API to save a new record into the database.
+Generates an empty Unconsume Request to provide the structure required by the API to save a new record into the database.
 This method must be combined with the [unconsume](./unconsume) method in order to persist the record.
 
 ## Syntax
@@ -50,17 +50,17 @@ Returns a JSON representation of the newly created Unconsume Request object. The
 
 ```python
 # Generate the object structure for a new unconsume request object with no initial arguments
-new_request = system.mes.inventory.newUnconsumeRequest()
+newRequest = system.mes.inventory.newUnconsumeRequest()
 
 # Set basic attributes for the new unconsume request
-new_request['materialIdOrPath'] = 'Bottle/Milk'
-new_request['destinationLocationIdOrPath'] = 'DairyCo'
-new_request['quantity'] = 610
+newRequest['materialIdOrPath'] = 'Bottle/Milk'
+newRequest['destinationLocationIdOrPath'] = 'DairyCo'
+newRequest['quantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Unconsume the request
-unconsumed_request = system.mes.inventory.unconsume(**new_request)
+unconsumedRequest = system.mes.inventory.unconsume(**newRequest)
 
 # Output the JSON representation of the unconsumed request
-print(unconsumed_request)
+print(unconsumedRequest)
 ```

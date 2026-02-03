@@ -1,6 +1,7 @@
 ---
 title: "deleteRoles"
 description: "Deletes multiple roles by their IDs."
+sidebar_position: 8
 ---
 
 # deleteRoles

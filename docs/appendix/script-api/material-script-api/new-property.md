@@ -53,16 +53,16 @@ Returns a JSON representation of the newly created material property object. The
 
 ```python
 # Generate the object structure for a new property object with no initial arguments
-new_property = system.mes.material.newProperty()
+newProperty = system.mes.material.newProperty()
 
 # Define property details
-new_property['materialClassId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
-new_property['name'] = 'Density'
+newProperty['materialClassId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
+newProperty['name'] = 'Density'
 # (You can continue setting other properties as needed here)
 
 # Save the property
-saved_property = system.mes.material.saveProperty(**new_property)
+savedProperty = system.mes.material.saveProperty(**newProperty)
 
 # Output the JSON representation of the saved property
-print(saved_property)
+print(savedProperty)
 ```

@@ -30,8 +30,8 @@ Returns a list of JSON objects representing all inventories at the given locatio
 
 ```python
 # Retrieve all inventories at a given location
-all_inventories = system.mes.inventory.getAllInventoryAtLocation('DairyCo')
+allInventories = system.mes.inventory.getAllInventoryAtLocation('DairyCo')
 
 # Output the list of inventories
-print(all_inventories)
+print(allInventories)
 ```

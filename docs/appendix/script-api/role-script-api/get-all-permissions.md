@@ -1,6 +1,7 @@
 ---
 title: "getAllPermissions"
 description: "Retrieves all possible MES permissions."
+sidebar_position: 9
 ---
 
 # getAllPermissions

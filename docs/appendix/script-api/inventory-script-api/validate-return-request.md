@@ -11,7 +11,7 @@ Validates the specified parameters for a return request and returns any validati
 ## Syntax
 
 ```python
-system.mes.inventory.validateReturnRequest(**return_request)
+system.mes.inventory.validateReturnRequest(**returnRequest)
 ```
 
 ## Parameters
@@ -45,19 +45,19 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new return request object with no initial arguments
-return_request = system.mes.inventory.newReturnRequest()
+returnRequest = system.mes.inventory.newReturnRequest()
 
 # Set basic attributes for the new return request
-return_request['materialIdOrPath'] = 'Bottle/Milk'
-return_request['sourceLocationIdOrPath'] = 'DairyCo'
-return_request['quantity'] = 610
+returnRequest['materialIdOrPath'] = 'Bottle/Milk'
+returnRequest['sourceLocationIdOrPath'] = 'DairyCo'
+returnRequest['quantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Validate return request parameters
-validation_errors = system.mes.inventory.validateReturnRequest(**return_request)
+validationErrors = system.mes.inventory.validateReturnRequest(**returnRequest)
 
-if len(validation_errors) > 0:
-    print('Validation errors found:', validation_errors)
+if len(validationErrors) > 0:
+    print('Validation errors found:', validationErrors)
 else:
     print('Return request parameters are valid.')
 ```

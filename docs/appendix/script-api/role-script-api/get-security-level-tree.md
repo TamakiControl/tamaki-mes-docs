@@ -1,6 +1,7 @@
 ---
 title: "getSecurityLevelTree"
 description: "Retrieves a tree of all Ignition security levels."
+sidebar_position: 10
 ---
 
 # getSecurityLevelTree

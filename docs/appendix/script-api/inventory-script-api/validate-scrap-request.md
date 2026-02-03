@@ -11,7 +11,7 @@ Validates the specified parameters for a scrap request and returns any validatio
 ## Syntax
 
 ```python
-system.mes.inventory.validateScrapRequest(**scrap_request)
+system.mes.inventory.validateScrapRequest(**scrapRequest)
 ```
 
 ## Parameters
@@ -45,19 +45,19 @@ Returns a JSON object where keys are field names and values are lists of validat
 
 ```python
 # Generate the object structure for a new scrap request object with no initial arguments
-scrap_request = system.mes.inventory.newScrapRequest()
+scrapRequest = system.mes.inventory.newScrapRequest()
 
 # Set basic attributes for the new scrap request
-scrap_request['materialIdOrPath'] = 'Bottle/Milk'
-scrap_request['sourceLocationIdOrPath'] = 'DairyCo'
-scrap_request['quantity'] = 610
+scrapRequest['materialIdOrPath'] = 'Bottle/Milk'
+scrapRequest['sourceLocationIdOrPath'] = 'DairyCo'
+scrapRequest['quantity'] = 610
 # (You can continue setting other properties as needed here)
 
 # Validate scrap request parameters
-validation_errors = system.mes.inventory.validateScrapRequest(**scrap_request)
+validationErrors = system.mes.inventory.validateScrapRequest(**scrapRequest)
 
-if len(validation_errors) > 0:
-    print('Validation errors found:', validation_errors)
+if len(validationErrors) > 0:
+    print('Validation errors found:', validationErrors)
 else:
     print('Scrap request parameters are valid.')
 ```
