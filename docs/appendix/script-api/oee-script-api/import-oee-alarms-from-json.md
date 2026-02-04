@@ -18,14 +18,18 @@ functionality to ensure the correct format of the JSON file.
 ## Syntax
 
 ```python
-system.mes.oee.importOeeAlarmsFromJson(importBytes)
+system.mes.oee.importOeeAlarmsFromJson(bytes)
 ```
+
+## Permissions
+
+This method requires the `OEE.WRITE.SAVE` permission.
 
 ## Parameters
 
-| Parameter     | Type      | Nullable | Description                     |
-| ------------- | --------- | -------- | ------------------------------- |
-| `importBytes` | `PyArray` | False    | The JSON content as raw bytes.  |
+| Parameter | Type     | Nullable | Description                     |
+|-----------|----------| -------- | ------------------------------- |
+| `bytes`   | `byte[]` | False    | The JSON content as raw bytes.  |
 
 ## Returns
 
@@ -39,9 +43,23 @@ An `ApiResponse` object where `data` is an `ImportResponseDTO` object containing
 ## Code Examples
 
 ```python
-def runAction(self, event):
-    jsonBytes = event.file.getBytes()
-    response = system.mes.oee.importOeeAlarmsFromJson(jsonBytes)
-    print(f"Rows processed: {response.data.numRowsProcessed}")
-    print(f"Rows queued: {response.data.numRowsQueued}")
+import system.file
+
+# Path to the JSON file
+file_path = "C:/path/to/oee_alarms.json"
+
+try:
+    # Read the file content as bytes
+    json_bytes = system.file.readFileAsBytes(file_path)
+
+    # Import the alarms
+    result = system.mes.oee.importOeeAlarmsFromJson(json_bytes)
+
+    if result.get('success'):
+        print "Successfully imported {} OEE alarms.".format(result.get('data'))
+    else:
+        print "Import failed: {}".format(result.get('message'))
+
+except Exception as e:
+    print "An error occurred: {}".format(str(e))
 ```

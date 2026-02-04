@@ -15,17 +15,21 @@ Large imports are automatically detected and processed asynchronously in batches
 Recommended to export at least one pre-existing OEE Alarm to CSV using the [Export Oee Alarms to CSV](export-oee-alarms-to-csv.md)
 functionality to ensure the correct format of the CSV file.
 
+## Permissions
+
+This method requires the `OEE.WRITE.SAVE` permission.
+
 ## Syntax
 
 ```python
-system.mes.oee.importOeeAlarmsFromCsv(importBytes)
+system.mes.oee.importOeeAlarmsFromCsv(bytes)
 ```
 
 ## Parameters
 
-| Parameter     | Type      | Nullable | Description                   |
-| ------------- | --------- | -------- | ----------------------------- |
-| `importBytes` | `PyArray` | False    | The CSV content as raw bytes. |
+| Parameter | Type      | Nullable | Description                   |
+|-----------|-----------| -------- | ----------------------------- |
+| `bytes`   | `byte[] ` | False    | The CSV content as raw bytes. |
 
 ## Returns
 
@@ -39,10 +43,24 @@ An `ApiResponse` object where `data` is an `ImportResponseDTO` object containing
 ## Code Examples
 
 ```python
-def runAction(self, event):
-    csvBytes = event.file.getBytes()
-    response = system.mes.oee.importOeeAlarmsFromCsv(csvBytes)
-    print(f"Rows processed: {response.data.numRowsProcessed}")
-    print(f"Rows queued: {response.data.numRowsQueued}")
+import system.file
+
+# Path to the CSV file
+file_path = "C:/path/to/oee_alarms.csv"
+
+try:
+    # Read the file content as bytes
+    csv_bytes = system.file.readFileAsBytes(file_path)
+
+    # Import the alarms
+    result = system.mes.oee.importOeeAlarmsFromCsv(csv_bytes)
+
+    if result.get('success'):
+        print "Successfully imported {} OEE alarms.".format(result.get('data'))
+    else:
+        print "Import failed: {}".format(result.get('message'))
+
+except Exception as e:
+    print "An error occurred: {}".format(str(e))
 ```
 

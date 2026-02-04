@@ -10,6 +10,10 @@ description: "Deletes an OEE alarm configuration."
 
 Deletes an [OEE Alarm](../../data-model/oee-model/oee-alarm) configuration by its ID. This cannot delete an alarm with references to it.
 
+## Permissions
+
+This method requires the `OEE.WRITE.DELETE` permission.
+
 ## Syntax
 
 ```python

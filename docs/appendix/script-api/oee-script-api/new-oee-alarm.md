@@ -10,6 +10,10 @@ description: "Creates a new OEE alarm configuration."
 
 Creates an empty non-persisted [OEE Alarm](../../data-model/oee-model/oee-alarm) object to provide the structure required by the API to save a new alarm configuration.
 
+## Permissions
+
+This method does not require any permissions.
+
 ## Syntax
 
 ```python
@@ -22,21 +26,23 @@ This method does not take any parameters.
 
 ## Returns
 
-Returns a JSON object representing a newly created OEE alarm with default values. The returned object contains the following fields:
+Returns a JSON object representing the newly created `OeeAlarmDTO` object with default values.
 
-| Field          | Type      | Default Value  | Description                                                                                                   |
-| -------------- | --------- | -------------- | ------------------------------------------------------------------------------------------------------------- |
-| `id`           | `String`  | `None`         | Unique identifier (will be generated upon save).                                                              |
-| `locationId`   | `String`  | `None`         | Identifier for the associated location (required before saving).                                              |
-| `locationPath` | `String`  | `None`         | Path for the associated location (display only, optional).                                                    |
-| `tagPath`      | `String`  | `None`         | The qualified path to monitor for alarms (required before saving).                                            |
-| `minPriority`  | `String`  | `'Diagnostic'` | Minimum alarm priority to include in events. Valid values: `Diagnostic`, `Low`, `Medium`, `High`, `Critical`. |
-| `enabled`      | `Boolean` | `True`         | Whether the alarm configuration is enabled.                                                                   |
-| `notes`        | `String`  | `None`         | Notes about the alarm configuration.                                                                          |
-| `spare1`       | `String`  | `None`         | Additional field for user-defined context.                                                                    |
-| `spare2`       | `String`  | `None`         | Additional field for user-defined context.                                                                    |
-| `spare3`       | `String`  | `None`         | Additional field for user-defined context.                                                                    |
-| `labelFilter`  | `String`  | `None`         | Label filter for the alarm configuration.                                                                     |
+| Name                         | Type            | Nullable | Description                                                                                                   | Default Value |
+|------------------------------|-----------------|----------|---------------------------------------------------------------------------------------------------------------|---------------|
+| `id`                         | `String`        | `True`   | The id of the OEE Alarm                                                                                       | `null`        |
+| `locationId`                 | `String`        | `False`  | Identifier of the associated location                                                                         | `null`        |
+| `locationPath`               | `String`        | `True`   | Path for the associated location                                                                              | `null`        |
+| `tagPath`                    | `String`        | `False`  | The qualified path to monitor for alarms                                                                      | `null`        |
+| `minPriority`                | `AlarmPriority` | `False`  | Minimum alarm priority to include in events                                                                   | `Diagnostic`  |
+| `labelFilter`                | `String`        | `True`   | Optional filter to apply to alarm labels. Only alarms with labels matching this filter will be included.      | `null`        |
+| `downtimeReasonCodeOverride` | `String`        | `True`   | Name of the associated data property in Ignition alarms that contains the downtime reason code override value | `null`        |
+| `stateCodeOverride`          | `String`        | `True`   | Name of the associated data property in Ignition alarms that contains the state code override value           | `null`        |
+| `notes`                      | `String`        | `True`   | Notes associated with the OEE Alarm                                                                           | `null`        |
+| `enabled`                    | `boolean`       | `True`   | Indicates whether the OEE Alarm is enabled                                                                    | `true`        |
+| `spare1`                     | `String`        | `True`   | Extra field 1                                                                                                 | `null`        |
+| `spare2`                     | `String`        | `True`   | Extra field 2                                                                                                 | `null`        |
+| `spare3`                     | `String`        | `True`   | Extra field 3                                                                                                 | `null`        |
 
 ## Code Examples
 
