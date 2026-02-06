@@ -1,5 +1,5 @@
 ---
-sidebar_position: 12
+sidebar_position: 50
 title: "splitOeeModeRecord"
 description: "Split the OEE Mode Record at the given time."
 ---
@@ -8,7 +8,11 @@ description: "Split the OEE Mode Record at the given time."
 
 ## Description
 
-Splits the [OEE Mode Record](../../data-model/oee-model/oee-mode-record.md) at the given time.
+Splits an existing Oee Mode record at a specified time. This action modifies the original record, shortening its duration, and creates a new record for the remaining time.
+
+## Permissions
+
+This method requires the `OEE.WRITE.SAVE` permission.
 
 ## Syntax
 
@@ -25,23 +29,29 @@ system.mes.oee.splitOeeModeRecord(oeeModeRecordId, splitDate)
 
 ## Returns
 
-Returns a JSON representation of the new OEE Mode Record created after the split.
+Returns a JSON representation of the new `OeeModeRecordDTO` object created after the split.
 
-| Name                  | Type                          | Nullable | Description                                                                                    |
-|-----------------------|-------------------------------|----------|------------------------------------------------------------------------------------------------|
-| `locationId`          | String (ULID)                 | False    | Identifier of the associated location where this mode was recorded.                            |
-| `locationName`        | String                        | True     | Name of the associated location.                                                               |
-| `locationPath`        | String                        | True     | Path of the associated location where this mode was recorded.                                  |
-| `code`                | Integer                       | False    | Integer mode number.                                                                           |
-| `status`              | Status (enum)                 | False    | Status of the OEE record (running, faulted, cancelled, complete etc.).                         |
-| `startDate`           | Instant                       | False    | Start date and time of the mode record.                                                        |
-| `endDate`             | Instant                       | True     | End date and time of the mode record. Can be null if the mode is still ongoing.                |
-| `duration`            | Double                        | False    | Total duration of the mode record in seconds.                                                  |
-| `overrunDurationSec`  | Double                        | False    | Duration in seconds that the machine has overrun its scheduled downtime.                       |
-| `name`                | String                        | False    | Name of the mode.                                                                              |
-| `calculationType`     | OeeModeCalculationType (enum) | False   | Specifies how this mode should be factored into OEE calculations.                              |
-| `color`               | String                        | False    | Hex color code representing the mode visually.                                                 |
-| `expectedDuration`    | Double                        | True     | Expected duration of the mode in seconds.                                                      |
+| Name                         | Type                            | Nullable | Description                                                              | Default Value          |
+| ---------------------------- | ------------------------------- | -------- | ------------------------------------------------------------------------ | ---------------------- |
+| `id`                         | `String`                        | `True`   | The id of the OEE Mode Record                                            | `null`                 |
+| `locationId`                 | `String`                        | `False`  | Identifier of the associated location where this mode was recorded       | `null`                 |
+| `locationName`               | `String`                        | `True`   | Name of the associated location                                          | `null`                 |
+| `locationPath`               | `String`                        | `True`   | Path of the associated location where this mode was recorded             | `null`                 |
+| `code`                       | `Integer`                       | `False`  | Integer mode number                                                      | `null`                 |
+| `status`                     | `Status`                        | `False`  | Status of the OEE record (running, faulted, cancelled, complete etc.)    | `UNKNOWN`              |
+| `startDate`                  | `Instant`                       | `False`  | Start date and time of the mode record                                   | `Instant.now()`        |
+| `endDate`                    | `Instant`                       | `True`   | End date and time of the mode record                                     | `null`                 |
+| `duration`                   | `Double`                        | `False`  | Total duration of the mode record in seconds                             | `0.0`                  |
+| `overrunDurationSec`         | `Double`                        | `False`  | Duration in seconds that the machine has overrun its scheduled downtime  | `0.0`                  |
+| `name`                       | `String`                        | `False`  | Name of the mode                                                         | `null`                 |
+| `calculationType`            | `OeeModeCalculationType`        | `False`  | Specifies how this mode should be factored into OEE calculations         | `SCHEDULED_PRODUCTION` |
+| `color`                      | `String`                        | `False`  | Hex color code representing the mode visually                            | `"#000000"`            |
+| `expectedDuration`           | `Double`                        | `True`   | Expected duration of the mode in seconds                                 | `0.0`                  |
+| `notes`                      | `String`                        | `True`   | Notes associated with the OEE Mode Record                                | `null`                 |
+| `enabled`                    | `boolean`                       | `True`   | Indicates whether the OEE Mode Record is enabled                         | `true`                 |
+| `spare1`                     | `String`                        | `True`   | Extra field 1                                                            | `null`                 |
+| `spare2`                     | `String`                        | `True`   | Extra field 2                                                            | `null`                 |
+| `spare3`                     | `String`                        | `True`   | Extra field 3                                                            | `null`                 |
 
 ## Code Examples
 
