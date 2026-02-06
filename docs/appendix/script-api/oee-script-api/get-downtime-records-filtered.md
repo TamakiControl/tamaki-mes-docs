@@ -1,10 +1,12 @@
 ---
 title: getDowntimeRecordsFiltered
 description: Retrieve filtered downtime records with comprehensive analysis and reporting capabilities.
-sidebar_position: 49
+sidebar_position: 42
 ---
 
 # system.mes.oee.getDowntimeRecordsFiltered
+
+## Description
 
 Retrieves filtered downtime records for a location within a specified time range.
 

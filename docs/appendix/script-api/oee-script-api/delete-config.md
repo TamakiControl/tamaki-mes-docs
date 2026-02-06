@@ -6,6 +6,8 @@ description: 'Deletes an OEE configuration record by its ID.'
 
 # system.mes.oee.deleteConfig
 
+## Description
+
 Deletes an OEE Configuration record by its ID. This operation cannot delete a configuration that has references to it from other system components.
 
 ## Permissions

@@ -6,6 +6,8 @@ description: 'Retrieves an OEE configuration record by its location ID or path.'
 
 # system.mes.oee.getConfigForLocation
 
+## Description
+
 Retrieves an OEE Configuration record by its location ID or path.
 
 ## Permissions

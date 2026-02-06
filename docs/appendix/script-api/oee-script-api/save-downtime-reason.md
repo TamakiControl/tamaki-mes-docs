@@ -1,10 +1,12 @@
 ---
-sidebar_position: 36
+sidebar_position: 24
 title: 'saveDowntimeReason'
 description: 'Creates or updates an OEE downtime reason.'
 ---
 
 # system.mes.oee.saveDowntimeReason
+
+## Description
 
 Creates or updates an OEE Downtime Reason record in the system. To create a new downtime reason, first generate a new object with [`system.mes.oee.newDowntimeReason`](./new-downtime-reason).
 

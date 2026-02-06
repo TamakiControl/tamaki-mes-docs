@@ -1,10 +1,12 @@
 ---
 title: getStateRecordTimeline
 description: Retrieve a chronological timeline of OEE state records.
-sidebar_position: 50
+sidebar_position: 43
 ---
 
 # system.mes.oee.getStateRecordTimeline
+
+## Description
 
 Retrieves a chronological timeline of OEE state records for a specified location and time range.
 

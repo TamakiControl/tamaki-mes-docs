@@ -6,6 +6,8 @@ description: 'Validates an OEE configuration object.'
 
 # system.mes.oee.validateConfig
 
+## Description
+
 Validates an OEE Configuration object against the system's business rules without saving it. This is useful for checking if a configuration is valid before attempting to save it.
 
 ## Permissions

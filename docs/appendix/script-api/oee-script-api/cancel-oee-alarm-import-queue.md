@@ -1,5 +1,5 @@
 ---
-sidebar_position: 11
+sidebar_position: 103
 title: "cancelOeeAlarmImportQueue"
 description: "Cancels the current OeeAlarm import queue."
 ---
@@ -26,7 +26,7 @@ This method does not take any parameters.
 
 ## Returns
 
-Returns an Integer representing the number of cancelled items in the queue.
+Returns an Integer representing the number of canceled items in the queue.
 
 ## Code Examples
 

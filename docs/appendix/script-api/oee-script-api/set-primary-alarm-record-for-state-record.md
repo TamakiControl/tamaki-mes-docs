@@ -1,5 +1,5 @@
 ---
-sidebar_position: 11
+sidebar_position: 45
 title: "setPrimaryAlarmRecordForStateRecord"
 description: "Manually sets the primary alarm for a state record."
 ---

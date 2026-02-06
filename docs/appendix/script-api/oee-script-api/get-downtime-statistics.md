@@ -1,5 +1,5 @@
 ---
-sidebar_position: 52
+sidebar_position: 65
 title: 'getDowntimeStatistics'
 description: 'Calculates downtime statistics for a specific location within a date range.'
 ---

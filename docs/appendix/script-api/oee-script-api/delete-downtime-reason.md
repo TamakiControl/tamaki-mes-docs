@@ -1,10 +1,12 @@
 ---
-sidebar_position: 38
+sidebar_position: 26
 title: 'deleteDowntimeReason'
 description: 'Deletes an OEE downtime reason by its ID.'
 ---
 
 # system.mes.oee.deleteDowntimeReason
+
+## Description
 
 Deletes an OEE Downtime Reason by its unique identifier. This operation will permanently remove the downtime reason from the system.
 

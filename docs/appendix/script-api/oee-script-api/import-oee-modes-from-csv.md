@@ -1,10 +1,12 @@
 ---
 title: importOeeModesFromCsv
 description: Imports OEE mode configurations from CSV formatted data.
-sidebar_position: 17
+sidebar_position: 76
 ---
 
 # system.mes.oee.importOeeModesFromCsv
+
+## Description
 
 Imports OEE mode configurations from CSV formatted data.
 

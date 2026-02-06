@@ -1,36 +1,34 @@
 ---
-sidebar_position: 34
-title: 'getAllOeeRecords'
-description: 'Retrieves all OEE production records for a location within a specified time range.'
+sidebar_position: 61
+title: "setOeeRecordNotesAndSpares"
+description: "Sets comment fields (notes, spare1, spare2, spare3) for an OEE Record."
 ---
 
-# system.mes.oee.getAllOeeRecords
+# system.mes.oee.getOeeRecord
 
-Retrieves all OEE production records for a specific location within a given time range.
+## Description
+
+Sets comment fields (notes, spare1, spare2, spare3) for an [OEE Record](../../data-model/oee-model/oee-record).
+
+Accepts a full `OeeRecordDTO` but only updates the notes and spare fields.
+
+The record is fetched fresh from the database by ID.
+
+Recommended to call with setOeeRecordNotesAndSpares(**oeeRecord) where oeeRecord is an `OeeRecordDTO` object.
 
 ## Permissions
 
-This method requires the `OEE.READ.GET` permission.
+This method requires the `OEE.WRITE.SAVE` permission.
 
 ## Syntax
 
 ```python
-system.mes.oee.getAllOeeRecords(locationIdOrPath, startDate, endDate)
+system.mes.oee.setOeeRecordNotesAndSpares(**oeeRecord)
 ```
 
 ## Parameters
 
-| Parameter          | Type     | Nullable | Description                                                        |
-| ------------------ | -------- | -------- | ------------------------------------------------------------------ |
-| `locationIdOrPath` | `String` | False    | The location ID (ULID) or path to retrieve OEE records for.        |
-| `startDate`        | `Date`   | False    | The start date/time for the query range.                           |
-| `endDate`          | `Date`   | True     | The end date/time for the query range. If null, uses current time. |
-
-## Returns
-
-A list JSON representations of `OeeRecordDTO` objects, each representing a historical or active OEE run.
-
-Each object has the following properties:
+An unpacked dictionary of `OeeRecordDTO` fields.
 
 | Name                                 | Type                 | Nullable | Description                                                              | Default Value   |
 |--------------------------------------|----------------------|----------|--------------------------------------------------------------------------|-----------------|
@@ -60,19 +58,19 @@ Each object has the following properties:
 | `spare2`                             | `String`             | `True`   | Extra field 2                                                            | `null`          |
 | `spare3`                             | `String`             | `True`   | Extra field 3                                                            | `null`          |
 
+## Returns
+
+Returns a JSON representation of the updated `OeeRecordDTO` object.
+
 ## Code Examples
 
 ```python
-from java.util import Date
-from java.util.concurrent import TimeUnit
+# Retrieve an OEE record by ID
+oee_record = system.mes.oee.getOeeRecord('01JAP8RJBN-8ZTPXSGY-J9GSDPE1')
 
-# Get OEE records for the last 24 hours
-location_path = "Enterprise/Site/Production/Line1"
-end_time = Date()
-start_time = Date(end_time.getTime() - TimeUnit.HOURS.toMillis(24))
+# Change record notes
+oee_record['notes'] = 'Changed notes'
 
-oee_records = system.mes.oee.getAllOeeRecords(location_path, start_time, end_time)
-
-for record in oee_records:
-    print record['productionCount'], record['qualityCount']
+# Update OEE record notes
+system.mes.oee.setOeeRecordNotesAndSpares(**oee_record)
 ```

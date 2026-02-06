@@ -1,10 +1,12 @@
 ---
 title: getModeRecordsGroupedByMode
 description: Retrieve and group OEE mode records by mode type.
-sidebar_position: 61
+sidebar_position: 56
 ---
 
 # system.mes.oee.getModeRecordsGroupedByMode
+
+## Description
 
 Retrieves OEE mode records for a location and time period, grouped by mode type.
 

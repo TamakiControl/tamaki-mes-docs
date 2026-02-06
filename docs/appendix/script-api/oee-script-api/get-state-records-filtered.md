@@ -1,10 +1,12 @@
 ---
 title: getStateRecordsFiltered
 description: Retrieves a filtered list of OEE state records for a specified location and time range.
-sidebar_position: 48
+sidebar_position: 38
 ---
 
 # system.mes.oee.getStateRecordsFiltered
+
+## Description
 
 Retrieves a filtered list of OEE state records for a specified location and time range, allowing for filtering by event type and minimum duration.
 

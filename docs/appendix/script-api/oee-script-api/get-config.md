@@ -6,6 +6,8 @@ description: 'Retrieves an OEE configuration record by its ID.'
 
 # system.mes.oee.getConfig
 
+## Description
+
 Retrieves an OEE Configuration record by its ID.
 
 ## Permissions

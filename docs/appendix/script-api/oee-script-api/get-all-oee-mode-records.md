@@ -1,7 +1,7 @@
 ---
 title: getAllOeeModeRecords
 description: Retrieve all OEE mode records with comprehensive filtering and analysis options.
-sidebar_position: 46
+sidebar_position: 36
 ---
 
 # system.mes.oee.getAllOeeModeRecords

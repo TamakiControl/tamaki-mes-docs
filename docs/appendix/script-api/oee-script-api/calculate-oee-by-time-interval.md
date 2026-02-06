@@ -1,5 +1,5 @@
 ---
-sidebar_position: 66
+sidebar_position: 64
 title: 'calculateOeeByTimeInterval'
 description: 'Calculates OEE metrics broken down by time intervals for a specific location.'
 ---

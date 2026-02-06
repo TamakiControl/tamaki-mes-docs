@@ -1,10 +1,12 @@
 ---
 title: getStateRecordsGroupedByState
 description: Retrieves OEE state records aggregated by state for a specified location and time range.
-sidebar_position: 54
+sidebar_position: 53
 ---
 
 # system.mes.oee.getStateRecordsGroupedByState
+
+## Description
 
 Retrieves OEE state records aggregated by state for a specified location and time range. This is useful for creating summary charts or reports of how time was spent.
 

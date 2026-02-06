@@ -1,7 +1,7 @@
 ---
 title: exportOeeModesToJson
 description: Export OEE mode configurations to JSON format.
-sidebar_position: 19
+sidebar_position: 86
 ---
 
 # system.mes.oee.exportOeeModesToJson

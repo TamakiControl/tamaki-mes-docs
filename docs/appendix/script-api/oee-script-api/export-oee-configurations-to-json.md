@@ -1,5 +1,5 @@
 ---
-sidebar_position: 9
+sidebar_position: 84
 title: 'exportOeeConfigurationsToJson'
 description: 'Exports OEE configurations to JSON format.'
 ---

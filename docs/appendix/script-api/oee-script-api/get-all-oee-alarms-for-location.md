@@ -1,5 +1,5 @@
 ---
-sidebar_position: 9
+sidebar_position: 29
 title: "getAllOeeAlarmsForLocation"
 description: "Gets all alarms configured for a location."
 ---

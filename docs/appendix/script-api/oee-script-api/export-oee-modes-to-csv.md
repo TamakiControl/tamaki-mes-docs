@@ -1,7 +1,7 @@
 ---
 title: exportOeeModesToCsv
 description: Export OEE mode configurations to CSV format.
-sidebar_position: 20
+sidebar_position: 87
 ---
 
 # system.mes.oee.exportOeeModesToCsv

@@ -1,10 +1,12 @@
 ---
-sidebar_position: 69
+sidebar_position: 73
 title: 'getOeePermissions'
 description: 'Retrieves a list of all available OEE permissions in the system.'
 ---
 
 # system.mes.oee.getOeePermissions
+
+## Description
 
 Retrieves a list of all available OEE role permissions in the system.
 

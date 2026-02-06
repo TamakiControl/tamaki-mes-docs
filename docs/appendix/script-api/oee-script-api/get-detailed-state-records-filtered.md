@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 41
 title: "getDetailedStateRecordsFiltered"
 description: "Retrieves state records with detailed information."
 ---

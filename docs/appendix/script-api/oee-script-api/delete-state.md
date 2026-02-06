@@ -1,10 +1,12 @@
 ---
-sidebar_position: 26
+sidebar_position: 18
 title: 'deleteState'
 description: 'Deletes an OEE state by its ID.'
 ---
 
 # system.mes.oee.deleteState
+
+## Description
 
 Deletes an OEE State by its ID. This operation cannot delete a state that has active references or is currently being used in data collection.
 

@@ -6,6 +6,8 @@ description: 'Creates or updates an OEE configuration.'
 
 # system.mes.oee.saveConfig
 
+## Description
+
 Creates or updates an OEE Configuration record in the system. To create a new configuration, first generate a new object with [`system.mes.oee.newConfig`](./new-config).
 
 ## Permissions

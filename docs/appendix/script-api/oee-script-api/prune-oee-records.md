@@ -1,10 +1,12 @@
 ---
 title: pruneOeeRecords
 description: Prunes OEE records older than a specified date.
-sidebar_position: 64
+sidebar_position: 58
 ---
 
 # system.mes.oee.pruneOeeRecords
+
+## Description
 
 Prunes OEE records from the database that are older than a specified date. This is a destructive operation and cannot be undone.
 

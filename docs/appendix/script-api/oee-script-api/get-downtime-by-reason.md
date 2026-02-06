@@ -1,10 +1,12 @@
 ---
 title: getDowntimeByReason
 description: Analyze downtime events grouped by reason with comprehensive statistical analysis and trend reporting.
-sidebar_position: 53
+sidebar_position: 66
 ---
 
 # system.mes.oee.getDowntimeByReason
+
+## Description
 
 Retrieves downtime events grouped by reason for a specified location and time range, with options to filter by specific downtime reasons.
 

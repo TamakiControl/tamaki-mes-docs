@@ -1,10 +1,12 @@
 ---
 title: getOeeModeRecord
 description: Retrieve individual OEE mode record.
-sidebar_position: 58
+sidebar_position: 55
 ---
 
 # system.mes.oee.getOeeModeRecord
+
+## Description
 
 Retrieves a specific OEE mode record by its unique identifier.
 

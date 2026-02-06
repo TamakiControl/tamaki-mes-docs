@@ -1,10 +1,12 @@
 ---
-sidebar_position: 8
+sidebar_position: 75
 title: 'importOeeConfigurationsFromJson'
 description: 'Imports OEE configurations from JSON format data.'
 ---
 
 # system.mes.oee.importOeeConfigurationsFromJson
+
+## Description
 
 Imports OEE Configuration records from JSON format data into the system.
 

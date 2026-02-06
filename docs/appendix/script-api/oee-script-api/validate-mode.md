@@ -1,10 +1,12 @@
 ---
-sidebar_position: 15
+sidebar_position: 11
 title: 'validateMode'
 description: 'Validates an OEE mode object.'
 ---
 
 # system.mes.oee.validateMode
+
+## Description
 
 Validates an OEE Mode object against the system's business rules without saving it. This is useful for checking if a mode is valid before attempting to save it.
 

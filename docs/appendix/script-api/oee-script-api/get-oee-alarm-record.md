@@ -1,5 +1,5 @@
 ---
-sidebar_position: 24
+sidebar_position: 60
 title: "getOeeAlarmRecord"
 description: "Retrieves a specific alarm record by ID."
 ---

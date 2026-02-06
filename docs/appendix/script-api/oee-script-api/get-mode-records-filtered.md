@@ -1,38 +1,43 @@
 ---
-sidebar_position: 52
-title: "updateOeeModeRecordMode"
-description: "Updates the mode of an existing OEE Mode Record."
+title: getModeRecordsFiltered
+description: Get all OEE Mode records that match the provided filters such as location, date range, calculation types, codes, statuses, and duration/overrun duration ranges.
+sidebar_position: 40
 ---
 
-# system.mes.oee.updateOeeModeRecordMode
+# system.mes.oee.getModeRecordsFiltered
 
-## Description
-
-Updates the mode of an existing [OEE Mode Record](../../data-model/oee-model/oee-mode-record.md).
-
-Copies the code, name, calculation type, color, from the OEE Mode to the OEE Mode Record.
+Get all OEE Mode records that match the provided filters such as location, date range, calculation types, codes, statuses, and duration/overrun duration ranges.
 
 ## Permissions
 
-This method requires the `SYSTEM.ADMIN` permission.
+This method requires the `OEE.READ.GET` permission.
 
 ## Syntax
 
 ```python
-system.mes.oee.updateOeeModeRecordMode(oeeModeRecordId, newOeeModeId, newExpectedDurationSec)
+system.mes.oee.getModeRecordsFiltered(locationPath, startDate, endDate, calculationTypes=None, codes=None, stauses=None, minDurationSec=None, maxDurationSec=None, minOverrunDurationSec=None, maxOverrunDurationSec=None)
 ```
 
 ## Parameters
 
-| Parameter                | Type          | Nullable | Description                                                     |
-|--------------------------|---------------|----------|-----------------------------------------------------------------|
-| `oeeModeRecordId`        | String (ULID) | False    | The ID of the OEE Mode Record to update.                        |
-| `newOeeModeId`           | String (ULID) | False    | The ID of the new OEE Mode to set.                              |
-| `newExpectedDurationSec` | Double        | True     | New expected duration in seconds to set on the OEE Mode Record. |
+| Parameter               | Type        | Nullable | Description                                               |
+|-------------------------|-------------|----------|-----------------------------------------------------------|
+| `locationPath`          | `String`    | False    | The MES location path to search.                          |
+| `startDate`             | `Date`      | False    | The start date of the time range.                         |
+| `endDate`               | `Date`      | False    | The end date of the time range.                           |
+| `calculationTypes`      | `String[]`  | True     | Set of different OEE Mode Calculation Types to filter by. |
+| `codes`                 | `Integer[]` | True     | Set of different OEE Mode codes to filter by.             |
+| `statuses`              | `String[]`  | True     | Set of different statuses to filter by.                   |
+| `minDurationSec`        | `Double`    | True     | Minimum duration in seconds to filter by.                 |
+| `maxDurationSec`        | `Double`    | True     | Maximum duration in seconds to filter by.                 |
+| `minOverrunDurationSec` | `Double`    | True     | Minimum overrun duration in seconds to filter by.         |
+| `maxOverrunDurationSec` | `Double`    | True     | Maximum overrun duration in seconds to filter by.         |
 
 ## Returns
 
-Returns a JSON representation of the updated `OeeModeRecordDTO` object.
+A list of JSON representations of `OeeModeRecordDTO` objects.
+
+Each object has the following properties:
 
 | Name                         | Type                            | Nullable | Description                                                              | Default Value          |
 | ---------------------------- | ------------------------------- | -------- | ------------------------------------------------------------------------ | ---------------------- |
@@ -59,9 +64,23 @@ Returns a JSON representation of the updated `OeeModeRecordDTO` object.
 ## Code Examples
 
 ```python
-oeeModeRecordId = "01JPWSRZPB-F5DR287Y-FPHMHHY1"  
-newOeeModeId = "01JPWST278-J1K1GK0J-DNAD02QW"
-newExpectedDurationSec = 3600  # 1 hour
-  
-system.mes.oee.updateOeeModeRecordMode(oeeModeRecordId, newOeeModeId, newExpectedDurationSec)
+from java.util import Date
+from java.util.concurrent import TimeUnit
+
+# Get all "Scheduled Downtime" mode records with "Idle" status longer than 1 minute from the last day
+location = "Enterprise/Site/Area/Line1"
+end_time = Date()
+start_time = Date(end_time.getTime() - TimeUnit.DAYS.toMillis(1))
+
+filtered_records = system.mes.oee.getModeRecordsFiltered(
+    locationPath=location,
+    startDate=start_time,
+    endDate=end_time,
+    calculatedTypes=["Scheduled Downtime"], # Filter for scheduled downtime-related modes
+    statuses=["IDLE"], # Filer for IDLE status
+    minDurationSec=60 # Filter for modes lasting longer than a minute
+)
+
+for record in filtered_records:
+    print "Mode:", record['name'], "Duration (sec):", record['duration'] / 60.0
 ```

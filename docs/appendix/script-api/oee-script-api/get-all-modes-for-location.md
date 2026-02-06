@@ -1,10 +1,12 @@
 ---
-sidebar_position: 13
+sidebar_position: 9
 title: 'getAllModesForLocation'
 description: 'Retrieves all OEE mode records for a specific location.'
 ---
 
 # system.mes.oee.getAllModesForLocation
+
+## Description
 
 Retrieves all OEE Modes associated with a specific location.
 

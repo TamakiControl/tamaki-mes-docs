@@ -1,5 +1,5 @@
 ---
-sidebar_position: 25
+sidebar_position: 83
 title: "importOeeAlarmsFromJson"
 description: "Imports OEE alarm configurations from JSON."
 ---

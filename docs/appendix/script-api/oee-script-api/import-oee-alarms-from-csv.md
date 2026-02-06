@@ -1,5 +1,5 @@
 ---
-sidebar_position: 14
+sidebar_position: 82
 title: "importOeeAlarmsFromCsv"
 description: "Imports OEE alarm configurations from a CSV file."
 ---

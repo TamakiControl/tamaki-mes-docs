@@ -1,10 +1,12 @@
 ---
 title: getTopDowntimeByCount
 description: Retrieves the top downtime reasons by occurrence count for a specified location and time range.
-sidebar_position: 56
+sidebar_position: 68
 ---
 
 # system.mes.oee.getTopDowntimeByCount
+
+## Description
 
 Retrieves the top downtime reasons ranked by the number of occurrences for a specified location and time range.
 

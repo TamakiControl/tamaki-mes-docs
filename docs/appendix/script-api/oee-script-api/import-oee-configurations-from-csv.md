@@ -1,10 +1,12 @@
 ---
-sidebar_position: 7
+sidebar_position: 74
 title: 'importOeeConfigurationsFromCsv'
 description: 'Imports OEE configurations from CSV format data.'
 ---
 
 # system.mes.oee.importOeeConfigurationsFromCsv
+
+## Description
 
 Imports OEE Configuration records from CSV format data into the system.
 

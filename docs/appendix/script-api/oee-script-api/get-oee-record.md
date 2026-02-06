@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 33
 title: "getOeeRecord"
 description: "Retrieves a specific OEE record by ID."
 ---
@@ -28,7 +28,7 @@ system.mes.oee.getOeeRecord(id)
 
 ## Returns
 
-Returns a JSON representation of an `OeeRecordDTO` object. Returns nothing if no record is found.
+Returns a JSON representation of the `OeeRecordDTO` object. Returns nothing if no record is found.
 
 | Name                                 | Type                 | Nullable | Description                                                              | Default Value   |
 |--------------------------------------|----------------------|----------|--------------------------------------------------------------------------|-----------------|

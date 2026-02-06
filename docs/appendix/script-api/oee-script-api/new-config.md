@@ -6,6 +6,8 @@ description: 'Generates a new, empty OEE configuration object.'
 
 # system.mes.oee.newConfig
 
+## Description
+
 Generates an empty, non-persisted OEE Configuration object. This object provides the structure required to save a new configuration record using [`system.mes.oee.saveConfig`](./save-config).
 
 ## Permissions

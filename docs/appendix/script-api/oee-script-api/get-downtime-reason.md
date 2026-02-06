@@ -1,10 +1,12 @@
 ---
-sidebar_position: 32
+sidebar_position: 20
 title: 'getDowntimeReason'
 description: 'Retrieves an OEE downtime reason by its ID.'
 ---
 
 # system.mes.oee.getDowntimeReason
+
+## Description
 
 Retrieves an OEE Downtime Reason by its unique identifier.
 

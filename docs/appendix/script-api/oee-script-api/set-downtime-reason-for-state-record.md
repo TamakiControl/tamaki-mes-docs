@@ -1,10 +1,12 @@
 ---
-sidebar_position: 43
+sidebar_position: 44
 title: 'setDowntimeReasonForStateRecord'
 description: 'Sets a downtime reason for a specific state record.'
 ---
 
 # system.mes.oee.setDowntimeReasonForStateRecord
+
+## Description
 
 Sets a downtime reason for a specific OEE state record, with optional notes and an acknowledgment status.
 

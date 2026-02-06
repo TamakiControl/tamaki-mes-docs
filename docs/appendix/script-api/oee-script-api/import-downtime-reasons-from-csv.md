@@ -1,10 +1,12 @@
 ---
 title: importDowntimeReasonsFromCsv
 description: Imports downtime reason configurations from CSV formatted data.
-sidebar_position: 39
+sidebar_position: 80
 ---
 
 # system.mes.oee.importDowntimeReasonsFromCsv
+
+## Description
 
 Imports downtime reason configurations from CSV formatted data.
 

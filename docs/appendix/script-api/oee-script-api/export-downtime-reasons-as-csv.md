@@ -1,9 +1,11 @@
 ---
 title: exportDowntimeReasonsAsCsv
-sidebar_position: 42
+sidebar_position: 91
 ---
 
 ## system.mes.oee.exportDowntimeReasonsAsCsv
+
+## Description
 
 Exports OEE Downtime Reasons to a CSV file.
 

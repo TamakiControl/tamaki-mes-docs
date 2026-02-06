@@ -1,10 +1,12 @@
 ---
-sidebar_position: 11
+sidebar_position: 7
 title: 'newOeeMode'
 description: 'Generates a new, empty OEE mode object.'
 ---
 
 # system.mes.oee.newOeeMode
+
+## Description
 
 Generates an empty, non-persisted OEE Mode object. This object provides the structure required to save a new mode record using [`system.mes.oee.saveMode`](./save-mode).
 

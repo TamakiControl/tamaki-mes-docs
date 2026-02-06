@@ -1,10 +1,12 @@
 ---
 title: getTopInterruptionLocationsByCount
 description: Retrieves the top interruption locations by occurrence count for a specified parent location and time range.
-sidebar_position: 60
+sidebar_position: 70
 ---
 
 # system.mes.oee.getTopInterruptionLocationsByCount
+
+## Description
 
 Retrieves the top interruption locations, ranked by the number of downtime occurrences, for a specified parent location and time range. This helps identify which child locations are causing the most frequent interruptions.
 

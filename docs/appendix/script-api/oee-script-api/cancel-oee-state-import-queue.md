@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 101
 title: "cancelOeeStateImportQueue"
 description: "Cancels the current OeeState import queue."
 ---
@@ -26,7 +26,7 @@ This method does not take any parameters.
 
 ## Returns
 
-Returns an Integer representing the number of cancelled items in the queue.
+Returns an Integer representing the number of canceled items in the queue.
 
 ## Code Examples
 

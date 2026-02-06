@@ -1,7 +1,7 @@
 ---
 title: exportOeeStatesToCsv
 description: Export OEE state configurations to CSV.
-sidebar_position: 30
+sidebar_position: 89
 ---
 
 # system.mes.oee.exportOeeStatesToCsv

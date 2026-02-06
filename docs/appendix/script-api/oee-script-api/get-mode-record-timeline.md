@@ -1,10 +1,12 @@
 ---
 title: getModeRecordTimeline
 description: Retrieve a chronological timeline of OEE mode records.
-sidebar_position: 47
+sidebar_position: 37
 ---
 
 # system.mes.oee.getModeRecordTimeline
+
+## Description
 
 Retrieves a chronological timeline of OEE mode records for a specified location and time range.
 

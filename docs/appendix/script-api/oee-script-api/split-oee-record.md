@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 49
 title: "splitOeeRecord"
 description: "Splits an OEE record at a specific time."
 ---

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 21
+sidebar_position: 31
 title: "validateOeeAlarm"
 description: "Validates an OEE alarm configuration."
 ---

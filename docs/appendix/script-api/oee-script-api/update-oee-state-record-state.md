@@ -1,34 +1,37 @@
 ---
-sidebar_position: 39
-title: "getOeeStateRecordDetailed"
-description: "Gets detailed state record information."
+sidebar_position: 51
+title: "updateOeeStateRecordState"
+description: "Updates the state of an existing OEE State Record."
 ---
 
-# system.mes.oee.getOeeStateRecordDetailed
+# system.mes.oee.updateOeeStateRecordState
 
 ## Description
 
-Retrieves detailed information for a specific [OEE State Record](../../data-model/oee-model/oee-state-record) by its ID, including related mode records, alarm records, and other associated data.
+Updates the state of an existing [OEE State Record](../../data-model/oee-model/oee-state-record.md).
+
+Copies the code, name, calculation type, color, from the OEE State to the OEE State Record.
 
 ## Permissions
 
-This method requires the `OEE.READ.GET` permission.
+This method requires the `SYSTEM.ADMIN` permission.
 
 ## Syntax
 
 ```python
-system.mes.oee.getOeeStateRecordDetailed(id)
+system.mes.oee.updateOeeStateRecordState(oeeStateRecordId, newOeeStateId)
 ```
 
 ## Parameters
 
-| Parameter | Type            | Nullable | Description                                  |
-|-----------|-----------------|----------|----------------------------------------------|
-| `id`      | `String` (ULID) | False    | The ID of the state record to retrieve.      |
+| Parameter          | Type          | Nullable | Description                               |
+|--------------------|---------------|----------|-------------------------------------------|
+| `oeeStateRecordId` | String (ULID) | False    | The ID of the OEE State Record to update. |
+| `newOeeStateId`    | String (ULID) | False    | The ID of the new OEE State to set.       |
 
 ## Returns
 
-Returns a JSON representation of an `OeeStateRecordDetailedDTO` object with expanded information. Returns nothing if no record is found.
+Returns a JSON representation of the updated `OeeStaeRecordDTO` object.
 
 | Name                       | Type                      | Nullable | Description                                                                | Default Value   |
 |----------------------------|---------------------------|----------|----------------------------------------------------------------------------|-----------------|
@@ -59,9 +62,6 @@ Returns a JSON representation of an `OeeStateRecordDetailedDTO` object with expa
 | `primaryAlarmName`         | `String`                  | `True`   | Primary alarm name, if applicable                                          | `null`          |
 | `primaryAlarmDisplayPath`  | `String`                  | `True`   | Primary alarm display path, if applicable                                  | `null`          |
 | `primaryAlarmLabel`        | `String`                  | `True`   | Primary alarm display name, if applicable                                  | `null`          |
-| `oeeRecords`               | `Set<OeeRecordDTO>`       | `True`   | List of associated OEE records that reference this state record            | `null`          |
-| `oeeModeRecord`            | `OeeModeRecordDTO`        | `True`   | OEE Mode Record associated with this state record                          | `null`          |
-| `rootCauseStateRecord`     | `OeeStateRecordDTO`       | `True`   | Root Cause State Record                                                    | `null`          |
 | `notes`                    | `String`                  | `True`   | Notes associated with the OEE State Record                                 | `null`          |
 | `enabled`                  | `boolean`                 | `True`   | Indicates whether the OEE State Record is enabled                          | `true`          |
 | `spare1`                   | `String`                  | `True`   | Extra field 1                                                              | `null`          |
@@ -71,9 +71,8 @@ Returns a JSON representation of an `OeeStateRecordDetailedDTO` object with expa
 ## Code Examples
 
 ```python
-# Get detailed state record
-detailed_record = system.mes.oee.getOeeStateRecordDetailed('01JAP8RJBN-8ZTPXSGY-J9GSDPE1')
-
-# Output the detailed record
-print(detailed_record)
+oeeStateRecordId = "01JPWSRZPB-F5DR287Y-FPHMHHY1"  
+newOeeStateId = "01JPWST278-J1K1GK0J-DNAD02QW"
+  
+system.mes.oee.updateOeeStateRecordState(oeeStateRecordId, newOeeStateId)
 ```

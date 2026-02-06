@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 28
 title: "getOeeAlarm"
 description: "Retrieves an OEE alarm configuration by ID."
 ---

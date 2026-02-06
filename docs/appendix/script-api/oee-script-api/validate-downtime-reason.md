@@ -1,10 +1,12 @@
 ---
-sidebar_position: 37
+sidebar_position: 25
 title: 'validateDowntimeReason'
 description: 'Validates an OEE downtime reason object.'
 ---
 
 # system.mes.oee.validateDowntimeReason
+
+## Description
 
 Validates an OEE Downtime Reason object against the system's business rules without saving it. This is useful for checking if a downtime reason is valid before attempting to save it.
 

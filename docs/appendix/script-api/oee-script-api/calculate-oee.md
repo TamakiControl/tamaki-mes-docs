@@ -1,10 +1,12 @@
 ---
-sidebar_position: 65
+sidebar_position: 63
 title: 'calculateOee'
 description: 'Calculates OEE metrics for a specific location within a date range.'
 ---
 
 # system.mes.oee.calculateOee
+
+## Description
 
 Calculates OEE (Overall Equipment Effectiveness) metrics for a specific location within a date range.
 

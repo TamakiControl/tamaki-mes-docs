@@ -1,10 +1,12 @@
 ---
-sidebar_position: 57
+sidebar_position: 54
 title: 'getOeeStateRecord'
 description: 'Retrieves a specific OEE state record by its ID.'
 ---
 
 # system.mes.oee.getOeeStateRecord
+
+## Description
 
 Retrieves a specific OEE state record by its unique identifier.
 

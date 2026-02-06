@@ -1,10 +1,12 @@
 ---
-sidebar_position: 21
+sidebar_position: 13
 title: 'newOeeState'
 description: 'Generates a new, empty OEE state object.'
 ---
 
 # system.mes.oee.newOeeState
+
+## Descriptions
 
 Generates an empty, non-persisted OEE State object. This object provides the structure required to save a new state record using [`system.mes.oee.saveState`](./save-state).
 

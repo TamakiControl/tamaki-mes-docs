@@ -1,10 +1,12 @@
 ---
 title: getState
 description: Retrieves a specific OEE state definition by its ID.
-sidebar_position: 22
+sidebar_position: 14
 ---
 
 # system.mes.oee.getState
+
+## Description
 
 Retrieves a specific OEE state definition by its unique ID.
 

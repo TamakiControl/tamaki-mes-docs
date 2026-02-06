@@ -1,10 +1,12 @@
 ---
-sidebar_position: 14
+sidebar_position: 10
 title: 'saveMode'
 description: 'Creates or updates an OEE mode.'
 ---
 
 # system.mes.oee.saveMode
+
+## Description
 
 Creates or updates an OEE Mode in the system. To create a new mode, first generate a new object with [`system.mes.oee.newOeeMode`](./new-oee-mode).
 

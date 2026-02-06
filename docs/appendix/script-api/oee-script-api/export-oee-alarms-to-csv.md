@@ -1,5 +1,5 @@
 ---
-sidebar_position: 15
+sidebar_position: 93
 title: "exportOeeAlarmsToCsv"
 description: "Exports OEE alarm configurations as CSV."
 ---

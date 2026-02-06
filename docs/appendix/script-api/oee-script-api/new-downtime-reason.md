@@ -1,10 +1,12 @@
 ---
-sidebar_position: 31
+sidebar_position: 19
 title: 'newDowntimeReason'
 description: 'Generates a new, empty downtime reason object.'
 ---
 
 # system.mes.oee.newDowntimeReason
+
+## Description
 
 Generates an empty, non-persisted Downtime Reason object. This object provides the structure required to save a new downtime reason record using [`system.mes.oee.saveDowntimeReason`](./save-downtime-reason).
 

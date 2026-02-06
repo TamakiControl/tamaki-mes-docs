@@ -1,5 +1,5 @@
 ---
-sidebar_position: 26
+sidebar_position: 92
 title: "exportOeeAlarmsToJson"
 description: "Exports OEE alarm configurations as JSON."
 ---

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 51
+sidebar_position: 47
 title: 'splitDowntimeEvent'
 description: 'Splits a downtime event at a specified date and time.'
 ---

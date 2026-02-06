@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 48
 title: "splitOeeStateRecord"
 description: "Splits a state record at a specific time."
 ---

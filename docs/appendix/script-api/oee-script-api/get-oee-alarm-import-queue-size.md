@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 98
 title: "getOeeAlarmImportQueueSize"
 description: "Gets the current size of the OeeAlarm import queue."
 ---

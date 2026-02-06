@@ -1,10 +1,12 @@
 ---
-sidebar_position: 16
+sidebar_position: 12
 title: 'deleteMode'
 description: 'Deletes an OEE mode record by its ID.'
 ---
 
 # system.mes.oee.deleteMode
+
+## Description
 
 Deletes an OEE Mode by its ID. This operation cannot delete a mode that has references to it from other system components.
 

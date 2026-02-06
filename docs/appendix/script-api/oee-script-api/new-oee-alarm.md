@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 27
 title: "newOeeAlarm"
 description: "Creates a new OEE alarm configuration."
 ---

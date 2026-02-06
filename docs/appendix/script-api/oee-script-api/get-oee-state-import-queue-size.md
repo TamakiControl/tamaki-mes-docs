@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 96
 title: "getOeeStateImportQueueSize"
 description: "Gets the current size of the OeeState import queue."
 ---

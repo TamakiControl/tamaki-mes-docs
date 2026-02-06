@@ -1,10 +1,12 @@
 ---
 title: importOeeModesFromJson
 description: Imports OEE mode configurations from JSON formatted data.
-sidebar_position: 18
+sidebar_position: 77
 ---
 
 # system.mes.oee.importOeeModesFromJson
+
+## Description
 
 Imports OEE mode configurations from JSON formatted data.
 

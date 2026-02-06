@@ -1,5 +1,5 @@
 ---
-sidebar_position: 34
+sidebar_position: 22
 title: 'getAllDowntimeReasonCodesByLocationHierarchical'
 description: 'Retrieves all downtime reason codes for a specific location, organized as a hierarchical tree structure.'
 ---

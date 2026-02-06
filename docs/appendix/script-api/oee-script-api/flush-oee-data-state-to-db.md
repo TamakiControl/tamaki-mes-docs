@@ -1,5 +1,5 @@
 ---
-sidebar_position: 67
+sidebar_position: 71
 title: 'flushOeeDataStateToDB'
 description: 'Flushes the in-memory OEE data state to the database.'
 ---

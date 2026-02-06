@@ -1,10 +1,12 @@
 ---
 title: exportDowntimeReasonsAsJson
 description: 'Exports OEE Downtime Reasons to a JSON file.'
-sidebar_position: 41
+sidebar_position: 90
 ---
 
 # system.mes.oee.exportDowntimeReasonsAsJson
+
+## Description
 
 Exports OEE Downtime Reasons to a JSON file.
 

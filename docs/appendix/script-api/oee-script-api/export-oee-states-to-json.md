@@ -1,7 +1,7 @@
 ---
 title: exportOeeStatesToJson
 description: Export OEE state configurations to JSON format with comprehensive metadata and integration options.
-sidebar_position: 29
+sidebar_position: 88
 ---
 
 # system.mes.oee.exportOeeStatesToJson

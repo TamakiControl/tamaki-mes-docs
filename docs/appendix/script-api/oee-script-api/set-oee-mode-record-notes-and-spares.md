@@ -1,38 +1,34 @@
 ---
-sidebar_position: 52
-title: "updateOeeModeRecordMode"
-description: "Updates the mode of an existing OEE Mode Record."
+sidebar_position: 62
+title: "setOeeModeRecordNotesAndSpares"
+description: "Sets comment fields (notes, spare1, spare2, spare3) for an OEE Mode Record."
 ---
 
-# system.mes.oee.updateOeeModeRecordMode
+# system.mes.oee.getOeeRecord
 
 ## Description
 
-Updates the mode of an existing [OEE Mode Record](../../data-model/oee-model/oee-mode-record.md).
+Sets comment fields (notes, spare1, spare2, spare3) for an [OEE Mode Record](../../data-model/oee-model/oee-mode-record).
 
-Copies the code, name, calculation type, color, from the OEE Mode to the OEE Mode Record.
+Accepts a full `OeeModeRecordDTO` but only updates the notes and spare fields.
+
+The record is fetched fresh from the database by ID.
+
+Recommended to call with setOeeModeRecordNotesAndSpares(**oeeModeRecord) where oeeModeRecord is an `OeeModeRecordDTO` object.
 
 ## Permissions
 
-This method requires the `SYSTEM.ADMIN` permission.
+This method requires the `OEE.WRITE.SAVE` permission.
 
 ## Syntax
 
 ```python
-system.mes.oee.updateOeeModeRecordMode(oeeModeRecordId, newOeeModeId, newExpectedDurationSec)
+system.mes.oee.setOeeModeRecordNotesAndSpares(**oeeModeRecord)
 ```
 
 ## Parameters
 
-| Parameter                | Type          | Nullable | Description                                                     |
-|--------------------------|---------------|----------|-----------------------------------------------------------------|
-| `oeeModeRecordId`        | String (ULID) | False    | The ID of the OEE Mode Record to update.                        |
-| `newOeeModeId`           | String (ULID) | False    | The ID of the new OEE Mode to set.                              |
-| `newExpectedDurationSec` | Double        | True     | New expected duration in seconds to set on the OEE Mode Record. |
-
-## Returns
-
-Returns a JSON representation of the updated `OeeModeRecordDTO` object.
+An unpacked dictionary of `OeeModeRecordDTO` fields.
 
 | Name                         | Type                            | Nullable | Description                                                              | Default Value          |
 | ---------------------------- | ------------------------------- | -------- | ------------------------------------------------------------------------ | ---------------------- |
@@ -56,12 +52,19 @@ Returns a JSON representation of the updated `OeeModeRecordDTO` object.
 | `spare2`                     | `String`                        | `True`   | Extra field 2                                                            | `null`                 |
 | `spare3`                     | `String`                        | `True`   | Extra field 3                                                            | `null`                 |
 
+## Returns
+
+Returns a JSON representation of the updated `OeeModeRecordDTO` object.
+
 ## Code Examples
 
 ```python
-oeeModeRecordId = "01JPWSRZPB-F5DR287Y-FPHMHHY1"  
-newOeeModeId = "01JPWST278-J1K1GK0J-DNAD02QW"
-newExpectedDurationSec = 3600  # 1 hour
-  
-system.mes.oee.updateOeeModeRecordMode(oeeModeRecordId, newOeeModeId, newExpectedDurationSec)
+# Retrieve an OEE mode record by ID
+oee_mode_record = system.mes.oee.getOeeModeRecord('01JAP8RJBN-8ZTPXSGY-J9GSDPE1')
+
+# Change mode record notes
+oee_mode_record['notes'] = 'Changed notes'
+
+# Update OEE mode record notes
+system.mes.oee.setOeeModeRecordNotesAndSpares(**oee_mode_record)
 ```

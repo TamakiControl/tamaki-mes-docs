@@ -1,5 +1,5 @@
 ---
-sidebar_position: 35
+sidebar_position: 23
 title: 'getAllDowntimeReasonPathsByLocation'
 description: 'Retrieves all downtime reason paths for a specific location as a list of full hierarchical path strings.'
 ---

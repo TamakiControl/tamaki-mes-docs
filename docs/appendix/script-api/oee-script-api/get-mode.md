@@ -1,10 +1,12 @@
 ---
-sidebar_position: 12
+sidebar_position: 8
 title: 'getMode'
 description: 'Retrieves an OEE mode record by its ID.'
 ---
 
 # system.mes.oee.getMode
+
+## Description
 
 Retrieves an OEE Mode record by its ID.
 

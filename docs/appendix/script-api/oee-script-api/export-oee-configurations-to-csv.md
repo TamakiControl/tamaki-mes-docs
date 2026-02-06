@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 85
 title: 'exportOeeConfigurationsToCsv'
 description: 'Exports OEE configurations to CSV format.'
 ---

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 62
+sidebar_position: 57
 title: 'getAggregatedModeRecordsWithStatesBreakdown'
 description: 'Retrieves aggregated OEE mode records with a breakdown of states for a specified location and time range.'
 ---

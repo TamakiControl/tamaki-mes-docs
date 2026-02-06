@@ -1,10 +1,12 @@
 ---
 title: getTopDowntimeByDuration
 description: Retrieves the top downtime reasons by total duration for a specified location and time range.
-sidebar_position: 55
+sidebar_position: 67
 ---
 
 # system.mes.oee.getTopDowntimeByDuration
+
+## Description
 
 Retrieves the top downtime reasons ranked by their total accumulated duration for a specified location and time range.
 

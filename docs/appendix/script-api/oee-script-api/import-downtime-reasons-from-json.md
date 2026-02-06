@@ -1,10 +1,12 @@
 ---
 title: importDowntimeReasonsFromJson
 description: Imports downtime reason configurations from Json formatted data.
-sidebar_position: 40
+sidebar_position: 81
 ---
 
 # system.mes.oee.importDowntimeReasonsFromJson
+
+## Description
 
 Imports downtime reason configurations from Json formatted data.
 

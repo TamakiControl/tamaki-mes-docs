@@ -1,10 +1,12 @@
 ---
-sidebar_position: 23
+sidebar_position: 15
 title: 'getAllStatesForLocation'
 description: 'Retrieves all OEE states for a specific location.'
 ---
 
 # system.mes.oee.getAllStatesForLocation
+
+## Description
 
 Retrieves all OEE States associated with a specific location.
 

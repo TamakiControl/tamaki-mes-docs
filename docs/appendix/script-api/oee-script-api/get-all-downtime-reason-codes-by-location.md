@@ -1,5 +1,5 @@
 ---
-sidebar_position: 33
+sidebar_position: 21
 title: 'getAllDowntimeReasonCodesByLocation'
 description: 'Retrieves all downtime reason codes for a specific location as a flat list.'
 ---

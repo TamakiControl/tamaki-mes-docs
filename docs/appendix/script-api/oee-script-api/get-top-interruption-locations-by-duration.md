@@ -1,7 +1,7 @@
 ---
 title: getTopInterruptionLocationsByDuration
 description: Retrieves the top interruption locations by total duration for a specified parent location and time range.
-sidebar_position: 59
+sidebar_position: 69
 ---
 
 # system.mes.oee.getTopInterruptionLocationsByDuration

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 22
+sidebar_position: 32
 title: "deleteOeeAlarm"
 description: "Deletes an OEE alarm configuration."
 ---

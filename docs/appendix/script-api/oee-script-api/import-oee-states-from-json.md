@@ -1,10 +1,12 @@
 ---
 title: importOeeStatesFromJson
 description: Imports OEE state configurations from JSON formatted data.
-sidebar_position: 28
+sidebar_position: 79
 ---
 
 # system.mes.oee.importOeeStatesFromJson
+
+## Description
 
 Imports OEE state configurations from JSON formatted data.
 

@@ -1,10 +1,12 @@
 ---
 title: importOeeStatesFromCsv
 description: Imports OEE state configurations from CSV formatted data.
-sidebar_position: 27
+sidebar_position: 78
 ---
 
 # system.mes.oee.importOeeStatesFromCsv
+
+## Description
 
 Imports OEE state configurations from CSV formatted data.
 

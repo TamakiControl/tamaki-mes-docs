@@ -1,5 +1,5 @@
 ---
-sidebar_position: 12
+sidebar_position: 50
 title: "splitOeeModeRecord"
 description: "Split the OEE Mode Record at the given time."
 ---

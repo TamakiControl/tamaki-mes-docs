@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 97
 title: "getDowntimeReasonImportQueueSize"
 description: "Gets the current size of the DowntimeReason import queue."
 ---

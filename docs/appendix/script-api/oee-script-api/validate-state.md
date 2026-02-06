@@ -1,10 +1,12 @@
 ---
-sidebar_position: 25
+sidebar_position: 17
 title: 'validateState'
 description: 'Validates an OEE state object.'
 ---
 
 # system.mes.oee.validateState
+
+## Description
 
 Validates an OEE State object against the system's business rules without saving it. This is useful for checking if a state is valid before attempting to save it.
 
