@@ -63,9 +63,9 @@ Each object has the following properties:
 
 ```python
 # Find all alarms for a state record
-alarm_records = system.mes.oee.findAlarmRecordsForStateRecord('01JAP8RJBN-8ZTPXSGY-J9GSDPE1')
+alarmRecords = system.mes.oee.findAlarmRecordsForStateRecord('01JAP8RJBN-8ZTPXSGY-J9GSDPE1')
 
 # Output the alarms
-for alarm in alarm_records:
+for alarm in alarmRecords:
     print "Alarm ID:", alarm['id'], "Priority:", alarm['priority']
 ```

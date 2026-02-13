@@ -52,10 +52,10 @@ A JSON representation of an `OeeModeDTO` object.
 
 ```python
 # Retrieve an OEE mode by ID
-mode_id = "01JCH3ENEB-SV2X8B3W-NFY8WZNK"
+modeId = "01JCH3ENEB-SV2X8B3W-NFY8WZNK"
 
 try:
-    mode = system.mes.oee.getMode(mode_id)
+    mode = system.mes.oee.getMode(modeId)
     print "Mode Name:", mode['name']
     print "Calculation Type:", mode['calculationType']
 except Exception as e:

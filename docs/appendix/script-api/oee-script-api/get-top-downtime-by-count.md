@@ -51,18 +51,18 @@ from java.util.concurrent import TimeUnit
 
 # Get the top 5 most frequent downtime reasons for the last week
 location = "Enterprise/Site/Area/Line1"
-end_time = Date()
-start_time = Date(end_time.getTime() - TimeUnit.DAYS.toMillis(7))
+endTime = Date()
+startTime = Date(endTime.getTime() - TimeUnit.DAYS.toMillis(7))
 
-top_reasons = system.mes.oee.getTopDowntimeByCount(
+topReasons = system.mes.oee.getTopDowntimeByCount(
     location,
-    start_time,
-    end_time,
+    startTime,
+    endTime,
     5
 )
 
 print "Top 5 Downtime Reasons by Count:"
-for reason in top_reasons:
+for reason in topReasons:
     print "  - {}: {} occurrences, Total Duration: {:.2f} min".format(
         reason['downtimeReasonName'],
         reason['count'],

@@ -17,7 +17,7 @@ This method requires the `OEE.WRITE.SAVE` permission.
 ## Syntax
 
 ```python
-system.mes.oee.saveState(**state_data)
+system.mes.oee.saveState(**stateData)
 ```
 
 ## Parameters
@@ -51,21 +51,21 @@ A JSON representation of the saved `OeeStateDTO` object.
 
 ```python
 # Create a new OEE state object
-new_state = system.mes.oee.newOeeState()
+newState = system.mes.oee.newOeeState()
 
 # Set attributes for the new state
-new_state['locationId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
-new_state['name'] = 'Running'
-new_state['calculationType'] = 'RUNNING'
-new_state['enabled'] = True
+newState['locationId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
+newState['name'] = 'Running'
+newState['calculationType'] = 'RUNNING'
+newState['enabled'] = True
 
 # Save the new state
-saved_state = system.mes.oee.saveState(**new_state)
+savedState = system.mes.oee.saveState(**newState)
 
-print "Saved OEE State with ID:", saved_state['id']
+print "Saved OEE State with ID:", savedState['id']
 
 # To update an existing state, include its ID
-# updated_state_data = system.mes.oee.getState(saved_state['id'])
-# updated_state_data['name'] = 'Production Running'
-# system.mes.oee.saveState(**updated_state_data)
+# updatedStateData = system.mes.oee.getState(savedState['id'])
+# updatedStateData['name'] = 'Production Running'
+# system.mes.oee.saveState(**updatedStateData)
 ```

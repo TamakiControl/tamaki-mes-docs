@@ -72,24 +72,24 @@ A JSON representation of the updated `OeeStateRecordDTO` object.
 
 ```python
 # Assume we have a state record ID and a reason ID
-state_record_id = "some-state-record-id"
-reason_id = "some-downtime-reason-id"
+stateRecordId = "someStateRecordId"
+reasonId = "some-downtime-reason-id"
 
 # Set the downtime reason and add a note
 try:
-    updated_record = system.mes.oee.setDowntimeReasonForStateRecord(
-        oeeStateRecordId=state_record_id,
-        downtimeReasonId=reason_id,
+    updatedRecord = system.mes.oee.setDowntimeReasonForStateRecord(
+        oeeStateRecordId=stateRecordId,
+        downtimeReasonId=reasonId,
         notes="Operator confirmed mechanical jam.",
         acknowledge=True
     )
-    print "Successfully updated state record:", updated_record['id']
-    print "New Reason:", updated_record['downtimeReason']
-    print "Acknowledged:", updated_record['acknowledged']
+    print "Successfully updated state record:", updatedRecord['id']
+    print "New Reason:", updatedRecord['downtimeReason']
+    print "Acknowledged:", updatedRecord['acknowledged']
 
 except Exception as e:
     print "Error updating state record:", str(e)
 
 # To clear a downtime reason
-# system.mes.oee.setDowntimeReasonForStateRecord(state_record_id, None, "Reason cleared.")
+# system.mes.oee.setDowntimeReasonForStateRecord(stateRecordId, None, "Reason cleared.")
 ```

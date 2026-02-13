@@ -60,11 +60,11 @@ Returns a JSON representation of the updated `OeeModeRecordDTO` object.
 
 ```python
 # Retrieve an OEE mode record by ID
-oee_mode_record = system.mes.oee.getOeeModeRecord('01JAP8RJBN-8ZTPXSGY-J9GSDPE1')
+oeeModeRecord = system.mes.oee.getOeeModeRecord('01JAP8RJBN-8ZTPXSGY-J9GSDPE1')
 
 # Change mode record notes
-oee_mode_record['notes'] = 'Changed notes'
+oeeModeRecord['notes'] = 'Changed notes'
 
 # Update OEE mode record notes
-system.mes.oee.setOeeModeRecordNotesAndSpares(**oee_mode_record)
+system.mes.oee.setOeeModeRecordNotesAndSpares(**oeeModeRecord)
 ```

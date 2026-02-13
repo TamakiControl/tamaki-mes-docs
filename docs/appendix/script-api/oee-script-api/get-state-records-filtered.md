@@ -83,9 +83,9 @@ from java.util.concurrent import TimeUnit
 # Get all "Fault" state records longer than 5 minutes from the last day
 location = "Enterprise/Site/Area/Line1"
 endTime = Date()
-startTime = Date(end_time.getTime() - TimeUnit.DAYS.toMillis(1))
+startTime = Date(endTime.getTime() - TimeUnit.DAYS.toMillis(1))
 
-filtered_records = system.mes.oee.getStateRecordsFiltered(
+filteredRecords = system.mes.oee.getStateRecordsFiltered(
     locationPath=location,
     startDate=startTime,
     endDate=endTime,
@@ -94,6 +94,6 @@ filtered_records = system.mes.oee.getStateRecordsFiltered(
     microstopThresholdTimeUnits='MINUTES'
 )
 
-for record in filtered_records:
+for record in filteredRecords:
     print "State:", record['name'], "Duration (min):", record['duration'] / 60.0
 ```

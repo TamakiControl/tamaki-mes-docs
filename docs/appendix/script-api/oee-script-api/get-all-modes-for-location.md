@@ -54,8 +54,8 @@ Each object has the following properties:
 
 ```python
 # Get all modes for a specific location by path
-location_path = "Enterprise/Site/Area/Line1"
-modes = system.mes.oee.getAllModesForLocation(location_path)
+locationPath = "Enterprise/Site/Area/Line1"
+modes = system.mes.oee.getAllModesForLocation(locationPath)
 
 for mode in modes:
     print mode['name'], mode['code']

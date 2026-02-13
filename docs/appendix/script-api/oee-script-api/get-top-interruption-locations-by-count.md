@@ -51,19 +51,19 @@ from java.util import Date
 from java.util.concurrent import TimeUnit
 
 # Get the top 5 most frequent interruption locations for a production line in the last 24 hours
-line_location = "Enterprise/Site/Area/Line1"
-end_time = Date()
-start_time = Date(end_time.getTime() - TimeUnit.DAYS.toMillis(1))
+lineLocation = "Enterprise/Site/Area/Line1"
+endTime = Date()
+startTime = Date(endTime.getTime() - TimeUnit.DAYS.toMillis(1))
 
-top_locations = system.mes.oee.getTopInterruptionLocationsByCount(
-    line_location,
-    start_time,
-    end_time,
+topLocations = system.mes.oee.getTopInterruptionLocationsByCount(
+    lineLocation,
+    startTime,
+    endTime,
     5
 )
 
 print "Top 5 Interruption Locations by Count:"
-for location in top_locations:
+for location in topLocations:
     print "  - {}: {} interruptions, Total Duration: {:.2f} min".format(
         location['interruptionLocationName'],
         location['count'],

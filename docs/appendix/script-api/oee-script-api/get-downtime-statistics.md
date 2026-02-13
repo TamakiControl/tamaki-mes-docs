@@ -59,13 +59,13 @@ from java.util import Date
 from java.util.concurrent import TimeUnit
 
 # Calculate downtime statistics for the last 24 hours
-location_path = "Enterprise/Site/Area/Line1"
-end_date = Date()
-start_date = Date(end_date.getTime() - TimeUnit.HOURS.toMillis(24))
+locationPath = "Enterprise/Site/Area/Line1"
+endDate = Date()
+startDate = Date(endDate.getTime() - TimeUnit.HOURS.toMillis(24))
 
-downtime_stats = system.mes.oee.getDowntimeStatistics(location_path, start_date, end_date)
+downtimeStats = system.mes.oee.getDowntimeStatistics(locationPath, startDate, endDate)
 
-print "Downtime Events:", downtime_stats['downtimeEventCount']
-print "MTBF (sec):", downtime_stats['meanTimeBetweenFailuresSec']
-print "MTTR (sec):", downtime_stats['meanTimeToRepairSec']
+print "Downtime Events:", downtimeStats['downtimeEventCount']
+print "MTBF (sec):", downtimeStats['meanTimeBetweenFailuresSec']
+print "MTTR (sec):", downtimeStats['meanTimeToRepairSec']
 ```

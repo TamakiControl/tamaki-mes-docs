@@ -49,18 +49,18 @@ from java.util.concurrent import TimeUnit
 
 # Get the top 3 downtime reasons by duration for the last 24 hours
 location = "Enterprise/Site/Area/Line1"
-end_time = Date()
-start_time = Date(end_time.getTime() - TimeUnit.DAYS.toMillis(1))
+endTime = Date()
+startTime = Date(endTime.getTime() - TimeUnit.DAYS.toMillis(1))
 
-top_reasons = system.mes.oee.getTopDowntimeByDuration(
+topReasons = system.mes.oee.getTopDowntimeByDuration(
     location,
-    start_time,
-    end_time,
+    startTime,
+    endTime,
     3
 )
 
 print "Top 3 Downtime Reasons by Duration:"
-for reason in top_reasons:
+for reason in topReasons:
     print "  - {}: {:.2f} hours, {} occurrences".format(
         reason['downtimeReasonName'],
         reason['duration'] / 3600.0,

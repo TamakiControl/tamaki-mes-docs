@@ -51,11 +51,11 @@ from java.util.concurrent import TimeUnit
 
 # Get mode records grouped by mode for the last day
 location = "Enterprise/Site/Area/Line1"
-end_time = Date()
-start_time = Date(end_time.getTime() - TimeUnit.DAYS.toMillis(1))
+endTime = Date()
+startTime = Date(endTime.getTime() - TimeUnit.DAYS.toMillis(1))
 
-grouped_records = system.mes.oee.getModeRecordsGroupedByMode(location, start_time, end_time)
+groupedRecords = system.mes.oee.getModeRecordsGroupedByMode(location, startTime, endTime)
 
-for group in grouped_records:
+for group in groupedRecords:
     print "Mode:", group['name'], "Total Duration (sec):", group['duration'], "Count:", group['count']
 ```

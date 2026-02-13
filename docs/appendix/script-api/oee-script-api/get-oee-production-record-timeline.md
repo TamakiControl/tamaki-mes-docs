@@ -70,13 +70,13 @@ from java.util.concurrent import TimeUnit
 
 # Get production timeline
 location = "Enterprise/Site/Area/Line1"
-end_time = Date()
-start_time = Date(end_time.getTime() - TimeUnit.HOURS.toMillis(8))
+endTime = Date()
+startTime = Date(endTime.getTime() - TimeUnit.HOURS.toMillis(8))
 
 timeline = system.mes.oee.getOeeProductionRecordTimeline(
     location,
-    start_time,
-    end_time
+    startTime,
+    endTime
 )
 
 # Output the timeline data

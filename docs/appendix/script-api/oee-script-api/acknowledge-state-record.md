@@ -67,6 +67,6 @@ Returns a JSON representation of the updated `OEEStateRecordDTO` with acknowledg
 
 ```python
 # Acknowledge an OEE state record by its ID
-acknowledged_record = system.mes.oee.acknowledgeStateRecord('01JCH3ENEB-SV2X8B3W-NFY8WZNK')
-print acknowledged_record
+acknowledgedRecord = system.mes.oee.acknowledgeStateRecord('01JCH3ENEB-SV2X8B3W-NFY8WZNK')
+print acknowledgedRecord
 ```

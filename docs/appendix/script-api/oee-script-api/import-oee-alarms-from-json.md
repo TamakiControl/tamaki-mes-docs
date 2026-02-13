@@ -46,14 +46,14 @@ An `ApiResponse` object where `data` is an `ImportResponseDTO` object containing
 import system.file
 
 # Path to the JSON file
-file_path = "C:/path/to/oee_alarms.json"
+filePath = "C:/path/to/oee_alarms.json"
 
 try:
     # Read the file content as bytes
-    json_bytes = system.file.readFileAsBytes(file_path)
+    jsonBytes = system.file.readFileAsBytes(filePath)
 
     # Import the alarms
-    result = system.mes.oee.importOeeAlarmsFromJson(json_bytes)
+    result = system.mes.oee.importOeeAlarmsFromJson(jsonBytes)
 
     if result.get('success'):
         print "Successfully imported {} OEE alarms.".format(result.get('data'))

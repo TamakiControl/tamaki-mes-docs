@@ -17,7 +17,7 @@ This method requires the `OEE.WRITE.SAVE` permission.
 ## Syntax
 
 ```python
-system.mes.oee.saveDowntimeReason(**reason_data)
+system.mes.oee.saveDowntimeReason(**reasonData)
 ```
 
 ## Parameters
@@ -48,21 +48,21 @@ A JSON representation of the saved `OeeDowntimeReasonDTO` object.
 
 ```python
 # Create a new downtime reason object
-new_reason = system.mes.oee.newDowntimeReason()
+newReason = system.mes.oee.newDowntimeReason()
 
 # Set attributes for the new reason
-new_reason['locationId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
-new_reason['name'] = 'Jam'
-new_reason['path'] = 'Mechanical/Jam'
-new_reason['enabled'] = True
+newReason['locationId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
+newReason['name'] = 'Jam'
+newReason['path'] = 'Mechanical/Jam'
+newReason['enabled'] = True
 
 # Save the new downtime reason
-saved_reason = system.mes.oee.saveDowntimeReason(**new_reason)
+savedReason = system.mes.oee.saveDowntimeReason(**newReason)
 
-print "Saved Downtime Reason with ID:", saved_reason['id']
+print "Saved Downtime Reason with ID:", savedReason['id']
 
 # To update an existing reason, include its ID
-# updated_reason_data = system.mes.oee.getDowntimeReason(saved_reason['id'])
-# updated_reason_data['name'] = 'Mechanical Jam'
-# system.mes.oee.saveDowntimeReason(**updated_reason_data)
+# updatedReasonData = system.mes.oee.getDowntimeReason(savedReason['id'])
+# updatedReasonData['name'] = 'Mechanical Jam'
+# system.mes.oee.saveDowntimeReason(**updatedReasonData)
 ```

@@ -64,6 +64,6 @@ splitDate = system.date.parse(splitDate, "yyyy-MM-dd HH:mm:ss")
 
 system.mes.oee.splitOeeRecord(
     '01JAP8RJBN-8ZTPXSGY-J9GSDPE1',
-    split_date
+    splitDate
 )
 ```

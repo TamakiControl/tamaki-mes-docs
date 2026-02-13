@@ -59,5 +59,5 @@ alarm['minPriority'] = 'Diagnostic'  # Default value
 alarm['locationPath'] = 'DairyCo/Plant1/Line1'
 
 # Save the alarm
-system.mes.oee.saveOeeAlarm(alarm)
+system.mes.oee.saveOeeAlarm(**alarm)
 ```

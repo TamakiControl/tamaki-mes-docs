@@ -50,21 +50,21 @@ from java.util import Date
 # Define the location and time range for the analysis
 location = "Site/Area/Line 1"
 # Example: last 8 hours
-end_date = Date()
-start_date = Date(end_date.getTime() - 8 * 3600 * 1000)
+endDate = Date()
+startDate = Date(end_date.getTime() - 8 * 3600 * 1000)
 
 # Retrieve the aggregated data
-aggregated_data = system.mes.oee.getAggregatedModeRecordsWithStatesBreakdown(
+aggregatedData = system.mes.oee.getAggregatedModeRecordsWithStatesBreakdown(
     location,
-    start_date,
-    end_date
+    startDate,
+    endDate
 )
 
 # Print the results
-for segment in aggregated_data:
-    type_name = segment['type']
+for segment in aggregatedData:
+    typeName = segment['type']
     name = segment['name']
-    duration_seconds = segment['duration'] / 1000
+    durationSeconds = segment['duration'] / 1000
 
-    print "Type: %s, Name: %s, Duration: %.2f seconds" % (type_name, name, duration_seconds)
+    print "Type: %s, Name: %s, Duration: %.2f seconds" % (typeName, name, durationSeconds)
 ```

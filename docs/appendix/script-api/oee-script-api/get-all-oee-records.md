@@ -67,12 +67,12 @@ from java.util import Date
 from java.util.concurrent import TimeUnit
 
 # Get OEE records for the last 24 hours
-location_path = "Enterprise/Site/Production/Line1"
-end_time = Date()
-start_time = Date(end_time.getTime() - TimeUnit.HOURS.toMillis(24))
+locationPath = "Enterprise/Site/Production/Line1"
+endTime = Date()
+startTime = Date(endTime.getTime() - TimeUnit.HOURS.toMillis(24))
 
-oee_records = system.mes.oee.getAllOeeRecords(location_path, start_time, end_time)
+oeeRecords = system.mes.oee.getAllOeeRecords(locationPath, startTime, endTime)
 
-for record in oee_records:
+for record in oeeRecords:
     print record['productionCount'], record['qualityCount']
 ```

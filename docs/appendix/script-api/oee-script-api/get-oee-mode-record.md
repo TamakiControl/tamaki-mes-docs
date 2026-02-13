@@ -56,10 +56,10 @@ A JSON representation of an `OeeModeRecordDTO` object containing the details of 
 
 ```python
 # Get a specific mode record by its ID
-record_id = "01JDBQ7Y2B-QZ8XJ9XJ-V2QZJ9XJ"
-mode_record = system.mes.oee.getOeeModeRecord(record_id)
+recordId = "01JDBQ7Y2B-QZ8XJ9XJ-V2QZJ9XJ"
+modeRecord = system.mes.oee.getOeeModeRecord(recordId)
 
-if mode_record:
-    print "Mode Name:", mode_record['name']
-    print "Duration (sec):", mode_record['duration']
+if modeRecord:
+    print "Mode Name:", modeRecord['name']
+    print "Duration (sec):", modeRecord['duration']
 ```

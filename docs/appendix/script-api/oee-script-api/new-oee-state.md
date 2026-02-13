@@ -51,13 +51,13 @@ A JSON representation of an `OeeStateDTO` object with default values, ready to b
 
 ```python
 # Create a new OEE state object
-new_state = system.mes.oee.newOeeState()
+newState = system.mes.oee.newOeeState()
 
 # Now you can set properties on the new_state object
-new_state['locationId'] = 'some-location-id'
-new_state['name'] = 'Running'
-new_state['calculationType'] = 'RUNNING'
+newState['locationId'] = 'some-location-id'
+newState['name'] = 'Running'
+newState['calculationType'] = 'RUNNING'
 
 # To persist the state, pass it to the saveState function
-# saved_state = system.mes.oee.saveState(**new_state)
+# savedState = system.mes.oee.saveState(**newState)
 ```

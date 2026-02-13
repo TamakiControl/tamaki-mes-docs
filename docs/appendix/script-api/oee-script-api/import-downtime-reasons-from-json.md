@@ -36,14 +36,14 @@ An `ApiResponse` object indicating success or failure. On success, the `data` at
 import system.file
 
 # Path to the JSON file
-file_path = "C:/path/to/downtime_reasons.json"
+filePath = "C:/path/to/downtime_reasons.json"
 
 try:
     # Read the file content as bytes
-    json_bytes = system.file.readFileAsBytes(file_path)
+    jsonBytes = system.file.readFileAsBytes(filePath)
 
     # Import the downtime reasons
-    result = system.mes.oee.importDowntimeReasonsFromJson(json_bytes)
+    result = system.mes.oee.importDowntimeReasonsFromJson(jsonBytes)
 
     if result.get('success'):
         print "Successfully imported {} downtime reasons.".format(result.get('data'))

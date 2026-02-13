@@ -17,7 +17,7 @@ This method requires the `OEE.READ.VALIDATE` permission.
 ## Syntax
 
 ```python
-system.mes.oee.validateDowntimeReason(**reason_data)
+system.mes.oee.validateDowntimeReason(**reasonData)
 ```
 
 ## Parameters
@@ -48,28 +48,28 @@ A JSON object containing validation results. If the object is empty, validation 
 
 ```python
 # Create a new downtime reason object
-new_reason = system.mes.oee.newDowntimeReason()
+newReason = system.mes.oee.newDowntimeReason()
 
 # Set some attributes (leaving required fields blank to trigger validation errors)
-new_reason['enabled'] = True
+newReason['enabled'] = True
 
 # Validate the downtime reason
-validation_errors = system.mes.oee.validateDowntimeReason(**new_reason)
+validationErrors = system.mes.oee.validateDowntimeReason(**newReason)
 
 if not validation_errors:
     print "Validation passed. Downtime reason is valid."
 else:
     print "Validation failed. Errors:"
-    for field, errors in validation_errors.items():
+    for field, errors in validationErrors.items():
         print "  - {}: {}".format(field, ", ".join(errors))
 
 # Example of a valid reason
-valid_reason = system.mes.oee.newDowntimeReason()
-valid_reason['name'] = 'Mechanical'
-valid_reason['code'] = 100
+validReason = system.mes.oee.newDowntimeReason()
+validReason['name'] = 'Mechanical'
+validReason['code'] = 100
 # ... other required fields ...
 
-errors = system.mes.oee.validateDowntimeReason(**valid_reason)
+errors = system.mes.oee.validateDowntimeReason(**validReason)
 if not errors:
     print "\nThe second downtime reason is valid."
 ```

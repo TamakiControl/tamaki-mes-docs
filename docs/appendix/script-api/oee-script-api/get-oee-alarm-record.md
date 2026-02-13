@@ -61,9 +61,9 @@ Returns a JSON representation of the `OeeAlarmRecordDTO` object. Returns nothing
 
 ```python
 # Retrieve an alarm record by ID
-alarm_record = system.mes.oee.getOeeAlarmRecord('01JAP8RJBN-8ZTPXSGY-J9GSDPE1')
+alarmRecord = system.mes.oee.getOeeAlarmRecord('01JAP8RJBN-8ZTPXSGY-J9GSDPE1')
 
 # Output the record
-print "Active Date:", alarm_record['activeDate']
-print "Cleared Date:", alarm_record.get('clearedDate', 'Not cleared')
+print "Active Date:", alarmRecord['activeDate']
+print "Cleared Date:", alarmRecord.get('clearedDate', 'Not cleared')
 ```

@@ -74,10 +74,10 @@ A JSON representation of an `OeeConfigurationDTO` object for the specified locat
 
 ```python
 # Retrieve OEE configuration by location path
-location_path = "Enterprise/Site/Area/Line1"
+locationPath = "Enterprise/Site/Area/Line1"
 try:
-    config = system.mes.oee.getConfigForLocation(location_path)
+    config = system.mes.oee.getConfigForLocation(locationPath)
     print "OEE is enabled for this location:", config['enableAvailability']
 except:
-    print "No configuration found for location:", location_path
+    print "No configuration found for location:", locationPath
 ```

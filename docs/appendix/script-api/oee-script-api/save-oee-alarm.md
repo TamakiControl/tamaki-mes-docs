@@ -53,10 +53,10 @@ alarm['locationId'] = '01JAP8RJBN-8ZTPXSGY-J9GSDPE1'
 alarm['tagPath'] = '[default]Alarms/Line1/Motor1'
 alarm['minPriority'] = 'Medium'  # Valid values: Diagnostic, Low, Medium, High, Critical
 
-saved_alarm = system.mes.oee.saveOeeAlarm(**alarm)
+savedAlarm = system.mes.oee.saveOeeAlarm(**alarm)
 
 # Update an existing alarm
-existing_alarm = system.mes.oee.getOeeAlarm('01JAP8RJBN-8ZTPXSGY-J9GSDPE1')
-existing_alarm['minPriority'] = 'High'
-updated_alarm = system.mes.oee.saveOeeAlarm(**existing_alarm)
+existingAlarm = system.mes.oee.getOeeAlarm('01JAP8RJBN-8ZTPXSGY-J9GSDPE1')
+existingAlarm['minPriority'] = 'High'
+updatedAlarm = system.mes.oee.saveOeeAlarm(**existingAlarm)
 ```

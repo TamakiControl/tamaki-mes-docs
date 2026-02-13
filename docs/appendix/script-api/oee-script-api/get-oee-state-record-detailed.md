@@ -72,8 +72,8 @@ Returns a JSON representation of an `OeeStateRecordDetailedDTO` object with expa
 
 ```python
 # Get detailed state record
-detailed_record = system.mes.oee.getOeeStateRecordDetailed('01JAP8RJBN-8ZTPXSGY-J9GSDPE1')
+detailedRecord = system.mes.oee.getOeeStateRecordDetailed('01JAP8RJBN-8ZTPXSGY-J9GSDPE1')
 
 # Output the detailed record
-print(detailed_record)
+print(detailedRecord)
 ```

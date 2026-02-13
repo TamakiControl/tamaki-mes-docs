@@ -36,14 +36,14 @@ An `ApiResponse` object indicating success or failure. On success, the `data` at
 import system.file
 
 # Path to the JSON file
-file_path = "C:/path/to/oee_configurations.json"
+filePath = "C:/path/to/oee_configurations.json"
 
 try:
     # Read the file content as bytes
-    json_bytes = system.file.readFileAsBytes(file_path)
+    jsonBytes = system.file.readFileAsBytes(filePath)
 
     # Import the configurations
-    result = system.mes.oee.importOeeConfigurationsFromJson(json_bytes)
+    result = system.mes.oee.importOeeConfigurationsFromJson(jsonBytes)
 
     if result.get('success'):
         print "Successfully imported {} OEE configurations.".format(result.get('data'))

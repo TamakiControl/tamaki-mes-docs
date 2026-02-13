@@ -69,13 +69,13 @@ from java.util.concurrent import TimeUnit
 
 # Get all "Scheduled Downtime" mode records with "Idle" status longer than 1 minute from the last day
 location = "Enterprise/Site/Area/Line1"
-end_time = Date()
-start_time = Date(end_time.getTime() - TimeUnit.DAYS.toMillis(1))
+endTime = Date()
+startTime = Date(endTime.getTime() - TimeUnit.DAYS.toMillis(1))
 
-filtered_records = system.mes.oee.getModeRecordsFiltered(
+filteredRecords = system.mes.oee.getModeRecordsFiltered(
     locationPath=location,
-    startDate=start_time,
-    endDate=end_time,
+    startDate=startTime,
+    endDate=endTime,
     calculatedTypes=["Scheduled Downtime"], # Filter for scheduled downtime-related modes
     statuses=["IDLE"], # Filer for IDLE status
     minDurationSec=60 # Filter for modes lasting longer than a minute

@@ -62,8 +62,8 @@ Returns a JSON representation of the `OeeRecordDTO` object. Returns nothing if n
 
 ```python
 # Retrieve an OEE record by ID
-oee_record = system.mes.oee.getOeeRecord('01JAP8RJBN-8ZTPXSGY-J9GSDPE1')
+oeeRecord = system.mes.oee.getOeeRecord('01JAP8RJBN-8ZTPXSGY-J9GSDPE1')
 
 # Output the record
-print(oee_record)
+print(oeeRecord)
 ```

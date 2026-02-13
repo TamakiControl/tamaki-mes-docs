@@ -43,19 +43,19 @@ from java.util import Date
 from java.util.concurrent import TimeUnit
 
 # Define the cutoff date for pruning (e.g., 90 days ago)
-cutoff_millis = Date().getTime() - TimeUnit.DAYS.toMillis(90)
-cutoff_date = Date(cutoff_millis)
+cutoffMillis = Date().getTime() - TimeUnit.DAYS.toMillis(90)
+cutoffDate = Date(cutoffMillis)
 
 # Specify a set of locations to prune
-locations_to_prune = {"Enterprise/Site/Area/Line1", "Enterprise/Site/Area/Line2"}
+locationsToPrune = {"Enterprise/Site/Area/Line1", "Enterprise/Site/Area/Line2"}
 
 # Prune the records
 try:
-    system.mes.oee.pruneOeeRecords(locations_to_prune, cutoff_date)
-    print "Successfully pruned records older than", cutoff_date
+    system.mes.oee.pruneOeeRecords(locationsToPrune, cutoffDate)
+    print "Successfully pruned records older than", cutoffDate
 except Exception as e:
     print "Error during pruning:", str(e)
 
 # Prune records for all locations
-# system.mes.oee.pruneOeeRecords(set(), cutoff_date)
+# system.mes.oee.pruneOeeRecords(set(), cutoffDate)
 ```

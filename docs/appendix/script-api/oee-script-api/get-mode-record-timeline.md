@@ -64,11 +64,11 @@ from java.util.concurrent import TimeUnit
 
 # Get mode record timeline for the last 8 hours
 location = "Enterprise/Site/Area/Line1"
-end_time = Date()
-start_time = Date(end_time.getTime() - TimeUnit.HOURS.toMillis(8))
+endTime = Date()
+startTime = Date(endTime.getTime() - TimeUnit.HOURS.toMillis(8))
 
-timeline_segments = system.mes.oee.getModeRecordTimeline(location, start_time, end_time)
+timelineSegments = system.mes.oee.getModeRecordTimeline(location, startTime, endTime)
 
-for segment in timeline_segments:
+for segment in timelineSegments:
     print "Mode:", segment['name'], "Duration (sec):", segment['duration']
 ```

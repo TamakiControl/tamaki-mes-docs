@@ -79,17 +79,17 @@ from java.util.concurrent import TimeUnit
 
 # Get state record timeline for the last 8 hours, ignoring stops less than 30 seconds
 location = "Enterprise/Site/Area/Line1"
-end_time = Date()
-start_time = Date(end_time.getTime() - TimeUnit.HOURS.toMillis(8))
+endTime = Date()
+startTime = Date(endTime.getTime() - TimeUnit.HOURS.toMillis(8))
 
-timeline_segments = system.mes.oee.getStateRecordTimeline(
+timelineSegments = system.mes.oee.getStateRecordTimeline(
     locationIdOrPath=location,
-    startDate=start_time,
-    endDate=end_time,
+    startDate=startTime,
+    endDate=endTime,
     microstopThreshold=30,
     microstopThresholdTimeUnits='SECONDS'
 )
 
-for segment in timeline_segments:
+for segment in timelineSegments:
     print "State:", segment['name'], "Duration (sec):", segment['duration']
 ```

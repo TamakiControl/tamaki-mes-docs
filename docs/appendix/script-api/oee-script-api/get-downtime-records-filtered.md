@@ -80,10 +80,10 @@ from java.util.concurrent import TimeUnit
 
 # Get all downtime records longer than 5 minutes in the last 24 hours
 location = "Enterprise/Site/Area/Line1"
-end_time = Date()
-start_time = Date(end_time.getTime() - TimeUnit.HOURS.toMillis(24))
+endTime = Date()
+startTime = Date(endTime.getTime() - TimeUnit.HOURS.toMillis(24))
 
-downtime_records = system.mes.oee.getDowntimeRecordsFiltered(
+downtimeRecords = system.mes.oee.getDowntimeRecordsFiltered(
     locationPath=location,
     startDate=start_time,
     endDate=end_time,
@@ -91,6 +91,6 @@ downtime_records = system.mes.oee.getDowntimeRecordsFiltered(
     microstopThresholdTimeUnits='MINUTES'
 )
 
-for record in downtime_records:
+for record in downtimeRecords:
     print record['name'], record['duration']
 ```

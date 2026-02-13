@@ -36,14 +36,14 @@ An `ApiResponse` object indicating success or failure. On success, the `data` at
 import system.file
 
 # Path to the CSV file
-file_path = "C:/path/to/oee_states.csv"
+filePath = "C:/path/to/oee_states.csv"
 
 try:
     # Read the file content as bytes
-    csv_bytes = system.file.readFileAsBytes(file_path)
+    csvBytes = system.file.readFileAsBytes(filePath)
 
     # Import the OEE states
-    result = system.mes.oee.importOeeStatesFromCsv(csv_bytes)
+    result = system.mes.oee.importOeeStatesFromCsv(csvBytes)
 
     if result.get('success'):
         print "Successfully imported {} OEE states.".format(result.get('data'))

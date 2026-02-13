@@ -73,15 +73,15 @@ from java.util import Date
 import system.date
 
 # The ID of the downtime event to split
-state_record_id = "some-state-record-id"
+stateRecordId = "some-state-record-id"
 
 # The time to split the event
-split_datetime = system.date.parse("2023-10-27 14:30:00", "yyyy-MM-dd HH:mm:ss")
+splitDatetime = system.date.parse("2023-10-27 14:30:00", "yyyy-MM-dd HH:mm:ss")
 
 try:
     # Split the event
-    system.mes.oee.splitDowntimeEvent(state_record_id, split_datetime)
-    print "Successfully split downtime event", state_record_id
+    system.mes.oee.splitDowntimeEvent(stateRecordId, splitDatetime)
+    print "Successfully split downtime event", stateRecordId
 
     # After splitting, you can assign different reasons to the original and new records
     # (You would need to query for the new record that was created)

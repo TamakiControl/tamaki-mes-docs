@@ -74,10 +74,10 @@ A JSON representation of an `OeeConfigurationDTO` object for the specified ID.
 
 ```python
 # Retrieve an OEE configuration by ID
-config_id = "01JCH3ENEB-SV2X8B3W-NFY8WZNK"
+configId = "01JCH3ENEB-SV2X8B3W-NFY8WZNK"
 try:
-    config = system.mes.oee.getConfig(config_id)
+    config = system.mes.oee.getConfig(configId)
     print "Retrieved config for location:", config['locationPath']
 except:
-    print "No configuration found with ID:", config_id
+    print "No configuration found with ID:", configId
 ```

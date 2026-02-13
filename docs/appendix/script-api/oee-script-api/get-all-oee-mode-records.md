@@ -61,13 +61,13 @@ from java.util import Date
 from java.util.concurrent import TimeUnit
 
 # Define time range (last 24 hours)
-end_time = Date()
-start_time = Date(end_time.getTime() - TimeUnit.HOURS.toMillis(24))
+endTime = Date()
+startTime = Date(endTime.getTime() - TimeUnit.HOURS.toMillis(24))
 
 # Get all mode records for a production line
 location = "Enterprise/Site/Area/Line1"
-mode_records = system.mes.oee.getAllOeeModeRecords(location, start_time, end_time)
+modeRecords = system.mes.oee.getAllOeeModeRecords(location, startTime, endTime)
 
-for record in mode_records:
+for record in modeRecords:
     print record['name'], record['duration']
 ```

@@ -17,7 +17,7 @@ This method requires the `OEE.READ.VALIDATE` permission.
 ## Syntax
 
 ```python
-system.mes.oee.validateState(**state_data)
+system.mes.oee.validateState(**stateData)
 ```
 
 ## Parameters
@@ -51,30 +51,30 @@ A JSON object containing validation results. If the object is empty, validation 
 
 ```python
 # Create a new OEE state object
-new_state = system.mes.oee.newOeeState()
+newState = system.mes.oee.newOeeState()
 
 # Set some attributes (leaving required fields blank to trigger validation errors)
-new_state['enabled'] = True
+newState['enabled'] = True
 
 # Validate the state
-validation_errors = system.mes.oee.validateState(**new_state)
+validationErrors = system.mes.oee.validateState(**newState)
 
 if not validation_errors:
     print "Validation passed. State is valid."
 else:
     print "Validation failed. Errors:"
-    for field, errors in validation_errors.items():
+    for field, errors in validationErrors.items():
         print "  - {}: {}".format(field, ", ".join(errors))
 
 # Example of a valid state
-valid_state = system.mes.oee.newOeeState()
-valid_state['locationId'] = 'some-location-id'
-valid_state['name'] = 'Running'
-valid_state['code'] = 1
-valid_state['calculationType'] = 'RUNNING'
+validState = system.mes.oee.newOeeState()
+validState['locationId'] = 'some-location-id'
+validState['name'] = 'Running'
+validState['code'] = 1
+validState['calculationType'] = 'RUNNING'
 # ... other required fields ...
 
-errors = system.mes.oee.validateState(**valid_state)
+errors = system.mes.oee.validateState(**validState)
 if not errors:
     print "\nThe second state is valid."
 ```

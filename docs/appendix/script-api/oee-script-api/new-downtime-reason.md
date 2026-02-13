@@ -48,13 +48,13 @@ A JSON representation of an `OeeDowntimeReasonDTO` object with default values, r
 
 ```python
 # Create a new downtime reason object
-new_reason = system.mes.oee.newDowntimeReason()
+newReason = system.mes.oee.newDowntimeReason()
 
 # Now you can set properties on the new_reason object
-new_reason['locationId'] = 'some-location-id'
-new_reason['name'] = 'Mechanical Jam'
-new_reason['path'] = 'Mechanical/Jam'
+newReason['locationId'] = 'some-location-id'
+newReason['name'] = 'Mechanical Jam'
+newReason['path'] = 'Mechanical/Jam'
 
 # To persist the reason, pass it to the saveDowntimeReason function
-# saved_reason = system.mes.oee.saveDowntimeReason(**new_reason)
+# savedReason = system.mes.oee.saveDowntimeReason(**newReason)
 ```

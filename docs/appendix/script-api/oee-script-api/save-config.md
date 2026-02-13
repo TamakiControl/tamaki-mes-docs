@@ -17,7 +17,7 @@ This method requires the `OEE.WRITE.SAVE` permission.
 ## Syntax
 
 ```python
-system.mes.oee.saveConfig(**config_data)
+system.mes.oee.saveConfig(**configData)
 ```
 
 ## Parameters
@@ -72,20 +72,20 @@ A JSON representation of the saved `OeeConfigurationDTO` object.
 
 ```python
 # Create a new OEE configuration object
-new_config = system.mes.oee.newConfig()
+newConfig = system.mes.oee.newConfig()
 
 # Set attributes for the new configuration
-new_config['locationId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
-new_config['enabled'] = True
-new_config['productionCountExpression'] = '[default]Path/To/Prod/Count'
+newConfig['locationId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
+newConfig['enabled'] = True
+newConfig['productionCountExpression'] = '[default]Path/To/Prod/Count'
 
 # Save the new configuration to the system
-saved_config = system.mes.oee.saveConfig(**new_config)
+savedConfig = system.mes.oee.saveConfig(**newConfig)
 
-print "Saved OEE Configuration with ID:", saved_config['id']
+print "Saved OEE Configuration with ID:", savedConfig['id']
 
 # To update an existing configuration, include its ID
-# updated_config_data = system.mes.oee.getConfig(saved_config['id'])
-# updated_config_data['enabled'] = False
-# system.mes.oee.saveConfig(**updated_config_data)
+# updatedConfigData = system.mes.oee.getConfig(savedConfig['id'])
+# updatedConfigData['enabled'] = False
+# system.mes.oee.saveConfig(**updatedConfigData)
 ```

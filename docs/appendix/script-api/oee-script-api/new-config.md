@@ -72,13 +72,13 @@ A JSON representation of an `OeeConfigurationDTO` object with default values, re
 
 ```python
 # Create a new OEE configuration object
-new_config = system.mes.oee.newConfig()
+newConfig = system.mes.oee.newConfig()
 
 # Now you can set properties on the new_config object
-new_config['locationId'] = 'some-location-id'
-new_config['enabled'] = True
-new_config['productionCountExpression'] = '[default]Path/To/Prod/Count'
+newConfig['locationId'] = 'some-location-id'
+newConfig['enabled'] = True
+newConfig['productionCountExpression'] = '[default]Path/To/Prod/Count'
 
 # To persist the configuration, pass it to the saveConfig function
-# saved_config = system.mes.oee.saveConfig(**new_config)
+# savedConfig = system.mes.oee.saveConfig(**newConfig)
 ```

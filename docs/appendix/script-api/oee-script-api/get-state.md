@@ -53,15 +53,15 @@ A JSON representation of an `OeeStateDTO` object representing the requested OEE 
 
 ```python
 # Retrieve an OEE state by its ID
-state_id = "01JCH3ENEB-SV2X8B3W-NFY8WZNK"
+stateId = "01JCH3ENEB-SV2X8B3W-NFY8WZNK"
 
 try:
-    oee_state = system.mes.oee.getState(state_id)
-    if oee_state:
-        print "State Name:", oee_state['name']
-        print "State Type:", oee_state['calculationType']
-        print "Color:", oee_state['color']
+    oeeState = system.mes.oee.getState(stateId)
+    if oeeState:
+        print "State Name:", oeeState['name']
+        print "State Type:", oeeState['calculationType']
+        print "Color:", oeeState['color']
 except:
-    print "OEE State with ID '{}' not found.".format(state_id)
+    print "OEE State with ID '{}' not found.".format(stateId)
 
 ```

@@ -51,17 +51,17 @@ from java.util.concurrent import TimeUnit
 
 # Get state record summary for the last 24 hours
 location = "Enterprise/Site/Area/Line1"
-end_time = Date()
-start_time = Date(end_time.getTime() - TimeUnit.DAYS.toMillis(1))
+endTime = Date()
+startTime = Date(endTime.getTime() - TimeUnit.DAYS.toMillis(1))
 
-grouped_states = system.mes.oee.getStateRecordsGroupedByState(
+groupedStates = system.mes.oee.getStateRecordsGroupedByState(
     locationIdOrPath=location,
-    startDate=start_time,
-    endDate=end_time
+    startDate=startTime,
+    endDate=endTime
 )
 
-for state_group in grouped_states:
-    print "State:", state_group['name']
-    print "  Total Duration (hours):", state_group['duration'] / 3600.0
-    print "  Occurrence Count:", state_group['count']
+for stateGroup in groupedStates:
+    print "State:", stateGroup['name']
+    print "  Total Duration (hours):", stateGroup['duration'] / 3600.0
+    print "  Occurrence Count:", stateGroup['count']
 ```

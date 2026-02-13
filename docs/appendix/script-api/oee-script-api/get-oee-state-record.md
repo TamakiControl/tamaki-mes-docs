@@ -69,12 +69,12 @@ A JSON representation of an `OeeStateRecordDTO` object containing the details of
 
 ```python
 # Get a specific OEE state record
-state_record_id = "01JCH3STATE-REC-001"
-state_record = system.mes.oee.getOeeStateRecord(state_record_id)
+stateRecordId = "01JCH3STATE-REC-001"
+stateRecord = system.mes.oee.getOeeStateRecord(stateRecordId)
 
-if state_record:
-    print "State Name:", state_record['name']
-    print "Duration (sec):", state_record['duration']
-    if state_record['downtimeReason']:
-        print "Downtime Reason:", state_record['downtimeReason']
+if stateRecord:
+    print "State Name:", stateRecord['name']
+    print "Duration (sec):", stateRecord['duration']
+    if stateRecord['downtimeReason']:
+        print "Downtime Reason:", stateRecord['downtimeReason']
 ```

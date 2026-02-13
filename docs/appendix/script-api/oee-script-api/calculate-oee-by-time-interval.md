@@ -23,8 +23,8 @@ system.mes.oee.calculateOeeByTimeInterval(
     locationIdOrPath=location,
     startDate=start,
     endDate=end,
-    interval=interval_value,
-    intervalTimeUnits=time_units,
+    interval=intervalValue,
+    intervalTimeUnits=timeUnits,
     unitOfMeasureName=unit
 )
 ```
@@ -91,23 +91,23 @@ from java.util import Date
 import system.date
 
 # Calculate hourly OEE for the last 8 hours
-location_path = "Enterprise/Site/Area/Line1"
-end_date = Date()
-start_date = system.date.addHours(end_date, -8)
+locationPath = "Enterprise/Site/Area/Line1"
+endDate = Date()
+startDate = system.date.addHours(end_date, -8)
 
 hourly_oee = system.mes.oee.calculateOeeByTimeInterval(
-    location_path,
-    start_date,
-    end_date,
+    locationPath,
+    startDate,
+    endDate,
     1,
     "HOURS"
 )
 
 print "Hourly OEE Results:"
 for interval in hourly_oee:
-    start_time = interval.get('startTime')
-    end_time = interval.get('endTime')
-    oee_pct = interval.get('oeePercentage', 0)
-    print "Hour {} - {}: {}% OEE".format(start_time, end_time, oee_pct)
+    startTime = interval.get('startTime')
+    endTime = interval.get('endTime')
+    oeePct = interval.get('oeePercentage', 0)
+    print "Hour {} - {}: {}% OEE".format(startTime, endTime, oeePct)
 
 ```

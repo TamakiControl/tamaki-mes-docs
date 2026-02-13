@@ -17,7 +17,7 @@ This method requires the `OEE.WRITE.SAVE` permission.
 ## Syntax
 
 ```python
-system.mes.oee.saveMode(**mode_data)
+system.mes.oee.saveMode(**modeData)
 ```
 
 ## Parameters
@@ -50,21 +50,21 @@ A JSON representation of the saved `OeeModeDTO` object.
 
 ```python
 # Create a new OEE mode object
-new_mode = system.mes.oee.newOeeMode()
+newMode = system.mes.oee.newOeeMode()
 
 # Set attributes for the new mode
-new_mode['locationId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
-new_mode['name'] = 'Production'
-new_mode['calculationType'] = 'SCHEDULED_PRODUCTION'
-new_mode['enabled'] = True
+newMode['locationId'] = '01JCH3ENEB-SV2X8B3W-NFY8WZNK'
+newMode['name'] = 'Production'
+newMode['calculationType'] = 'SCHEDULED_PRODUCTION'
+newMode['enabled'] = True
 
 # Save the new mode
-saved_mode = system.mes.oee.saveMode(**new_mode)
+savedMode = system.mes.oee.saveMode(**newMode)
 
-print "Saved OEE Mode with ID:", saved_mode['id']
+print "Saved OEE Mode with ID:", savedMode['id']
 
 # To update an existing mode, include its ID
-# updated_mode_data = system.mes.oee.getMode(saved_mode['id'])
-# updated_mode_data['name'] = 'Full Production'
-# system.mes.oee.saveMode(**updated_mode_data)
+# updatedModeData = system.mes.oee.getMode(savedMode['id'])
+# updatedModeData['name'] = 'Full Production'
+# system.mes.oee.saveMode(**updatedModeData)
 ```

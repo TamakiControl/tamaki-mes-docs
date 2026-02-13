@@ -84,7 +84,7 @@ from java.util import Date
 from java.util.concurrent import TimeUnit
 # Get detailed state records with basic filters
 endDate = Date()
-startDate = Date(end_time.getTime() - TimeUnit.DAYS.toMillis(1))
+startDate = Date(endDate.getTime() - TimeUnit.DAYS.toMillis(1))
 
 detailed_records = system.mes.oee.getDetailedStateRecordsFiltered(
     'DairyCo/Plant1/Line1',

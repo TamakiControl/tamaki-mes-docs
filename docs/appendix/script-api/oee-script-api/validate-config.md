@@ -17,7 +17,7 @@ This method requires the `OEE.READ.VALIDATE` permission.
 ## Syntax
 
 ```python
-system.mes.oee.validateConfig(**config_data)
+system.mes.oee.validateConfig(**configData)
 ```
 
 ## Parameters
@@ -72,28 +72,28 @@ A JSON object containing validation results. If the object is empty, validation 
 
 ```python
 # Create a new OEE configuration object
-new_config = system.mes.oee.newConfig()
+newConfig = system.mes.oee.newConfig()
 
 # Set some attributes (leaving required fields blank to trigger validation errors)
-new_config['enabled'] = True
+newConfig['enabled'] = True
 
 # Validate the configuration
-validation_errors = system.mes.oee.validateConfig(**new_config)
+validationErrors = system.mes.oee.validateConfig(**newConfig)
 
 if not validation_errors:
     print "Validation passed. Configuration is valid."
 else:
     print "Validation failed. Errors:"
-    for field, errors in validation_errors.items():
+    for field, errors in validationErrors.items():
         print "  - {}: {}".format(field, ", ".join(errors))
 
 # Example of a valid configuration
-valid_config = system.mes.oee.newConfig()
-valid_config['locationId'] = 'some-location-id'
-valid_config['productionCountUnitOfMeasureId'] = 'some-uom-id'
+validConfig = system.mes.oee.newConfig()
+validConfig['locationId'] = 'some-location-id'
+validConfig['productionCountUnitOfMeasureId'] = 'some-uom-id'
 # ... other required fields ...
 
-errors = system.mes.oee.validateConfig(**valid_config)
+errors = system.mes.oee.validateConfig(**validConfig)
 if not errors:
     print "\nThe second configuration is valid."
 ```

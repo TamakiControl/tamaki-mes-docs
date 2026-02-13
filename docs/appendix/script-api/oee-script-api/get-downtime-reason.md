@@ -50,8 +50,8 @@ Returns a JSON representation of an `OeeDowntimeReasonDTO` object if found, or `
 
 ```python
 # Get a specific downtime reason
-reason_id = "01JCH3ENEB-SV2X8B3W-NFY8WZNK"
-reason = system.mes.oee.getDowntimeReason(reason_id)
+reasonId = "01JCH3ENEB-SV2X8B3W-NFY8WZNK"
+reason = system.mes.oee.getDowntimeReason(reasonId)
 
 if reason:
     print reason['name'], reason['code']

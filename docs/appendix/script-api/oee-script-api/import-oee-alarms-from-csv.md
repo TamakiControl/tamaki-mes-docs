@@ -46,14 +46,14 @@ An `ApiResponse` object where `data` is an `ImportResponseDTO` object containing
 import system.file
 
 # Path to the CSV file
-file_path = "C:/path/to/oee_alarms.csv"
+filePath = "C:/path/to/oee_alarms.csv"
 
 try:
     # Read the file content as bytes
-    csv_bytes = system.file.readFileAsBytes(file_path)
+    csvBytes = system.file.readFileAsBytes(filePath)
 
     # Import the alarms
-    result = system.mes.oee.importOeeAlarmsFromCsv(csv_bytes)
+    result = system.mes.oee.importOeeAlarmsFromCsv(csvBytes)
 
     if result.get('success'):
         print "Successfully imported {} OEE alarms.".format(result.get('data'))

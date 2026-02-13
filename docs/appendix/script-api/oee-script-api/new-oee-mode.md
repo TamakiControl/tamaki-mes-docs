@@ -50,13 +50,13 @@ A JSON representation of an `OeeModeDTO` object with default values, ready to be
 
 ```python
 # Create a new OEE mode object
-new_mode = system.mes.oee.newOeeMode()
+newMode = system.mes.oee.newOeeMode()
 
 # Now you can set properties on the new_mode object
-new_mode['locationId'] = 'some-location-id'
-new_mode['name'] = 'Running'
-new_mode['calculationType'] = 'SCHEDULED_PRODUCTION'
+newMode['locationId'] = 'some-location-id'
+newMode['name'] = 'Running'
+newMode['calculationType'] = 'SCHEDULED_PRODUCTION'
 
 # To persist the mode, pass it to the saveMode function
-# saved_mode = system.mes.oee.saveMode(**new_mode)
+# savedMode = system.mes.oee.saveMode(**newMode)
 ```

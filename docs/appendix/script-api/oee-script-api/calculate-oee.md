@@ -82,26 +82,26 @@ from java.util import Date
 import system.date
 
 # Calculate OEE for the last 24 hours
-location_path = "Enterprise/Site/Area/Line1"
-end_date = Date()
-start_date = system.date.addHours(end_date, -24)
+locationPath = "Enterprise/Site/Area/Line1"
+endDate = Date()
+startDate = system.date.addHours(endDate, -24)
 
-oee_result = system.mes.oee.calculateOee(location_path, start_date, end_date)
+oeeResult = system.mes.oee.calculateOee(location_path, start_date, end_date)
 
 print("OEE Calculation Results:")
-print("OEE:", oee_result.get('oee', 0))
-print("Availability:", oee_result.get('availability', 0))
-print("Performance:", oee_result.get('performance', 0))
-print("Quality:", oee_result.get('quality', 0))
+print("OEE:", oeeResult.get('oee', 0))
+print("Availability:", oeeResult.get('availability', 0))
+print("Performance:", oeeResult.get('performance', 0))
+print("Quality:", oeeResult.get('quality', 0))
 
 # Calculate OEE for a specific time range with unit of measure
-start_date = system.date.parse("2024-10-01 00:00:00", "yyyy-MM-dd HH:mm:ss")
-end_date = system.date.parse("2024-10-01 23:59:59", "yyyy-MM-dd HH:mm:ss")
+startDate = system.date.parse("2024-10-01 00:00:00", "yyyy-MM-dd HH:mm:ss")
+endDate = system.date.parse("2024-10-01 23:59:59", "yyyy-MM-dd HH:mm:ss")
 
 oee_detailed = system.mes.oee.calculateOee(
-    locationIdOrPath=location_path,
-    startDate=start_date,
-    endDate=end_date,
+    locationIdOrPath=locationPath,
+    startDate=startDate,
+    endDate=endDate,
     unitOfMeasureName="Parts"
 )
 
@@ -113,8 +113,8 @@ print("Scheduled Duration (sec):", oee_detailed.get('scheduledDurationSec', 0))
 print("Running Duration (sec):", oee_detailed.get('runningDurationSec', 0))
 
 # Calculate OEE for current day (endDate defaults to now)
-today_start = system.date.midnight(Date())
-oee_today = system.mes.oee.calculateOee(location_path, today_start)
+todayStart = system.date.midnight(Date())
+oeeToday = system.mes.oee.calculateOee(locationPath, todayStart)
 
-print("\nToday's OEE:", oee_today.get('oee', 0))
+print("\nToday's OEE:", oeeToday.get('oee', 0))
 ```

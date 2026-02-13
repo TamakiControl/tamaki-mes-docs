@@ -17,7 +17,7 @@ This method requires the `OEE.READ.VALIDATE` permission.
 ## Syntax
 
 ```python
-system.mes.oee.validateMode(**mode_data)
+system.mes.oee.validateMode(**modeData)
 ```
 
 ## Parameters
@@ -50,30 +50,30 @@ A JSON object containing validation results. If the object is empty, validation 
 
 ```python
 # Create a new OEE mode object
-new_mode = system.mes.oee.newOeeMode()
+newMode = system.mes.oee.newOeeMode()
 
 # Set some attributes (leaving required fields blank to trigger validation errors)
-new_mode['enabled'] = True
+newMode['enabled'] = True
 
 # Validate the mode
-validation_errors = system.mes.oee.validateMode(**new_mode)
+validationErrors = system.mes.oee.validateMode(**new_mode)
 
 if not validation_errors:
     print "Validation passed. Mode is valid."
 else:
     print "Validation failed. Errors:"
-    for field, errors in validation_errors.items():
+    for field, errors in validationErrors.items():
         print "  - {}: {}".format(field, ", ".join(errors))
 
 # Example of a valid mode
-valid_mode = system.mes.oee.newOeeMode()
-valid_mode['locationId'] = 'some-location-id'
-valid_mode['name'] = 'Production'
-valid_mode['code'] = 1
-valid_mode['calculationType'] = 'SCHEDULED_PRODUCTION'
+validMode = system.mes.oee.newOeeMode()
+validMode['locationId'] = 'some-location-id'
+validMode['name'] = 'Production'
+validMode['code'] = 1
+validMode['calculationType'] = 'SCHEDULED_PRODUCTION'
 # ... other required fields ...
 
-errors = system.mes.oee.validateMode(**valid_mode)
+errors = system.mes.oee.validateMode(**validMode)
 if not errors:
     print "\nThe second mode is valid."
 ```

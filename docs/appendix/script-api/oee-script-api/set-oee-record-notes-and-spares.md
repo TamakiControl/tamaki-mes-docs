@@ -66,11 +66,11 @@ Returns a JSON representation of the updated `OeeRecordDTO` object.
 
 ```python
 # Retrieve an OEE record by ID
-oee_record = system.mes.oee.getOeeRecord('01JAP8RJBN-8ZTPXSGY-J9GSDPE1')
+oeeRecord = system.mes.oee.getOeeRecord('01JAP8RJBN-8ZTPXSGY-J9GSDPE1')
 
 # Change record notes
-oee_record['notes'] = 'Changed notes'
+oeeRecord['notes'] = 'Changed notes'
 
 # Update OEE record notes
-system.mes.oee.setOeeRecordNotesAndSpares(**oee_record)
+system.mes.oee.setOeeRecordNotesAndSpares(**oeeRecord)
 ```

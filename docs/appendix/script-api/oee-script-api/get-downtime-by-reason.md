@@ -50,12 +50,12 @@ from java.util import Date
 from java.util.concurrent import TimeUnit
 
 # Get downtime by reason for the last 24 hours
-location_path = "Enterprise/Site/Area/Line1"
-end_date = Date()
-start_date = Date(end_date.getTime() - TimeUnit.HOURS.toMillis(24))
+locationPath = "Enterprise/Site/Area/Line1"
+endDate = Date()
+startDate = Date(endDate.getTime() - TimeUnit.HOURS.toMillis(24))
 
-downtime_by_reason = system.mes.oee.getDowntimeByReason(location_path, start_date, end_date)
+downtimeByReason = system.mes.oee.getDowntimeByReason(locationPath, startDate, endDate)
 
-for reason_data in downtime_by_reason:
-    print reason_data['downtimeReasonPath'], reason_data['duration']
+for reasonData in downtimeByReason:
+    print reasonData['downtimeReasonPath'], reasonData['duration']
 ```
