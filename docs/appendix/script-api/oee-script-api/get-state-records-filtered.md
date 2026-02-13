@@ -22,16 +22,16 @@ system.mes.oee.getStateRecordsFiltered(locationPath, startDate, endDate, eventTy
 
 ## Parameters
 
-| Parameter                     | Type       | Nullable | Description                                                           |
-|-------------------------------|------------|----------|-----------------------------------------------------------------------|
-| `locationPath`                | `String`   | False    | The location path to query.                                           |
-| `startDate`                   | `Date`     | False    | The start of the time range.                                          |
-| `endDate`                     | `Date`     | False    | The end of the time range.                                            |
-| `downtimeReasonPath`          | `String`   | True     | The path to a downtime reason to filter by.                           |
-| `eventTypes`                  | `String[]` | True     | A list of event types to include (e.g., `DOWNTIME`, `RUNNING`).       |
-| `microstopThreshold`          | `Integer`  | True     | A duration to filter out records shorter than this value.             |
-| `microstopThresholdTimeUnits` | `String`   | True     | The time units for `microstopThreshold` (e.g., `SECONDS`, `MINUTES`). |
-| `modeCodes`                   | `String[]` | True     | Integer codes for OEE modes.                                          |
+| Parameter                     | Type        | Nullable | Description                                                           |
+|-------------------------------|-------------|----------|-----------------------------------------------------------------------|
+| `locationPath`                | `String`    | False    | The location path to query.                                           |
+| `startDate`                   | `Date`      | False    | The start of the time range.                                          |
+| `endDate`                     | `Date`      | False    | The end of the time range.                                            |
+| `downtimeReasonPath`          | `String`    | True     | The path to a downtime reason to filter by.                           |
+| `eventTypes`                  | `String[]`  | True     | A list of event types to include (e.g., `DOWNTIME`, `RUNNING`).       |
+| `microstopThreshold`          | `Integer`   | True     | A duration to filter out records shorter than this value.             |
+| `microstopThresholdTimeUnits` | `String`    | True     | The time units for `microstopThreshold` (e.g., `SECONDS`, `MINUTES`). |
+| `modeCodes`                   | `Integer[]` | True     | Integer codes for OEE modes.                                          |
 
 ## Returns
 
@@ -82,13 +82,13 @@ from java.util.concurrent import TimeUnit
 
 # Get all "Fault" state records longer than 5 minutes from the last day
 location = "Enterprise/Site/Area/Line1"
-end_time = Date()
-start_time = Date(end_time.getTime() - TimeUnit.DAYS.toMillis(1))
+endTime = Date()
+startTime = Date(end_time.getTime() - TimeUnit.DAYS.toMillis(1))
 
 filtered_records = system.mes.oee.getStateRecordsFiltered(
     locationPath=location,
-    startDate=start_time,
-    endDate=end_time,
+    startDate=startTime,
+    endDate=endTime,
     eventTypes=["Downtime"], # Filter for downtime-related states
     microstopThreshold=5,
     microstopThresholdTimeUnits='MINUTES'

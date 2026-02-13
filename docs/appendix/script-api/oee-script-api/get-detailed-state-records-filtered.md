@@ -22,16 +22,16 @@ system.mes.oee.getDetailedStateRecordsFiltered(locationPath, startDate, endDate,
 
 ## Parameters
 
-| Parameter                     | Type       | Nullable | Description                                                                                                                                  |
-| ----------------------------- |------------| -------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `locationPath`                | `String`   | False    | The location path to find state records for.                                                                                                 |
-| `startDate`                   | `Date`     | False    | Start date for the search window.                                                                                                            |
-| `endDate`                     | `Date`     | False    | End date for the search window.                                                                                                              |
-| `microstopThreshold`          | `Integer`  | True     | Threshold value for filtering microstops. Used in conjunction with `microstopThresholdTimeUnits`.                                            |
-| `microstopThresholdTimeUnits` | `String`   | True     | Time units for the microstop threshold. Valid values: `SECONDS`, `MINUTES`, `HOURS`. Defaults to `SECONDS` if not specified.                 |
-| `eventTypes`                  | `String[]` | True     | Array of event types to filter by. Valid values depend on `OeeStateCalculationType` enum (e.g., `RUNNING`, `STOPPED`, `BLOCKED`, `STARVED`). |
-| `modeCodes`                   | `String[]` | True     | Array of mode codes to filter by.                                                                                                            |
-| `downtimeReasonPath`          | `String`   | True     | Filter by downtime reason path. If not specified or blank, defaults to `%` (matches all).                                                    |
+| Parameter                     | Type        | Nullable | Description                                                                                                                                  |
+| ----------------------------- |-------------| -------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `locationPath`                | `String`    | False    | The location path to find state records for.                                                                                                 |
+| `startDate`                   | `Date`      | False    | Start date for the search window.                                                                                                            |
+| `endDate`                     | `Date`      | False    | End date for the search window.                                                                                                              |
+| `microstopThreshold`          | `Integer`   | True     | Threshold value for filtering microstops. Used in conjunction with `microstopThresholdTimeUnits`.                                            |
+| `microstopThresholdTimeUnits` | `String`    | True     | Time units for the microstop threshold. Valid values: `SECONDS`, `MINUTES`, `HOURS`. Defaults to `SECONDS` if not specified.                 |
+| `eventTypes`                  | `String[]`  | True     | Array of event types to filter by. Valid values depend on `OeeStateCalculationType` enum (e.g., `RUNNING`, `STOPPED`, `BLOCKED`, `STARVED`). |
+| `modeCodes`                   | `Integer[]` | True     | Array of mode codes to filter by.                                                                                                            |
+| `downtimeReasonPath`          | `String`    | True     | Filter by downtime reason path. If not specified or blank, defaults to `%` (matches all).                                                    |
 
 ## Returns
 
@@ -80,45 +80,47 @@ Each object has the following properties:
 ## Code Examples
 
 ```python
+from java.util import Date
+from java.util.concurrent import TimeUnit
 # Get detailed state records with basic filters
-start_date = system.time.now()
-end_date = system.time.addHours(system.time.now(), -6)
+endDate = Date()
+startDate = Date(end_time.getTime() - TimeUnit.DAYS.toMillis(1))
 
 detailed_records = system.mes.oee.getDetailedStateRecordsFiltered(
     'DairyCo/Plant1/Line1',
-    start_date,
-    end_date
+    startDate,
+    endDate
 )
 
 # Filter by downtime reason path
 detailed_records = system.mes.oee.getDetailedStateRecordsFiltered(
     'DairyCo/Plant1/Line1',
-    start_date,
-    end_date,
+    startDate,
+    endDate,
     downtimeReasonPath='Equipment Failure'
 )
 
 # Filter by mode codes
 detailed_records = system.mes.oee.getDetailedStateRecordsFiltered(
     'DairyCo/Plant1/Line1',
-    start_date,
-    end_date,
-    modeCodes=['1', '2', '3']
+    startDate,
+    endDate,
+    modeCodes=[1, 2, 3]
 )
 
 # Filter by event types
 detailed_records = system.mes.oee.getDetailedStateRecordsFiltered(
     'DairyCo/Plant1/Line1',
-    start_date,
-    end_date,
+    startDate,
+    endDate,
     eventTypes=['RUNNING', 'IDLE']
 )
 
 # Filter microstops with threshold
 detailed_records = system.mes.oee.getDetailedStateRecordsFiltered(
     'DairyCo/Plant1/Line1',
-    start_date,
-    end_date,
+    startDate,
+    endDate,
     microstopThreshold=300,
     microstopThresholdTimeUnits='SECONDS'
 )
@@ -126,10 +128,10 @@ detailed_records = system.mes.oee.getDetailedStateRecordsFiltered(
 # Combine multiple filters
 detailed_records = system.mes.oee.getDetailedStateRecordsFiltered(
     'DairyCo/Plant1/Line1',
-    start_date,
-    end_date,
+    startDate,
+    endDate,
     downtimeReasonPath='Maintenance',
-    modeCodes=['1', '2'],
+    modeCodes=[1, 2],
     eventTypes=['IDLE'],
     microstopThreshold=600,
     microstopThresholdTimeUnits='SECONDS'
