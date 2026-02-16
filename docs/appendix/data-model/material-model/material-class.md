@@ -32,7 +32,7 @@ along with sample data where applicable.
 | `parent_id`     | `String` (ULID)   | References the parent material class, creating a hierarchical structure. See [material_classes](../material-model/material-class). | `01JAP8R5RT-3FPXQABY-7KQZT6VF`      |
 | `name`          | `String`          | Name of the material class. Required for each class and unique within the parent class.                                            | `Raw Material`                      |
 | `description`   | `String`          | Optional description providing more details about the material class.                                                              | `Base materials for production`     |
-| `path`          | `String` (unique) | Unique path for the material class, automatically generated based on the hierarchy.                                                | `/Materials/Raw Materials`          |
+| `path`          | `String` (unique) | Unique path for the material class, automatically generated based on the hierarchy.                                                | `/Materials/Raw Materials/`         |
 
 ## Field Details
 

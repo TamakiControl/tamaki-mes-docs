@@ -28,23 +28,12 @@ key entities involved in manufacturing operations, supporting functions like **O
 
    Materials are linked to operations, enabling tracking of inventory usage, lot tracing, and yield calculation.
 
-3. **Equipment**  
-   Includes non-consumable assets like forklifts, valves, pumps, fillers, and totes. This module supports:
-   - **Work Orders**: Maintenance and repair orders.
-   - **Maintenance Tracking**: Ensures equipment is operational and logs downtime.
-
-   Equipment is assigned to specific operations and locations, contributing to OEE and performance tracking.
-
 4. **Personnel**  
    Contains information about the people operating the equipment and running the machines. This includes:
    - **Users and Privileges**: Access controls for operators, supervisors, and other roles.
    - **Shift Assignments (Shifts)**: Assigns personnel to operations based on shifts.
 
    Personnel can be associated with operations and scheduling, ensuring appropriate staffing.
-
-5. **Recipes**  
-   Manages standard parameters (SPs) and values for operations. Recipes define how products should be processed in
-   specific operations, ensuring consistency and quality control.
 
 6. **Operation**  
    Represents the primary production tasks, such as:
@@ -73,7 +62,7 @@ key entities involved in manufacturing operations, supporting functions like **O
 
    Scheduling ensures that resources, orders, and personnel align with production timelines and goals.
 
-9. **Performance**  
+9. **OEE**  
    Tracks Operational Equipment Effectiveness (OEE) and logs downtime:
    - **OEE Data**: Monitors how efficiently the equipment and operations run.
    - **Downtime Logging**: Records any time equipment is non-operational, impacting productivity.
@@ -130,6 +119,12 @@ consistent ordering by creation time. The generator:
 
 The generator uses **Crockford’s Base32 encoding** for encoding the timestamp and random segments, providing compact,
 sortable identifiers.
+
+
+### Hierarchical Paths in Entities - TODO add links to these pages
+Several entities form a hierarchy (e.g., Location, MaterialClass, OeeDowntimeReason, PersonnelDepartment). This relationship is maintained by a column `parent_id` in each table that is used to keep a record's reference to its parent record. For easy querying and filtering this relationship is also displayed kept up to date in a `path` column as well. The `path` column contains a string with all the names of the hierarchy separated by a `/` delimiter and also ending in that same delimiter `/` (e.g., `Enterprise/Site/Area/Cell/Unit/` for the Location entity). This allows for easy querying of all records that fall under a certain parent (e.g., all Locations under a specific Site) without needing to perform recursive queries. 
+
+**NOTE**: It is important to note that the `path` column in the data model always ends in a `/` but the Api model will not include the trailing `/` when returning the path to the user.
 
 ### How Audit Fields Are Populated
 

@@ -41,7 +41,7 @@ with sample data where applicable.
 | `storage_capacity_unit_id` | `String` (ULID)   | References the unit of measure for storage capacity. See [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure). | `01JAP8RJBN-4VYZUKE1-LY2QHV8X`      |
 | `lot_storage_strategy`     | `String` (Enum)   | Strategy for storing different numbers of lots, as defined by the **LotStorageStrategy** enum.                                       | `KEEP_PREVIOUS`                     |
 | `lot_use_strategy`         | `String` (Enum)   | Strategy for using inventory lots, such as FIFO or LIFO, as defined by the **LotUseStrategy** enum.                                  | `FIFO`                              |
-| `path`                     | `String` (unique) | Unique path for the location, generated based on the hierarchy.                                                                      | `/Warehouse/Site1/UnitA`            |
+| `path`                     | `String` (unique) | Unique path for the location, generated based on the hierarchy.                                                                      | `/Warehouse/Site1/UnitA/`           |
 
 ## Field Details
 

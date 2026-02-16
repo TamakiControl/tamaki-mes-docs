@@ -32,7 +32,7 @@ each, along with sample data where applicable.
 | `parent_id`     | `String` (ULID)   | References the parent department, establishing a hierarchy.                                                      | `01JAP8R5RT-3FPXQABY-7KQZT6VF`      |
 | `name`          | `String`          | Name of the department. Required and unique within its parent department.                                        | `Engineering`                       |
 | `description`   | `String`          | Detailed description of the department's role and responsibilities.                                              | `Handles engineering tasks`         |
-| `path`          | `String` (unique) | Unique path for the department, generated based on the hierarchy.                                                | `/Corporate/Engineering`            |
+| `path`          | `String` (unique) | Unique path for the department, generated based on the hierarchy.                                                | `/Corporate/Engineering/`           |
 
 ## Field Details
 
