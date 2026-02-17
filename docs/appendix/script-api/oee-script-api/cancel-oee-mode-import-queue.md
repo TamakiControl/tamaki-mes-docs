@@ -1,12 +1,18 @@
 ---
-sidebar_position: 7
+sidebar_position: 100
 title: "cancelOeeModeImportQueue"
 description: "Cancels the current OeeMode import queue."
 ---
 
 # system.mes.oee.cancelOeeModeImportQueue
 
+## Description
+
 Cancels the current [OeeMode](../../data-model/oee-model/oee-mode.md) import queue.
+
+## Permissions
+
+This method requires the `OEE.WRITE.SAVE` permission.
 
 ## Syntax
 
@@ -16,13 +22,11 @@ system.mes.oee.cancelOeeModeImportQueue()
 
 ## Parameters
 
-| Parameter | Type | Nullable | Description                               |
-| --------- | ---- | -------- | ----------------------------------------- |
-| None      | -    | -        | This method does not take any parameters. |
+This method does not take any parameters.
 
 ## Returns
 
-the number of cancelled items in the queue
+Returns an Integer representing the number of canceled items in the queue
 
 ## Code Examples
 
