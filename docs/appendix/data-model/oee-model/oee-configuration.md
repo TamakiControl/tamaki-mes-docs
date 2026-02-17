@@ -8,10 +8,10 @@ description: "Documentation for the oee_configuration table, outlining its colum
 
 ## Overview
 
-The `OeeAlarmRecord` entity represents a historical record of an alarm event within the OEE system. Each object captures
-the state and metadata of Ignition alarms for OEE analysis and reporting. The entity contains several parameters
-such as the [Location](../location-model/location) and [Oee State Record](../oee-model/oee-state-record.md)
-corresponding to the alarm record, the Ignition source that produced the alarm, and the time the alarm was active.
+The `OeeConfiguration` entity represents a configuration for an OEE provider for a given location in the factory. The 
+entity contains several parameters to determine how OEE is calculated. Parameters include the location the configuration
+belongs to, parameters defining machine production count, parameters defining quality calculation, parameters defining 
+production rate, and parameters defining production order, among others.
 
 ## Table Structure
 
@@ -50,6 +50,14 @@ The following table outlines the SQL columns for the `oee_configurations` table,
 | `standard_rate_source`              | `String` (Enum) | Source for Standard Rate.                                                                                                                             | `STATIC`                            |
 | `standard_rate`                     | `Double`        | Standard Rate for this Unit.                                                                                                                          | `100.0`                             |
 | `standard_rate_expression`          | `String`        | Expression to provide the standard rate for this machine.                                                                                             | `{[provider]/tag/value}`            |
+| `production_rate_time_units`        | `String` (Enum) | Unit of measure for the machine production rate & standard rate.                                                                                      | `MINUTES`                           |
+| `enable_quality`                    | `Boolean`       | Enables Quality Calculations for Unit.                                                                                                                | `true`                              |
+| `quality_count_calc_type`           | `String` (Enum) | Calculation type for Quality Count.                                                                                                                   | `DELTA`                             |
+| `quality_strategy`                  | `String` (Enum) | Quality Strategy for this OEE Configuration.                                                                                                          | `WASTE_COUNT`                       |
+| `quality_count_expression`          | `String`        | Ignition Tag Path for Production quality Count Number.                                                                                                | `{[provider]/tag/value}`            |
+| `quality_count_overflow_value`      | `Double`        | Overflow value for quality count.                                                                                                                     | `5`                                 |
+| `production_order_source`           | `String` (Enum) | Source for the production order resolution.                                                                                                           | `EXPRESSION`                        |
+| `production_order_expression`       | `String`        | Expression to provide the production order (id or name) for the current oee record.                                                                   | `{[provider]/tag/value}`            |
 
 ## Field Details
 
@@ -124,7 +132,7 @@ Enables Performance Calculations for Unit.
 ### `unit_of_measure_id`
 
 References the unit of measure for machine production/quality counts.
-See [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure).
+See [unit_of_measure](../utility-models/unit-of-measure-model/unit-of-measure) for details.
 
 ### `production_count_expression`
 
@@ -152,3 +160,42 @@ Standard Rate for this Unit.
 ### `standard_rate_expression`
 
 Expression to provide the standard rate for this machine.
+
+### `production_rate_time_units`
+
+Unit of measure for the machine production rate & standard rate. Time Unit types are `NANOSECONDS`, `MICROSECONDS`,
+`MILLISECONDS`, `SECONDS`, `MINUTES`, `HOURS`, and `DAYS`. 
+
+### `enable_quality`
+
+Enables Quality Calculations for Unit.  
+
+### `quality_count_calc_type`
+
+Calculation type for Quality Count. The calculation types are `DIRECT` and `DELTA`
+
+### `quality_strategy`
+
+Quality Strategy for this OEE Configuration. The quality strategy is used to calculate an OEE State number. The quality 
+strategy types are `WASTE_COUNT` and `GOOD_COUNT`.
+
+### `quality_count_expression`
+
+Ignition Tag Path for Production quality Count Number.  
+
+### `quality_count_overflow_value`
+
+Overflow value for quality count. Only used in DELTA count calculation type.  When the count overflows, this value will 
+be added to the count. For example, if the machine will constantly reset the count at 1000 units, and we see 999 one 
+scan, and 4 on the next scan, we'll assume 5 additional units.
+
+### `production_order_source`
+
+Source for the production order resolution. Source types include `EXPRESSION` and `NONE`.
+
+### `production_order_expression`
+
+Expression to provide the production order (id or name) for the current oee record.
+
+
+

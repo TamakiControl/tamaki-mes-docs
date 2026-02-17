@@ -44,7 +44,7 @@ The following table outlines the SQL columns for the `oee_modes` table, providin
 ### `location_id`
 
 References the location for the OEE Mode.
-See [Location](../location-model/location).
+See [Location](../location-model/location) for details.
 
 ### `code`
 

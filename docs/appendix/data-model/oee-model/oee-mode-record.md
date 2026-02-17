@@ -46,7 +46,7 @@ The following table outlines the SQL columns for the `oee_mode_records` table, p
 ### `location_id`
 
 References the location for the mode record.
-See [Location](../location-model/location).
+See [Location](../location-model/location) for details.
 
 ### `code`
 
@@ -70,11 +70,11 @@ Hex color code for the mode.
 Status of the OEE record. Status types include `IDLE`, `RUNNING`, `COMPLETED`, `FAULTED`, `CANCELLED`, `UNKNOWN`, and
 `PAUSED`.
 
-### `startDate`
+### `start_date`
 
 Start date/time of mode record.
 
-### `endDate`
+### `end_date`
 
 End date/time of mode record.   
 

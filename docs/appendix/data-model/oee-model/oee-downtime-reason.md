@@ -40,7 +40,7 @@ The following table outlines the SQL columns for the `oee_downtime_reasons` tabl
 ### `location_id`
 
 References the parent location for the downtime reason.
-See [Location](../location-model/location). 
+See [Location](../location-model/location) for details. 
 
 ### `parent_id`
 
