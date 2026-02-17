@@ -44,7 +44,7 @@ The following table outlines the SQL columns for the `oee_state_records` table, 
 | `acknowledgedDate`           | `DateTime`       | The date when the state record was acknowledged.                                                                             | `2025-12-09T20:48:44Z`              |
 | `mode_record_id`             | `String` (ULID)  | Represents the current mode of the machine for the state record. See [Oee Mode Record](../oee-model/oee-mode-record).        | `02K4M9QY3F-7XW8A2ZL-QM9D6B1P`      |
 | `root_cause_state_record_id` | `String` (ULID)  | Represents the root cause state record for blocked/starved states.                                                           | `02K4M9QY3F-7XW8A2ZL-QM9D6B1P`      |
-| `oee_records`                | `Set<OeeRecord>` | List of OEE Records associated with this state record. See [OEE Record](../oee-model/oee-record).                            |                                     |
+| `oee_records`                | `Set<OeeRecord>` | List of OEE Records associated with this state record. See [OEE Record](../oee-model/oee-record).                            | `[record1, record2, record3]`       |
 | `primary_alarm_id`           | `String` (ULID)  | Primary alarm ID. Can be used to fetch the actual alarm record when needed.                                                  | `02K4M9QY3F-7XW8A2ZL-QM9D6B1P`      |
 
 ## Field Details
