@@ -1,5 +1,5 @@
 ---
-sidebar_position: 63
+sidebar_position: 64
 title: "getLotHistory"
 description: "Retrieves all inventory lot records given the inventory lot and other parameters."
 ---

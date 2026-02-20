@@ -1,5 +1,5 @@
 ---
-sidebar_position: 47
+sidebar_position: 48
 title: "newLot"
 description: "Generates an empty non-persisted inventory lot object to provide the structure to retrieve records from the database."
 ---

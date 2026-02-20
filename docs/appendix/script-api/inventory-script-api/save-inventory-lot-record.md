@@ -1,5 +1,5 @@
 ---
-sidebar_position: 59
+sidebar_position: 60
 title: "saveInventoryLotRecord"
 description: "Creates or updates an inventory lot record with specified parameters."
 ---

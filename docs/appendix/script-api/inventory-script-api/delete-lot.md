@@ -1,5 +1,5 @@
 ---
-sidebar_position: 56
+sidebar_position: 57
 title: "deleteLot"
 description: "Deletes the inventory lot with the given ID."
 ---

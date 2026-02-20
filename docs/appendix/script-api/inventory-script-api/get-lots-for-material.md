@@ -1,5 +1,5 @@
 ---
-sidebar_position: 53
+sidebar_position: 54
 title: "getLotsForMaterial"
 description: "Retrieves all inventory lots for a specified material using its ID or path."
 ---

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 54
+sidebar_position: 55
 title: "getInventoryLotReferences"
 description: "Retrieves a list of references to a inventory lots record with the given ID."
 ---
