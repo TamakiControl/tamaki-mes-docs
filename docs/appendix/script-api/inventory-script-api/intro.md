@@ -196,6 +196,10 @@ Retrieves all the [Inventories](../../data-model/inventory-model/inventory) reco
 
 Retrieves all the [Inventories](../../data-model/inventory-model/inventory) records at a given location and its children. Returns a list of JSON objects representing all inventories at the given location and its children.
 
+### [`getAllInventoryFor`](./get-all-inventory-for)
+
+Retrieves all [Inventories](../../data-model/inventory-model/inventory) for a location, material, lot, and/or statuses. Any of the parameters can be left blank to not filter by that parameter. If location is provided it will search for inventory at that location and all child locations.
+
 ### [`newLot`](./new-lot)
 
 Generates an empty non-persisted [Inventory Lots](../../data-model/inventory-model/inventory-lot) object to provide the structure required by the API to save a new record into the database. This method must be combined with the [saveLot](./save-lot) method in order to persist the record. Returns a JSON representation of the newly created Inventory Lot object.

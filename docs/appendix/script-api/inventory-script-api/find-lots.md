@@ -1,5 +1,5 @@
 ---
-sidebar_position: 49
+sidebar_position: 50
 title: "findLots"
 description: "Retrieves inventory lots based on the specified pagination, sort, and column constraint parameters."
 ---

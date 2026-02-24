@@ -1,5 +1,5 @@
 ---
-sidebar_position: 50
+sidebar_position: 51
 title: "getLot"
 description: "Retrieves the inventory lots with the given ID."
 ---

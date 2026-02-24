@@ -1,5 +1,5 @@
 ---
-sidebar_position: 51
+sidebar_position: 52
 title: "getLotByIdOrNameAndMaterial"
 description: "Retrieves an inventory lots record by its ID or name and by the material ID or path. If no material ID or path is provided, retrieves an inventory lots record by its ID or name."
 ---

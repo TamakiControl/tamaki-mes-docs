@@ -1,5 +1,5 @@
 ---
-sidebar_position: 55
+sidebar_position: 56
 title: "validateLot"
 description: "Validates the specified parameters for a new inventory lot and returns any validation errors."
 ---

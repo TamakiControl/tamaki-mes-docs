@@ -1,5 +1,5 @@
 ---
-sidebar_position: 62
+sidebar_position: 63
 title: "newLotHistoryRequest"
 description: "Generates an empty lot history request to provide the structure to retrieve records from the database."
 ---

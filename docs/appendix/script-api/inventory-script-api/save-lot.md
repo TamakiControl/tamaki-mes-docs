@@ -1,5 +1,5 @@
 ---
-sidebar_position: 48
+sidebar_position: 49
 title: "saveLot"
 description: "Creates or updates an inventory lot with specified parameters."
 ---
