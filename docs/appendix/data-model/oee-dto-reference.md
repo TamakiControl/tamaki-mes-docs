@@ -59,10 +59,10 @@ This document provides a comprehensive reference for all OEE (Overall Equipment 
 | `id`                                 | `String`                   | `True`   | The id of the OEE Configuration                                                     | `null`        |
 | `locationId`                         | `String`                   | `False`  | Identifier for the associated location                                              | `null`        |
 | `locationPath`                       | `String`                   | `True`   | Path for the associated location. For display purposes only                         | `null`        |
-| `maxRecordDuration`                  | `Integer`                  | `False`  | Maximum duration for an OEE record in seconds                                       | `600`         |
+| `maxRecordDuration`                  | `Integer`                  | `False`  | Maximum duration for an OEE production record in seconds                                       | `600`         |
 | `maxTimeBetweenExecutions`           | `Integer`                  | `True`   | Maximum # of seconds between executions                                             | `5`           |
 | `maxFlushInterval`                   | `Integer`                  | `True`   | Flush interval in seconds                                                           | `null`        |
-| `pruneDays`                          | `Integer`                  | `True`   | Number of days to retain OEE records                                                | `null`        |
+| `pruneDays`                          | `Integer`                  | `True`   | Number of days to retain OEE production records                                                | `null`        |
 | `modeExpression`                     | `String`                   | `True`   | Ignition expression used to determine the OEE mode                                  | `null`        |
 | `enableAvailability`                 | `Boolean`                  | `False`  | Flag to enable or disable OEE availability calculations                             | `true`        |
 | `stateExpression`                    | `String`                   | `True`   | Ignition expression for determining the machine status                              | `null`        |
@@ -86,7 +86,7 @@ This document provides a comprehensive reference for all OEE (Overall Equipment 
 | `qualityCountExpression`             | `String`                   | `True`   | Ignition expression used to determine the quality count for production              | `null`        |
 | `qualityCountOverflowValue`          | `Double`                   | `True`   | Overflow value used for quality count calculations                                  | `null`        |
 | `productionOrderSource`              | `OeeProductionOrderSource` | `False`  | Source for the production order resolution                                          | `NONE`        |
-| `productionOrderExpression`          | `String`                   | `True`   | Expression to provide the production order (id or name) for the current oee record  | `null`        |
+| `productionOrderExpression`          | `String`                   | `True`   | Expression to provide the production order (id or name) for the current oee production record  | `null`        |
 | `notes`                              | `String`                   | `True`   | Notes associated with the config                                                    | `null`        |
 | `enabled`                            | `boolean`                  | `True`   | Indicates whether the config is enabled                                             | `true`        |
 | `spare1`                             | `String`                   | `True`   | Extra field 1                                                                       | `null`        |
@@ -159,22 +159,22 @@ This document provides a comprehensive reference for all OEE (Overall Equipment 
 
 | Name                              | Type      | Nullable | Description                                                                  | Default Value   |
 | --------------------------------- | --------- | -------- | ---------------------------------------------------------------------------- | --------------- |
-| `locationId`                      | `String`  | `False`  | Identifier of the associated location where this OEE record was captured     | `null`          |
-| `locationPath`                    | `String`  | `True`   | Path of the location where this OEE record was captured                      | `null`          |
-| `startDate`                       | `Instant` | `False`  | Start date and time of the OEE record                                        | `Instant.now()` |
-| `endDate`                         | `Instant` | `True`   | End date and time of the OEE record                                          | `null`          |
-| `totalDurationSec`                | `Double`  | `False`  | Total duration of the OEE record in seconds                                  | `0.0`           |
-| `downtimeTotalDurationSec`        | `Double`  | `False`  | Total downtime duration of the OEE record in seconds                         | `0.0`           |
+| `locationId`                      | `String`  | `False`  | Identifier of the associated location where this OEE production record was captured     | `null`          |
+| `locationPath`                    | `String`  | `True`   | Path of the location where this OEE production record was captured                      | `null`          |
+| `startDate`                       | `Instant` | `False`  | Start date and time of the OEE production record                                        | `Instant.now()` |
+| `endDate`                         | `Instant` | `True`   | End date and time of the OEE production record                                          | `null`          |
+| `totalDurationSec`                | `Double`  | `False`  | Total duration of the OEE production record in seconds                                  | `0.0`           |
+| `downtimeTotalDurationSec`        | `Double`  | `False`  | Total downtime duration of the OEE production record in seconds                         | `0.0`           |
 | `downtimeEventAverageDurationSec` | `Double`  | `False`  | Average Duration in seconds for downtime events on the machine               | `0.0`           |
 | `downtimeEventCount`              | `Integer` | `False`  | Downtime Event Count during this record period                               | `0`             |
 | `downtimePercent`                 | `Double`  | `False`  | Percent of time of the total duration that the machine was in downtime state | `0.0`           |
 | `meanTimeBetweenFailuresSec`      | `Double`  | `False`  | The Mean Time Between Failures (MTBF) in seconds                             | `0.0`           |
 | `meanTimeToRepairSec`             | `Double`  | `False`  | The Mean Time To Repair (MTTR) in seconds                                    | `0.0`           |
-| `starvedTotalDurationSec`         | `Double`  | `False`  | Total starved duration of the OEE record in seconds                          | `0.0`           |
+| `starvedTotalDurationSec`         | `Double`  | `False`  | Total starved duration of the OEE production record in seconds                          | `0.0`           |
 | `starvedEventAverageDurationSec`  | `Double`  | `False`  | Average Duration in seconds for starved events on the machine                | `0.0`           |
 | `starvedEventCount`               | `Integer` | `False`  | Starved Event Count during this record period                                | `0`             |
 | `starvedPercent`                  | `Double`  | `False`  | Percent of time of the total duration that the machine was in starved state  | `0.0`           |
-| `blockedTotalDurationSec`         | `Double`  | `False`  | Total blocked duration of the OEE record in seconds                          | `0.0`           |
+| `blockedTotalDurationSec`         | `Double`  | `False`  | Total blocked duration of the OEE production record in seconds                          | `0.0`           |
 | `blockedEventAverageDurationSec`  | `Double`  | `False`  | Average Duration in seconds for blocked events on the machine                | `0.0`           |
 | `blockedEventCount`               | `Integer` | `False`  | Blocked Event Count during this record period                                | `0`             |
 | `blockedPercent`                  | `Double`  | `False`  | Percent of time of the total duration that the machine was in blocked state  | `0.0`           |
@@ -208,7 +208,7 @@ This document provides a comprehensive reference for all OEE (Overall Equipment 
 | `locationName`               | `String`                        | `True`   | Name of the associated location                                          | `null`                 |
 | `locationPath`               | `String`                        | `True`   | Path of the associated location where this mode was recorded             | `null`                 |
 | `code`                       | `Integer`                       | `False`  | Integer mode number                                                      | `null`                 |
-| `status`                     | `Status`                        | `False`  | Status of the OEE record (running, faulted, cancelled, complete etc.)    | `UNKNOWN`              |
+| `status`                     | `Status`                        | `False`  | Status of the OEE production record (running, faulted, cancelled, complete etc.)    | `UNKNOWN`              |
 | `startDate`                  | `Instant`                       | `False`  | Start date and time of the mode record                                   | `Instant.now()`        |
 | `endDate`                    | `Instant`                       | `True`   | End date and time of the mode record                                     | `null`                 |
 | `duration`                   | `Double`                        | `False`  | Total duration of the mode record in seconds                             | `0.0`                  |
@@ -236,22 +236,22 @@ This document provides a comprehensive reference for all OEE (Overall Equipment 
 | `duration`   | `Double`  | `True`   | The total aggregated duration of this mode in seconds                  | `null`        |
 | `count`      | `Long`    | `True`   | The number of occurrences of this mode                                 | `null`        |
 
-## OeeRecordDTO
+## OeeProductionRecordDTO
 
 | Name                                 | Type                 | Nullable | Description                                                                         | Default Value   |
 | ------------------------------------ | -------------------- | -------- | ----------------------------------------------------------------------------------- | --------------- |
-| `id`                                 | `String`             | `True`   | The id of the OEE Record                                                            | `null`          |
-| `locationId`                         | `String`             | `False`  | Identifier of the associated location where this OEE record was captured            | `null`          |
-| `locationPath`                       | `String`             | `True`   | Path of the location where this OEE record was captured                             | `null`          |
-| `status`                             | `Status`             | `False`  | Status of the OEE record (e.g., running, faulted, canceled, complete)               | `UNKNOWN`       |
-| `startDate`                          | `Instant`            | `False`  | Start date and time of the OEE record                                               | `Instant.now()` |
-| `endDate`                            | `Instant`            | `True`   | End date and time of the OEE record                                                 | `null`          |
-| `totalDurationSec`                   | `Double`             | `False`  | Total duration of the OEE record in seconds                                         | `0.0`           |
+| `id`                                 | `String`             | `True`   | The id of the OEE Production Record                                                            | `null`          |
+| `locationId`                         | `String`             | `False`  | Identifier of the associated location where this OEE production record was captured            | `null`          |
+| `locationPath`                       | `String`             | `True`   | Path of the location where this OEE production record was captured                             | `null`          |
+| `status`                             | `Status`             | `False`  | Status of the OEE production record (e.g., running, faulted, canceled, complete)               | `UNKNOWN`       |
+| `startDate`                          | `Instant`            | `False`  | Start date and time of the OEE production record                                               | `Instant.now()` |
+| `endDate`                            | `Instant`            | `True`   | End date and time of the OEE production record                                                 | `null`          |
+| `totalDurationSec`                   | `Double`             | `False`  | Total duration of the OEE production record in seconds                                         | `0.0`           |
 | `scheduledDurationSec`               | `Double`             | `False`  | Duration in seconds that the machine was scheduled to run during this record period | `0.0`           |
 | `runningDurationSec`                 | `Double`             | `False`  | Duration in seconds that the machine was actively running during this record period | `0.0`           |
 | `productionCount`                    | `Double`             | `False`  | Total number of units produced during this record period                            | `0.0`           |
 | `expectedProductionCount`            | `Double`             | `False`  | Expected number of units to be produced during this record period                   | `0.0`           |
-| `qualityStrategy`                    | `OeeQualityStrategy` | `False`  | Quality Strategy for this OEE Record                                                | `WASTE_COUNT`   |
+| `qualityStrategy`                    | `OeeQualityStrategy` | `False`  | Quality Strategy for this OEE Production Record                                                | `WASTE_COUNT`   |
 | `qualityCount`                       | `Double`             | `False`  | Total number of quality units recorded during this period                           | `0.0`           |
 | `productionCountUnitOfMeasureId`     | `String`             | `True`   | Identifier of the unit of measure for the production count                          | `null`          |
 | `productionCountUnitOfMeasureName`   | `String`             | `True`   | Name of the unit of measure for the production count                                | `null`          |
@@ -260,10 +260,10 @@ This document provides a comprehensive reference for all OEE (Overall Equipment 
 | `modeRecordId`                       | `String`             | `True`   | Identifier of the associated mode record                                            | `null`          |
 | `modeCode`                           | `Integer`            | `True`   | Code of the associated mode record                                                  | `null`          |
 | `standardRate`                       | `Double`             | `True`   | The standard rate for this record                                                   | `0.0`           |
-| `productionOrderId`                  | `String`             | `True`   | The Id of the production order associated with this OEE record                      | `null`          |
-| `productionOrderName`                | `String`             | `True`   | The name of the production order associated with this OEE record                    | `null`          |
-| `notes`                              | `String`             | `True`   | Notes associated with the OEE Record                                                | `null`          |
-| `enabled`                            | `boolean`            | `True`   | Indicates whether the OEE Record is enabled                                         | `true`          |
+| `productionOrderId`                  | `String`             | `True`   | The Id of the production order associated with this OEE production record                      | `null`          |
+| `productionOrderName`                | `String`             | `True`   | The name of the production order associated with this OEE production record                    | `null`          |
+| `notes`                              | `String`             | `True`   | Notes associated with the OEE Production Record                                                | `null`          |
+| `enabled`                            | `boolean`            | `True`   | Indicates whether the OEE Production Record is enabled                                         | `true`          |
 | `spare1`                             | `String`             | `True`   | Extra field 1                                                                       | `null`          |
 | `spare2`                             | `String`             | `True`   | Extra field 2                                                                       | `null`          |
 | `spare3`                             | `String`             | `True`   | Extra field 3                                                                       | `null`          |
@@ -272,11 +272,11 @@ This document provides a comprehensive reference for all OEE (Overall Equipment 
 
 | Name                                 | Type      | Nullable | Description                                                                         | Default Value   |
 | ------------------------------------ | --------- | -------- | ----------------------------------------------------------------------------------- | --------------- |
-| `locationId`                         | `String`  | `False`  | Identifier of the associated location where this OEE record was captured            | `null`          |
-| `locationPath`                       | `String`  | `True`   | Path of the location where this OEE record was captured                             | `null`          |
-| `startDate`                          | `Instant` | `False`  | Start date and time of the OEE record                                               | `Instant.now()` |
-| `endDate`                            | `Instant` | `True`   | End date and time of the OEE record                                                 | `null`          |
-| `totalDurationSec`                   | `Double`  | `False`  | Total duration of the OEE record in seconds                                         | `0.0`           |
+| `locationId`                         | `String`  | `False`  | Identifier of the associated location where this OEE production record was captured            | `null`          |
+| `locationPath`                       | `String`  | `True`   | Path of the location where this OEE production record was captured                             | `null`          |
+| `startDate`                          | `Instant` | `False`  | Start date and time of the OEE production record                                               | `Instant.now()` |
+| `endDate`                            | `Instant` | `True`   | End date and time of the OEE production record                                                 | `null`          |
+| `totalDurationSec`                   | `Double`  | `False`  | Total duration of the OEE production record in seconds                                         | `0.0`           |
 | `scheduledDurationSec`               | `Double`  | `False`  | Duration in seconds that the machine was scheduled to run during this record period | `0.0`           |
 | `runningDurationSec`                 | `Double`  | `False`  | Duration in seconds that the machine was actively running during this record period | `0.0`           |
 | `productionCount`                    | `Double`  | `False`  | Total number of units produced during this record period                            | `0.0`           |
@@ -325,7 +325,7 @@ This document provides a comprehensive reference for all OEE (Overall Equipment 
 | `name`                     | `String`                  | `False`  | Name of the recorded state                                                 | `null`          |
 | `calculationType`          | `OeeStateCalculationType` | `False`  | Specifies how this state contributes to OEE calculations                   | `DOWNTIME`      |
 | `color`                    | `String`                  | `False`  | Hex color code representing the state visually                             | `"#000000"`     |
-| `status`                   | `Status`                  | `False`  | Status of the OEE record (e.g., running, faulted, canceled, complete)      | `UNKNOWN`       |
+| `status`                   | `Status`                  | `False`  | Status of the OEE production record (e.g., running, faulted, canceled, complete)      | `UNKNOWN`       |
 | `startDate`                | `Instant`                 | `False`  | Start date and time of the state record                                    | `Instant.now()` |
 | `endDate`                  | `Instant`                 | `True`   | End date and time of the state record                                      | `null`          |
 | `duration`                 | `Double`                  | `False`  | Duration of the state record in seconds                                    | `0.0`           |

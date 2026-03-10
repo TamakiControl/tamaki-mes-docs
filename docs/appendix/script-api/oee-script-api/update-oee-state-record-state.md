@@ -43,7 +43,7 @@ Returns a JSON representation of the updated `OeeStaeRecordDTO` object.
 | `name`                     | `String`                  | `False`  | Name of the recorded state                                                 | `null`          |
 | `calculationType`          | `OeeStateCalculationType` | `False`  | Specifies how this state contributes to OEE calculations                   | `DOWNTIME`      |
 | `color`                    | `String`                  | `False`  | Hex color code representing the state visually                             | `"#000000"`     |
-| `status`                   | `Status`                  | `False`  | Status of the OEE record (e.g., running, faulted, canceled, complete)      | `UNKNOWN`       |
+| `status`                   | `Status`                  | `False`  | Status of the OEE production record (e.g., running, faulted, canceled, complete)      | `UNKNOWN`       |
 | `startDate`                | `Instant`                 | `False`  | Start date and time of the state record                                    | `Instant.now()` |
 | `endDate`                  | `Instant`                 | `True`   | End date and time of the state record                                      | `null`          |
 | `duration`                 | `Double`                  | `False`  | Duration of the state record in seconds                                    | `0.0`           |

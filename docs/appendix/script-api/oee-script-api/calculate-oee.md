@@ -39,11 +39,11 @@ Returns a JSON object containing calculated OEE metrics.
 
 | Name                                 | Type      | Nullable | Description                                                                                    | Default Value   |
 |--------------------------------------|-----------|----------|------------------------------------------------------------------------------------------------|-----------------|
-| `locationId`                         | `String`  | `False`  | Identifier of the associated location where this OEE record was captured                       | `null`          |
-| `locationPath`                       | `String`  | `True`   | Path of the location where this OEE record was captured                                        | `null`          |
-| `startDate`                          | `Instant` | `False`  | Start date and time of the OEE record                                                          | `Instant.now()` |
-| `endDate`                            | `Instant` | `True`   | End date and time of the OEE record                                                            | `null`          |
-| `totalDurationSec`                   | `Double`  | `False`  | Total duration of the OEE record in seconds                                                    | `0.0`           |
+| `locationId`                         | `String`  | `False`  | Identifier of the associated location where this OEE production record was captured                       | `null`          |
+| `locationPath`                       | `String`  | `True`   | Path of the location where this OEE production record was captured                                        | `null`          |
+| `startDate`                          | `Instant` | `False`  | Start date and time of the OEE production record                                                          | `Instant.now()` |
+| `endDate`                            | `Instant` | `True`   | End date and time of the OEE production record                                                            | `null`          |
+| `totalDurationSec`                   | `Double`  | `False`  | Total duration of the OEE production record in seconds                                                    | `0.0`           |
 | `scheduledDurationSec`               | `Double`  | `False`  | Duration in seconds that the machine was scheduled to run during this record period            | `0.0`           |
 | `scheduledProductionModeEventCount`  | `Integer` | `False`  | Total number of scheduled production mode events during this record period                     | `0`             |
 | `scheduledDowntimeDurationSec`       | `Double`  | `False`  | Duration in seconds that the machine was scheduled to be in downtime during this record period | `0.0`           |

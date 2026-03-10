@@ -68,7 +68,7 @@ Each object has the following properties:
 | `primaryAlarmName`         | `String`                  | `True`   | Primary alarm name, if applicable                                          | `null`          |
 | `primaryAlarmDisplayPath`  | `String`                  | `True`   | Primary alarm display path, if applicable                                  | `null`          |
 | `primaryAlarmLabel`        | `String`                  | `True`   | Primary alarm display name, if applicable                                  | `null`          |
-| `oeeRecords`               | `Set<OeeRecordDTO>`       | `True`   | List of associated OEE records that reference this state record            | `null`          |
+| `oeeProductionRecords`               | `Set<OeeProductionRecordDTO>`       | `True`   | List of associated OEE records that reference this state record            | `null`          |
 | `oeeModeRecord`            | `OeeModeRecordDTO`        | `True`   | OEE Mode Record associated with this state record                          | `null`          |
 | `rootCauseStateRecord`     | `OeeStateRecordDTO`       | `True`   | Root Cause State Record                                                    | `null`          |
 | `notes`                    | `String`                  | `True`   | Notes associated with the OEE State Record                                 | `null`          |

@@ -12,9 +12,9 @@ TODO: Description of OEE Mode entity
 
 TODO: Description of OEE State entity
 
-### 3. OEE Record
+### 3. OEE Production Record
 
-TODO: Description of OEE Record entity
+TODO: Description of OEE Production Record entity
 
 ### 4. OEE Mode Record
 

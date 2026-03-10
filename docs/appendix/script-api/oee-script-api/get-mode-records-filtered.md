@@ -46,7 +46,7 @@ Each object has the following properties:
 | `locationName`               | `String`                        | `True`   | Name of the associated location                                          | `null`                 |
 | `locationPath`               | `String`                        | `True`   | Path of the associated location where this mode was recorded             | `null`                 |
 | `code`                       | `Integer`                       | `False`  | Integer mode number                                                      | `null`                 |
-| `status`                     | `Status`                        | `False`  | Status of the OEE record (running, faulted, cancelled, complete etc.)    | `UNKNOWN`              |
+| `status`                     | `Status`                        | `False`  | Status of the OEE production record (running, faulted, cancelled, complete etc.)    | `UNKNOWN`              |
 | `startDate`                  | `Instant`                       | `False`  | Start date and time of the mode record                                   | `Instant.now()`        |
 | `endDate`                    | `Instant`                       | `True`   | End date and time of the mode record                                     | `null`                 |
 | `duration`                   | `Double`                        | `False`  | Total duration of the mode record in seconds                             | `0.0`                  |

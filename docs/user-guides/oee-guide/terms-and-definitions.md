@@ -176,6 +176,6 @@ This document provides definitions and explanations of key terms related to Over
 - **Evaluation Phase**: A scheduled task runs periodically (default: every 250ms but modifiable in [Tamaki MES Properties](../tamaki-mes-properties-guide/tamaki-mes-properties.md#oee)) to identify all dirty states. These states are then submitted to a thread pool executor for asynchronous evaluation. During evaluation, the service:
   - Processes state and mode changes
   - Calculates OEE metrics (availability, performance, quality)
-  - Creates or updates OEE records
+  - Creates or updates OEE production records
   - Handles record lifecycle transitions (start/stop records based on state changes)
   - Publishes results to tags for visualization

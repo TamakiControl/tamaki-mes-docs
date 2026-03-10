@@ -150,11 +150,11 @@ Deletes an [OEE Alarm](../../data-model/oee-model/oee-alarm) configuration by it
 
 ### Record Functions
 
-### [`getOeeRecord`](./get-oee-record)
+### [`getOeeProductionRecord`](./get-oee-production-record)
 
-Retrieves a specific [OEE Record](../../data-model/oee-model/oee-record) by its ID. Returns a JSON representation of the OEE Record object.
+Retrieves a specific [OEE Record](../../data-model/oee-model/oee-production-record) by its ID. Returns a JSON representation of the OEE Record object.
 
-### [`getAllOeeRecords`](./get-all-oee-records)
+### [`getAllOeeProductionRecords`](./get-all-oee-production-records)
 
 Retrieves all OEE records for a specific location within a date range. Returns a list of JSON objects representing OEE records.
 
@@ -218,7 +218,7 @@ Splits an existing downtime event (an OEE state record) at a specified time. Thi
 
 Splits an existing OEE state record at a specified time. This action modifies the original record, shortening its duration, and creates a new record for the remaining time. Returns a JSON representation of the new state record.
 
-### [`splitOeeRecord`](./split-oee-record)
+### [`splitOeeProductionRecord`](./split-oee-production-record)
 
 Splits an existing OEE record at a specified time. This action modifies the original record, shortening its duration, and creates a new record for the remaining time. Returns a JSON representation of the new record.
 
@@ -254,7 +254,7 @@ Retrieves mode records grouped by mode type for a specific location and time ran
 
 Retrieves aggregated OEE mode records with states breakdown for a specific location and time range. Returns a list of JSON representations of OEE Chart Segment objects.
 
-### [`pruneOeeRecords`](./prune-oee-records)
+### [`pruneOeeProductionRecords`](./prune-oee-production-records)
 
 Prunes OEE records for a given location that are older than the prune date.
 
@@ -266,13 +266,13 @@ Finds alarm records associated with a specific state record. Returns a list of J
 
 Retrieves an [OEE Alarm Record](../../data-model/oee-model/oee-alarm-record) by its ID. Returns a JSON representation of the OEE Alarm Record object.
 
-### [`setOeeRecordNotesAndSpares`](./set-oee-record-notes-and-spares)
+### [`setOeeProductionRecordNotesAndSpares`](./set-oee-production-record-notes-and-spares)
 
-Sets comment fields (notes, spare1, spare2, spare3) for an [OEE Record](../../data-model/oee-model/oee-record). Returns a JSON representation of the edited OEE Record
+Sets comment fields (notes, spare1, spare2, spare3) for an [OEE Record](../../data-model/oee-model/oee-production-record). Returns a JSON representation of the edited OEE Record
 
 ### [`setOeeModeRecordNotesAndSpares`](./set-oee-mode-record-notes-and-spares)
 
-Sets comment fields (notes, spare1, spare2, spare3) for an [OEE Mode Record](../../data-model/oee-model/oee-record). Returns a JSON representation of the edited OEE Mode Record
+Sets comment fields (notes, spare1, spare2, spare3) for an [OEE Mode Record](../../data-model/oee-model/oee-production-record). Returns a JSON representation of the edited OEE Mode Record
 
 ### Calculation/Utility Functions
 

@@ -1,38 +1,34 @@
 ---
-sidebar_position: 35
-title: "getOeeProductionRecordTimeline"
-description: "Gets production timeline data."
+sidebar_position: 61
+title: "setOeeProductionRecordNotesAndSpares"
+description: "Sets comment fields (notes, spare1, spare2, spare3) for an OEE Production Record."
 ---
 
-# system.mes.oee.getOeeProductionRecordTimeline
+# system.mes.oee.setOeeProductionRecordNotesAndSpares
 
 ## Description
 
-Retrieves production timeline data for OEE production records, providing a chronological view of production activities for a specific location within a time range.
+Sets comment fields (notes, spare1, spare2, spare3) for an [OEE Production Record](../../data-model/oee-model/oee-production-record).
+
+Accepts a full `OeeProductionRecordDTO` but only updates the notes and spare fields.
+
+The record is fetched fresh from the database by ID.
+
+Recommended to call with setOeeProductionRecordNotesAndSpares(**oeeProductionRecord) where oeeProductionRecord is an `OeeProductionRecordDTO` object.
 
 ## Permissions
 
-This method requires the `OEE.READ.GET` permission.
+This method requires the `OEE.WRITE.SAVE` permission.
 
 ## Syntax
 
 ```python
-system.mes.oee.getOeeProductionRecordTimeline(locationIdOrPath, startDate, endDate)
+system.mes.oee.setOeeProductionRecordNotesAndSpares(**oeeProductionRecord)
 ```
 
 ## Parameters
 
-| Parameter          | Type     | Nullable | Description                                       |
-| ------------------ | -------- | -------- | ------------------------------------------------- |
-| `locationIdOrPath` | `String` | False    | The location ID or path to get timeline data for. |
-| `startDate`        | `Date`   | False    | Start date for the timeline.                      |
-| `endDate`          | `Date`   | False    | End date for the timeline.                        |
-
-## Returns
-
-Returns a list of JSON representations of `OeeProductionRecordDTO` objects, adjusted to the specified time window.
-
-Each object has the following properties:
+An unpacked dictionary of `OeeProductionRecordDTO` fields.
 
 | Name                                 | Type                 | Nullable | Description                                                              | Default Value   |
 |--------------------------------------|----------------------|----------|--------------------------------------------------------------------------|-----------------|
@@ -62,23 +58,19 @@ Each object has the following properties:
 | `spare2`                             | `String`             | `True`   | Extra field 2                                                            | `null`          |
 | `spare3`                             | `String`             | `True`   | Extra field 3                                                            | `null`          |
 
+## Returns
+
+Returns a JSON representation of the updated `OeeProductionRecordDTO` object.
+
 ## Code Examples
 
 ```python
-from java.util import Date
-from java.util.concurrent import TimeUnit
+# Retrieve an OEE production record by ID
+oeeProductionRecord = system.mes.oee.getOeeProductionRecord('01JAP8RJBN-8ZTPXSGY-J9GSDPE1')
 
-# Get production timeline
-location = "Enterprise/Site/Area/Line1"
-endTime = Date()
-startTime = Date(endTime.getTime() - TimeUnit.HOURS.toMillis(8))
+# Change record notes
+oeeProductionRecord['notes'] = 'Changed notes'
 
-timeline = system.mes.oee.getOeeProductionRecordTimeline(
-    location,
-    startTime,
-    endTime
-)
-
-# Output the timeline data
-print(timeline)
+# Update OEE production record notes
+system.mes.oee.setOeeProductionRecordNotesAndSpares(**oeeProductionRecord)
 ```

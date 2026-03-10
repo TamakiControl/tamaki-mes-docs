@@ -35,10 +35,10 @@ A JSON representation of an `OeeConfigurationDTO` object for the specified locat
 | `id`                                 | `String`                         | `True`   | The id of the OEE Configuration                                                     | `null`        |
 | `locationId`                         | `String`                         | `False`  | Identifier for the associated location                                              | `null`        |
 | `locationPath`                       | `String`                         | `True`   | Path for the associated location. For display purposes only                         | `null`        |
-| `maxRecordDuration`                  | `Integer`                        | `False`  | Maximum duration for an OEE record in seconds                                       | `600`         |
+| `maxRecordDuration`                  | `Integer`                        | `False`  | Maximum duration for an OEE production record in seconds                                       | `600`         |
 | `maxTimeBetweenExecutions`           | `Integer`                        | `True`   | Maximum # of seconds between executions                                             | `5`           |
 | `maxFlushInterval`                   | `Integer`                        | `True`   | Flush interval in seconds                                                           | `30`          |
-| `pruneDays`                          | `Integer`                        | `True`   | Number of days to retain OEE records                                                | `null`        |
+| `pruneDays`                          | `Integer`                        | `True`   | Number of days to retain OEE production records                                                | `null`        |
 | `modeExpression`                     | `String`                         | `True`   | Ignition expression used to determine the OEE mode                                  | `null`        |
 | `enableAvailability`                 | `Boolean`                        | `False`  | Flag to enable or disable OEE availability calculations                             | `true`        |
 | `stateExpression`                    | `String`                         | `True`   | Ignition expression for determining the machine status                              | `null`        |
@@ -63,7 +63,7 @@ A JSON representation of an `OeeConfigurationDTO` object for the specified locat
 | `qualityCountExpression`             | `String`                         | `True`   | Ignition expression used to determine the quality count for production              | `null`        |
 | `qualityCountOverflowValue`          | `Double`                         | `True`   | Overflow value used for quality count calculations                                  | `null`        |
 | `productionOrderSource`              | `OeeProductionOrderSource`       | `False`  | Source for the production order resolution                                          | `NONE`        |
-| `productionOrderExpression`          | `String`                         | `True`   | Expression to provide the production order (id or name) for the current oee record  | `null`        |
+| `productionOrderExpression`          | `String`                         | `True`   | Expression to provide the production order (id or name) for the current oee production record  | `null`        |
 | `notes`                              | `String`                         | `True`   | Notes associated with the config                                                    | `null`        |
 | `enabled`                            | `boolean`                        | `True`   | Indicates whether the config is enabled                                             | `true`        |
 | `spare1`                             | `String`                         | `True`   | Extra field 1                                                                       | `null`        |

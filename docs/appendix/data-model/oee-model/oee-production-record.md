@@ -1,18 +1,18 @@
 ---
 sidebar_position: 3
-title: "oee_records"
-description: "Documentation for the oee_records table, outlining its columns and structure."
+title: "oee_production_records"
+description: "Documentation for the oee_production_records table, outlining its columns and structure."
 ---
 
-# OEE Record
+# OEE Production Record
 
 ## Overview
 
-TODO: Add overview description of OEE Record entity
+TODO: Add overview description of OEE Production Record entity
 
 ## Table Structure
 
-The following table outlines the SQL columns for the `oee_records` table, providing a brief description of each, along
+The following table outlines the SQL columns for the `oee_production_records` table, providing a brief description of each, along
 with sample data where applicable.
 
 | Column                                    | Type                | Description                                                                                                                                   | Example                                                                                                        |
