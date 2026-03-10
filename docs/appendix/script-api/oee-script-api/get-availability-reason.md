@@ -22,16 +22,17 @@ system.mes.oee.getAvailabilityReason(id)
 
 ## Parameters
 
-| Parameter | Type            | Nullable | Description                                  |
-| --------- | --------------- | -------- | -------------------------------------------- |
+| Parameter | Type            | Nullable | Description                                      |
+|-----------|-----------------|----------|--------------------------------------------------|
 | `id`      | `String` (ULID) | False    | The ULID of the availability reason to retrieve. |
 
 ## Returns
 
-Returns a JSON representation of an `OeeAvailabilityReasonDTO` object if found, or `None` if the availability reason doesn't exist.
+Returns a JSON representation of an `OeeAvailabilityReasonDTO` object if found, or `None` if the availability reason
+doesn't exist.
 
-| Name           | Type      | Nullable | Description                                                                | Default Value |
-| -------------- | --------- | -------- | -------------------------------------------------------------------------- | ------------- |
+| Name           | Type      | Nullable | Description                                                                    | Default Value |
+|----------------|-----------|----------|--------------------------------------------------------------------------------|---------------|
 | `id`           | `String`  | `True`   | The id of the Availability Reason                                              | `null`        |
 | `locationId`   | `String`  | `True`   | Identifier of the associated location where this availability reason applies   | `null`        |
 | `locationPath` | `String`  | `True`   | Path of the associated location where this availability reason applies         | `null`        |
@@ -42,9 +43,9 @@ Returns a JSON representation of an `OeeAvailabilityReasonDTO` object if found, 
 | `path`         | `String`  | `True`   | Path representation of the availability reason within a hierarchical structure | `null`        |
 | `notes`        | `String`  | `True`   | Notes associated with the Availability Reason                                  | `null`        |
 | `enabled`      | `boolean` | `True`   | Indicates whether the Availability Reason is enabled                           | `true`        |
-| `spare1`       | `String`  | `True`   | Extra field 1                                                              | `null`        |
-| `spare2`       | `String`  | `True`   | Extra field 2                                                              | `null`        |
-| `spare3`       | `String`  | `True`   | Extra field 3                                                              | `null`        |
+| `spare1`       | `String`  | `True`   | Extra field 1                                                                  | `null`        |
+| `spare2`       | `String`  | `True`   | Extra field 2                                                                  | `null`        |
+| `spare3`       | `String`  | `True`   | Extra field 3                                                                  | `null`        |
 
 ## Code Examples
 

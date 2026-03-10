@@ -8,7 +8,8 @@ description: 'Validates an OEE availability reason object.'
 
 ## Description
 
-Validates an OEE Availability Reason object against the system's business rules without saving it. This is useful for checking if a availability reason is valid before attempting to save it.
+Validates an OEE Availability Reason object without saving it. This is useful for
+checking if a availability reason is valid before attempting to save it.
 
 ## Permissions
 
@@ -24,8 +25,8 @@ system.mes.oee.validateAvailabilityReason(**reasonData)
 
 An unpacked dictionary of `OeeAvailabilityReasonDTO` fields.
 
-| Parameter      | Type      | Nullable | Description                                                                | Default Value |
-| -------------- | --------- | -------- | -------------------------------------------------------------------------- | ------------- |
+| Parameter      | Type      | Nullable | Description                                                                    | Default Value |
+|----------------|-----------|----------|--------------------------------------------------------------------------------|---------------|
 | `id`           | `String`  | `True`   | The id of the Availability Reason                                              | `null`        |
 | `locationId`   | `String`  | `True`   | Identifier of the associated location where this availability reason applies   | `null`        |
 | `locationPath` | `String`  | `True`   | Path of the associated location where this availability reason applies         | `null`        |
@@ -36,13 +37,14 @@ An unpacked dictionary of `OeeAvailabilityReasonDTO` fields.
 | `path`         | `String`  | `True`   | Path representation of the availability reason within a hierarchical structure | `null`        |
 | `notes`        | `String`  | `True`   | Notes associated with the Availability Reason                                  | `null`        |
 | `enabled`      | `boolean` | `True`   | Indicates whether the Availability Reason is enabled                           | `true`        |
-| `spare1`       | `String`  | `True`   | Extra field 1                                                              | `null`        |
-| `spare2`       | `String`  | `True`   | Extra field 2                                                              | `null`        |
-| `spare3`       | `String`  | `True`   | Extra field 3                                                              | `null`        |
+| `spare1`       | `String`  | `True`   | Extra field 1                                                                  | `null`        |
+| `spare2`       | `String`  | `True`   | Extra field 2                                                                  | `null`        |
+| `spare3`       | `String`  | `True`   | Extra field 3                                                                  | `null`        |
 
 ## Returns
 
-A JSON object containing validation results. If the object is empty, validation passed. If it contains entries, the keys are the field names and the values are lists of validation error messages.
+A JSON object containing validation results. If the object is empty, validation passed. If it contains entries, the keys
+are the field names and the values are lists of validation error messages.
 
 ## Code Examples
 

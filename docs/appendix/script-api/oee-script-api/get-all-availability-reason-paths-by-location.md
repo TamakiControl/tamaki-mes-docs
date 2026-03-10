@@ -8,7 +8,8 @@ description: 'Retrieves all availability reason paths for a specific location as
 
 ## Description
 
-Retrieves the full hierarchical path for all OEE Availability Reasons configured for a specific location. This method returns a simple list of strings, where each string is the complete path of a availability reason.
+Retrieves the full hierarchical path for all OEE Availability Reasons configured for a specific location. This method
+returns a simple list of strings, where each string is the complete path of a availability reason.
 
 ## Permissions
 
@@ -23,12 +24,13 @@ system.mes.oee.getAllAvailabilityReasonPathsByLocation(locationIdOrPath)
 ## Parameters
 
 | Parameter          | Type     | Nullable | Description                                                               |
-| ------------------ | -------- | -------- |---------------------------------------------------------------------------|
+|--------------------|----------|----------|---------------------------------------------------------------------------|
 | `locationIdOrPath` | `String` | True     | The ID or path of the location. If null, returns paths for all locations. |
 
 ## Returns
 
-A list of strings, where each string is the full hierarchical path of a availability reason (e.g., `"Equipment/Mechanical/Pump Failure"`).
+A list of strings, where each string is the full hierarchical path of a availability reason (e.g.,
+`"Equipment/Mechanical/Pump Failure"`).
 
 ## Code Examples
 

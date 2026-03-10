@@ -8,7 +8,8 @@ description: 'Retrieves all availability reason codes for a specific location as
 
 ## Description
 
-Retrieves all OEE Availability Reasons configured for a specific location as a flat list, regardless of their hierarchical structure.
+Retrieves all OEE Availability Reasons configured for a specific location as a flat list, regardless of their
+hierarchical structure.
 
 ## Permissions
 
@@ -23,17 +24,17 @@ system.mes.oee.getAllAvailabilityReasonCodesByLocation(locationIdOrPath)
 ## Parameters
 
 | Parameter          | Type     | Nullable | Description                                                                 |
-| ------------------ | -------- | -------- |-----------------------------------------------------------------------------|
+|--------------------|----------|----------|-----------------------------------------------------------------------------|
 | `locationIdOrPath` | `String` | True     | The ID or path of the location. If null, returns reasons for all locations. |
 
 ## Returns
 
-A list of JSON objects representing `OeeAvailabilityReasonDTO` objects. 
+A list of JSON objects representing `OeeAvailabilityReasonDTO` objects.
 
 Each object has the following properties:
 
-| Name           | Type      | Nullable | Description                                                                | Default Value |
-| -------------- | --------- | -------- | -------------------------------------------------------------------------- | ------------- |
+| Name           | Type      | Nullable | Description                                                                    | Default Value |
+|----------------|-----------|----------|--------------------------------------------------------------------------------|---------------|
 | `id`           | `String`  | `True`   | The id of the Availability Reason                                              | `null`        |
 | `locationId`   | `String`  | `True`   | Identifier of the associated location where this availability reason applies   | `null`        |
 | `locationPath` | `String`  | `True`   | Path of the associated location where this availability reason applies         | `null`        |
@@ -44,9 +45,9 @@ Each object has the following properties:
 | `path`         | `String`  | `True`   | Path representation of the availability reason within a hierarchical structure | `null`        |
 | `notes`        | `String`  | `True`   | Notes associated with the Availability Reason                                  | `null`        |
 | `enabled`      | `boolean` | `True`   | Indicates whether the Availability Reason is enabled                           | `true`        |
-| `spare1`       | `String`  | `True`   | Extra field 1                                                              | `null`        |
-| `spare2`       | `String`  | `True`   | Extra field 2                                                              | `null`        |
-| `spare3`       | `String`  | `True`   | Extra field 3                                                              | `null`        |
+| `spare1`       | `String`  | `True`   | Extra field 1                                                                  | `null`        |
+| `spare2`       | `String`  | `True`   | Extra field 2                                                                  | `null`        |
+| `spare3`       | `String`  | `True`   | Extra field 3                                                                  | `null`        |
 
 ## Code Examples
 
