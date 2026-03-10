@@ -88,39 +88,39 @@ Validates the specified parameters for an OEE State record and returns any valid
 
 Deletes an OEE State record by its ID. This cannot delete a state with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
 
-### Downtime Reason Functions
+### Availability Reason Functions
 
-### [`newDowntimeReason`](./new-downtime-reason)
+### [`newAvailabilityReason`](./new-availability-reason)
 
-Generates an empty non-persisted Downtime Reason object to provide the structure required by the API to save a new record into the database. This method must be combined with the [saveDowntimeReason](./save-downtime-reason) method in order to persist the record. Returns a JSON representation of the newly created downtime reason object.
+Generates an empty non-persisted Availability Reason object to provide the structure required by the API to save a new record into the database. This method must be combined with the [saveAvailabilityReason](./save-availability-reason) method in order to persist the record. Returns a JSON representation of the newly created availability reason object.
 
-### [`getDowntimeReason`](./get-downtime-reason)
+### [`getAvailabilityReason`](./get-availability-reason)
 
-Retrieves a Downtime Reason record by its ID. Returns a JSON representation of the downtime reason.
+Retrieves a Availability Reason record by its ID. Returns a JSON representation of the availability reason.
 
-### [`getAllDowntimeReasonCodesByLocation`](./get-all-downtime-reason-codes-by-location)
+### [`getAllAvailabilityReasonCodesByLocation`](./get-all-availability-reason-codes-by-location)
 
-Retrieves all Downtime Reason records for a specific location. Returns a list of JSON objects representing all downtime reasons for the given location.
+Retrieves all Availability Reason records for a specific location. Returns a list of JSON objects representing all availability reasons for the given location.
 
-### [`getAllDowntimeReasonCodesByLocationHierarchical`](./get-all-downtime-reason-codes-by-location-hierarchical)
+### [`getAllAvailabilityReasonCodesByLocationHierarchical`](./get-all-availability-reason-codes-by-location-hierarchical)
 
-Retrieves all Downtime Reason records for a specific location in hierarchical format. Returns a hierarchical list of JSON objects representing all downtime reasons for the given location.
+Retrieves all Availability Reason records for a specific location in hierarchical format. Returns a hierarchical list of JSON objects representing all availability reasons for the given location.
 
-### [`getAllDowntimeReasonPathsByLocation`](./get-all-downtime-reason-paths-by-location)
+### [`getAllAvailabilityReasonPathsByLocation`](./get-all-availability-reason-paths-by-location)
 
-Retrieves all downtime reason paths for a specific location. Returns a list of strings representing the paths.
+Retrieves all availability reason paths for a specific location. Returns a list of strings representing the paths.
 
-### [`saveDowntimeReason`](./save-downtime-reason)
+### [`saveAvailabilityReason`](./save-availability-reason)
 
-Creates or updates a Downtime Reason record in the system based on the provided parameters. Returns a JSON representation of the saved downtime reason.
+Creates or updates a Availability Reason record in the system based on the provided parameters. Returns a JSON representation of the saved availability reason.
 
-### [`validateDowntimeReason`](./validate-downtime-reason)
+### [`validateAvailabilityReason`](./validate-availability-reason)
 
-Validates the specified parameters for a Downtime Reason record and returns any validation errors. Returns a JSON object where keys are field names and values are lists of validation violation messages.
+Validates the specified parameters for a Availability Reason record and returns any validation errors. Returns a JSON object where keys are field names and values are lists of validation violation messages.
 
-### [`deleteDowntimeReason`](./delete-downtime-reason)
+### [`deleteAvailabilityReason`](./delete-availability-reason)
 
-Deletes a Downtime Reason record by its ID. This cannot delete a downtime reason with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
+Deletes a Availability Reason record by its ID. This cannot delete a availability reason with references to it. If successful, an ApiResponse Object is returned with the success bool set True.
 
 ### Oee Alarm Functions
 
@@ -186,7 +186,7 @@ Retrieves all OEE Mode records that match the provided filters such as location,
 
 Retrieves [OEE State Records](../../data-model/oee-model/oee-state-record) with detailed information including related mode records, alarm records, and other associated data. Returns a list of JSON objects representations of OEE State Record Detailed objects.
 
-### [`getDowntimeRecordsFiltered`](./get-downtime-records-filtered)
+### [`getDowntimeRecordsFiltered`](./get-availability-records-filtered)
 
 Retrieves filtered downtime records based on various criteria. Returns a list of JSON representations of OEE State Record objects.
 
@@ -194,9 +194,9 @@ Retrieves filtered downtime records based on various criteria. Returns a list of
 
 Retrieves state record timeline data for a specific location within a date range. Returns a list of JSON representations of OEE State Record objects.
 
-### [`setDowntimeReasonForStateRecord`](./set-downtime-reason-for-state-record)
+### [`setAvailabilityReasonForStateRecord`](./set-availability-reason-for-state-record)
 
-Sets a downtime reason for a specific state record, with optional notes and acknowledgment. Returns a JSON representation of the updated state record.
+Sets a availability reason for a specific state record, with optional notes and acknowledgment. Returns a JSON representation of the updated state record.
 
 ### [`setPrimaryAlarmRecordForStateRecord`](./set-primary-alarm-record-for-state-record)
 
@@ -206,9 +206,9 @@ Manually sets the primary alarm for an [OEE State Record](../../data-model/oee-m
 
 Acknowledges a specific OEE state record, marking it as reviewed and accepted. Returns a JSON representation of the updated state record.
 
-### [`setDowntimeReasonForStateRecord`](./set-downtime-reason-for-state-record)
+### [`setAvailabilityReasonForStateRecord`](./set-availability-reason-for-state-record)
 
-Sets a downtime reason for a specific state record, with optional notes and acknowledgment. Returns the updated state record.
+Sets a availability reason for a specific state record, with optional notes and acknowledgment. Returns the updated state record.
 
 ### [`splitDowntimeEvent`](./split-downtime-event)
 
@@ -298,7 +298,7 @@ Retrieves the top downtime events by duration for a specific location. Returns a
 
 ### [`getTopDowntimeByCount`](./get-top-downtime-by-count)
 
-Retrieves the top downtime reasons ranked by the number of occurrences for a specified location and time range. Returns a list of JSON objects downtime reasons.
+Retrieves the top availability reasons ranked by the number of occurrences for a specified location and time range. Returns a list of JSON objects availability reasons.
 
 ### [`getTopInterruptionLocationsByDuration`](./get-top-interruption-locations-by-duration)
 
@@ -330,8 +330,8 @@ Retrieves a list of all available OEE permissions in the system. Returns a list 
 - [`importOeeModesFromJson`](./import-oee-modes-from-json) - Imports OEE modes from JSON format
 - [`importOeeStatesFromCsv`](./import-oee-states-from-csv) - Imports OEE states from CSV format
 - [`importOeeStatesFromJson`](./import-oee-states-from-json) - Imports OEE states from JSON format
-- [`importDowntimeReasonsFromCsv`](./import-downtime-reasons-from-csv) - Imports downtime reasons from CSV format
-- [`importDowntimeReasonsFromJson`](./import-downtime-reasons-from-json) - Imports downtime reasons from JSON format
+- [`importAvailabilityReasonsFromCsv`](./import-availability-reasons-from-csv) - Imports availability reasons from CSV format
+- [`importAvailabilityReasonsFromJson`](./import-availability-reasons-from-json) - Imports availability reasons from JSON format
 - [`importOeeAlarmsFromCsv`](./import-oee-alarms-from-csv) - Imports OEE alarms from CSV format
 - [`importOeeAlarmsFromJson`](./import-oee-alarms-from-json) - Imports OEE alarms from JSON format
 
@@ -343,8 +343,8 @@ Retrieves a list of all available OEE permissions in the system. Returns a list 
 - [`exportOeeModesToCsv`](./export-oee-modes-to-csv) - Exports OEE modes to CSV format
 - [`exportOeeStatesToJson`](./export-oee-states-to-json) - Exports OEE states to JSON format
 - [`exportOeeStatesToCsv`](./export-oee-states-to-csv) - Exports OEE states to CSV format
-- [`exportDowntimeReasonsAsJson`](./export-downtime-reasons-as-json) - Exports downtime reasons to JSON format
-- [`exportDowntimeReasonsAsCsv`](./export-downtime-reasons-as-csv) - Exports downtime reasons to CSV format
+- [`exportAvailabilityReasonsAsJson`](./export-availability-reasons-as-json) - Exports availability reasons to JSON format
+- [`exportAvailabilityReasonsAsCsv`](./export-availability-reasons-as-csv) - Exports availability reasons to CSV format
 - [`exportOeeAlarmsToJson`](./export-oee-alarms-to-json) - Exports OEE alarms to JSON format
 - [`exportOeeAlarmsToCSV`](./export-oee-alarms-to-csv) - Exports OEE alarms to CSV format
 
@@ -353,12 +353,12 @@ Retrieves a list of all available OEE permissions in the system. Returns a list 
 - [`getOeeConfigurationImportQueueSize`](./get-oee-configuration-import-queue-size) - Returns the current size of the OEE configuration import queue
 - [`getOeeModeImportQueueSize`](./get-oee-mode-import-queue-size) - Returns the current size of the OEE mode import queue
 - [`getOeeStateImportQueueSize`](./get-oee-state-import-queue-size) - Returns the current size of the OEE state import queue
-- [`getDowntimeReasonImportQueueSize`](./get-downtime-reason-import-queue-size) - Returns the current size of the downtime reason import queue
+- [`getAvailabilityReasonImportQueueSize`](./get-availability-reason-import-queue-size) - Returns the current size of the availability reason import queue
 - [`getOeeAlarmImportQueueSize`](./get-oee-alarm-import-queue-size) - Returns the current size of the OEE alarm queue
 - [`cancelOeeConfigurationImportQueue`](./cancel-oee-configuration-import-queue) - Cancels the current OEE configuration import queue. Returns the number of canceled items.
 - [`cancelOeeModeImportQueue`](./cancel-oee-mode-import-queue) - Cancels the current OEE mode import queue. Returns the number of canceled items.
 - [`cancelOeeStateImportQueue`](./cancel-oee-state-import-queue) - Cancels the current OEE state import queue. Returns the number of canceled items.
-- [`cancelDowntimeReasonImportQueue`](./cancel-downtime-reason-import-queue) - Cancels the current downtime reason import queue. Returns the number of canceled items.
+- [`cancelAvailabilityReasonImportQueue`](./cancel-availability-reason-import-queue) - Cancels the current availability reason import queue. Returns the number of canceled items.
 - [`cancelOeeAlarmImportQueue`](./cancel-oee-alarm-import-queue) - Cancels the current OEE alarm import queue. Returns the number of canceled items.
 
 ---

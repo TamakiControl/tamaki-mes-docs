@@ -1,18 +1,18 @@
 ---
 sidebar_position: 6
-title: "oee_downtime_reasons"
-description: "Documentation for the oee_downtime_reasons table, outlining its columns and structure."
+title: "oee_availability_reasons"
+description: "Documentation for the oee_availability_reasons table, outlining its columns and structure."
 ---
 
-# OEE Downtime Reason
+# OEE Availability Reason
 
 ## Overview
 
-TODO: Add overview description of OEE Downtime Reason entity
+TODO: Add overview description of OEE Availability Reason entity
 
 ## Table Structure
 
-The following table outlines the SQL columns for the `oee_downtime_reasons` table, providing a brief description of each, along
+The following table outlines the SQL columns for the `oee_availability_reasons` table, providing a brief description of each, along
 with sample data where applicable.
 
 | Column                                    | Type                | Description                                                                                                                                   | Example                                                                                                        |

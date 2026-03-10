@@ -15,10 +15,10 @@ description: "OEE Setup Configuration"
 ![Complete Setup screen showing configuration tabs and location tree](./images/setup.png)
 
 **Description:**
-- The Setup screen allows users to configure the OEE model, including defining [States](#states), [Modes](#modes), [Downtime Reasons](#downtime-reasons), and other [OEE Configurations](#oee-configuration). This screen is essential for customizing the OEE tracking system to fit the specific needs of the manufacturing operation.
+- The Setup screen allows users to configure the OEE model, including defining [States](#states), [Modes](#modes), [Availability Reasons](#availability-reasons), and other [OEE Configurations](#oee-configuration). This screen is essential for customizing the OEE tracking system to fit the specific needs of the manufacturing operation.
 
 **How to use:**
-- To populate the [OEE Configurations](#oee-configuration), [States](#states), [Modes](#modes), and [Downtime Reasons](#downtime-reasons) tabs, the user must first select a location from the location tree on the left side of the screen. This selection will determine which configurations are displayed and modified.
+- To populate the [OEE Configurations](#oee-configuration), [States](#states), [Modes](#modes), and [Availability Reasons](#availability-reasons) tabs, the user must first select a location from the location tree on the left side of the screen. This selection will determine which configurations are displayed and modified.
 
 ## OEE Configuration
 
@@ -35,7 +35,7 @@ description: "OEE Setup Configuration"
 5. Configure the [Availability](#availability) settings:
    - [Enable Availability](#enable-availability).
    - Fill out the [State Expression](#state-expression).
-   - Configure the [Downtime Reason Source](#downtime-reason-source) and [Downtime Reason Expression](#downtime-reason-expression).
+   - Configure the [Availability Reason Source](#availability-reason-source) and [Availability Reason Expression](#availability-reason-expression).
    - Fill out the [Alarm Path](#alarm-path).
 6. Configure the [Performance](#performance) settings:
    - [Enable Performance](#enable-performance).
@@ -106,15 +106,15 @@ Enables availability tracking for the OEE Records. This allows the system to tra
 
 This is where the Oee State's code number is specified for this location [State](terms-and-definitions#state). This can be a static value but will most likely be a tag binding to reflect the PLC's value for the state of the machine [Expression Field](terms-and-definitions#expression-field).
 
-##### Downtime Reason Source
+##### Availability Reason Source
 
 Opens a dropdown with the following options:
-- **Manual:** The downtime reason will be manually selected by the user when a downtime event occurs using the [Downtime Entry](downtime-entry) page.
-- **Expression:** The downtime reason will be determined by the [Downtime Reason Expression](#downtime-reason-expression) field.
+- **Manual:** The availability reason will be manually selected by the user when a downtime event occurs using the [Downtime Entry](downtime-entry) page.
+- **Expression:** The availability reason will be determined by the [Availability Reason Expression](#availability-reason-expression) field.
 
-##### Downtime Reason Expression
+##### Availability Reason Expression
 
-This is where the Downtime Reason's fault code is specified for this location [Downtime Reason](terms-and-definitions#downtime-reason). This can be a static value but will most likely be a tag binding to reflect the PLC's value for the fault code of the machine [Expression Field](terms-and-definitions#expression-field).
+This is where the Availability Reason's fault code is specified for this location [Availability Reason](terms-and-definitions#availability-reason). This can be a static value but will most likely be a tag binding to reflect the PLC's value for the fault code of the machine [Expression Field](terms-and-definitions#expression-field).
 
 ##### Alarm Path
 
@@ -379,67 +379,67 @@ The fixed value for the expected duration of the mode, defined in seconds. This 
 
 The optional comments or explanation about the mode. This will be automatically copied into any mode records as template notes.
 
-## Downtime Reasons
+## Availability Reasons
 
 **Example:**
 
-![Downtime reasons configuration tab showing hierarchical tree of downtime reason categories](./images/setup-downtime-reasons-1.png)
+![Availability reasons configuration tab showing hierarchical tree of availability reason categories](./images/setup-availability-reasons-1.png)
 
-![Downtime reasons configuration tab showing hierarchical tree of downtime reason categories](./images/setup-downtime-reasons-2.png)
+![Availability reasons configuration tab showing hierarchical tree of availability reason categories](./images/setup-availability-reasons-2.png)
 
-### Downtime Reasons Model [oee downtime reason](../../appendix/data-model/oee-model/oee-downtime-reason)
+### Availability Reasons Model [oee availability reason](../../appendix/data-model/oee-model/oee-availability-reason)
 
-### Downtime Reasons Workflow
+### Availability Reasons Workflow
 
-##### Create New Downtime Reason
-1. Click the downtime reason you want to set as the parent reason, or leave it unselected if no parent reason is required.
-2. Click `Create` on the default downtime reason page. This will populate the right side of the screen with empty values, and set the [Parent Downtime Reason](#parent-downtime-reason) to what was clicked (see [Edit or Create New Downtime Reason Fields](#edit-or-create-new-downtime-reason-fields)).
-3. Fill out the fields on the right side of the screen (see [Edit or Create New Downtime Reason Fields](#edit-or-create-new-downtime-reason-fields) for details).
-4. Click the `Confirm` button to save the new downtime reason.
+##### Create New Availability Reason
+1. Click the availability reason you want to set as the parent reason, or leave it unselected if no parent reason is required.
+2. Click `Create` on the default availability reason page. This will populate the right side of the screen with empty values, and set the [Parent Availability Reason](#parent-availability-reason) to what was clicked (see [Edit or Create New Availability Reason Fields](#edit-or-create-new-availability-reason-fields)).
+3. Fill out the fields on the right side of the screen (see [Edit or Create New Availability Reason Fields](#edit-or-create-new-availability-reason-fields) for details).
+4. Click the `Confirm` button to save the new availability reason.
 
-##### Edit Downtime Reason
-1. Select a downtime reason from the tree on the left side of the screen. The right side of the screen will be populated with the details of the selected downtime reason.
-2. Modify the fields on the right side of the screen as needed (see [Edit or Create New Downtime Reason Fields](#edit-or-create-new-downtime-reason-fields) for details).
+##### Edit Availability Reason
+1. Select a availability reason from the tree on the left side of the screen. The right side of the screen will be populated with the details of the selected availability reason.
+2. Modify the fields on the right side of the screen as needed (see [Edit or Create New Availability Reason Fields](#edit-or-create-new-availability-reason-fields) for details).
 3. Click the `Confirm` button to save the changes.
 
-### Downtime Reasons Fields
+### Availability Reasons Fields
 
-#### Downtime Reason Tree
+#### Availability Reason Tree
 
-The downtime reason tree displays the hierarchy of downtime reasons. It allows users to navigate through the downtime reasons, making it easier to add or edit a downtime reason.
+The availability reason tree displays the hierarchy of availability reasons. It allows users to navigate through the availability reasons, making it easier to add or edit a availability reason.
 
-To edit a downtime reason, select it from the tree to populate the right side of the screen. See [Edit or Create New Downtime Reason Fields](#edit-or-create-new-downtime-reason-fields) for details on the fields.
+To edit a availability reason, select it from the tree to populate the right side of the screen. See [Edit or Create New Availability Reason Fields](#edit-or-create-new-availability-reason-fields) for details on the fields.
 
-### Edit or Create New Downtime Reason Fields
+### Edit or Create New Availability Reason Fields
 
 #### Import
 
-Imports the OEE downtime reasons from a CSV or JSON file. The imported file should match the expected format exported from Tamaki MES to ensure data integrity.
+Imports the OEE availability reasons from a CSV or JSON file. The imported file should match the expected format exported from Tamaki MES to ensure data integrity.
 
 #### Export
 
-Exports the OEE downtime reasons to a CSV or JSON file. This can be useful for backup purposes or for transferring configurations between different instances of Tamaki MES.
+Exports the OEE availability reasons to a CSV or JSON file. This can be useful for backup purposes or for transferring configurations between different instances of Tamaki MES.
 
 ##### Enabled
 
-Toggles the downtime reason on or off.
+Toggles the availability reason on or off.
 
 #### Name
 
-The name of the downtime reason, which is displayed in [Downtime Entry](downtime-entry) and other places in the MES. This should be a descriptive name that clearly indicates the cause of the downtime.
+The name of the availability reason, which is displayed in [Downtime Entry](downtime-entry) and other places in the MES. This should be a descriptive name that clearly indicates the cause of the downtime.
 
 #### Description
 
-A concise, detailed description of the downtime reason, providing additional context and information about the cause of the downtime. This can help operators and managers understand the issue better and take appropriate actions.
+A concise, detailed description of the availability reason, providing additional context and information about the cause of the downtime. This can help operators and managers understand the issue better and take appropriate actions.
 
 #### Code
 
-The integer code for the downtime reason, matching the PLC tag that indicates the downtime reason or fault code of the location. This code is used to identify the downtime reason in the PLC and should be unique for each downtime reason.
+The integer code for the availability reason, matching the PLC tag that indicates the availability reason or fault code of the location. This code is used to identify the availability reason in the PLC and should be unique for each availability reason.
 
 #### Location
 
-The location where this downtime reason applies. This determines which specific machine, line, or area the reason is associated with when downtime is recorded.
+The location where this availability reason applies. This determines which specific machine, line, or area the reason is associated with when downtime is recorded.
 
-#### Parent Downtime Reason
+#### Parent Availability Reason
 
-The parent downtime reason, which is used to create a hierarchy of downtime reasons. This allows for categorization and grouping of related downtime reasons, making it easier to analyze and report on downtime events.
+The parent availability reason, which is used to create a hierarchy of availability reasons. This allows for categorization and grouping of related availability reasons, making it easier to analyze and report on downtime events.

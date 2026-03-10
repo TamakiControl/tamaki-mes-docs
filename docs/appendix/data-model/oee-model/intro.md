@@ -24,9 +24,9 @@ TODO: Description of OEE Mode Record entity
 
 TODO: Description of OEE State Record entity
 
-### 6. OEE Downtime Reason
+### 6. OEE Availability Reason
 
-TODO: Description of OEE Downtime Reason entity
+TODO: Description of OEE Availability Reason entity
 
 ---
 

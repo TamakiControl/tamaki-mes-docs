@@ -1,14 +1,14 @@
 ---
-title: importDowntimeReasonsFromCsv
-description: Imports downtime reason configurations from CSV formatted data.
+title: importAvailabilityReasonsFromCsv
+description: Imports availability reason configurations from CSV formatted data.
 sidebar_position: 80
 ---
 
-# system.mes.oee.importDowntimeReasonsFromCsv
+# system.mes.oee.importAvailabilityReasonsFromCsv
 
 ## Description
 
-Imports downtime reason configurations from CSV formatted data.
+Imports availability reason configurations from CSV formatted data.
 
 ## Permissions
 
@@ -17,7 +17,7 @@ This method requires the `OEE.WRITE.SAVE` permission.
 ## Syntax
 
 ```python
-system.mes.oee.importDowntimeReasonsFromCsv(bytes)
+system.mes.oee.importAvailabilityReasonsFromCsv(bytes)
 ```
 
 ## Parameters
@@ -36,17 +36,17 @@ An `ApiResponse` object indicating success or failure. On success, the `data` at
 import system.file
 
 # Path to the CSV file
-filePath = "C:/path/to/downtime_reasons.csv"
+filePath = "C:/path/to/availability_reasons.csv"
 
 try:
     # Read the file content as bytes
     csvBytes = system.file.readFileAsBytes(filePath)
 
-    # Import the downtime reasons
-    result = system.mes.oee.importDowntimeReasonsFromCsv(csvBytes)
+    # Import the availability reasons
+    result = system.mes.oee.importAvailabilityReasonsFromCsv(csvBytes)
 
     if result.get('success'):
-        print "Successfully imported {} downtime reasons.".format(result.get('data'))
+        print "Successfully imported {} availability reasons.".format(result.get('data'))
     else:
         print "Import failed: {}".format(result.get('message'))
 

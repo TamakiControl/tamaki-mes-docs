@@ -17,7 +17,7 @@ This method requires the `OEE.READ.GET` permission.
 ## Syntax
 
 ```python
-system.mes.oee.getDetailedStateRecordsFiltered(locationPath, startDate, endDate, microstopThreshold=None, microstopThresholdTimeUnits=None, eventTypes=None, modeCodes=None, downtimeReasonPath=None)
+system.mes.oee.getDetailedStateRecordsFiltered(locationPath, startDate, endDate, microstopThreshold=None, microstopThresholdTimeUnits=None, eventTypes=None, modeCodes=None, availabilityReasonPath=None)
 ```
 
 ## Parameters
@@ -31,7 +31,7 @@ system.mes.oee.getDetailedStateRecordsFiltered(locationPath, startDate, endDate,
 | `microstopThresholdTimeUnits` | `String`    | True     | Time units for the microstop threshold. Valid values: `SECONDS`, `MINUTES`, `HOURS`. Defaults to `SECONDS` if not specified.                 |
 | `eventTypes`                  | `String[]`  | True     | Array of event types to filter by. Valid values depend on `OeeStateCalculationType` enum (e.g., `RUNNING`, `STOPPED`, `BLOCKED`, `STARVED`). |
 | `modeCodes`                   | `Integer[]` | True     | Array of mode codes to filter by.                                                                                                            |
-| `downtimeReasonPath`          | `String`    | True     | Filter by downtime reason path. If not specified or blank, defaults to `%` (matches all).                                                    |
+| `availabilityReasonPath`          | `String`    | True     | Filter by availability reason path. If not specified or blank, defaults to `%` (matches all).                                                    |
 
 ## Returns
 
@@ -53,9 +53,9 @@ Each object has the following properties:
 | `startDate`                | `Instant`                 | `False`  | Start date and time of the state record                                    | `Instant.now()` |
 | `endDate`                  | `Instant`                 | `True`   | End date and time of the state record                                      | `null`          |
 | `duration`                 | `Double`                  | `False`  | Duration of the state record in seconds                                    | `0.0`           |
-| `downtimeReasonId`         | `String`                  | `True`   | Identifier of the associated downtime reason, if applicable                | `null`          |
-| `downtimeReason`           | `String`                  | `True`   | Title of the downtime reason. (Name - Code) For display purposes only      | `null`          |
-| `downtimeReasonPath`       | `String`                  | `True`   | Path to the current downtime reason                                        | `null`          |
+| `availabilityReasonId`         | `String`                  | `True`   | Identifier of the associated availability reason, if applicable                | `null`          |
+| `availabilityReason`           | `String`                  | `True`   | Title of the availability reason. (Name - Code) For display purposes only      | `null`          |
+| `availabilityReasonPath`       | `String`                  | `True`   | Path to the current availability reason                                        | `null`          |
 | `interruptionLocationId`   | `String`                  | `True`   | Location id that caused the blocked/starved state on the machine           | `null`          |
 | `interruptionLocationName` | `String`                  | `True`   | Name of the interruption location that caused the blocked/starved state    | `null`          |
 | `interruptionLocationPath` | `String`                  | `True`   | Location path that caused the blocked/starved state on the machine         | `null`          |
@@ -92,12 +92,12 @@ detailed_records = system.mes.oee.getDetailedStateRecordsFiltered(
     endDate
 )
 
-# Filter by downtime reason path
+# Filter by availability reason path
 detailed_records = system.mes.oee.getDetailedStateRecordsFiltered(
     'DairyCo/Plant1/Line1',
     startDate,
     endDate,
-    downtimeReasonPath='Equipment Failure'
+    availabilityReasonPath='Equipment Failure'
 )
 
 # Filter by mode codes
@@ -130,7 +130,7 @@ detailed_records = system.mes.oee.getDetailedStateRecordsFiltered(
     'DairyCo/Plant1/Line1',
     startDate,
     endDate,
-    downtimeReasonPath='Maintenance',
+    availabilityReasonPath='Maintenance',
     modeCodes=[1, 2],
     eventTypes=['IDLE'],
     microstopThreshold=600,

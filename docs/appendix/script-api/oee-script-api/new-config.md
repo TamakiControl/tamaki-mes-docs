@@ -40,8 +40,8 @@ A JSON representation of an `OeeConfigurationDTO` object with default values, re
 | `modeExpression`                     | `String`                         | `True`   | Ignition expression used to determine the OEE mode                                  | `null`        |
 | `enableAvailability`                 | `Boolean`                        | `False`  | Flag to enable or disable OEE availability calculations                             | `true`        |
 | `stateExpression`                    | `String`                         | `True`   | Ignition expression for determining the machine status                              | `null`        |
-| `downtimeReasonSource`               | `OeeDowntimeReasonSource`        | `True`   | Specifies how the system determines the downtime reason code                        | `MANUAL`      |
-| `downtimeReasonExpression`           | `String`                         | `True`   | Ignition expression that returns an integer code corresponding to a downtime reason | `null`        |
+| `availabilityReasonSource`               | `OeeAvailabilityReasonSource`        | `True`   | Specifies how the system determines the availability reason code                        | `MANUAL`      |
+| `availabilityReasonExpression`           | `String`                         | `True`   | Ignition expression that returns an integer code corresponding to a availability reason | `null`        |
 | `holdFirstNonRunningState`           | `Boolean`                        | `False`  | Flag to enable or disable cutover between non running states                        | `true`        |
 | `primaryAlarmResolutionStrategy`     | `PrimaryAlarmResolutionStrategy` | `False`  | Primary Alarm Resolution Strategy for this OEE Configuration                        | `EARLIEST`    |
 | `enablePerformance`                  | `Boolean`                        | `False`  | Flag to enable or disable OEE performance calculations                              | `true`        |

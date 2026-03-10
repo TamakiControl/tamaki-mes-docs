@@ -12,14 +12,14 @@ description: "OEE Downtime Entry Screen"
 
 **Example:**
 
-![Complete Downtime Entry screen showing location tree, downtime reason tree, and event table](./images/downtime-entry.png)
+![Complete Downtime Entry screen showing location tree, availability reason tree, and event table](./images/downtime-entry.png)
 
 **Description:**
 - The Downtime Entry screen allows users to acknowledge downtime events and enter details about the downtime, such as the reason for the downtime, the start and end times, and any additional notes. This information is crucial for analyzing downtime trends and improving [OEE](terms-and-definitions#oee-overall-equipment-effectiveness).
 
 **Components:**
 - [Location Tree](#location-tree)
-- [Downtime Reason Tree](#downtime-reason-tree)
+- [Availability Reason Tree](#availability-reason-tree)
 - [Downtime Event Table](#downtime-event-table)
 
 ## Location Tree
@@ -30,13 +30,13 @@ description: "OEE Downtime Entry Screen"
 **Description:**
 - The Location Tree displays the hierarchy of locations within the production line. Users can select a specific location to view and manage downtime events associated with that location. The tree structure allows for easy navigation through different levels of the production line.
 
-## Downtime Reason Tree
+## Availability Reason Tree
 **Example:**
 
-![Downtime Reason Tree showing categorized list of possible downtime reasons](./images/downtime-entry-reason-tree.png)
+![Availability Reason Tree showing categorized list of possible availability reasons](./images/downtime-entry-reason-tree.png)
 
 **Description:**
-- The Downtime Reason Tree displays the available downtime reasons that can be selected when entering a downtime event. Users can select a reason to view and manage downtime events associated with that reason. The tree structure allows for easy navigation through different categories of downtime reasons.
+- The Availability Reason Tree displays the available availability reasons that can be selected when entering a downtime event. Users can select a reason to view and manage downtime events associated with that reason. The tree structure allows for easy navigation through different categories of availability reasons.
 
 ## Downtime Event Table
 **Example:**
@@ -44,7 +44,7 @@ description: "OEE Downtime Entry Screen"
 ![Downtime Event Table showing list of downtime events with details about duration, location, and reason](./images/downtime-entry-event-table.png)
 
 **Description:**
-- The Downtime Event Table displays a list of downtime events that have been entered for the selected location and downtime reason. Each row in the table represents a specific downtime event.
+- The Downtime Event Table displays a list of downtime events that have been entered for the selected location and availability reason. Each row in the table represents a specific downtime event.
 
 ### Components
 
@@ -58,7 +58,7 @@ description: "OEE Downtime Entry Screen"
 | **Location**        | Location that the downtime event is occuring for.                                                                                               |
 | **Color**           | Color of the state of the downtime event.                                                                                                       |
 | **Type**            | Type of the downtime event.                                                                                                                     |
-| **Downtime Reason** | Downtime reason associated with the downtime event. see [OEE Downtime Reason Model](../../appendix/data-model/oee-model/oee-downtime-reason.md) |
+| **Availability Reason** | Availability reason associated with the downtime event. see [OEE Availability Reason Model](../../appendix/data-model/oee-model/oee-availability-reason.md) |
 | **Notes**           | Additional notes or comments about the downtime event.                                                                                          |
 | **Acknowledged**    | Boolean of whether the downtime event has been acknowledged.                                                                                    |
 
@@ -82,7 +82,7 @@ description: "OEE Downtime Entry Screen"
       - Acknowledged By
       - Notes
   - **Downtime Information:** Displays the information about the downtime, including the following:
-      - Downtime Reason
+      - Availability Reason
       - Reason Path
       - Interruption Location
 
@@ -97,12 +97,12 @@ description: "OEE Downtime Entry Screen"
 
 ##### Set Reason Code
  
-- The `Set Downtime Reason` button, ![Set Downtime Reason Button](./images/button-set-reason.png), opens the downtime reason selection popup:
+- The `Set Availability Reason` button, ![Set Availability Reason Button](./images/button-set-reason.png), opens the availability reason selection popup:
 
-![Downtime reason selection popup with hierarchical tree of reasons and notes field](./images/downtime-reason-popup.png)
+![Availability reason selection popup with hierarchical tree of reasons and notes field](./images/availability-reason-popup.png)
 
 - **Sections:**
-  - **Downtime Reason Selection Tree:** Allows users to select a reason for the downtime event from a hierarchical list of predefined reasons.
+  - **Availability Reason Selection Tree:** Allows users to select a reason for the downtime event from a hierarchical list of predefined reasons.
   - **Acknowledge Button:** Clicking this button acknowledges the downtime event, marking it as reviewed and preventing further edits.
   - **Notes Field:** A text field for users to add additional notes or comments related to the downtime event.
 

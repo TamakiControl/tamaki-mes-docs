@@ -8,7 +8,7 @@ sidebar_position: 66
 
 ## Description
 
-Retrieves downtime events grouped by reason for a specified location and time range, with options to filter by specific downtime reasons.
+Retrieves downtime events grouped by reason for a specified location and time range, with options to filter by specific availability reasons.
 
 ## Permissions
 
@@ -17,7 +17,7 @@ This method requires the `OEE.READ.GET` permission.
 ## Syntax
 
 ```python
-system.mes.oee.getDowntimeByReason(locationPath, startDate, endDate, downtimeReasonPath)
+system.mes.oee.getDowntimeByReason(locationPath, startDate, endDate, availabilityReasonPath)
 ```
 
 ## Parameters
@@ -27,7 +27,7 @@ system.mes.oee.getDowntimeByReason(locationPath, startDate, endDate, downtimeRea
 | `locationPath`       | `String` | False    | The path of the location to analyze.                              |
 | `startDate`          | `Date`   | False    | The start of the analysis time range.                             |
 | `endDate`            | `Date`   | True     | The end of the analysis time range. Defaults to the current time. |
-| `downtimeReasonPath` | `String` | True     | An optional path to a specific downtime reason to filter by.      |
+| `availabilityReasonPath` | `String` | True     | An optional path to a specific availability reason to filter by.      |
 
 ## Returns
 
@@ -37,7 +37,7 @@ Each object has the following properties:
 
 | Name                 | Type     | Nullable | Description                                  | Default Value |
 | -------------------- | -------- | -------- | -------------------------------------------- | ------------- |
-| `downtimeReasonPath` | `String` | `True`   | Path of the downtime reason                  | `null`        |
+| `availabilityReasonPath` | `String` | `True`   | Path of the availability reason                  | `null`        |
 | `duration`           | `Double` | `True`   | Duration of downtime for this reason         | `0.0`         |
 | `count`              | `Long`   | `True`   | Count of downtime events for this reason     | `null`        |
 | `durationPercent`    | `Double` | `True`   | Percentage of total duration for this reason | `0.0`         |
@@ -57,5 +57,5 @@ startDate = Date(endDate.getTime() - TimeUnit.HOURS.toMillis(24))
 downtimeByReason = system.mes.oee.getDowntimeByReason(locationPath, startDate, endDate)
 
 for reasonData in downtimeByReason:
-    print reasonData['downtimeReasonPath'], reasonData['duration']
+    print reasonData['availabilityReasonPath'], reasonData['duration']
 ```

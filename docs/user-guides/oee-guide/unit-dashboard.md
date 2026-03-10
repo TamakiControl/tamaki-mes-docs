@@ -23,7 +23,7 @@ description: "OEE Unit Dashboard Screen"
 - [OEE State Timeline](#oee-state-timeline)
 - [OEE Mode Timeline](#oee-mode-timeline)
 - [OEE Metrics by Hour](#oee-metrics-by-hour)
-- [Downtime Reasons Pareto Chart](#downtime-reasons-pareto-chart)
+- [Availability Reasons Pareto Chart](#availability-reasons-pareto-chart)
 - [Performance Details](#performance-details)
 - [Quality Details](#quality-details)
 - [Time Selection Sidebar](#time-selection-sidebar)
@@ -82,13 +82,13 @@ description: "OEE Unit Dashboard Screen"
 **Description:**
 - The OEE Metrics by Hour section provides a detailed breakdown of OEE metrics for each hour of the day. This allows users to analyze performance trends and identify specific time periods where performance may have been affected.
 
-## Downtime Reasons Pareto Chart
+## Availability Reasons Pareto Chart
 **Example:**
 
-![Bar chart showing the most common downtime reasons and their durations](./images/unit-dashboard-top-downtime.png)
+![Bar chart showing the most common availability reasons and their durations](./images/unit-dashboard-top-downtime.png)
 
 **Description:**
-- The Downtime Reasons Pareto chart displays the most common reasons for downtime in the selected unit. Along with the cumulative frequency, This helps users identify recurring issues and prioritize improvements to reduce downtime. This chart defaults to showing the top level reason codes in the hierarchy, click on any bar to drill down.
+- The Availability Reasons Pareto chart displays the most common reasons for downtime in the selected unit. Along with the cumulative frequency, This helps users identify recurring issues and prioritize improvements to reduce downtime. This chart defaults to showing the top level reason codes in the hierarchy, click on any bar to drill down.
 
 ## Performance Details  
 **Example:**  
@@ -112,7 +112,7 @@ description: "OEE Unit Dashboard Screen"
 ![Time selection sidebar showing options to select time range for data display](./images/unit-dashboard-time-selection.png)
 
 **Description:**
-- The Time Selection sidebar allows users to select the time range for which they want to view data on the Unit Dashboard. Users can choose from predefined ranges or specify a custom range to analyze performance metrics and downtime reasons for specific periods.
+- The Time Selection sidebar allows users to select the time range for which they want to view data on the Unit Dashboard. Users can choose from predefined ranges or specify a custom range to analyze performance metrics and availability reasons for specific periods.
 
 ### Components
 

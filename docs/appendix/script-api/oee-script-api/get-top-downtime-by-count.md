@@ -1,6 +1,6 @@
 ---
 title: getTopDowntimeByCount
-description: Retrieves the top downtime reasons by occurrence count for a specified location and time range.
+description: Retrieves the top availability reasons by occurrence count for a specified location and time range.
 sidebar_position: 68
 ---
 
@@ -8,7 +8,7 @@ sidebar_position: 68
 
 ## Description
 
-Retrieves the top downtime reasons ranked by the number of occurrences for a specified location and time range.
+Retrieves the top availability reasons ranked by the number of occurrences for a specified location and time range.
 
 ## Permissions
 
@@ -31,13 +31,13 @@ system.mes.oee.getTopDowntimeByCount(locationIdOrPath, startDate, endDate, count
 
 ## Returns
 
-A list of JSON representations of `OeeDowntimeByReasonDTO` objects, each representing a downtime reason and its aggregated data.
+A list of JSON representations of `OeeDowntimeByReasonDTO` objects, each representing a availability reason and its aggregated data.
 
 Each object has the following properties:
 
 | Name                 | Type     | Nullable | Description                                  | Default Value |
 | -------------------- | -------- | -------- | -------------------------------------------- | ------------- |
-| `downtimeReasonPath` | `String` | `True`   | Path of the downtime reason                  | `null`        |
+| `availabilityReasonPath` | `String` | `True`   | Path of the availability reason                  | `null`        |
 | `duration`           | `Double` | `True`   | Duration of downtime for this reason         | `0.0 `        |
 | `count`              | `Long`   | `True`   | Count of downtime events for this reason     | `null`        |
 | `durationPercent`    | `Double` | `True`   | Percentage of total duration for this reason | `0.0`         |
@@ -49,7 +49,7 @@ Each object has the following properties:
 from java.util import Date
 from java.util.concurrent import TimeUnit
 
-# Get the top 5 most frequent downtime reasons for the last week
+# Get the top 5 most frequent availability reasons for the last week
 location = "Enterprise/Site/Area/Line1"
 endTime = Date()
 startTime = Date(endTime.getTime() - TimeUnit.DAYS.toMillis(7))
@@ -61,10 +61,10 @@ topReasons = system.mes.oee.getTopDowntimeByCount(
     5
 )
 
-print "Top 5 Downtime Reasons by Count:"
+print "Top 5 Availability Reasons by Count:"
 for reason in topReasons:
     print "  - {}: {} occurrences, Total Duration: {:.2f} min".format(
-        reason['downtimeReasonName'],
+        reason['availabilityReasonName'],
         reason['count'],
         reason['duration'] / 60.0
     )

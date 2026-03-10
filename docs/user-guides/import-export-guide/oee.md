@@ -119,40 +119,40 @@ Then press the confirm button.
 - To export OEE configurations, press the export button and select if you'd like to include the configuration, modes and states. Select the locations associated with the OEE configuration you'd wish to export. Then press the export selected button. 
 
 
-## OEE Downtime Reasons
+## OEE Availability Reasons
 
 **Navigation:**
 
 ![Navigation menu showing the OEE selection in the OEE module](./images/oee-navigation.png)
 
-![Navigation menu showing the OEE Downtime Reasons selection in the OEE Configuration page](./images/oee-dt-reasons-navigation.png)
+![Navigation menu showing the OEE Availability Reasons selection in the OEE Configuration page](./images/oee-dt-reasons-navigation.png)
 
-### Importing OEE Downtime Reasons
+### Importing OEE Availability Reasons
 
-![OEE Downtime Reasons Page with the import button highlighted on the default page](./images/import-oee-dt-reasons-button-1.png)
+![OEE Availability Reasons Page with the import button highlighted on the default page](./images/import-oee-dt-reasons-button-1.png)
 
-![OEE Downtime Reasons Page with the import button highlighted when editing an OEE downtime reason](./images/import-oee-dt-reasons-button-2.png)
+![OEE Availability Reasons Page with the import button highlighted when editing an OEE availability reason](./images/import-oee-dt-reasons-button-2.png)
 
-![OEE Downtime Reasons Page with an import menu popup](./images/import-oee-dt-reasons-popup.png)
+![OEE Availability Reasons Page with an import menu popup](./images/import-oee-dt-reasons-popup.png)
 
 **How to use:**
 
-- To import OEE downtime reasons, press the import button and add a CSV or JSON file to the file upload field. Then press the confirm button.
+- To import OEE availability reasons, press the import button and add a CSV or JSON file to the file upload field. Then press the confirm button.
 
-- It is recommended to export at least one pre-existing OEE downtime reason to CSV to ensure the correct format of the CSV file.
+- It is recommended to export at least one pre-existing OEE availability reason to CSV to ensure the correct format of the CSV file.
 
 **Import Behavior:**
 
-- When importing, the system checks whether an OEE downtime reason already exists by downtime reason path. If a match is found, the existing OEE downtime reason is modified, otherwise a new OEE downtime reason is created.
+- When importing, the system checks whether an OEE availability reason already exists by availability reason path. If a match is found, the existing OEE availability reason is modified, otherwise a new OEE availability reason is created.
 
-### Exporting OEE Downtime Reasons
+### Exporting OEE Availability Reasons
 
-![OEE Downtime Reasons Page with the export button highlighted on the default page](./images/export-oee-dt-reasons-button-1.png)
+![OEE Availability Reasons Page with the export button highlighted on the default page](./images/export-oee-dt-reasons-button-1.png)
 
-![OEE Downtime Reasons Page with the export button highlighted when editing an OEE downtime reason](./images/export-oee-dt-reasons-button-2.png)
+![OEE Availability Reasons Page with the export button highlighted when editing an OEE availability reason](./images/export-oee-dt-reasons-button-2.png)
 
-![OEE Downtime Reasons Page with an export menu popup](./images/export-oee-dt-reasons-popup.png)
+![OEE Availability Reasons Page with an export menu popup](./images/export-oee-dt-reasons-popup.png)
 
 **How to use:**
 
-- To export OEE downtime reasons, press the export button and select the OEE downtime reasons you'd wish to export. Then press the export selected button.
+- To export OEE availability reasons, press the export button and select the OEE availability reasons you'd wish to export. Then press the export selected button.

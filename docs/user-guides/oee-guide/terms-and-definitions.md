@@ -73,11 +73,11 @@ This document provides definitions and explanations of key terms related to Over
 - **Purpose**:
   - To evaluate the effectiveness of the production process in delivering products that meet quality requirements.
 
-## Downtime Reason
+## Availability Reason
 - **Definition:** 
   - The specific cause of downtime for a piece of equipment or production line.
-  - Data Model: [Downtime Reason](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Foee-downtime-reason.md)
-  - Configuration: [Downtime Reasons](setup#downtime-reasons)
+  - Data Model: [Availability Reason](..%2F..%2Fappendix%2Fdata-model%2Foee-model%2Foee-availability-reason.md)
+  - Configuration: [Availability Reasons](setup#availability-reasons)
 - **Purpose:**
   - To categorize and analyze the reasons for equipment downtime, enabling targeted improvements to reduce future occurrences.
 
@@ -168,7 +168,7 @@ This document provides definitions and explanations of key terms related to Over
   - Production counts
   - Quality counts
   - Standard rates
-  - Downtime reasons
+  - Availability reasons
   - Production orders
 
 - **Queue Phase**: When any subscribed expression value changes, an `ExpressionUpdateEvent` is fired. The event handler marks the corresponding OEE state as "dirty" (requiring evaluation), effectively queuing it for processing. This ensures that only states with new data are evaluated, avoiding unnecessary computation.

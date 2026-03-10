@@ -1,16 +1,16 @@
 ---
 sidebar_position: 5
-sidebar_label: Downtime Reason Tree
-title: Downtime Reason Tree
+sidebar_label: Availability Reason Tree
+title: Availability Reason Tree
 ---
 
 ## Overview
 
-The Downtime Reason Tree component is a custom Perspective component that provides a hierarchical tree view of downtime reasons. It allows users to easily navigate and select downtime reasons from a structured list, making it possible to categorize and analyze downtime events. Unlike the other trees, this component can be passed a locationId to filter the reasons shown based on the location.
+The Availability Reason Tree component is a custom Perspective component that provides a hierarchical tree view of availability reasons. It allows users to easily navigate and select availability reasons from a structured list, making it possible to categorize and analyze availability events. Unlike the other trees, this component can be passed a locationId to filter the reasons shown based on the location.
 
 ## Props
 
-The Downtime Reason Tree component has the following props:
+The Availability Reason Tree component has the following props:
 | Prop Name | Type | Description | Input/Output |
 | --------- | ---- | ----------- | -------------- |
 | `showSearch` | boolean | If true, shows a search box at the top of the tree to filter reasons. | Input |
@@ -27,10 +27,10 @@ The Downtime Reason Tree component has the following props:
 
 ## Events
 
-The Downtime Reason Tree component emits the following events:
+The Availability Reason Tree component emits the following events:
 | Event Name | Description | Payload |
 | ---------- | ----------- | ------- |
 | `onAdd` | Emitted when the user adds a new reason. | `{ currentItemId: string, locationId: string }` |
 | `onDelete` | Emitted when the user deletes a reason. | `{ currentItemId: string }` |
-| `onImport` | Emitted when the user imports downtime reasons. | `None` |
-| `onExport` | Emitted when the user exports downtime reasons. | `{ currentItemId: string}` |
+| `onImport` | Emitted when the user imports availability reasons. | `None` |
+| `onExport` | Emitted when the user exports availability reasons. | `{ currentItemId: string}` |

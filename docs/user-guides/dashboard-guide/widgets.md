@@ -99,7 +99,7 @@ Out of the box, Tamaki MES includes several parameter types:
 - Color
 - Icon
 - Location
-- Downtime Reason
+- Availability Reason
 - Duration
 - Refresh Interval
 

@@ -1,14 +1,14 @@
 ---
 sidebar_position: 44
-title: 'setDowntimeReasonForStateRecord'
-description: 'Sets a downtime reason for a specific state record.'
+title: 'setAvailabilityReasonForStateRecord'
+description: 'Sets a availability reason for a specific state record.'
 ---
 
-# system.mes.oee.setDowntimeReasonForStateRecord
+# system.mes.oee.setAvailabilityReasonForStateRecord
 
 ## Description
 
-Sets a downtime reason for a specific OEE state record, with optional notes and an acknowledgment status.
+Sets a availability reason for a specific OEE state record, with optional notes and an acknowledgment status.
 
 ## Permissions
 
@@ -17,7 +17,7 @@ This method requires the `OEE.WRITE.SAVE` permission.
 ## Syntax
 
 ```python
-system.mes.oee.setDowntimeReasonForStateRecord(oeeStateRecordId, downtimeReasonId=None, notes=None, acknowledge=False)
+system.mes.oee.setAvailabilityReasonForStateRecord(oeeStateRecordId, availabilityReasonId=None, notes=None, acknowledge=False)
 ```
 
 ## Parameters
@@ -25,7 +25,7 @@ system.mes.oee.setDowntimeReasonForStateRecord(oeeStateRecordId, downtimeReasonI
 | Parameter          | Type      | Nullable | Description                                                      |
 | ------------------ | --------- | -------- | ---------------------------------------------------------------- |
 | `oeeStateRecordId` | `String`  | False    | The ID of the OEE state record to update.                        |
-| `downtimeReasonId` | `String`  | True     | The ID of the downtime reason to assign. Set to `None` to clear. |
+| `availabilityReasonId` | `String`  | True     | The ID of the availability reason to assign. Set to `None` to clear. |
 | `notes`            | `String`  | True     | Optional notes to add to the state record.                       |
 | `acknowledge`      | `Boolean` | True     | Whether to acknowledge the record. Defaults to `False`.          |
 
@@ -47,9 +47,9 @@ A JSON representation of the updated `OeeStateRecordDTO` object.
 | `startDate`                | `Instant`                 | `False`  | Start date and time of the state record                                    | `Instant.now()` |
 | `endDate`                  | `Instant`                 | `True`   | End date and time of the state record                                      | `null`          |
 | `duration`                 | `Double`                  | `False`  | Duration of the state record in seconds                                    | `0.0`           |
-| `downtimeReasonId`         | `String`                  | `True`   | Identifier of the associated downtime reason, if applicable                | `null`          |
-| `downtimeReason`           | `String`                  | `True`   | Title of the downtime reason. (Name - Code) For display purposes only      | `null`          |
-| `downtimeReasonPath`       | `String`                  | `True`   | Path to the current downtime reason                                        | `null`          |
+| `availabilityReasonId`         | `String`                  | `True`   | Identifier of the associated availability reason, if applicable                | `null`          |
+| `availabilityReason`           | `String`                  | `True`   | Title of the availability reason. (Name - Code) For display purposes only      | `null`          |
+| `availabilityReasonPath`       | `String`                  | `True`   | Path to the current availability reason                                        | `null`          |
 | `interruptionLocationId`   | `String`                  | `True`   | Location id that caused the blocked/starved state on the machine           | `null`          |
 | `interruptionLocationName` | `String`                  | `True`   | Name of the interruption location that caused the blocked/starved state    | `null`          |
 | `interruptionLocationPath` | `String`                  | `True`   | Location path that caused the blocked/starved state on the machine         | `null`          |
@@ -73,23 +73,23 @@ A JSON representation of the updated `OeeStateRecordDTO` object.
 ```python
 # Assume we have a state record ID and a reason ID
 stateRecordId = "someStateRecordId"
-reasonId = "some-downtime-reason-id"
+reasonId = "some-availability-reason-id"
 
-# Set the downtime reason and add a note
+# Set the availability reason and add a note
 try:
-    updatedRecord = system.mes.oee.setDowntimeReasonForStateRecord(
+    updatedRecord = system.mes.oee.setAvailabilityReasonForStateRecord(
         oeeStateRecordId=stateRecordId,
-        downtimeReasonId=reasonId,
+        availabilityReasonId=reasonId,
         notes="Operator confirmed mechanical jam.",
         acknowledge=True
     )
     print "Successfully updated state record:", updatedRecord['id']
-    print "New Reason:", updatedRecord['downtimeReason']
+    print "New Reason:", updatedRecord['availabilityReason']
     print "Acknowledged:", updatedRecord['acknowledged']
 
 except Exception as e:
     print "Error updating state record:", str(e)
 
-# To clear a downtime reason
-# system.mes.oee.setDowntimeReasonForStateRecord(stateRecordId, None, "Reason cleared.")
+# To clear a availability reason
+# system.mes.oee.setAvailabilityReasonForStateRecord(stateRecordId, None, "Reason cleared.")
 ```

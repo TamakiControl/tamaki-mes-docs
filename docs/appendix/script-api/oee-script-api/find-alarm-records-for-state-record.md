@@ -51,7 +51,7 @@ Each object has the following properties:
 | `shelvedDate`                | `Instant`              | `True`   | Indicates if the alarm has been temporarily suppressed          | `null`          |
 | `state`                      | `AlarmState`           | `False`  | The current state of the alarm in Ignition's state machine      | `null`          |
 | `lastEventState`             | `AlarmStateTransition` | `False`  | The most recent state transition that occurred for this alarm   | `null`          |
-| `downtimeReasonCodeOverride` | `Integer`              | `True`   | Optional downtime reason code override                          | `null`          |
+| `availabilityReasonCodeOverride` | `Integer`              | `True`   | Optional availability reason code override                          | `null`          |
 | `stateCodeOverride`          | `Integer`              | `True`   | Optional state code override                                    | `null`          |
 | `notes`                      | `String`               | `True`   | Notes associated with the OEE Alarm Record                      | `null`          |
 | `enabled`                    | `boolean`              | `True`   | Indicates whether the OEE Alarm Record is enabled               | `true`          |

@@ -1,14 +1,14 @@
 ---
-title: importDowntimeReasonsFromJson
-description: Imports downtime reason configurations from Json formatted data.
+title: importAvailabilityReasonsFromJson
+description: Imports availability reason configurations from Json formatted data.
 sidebar_position: 81
 ---
 
-# system.mes.oee.importDowntimeReasonsFromJson
+# system.mes.oee.importAvailabilityReasonsFromJson
 
 ## Description
 
-Imports downtime reason configurations from Json formatted data.
+Imports availability reason configurations from Json formatted data.
 
 ## Permissions
 
@@ -17,7 +17,7 @@ This method requires the `OEE.WRITE.SAVE` permission.
 ## Syntax
 
 ```python
-system.mes.oee.importDowntimeReasonsFromJson(bytes)
+system.mes.oee.importAvailabilityReasonsFromJson(bytes)
 ```
 
 ## Parameters
@@ -36,17 +36,17 @@ An `ApiResponse` object indicating success or failure. On success, the `data` at
 import system.file
 
 # Path to the JSON file
-filePath = "C:/path/to/downtime_reasons.json"
+filePath = "C:/path/to/availability_reasons.json"
 
 try:
     # Read the file content as bytes
     jsonBytes = system.file.readFileAsBytes(filePath)
 
-    # Import the downtime reasons
-    result = system.mes.oee.importDowntimeReasonsFromJson(jsonBytes)
+    # Import the availability reasons
+    result = system.mes.oee.importAvailabilityReasonsFromJson(jsonBytes)
 
     if result.get('success'):
-        print "Successfully imported {} downtime reasons.".format(result.get('data'))
+        print "Successfully imported {} availability reasons.".format(result.get('data'))
     else:
         print "Import failed: {}".format(result.get('message'))
 

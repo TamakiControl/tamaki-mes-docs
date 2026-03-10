@@ -44,9 +44,9 @@ A JSON representation of an `OeeStateRecordDTO` object containing the details of
 | `startDate`                | `Instant`                 | `False`  | Start date and time of the state record                                    | `Instant.now()` |
 | `endDate`                  | `Instant`                 | `True`   | End date and time of the state record                                      | `null`          |
 | `duration`                 | `Double`                  | `False`  | Duration of the state record in seconds                                    | `0.0`           |
-| `downtimeReasonId`         | `String`                  | `True`   | Identifier of the associated downtime reason, if applicable                | `null`          |
-| `downtimeReason`           | `String`                  | `True`   | Title of the downtime reason. (Name - Code) For display purposes only      | `null`          |
-| `downtimeReasonPath`       | `String`                  | `True`   | Path to the current downtime reason                                        | `null`          |
+| `availabilityReasonId`         | `String`                  | `True`   | Identifier of the associated availability reason, if applicable                | `null`          |
+| `availabilityReason`           | `String`                  | `True`   | Title of the availability reason. (Name - Code) For display purposes only      | `null`          |
+| `availabilityReasonPath`       | `String`                  | `True`   | Path to the current availability reason                                        | `null`          |
 | `interruptionLocationId`   | `String`                  | `True`   | Location id that caused the blocked/starved state on the machine           | `null`          |
 | `interruptionLocationName` | `String`                  | `True`   | Name of the interruption location that caused the blocked/starved state    | `null`          |
 | `interruptionLocationPath` | `String`                  | `True`   | Location path that caused the blocked/starved state on the machine         | `null`          |
@@ -75,6 +75,6 @@ stateRecord = system.mes.oee.getOeeStateRecord(stateRecordId)
 if stateRecord:
     print "State Name:", stateRecord['name']
     print "Duration (sec):", stateRecord['duration']
-    if stateRecord['downtimeReason']:
-        print "Downtime Reason:", stateRecord['downtimeReason']
+    if stateRecord['availabilityReason']:
+        print "Availability Reason:", stateRecord['availabilityReason']
 ```

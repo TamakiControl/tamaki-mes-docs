@@ -17,7 +17,7 @@ This method requires the `OEE.READ.GET` permission.
 ## Syntax
 
 ```python
-system.mes.oee.getDowntimeRecordsFiltered(locationPath, startDate, endDate, downtimeReasonPath=None, microstopThreshold=None, microstopThresholdTimeUnits='SECONDS')
+system.mes.oee.getDowntimeRecordsFiltered(locationPath, startDate, endDate, availabilityReasonPath=None, microstopThreshold=None, microstopThresholdTimeUnits='SECONDS')
 ```
 
 ## Parameters
@@ -27,7 +27,7 @@ system.mes.oee.getDowntimeRecordsFiltered(locationPath, startDate, endDate, down
 | `locationPath`                | `String`  | False    | The path of the location to retrieve records for.                     |
 | `startDate`                   | `Date`    | False    | The start of the time range for record retrieval.                     |
 | `endDate`                     | `Date`    | False    | The end of the time range for record retrieval.                       |
-| `downtimeReasonPath`          | `String`  | True     | An optional path to a specific downtime reason to filter by.          |
+| `availabilityReasonPath`          | `String`  | True     | An optional path to a specific availability reason to filter by.          |
 | `microstopThreshold`          | `Integer` | True     | A duration to filter out records shorter than this value.             |
 | `microstopThresholdTimeUnits` | `String`  | True     | The time units for `microstopThreshold` (e.g., `SECONDS`, `MINUTES`). |
 
@@ -51,9 +51,9 @@ Each object has the following properties:
 | `startDate`                | `Instant`                 | `False`  | Start date and time of the state record                                    | `Instant.now()` |
 | `endDate`                  | `Instant`                 | `True`   | End date and time of the state record                                      | `null`          |
 | `duration`                 | `Double`                  | `False`  | Duration of the state record in seconds                                    | `0.0`           |
-| `downtimeReasonId`         | `String`                  | `True`   | Identifier of the associated downtime reason, if applicable                | `null`          |
-| `downtimeReason`           | `String`                  | `True`   | Title of the downtime reason. (Name - Code) For display purposes only      | `null`          |
-| `downtimeReasonPath`       | `String`                  | `True`   | Path to the current downtime reason                                        | `null`          |
+| `availabilityReasonId`         | `String`                  | `True`   | Identifier of the associated availability reason, if applicable                | `null`          |
+| `availabilityReason`           | `String`                  | `True`   | Title of the availability reason. (Name - Code) For display purposes only      | `null`          |
+| `availabilityReasonPath`       | `String`                  | `True`   | Path to the current availability reason                                        | `null`          |
 | `interruptionLocationId`   | `String`                  | `True`   | Location id that caused the blocked/starved state on the machine           | `null`          |
 | `interruptionLocationName` | `String`                  | `True`   | Name of the interruption location that caused the blocked/starved state    | `null`          |
 | `interruptionLocationPath` | `String`                  | `True`   | Location path that caused the blocked/starved state on the machine         | `null`          |
