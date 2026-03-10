@@ -22,12 +22,12 @@ system.mes.oee.setAvailabilityReasonForStateRecord(oeeStateRecordId, availabilit
 
 ## Parameters
 
-| Parameter          | Type      | Nullable | Description                                                      |
-| ------------------ | --------- | -------- | ---------------------------------------------------------------- |
-| `oeeStateRecordId` | `String`  | False    | The ID of the OEE state record to update.                        |
+| Parameter              | Type      | Nullable | Description                                                          |
+|------------------------|-----------|----------|----------------------------------------------------------------------|
+| `oeeStateRecordId`     | `String`  | False    | The ID of the OEE state record to update.                            |
 | `availabilityReasonId` | `String`  | True     | The ID of the availability reason to assign. Set to `None` to clear. |
-| `notes`            | `String`  | True     | Optional notes to add to the state record.                       |
-| `acknowledge`      | `Boolean` | True     | Whether to acknowledge the record. Defaults to `False`.          |
+| `notes`                | `String`  | True     | Optional notes to add to the state record.                           |
+| `acknowledge`          | `Boolean` | True     | Whether to acknowledge the record. Defaults to `False`.              |
 
 ## Returns
 
@@ -47,9 +47,9 @@ A JSON representation of the updated `OeeStateRecordDTO` object.
 | `startDate`                | `Instant`                 | `False`  | Start date and time of the state record                                    | `Instant.now()` |
 | `endDate`                  | `Instant`                 | `True`   | End date and time of the state record                                      | `null`          |
 | `duration`                 | `Double`                  | `False`  | Duration of the state record in seconds                                    | `0.0`           |
-| `availabilityReasonId`         | `String`                  | `True`   | Identifier of the associated availability reason, if applicable                | `null`          |
-| `availabilityReason`           | `String`                  | `True`   | Title of the availability reason. (Name - Code) For display purposes only      | `null`          |
-| `availabilityReasonPath`       | `String`                  | `True`   | Path to the current availability reason                                        | `null`          |
+| `availabilityReasonId`     | `String`                  | `True`   | Identifier of the associated availability reason, if applicable            | `null`          |
+| `availabilityReason`       | `String`                  | `True`   | Title of the availability reason. (Name - Code) For display purposes only  | `null`          |
+| `availabilityReasonPath`   | `String`                  | `True`   | Path to the current availability reason                                    | `null`          |
 | `interruptionLocationId`   | `String`                  | `True`   | Location id that caused the blocked/starved state on the machine           | `null`          |
 | `interruptionLocationName` | `String`                  | `True`   | Name of the interruption location that caused the blocked/starved state    | `null`          |
 | `interruptionLocationPath` | `String`                  | `True`   | Location path that caused the blocked/starved state on the machine         | `null`          |
