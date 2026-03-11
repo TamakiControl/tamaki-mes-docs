@@ -99,7 +99,7 @@ description: "OEE Downtime Entry Screen"
  
 - The `Set Availability Reason` button, ![Set Availability Reason Button](./images/button-set-reason.png), opens the availability reason selection popup:
 
-![Availability reason selection popup with hierarchical tree of reasons and notes field](./images/availability-reason-popup.png)
+![Availability reason selection popup with hierarchical tree of reasons and notes field](./images/downtime-reason-popup.png)
 
 - **Sections:**
   - **Availability Reason Selection Tree:** Allows users to select a reason for the downtime event from a hierarchical list of predefined reasons.

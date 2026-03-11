@@ -254,7 +254,7 @@ Retrieves mode records grouped by mode type for a specific location and time ran
 
 Retrieves aggregated OEE mode records with states breakdown for a specific location and time range. Returns a list of JSON representations of OEE Chart Segment objects.
 
-### [`pruneOeeProductionRecords`](./prune-oee-production-records)
+### [`pruneOeeRecords`](./prune-oee-records)
 
 Prunes OEE records for a given location that are older than the prune date.
 

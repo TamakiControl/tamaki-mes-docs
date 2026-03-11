@@ -99,6 +99,13 @@ This document provides definitions and explanations of key terms related to Over
 - **Purpose:**
   - To quantify the amount of waste generated in the production process, helping to identify areas for quality improvement.
 
+## Standard Rate
+- **Definition:**
+  - The expected production rate for a piece of equipment or production line, expressed in units of measure per time unit (e.g., units per minute, kilograms per hour).
+  - Configuration: [Standard Rate](setup#standard-rate-uomtime-unit)
+- **Purpose:**
+  - To define the ideal production rate for a location, which is used as the baseline for calculating the [Performance](#performance) component of OEE. The actual production rate is compared against the standard rate to determine how efficiently the equipment is operating.
+
 ## Production Order
 - **Definition:** 
   - Represents a specific production order, detailing information such as product, quantity, status, and associated customer.

@@ -47,7 +47,7 @@ description: "OEE Setup Configuration"
 7. Configure the [Quality](#quality) settings:
     - [Enable Quality](#enable-quality).
     - Configure the [Quality Strategy](#quality-strategy) and [Quality Count Expression](#quality-count-expression).
-    - Set the [Quality Count Overflow Value](#waste-count-overflow-value).
+    - Set the [Quality Count Overflow Value](#quality-count-overflow-value).
 8. Configure the [Production Order Source](#production-order-source).
 9. Save the configuration by clicking the `Confirm` button at the bottom of the screen.
 
@@ -149,7 +149,7 @@ Opens a dropdown with the following options:
 - **Static:** The standard rate will be a fixed value set in the [Standard Rate](#standard-rate-uomtime-unit) field.
 - **Expression:** The standard rate will be determined by the [Standard Rate Expression](#standard-rate-expression-uomtime-unit) field.
 
-##### Standard Rate  ([UoM](#production-count-unit-of-measure)/[Time Unit](#production-rate-time-unit))
+##### Standard Rate ([UoM](#production-count-unit-of-measure)/[Time Unit](#production-rate-time-unit))
 
 The fixed value for the [Standard Rate](terms-and-definitions#standard-rate) of the location, defined in the unit of measure and time unit specified in the [Production Count Unit of Measure](#production-count-unit-of-measure) and [Production Rate Time Unit](#production-rate-time-unit) fields. This is used to define the expected production rate for the location.
 
@@ -383,9 +383,9 @@ The optional comments or explanation about the mode. This will be automatically 
 
 **Example:**
 
-![Availability reasons configuration tab showing hierarchical tree of availability reason categories](./images/setup-availability-reasons-1.png)
+![Availability reasons configuration tab showing hierarchical tree of availability reason categories](./images/setup-downtime-reasons-1.png)
 
-![Availability reasons configuration tab showing hierarchical tree of availability reason categories](./images/setup-availability-reasons-2.png)
+![Availability reasons configuration tab showing hierarchical tree of availability reason categories](./images/setup-downtime-reasons-2.png)
 
 ### Availability Reasons Model [oee availability reason](../../appendix/data-model/oee-model/oee-availability-reason)
 
