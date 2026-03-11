@@ -35,6 +35,10 @@ Retrieves a list of all [Production Orders](../../data-model/production-order-mo
 
 Retrieves a list of references to a [Production Orders](../../data-model/production-order-model/production-order) record by its ID. Returns a list of JSON objects.
 
+### [`getDetailedProductionOrdersByLocationAndStatus`](./get-detailed-production-orders-by-location-and-status)
+
+Retrieves a list of detailed [Production Orders](../../data-model/production-order-model/production-order) records filtered by location IDs or paths and statuses. Returns a list of JSON objects with expanded information including property values and bill of materials.
+
 ### [`validateProductionOrder`](./validate-production-order)
 
 Validates the specified parameters for a [Production Orders](../../data-model/production-order-model/production-order) record and returns any validation errors.
