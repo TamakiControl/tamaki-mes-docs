@@ -36,8 +36,8 @@ criteria will be returned.
 ## Sorting
 Sorting is used to order the records returned by a query. The `sortFields` parameter specifies the fields to sort by. 
 Multiple fields can be specified in a list in the order to be sorted by, and should be formatted in camelCase. The 
-`sortDirection` parameter specifies the direction to sort in. Accepted values are "Ascending" or "Descending" which
-can also be abbreviated as "asc" or "desc".
+`sortDirections` parameter specifies the directions to sort each field in and must be the same length as the 
+`sortFields` list. Accepted values are "Ascending" or "Descending" which can also be abbreviated as "asc" or "desc".
 
 ## Filtering
 Only records that match the conditions specified by the filters will be returned. The `filters` parameter can be a
@@ -62,7 +62,7 @@ queryRequest = system.mes.query.newQueryRequest()
 queryRequest["pageSize"] = 10
 queryRequest["pageIndex"] = 0
 queryRequest["sortFields"] = ["name"]
-queryRequest["sortDirection"] = "Ascending"
+queryRequest["sortDirections"] = ["Ascending"]
 
 filterRequest = system.mes.query.newFilterRequest()  
 filterRequest["field"] = "createdDate"  
