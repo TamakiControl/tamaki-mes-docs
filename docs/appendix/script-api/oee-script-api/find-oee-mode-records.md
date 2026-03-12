@@ -90,8 +90,8 @@ queryRequest['sortDirections'] = ['Ascending']
 filterRequest = system.mes.query.newFilterRequest()
 filterRequest['field'] = 'startDate'
 filterRequest['condition'] = 'between'
-filterRequest['minDateValue'] = '2025-01-01T00:00:00Z'
-filterRequest['maxDateValue'] = '2026-01-01T00:00:00Z'
+filterRequest['minDateValue'] = '2025-01-01T00:00:00Z' # OR system.date.getDate(2025, 0, 1)
+filterRequest['maxDateValue'] = '2026-01-01T00:00:00Z' # OR system.date.getDate(2026, 0, 1)
 
 filters = [filterRequest]
 
